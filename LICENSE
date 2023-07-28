@@ -1,24 +1,22 @@
+Project Name: ofa v4 docs
+
 Copyright (c) Yao. All rights reserved.
 
-Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+Project Overview:
+This is a monorepo project containing multiple independent software packages (Packages). Each package is located under the packages directory and has its own separate license agreement. When using any package within this project, please comply with the specific terms of the license for each package.
 
-You are free to:
+License Information:
+Please be aware that when using individual software packages from this monorepo project, you must adhere to the corresponding license agreement. The license information for each package can be found in the root directory or the LICENSE file of that package. These packages may adopt different licenses, so please review the license terms of each package and ensure that your use complies with their requirements.
 
-1. Share — copy and redistribute the material in any medium or format.
+Limitation of Liability:
+Each package is an independent entity, and its authors are responsible for the use and consequences of their code. The authors or maintainers of this project are not liable for any direct or indirect damages or issues resulting from the use of this monorepo project or its packages.
 
-2. Adapt — remix, transform, and build upon the material.
+Disclaimer:
+The authors or maintainers of this project are not liable for any issues arising from the use of this monorepo project or its packages, whether in contract, negligence, or any other legal theory. Users assume all risks and consequences.
 
-Under the following terms:
+Important Note:
+Before using this monorepo project or any of its packages, please carefully read the license agreements for each package to ensure compliance with their requirements. If you have any questions or are unsure about the license terms of any package, please contact the package's author for more information.
 
-1. Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+More Information:
+For detailed information about this project, please refer to the README file in the project's root directory.
 
-2. NonCommercial — You may not use the material for commercial purposes.
-
-3. ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-
-4. No Public Display — You may not publicly display or distribute the material on the public internet or any public network without obtaining explicit written permission from the licensor.
-
-No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
-
-More details about the license can be found in the full license text:
-https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
