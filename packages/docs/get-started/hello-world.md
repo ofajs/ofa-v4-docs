@@ -1,16 +1,27 @@
-# 创建案例
+# 第一个案例
 
 以下是一个案例，点击按钮后将文本更改为 "Hello World"：
 
 ```html
-<div id="desk">Please click the button</div>
-<br />
-<button id="btn">I am Button</button>
-<script>
-    $("#btn").on("click", () => {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hello-world</title>
+    <script src="../ofa.js"></script>
+  </head>
+  <body>
+    <div id="desk">Please click the button</div>
+    <br />
+    <button id="btn">I am Button</button>
+    <script>
+      $("#btn").on("click", () => {
         $("#desk").html = "<b>Hello World</b>";
-    });
-</script>
+      });
+    </script>
+  </body>
+</html>
 ```
 
 当点击按钮后，将会显示加粗的 "Hello World" 文本。
@@ -42,13 +53,15 @@
 
 选择元素成功后，你可以为元素绑定事件。就像前面提到的 "Hello World" 案例中，我们给 id 为 "btn" 的元素绑定了点击事件。当点击按钮后，绑定的函数会被执行。
 
-你可以参考 [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events)  来了解可用的事件列表。
+你可以点击跳转查看 [事件示例](./example-event.md)  章节，了解一些事件绑定的案例；
+
+所有可用的事件，可以参考 [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events) 来了解完整的事件列表。
 
 ## 属性
 
 在上面的两个案例中，我们分别展示了 `html` 和 `text` 属性的使用。
 
-你还可以通过 `html()` 或 `text()` 方法来获取元素的内容，如下所示：
+你还可以通过 `html` 或 `text` 属性来获取元素的内容，如下所示：
 
 ```html
 <div id="t1">
