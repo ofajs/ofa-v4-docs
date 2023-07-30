@@ -8,6 +8,7 @@ The main files are located in the packages directory. Here's an explanation of e
 
 - **docs** : Contains the documentation for ofa.js. 
 - **generator** : A library that generates HTML from .md files. 
+- **example** : A directory of exemplary cases;
 - **dist-docs** : Contains translated documentation using the translator for various languages. 
 - **translator** : A library that translates .md files from one language to another. 
 - **website** : Contains static HTML pages generated from the .md files in dist-docs using the generator.

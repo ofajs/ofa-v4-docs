@@ -7,6 +7,7 @@
 主要文件位于 packages 目录下，以下为目录说明： 
 
 - **docs** : 存放 ofa.js 文档的目录。 
+- **example** : 存放示范案例的目录；
 - **generator** : 提供将 .md 文件转换为 HTML 的库。 
 - **dist-docs** : 存放通过 translator 翻译后的文档，包含其他语言版本。 
 - **translator** : 提供将某种语言的 .md 文件翻译成其他语言版本的库。 
