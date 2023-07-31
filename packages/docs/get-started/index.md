@@ -1,30 +1,29 @@
 # 上手使用
-
 ## 如何使用
-
 ### 直接引用
 
-通过 cdn 上的地址直接引用到你的页面上：
+你可以通过 CDN 的地址直接将 ofa.js 引用到你的页面上：
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/dist/ofa.js"></script>
 ```
 
-### 通过npm安装
+### 通过 npm 安装
+
+首先，在你的项目中安装 ofa.js：
 
 ```shell
 npm install ofa.js --save
 ```
 
-然后在项目引用 ofa.js 模块：
+然后在项目中引入 ofa.js 模块：
 
 ```javascript
-import "ofa.js" // esm
+import "ofa.js"; // esm
 // or
 require("ofa.js"); // cmd
 ```
 
 ### 使用
 
-引用资源后，ofa.js 会在全局上设置一个 `$` 属性，所有的功能都在 `$` 上，后面的教程会讲；
-
+在引用资源后，ofa.js 将在全局作用域上设置一个 `$` 属性，所有的功能都在 `$` 上，后面的教程会详细讲解其用法；

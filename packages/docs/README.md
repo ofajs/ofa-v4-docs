@@ -2,6 +2,9 @@
   - 上手使用 ofa.js
   - 第一个案例
   - 选择元素和事件相关
+  - 实例的基础概念
+  - 常用属性介绍
   - css
-  - classList和data
+  - classList 和 data
   - 盒模型
+  - formData

@@ -3,37 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Element box model Demo</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    #box {
-      width: 200px;
-      height: 150px;
-      background-color: #f0f0f0;
-      border: 2px solid #333;
-      padding: 20px;
-      margin: 30px;
-    }
-  </style>
+  <title>Form Data</title>
   <script src="../ofa.js"></script>
 </head>
 <body>
-  <div id="box">I am a div element.</div>
-
+  <form id="myForm">
+    <input type="text" name="username" value="John Doe">
+    <input type="email" name="email" value="johndoe@example.com">
+    <textarea name="message">Hello World!</textarea>
+  </form>
   <script>
-    const box = $('#box');
+    const data = $("#myForm").formData();
+    console.log(data);
+    // Output: { username: "John Doe", email: "johndoe@example.com", message: "Hello World!" }
 
-    console.log(`width: ${box.width}px`);
-    console.log(`height: ${box.height}px`);
-    console.log(`clientWidth: ${box.clientWidth}px`);
-    console.log(`clientHeight: ${box.clientHeight}px`);
-    console.log(`offsetWidth: ${box.offsetWidth}px`);
-    console.log(`offsetHeight: ${box.offsetHeight}px`);
-    console.log(`outerWidth: ${box.outerWidth}px`);
-    console.log(`outerHeight: ${box.outerHeight}px`);
+    // Watch for changes in form data
+    data.watch(() => {
+      console.log("Form data changed!", data);
+    });
   </script>
 </body>
 </html>
