@@ -1,10 +1,10 @@
-# 组件的注册参数说明
+# 组件的注册参数详解
 
-ofa.js允许你在组件模块中定义一些特定的注册参数，以便更灵活地配置组件。下面是各个注册参数的详细说明，并附带每个参数的示例演示。
+在 ofa.js 中，你可以在组件模块中定义一些特定的注册参数，以便更灵活地配置组件。下面详细说明了每个注册参数，并附带了相应的示例演示。
 
 ## 基础参数
 
-注册组件的最基本的参数，包含如下；
+基础参数是注册组件的最基本配置，包含以下几个属性：
 
 ### 组件标识
 
@@ -15,8 +15,6 @@ ofa.js允许你在组件模块中定义一些特定的注册参数，以便更�
 ```javascript
 // button-component.mjs
 export const type = $.COMP;
-
-// 组件模块的其他代码...
 ```
 
 ### tag
@@ -28,28 +26,24 @@ export const type = $.COMP;
 ```javascript
 // button-component.mjs
 export const type = $.COMP;
-export const tag = 'my-button'; // 将组件名注册为 'my-button'
-
-// 组件模块的其他代码...
+export const tag = "my-button"; // 将组件名注册为 'my-button'
 ```
 
 ### temp
 
-`temp` 是一个字符串类型的属性，用于定义组件模板的地址。当没有定义 `temp` 时，默认载入和当前模块同目录下与组件同名的html文件。
+`temp` 是一个字符串类型的属性，用于定义组件模板的地址。当没有定义 `temp` 时，默认载入和当前模块同目录下与组件同名的 HTML 文件。
 
 示例：
 
 ```javascript
 // button-component.mjs
 export const type = $.COMP;
-export const temp = './my-button-template.html'; // 指定组件模板的地址为 './my-button-template.html'
-
-// 组件模块的其他代码...
+export const temp = "./my-button-template.html"; // 指定组件模板的地址为 './my-button-template.html'
 ```
 
 ### data
 
-`data` 是一个对象，用于生成组件后，默认添加的自定义数据。
+`data` 是一个对象类型属性，用于生成组件后，默认添加的自定义数据。
 
 示例：
 
@@ -59,13 +53,11 @@ export const type = $.COMP;
 export const data = {
   count: 0,
 };
-
-// 组件模块的其他代码...
 ```
 
 ### attrs
 
-`attrs` 是一个对象，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。
+`attrs` 是一个对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 attribute 会变成 `-` 驼峰的命名。
 
 示例：
 
@@ -73,15 +65,17 @@ export const data = {
 // button-component.mjs
 export const type = $.COMP;
 export const attrs = {
-    buttonText: 'Click Me',
+  buttonText: "Click Me",
 };
-
-// 组件模块的其他代码...
 ```
 
 ### watch
 
-`watch` 是一个对象，用于监听 `data` 变化的监听函数放在这里。注册成功后，监听的值会被立刻执行一次。
+`watch` 是一个对象类型属性，用于监听 `data` 变化的监听函数放在这里。注册成功后，监听的值会被立刻执行一次。
+
+- `watch` 注册的函数在单次线程改动中，只会被触发一次。因此，在一次线程中，即使多次修改这个监听的值，也只会被触发一次。
+- 第一个参数为当前值。
+- 第二个参数是对象，会带有 `watchers` 数据集，一般情况下 `watchers` 上只会有一个对象，可以从这个对象上获取到 `oldValue`。当单次线程的这个被监听的值被改动过多次，这个数据集会记录多次的变化。
 
 示例：
 
@@ -92,35 +86,40 @@ export const data = {
   count: 0,
 };
 export const watch = {
-  count(newValue, oldValue) {
+  count(newValue, { watchers }) {
+    let oldValue;
+    if (watchers) {
+      oldValue = watchers[0].oldValue;
+    }
     console.log(`count changed from ${oldValue} to ${newValue}`);
   },
 };
-
-// 组件模块的其他代码...
 ```
 
-## 将上面的基础参数封装成一个案例
+## 示例代码
 
-现在我们将上面的几个参数封装成一个按钮组件模块；
+以下为一个完整的示例代码，包括基础参数的定义和组件模板。
 
 ```javascript
 // button-component.mjs
 export const type = $.COMP;
+export const tag = "my-button";
+export const temp = "./my-button-template.html";
 
-export const tag = 'my-button';
-export const temp = './my-button-template.html';
+export const attrs = {
+  buttonText: "Click Me",
+};
 
 export const data = {
   count: 0,
 };
 
-export const attrs = {
-    buttonText: 'Click Me',
-};
-
 export const watch = {
-  count(newValue, oldValue) {
+  count(newValue, { watchers }) {
+    let oldValue;
+    if (watchers) {
+      oldValue = watchers[0].oldValue;
+    }
     console.log(`count changed from ${oldValue} to ${newValue}`);
   },
 };
@@ -144,7 +143,8 @@ export const watch = {
   }
 </style>
 
-<button class="shadow-button">{{buttonText}}</button>
+<!-- 使用模板渲染语法，将组件数据渲染成文本 -->
+<button class="shadow-button">{{buttonText}} - count:{{count}}</button>
 ```
 
 ```html
@@ -160,49 +160,61 @@ export const watch = {
   </head>
   <body>
     <my-button button-text="My Button"></my-button>
+    <script>
+      $("my-button").on("click", () => {
+        $("my-button").count++;
+      });
+    </script>
   </body>
 </html>
-
 ```
 
 ### default
 
-`default` 是一个函数，用于在判断到是组件模块时，并且 `export default` 是函数时，先运行这个函数。这个函数可以是 `async function`。
+你还可以使用异步函数来定义 `default` 数据，以便动态地返回组件的注册参数。
 
-在函数内返回一个对象，这个对象就是这个组件的注册参数。
+函数的 `function` 会带来一个对象，包含
 
-使用 `default` 的好处是，在注册参数不确定的情况下可以使用这个方式。
+ `load`、`url` 和 `query`：
 
-函数的function会带过来一个对象，包含 `load`、`url` 和 `query`：
-
-- `load` 方法是一个异步加载函数，使用方法和异步`import`加载一致，可以通过 `const data = await load(xxx)` 加载异步模块。
-- 通过 `load` 加载的模块，会有和 `load-module` 加载一样的加成效果，`load` 方法是 `load-module` 组件的函数版，可以通过查阅[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)得到它的具体使用文档。
-- `url` 是这个模块的文件名。
+- `load` 方法是一个异步加载函数，使用方法和异步 `import` 加载一致，可以通过 `const data = await load(xxx)` 加载异步模块。
+- 通过 `load` 加载的模块，会有和 `load-module` 加载一样的效果。`load` 方法相当于 `load-module` 组件的函数版，具体使用方法可以查阅[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)的文档。
+- `url` 是当前模块的文件名。
 - `query` 是加载这个模块时的 URL 参数转成的对象。
 
-示例：
+以下是使用 `default` 的示例：
 
 ```javascript
 // button-component.mjs
-export const type = $.COMP;
-export default function ({ load, url, query }) {
-  console.log('url:', url); // 输出当前模块的文件名
-  console.log('query:', query); // 输出当前模块的 URL 参数转成的对象
+export const type = $.COMP; // 这个必须优先定义，不能作为动态参数
+export const tag = "my-button";
+export const temp = "./my-button-template.html";
 
-  const asyncData = await load('./async-data.mjs'); // 使用 load 异步加载模块
-  console.log('asyncData:', asyncData); // 输出异步加载的模块数据
+export default async function ({ load, url, query }) {
+  console.log("url:", url); // 输出当前模块的文件名
+  console.log("query:", query); // 输出当前模块的 URL 参数转成的对象
+
+  const asyncData = await load("./async-data.mjs"); // 使用 load 异步加载模块
+  console.log("asyncData:", asyncData); // 输出异步加载的模块数据
 
   return {
     data: {
-      buttonText: 'Click Me',
       count: 0,
     },
     attrs: {
-      class: 'custom-button',
-      disabled: false,
+      buttonText: "Click Me",
+    },
+    watch: {
+      count(newValue, { watchers }) {
+        let oldValue;
+        if (watchers) {
+          oldValue = watchers[0].oldValue;
+        }
+        console.log(`count changed from ${oldValue} to ${newValue}`);
+      },
     },
   };
 }
-
-// 组件模块的其他代码...
 ```
+
+在这个示例中，我们演示了如何使用 ofa.js 的注册参数来定制化组件的行为。通过合理地配置这些参数，你可以更好地适应不同的组件需求，实现更灵活的组件开发。
