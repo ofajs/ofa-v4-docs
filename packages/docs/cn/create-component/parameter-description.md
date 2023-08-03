@@ -31,7 +31,7 @@ export const tag = "my-button"; // 将组件名注册为 'my-button'
 
 ### temp
 
-`temp` 是一个字符串类型的属性，用于定义组件模板的地址。当没有定义 `temp` 时，默认载入和当前模块同目录下与组件同名的 HTML 文件。
+`temp` 是字符串类型的属性，用于定义组件模板的地址。当没有定义 `temp` 时，默认载入和当前模块同目录下与组件同名的 HTML 文件。
 
 示例：
 
@@ -43,7 +43,7 @@ export const temp = "./my-button-template.html"; // 指定组件模板的地址�
 
 ### data
 
-`data` 是一个对象类型属性，用于生成组件后，默认添加的自定义数据。
+`data` 是对象类型属性，用于生成组件后，默认添加的自定义数据。
 
 示例：
 
@@ -57,7 +57,7 @@ export const data = {
 
 ### attrs
 
-`attrs` 是一个对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 attribute 会变成 `-` 驼峰的命名。
+`attrs` 是对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 attribute 会变成 `-` 驼峰的命名。
 
 示例：
 
@@ -71,7 +71,7 @@ export const attrs = {
 
 ### watch
 
-`watch` 是一个对象类型属性，用于监听 `data` 变化的监听函数放在这里。注册成功后，监听的值会被立刻执行一次。
+`watch` 是对象类型属性，用于监听 `data` 变化的监听函数放在这里。注册成功后，监听的值会被立刻执行一次。
 
 - `watch` 注册的函数在单次线程改动中，只会被触发一次。因此，在一次线程中，即使多次修改这个监听的值，也只会被触发一次。
 - 第一个参数为当前值。
@@ -177,7 +177,7 @@ export const watch = {
 
  `load`、`url` 和 `query`：
 
-- `load` 方法是一个异步加载函数，使用方法和异步 `import` 加载一致，可以通过 `const data = await load(xxx)` 加载异步模块。
+- `load` 方法是异步加载函数，使用方法和异步 `import` 加载一致，可以通过 `const data = await load(xxx)` 加载异步模块。
 - 通过 `load` 加载的模块，会有和 `load-module` 加载一样的效果。`load` 方法相当于 `load-module` 组件的函数版，具体使用方法可以查阅[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)的文档。
 - `url` 是当前模块的文件名。
 - `query` 是加载这个模块时的 URL 参数转成的对象。

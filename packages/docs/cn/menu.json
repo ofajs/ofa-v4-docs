@@ -1,0 +1,17 @@
+{
+  "chapters": [
+    {
+      "name": "上手使用",
+      "path": "get-started",
+      "childs": [
+        {
+          "path": "hello-world.md",
+          "extras": ["./example-event.md"]
+        },
+        {
+          "path": "advanced-usage.md"
+        }
+      ]
+    }
+  ]
+}

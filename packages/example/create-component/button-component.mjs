@@ -22,11 +22,11 @@ export const watch = {
 };
 
 // export default async function ({ load, url, query }) {
-//   console.log("url:", url); // 输出当前模块的文件名
-//   console.log("query:", query); // 输出当前模块的 URL 参数转成的对象
+//   console.log("url:", url); 
+//   console.log("query:", query);  
 
-//   // const asyncData = await load("./async-data.mjs"); // 使用 load 异步加载模块
-//   // console.log("asyncData:", asyncData); // 输出异步加载的模块数据
+//   // const asyncData = await load("./async-data.mjs");  
+//   // console.log("asyncData:", asyncData); 
 
 //   return {
 //     data: {
