@@ -13,6 +13,10 @@
       $("my-button").on("click", () => {
         $("my-button").count++;
       });
+
+      setTimeout(() => {
+        $("my-button").sayHello();
+      }, 1000);
     </script>
   </body>
 </html>

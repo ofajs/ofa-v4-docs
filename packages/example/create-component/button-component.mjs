@@ -21,12 +21,18 @@ export const watch = {
   },
 };
 
-// export default async function ({ load, url, query }) {
-//   console.log("url:", url); 
-//   console.log("query:", query);  
+export const proto = {
+  sayHello() {
+    alert("Hello Count:" + this.count);
+  },
+};
 
-//   // const asyncData = await load("./async-data.mjs");  
-//   // console.log("asyncData:", asyncData); 
+// export default async function ({ load, url, query }) {
+//   console.log("url:", url);
+//   console.log("query:", query);
+
+//   // const asyncData = await load("./async-data.mjs");
+//   // console.log("asyncData:", asyncData);
 
 //   return {
 //     data: {
@@ -42,6 +48,11 @@ export const watch = {
 //           oldValue = watchers[0].oldValue;
 //         }
 //         console.log(`count changed from ${oldValue} to ${newValue}`);
+//       },
+//     },
+//     proto: {
+//       sayHello() {
+//         alert("Hello Count:" + this.count);
 //       },
 //     },
 //   };

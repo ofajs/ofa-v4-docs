@@ -69,6 +69,25 @@ export const attrs = {
 };
 ```
 
+### proto
+
+在组件的注册参数中，你可以添加一个 `proto` 对象，用于定义需要添加到组件原型上的方法。这样，在创建组件的实例时，这些属性和方法就会被添加到实例的原型上，从而所有实例都可以访问和共享这些方法。
+
+```javascript
+// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  count: 0,
+};
+
+export const proto = {
+  sayHello() {
+    alert('Hello Count:'+ this.count);
+  },
+};
+```
+
 ### watch
 
 `watch` 是对象类型属性，用于监听 `data` 变化的监听函数放在这里。注册成功后，监听的值会被立刻执行一次。
@@ -123,6 +142,12 @@ export const watch = {
     console.log(`count changed from ${oldValue} to ${newValue}`);
   },
 };
+
+export const proto = {
+  sayHello() {
+    alert("Hello Count:" + this.count);
+  },
+};
 ```
 
 ```html
@@ -164,9 +189,14 @@ export const watch = {
       $("my-button").on("click", () => {
         $("my-button").count++;
       });
+
+      setTimeout(() => {
+        $("my-button").sayHello();
+      }, 1000);
     </script>
   </body>
 </html>
+
 ```
 
 ### default
@@ -213,8 +243,16 @@ export default async function ({ load, url, query }) {
         console.log(`count changed from ${oldValue} to ${newValue}`);
       },
     },
+    proto: {
+      sayHello() {
+        alert("Hello Count:" + this.count);
+      },
+    },
   };
 }
+
 ```
 
 在这个示例中，我们演示了如何使用 ofa.js 的注册参数来定制化组件的行为。通过合理地配置这些参数，你可以更好地适应不同的组件需求，实现更灵活的组件开发。
+
+写一下 组件的注册参数 的 proto 使用文档
