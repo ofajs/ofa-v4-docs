@@ -81,6 +81,8 @@ export const type = $.COMP;
 
 `ofa.js` 还支持将组件封装成单个文件的模式，这种模式更加整洁和简单。你可以在 HTML 文件中创建一个 `<template>` 标签，并添加 `component` 属性来定义组件。然后将组件的模板代码写在 `<template>` 内部。紧接着，在模板内容下方，添加一个 `<script>` 标签，将组件的 JavaScript 代码放在标签内部。在这种模式下，不需要暴露组件类型 `$.COMP`。
 
+在单文件模式下，请**避免使用** `import` 来引用模块。如果需要依赖其他模块，请使用 `export default` 函数中的 `load` 来引用模块。
+
 以下是将之前的示例改为单文件模式后的代码：
 
 ```html
@@ -115,8 +117,16 @@ export const type = $.COMP;
   </button>
 
   <script>
+    // 单文件模式下，import 会出错
+    // import data from './other/module.mjs';
+
     // 需要注册的组件名，当没有定义tag属性时，注册的组件和文件名保持一致
     export const tag = 'simple-button';
+
+    export default async ({load}) => {
+      // 引用其他模块
+      // const data = await load("./other/module.mjs");
+    }
   </script>
 </template>
 ```

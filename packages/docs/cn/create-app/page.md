@@ -67,6 +67,8 @@ export const watch = {
 
 当使用 `o-page` 组件开发应用页面时，还可以使用单文件页面模块的方式，使页面模块更加整洁。当页面逻辑相对简单时，强烈建议采用这种模式进行编写。
 
+在单文件模式下，请**避免使用** `import` 来引用模块。如果需要依赖其他模块，请使用 `export default` 函数中的 `load` 来引用模块。
+
 下面是使用单文件页面模块的步骤：
 
 1. 创建单文件页面模块：
@@ -79,9 +81,19 @@ export const watch = {
   <h1>{{pageTitle}}</h1>
   <p>Welcome to my single file page!</p>
   <script>
-    export const data = {
-      pageTitle: "My Single File Page",
-    };
+    // 单文件模式下，import 会出错
+    // import data from './other/module.mjs';
+
+    export default async ({ load }) => {
+      // 引用其他模块
+      // const data = await load("./other/module.mjs");
+
+      return {
+        data:{
+          pageTitle: "My Single File Page",
+        }
+      };
+    }
   </script>
 </template>
 ```
@@ -106,3 +118,35 @@ export const watch = {
 ```
 
 这样，当你打开页面时，`o-page` 组件会动态加载 `my-single-file-page.html` 这个单文件页面模块，并根据模块中的模板和数据渲染页面内容。在单文件页面模块中，不需要标记 `export const type = $.PAGE`，而是直接在 `<script>` 标签中定义页面模块的内容。这种方式使页面模块更加简洁易读。
+
+## 判断页面是否加载完成
+
+在某些情况下，你可能需要判断页面是否已经完全加载完成，以便执行一些特定的操作。`ofa.js` 提供了几种方式来判断页面是否加载完成。
+
+### 使用 `page._loaded` 属性
+
+在页面模块中，`page._loaded` 是一个布尔属性，当页面内容加载完成后，该属性会变为 `true`。你可以使用这个属性来判断页面是否加载完成。
+
+```javascript
+if (page._loaded) {
+  // 页面已加载完成
+  // 执行你的操作
+} else {
+  // 监听 page-loaded 事件
+  page.addEventListener('page-loaded', () => {
+    // 页面加载完成后执行的操作
+  });
+}
+```
+
+### 使用 `page._rendered` 属性
+
+另一种方式是使用 `page._rendered` 属性，它是一个 Promise。当页面加载完成后，这个 Promise 会进入 `resolve` 状态。你可以通过 `await page._rendered` 来等待页面加载完成，然后执行相应的操作。
+
+```javascript
+async function doSomethingAfterPageLoad() {
+  await page._rendered;
+  // 页面已加载完成
+  // 执行你的操作
+}
+```
