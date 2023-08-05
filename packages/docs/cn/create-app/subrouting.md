@@ -14,7 +14,6 @@
     export const parent = "./layout-page.html";
   </script>
 </template>
-
 ```
 
 在上述示例中，子页面的页面模块通过 `parent` 参数指定了父页面容器的地址。
