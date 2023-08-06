@@ -1,0 +1,44 @@
+<template page>
+  <style>
+    .container {
+      text-align: center;
+    }
+    .title {
+      font-size: 2.5rem;
+      color: #333;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+      color: #666;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-top: 20px;
+    }
+  </style>
+
+  <div class="container">
+    <h1 class="title">Hello, World!</h1>
+    <p class="subtitle">Welcome to my ofa.js page.</p>
+    <div>count => {{count}}</div>
+    <!-- <button on:click="tohelp">GO TO HELP</button> -->
+    <a href="./help.html" olink>GO TO HELP</a>
+    <br />
+    <br />
+    <a href="./page1.html" olink>Go TO PAGE1</a>
+  </div>
+
+  <script>
+    export default async ({ query }) => {
+      return {
+        data: { count: query.count || 0 },
+        proto: {
+          tohelp() {
+            this.goto("./help.html");
+          },
+        },
+      };
+    };
+  </script>
+</template>

@@ -1,0 +1,32 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      padding: 10px;
+      margin: 5px;
+      border: green solid 1px;
+    }
+  </style>
+  <div>
+    <span style="color: #5e5c5c; font-size: 12px;">comp2</span>=> {{obj.val}}
+  </div>
+  <script>
+    export const tag = "comp-two";
+
+    export default async function ({ load }) {
+      const { data } = await load("./data.mjs");
+
+      return {
+        data: {
+          obj: {},
+        },
+        attached() {
+          this.obj = data;
+        },
+        detached() {
+          this.obj = null;
+        },
+      };
+    }
+  </script>
+</template>
