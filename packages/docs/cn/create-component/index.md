@@ -2,6 +2,16 @@
 
 ofa.js使用最基础的HTML和JavaScript文件来定义组件，避免引入新的文件类型增加学习成本。只要你对HTML有一定的了解，就能快速开发和使用ofa.js组件。
 
+## 准备创建组件前的步骤
+
+在开始创建组件之前，需要注意一些准备工作。由于创建组件涉及到浏览器请求资源的操作，如果你只是简单地双击打开 HTML 文件来查看，会在 "file" 协议下查看。在 "file" 协议下，JavaScript 模块的加载可能会报错。因此，你需要准备一个静态服务器来正确查看组件。
+
+如果你使用的是 Visual Studio Code 编辑器，可以简单地安装一个支持静态服务器的插件。我们推荐使用 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 插件。
+
+安装插件后，只需在你的 `demo.html` 文件上右键点击，选择 "Open with Live Server"，插件将会自动以静态服务器模式打开文件。
+
+如果你使用的是其他编辑器，也可以创建一个 Nginx 或 Apache 服务器，只要能支持静态 HTML 查看即可。这样做可以确保你能够正常预览和开发你的组件。
+
 ## 创建一个按钮组件
 
 接下来，我们将创建一个简单的按钮组件，命名为**simple-button**，它将具有比原生按钮更好看的样式。按钮组件由三个文件组成：
