@@ -14,7 +14,7 @@
       this.$("d-nav").on("click", (e) => {
         const $target = $(e.target);
 
-        if ($target.tag === "d-nav") {
+        if ($target.tag === "d-nav" || $target.$('[slot="nav"]')) {
           return;
         }
 

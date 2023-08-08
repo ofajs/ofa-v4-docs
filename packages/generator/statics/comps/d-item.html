@@ -8,7 +8,7 @@
     .container {
       position: relative;
       padding-left: 8px;
-      padding: 4px 0 4px 8px;
+      padding: 5px 0 5px 8px;
       border-radius: 5px;
       font-size: 16px;
       line-height: 20px;
@@ -101,9 +101,9 @@
           setActive() {
             if (this.$('[slot="nav"]')) {
               // 带有 child，就激活第一个，自身也采用active=2模式
-              this.active = "2";
-              this.showChilds = true;
-              this.$('[slot="nav"]')[0].active = "";
+              // this.active = "2";
+              // this.showChilds = true;
+              // this.$('[slot="nav"]')[0].active = "";
             } else {
               // 判断是否有父层，将父层的 item 都带上 active=2
               const parentItems = this.parents.filter(
