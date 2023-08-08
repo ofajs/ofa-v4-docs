@@ -1,0 +1,129 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .container {
+      position: relative;
+      padding-left: 8px;
+      padding: 4px 0 4px 8px;
+      border-radius: 5px;
+      font-size: 16px;
+      line-height: 20px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all ease 0.2s;
+    }
+
+    .container.hide {
+      padding-top: 0;
+      padding-bottom: 0;
+      line-height: 0px;
+      color: transparent;
+    }
+
+    :host([active]) .container {
+      color: #58a6ff;
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: default;
+    }
+
+    :host([active="2"]) .container {
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .container:hover,
+    :host([active="2"]) .container:hover {
+      background-color: rgba(255, 255, 255, 0.07);
+    }
+
+    .nav {
+      margin-left: 16px;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background-image: url(./sources/angle-right.svg);
+      background-position: center;
+      background-size: 40%;
+      background-repeat: no-repeat;
+      transition: all ease 0.2s;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+  </style>
+  <div class="container" on:click="showChilds = !showChilds" class:hide="hide">
+    <slot></slot>
+    <x-if :value="showArrow">
+      <div class="arrow" class:rotate="showChilds"></div>
+    </x-if>
+  </div>
+  <div class="nav">
+    <slot name="nav"></slot>
+  </div>
+  <script>
+    export default async function () {
+      return {
+        attrs: {
+          active: null,
+        },
+        data: {
+          showArrow: false,
+          showChilds: false,
+          hide: false,
+        },
+        watch: {
+          showChilds(bool) {
+            const nav = this.$("d-nav");
+            if (nav) {
+              if (bool) {
+                nav.forEach((e) => {
+                  e.hide = false;
+                });
+              } else {
+                nav.forEach((e) => {
+                  e.hide = true;
+                });
+              }
+            }
+          },
+        },
+        proto: {
+          setActive() {
+            if (this.$('[slot="nav"]')) {
+              // 带有 child，就激活第一个，自身也采用active=2模式
+              this.active = "2";
+              this.showChilds = true;
+              this.$('[slot="nav"]')[0].active = "";
+            } else {
+              // 判断是否有父层，将父层的 item 都带上 active=2
+              const parentItems = this.parents.filter(
+                (e) => e.tag === "d-item"
+              );
+              parentItems.forEach((e) => (e.active = '2'));
+              this.active = "";
+            }
+          },
+        },
+        ready() {
+          this.shadow.on("slotchange", () => {
+            if (this.$("[slot='nav']")) {
+              this.showArrow = true;
+            } else {
+              this.showArrow = false;
+            }
+          });
+        },
+      };
+    }
+  </script>
+</template>

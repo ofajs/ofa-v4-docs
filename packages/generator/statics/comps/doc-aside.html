@@ -1,0 +1,30 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      border-right: #818181 solid 1px;
+      padding-top: 16px;
+      height: calc(100% - 16px);
+    }
+  </style>
+  <slot></slot>
+
+  <script>
+    export function attached() {
+      this.$("d-nav").on("click", (e) => {
+        const $target = $(e.target);
+
+        if ($target.tag === "d-nav") {
+          return;
+        }
+
+        // 删除旧的激活状态
+        this.all("d-item[active]").forEach((e) => {
+          e.active = null;
+        });
+
+        $target.setActive();
+      });
+    }
+  </script>
+</template>

@@ -1,0 +1,27 @@
+<template component>
+  <style>
+    header {
+      height: 50px;
+    }
+
+    .logo {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 0 16px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+  <header>
+    <div class="logo">
+      <slot name="logo"></slot>
+    </div>
+    <slot></slot>
+  </header>
+
+  <script>
+    export const data = {};
+  </script>
+</template>

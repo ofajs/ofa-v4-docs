@@ -1,0 +1,88 @@
+<template component>
+  <l-m src="./doc-article.html"></l-m>
+  <l-m src="./doc-header.html"></l-m>
+  <l-m src="./doc-aside.html"></l-m>
+  <l-m src="./d-nav.html"></l-m>
+  <l-m src="./d-item.html"></l-m>
+  <style>
+    :host {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main {
+      position: relative;
+      flex: 1;
+    }
+
+    .main-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header {
+      background-color: #242526;
+    }
+
+    .aside {
+      width: 280px;
+    }
+
+    .article {
+      position: relative;
+      flex: 1;
+    }
+
+    .article-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .center-con {
+      display: block;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    .main-inner .center-con {
+      display: flex;
+      height: 100%;
+    }
+  </style>
+  
+  <div class="container">
+    <div class="header">
+      <div class="center-con">
+        <slot name="header"></slot>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main-inner">
+        <div class="center-con">
+          <div class="aside">
+            <slot name="aside"></slot>
+          </div>
+          <div class="article">
+            <div class="article-inner">
+              <slot></slot>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
