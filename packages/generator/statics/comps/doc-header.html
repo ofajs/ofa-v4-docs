@@ -1,6 +1,7 @@
 <template component>
   <style>
     header {
+      display: flex;
       height: 50px;
     }
 
@@ -13,12 +14,45 @@
       font-weight: bold;
       font-size: 18px;
     }
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 16px;
+    }
+
+    .right-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 18px;
+      cursor: pointer;
+      transition: all ease 0.2s;
+    }
+
+    .right-btn img {
+      width: auto;
+      height: 70%;
+    }
+
+    .right-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   </style>
   <header>
     <div class="logo">
       <slot name="logo"></slot>
     </div>
-    <slot></slot>
+    <div style="flex: 1">
+      <slot></slot>
+    </div>
+    <div class="right">
+      <div class="right-btn">
+        <img src="./sources/light.svg" alt="" />
+      </div>
+    </div>
   </header>
 
   <script>
