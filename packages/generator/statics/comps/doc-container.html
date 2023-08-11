@@ -29,44 +29,45 @@
       top: 0;
       width: 100%;
       height: 100%;
+      overflow: auto;
+    }
+
+    .center-con {
+      display: block;
+      margin: 0 auto;
+      max-width: 1400px;
+      background-color: rgba(255, 255, 0, 0.1);
     }
 
     .header {
       background-color: #242526;
     }
 
-    .aside {
-      width: 280px;
-    }
-
-    .article {
+    .article-container {
       position: relative;
-      flex: 1;
-      background-color: rgba(174, 238, 238, 0.161);
+      max-width: 850px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
     }
 
-    .article-inner {
+    .aside {
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
+      width: 280px;
+      left: -280px;
       height: 100%;
       overflow-y: auto;
-      background-color: rgba(108, 61, 4, 0.161);
+      border-right: #aaa solid 1px;
     }
-
-    .center-con {
-      display: block;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-
-    .main-inner .center-con {
-      display: flex;
+    
+    .right-nav {
+      position: absolute;
+      right: -246px;
+      width: 230px;
       height: 100%;
     }
   </style>
-  
+
   <div class="container">
     <div class="header">
       <div class="center-con">
@@ -75,15 +76,20 @@
     </div>
     <div class="main">
       <div class="main-inner">
-        <div class="center-con">
-          <div class="aside">
+        <div class="article-container">
+          <article><slot></slot></article>
+        </div>
+        <div style="height: 100px"></div>
+      </div>
+      <div class="main-inner" style="pointer-events: none">
+        <div
+          class="article-container"
+          style="height: 100%; background-color: rgba(255, 0, 0, 0.216)"
+        >
+          <div class="aside" style="pointer-events: visible">
             <slot name="aside"></slot>
           </div>
-          <div class="article">
-            <div class="article-inner">
-              <slot></slot>
-            </div>
-          </div>
+          <div class="right-nav">asd</div>
         </div>
       </div>
     </div>
