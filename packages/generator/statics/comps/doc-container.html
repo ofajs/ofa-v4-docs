@@ -18,12 +18,18 @@
       height: 100%;
     }
 
+    .center-con {
+      display: block;
+      margin: 0 auto;
+      max-width: 1600px;
+    }
+
     .main {
       position: relative;
       flex: 1;
     }
 
-    .main-inner {
+    .position-inner {
       position: absolute;
       left: 0;
       top: 0;
@@ -32,39 +38,31 @@
       overflow: auto;
     }
 
-    .center-con {
-      display: block;
-      margin: 0 auto;
-      max-width: 1400px;
-      background-color: rgba(255, 255, 0, 0.1);
+    .main .center-con {
+      display: flex;
     }
 
-    .header {
-      background-color: #242526;
+    .aside,
+    .right-aside {
+      box-sizing: border-box;
+      position: relative;
+      flex: 0 1 280px;
+      height: 100%;
+    }
+
+    .aside .position-inner {
+      left: 16px;
+      width: calc(100% - 16px);
     }
 
     .article-container {
-      position: relative;
-      max-width: 850px;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
+      flex: 1 1 800px;
     }
 
-    .aside {
-      position: absolute;
-      width: 280px;
-      left: -280px;
-      height: 100%;
-      overflow-y: auto;
-      border-right: #aaa solid 1px;
-    }
-    
-    .right-nav {
-      position: absolute;
-      right: -246px;
-      width: 230px;
-      height: 100%;
+    @media screen and (max-width: 1000px) {
+      .right-aside {
+        display: none;
+      }
     }
   </style>
 
@@ -75,21 +73,27 @@
       </div>
     </div>
     <div class="main">
-      <div class="main-inner">
-        <div class="article-container">
-          <article><slot></slot></article>
-        </div>
-        <div style="height: 100px"></div>
-      </div>
-      <div class="main-inner" style="pointer-events: none">
-        <div
-          class="article-container"
-          style="height: 100%; background-color: rgba(255, 0, 0, 0.216)"
-        >
-          <div class="aside" style="pointer-events: visible">
-            <slot name="aside"></slot>
+      <div class="position-inner">
+        <div class="center-con">
+          <div class="aside"></div>
+          <div class="article-container">
+            <slot></slot>
           </div>
-          <div class="right-nav">asd</div>
+          <div class="right-aside"></div>
+        </div>
+      </div>
+
+      <div class="position-inner" style="pointer-events: none">
+        <div class="center-con" style="height: 100%">
+          <div class="aside" style="pointer-events: visible">
+            <div class="position-inner">
+              <slot name="aside"></slot>
+            </div>
+          </div>
+          <div class="article-container"></div>
+          <div class="right-aside">
+            <slot name="right-aside"></slot>
+          </div>
         </div>
       </div>
     </div>
