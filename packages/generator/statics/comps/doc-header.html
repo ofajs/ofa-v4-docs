@@ -89,12 +89,12 @@
 
   <script>
     export const data = {
-      isDark: true,
+      isDark: localStorage.isDark === "true",
     };
 
     export const proto = {
       switchMode() {
-        this.isDark = !this.isDark;
+        localStorage.isDark = this.isDark = !this.isDark;
         this.refreshMode();
       },
       refreshMode() {

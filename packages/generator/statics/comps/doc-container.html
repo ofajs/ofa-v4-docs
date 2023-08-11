@@ -75,7 +75,9 @@
             <slot name="aside"></slot>
           </div>
           <div class="article-container">
-            <slot></slot>
+            <div style="padding-bottom: 32px">
+              <slot></slot>
+            </div>
           </div>
           <div class="right-aside">
             <slot name="right-aside"></slot>
@@ -85,4 +87,9 @@
       </div>
     </div>
   </div>
+  <script>
+    export function loaded() {
+      this.emit("doc-component-loaded");
+    }
+  </script>
 </template>
