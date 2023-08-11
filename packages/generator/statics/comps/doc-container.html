@@ -44,15 +44,11 @@
 
     .aside,
     .right-aside {
+      position: sticky;
+      top: 0px;
       box-sizing: border-box;
-      position: relative;
       flex: 0 1 280px;
       height: 100%;
-    }
-
-    .aside .position-inner {
-      left: 16px;
-      width: calc(100% - 16px);
     }
 
     .article-container {
@@ -75,26 +71,17 @@
     <div class="main">
       <div class="position-inner">
         <div class="center-con">
-          <div class="aside"></div>
+          <div class="aside">
+            <slot name="aside"></slot>
+          </div>
           <div class="article-container">
             <slot></slot>
           </div>
-          <div class="right-aside"></div>
-        </div>
-      </div>
-
-      <div class="position-inner" style="pointer-events: none">
-        <div class="center-con" style="height: 100%">
-          <div class="aside" style="pointer-events: visible">
-            <div class="position-inner">
-              <slot name="aside"></slot>
-            </div>
-          </div>
-          <div class="article-container"></div>
           <div class="right-aside">
             <slot name="right-aside"></slot>
           </div>
         </div>
+        <slot name="footer"></slot>
       </div>
     </div>
   </div>

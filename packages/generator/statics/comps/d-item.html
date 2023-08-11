@@ -3,6 +3,8 @@
     :host {
       display: block;
       margin: 5px 0;
+      font-weight: 500;
+      user-select: none;
     }
 
     .container {
@@ -25,8 +27,8 @@
     }
 
     :host([active]) .container {
-      color: #58a6ff;
-      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--active-color);
+      background-color: var(--aside-hover-bg);
       cursor: default;
     }
 
@@ -37,7 +39,7 @@
 
     .container:hover,
     :host([active="2"]) .container:hover {
-      background-color: rgba(255, 255, 255, 0.07);
+      background-color: var(--aside-hover-bg);
     }
 
     .nav {

@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ofa.js static template</title>
-    <script
-      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.0/dist/ofa.min.js"
+    <!-- <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.1/dist/ofa.min.js"
       debug
+    ></script> -->
+    <script
+      src="http://127.0.0.1:5513/packages/ofa/main.mjs"
+      type="module"
     ></script>
     <!-- <script src="../../example/ofa.js" debug></script> -->
     <link rel="stylesheet" href="./css/public.css" />
@@ -16,6 +20,12 @@
     <doc-container>
       <doc-header slot="header">
         <span slot="logo">OFA.js</span>
+        <ul>
+          <li class="active"><a href="">Docs</a></li>
+          <li><a href="">API</a></li>
+          <li><a href="">drill</a></li>
+          <li><a href="">stanz</a></li>
+        </ul>
       </doc-header>
       <doc-aside slot="aside">
         <d-nav>
@@ -35,7 +45,7 @@
       <doc-article>
         <div class="markdown-body">
           <h1>
-            <a class="anchor" href="#inline-html-2"
+            <a class="anchor" href="#inline-html"
               ><span class="octicon octicon-link"></span> </a
             >Inline HTML
           </h1>
@@ -131,7 +141,7 @@
             syntax only addresses issues that can be conveyed in plain text.
           </p>
           <h2>
-            <a class="anchor" href="#inline-html-2"
+            <a class="anchor" href="#inline-html-3"
               ><span class="octicon octicon-link"></span> </a
             >Inline HTML3
           </h2>
@@ -191,7 +201,7 @@
           <p>For example, to add an HTML table to a Markdown article:</p>
         </div>
       </doc-article>
-      <div slot="right-aside">I am right-aside</div>
+      <div slot="right-aside" style="padding-top: 16px">I am right-aside</div>
     </doc-container>
   </body>
 </html>

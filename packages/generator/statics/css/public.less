@@ -1,0 +1,22 @@
+@import url(./github-markdown.css);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  --header-bg-color: #ffffff;
+  --active-color: #0073ff;
+  --aside-hover-bg: rgba(0, 0, 0, 0.05);
+  --aside-color: rgb(96, 103, 112);
+}
+
+body {
+  &.dark {
+    color: #fff;
+    --header-bg-color: #242526;
+    background-color: #1b1b1d;
+    --aside-hover-bg: rgba(255, 255, 255, 0.1);
+    --aside-color: rgb(222, 222, 222);
+  }
+}

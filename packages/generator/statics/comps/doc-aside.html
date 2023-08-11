@@ -2,10 +2,14 @@
   <style>
     :host {
       display: block;
-      padding-top: 16px;
-      height: calc(100% - 16px);
+      padding-right: 10px;
+      padding-left: 16px;
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+      color: var(--aside-color);
     }
   </style>
+  <div style="height: 10px;"></div>
   <slot></slot>
 
   <script>
