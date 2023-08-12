@@ -5,6 +5,7 @@
   <l-m src="./d-nav.html"></l-m>
   <l-m src="./d-item.html"></l-m>
   <l-m src="./article-nav.html"></l-m>
+  <l-m src="./article-container.html"></l-m>
   <style>
     :host {
       display: block;
@@ -38,28 +39,9 @@
       height: 100%;
       overflow: auto;
     }
-
-    .main .center-con {
-      display: flex;
-    }
-
-    .aside,
-    .right-aside {
-      position: sticky;
-      top: 0px;
-      box-sizing: border-box;
-      flex: 0 1 280px;
-      height: 100%;
-    }
-
-    .article-container {
-      flex: 1 1 800px;
-    }
-
-    @media screen and (max-width: 1000px) {
-      .right-aside {
-        display: none;
-      }
+    .header {
+      background-color: var(--header-bg-color);
+      box-shadow: 0 0 3px rgba(84, 84, 84, 0.5);
     }
   </style>
 
@@ -71,26 +53,15 @@
     </div>
     <div class="main">
       <div class="position-inner">
-        <div class="center-con">
-          <div class="aside">
-            <slot name="aside"></slot>
-          </div>
-          <div class="article-container">
-            <div style="padding-bottom: 32px">
-              <slot></slot>
-            </div>
-          </div>
-          <div class="right-aside">
-            <slot name="right-aside"></slot>
-          </div>
-        </div>
+        <slot></slot>
         <slot name="footer"></slot>
       </div>
     </div>
   </div>
   <script>
     export function loaded() {
-      this.emit("doc-component-loaded");
+      // this.emit("doc-component-loaded");
+      $("body") && $("body").emit("doc-component-loaded");
     }
   </script>
 </template>

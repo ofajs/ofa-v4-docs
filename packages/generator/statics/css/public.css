@@ -1,5 +1,4 @@
 @import url(github-markdown.css);
-html,
 body {
   margin: 0;
   padding: 0;
@@ -11,6 +10,8 @@ body {
   --active-color: #0073ff;
   --aside-hover-bg: rgba(0, 0, 0, 0.05);
   --aside-color: #606770;
+  --article-nav-font-color: rgba(63, 63, 65, 0.6);
+  --article-nav-font-active-color: rgba(19, 19, 18, 0.86);
 }
 body.dark {
   color: #fff;
@@ -18,6 +19,8 @@ body.dark {
   --body-bg-color: #1b1b1d;
   --aside-hover-bg: rgba(255, 255, 255, 0.1);
   --aside-color: #dedede;
+  --article-nav-font-color: rgba(235, 235, 245, 0.6);
+  --article-nav-font-active-color: rgba(255, 255, 245, 0.86);
 }
 .loading {
   width: 30px;

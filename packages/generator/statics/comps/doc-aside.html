@@ -2,7 +2,6 @@
   <style>
     :host {
       display: block;
-      padding-right: 10px;
       padding-left: 16px;
       max-height: calc(100vh - 60px);
       overflow-y: auto;
@@ -14,20 +13,20 @@
 
   <script>
     export function attached() {
-      this.$("d-nav").on("click", (e) => {
-        const $target = $(e.target);
+      // this.$("d-nav").on("click", (e) => {
+      //   const $target = $(e.target);
 
-        if ($target.tag === "d-nav" || $target.$('[slot="nav"]')) {
-          return;
-        }
+      //   if ($target.tag === "d-nav" || $target.$('[slot="nav"]')) {
+      //     return;
+      //   }
 
-        // 删除旧的激活状态
-        this.all("d-item[active]").forEach((e) => {
-          e.active = null;
-        });
+      //   // 删除旧的激活状态
+      //   this.all("d-item[active]").forEach((e) => {
+      //     e.active = null;
+      //   });
 
-        $target.setActive();
-      });
+      //   $target.setActive();
+      // });
     }
   </script>
 </template>

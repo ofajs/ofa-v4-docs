@@ -1,0 +1,73 @@
+<template page>
+  <l-m src="../comps/doc-container.html"></l-m>
+  <style>
+    :host {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+  <article-container>
+    <doc-aside slot="aside">
+      <d-nav>
+        <!-- <d-item>Release notes</d-item>
+        <d-item>Installation</d-item>
+        <d-item>Writing tests tests tests tests tests tests</d-item>
+        <d-item>
+          Running tests
+          <d-nav slot="nav">
+            <d-item>Running tests 1</d-item>
+            <d-item>Running tests 2</d-item>
+            <d-item>Running tests 3</d-item>
+          </d-nav>
+        </d-item> -->
+        <x-fill name="item" :value="articles"></x-fill>
+      </d-nav>
+    </doc-aside>
+    <template name="item">
+      <d-item attr:active="$host.getActive($data)">
+        <a attr:href="$data.src" olink>{{$data.name}}</a>
+      </d-item>
+    </template>
+    <div style="padding: 16px 24px 0">
+      <slot></slot>
+    </div>
+    <article-nav slot="right-aside" style="padding-top: 40px"> </article-nav>
+  </article-container>
+  <script>
+    export const parent = "./header-layout.html";
+
+    export const data = {
+      articles: [],
+    };
+
+    export function ready() {
+      this.attr("id", "article-layout");
+    }
+
+    export const proto = {
+      getActive(data) {
+        const now = `${location.origin}${location.pathname}`;
+        if (data.src === now) {
+          return "";
+        }
+
+        return null;
+      },
+      init(data) {
+        this.articles = data.articles.map((e) => {
+          return {
+            ...e,
+            src: new URL(e.src, location.href).href,
+          };
+        });
+      },
+    };
+  </script>
+</template>

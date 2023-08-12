@@ -1,0 +1,40 @@
+<template page>
+  <style>
+    :host {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <doc-container>
+    <doc-header slot="header">
+      <span slot="logo">OFA.js</span>
+      <ul>
+        <!-- <li class="active"><a href="">Docs</a></li>
+        <li><a href="">API</a></li>
+        <li><a href="">drill</a></li> -->
+        <x-fill name="li" :value="navs"></x-fill>
+      </ul>
+    </doc-header>
+    <slot></slot>
+  </doc-container>
+
+  <template name="li">
+    <li><a attr:href="$data.href">{{$data.name}}</a></li>
+  </template>
+  <script>
+    export function ready() {
+      this.attr("id", "header-layout");
+    }
+
+    export const data = {
+      navs: [],
+    };
+
+    export const proto = {
+      init(data) {
+        this.navs = data.navs;
+      },
+    };
+  </script>
+</template>

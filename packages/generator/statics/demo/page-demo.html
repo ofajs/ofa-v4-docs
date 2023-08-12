@@ -3,47 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ofa.js static template</title>
-    <script
-      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.1/dist/ofa.min.js"
-      debug
-    ></script>
-    <!-- <script
-      src="http://127.0.0.1:5513/packages/ofa/main.mjs"
-      type="module"
-    ></script> -->
-    <!-- <script src="../../example/ofa.js" debug></script> -->
-    <link rel="stylesheet" href="./css/public.css" />
+    <title>page demo</title>
+    <script src="../init.js" config="./config.json"></script>
+    <link rel="stylesheet" href="../css/public.css" />
   </head>
   <body>
-    <l-m src="./comps/doc-container.html"></l-m>
-    <doc-container>
-      <doc-header slot="header">
-        <span slot="logo">OFA.js</span>
-        <ul>
-          <li class="active"><a href="">Docs</a></li>
-          <li><a href="">API</a></li>
-          <li><a href="">drill</a></li>
-          <li><a href="">stanz</a></li>
-        </ul>
-      </doc-header>
-      <doc-aside slot="aside">
-        <d-nav>
-          <d-item>Release notes</d-item>
-          <d-item>Installation</d-item>
-          <d-item>Writing tests tests tests tests tests tests</d-item>
-          <d-item>
-            Running tests
-            <d-nav slot="nav">
-              <d-item>Running tests 1</d-item>
-              <d-item>Running tests 2</d-item>
-              <d-item>Running tests 3</d-item>
-            </d-nav>
-          </d-item>
-        </d-nav>
-      </doc-aside>
-      <doc-article>
-        <div class="markdown-body">
+    <o-app>
+      <template page>
+        <link rel="stylesheet" href="../css/github-markdown.css" />
+        <article class="markdown-body">
           <h1>
             <a class="anchor" href="#inline-html"
               ><span class="octicon octicon-link"></span> </a
@@ -199,13 +167,11 @@
           </p>
 
           <p>For example, to add an HTML table to a Markdown article:</p>
-        </div>
-      </doc-article>
-      <article-nav slot="right-aside" style="padding-top: 40px"> </article-nav>
-    </doc-container>
-    <div class="outer-layer" id="outer-layer">
-      <div class="loading"></div>
-    </div>
-    <script src="./init.js"></script>
+        </article>
+        <script>
+          export const parent = "../pages/article-layout.html";
+        </script>
+      </template>
+    </o-app>
   </body>
 </html>
