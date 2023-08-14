@@ -1,0 +1,32 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      padding-left: 16px;
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      color: var(--aside-color);
+    }
+  </style>
+  <div style="height: 10px;"></div>
+  <slot></slot>
+
+  <script>
+    export function attached() {
+      // this.$("d-nav").on("click", (e) => {
+      //   const $target = $(e.target);
+
+      //   if ($target.tag === "d-nav" || $target.$('[slot="nav"]')) {
+      //     return;
+      //   }
+
+      //   // 删除旧的激活状态
+      //   this.all("d-item[active]").forEach((e) => {
+      //     e.active = null;
+      //   });
+
+      //   $target.setActive();
+      // });
+    }
+  </script>
+</template>

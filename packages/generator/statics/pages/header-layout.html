@@ -1,0 +1,51 @@
+<template page>
+  <style>
+    :host {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <doc-container>
+    <doc-header slot="header">
+      <span slot="logo">OFA.js</span>
+      <ul>
+        <x-fill :value="navs">
+          <li class:active="$host.isActive($data)">
+            <a attr:href="$data.href">{{$data.name}}</a>
+          </li>
+        </x-fill>
+      </ul>
+    </doc-header>
+    <slot></slot>
+  </doc-container>
+
+  <script>
+    export function ready() {
+      this.attr("id", "header-layout");
+    }
+
+    export const data = {
+      navs: [],
+    };
+
+    export const proto = {
+      init(data) {
+        this.navs = data.navs;
+      },
+      isActive(data) {
+        if (data) {
+          const exp = new RegExp(data.active);
+          return exp.test(this.app.current.src);
+        }
+        return false;
+      },
+    };
+
+    export function routerChange(e) {
+      setTimeout(() => {
+        this.shadow.$("doc-container").scrollTop = 0;
+      }, 300);
+    }
+  </script>
+</template>

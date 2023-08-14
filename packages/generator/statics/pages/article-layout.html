@@ -1,0 +1,192 @@
+<template page>
+  <l-m src="../comps/doc-container.html"></l-m>
+  <style>
+    :host {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+  </style>
+  <article-container>
+    <doc-aside slot="aside">
+      <d-nav>
+        <!-- <d-item>Release notes</d-item>
+        <d-item>Installation</d-item>
+        <d-item>Writing tests tests tests tests tests tests</d-item>
+        <d-item>
+          Running tests
+          <d-nav slot="nav">
+            <d-item>Running tests 1</d-item>
+            <d-item>Running tests 2</d-item>
+            <d-item>Running tests 3</d-item>
+          </d-nav>
+        </d-item> -->
+        <x-fill name="item" :value="articles"></x-fill>
+      </d-nav>
+    </doc-aside>
+    <template name="item">
+      <d-item attr:active="$host.leftGetActive($data)">
+        <a attr:href="$data.src" olink>{{$data.name}}</a>
+      </d-item>
+    </template>
+    <div style="padding: 16px 24px 0; position: relative">
+      <slot></slot>
+    </div>
+    <article-nav slot="right-aside" style="padding-top: 40px">
+      <ul>
+        <x-fill :value="navs">
+          <li
+            class:invis="$host.visNavs.includes($data.name)"
+            class:active="$data.active"
+          >
+            <a href="">{{$data.name}}</a>
+          </li>
+        </x-fill>
+      </ul>
+      <!-- <ul>
+        <li>
+          <a href="">Inline HTML0</a>
+        </li>
+        <li class="invis">
+          <a href="">Inline HTML1</a>
+        </li>
+        <li class="active invis">
+          <a href="">Inline HTML2</a>
+        </li>
+        <li class="invis">
+          <a href="">Inline HTML3</a>
+        </li>
+        <li>
+          <a href="">Inline HTML4</a>
+        </li>
+      </ul> -->
+    </article-nav>
+  </article-container>
+  <script>
+    export const parent = "./header-layout.html";
+
+    export const data = {
+      articles: [],
+      navs: [],
+      // 正文内可视的导航标题
+      visNavs: [],
+    };
+
+    export function ready() {
+      this.attr("id", "article-layout");
+    }
+
+    export function attached() {
+      this.refreshArticleNav();
+    }
+
+    export const proto = {
+      leftGetActive(data) {
+        const now = `${location.origin}${location.pathname}`;
+        if (data.src === now) {
+          return "";
+        }
+
+        return null;
+      },
+      init(data) {
+        this.articles = data.articles.map((e) => {
+          return {
+            ...e,
+            src: new URL(e.src, location.href).href,
+          };
+        });
+      },
+      refreshArticleNav() {
+        const article = this.app.current.shadow.$("article");
+
+        let beforeTitle = "";
+
+        article.forEach((childEl) => {
+          if (["h1", "h2", "h3", "h4", "j5"].includes(childEl.tag)) {
+            beforeTitle = childEl.text.trim();
+          }
+
+          childEl.data.sutitle = beforeTitle;
+        });
+
+        const titles = article.all("h1,h2,h3,h4,h5");
+
+        this.navs = titles.map((e) => {
+          return {
+            name: e.text.trim(),
+          };
+        });
+
+        if (this._oldIO) {
+          this._oldIO.disconnect();
+        }
+
+        const visibles = [];
+
+        let timer;
+
+        const refreshActive = () => {
+          const shows = new Set();
+          visibles.forEach((e) => {
+            shows.add(e.dataset.sutitle);
+          });
+
+          this.visNavs = Array.from(shows);
+
+          let hasActive;
+          this.navs.forEach((e) => {
+            e.active = null;
+            if (hasActive) {
+              return;
+            }
+
+            if (shows.has(e.name)) {
+              e.active = 1;
+              hasActive = 1;
+            }
+          });
+        };
+
+        const observer = (this._oldIO = new IntersectionObserver(
+          (entries, observer) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                visibles.push(entry.target);
+              } else {
+                const id = visibles.indexOf(entry.target);
+                if (id > -1) {
+                  visibles.splice(id, 1);
+                }
+              }
+            }
+
+            if (timer) {
+              return;
+            }
+
+            timer = setTimeout(() => {
+              refreshActive();
+              timer = null;
+            }, 100);
+          }
+        ));
+
+        article.forEach((e) => {
+          observer.observe(e.ele, {});
+        });
+      },
+    };
+
+    export function routerChange(e) {
+      this.refreshArticleNav();
+    }
+  </script>
+</template>

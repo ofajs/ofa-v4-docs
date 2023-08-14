@@ -1,0 +1,24 @@
+{
+  "navs": [
+    {
+      "name": "Docs",
+      "active": "generator/statics/demo/",
+      "href": ""
+    },
+    {
+      "name": "API",
+      "active": "none",
+      "href": ""
+    }
+  ],
+  "articles": [
+    {
+      "name": "demo1",
+      "src": "./page-demo.html"
+    },
+    {
+      "name": "demo2",
+      "src": "./page-demo2.html"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      margin: 0 auto;
+      max-width: 1600px;
+    }
+    .center-con {
+      display: flex;
+    }
+
+    .aside,
+    .right-aside {
+      position: sticky;
+      top: 0px;
+      box-sizing: border-box;
+      flex: 0 1 280px;
+      height: 100%;
+    }
+
+    .article-container {
+      flex: 1 1 800px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .right-aside {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .aside {
+        display: none;
+      }
+    }
+  </style>
+  <div class="center-con">
+    <div class="aside">
+      <slot name="aside"></slot>
+    </div>
+    <div class="article-container">
+      <div style="padding-bottom: 32px">
+        <slot></slot>
+      </div>
+    </div>
+    <div class="right-aside">
+      <slot name="right-aside"></slot>
+    </div>
+    <div></div>
+  </div>
+</template>

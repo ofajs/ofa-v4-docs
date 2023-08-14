@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ofa.js static template</title>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.1/dist/ofa.min.js"
+      debug
+    ></script>
+    <!-- <script
+      src="http://127.0.0.1:5513/packages/ofa/main.mjs"
+      type="module"
+    ></script> -->
+    <!-- <script src="../../example/ofa.js" debug></script> -->
+    <link rel="stylesheet" href="../css/public.css" />
+  </head>
+  <body>
+    <l-m src="../comps/doc-container.html"></l-m>
+    <doc-container>
+      <doc-header slot="header">
+        <span slot="logo">OFA.js</span>
+        <ul>
+          <li class="active"><a href="">Docs</a></li>
+          <li><a href="">API</a></li>
+          <li><a href="">drill</a></li>
+          <li><a href="">stanz</a></li>
+        </ul>
+      </doc-header>
+      <article-container>
+        <doc-aside slot="aside">
+          <d-nav>
+            <d-item>Release notes</d-item>
+            <d-item active>Installation</d-item>
+            <d-item>Writing tests tests tests tests tests tests</d-item>
+            <d-item active="2">
+              Running tests
+              <d-nav slot="nav">
+                <d-item>Running tests 1</d-item>
+                <d-item active>Running tests 2</d-item>
+                <d-item>Running tests 3</d-item>
+              </d-nav>
+            </d-item>
+          </d-nav>
+        </doc-aside>
+        <doc-article>
+          <div class="markdown-body">
+            <h1>
+              <a class="anchor" href="#inline-html"
+                ><span class="octicon octicon-link"></span> </a
+              >Inline HTML
+            </h1>
+
+            <p>
+              Markdown's syntax is intended for one purpose: to be used as a
+              format for <em>writing</em> for the web.
+            </p>
+
+            <p>
+              Markdown is not a replacement for HTML, or even close to it. Its
+              syntax is very small, corresponding only to a very small subset of
+              HTML tags. The idea is <em>not</em> to create a syntax that makes
+              it easier to insert HTML tags. In my opinion, HTML tags are
+              already easy to insert. The idea for Markdown is to make it easy
+              to read, write, and edit prose. HTML is a
+              <em>publishing</em> format; Markdown is a <em>writing</em> format.
+              Thus, Markdown's formatting syntax only addresses issues that can
+              be conveyed in plain text.
+            </p>
+
+            <p>
+              For any markup that is not covered by Markdown's syntax, you
+              simply use HTML itself. There's no need to preface it or delimit
+              it to indicate that you're switching from Markdown to HTML; you
+              just use the tags.
+            </p>
+
+            <p>
+              The only restrictions are that block-level HTML elements -- e.g.
+              <code>&lt;div&gt;</code>, <code>&lt;table&gt;</code>,
+              <code>&lt;pre&gt;</code>, <code>&lt;p&gt;</code>, etc. -- must be
+              separated from surrounding content by blank lines, and the start
+              and end tags of the block should not be indented with tabs or
+              spaces. Markdown is smart enough not to add extra (unwanted)
+              <code>&lt;p&gt;</code> tags around HTML block-level tags.
+            </p>
+            <h2>
+              <a class="anchor" href="#inline-html-2"
+                ><span class="octicon octicon-link"></span> </a
+              >Inline HTML2
+            </h2>
+
+            <p>For example, to add an HTML table to a Markdown article:</p>
+
+            <p>
+              Markdown's syntax is intended for one purpose: to be used as a
+              format for <em>writing</em> for the web.
+            </p>
+
+            <p>
+              Markdown is not a replacement for HTML, or even close to it. Its
+              syntax is very small, corresponding only to a very small subset of
+              HTML tags. The idea is <em>not</em> to create a syntax that makes
+              it easier to insert HTML tags. In my opinion, HTML tags are
+              already easy to insert. The idea for Markdown is to make it easy
+              to read, write, and edit prose. HTML is a
+              <em>publishing</em> format; Markdown is a <em>writing</em> format.
+              Thus, Markdown's formatting syntax only addresses issues that can
+              be conveyed in plain text.
+            </p>
+
+            <p>
+              For any markup that is not covered by Markdown's syntax, you
+              simply use HTML itself. There's no need to preface it or delimit
+              it to indicate that you're switching from Markdown to HTML; you
+              just use the tags.
+            </p>
+
+            <p>
+              The only restrictions are that block-level HTML elements -- e.g.
+              <code>&lt;div&gt;</code>, <code>&lt;table&gt;</code>,
+              <code>&lt;pre&gt;</code>, <code>&lt;p&gt;</code>, etc. -- must be
+              separated from surrounding content by blank lines, and the start
+              and end tags of the block should not be indented with tabs or
+              spaces. Markdown is smart enough not to add extra (unwanted)
+              <code>&lt;p&gt;</code> tags around HTML block-level tags.
+            </p>
+
+            <p>For example, to add an HTML table to a Markdown article:</p>
+
+            <p>
+              Markdown's syntax is intended for one purpose: to be used as a
+              format for <em>writing</em> for the web.
+            </p>
+
+            <p>
+              Markdown is not a replacement for HTML, or even close to it. Its
+              syntax is very small, corresponding only to a very small subset of
+              HTML tags. The idea is <em>not</em> to create a syntax that makes
+              it easier to insert HTML tags. In my opinion, HTML tags are
+              already easy to insert. The idea for Markdown is to make it easy
+              to read, write, and edit prose. HTML is a
+              <em>publishing</em> format; Markdown is a <em>writing</em> format.
+              Thus, Markdown's formatting syntax only addresses issues that can
+              be conveyed in plain text.
+            </p>
+            <h2>
+              <a class="anchor" href="#inline-html-3"
+                ><span class="octicon octicon-link"></span> </a
+              >Inline HTML3
+            </h2>
+
+            <p>
+              For any markup that is not covered by Markdown's syntax, you
+              simply use HTML itself. There's no need to preface it or delimit
+              it to indicate that you're switching from Markdown to HTML; you
+              just use the tags.
+            </p>
+
+            <p>
+              The only restrictions are that block-level HTML elements -- e.g.
+              <code>&lt;div&gt;</code>, <code>&lt;table&gt;</code>,
+              <code>&lt;pre&gt;</code>, <code>&lt;p&gt;</code>, etc. -- must be
+              separated from surrounding content by blank lines, and the start
+              and end tags of the block should not be indented with tabs or
+              spaces. Markdown is smart enough not to add extra (unwanted)
+              <code>&lt;p&gt;</code> tags around HTML block-level tags.
+            </p>
+
+            <p>For example, to add an HTML table to a Markdown article:</p>
+
+            <p>
+              Markdown's syntax is intended for one purpose: to be used as a
+              format for <em>writing</em> for the web.
+            </p>
+
+            <p>
+              Markdown is not a replacement for HTML, or even close to it. Its
+              syntax is very small, corresponding only to a very small subset of
+              HTML tags. The idea is <em>not</em> to create a syntax that makes
+              it easier to insert HTML tags. In my opinion, HTML tags are
+              already easy to insert. The idea for Markdown is to make it easy
+              to read, write, and edit prose. HTML is a
+              <em>publishing</em> format; Markdown is a <em>writing</em> format.
+              Thus, Markdown's formatting syntax only addresses issues that can
+              be conveyed in plain text.
+            </p>
+
+            <p>
+              For any markup that is not covered by Markdown's syntax, you
+              simply use HTML itself. There's no need to preface it or delimit
+              it to indicate that you're switching from Markdown to HTML; you
+              just use the tags.
+            </p>
+
+            <p>
+              The only restrictions are that block-level HTML elements -- e.g.
+              <code>&lt;div&gt;</code>, <code>&lt;table&gt;</code>,
+              <code>&lt;pre&gt;</code>, <code>&lt;p&gt;</code>, etc. -- must be
+              separated from surrounding content by blank lines, and the start
+              and end tags of the block should not be indented with tabs or
+              spaces. Markdown is smart enough not to add extra (unwanted)
+              <code>&lt;p&gt;</code> tags around HTML block-level tags.
+            </p>
+
+            <p>For example, to add an HTML table to a Markdown article:</p>
+          </div>
+        </doc-article>
+        <article-nav slot="right-aside" style="padding-top: 40px">
+        </article-nav>
+      </article-container>
+      <div
+        style="height: 1000px; background-color: rgba(170, 170, 170, 0.18)"
+        slot="footer"
+      ></div>
+    </doc-container>
+    <div class="outer-layer" id="outer-layer">
+      <div class="loading"></div>
+    </div>
+    <script>
+      $("body").on("doc-component-loaded", () => {
+        $("#outer-layer").classList.add("fadeout");
+        setTimeout(() => {
+          $("#outer-layer").remove();
+        }, 300);
+      });
+
+      if (localStorage.isDark === "true") {
+        $("body").classList.add("dark");
+      } else {
+        $("body").classList.remove("dark");
+      }
+    </script>
+  </body>
+</html>
