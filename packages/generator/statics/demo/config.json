@@ -2,11 +2,12 @@
   "navs": [
     {
       "name": "Docs",
-      "href": "",
-      "current": true
+      "active": "generator/statics/demo/",
+      "href": ""
     },
     {
       "name": "API",
+      "active": "none",
       "href": ""
     }
   ],

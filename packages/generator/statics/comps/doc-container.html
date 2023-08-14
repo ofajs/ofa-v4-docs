@@ -63,5 +63,14 @@
       // this.emit("doc-component-loaded");
       $("body") && $("body").emit("doc-component-loaded");
     }
+
+    export const proto = {
+      get scrollTop() {
+        return this.shadow.$(".position-inner").ele.scrollTop;
+      },
+      set scrollTop(top) {
+        this.shadow.$(".position-inner").ele.scrollTop = top;
+      },
+    };
   </script>
 </template>

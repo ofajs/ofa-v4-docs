@@ -16,16 +16,16 @@
 
   const configSrc = document.currentScript.getAttribute("config");
 
-  // await appendScript(
-  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.1/dist/ofa.min.js",
-  //   {
-  //     debug: "",
-  //   }
-  // );
+  await appendScript(
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/dist/ofa.min.js",
+    {
+      debug: "",
+    }
+  );
 
-  await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
-    type: "module",
-  });
+  // await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
+  //   type: "module",
+  // });
 
   document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.isDark === "true") {
@@ -44,14 +44,19 @@
       $("#header-layout").init(configData);
       $("#article-layout").init(configData);
 
-      console.log("configData => ", configData);
     });
   }
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.1/libs/scsr/scsr.mjs",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/libs/scsr/scsr.mjs",
     {
       type: "module",
     }
   );
+  // await appendScript(
+  //   "http://127.0.0.1:5513/libs/scsr/scsr.mjs",
+  //   {
+  //     type: "module",
+  //   }
+  // );
 })();

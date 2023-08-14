@@ -1,4 +1,4 @@
-//! ofa.js - v4.1.1 https://github.com/kirakiray/ofa.js  (c) 2018-2023 YAO
+//! ofa.js - v4.1.4 https://github.com/kirakiray/ofa.js  (c) 2018-2023 YAO
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -982,6 +982,23 @@ try{
     renderExtends.render({ step: "init", target });
   }
 
+  const fixSingleXfill = (template) => {
+    template.content.querySelectorAll("x-fill:not([name])").forEach((fillEl) => {
+      if (fillEl.querySelector("x-fill:not([name])")) {
+        throw `Don't fill unnamed x-fills with unnamed x-fill elements!!!\n${fillEl.outerHTML}`;
+      }
+
+      const tid = `t${getRandomId()}`;
+      fillEl.setAttribute("name", tid);
+
+      const temp = document.createElement("template");
+      temp.setAttribute("name", tid);
+      temp.innerHTML = fillEl.innerHTML;
+      fillEl.innerHTML = "";
+      fillEl.appendChild(temp);
+    });
+  };
+
   function convert(el) {
     let temps = {};
 
@@ -1013,10 +1030,14 @@ try{
         }
         temps[tempName] = el;
         el.remove();
+      } else {
+        // The initialized template can be run here
+        fixSingleXfill(el);
       }
 
       temps = { ...temps, ...convert(el.content) };
     } else if (tagName) {
+      // Converting elements
       const obj = {};
 
       Array.from(el.attributes).forEach((attr) => {
@@ -1047,6 +1068,7 @@ try{
     }
 
     if (el.children) {
+      // template content
       Array.from(el.children).forEach((el) => {
         temps = { ...temps, ...convert(el) };
       });
@@ -2170,7 +2192,8 @@ try{
           return;
         }
 
-        const targetTemp = temps[hyphenToUpperCase(tempName)];
+        // const targetTemp = temps[hyphenToUpperCase(tempName)];
+        const targetTemp = temps[tempName];
 
         const markEnd = this.__marked_end;
         const parent = markEnd.parentNode;
@@ -2455,6 +2478,10 @@ try{
 
       const { ele } = this;
 
+      if (!ele.parentNode) {
+        throw `The target has a sibling element, so you can't use unwrap`;
+      }
+
       ele.parentNode.insertBefore($el.ele, ele);
 
       ele.__internal = 1;
@@ -2472,7 +2499,7 @@ try{
       const target = ele.parentNode;
 
       if (target.children.length > 1) {
-        throw `The target has a sibling element, so you can't use unwrap.`;
+        throw `The element itself must have a parent`;
       }
 
       ele.__internal = 1;
@@ -3034,7 +3061,8 @@ try{
   const createPage = (src, defaults) => {
     // The $generated elements are not initialized immediately, so they need to be rendered in a normal container.
     const tempCon = document.createElement("div");
-    tempCon.innerHTML = `<o-page src="${src}" style="position:absolute;left:0;top:0;width:100%;height:100%;"></o-page>`;
+
+    tempCon.innerHTML = `<o-page src="${src}" style="display:block;"></o-page>`;
 
     const targetPage = $(tempCon.children[0]);
     targetPage._pause_init = 1;
@@ -3363,11 +3391,39 @@ ${scriptEl ? scriptEl.html : ""}`;
         pagesData.forEach((e, i) => {
           const parentPage = createPage(e.src, e.defaults);
 
-          this.wrap(parentPage);
+          if (this.parent) {
+            this.wrap(parentPage);
+          } else {
+            const needWraps = this.__need_wraps || (this.__need_wraps = []);
+            needWraps.push(parentPage);
+          }
         });
 
         this._renderDefault(target.defaults);
       },
+    },
+    attached() {
+      const needWraps = this.__need_wraps;
+      if (needWraps) {
+        needWraps.forEach((page) => {
+          this.wrap(page);
+        });
+        delete this.__need_wraps;
+      }
+
+      if (this.__not_run_attached) {
+        if (this._defaults.attached) {
+          this._defaults.attached.call(this);
+        }
+        delete this.__not_run_attached;
+      }
+    },
+    detached() {
+      const { _defaults } = this;
+
+      if (_defaults && _defaults.detached) {
+        _defaults.detached.call(this);
+      }
     },
     proto: {
       async _renderDefault(defaults) {
@@ -3412,6 +3468,14 @@ ${scriptEl ? scriptEl.html : ""}`;
         this.emit("page-loaded");
 
         this.__resolve();
+
+        if (this.ele.isConnected) {
+          if (defaults.attached) {
+            defaults.attached.call(this);
+          }
+        } else {
+          this.__not_run_attached = 1;
+        }
       },
       back() {
         this.app.back();
@@ -3769,7 +3833,7 @@ ${scriptEl ? scriptEl.html : ""}`;
 
     if (targetIndex >= 0) {
       container = publicPages.slice(-1)[0].page;
-      oldPage = container[0];
+      oldPage = container.slice(-1)[0];
       nextPages = oriNextPages.slice(targetIndex + 1);
     }
 
@@ -3829,7 +3893,7 @@ ${scriptEl ? scriptEl.html : ""}`;
 
   $$1.register({
     tag: "o-app",
-    temp: `<style>:host{position:relative;display:block}::slotted(*){display:block;position:absolute;left:0;top:0;width:100%;height:100%}</style><slot></slot>`,
+    temp: `<style>:host{position:relative;display:block}::slotted(*){display:block;width:100%;height:100%;}</style><slot></slot>`,
     attrs: {
       src: null,
     },
@@ -3892,7 +3956,7 @@ ${scriptEl ? scriptEl.html : ""}`;
 
         const newCurrent = this[HISTORY].splice(-delta)[0];
 
-        const {
+        let {
           current: page,
           old: needRemovePage,
           publics,
@@ -3905,6 +3969,8 @@ ${scriptEl ? scriptEl.html : ""}`;
           page,
           key: "previous",
         });
+
+        needRemovePage = resetOldPage(needRemovePage);
 
         this.emit("router-change", {
           name: "back",
@@ -3928,7 +3994,7 @@ ${scriptEl ? scriptEl.html : ""}`;
           this._initHome = src;
         }
 
-        const {
+        let {
           current: page,
           old: needRemovePage,
           publics,
@@ -3941,6 +4007,8 @@ ${scriptEl ? scriptEl.html : ""}`;
           page,
           key: "next",
         });
+
+        needRemovePage = resetOldPage(needRemovePage);
 
         if (type === "goto") {
           oldCurrent && this[HISTORY].push({ src: oldCurrent.src });
@@ -4019,7 +4087,6 @@ ${scriptEl ? scriptEl.html : ""}`;
     if (targetAnime) {
       page.css = {
         ...page.css,
-        transition: "all ease .3s",
         ...targetAnime,
       };
 
@@ -4056,6 +4123,16 @@ ${scriptEl ? scriptEl.html : ""}`;
     requestAnimationFrame(() => {
       setTimeout(func, 5);
     });
+
+  const resetOldPage = (needRemovePage) => {
+    needRemovePage.css = {
+      position: "absolute",
+      width: `${needRemovePage.width}px`,
+      height: `${needRemovePage.height}px`,
+    };
+
+    return needRemovePage;
+  };
 
   $$1.fn.extend({
     get app() {

@@ -10,18 +10,16 @@
     <doc-header slot="header">
       <span slot="logo">OFA.js</span>
       <ul>
-        <!-- <li class="active"><a href="">Docs</a></li>
-        <li><a href="">API</a></li>
-        <li><a href="">drill</a></li> -->
-        <x-fill name="li" :value="navs"></x-fill>
+        <x-fill :value="navs">
+          <li class:active="$host.isActive($data)">
+            <a attr:href="$data.href">{{$data.name}}</a>
+          </li>
+        </x-fill>
       </ul>
     </doc-header>
     <slot></slot>
   </doc-container>
 
-  <template name="li">
-    <li><a attr:href="$data.href">{{$data.name}}</a></li>
-  </template>
   <script>
     export function ready() {
       this.attr("id", "header-layout");
@@ -35,6 +33,19 @@
       init(data) {
         this.navs = data.navs;
       },
+      isActive(data) {
+        if (data) {
+          const exp = new RegExp(data.active);
+          return exp.test(this.app.current.src);
+        }
+        return false;
+      },
     };
+
+    export function routerChange(e) {
+      setTimeout(() => {
+        this.shadow.$("doc-container").scrollTop = 0;
+      }, 300);
+    }
   </script>
 </template>
