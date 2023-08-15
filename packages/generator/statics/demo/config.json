@@ -1,24 +1,23 @@
 {
-  "navs": [
+  "articles": [
     {
-      "name": "Docs",
-      "active": "generator/statics/demo/",
-      "href": ""
+      "name": "文档",
+      "type": "document",
+      "href": "./page-demo.html",
+      "navs": [
+        {
+          "name": "demo1",
+          "href": "./page-demo.html"
+        },
+        {
+          "name": "demo2",
+          "href": "./page-demo2.html"
+        }
+      ]
     },
     {
       "name": "API",
-      "active": "none",
-      "href": ""
-    }
-  ],
-  "articles": [
-    {
-      "name": "demo1",
-      "src": "./page-demo.html"
-    },
-    {
-      "name": "demo2",
-      "src": "./page-demo2.html"
+      "href": "/api/index.html"
     }
   ]
 }

@@ -41,11 +41,38 @@
     document.addEventListener("doc-component-loaded", async () => {
       const configData = await fetch(url).then((e) => e.json());
 
-      $("#header-layout").init(configData);
-      $("#article-layout").init(configData);
+      const { articles } = configData;
 
+      const topNavs = [];
+
+      articles.forEach((e) => {
+        const href = new URL(e.href, url).href;
+
+        e.href = href;
+
+        topNavs.push({
+          name: e.name,
+          href,
+          active: e.active || href.replace(/(.+)\/.+/, "$1"),
+        });
+
+        e.navs && fixLeftNavs(e.navs, url);
+      });
+
+      $("#header-layout").init(topNavs);
+      $("#article-layout").init(articles);
     });
   }
+
+  const fixLeftNavs = (navs, relatePath) => {
+    navs.forEach((e) => {
+      e.href = new URL(e.href, relatePath).href;
+
+      if (e.childs) {
+        fixLeftNavs(e.childs, relatePath);
+      }
+    });
+  };
 
   await appendScript(
     "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/libs/scsr/scsr.mjs",

@@ -33,7 +33,7 @@
     </doc-aside>
     <template name="item">
       <d-item attr:active="$host.leftGetActive($data)">
-        <a attr:href="$data.src" olink>{{$data.name}}</a>
+        <a attr:href="$data.href" olink>{{$data.name}}</a>
       </d-item>
     </template>
     <div style="padding: 16px 24px 0; position: relative">
@@ -41,7 +41,7 @@
     </div>
     <article-nav slot="right-aside" style="padding-top: 40px">
       <ul>
-        <x-fill :value="navs">
+        <x-fill :value="rightNavs">
           <li
             class:invis="$host.visNavs.includes($data.name)"
             class:active="$data.active"
@@ -74,9 +74,13 @@
 
     export const data = {
       articles: [],
-      navs: [],
+      rightNavs: [],
       // 正文内可视的导航标题
       visNavs: [],
+      // 所有文章数据
+      _articlesBase: [],
+      // 当前所处的 article name
+      currentArticleIndex: "",
     };
 
     export function ready() {
@@ -84,27 +88,46 @@
     }
 
     export function attached() {
-      this.refreshArticleNav();
+      this.refreshLeftNav();
+      this.refreshRightNav();
     }
 
     export const proto = {
       leftGetActive(data) {
         const now = `${location.origin}${location.pathname}`;
-        if (data.src === now) {
+        if (data.href === now) {
           return "";
         }
 
         return null;
       },
       init(data) {
-        this.articles = data.articles.map((e) => {
-          return {
-            ...e,
-            src: new URL(e.src, location.href).href,
-          };
-        });
+        this._articlesBase = data;
+
+        this.refreshLeftNav();
+        this.refreshRightNav();
       },
-      refreshArticleNav() {
+      refreshLeftNav() {
+        if (!this._articlesBase.length) {
+          return;
+        }
+
+        const target = this._articlesBase.find((e) => {
+          const reg = new RegExp(e.href.replace(/(.+)\/.+/, "$1"));
+
+          if (reg.test(location.href)) {
+            return true;
+          }
+        });
+
+        if (target !== this._nowBase) {
+          this._nowBase = target;
+
+          // 修正左侧导航
+          this.articles = target.navs;
+        }
+      },
+      refreshRightNav() {
         const article = this.app.current.shadow.$("article");
 
         let beforeTitle = "";
@@ -119,7 +142,7 @@
 
         const titles = article.all("h1,h2,h3,h4,h5");
 
-        this.navs = titles.map((e) => {
+        this.rightNavs = titles.map((e) => {
           return {
             name: e.text.trim(),
           };
@@ -142,7 +165,7 @@
           this.visNavs = Array.from(shows);
 
           let hasActive;
-          this.navs.forEach((e) => {
+          this.rightNavs.forEach((e) => {
             e.active = null;
             if (hasActive) {
               return;
@@ -186,7 +209,8 @@
     };
 
     export function routerChange(e) {
-      this.refreshArticleNav();
+      this.refreshLeftNav();
+      this.refreshRightNav();
     }
   </script>
 </template>
