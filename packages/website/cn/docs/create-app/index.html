@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>empty template</title>
+    <script
+      src="http://127.0.0.1:5500/packages/generator/statics/init.js"
+      config="../../doc-config.json"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="http://127.0.0.1:5500/packages/generator/statics/css/public.css"
+    />
+  </head>
+  <body>
+    <o-app
+      src="http://127.0.0.1:5500/packages/generator/statics/app-config.mjs"
+    >
+      <template page>
+        <link
+          rel="stylesheet"
+          href="http://127.0.0.1:5500/packages/generator/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body">
+        <h1>开发应用</h1>
+<p>除了可以开发组件，<code>ofa.js</code> 还可以用于开发功能完整的应用程序。</p>
+<p><code>ofa.js</code> 将应用程序集成为一个 <code>o-app</code> 组件，通过直接使用这个标签，你就能够快速创建应用程序。这种方式使应用的创建变得简单且高效。</p>
+<p>此外，<code>ofa.js</code> 官方还提供了完整的<strong>路由</strong>和**SSG（静态页面生成）**方案，帮助开发者构建更健全的应用程序。这些功能能够加速开发流程，让你能够专注于应用程序的逻辑和用户体验，而不必过多担心底层细节。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;app test demo&lt;/title&gt;
+    &lt;script src=&quot;.././../ofa.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      o-app {
+        display: block;
+        height: 100%;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;o-app&gt;
+      &lt;o-page src=&quot;./pages/hello.html&quot;&gt;&lt;/o-page&gt;
+    &lt;/o-app&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>上面是一个简单的应用教程代码示例，接下来会逐步讲解应用的开发过程。</p>
+
+        </article>
+        <script>
+          export const parent =
+            "http://127.0.0.1:5500/packages/generator/statics/pages/article-layout.html";
+        </script>
+      </template>
+    </o-app>
+  </body>
+</html>      

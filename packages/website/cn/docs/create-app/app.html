@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>empty template</title>
+    <script
+      src="http://127.0.0.1:5500/packages/generator/statics/init.js"
+      config="../../doc-config.json"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="http://127.0.0.1:5500/packages/generator/statics/css/public.css"
+    />
+  </head>
+  <body>
+    <o-app
+      src="http://127.0.0.1:5500/packages/generator/statics/app-config.mjs"
+    >
+      <template page>
+        <link
+          rel="stylesheet"
+          href="http://127.0.0.1:5500/packages/generator/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body">
+        <h1>制作应用</h1>
+<p>使用 <code>o-app</code> 标签可以轻松地创建一个完整的应用程序窗口。下面是如何制作一个应用并配置它的步骤：</p>
+<h2>基础代码</h2>
+<ol>
+<li>创建一个 HTML 文件，设置 <code>o-app</code> 标签为应用的显示窗口。确保为 <code>o-app</code> 设置全屏的样式，以使应用占据整个视口。</li>
+</ol>
+<pre><code class="language-html">&lt;!-- app.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;My App&lt;/title&gt;
+  &lt;style&gt;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    o-app {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  &lt;/style&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-app&gt;&lt;/o-app&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li><p>创建一个 es 模块，用于设置应用的配置数据。配置数据包括以下选项：</p>
+<ul>
+<li><code>home</code>：字符串类型，应用的首页的页面模块地址。</li>
+<li><code>loading</code>：函数类型，应用在加载新页面时，会运行这个函数，得到的内容会插入到应用中，作为加载时的提示，等到页面加载完成后，会自动去除这个 loading 元素。</li>
+<li><code>fail</code>：函数类型，应用加载页面失败时，会运行这个函数，返回得到的值会显示在应用中作为加载失败的提示。函数会带有加载失败页面的 <code>src</code> 地址和错误报错对象。</li>
+<li><code>pageAnime</code>：页面之间切换时的动画配置。</li>
+</ul>
+</li>
+</ol>
+<p>下面是应用的配置数据示例：</p>
+<pre><code class="language-javascript">// app-config.mjs
+export const home = &quot;./pages/home.mjs?count=1&quot;;
+
+export const loading = () =&gt; {
+  const loadingEl = $(`&lt;div style=&quot;width:100%;height:100%;display:flex;justify-content:center;align-items:center;word-break:break-all;&quot;&gt;Loading&lt;/div&gt;`);
+  return loadingEl;
+};
+
+export const fail = ({ src, error }) =&gt; {
+  return `&lt;div style=&quot;width:100%;height:100%;display:flex;justify-content:center;align-items:center;word-break:break-all;&quot; data-testid=&quot;error-container&quot;&gt;
+    &lt;div style=&quot;padding:20px;text-align:center;&quot;&gt;
+      &lt;h3&gt;Load Fail&lt;/h3&gt; 
+      &lt;p&gt;${error.stack}&lt;/p&gt;
+      ${src}
+      &lt;div&gt;
+        &lt;button on:click=&quot;back()&quot;&gt;Back&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`;
+};
+
+export const pageAnime = {
+  current: {
+    opacity: 1,
+    transform: &quot;translate(0, 0)&quot;,
+  },
+  next: {
+    opacity: 0,
+    transform: &quot;translate(30px, 0)&quot;,
+  },
+  previous: {
+    opacity: 0,
+    transform: &quot;translate(-30px, 0)&quot;,
+  },
+};
+</code></pre>
+<ol start="3">
+<li>在 HTML 文件中使用 <code>o-app</code> 标签，并通过 <code>src</code> 属性引用配置数据的 es 模块。</li>
+</ol>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;My App&lt;/title&gt;
+  &lt;style&gt;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    o-app {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  &lt;/style&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-app src=&quot;./app-config.mjs&quot;&gt;&lt;/o-app&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>通过以上步骤，你已经成功制作了一个使用 <code>o-app</code> 组件的应用程序窗口。<code>o-app</code> 组件会根据配置数据中的设置加载页面，展示加载中的提示或加载失败的提示，并支持页面切换动画。这样，你可以快速搭建一个功能完整且具有交互性的应用程序。</p>
+<h2>路由跳转</h2>
+<p>在 <code>o-app</code> 应用中，你可以轻松地实现路由跳转，从一个页面模块跳转到另一个页面模块。下面介绍几种不同的方式来进行路由跳转。</p>
+<h3>使用 <code>&lt;a&gt;</code> 标签进行路由跳转</h3>
+<p>你可以在页面的 HTML 中使用 <code>&lt;a&gt;</code> 标签来实现路由跳转。需要将 <code>href</code> 属性指定为目标页面模块的路径，并添加 <code>olink</code> 属性，以告知 <code>o-app</code> 组件这是一个路由链接。</p>
+<pre><code class="language-html">&lt;a href=&quot;./pages/home.mjs?count=2&quot; olink&gt;跳转到首页&lt;/a&gt;
+</code></pre>
+<h3>goto</h3>
+<p>你可以在页面模板中使用 <code>on:click</code> 属性来绑定点击事件，并调用模块上的 <code>goto</code> 方法进行路由跳转。</p>
+<pre><code class="language-html">&lt;template page&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;button on:click=&quot;toabout&quot;&gt;跳转到关于页面&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    export default async ({ query }) =&gt; {
+      return {
+        proto: {
+          toabout() {
+            this.goto(&quot;./about.mjs&quot;);
+          },
+        },
+      };
+    };
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<p>又或者直接卸载目标元素上：</p>
+<pre><code class="language-html">&lt;button on:click=&quot;goto(&#39;./pages/about.mjs&#39;)&quot;&gt;跳转到关于页面&lt;/button&gt;
+</code></pre>
+<h3>替换跳转和返回页面</h3>
+<p>除了 <code>goto</code> 方法外，<code>o-app</code> 还支持 <code>replace</code> 和 <code>back</code> 方法。</p>
+<ul>
+<li><code>replace</code> 方法用于替换跳转，它会取代当前页面的路由，使新页面成为当前页面的路由。</li>
+</ul>
+<pre><code class="language-html">&lt;button on:click=&quot;replace(&#39;./pages/settings.mjs&#39;)&quot;&gt;跳转并替换当前页面&lt;/button&gt;
+</code></pre>
+<ul>
+<li><code>back</code> 方法用于返回到前一个页面。</li>
+</ul>
+<pre><code class="language-html">&lt;button on:click=&quot;back()&quot;&gt;返回上一页&lt;/button&gt;
+</code></pre>
+<p>需要注意的是，应用内会保持组件的路由状态，但路由数据不会绑定到当前浏览器标签上。这样，你可以方便地在应用中实现页面之间的跳转和导航。</p>
+<p>如果你想实现路由和页面的绑定，可以使用 o-router 组件，我们将在后面的章节中详细介绍。</p>
+<p>通过以上方法，你可以在 <code>o-app</code> 应用中实现灵活的路由跳转，让用户能够方便地浏览不同的页面内容。</p>
+<h2>访问应用和当前页面</h2>
+<p>在应用内的各个元素（包括组件），你通过 <strong>app</strong> 属性来获取它们所在的 <code>o-app</code> 实例。这对于需要与整个应用进行交互的操作非常有用。</p>
+<p>通过 <code>app.current</code> 属性，你可以获取当前激活的页面模块的地址。</p>
+<p>以下是一个使用示例：</p>
+<pre><code class="language-javascript">// MyComponent.mjs
+export default () =&gt; {
+  return {
+    attached(){
+      const appTag = this.app;
+
+      const currentPage = appTag.current;
+      console.log(`当前激活的页面是：${currentPage}`);
+    }
+  };
+}
+</code></pre>
+<p>在上面的示例中，通过选择器 <code>.app</code> 获取了应用标签，然后通过访问 <code>app.current</code> 属性获取了当前激活的页面地址。</p>
+<h2>使用技巧：提前缓存下一页</h2>
+<p>在一些场景下，你可能已经预知用户即将跳转到下一页。为了提高用户体验，你可以提前缓存下一页的页面模块，这样在实际跳转时可以立即加载，减少用户等待的时间，让用户体验更加流畅。。</p>
+<p>在当前页面的 JavaScript 代码中，调用 <code>load</code> 方法并传入下一页的模块路径，该模块将被加载并缓存。</p>
+<pre><code class="language-javascript">// MyComponent.mjs
+export default async ({ load }) =&gt; {
+  //   await load(&#39;./pages/next-page.mjs&#39;);
+  load(&#39;./pages/next-page.mjs&#39;); // 这是一个仅用于缓存，非当前页必须模块，无需添加 await
+};
+</code></pre>
+
+        </article>
+        <script>
+          export const parent =
+            "http://127.0.0.1:5500/packages/generator/statics/pages/article-layout.html";
+        </script>
+      </template>
+    </o-app>
+  </body>
+</html>      

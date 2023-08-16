@@ -12,5 +12,8 @@
     "dev": "nodemon --inspect src/main.mjs"
   },
   "author": "Yao",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^7.0.3"
+  }
 }

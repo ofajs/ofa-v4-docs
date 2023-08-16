@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>empty template</title>
+    <script
+      src="http://127.0.0.1:5500/packages/generator/statics/init.js"
+      config="../../doc-config.json"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="http://127.0.0.1:5500/packages/generator/statics/css/public.css"
+    />
+  </head>
+  <body>
+    <o-app
+      src="http://127.0.0.1:5500/packages/generator/statics/app-config.mjs"
+    >
+      <template page>
+        <link
+          rel="stylesheet"
+          href="http://127.0.0.1:5500/packages/generator/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body">
+        <h1>实例的基础概念</h1>
+<p><code>$</code> 实例是对页面上元素的封装，除了用于选择现有的元素外，它还可以直接创建新元素并进行操作。在本章中，我们将介绍如何创建新元素以及对 <code>$</code> 实例的一些操作。</p>
+<h2>创建新元素</h2>
+<p>通过 <code>$</code> 实例，我们可以直接创建新的元素并进行操作，例如：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Create New Element&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script&gt;
+    const $ele = $(&#39;&lt;div style=&quot;color:red&quot;&gt;I am text&lt;/div&gt;&#39;);
+    $(&#39;body&#39;).push($ele);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的例子中，我们通过 <code>$(&#39;&lt;div style=&quot;color:red&quot;&gt;I am text&lt;/div&gt;&#39;)</code> 创建了一个新的 <code>div</code> 元素，并将其添加到了 <code>body</code> 中。</p>
+<h2>获取子元素</h2>
+<p>通过 <code>$</code> 获取的实例，并不像 DOM 元素那样拥有 <code>children</code> 属性。但是我们可以通过数组索引来访问实例的直接子元素：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Access Child Elements&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;p&gt;First Paragraph&lt;/p&gt;
+    &lt;p&gt;Second Paragraph&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    const $div = $(&#39;div&#39;);
+    console.log($div[0]); // Output: &lt;p&gt;First Paragraph&lt;/p&gt;
+    console.log($div[1]); // Output: &lt;p&gt;Second Paragraph&lt;/p&gt;
+    console.log($div.length); // Output: 2
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的例子中，我们获取了 <code>div</code> 元素，并通过索引来访问第一个和第二个 <code>p</code> 元素。同时，我们还使用了 <code>$div.length</code> 获取了子元素的数量。</p>
+<h2>操作子元素</h2>
+<p>通过 <code>$</code> 实例，我们还可以直接使用数组的方法来操作子元素，例如 <code>push</code> 和 <code>pop</code>：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Manipulate Child Elements&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;p&gt;First Paragraph&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    const $paragraphs = $(&#39;p&#39;);
+    
+    // 添加新的 div 元素作为子元素
+    const $newDiv = $(&#39;&lt;div&gt;New Div&lt;/div&gt;&#39;);
+    $paragraphs.push($newDiv);
+
+    setTimeout(()=&gt;{
+      // 删除最后一个子元素
+      $paragraphs.pop();
+
+      console.log($paragraphs);
+    },1000)
+
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的例子中，我们获取了所有 <code>p</code> 元素的 <code>$</code> 实例，并使用 <code>push</code> 方法添加了一个新的 <code>div</code> 元素作为子元素，然后使用 <code>pop</code> 方法移除了最后一个子元素。</p>
+<p>通过上述示例，你可以了解 <code>$</code> 实例的一些基本操作，包括创建新元素和对子元素的访问与操作。 <code>$</code> 实例提供了简便的方法来操作页面上的元素。</p>
+
+        </article>
+        <script>
+          export const parent =
+            "http://127.0.0.1:5500/packages/generator/statics/pages/article-layout.html";
+        </script>
+      </template>
+    </o-app>
+  </body>
+</html>      
