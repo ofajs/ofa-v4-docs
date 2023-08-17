@@ -53,6 +53,7 @@
           <li
             class:invis="$host.visNavs.includes($data.name)"
             class:active="$data.active"
+            attr:type="$data.type"
           >
             <a href="">{{$data.name}}</a>
           </li>
@@ -153,6 +154,7 @@
 
         this.rightNavs = titles.map((e) => {
           return {
+            type: e.tag.toLowerCase(),
             name: e.text.trim(),
           };
         });

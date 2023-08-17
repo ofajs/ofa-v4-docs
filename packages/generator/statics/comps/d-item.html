@@ -3,7 +3,7 @@
     d-nav {
       display: block;
     }
-    
+
     d-item[hide-childs] d-nav d-item {
       margin-top: 0;
       margin-bottom: 0;
@@ -49,13 +49,14 @@
       cursor: default;
     }
 
-    :host([active="2"]) .container {
+    :host([sub-active]) .container {
       background-color: transparent;
       cursor: pointer;
+      color: var(--active-color);
     }
 
     .container:hover,
-    :host([active="2"]) .container:hover {
+    :host([sub-active]) .container:hover {
       background-color: var(--aside-hover-bg);
     }
 
@@ -99,23 +100,29 @@
           active: null,
           hideChilds: null,
         },
-
         data: {
           showArrow: false,
         },
-        watch: {},
-        proto: {
-          setActive() {
-            if (!this.$('[slot="nav"]')) {
-              // 判断是否有父层，将父层的 item 都带上 active=2
-              const parentItems = this.parents.filter(
-                (e) => e.tag === "d-item"
-              );
-              parentItems.forEach((e) => (e.active = "2"));
-              this.active = "";
+        watch: {
+          active(val) {
+            if (val === "") {
+              setTimeout(() => {
+                this.parents
+                  .filter((e) => e.tag === "d-item")
+                  .forEach((e) => {
+                    e.attr("sub-active", "");
+                  });
+              });
+            } else {
+              this.parents
+                .filter((e) => e.tag === "d-item")
+                .forEach((e) => {
+                  e.attr("sub-active", null);
+                });
             }
           },
         },
+        proto: {},
         ready() {
           this.shadow.on("slotchange", () => {
             if (this.$("[slot='nav']")) {

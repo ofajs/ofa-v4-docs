@@ -37,3 +37,26 @@ article-nav li.active:before {
   width: 3px;
   background-color: var(--active-color);
 }
+article-nav [type="h3"] {
+  margin-left: 20px;
+}
+article-nav [type="h3"]:before {
+  left: -20.5px;
+}
+article-nav [type="h3"].active:before {
+  left: -22px;
+  width: 3px;
+}
+article-nav [type="h4"],
+article-nav [type="h5"] {
+  margin-left: 28px;
+}
+article-nav [type="h4"]:before,
+article-nav [type="h5"]:before {
+  left: -28.5px;
+}
+article-nav [type="h4"].active:before,
+article-nav [type="h5"].active:before {
+  left: -30px;
+  width: 3px;
+}

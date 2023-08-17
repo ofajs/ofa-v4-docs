@@ -44,4 +44,28 @@ article-nav {
     width: 3px;
     background-color: var(--active-color);
   }
+
+  [type="h3"] {
+    margin-left: 20px;
+    &:before {
+      left: -20.5px;
+    }
+    &.active:before {
+      left: -22px;
+      width: 3px;
+    }
+  }
+
+  [type="h4"],
+  [type="h5"] {
+    margin-left: 28px;
+    &:before {
+      left: -28.5px;
+    }
+
+    &.active:before {
+      left: -30px;
+      width: 3px;
+    }
+  }
 }
