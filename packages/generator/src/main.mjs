@@ -8,7 +8,7 @@ globalThis.readDir = readDir;
 const entryDir = "/Users/huangyao/Documents/GitHub/ofa-v4-docs/packages/docs";
 
 // 文档输出目录
-const outDir = "/Users/huangyao/Documents/GitHub/ofa-v4-docs/packages/website";
+const outDir = "/Users/huangyao/Documents/GitHub/ofa-v4-docs/dist";
 
 // 初始操作
 const init = async () => {
@@ -43,5 +43,7 @@ const distTo = async (inputer, outputer) => {
   transMD(inputer, outputer, "doc-config.json");
 };
 
-setTimeout(init, 2000);
-setTimeout(() => {}, 10000000);
+init();
+
+// setTimeout(init, 2000);
+// setTimeout(() => {}, 10000000);

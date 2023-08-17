@@ -22,6 +22,7 @@ export default async function transMD(inputer, outputer, configUrl) {
 
     // 对md内容进行转换
     const result = marked(target);
+    const title = result.replace(/<h1>(.+)<\/h1>[\s\S]*/, "$1");
 
     const newName = name.replace(/(.+)\..+/, "$1") + ".html";
 
@@ -33,7 +34,7 @@ export default async function transMD(inputer, outputer, configUrl) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>empty template</title>
+    <title>${title || newName}</title>
     <script
       src="http://127.0.0.1:5500/packages/generator/statics/init.js"
       config="${configUrl}"

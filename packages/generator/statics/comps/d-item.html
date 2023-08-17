@@ -1,5 +1,9 @@
 <template component>
   <style host>
+    d-nav {
+      display: block;
+    }
+    
     d-item[hide-childs] d-nav d-item {
       margin-top: 0;
       margin-bottom: 0;
@@ -19,14 +23,14 @@
       margin: 5px 0;
       font-weight: 500;
       user-select: none;
-      transition: all ease 0.3s;
+      transition: margin ease 0.3s;
     }
 
     ::slotted(a),
     ::slotted(span) {
       display: block;
       padding: 5px 0 5px 8px;
-      transition: all ease 0.3s;
+      transition: padding ease 0.3s, line-height ease 0.3s, opacity ease 0.3s;
     }
 
     .container {
@@ -37,13 +41,6 @@
       cursor: pointer;
       overflow: hidden;
       transition: all ease 0.2s;
-    }
-
-    .container.hide {
-      padding-top: 0;
-      padding-bottom: 0;
-      line-height: 0px;
-      color: transparent;
     }
 
     :host([active]) .container {
@@ -83,10 +80,13 @@
       transform: rotate(90deg);
     }
   </style>
-  <div class="container" on:click="showChilds = !showChilds" class:hide="hide">
+  <div
+    class="container"
+    on:click="hideChilds = hideChilds === null ? '' : null"
+  >
     <slot></slot>
     <x-if :value="showArrow">
-      <div class="arrow" class:rotate="showChilds"></div>
+      <div class="arrow" class:rotate="hideChilds === null"></div>
     </x-if>
   </div>
   <div class="nav">
@@ -102,27 +102,8 @@
 
         data: {
           showArrow: false,
-          showChilds: true,
-          hide: false,
         },
-        watch: {
-          showChilds(bool) {
-            this.hideChilds = bool ? null : "";
-
-            // const nav = this.$("d-nav");
-            // if (nav) {
-            //   if (bool) {
-            //     nav.forEach((e) => {
-            //       e.hide = false;
-            //     });
-            //   } else {
-            //     nav.forEach((e) => {
-            //       e.hide = true;
-            //     });
-            //   }
-            // }
-          },
-        },
+        watch: {},
         proto: {
           setActive() {
             if (!this.$('[slot="nav"]')) {
