@@ -17,7 +17,7 @@
   const configSrc = document.currentScript.getAttribute("config");
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/dist/ofa.min.js",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.5/dist/ofa.min.js",
     {
       debug: "",
     }
@@ -52,7 +52,7 @@
 
         topNavs.push({
           name: e.name,
-          href,
+          href: href ? href : null,
           active: e.active || href.replace(/(.+)\/.+/, "$1"),
         });
 
@@ -66,7 +66,9 @@
 
   const fixLeftNavs = (navs, relatePath) => {
     navs.forEach((e) => {
-      e.href = new URL(e.href, relatePath).href;
+      if (e.href) {
+        e.href = new URL(e.href, relatePath).href;
+      }
 
       if (e.childs) {
         fixLeftNavs(e.childs, relatePath);

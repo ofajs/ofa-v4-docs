@@ -9,7 +9,8 @@
     "url": "git+https://github.com/kirakiray/ofa-v4-docs.git"
   },
   "scripts": {
-    "dev": "nodemon --inspect src/main.mjs"
+    "dev": "nodemon --inspect src/main.mjs",
+    "build": "node src/main.mjs"
   },
   "author": "Yao",
   "license": "MIT",

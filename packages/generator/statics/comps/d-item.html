@@ -1,15 +1,32 @@
 <template component>
+  <style host>
+    d-item[hide-childs] d-nav d-item {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    d-item[hide-childs] d-nav d-item a,
+    d-item[hide-childs] d-nav d-item span {
+      padding-top: 0;
+      padding-bottom: 0;
+      line-height: 0px;
+      opacity: 0;
+    }
+  </style>
   <style>
     :host {
       display: block;
       margin: 5px 0;
       font-weight: 500;
       user-select: none;
+      transition: all ease 0.3s;
     }
 
-    ::slotted(a) {
+    ::slotted(a),
+    ::slotted(span) {
       display: block;
       padding: 5px 0 5px 8px;
+      transition: all ease 0.3s;
     }
 
     .container {
@@ -80,27 +97,30 @@
       return {
         attrs: {
           active: null,
+          hideChilds: null,
         },
 
         data: {
           showArrow: false,
-          showChilds: false,
+          showChilds: true,
           hide: false,
         },
         watch: {
           showChilds(bool) {
-            const nav = this.$("d-nav");
-            if (nav) {
-              if (bool) {
-                nav.forEach((e) => {
-                  e.hide = false;
-                });
-              } else {
-                nav.forEach((e) => {
-                  e.hide = true;
-                });
-              }
-            }
+            this.hideChilds = bool ? null : "";
+
+            // const nav = this.$("d-nav");
+            // if (nav) {
+            //   if (bool) {
+            //     nav.forEach((e) => {
+            //       e.hide = false;
+            //     });
+            //   } else {
+            //     nav.forEach((e) => {
+            //       e.hide = true;
+            //     });
+            //   }
+            // }
           },
         },
         proto: {

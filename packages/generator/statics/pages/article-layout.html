@@ -33,7 +33,15 @@
     </doc-aside>
     <template name="item">
       <d-item attr:active="$host.leftGetActive($data)">
-        <a attr:href="$data.href" olink>{{$data.name}}</a>
+        <x-if :value="$data.href">
+          <a attr:href="$data.href" olink>{{$data.name}}</a>
+        </x-if>
+        <x-else>
+          <span> {{$data.name}}</span>
+          <d-nav slot="nav">
+            <x-fill :value="$data.childs" name="item"></x-fill>
+          </d-nav>
+        </x-else>
       </d-item>
     </template>
     <div style="padding: 16px 24px 0; position: relative">
@@ -124,6 +132,7 @@
           this._nowBase = target;
 
           // 修正左侧导航
+          console.log("this._articlesBase => ", target.navs);
           this.articles = target.navs;
         }
       },
