@@ -17,7 +17,7 @@
   const configSrc = document.currentScript.getAttribute("config");
 
   // await appendScript(
-  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.5/dist/ofa.min.js",
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.6/dist/ofa.min.js",
   //   {
   //     debug: "",
   //   }
@@ -29,9 +29,9 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.isDark === "true") {
-      $("body").classList.add("dark");
+      $("html").classList.add("dark");
     } else {
-      $("body").classList.remove("dark");
+      $("html").classList.remove("dark");
     }
   });
 
@@ -82,6 +82,7 @@
   //     type: "module",
   //   }
   // );
+  
   await appendScript(
     "http://127.0.0.1:5513/libs/scsr/scsr.mjs",
     {

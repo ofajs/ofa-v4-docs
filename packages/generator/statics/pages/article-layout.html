@@ -51,11 +51,11 @@
       <ul>
         <x-fill :value="rightNavs">
           <li
-            class:invis="$host.visNavs.includes($data.name)"
+            class:invis="$host.visNavs.includes($data.id)"
             class:active="$data.active"
             attr:type="$data.type"
           >
-            <a href="">{{$data.name}}</a>
+            <a attr:href="$data.href">{{$data.name}}</a>
           </li>
         </x-fill>
       </ul>
@@ -140,11 +140,13 @@
       refreshRightNav() {
         const article = this.app.current.shadow.$("article");
 
+        let count = 0;
         let beforeTitle = "";
 
         article.forEach((childEl) => {
           if (["h1", "h2", "h3", "h4", "j5"].includes(childEl.tag)) {
-            beforeTitle = childEl.text.trim();
+            beforeTitle = childEl.text.trim() + `-title${count}`;
+            count++;
           }
 
           childEl.data.sutitle = beforeTitle;
@@ -152,10 +154,18 @@
 
         const titles = article.all("h1,h2,h3,h4,h5");
 
-        this.rightNavs = titles.map((e) => {
+        this.rightNavs = titles.map((e, index) => {
+          const id = `${e.text.trim()}-title${index}`;
+
+          e.html = `<a class="anchor" href="#${id}"><span class="octicon-link"></span> </a>${e.text}`;
+
+          e.attr("id", id);
+
           return {
+            id,
             type: e.tag.toLowerCase(),
             name: e.text.trim(),
+            href: "#" + id,
           };
         });
 
@@ -167,7 +177,7 @@
 
         let timer;
 
-        const refreshActive = () => {
+        const refreshRightActive = () => {
           const shows = new Set();
           visibles.forEach((e) => {
             shows.add(e.dataset.sutitle);
@@ -182,7 +192,7 @@
               return;
             }
 
-            if (shows.has(e.name)) {
+            if (shows.has(e.id)) {
               e.active = 1;
               hasActive = 1;
             }
@@ -207,7 +217,7 @@
             }
 
             timer = setTimeout(() => {
-              refreshActive();
+              refreshRightActive();
               timer = null;
             }, 100);
           }

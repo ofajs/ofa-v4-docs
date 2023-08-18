@@ -21,8 +21,8 @@ export default async function transMD(inputer, outputer, configUrl) {
     }
 
     // 对md内容进行转换
+    const title = target.replace(/#+ (.+)[\d\D]+/, "$1");
     const result = marked(target);
-    const title = result.replace(/<h1>(.+)<\/h1>[\s\S]*/, "$1");
 
     const newName = name.replace(/(.+)\..+/, "$1") + ".html";
 

@@ -2,6 +2,11 @@
   <style host>
     doc-header > ul {
       display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      margin-left: 30px;
     }
     doc-header > ul > li {
       display: block;
@@ -97,9 +102,9 @@
       },
       refreshMode() {
         if (this.isDark) {
-          $("body").classList.add("dark");
+          $("html").classList.add("dark");
         } else {
-          $("body").classList.remove("dark");
+          $("html").classList.remove("dark");
         }
       },
     };
