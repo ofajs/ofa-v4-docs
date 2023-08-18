@@ -78,3 +78,8 @@ header {
 .mask.hide .pannel {
   width: 0px;
 }
+@media screen and (min-width: 800px) {
+  .menu-btn {
+    display: none;
+  }
+}
