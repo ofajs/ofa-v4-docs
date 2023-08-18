@@ -62,6 +62,9 @@ export default async function transMD(inputer, outputer, configUrl) {
         </script>
       </template>
     </o-app>
+    <div class="outer-layer" id="outer-layer">
+      <div class="loading"></div>
+    </div>
   </body>
 </html>      
 `

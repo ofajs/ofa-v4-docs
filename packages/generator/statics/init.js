@@ -27,13 +27,18 @@
     type: "module",
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.isDark === "true") {
-      $("html").classList.add("dark");
-    } else {
-      $("html").classList.remove("dark");
-    }
+  $("body").on("doc-component-loaded", () => {
+    $("#outer-layer").classList.add("fadeout");
+    setTimeout(() => {
+      $("#outer-layer").remove();
+    }, 300);
   });
+
+  if (localStorage.isDark === "true") {
+    $("html").classList.add("dark");
+  } else {
+    $("html").classList.remove("dark");
+  }
 
   if (configSrc) {
     const url = new URL(configSrc, location.href).href;
@@ -82,11 +87,8 @@
   //     type: "module",
   //   }
   // );
-  
-  await appendScript(
-    "http://127.0.0.1:5513/libs/scsr/scsr.mjs",
-    {
-      type: "module",
-    }
-  );
+
+  await appendScript("http://127.0.0.1:5513/libs/scsr/scsr.mjs", {
+    type: "module",
+  });
 })();

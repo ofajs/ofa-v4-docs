@@ -100,32 +100,26 @@
       this.refreshLeftNav();
       this.refreshRightNav();
 
-      let f;
-      window.addEventListener(
-        "hashchange",
-        (f = (e) => {
-          const hash = decodeURIComponent(location.hash);
-
-          if (hash) {
-            const target = this[0].shadow.$(hash);
-            if (target) {
-              target.ele.scrollIntoView({
-                behavior: "smooth",
-              });
-            }
-          } else {
-            $("#header-layout").shadow.$("doc-container").scrollTop = 0;
-          }
-        })
-      );
-      this.__hash_change = f;
+      window.addEventListener("hashchange", this.hashChange);
     }
 
     export function detached() {
-      window.removeEventListener("hashchange", this.__hash_change);
+      window.removeEventListener("hashchange", this.hashChange);
     }
 
     export const proto = {
+      hashChange() {
+        const hash = decodeURIComponent(location.hash);
+
+        if (hash) {
+          const target = this[0].shadow.$(hash);
+          if (target) {
+            target.ele.scrollIntoView({});
+          }
+        } else {
+          $("#header-layout").shadow.$("doc-container").scrollTop = 0;
+        }
+      },
       leftGetActive(data) {
         const now = `${location.origin}${location.pathname}`;
         if (data.href === now) {
@@ -139,6 +133,8 @@
 
         this.refreshLeftNav();
         this.refreshRightNav();
+
+        setTimeout(this.hashChange(), 100);
       },
       refreshLeftNav() {
         if (!this._articlesBase.length) {
