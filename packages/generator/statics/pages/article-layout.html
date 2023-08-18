@@ -99,6 +99,30 @@
     export function attached() {
       this.refreshLeftNav();
       this.refreshRightNav();
+
+      let f;
+      window.addEventListener(
+        "hashchange",
+        (f = (e) => {
+          const hash = decodeURIComponent(location.hash);
+
+          if (hash) {
+            const target = this[0].shadow.$(hash);
+            if (target) {
+              target.ele.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          } else {
+            $("#header-layout").shadow.$("doc-container").scrollTop = 0;
+          }
+        })
+      );
+      this.__hash_change = f;
+    }
+
+    export function detached() {
+      window.removeEventListener("hashchange", this.__hash_change);
     }
 
     export const proto = {
@@ -149,13 +173,13 @@
             count++;
           }
 
-          childEl.data.sutitle = beforeTitle;
+          childEl.data.sutitle = replaceSpecialCharacters(beforeTitle);
         });
 
         const titles = article.all("h1,h2,h3,h4,h5");
 
         this.rightNavs = titles.map((e, index) => {
-          const id = `${e.text.trim()}-title${index}`;
+          const id = `${replaceSpecialCharacters(e.text.trim())}-title${index}`;
 
           e.html = `<a class="anchor" href="#${id}"><span class="octicon-link"></span> </a>${e.text}`;
 
@@ -235,6 +259,11 @@
     export function routerChange(e) {
       this.refreshLeftNav();
       this.refreshRightNav();
+    }
+
+    function replaceSpecialCharacters(str) {
+      const specialCharacters = /[\s!@#$%^&*()\-\+=\[\]{}|\\/,.;'"<>?]/g;
+      return str.replace(specialCharacters, "-");
     }
   </script>
 </template>

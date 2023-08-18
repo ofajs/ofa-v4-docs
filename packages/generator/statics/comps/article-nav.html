@@ -22,14 +22,15 @@
           const { scrollHeight, scrollTop } = this.ele;
           const { height } = this;
 
-          console.log(
-            "scrollHeight:",
-            scrollHeight,
-            ", height:",
-            height,
-            ", scrollTop:",
-            scrollTop
-          );
+          // console.log(
+          //   "scrollHeight:",
+          //   scrollHeight,
+          //   ", height:",
+          //   height,
+          //   ", scrollTop:",
+          //   scrollTop
+          // );
+
           if (scrollHeight > height) {
             const target = this.$("li[type].active");
 
@@ -44,7 +45,7 @@
                 this.ele.scrollTop = targetTop + 10;
               }
 
-              console.log("targetTop:", targetTop);
+              // console.log("targetTop:", targetTop);
             }
           }
         }, 50);
