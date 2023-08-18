@@ -51,7 +51,7 @@
       const topNavs = [];
 
       articles.forEach((e) => {
-        const href = new URL(e.href, url).href;
+        const href = new URL(e.navs[0].href, url).href;
 
         e.href = href;
 

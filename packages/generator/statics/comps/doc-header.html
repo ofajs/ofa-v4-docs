@@ -2,15 +2,16 @@
   <style host>
     doc-header > ul {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       margin: 0;
       padding: 0;
       height: 100%;
-      margin-left: 30px;
+      margin-left: 24px;
     }
     doc-header > ul > li {
       display: block;
-      margin: 0 16px;
+      margin: 0 32px 0 0;
     }
     doc-header > ul > li:first-child {
       margin-left: 0;
@@ -25,58 +26,18 @@
       color: var(--active-color);
     }
   </style>
-  <style>
-    :host {
-      display: block;
-    }
-    header {
-      display: flex;
-      height: 50px;
-    }
-
-    .logo {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 0 16px 0 24px;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-right: 16px;
-    }
-
-    .right-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 35px;
-      height: 35px;
-      border-radius: 18px;
-      user-select: none;
-      cursor: pointer;
-      transition: all ease 0.2s;
-    }
-
-    .right-btn img {
-      width: auto;
-      height: 70%;
-    }
-
-    .right-btn:hover {
-      background-color: var(--aside-hover-bg);
-    }
-  </style>
+  <link rel="stylesheet" href="./doc-header.css" />
   <header>
+    <div class="menu-btn" on:click="showLeftPannel = true">
+      <img src="./sources/menu.svg" height="20" alt="" />
+    </div>
     <div class="logo">
       <slot name="logo"></slot>
     </div>
     <div style="flex: 1">
-      <slot></slot>
+      <x-if :value="!showLeftPannel">
+        <slot></slot>
+      </x-if>
     </div>
     <div class="right">
       <div class="right-btn" on:click="switchMode">
@@ -88,11 +49,29 @@
         </x-else>
       </div>
     </div>
+    <div
+      class="mask"
+      class:hide="!showLeftPannel"
+      on:click="showLeftPannel = false"
+    >
+      <div class="pannel">
+        <div class="inner-pannel" on:click="$event.stopPropagation()">
+          <div class="logo left-logo">OFAJS</div>
+          <div>
+            <x-if :value="showLeftPannel">
+              <slot></slot>
+            </x-if>
+          </div>
+          <slot name="mobile-aside"></slot>
+        </div>
+      </div>
+    </div>
   </header>
 
   <script>
     export const data = {
       isDark: localStorage.isDark === "true",
+      showLeftPannel: false,
     };
 
     export const proto = {

@@ -6,13 +6,6 @@
       width: 100%;
       height: 100%;
     }
-
-    a {
-      display: block;
-      height: 100%;
-      color: inherit;
-      text-decoration: none;
-    }
   </style>
   <article-container>
     <doc-aside slot="aside">
@@ -81,176 +74,188 @@
   <script>
     export const parent = "./header-layout.html";
 
-    export const data = {
-      articles: [],
-      rightNavs: [],
-      // 正文内可视的导航标题
-      visNavs: [],
-      // 所有文章数据
-      _articlesBase: [],
-      // 当前所处的 article name
-      currentArticleIndex: "",
-    };
+    export default async function ({ load }) {
+      const { leftNavsData } = await load("../data.mjs");
 
-    export function ready() {
-      this.attr("id", "article-layout");
-    }
+      console.log("leftNavsData ", leftNavsData);
 
-    export function attached() {
-      this.refreshLeftNav();
-      this.refreshRightNav();
+      return {
+        data: {
+          // articles: [],
+          rightNavs: [],
+          // 正文内可视的导航标题
+          visNavs: [],
+          // 所有文章数据
+          _articlesBase: [],
+          // 当前所处的 article name
+          currentArticleIndex: "",
+        },
+        ready() {
+          this.attr("id", "article-layout");
+        },
+        attached() {
+          this.articles = leftNavsData;
 
-      window.addEventListener("hashchange", () => this.hashChange());
-    }
+          this.refreshLeftNav();
+          this.refreshRightNav();
 
-    export function detached() {
-      window.removeEventListener("hashchange", () => this.hashChange());
-    }
+          window.addEventListener("hashchange", () => this.hashChange());
+        },
+        detached() {
+          // this.articles = null;
+          this.articles = []; // 直接替换清空
 
-    export const proto = {
-      hashChange() {
-        const hash = decodeURIComponent(location.hash);
+          window.removeEventListener("hashchange", () => this.hashChange());
+        },
+        proto: {
+          hashChange() {
+            const hash = decodeURIComponent(location.hash);
 
-        if (hash) {
-          const target = this[0].shadow.$(hash);
-          if (target) {
-            target.ele.scrollIntoView({});
-          }
-        } else {
-          $("#header-layout").shadow.$("doc-container").scrollTop = 0;
-        }
-      },
-      leftGetActive(data) {
-        const now = `${location.origin}${location.pathname}`;
-        if (data.href === now) {
-          return "";
-        }
-
-        return null;
-      },
-      init(data) {
-        this._articlesBase = data;
-
-        this.refreshLeftNav();
-        this.refreshRightNav();
-
-        setTimeout(() => this.hashChange(), 100);
-      },
-      refreshLeftNav() {
-        if (!this._articlesBase.length) {
-          return;
-        }
-
-        const target = this._articlesBase.find((e) => {
-          const reg = new RegExp(e.href.replace(/(.+)\/.+/, "$1"));
-
-          if (reg.test(location.href)) {
-            return true;
-          }
-        });
-
-        if (target !== this._nowBase) {
-          this._nowBase = target;
-
-          // 修正左侧导航
-          console.log("this._articlesBase => ", target.navs);
-          this.articles = target.navs;
-        }
-      },
-      refreshRightNav() {
-        const article = this.app.current.shadow.$("article");
-
-        let count = 0;
-        let beforeTitle = "";
-
-        article.forEach((childEl) => {
-          if (["h1", "h2", "h3", "h4", "j5"].includes(childEl.tag)) {
-            beforeTitle = childEl.text.trim() + `-title${count}`;
-            count++;
-          }
-
-          childEl.data.sutitle = replaceSpecialCharacters(beforeTitle);
-        });
-
-        const titles = article.all("h1,h2,h3,h4,h5");
-
-        this.rightNavs = titles.map((e, index) => {
-          const id = `${replaceSpecialCharacters(e.text.trim())}-title${index}`;
-
-          e.html = `<a class="anchor" href="#${id}"><span class="octicon-link"></span> </a>${e.text}`;
-
-          e.attr("id", id);
-
-          return {
-            id,
-            type: e.tag.toLowerCase(),
-            name: e.text.trim(),
-            href: "#" + id,
-          };
-        });
-
-        if (this._oldIO) {
-          this._oldIO.disconnect();
-        }
-
-        const visibles = [];
-
-        let timer;
-
-        const refreshRightActive = () => {
-          const shows = new Set();
-          visibles.forEach((e) => {
-            shows.add(e.dataset.sutitle);
-          });
-
-          this.visNavs = Array.from(shows);
-
-          let hasActive;
-          this.rightNavs.forEach((e) => {
-            e.active = null;
-            if (hasActive) {
-              return;
-            }
-
-            if (shows.has(e.id)) {
-              e.active = 1;
-              hasActive = 1;
-            }
-          });
-
-          this.shadow.$("article-nav").focusScroll &&
-            this.shadow.$("article-nav").focusScroll();
-        };
-
-        const observer = (this._oldIO = new IntersectionObserver(
-          (entries, observer) => {
-            for (const entry of entries) {
-              if (entry.isIntersecting) {
-                visibles.push(entry.target);
-              } else {
-                const id = visibles.indexOf(entry.target);
-                if (id > -1) {
-                  visibles.splice(id, 1);
-                }
+            if (hash) {
+              const target = this[0].shadow.$(hash);
+              if (target) {
+                target.ele.scrollIntoView({});
               }
+            } else {
+              $("#header-layout").shadow.$("doc-container").scrollTop = 0;
+            }
+          },
+          leftGetActive(data) {
+            const now = `${location.origin}${location.pathname}`;
+            if (data.href === now) {
+              return "";
             }
 
-            if (timer) {
+            return null;
+          },
+          init(data) {
+            this._articlesBase = data;
+
+            this.refreshLeftNav();
+            this.refreshRightNav();
+
+            setTimeout(() => this.hashChange(), 100);
+          },
+          refreshLeftNav() {
+            if (!this._articlesBase.length) {
               return;
             }
 
-            timer = setTimeout(() => {
-              refreshRightActive();
-              timer = null;
-            }, 50);
-          }
-        ));
+            const target = this._articlesBase.find((e) => {
+              const reg = new RegExp(e.href.replace(/(.+)\/.+/, "$1"));
 
-        article.forEach((e) => {
-          observer.observe(e.ele, {});
-        });
-      },
-    };
+              if (reg.test(location.href)) {
+                return true;
+              }
+            });
+
+            if (target !== this._nowBase) {
+              this._nowBase = target;
+
+              // 修正左侧导航，因为绑定了data，不能直接替换，要清空后添加进去
+              // this.articles = target.navs;
+              this.articles.length = 0;
+              this.articles.push(...target.navs);
+            }
+          },
+          refreshRightNav() {
+            const article = this.app.current.shadow.$("article");
+
+            let count = 0;
+            let beforeTitle = "";
+
+            article.forEach((childEl) => {
+              if (["h1", "h2", "h3", "h4", "j5"].includes(childEl.tag)) {
+                beforeTitle = childEl.text.trim() + `-title${count}`;
+                count++;
+              }
+
+              childEl.data.sutitle = replaceSpecialCharacters(beforeTitle);
+            });
+
+            const titles = article.all("h1,h2,h3,h4,h5");
+
+            this.rightNavs = titles.map((e, index) => {
+              const id = `${replaceSpecialCharacters(
+                e.text.trim()
+              )}-title${index}`;
+
+              e.html = `<a class="anchor" href="#${id}"><span class="octicon-link"></span> </a>${e.text}`;
+
+              e.attr("id", id);
+
+              return {
+                id,
+                type: e.tag.toLowerCase(),
+                name: e.text.trim(),
+                href: "#" + id,
+              };
+            });
+
+            if (this._oldIO) {
+              this._oldIO.disconnect();
+            }
+
+            const visibles = [];
+
+            let timer;
+
+            const refreshRightActive = () => {
+              const shows = new Set();
+              visibles.forEach((e) => {
+                shows.add(e.dataset.sutitle);
+              });
+
+              this.visNavs = Array.from(shows);
+
+              let hasActive;
+              this.rightNavs.forEach((e) => {
+                e.active = null;
+                if (hasActive) {
+                  return;
+                }
+
+                if (shows.has(e.id)) {
+                  e.active = 1;
+                  hasActive = 1;
+                }
+              });
+
+              this.shadow.$("article-nav").focusScroll &&
+                this.shadow.$("article-nav").focusScroll();
+            };
+
+            const observer = (this._oldIO = new IntersectionObserver(
+              (entries, observer) => {
+                for (const entry of entries) {
+                  if (entry.isIntersecting) {
+                    visibles.push(entry.target);
+                  } else {
+                    const id = visibles.indexOf(entry.target);
+                    if (id > -1) {
+                      visibles.splice(id, 1);
+                    }
+                  }
+                }
+
+                if (timer) {
+                  return;
+                }
+
+                timer = setTimeout(() => {
+                  refreshRightActive();
+                  timer = null;
+                }, 50);
+              }
+            ));
+
+            article.forEach((e) => {
+              observer.observe(e.ele, {});
+            });
+          },
+        },
+      };
+    }
 
     export function routerChange(e) {
       this.refreshLeftNav();
