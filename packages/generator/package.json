@@ -9,8 +9,12 @@
     "url": "git+https://github.com/kirakiray/ofa-v4-docs.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --inspect src/main.mjs",
+    "build": "node src/main.mjs"
   },
   "author": "Yao",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^7.0.3"
+  }
 }

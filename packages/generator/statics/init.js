@@ -16,24 +16,29 @@
 
   const configSrc = document.currentScript.getAttribute("config");
 
-  await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/dist/ofa.min.js",
-    {
-      debug: "",
-    }
-  );
+  // await appendScript(
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.6/dist/ofa.min.js",
+  //   {
+  //     debug: "",
+  //   }
+  // );
 
-  // await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
-  //   type: "module",
-  // });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    if (localStorage.isDark === "true") {
-      $("body").classList.add("dark");
-    } else {
-      $("body").classList.remove("dark");
-    }
+  await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
+    type: "module",
   });
+
+  $("body").on("doc-component-loaded", () => {
+    $("#outer-layer").classList.add("fadeout");
+    setTimeout(() => {
+      $("#outer-layer").remove();
+    }, 300);
+  });
+
+  if (localStorage.isDark === "true") {
+    $("html").classList.add("dark");
+  } else {
+    $("html").classList.remove("dark");
+  }
 
   if (configSrc) {
     const url = new URL(configSrc, location.href).href;
@@ -41,22 +46,49 @@
     document.addEventListener("doc-component-loaded", async () => {
       const configData = await fetch(url).then((e) => e.json());
 
-      $("#header-layout").init(configData);
-      $("#article-layout").init(configData);
+      const { articles } = configData;
 
+      const topNavs = [];
+
+      articles.forEach((e) => {
+        const href = new URL(e.href, url).href;
+
+        e.href = href;
+
+        topNavs.push({
+          name: e.name,
+          href: href ? href : null,
+          active: e.active || href.replace(/(.+)\/.+/, "$1"),
+        });
+
+        e.navs && fixLeftNavs(e.navs, url);
+      });
+
+      $("#header-layout").init(topNavs);
+      $("#article-layout").init(articles);
     });
   }
 
-  await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/libs/scsr/scsr.mjs",
-    {
-      type: "module",
-    }
-  );
+  const fixLeftNavs = (navs, relatePath) => {
+    navs.forEach((e) => {
+      if (e.href) {
+        e.href = new URL(e.href, relatePath).href;
+      }
+
+      if (e.childs) {
+        fixLeftNavs(e.childs, relatePath);
+      }
+    });
+  };
+
   // await appendScript(
-  //   "http://127.0.0.1:5513/libs/scsr/scsr.mjs",
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/libs/scsr/scsr.mjs",
   //   {
   //     type: "module",
   //   }
   // );
+
+  await appendScript("http://127.0.0.1:5513/libs/scsr/scsr.mjs", {
+    type: "module",
+  });
 })();

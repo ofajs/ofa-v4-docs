@@ -44,7 +44,7 @@ body {
   --color-danger-fg: #cf222e;
 }
 
-body.dark {
+html.dark body {
   color-scheme: dark;
   --color-prettylights-syntax-comment: #8b949e;
   --color-prettylights-syntax-constant: #79c0ff;

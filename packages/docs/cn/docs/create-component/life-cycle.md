@@ -100,4 +100,4 @@ export default async function () {
 
 ## 生命周期流程图
 
-<img src="../../../../publics/life-cycle.png" width="512" />
+<img src="../../../publics/life-cycle.png" width="512" />
