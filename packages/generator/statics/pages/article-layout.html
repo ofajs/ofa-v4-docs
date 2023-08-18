@@ -47,7 +47,7 @@
     <div style="padding: 16px 24px 0; position: relative">
       <slot></slot>
     </div>
-    <article-nav slot="right-aside" style="padding-top: 40px">
+    <article-nav slot="right-aside">
       <ul>
         <x-fill :value="rightNavs">
           <li
@@ -197,6 +197,9 @@
               hasActive = 1;
             }
           });
+
+          this.shadow.$("article-nav").focusScroll &&
+            this.shadow.$("article-nav").focusScroll();
         };
 
         const observer = (this._oldIO = new IntersectionObserver(
@@ -219,7 +222,7 @@
             timer = setTimeout(() => {
               refreshRightActive();
               timer = null;
-            }, 100);
+            }, 50);
           }
         ));
 
