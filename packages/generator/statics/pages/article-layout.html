@@ -100,11 +100,11 @@
       this.refreshLeftNav();
       this.refreshRightNav();
 
-      window.addEventListener("hashchange", this.hashChange);
+      window.addEventListener("hashchange", () => this.hashChange());
     }
 
     export function detached() {
-      window.removeEventListener("hashchange", this.hashChange);
+      window.removeEventListener("hashchange", () => this.hashChange());
     }
 
     export const proto = {
@@ -134,7 +134,7 @@
         this.refreshLeftNav();
         this.refreshRightNav();
 
-        setTimeout(this.hashChange(), 100);
+        setTimeout(() => this.hashChange(), 100);
       },
       refreshLeftNav() {
         if (!this._articlesBase.length) {
