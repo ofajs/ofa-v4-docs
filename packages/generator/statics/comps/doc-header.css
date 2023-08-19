@@ -19,6 +19,7 @@ header {
   justify-content: center;
   align-items: center;
   padding-right: 16px;
+  margin-left: auto;
 }
 .right-btn {
   display: flex;
@@ -80,6 +81,11 @@ header {
 }
 @media screen and (min-width: 800px) {
   .menu-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
     display: none;
   }
 }
