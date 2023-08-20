@@ -17,3 +17,11 @@ window.addEventListener("resize", () => {
     size.height = window.innerHeight;
   }, 100);
 });
+
+export const isDark = $.stanz({
+  value: localStorage.isDark === "true",
+});
+
+isDark.watch(() => {
+  localStorage.isDark = isDark.value;
+});

@@ -66,7 +66,7 @@ export default async function transMD(inputer, outputer, configUrl) {
       <div class="loading"></div>
     </div>
   </body>
-</html>      
+</html>
 `
     );
   });

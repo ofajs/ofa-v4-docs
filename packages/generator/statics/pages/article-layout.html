@@ -21,7 +21,7 @@
             <d-item>Running tests 3</d-item>
           </d-nav>
         </d-item> -->
-        <x-fill name="item" :value="articles"></x-fill>
+        <x-fill name="item" :value="leftNavs"></x-fill>
       </d-nav>
     </doc-aside>
     <template name="item">
@@ -77,11 +77,9 @@
     export default async function ({ load }) {
       const { leftNavsData } = await load("../data.mjs");
 
-      console.log("leftNavsData ", leftNavsData);
-
       return {
         data: {
-          // articles: [],
+          // leftNavs: [],
           rightNavs: [],
           // 正文内可视的导航标题
           visNavs: [],
@@ -94,20 +92,36 @@
           this.attr("id", "article-layout");
         },
         attached() {
-          this.articles = leftNavsData;
+          this.leftNavs = leftNavsData;
 
+          this.articleWrapCode();
           this.refreshLeftNav();
           this.refreshRightNav();
 
           window.addEventListener("hashchange", () => this.hashChange());
         },
+        routerChange(e) {
+          this.articleWrapCode();
+          this.refreshLeftNav();
+          this.refreshRightNav();
+        },
         detached() {
-          // this.articles = null;
-          this.articles = []; // 直接替换清空
+          // this.leftNavs = null;
+          this.leftNavs = []; // 直接替换清空
 
           window.removeEventListener("hashchange", () => this.hashChange());
         },
         proto: {
+          articleWrapCode() {
+            const article = this.slice(-1)[0].shadow.$("article");
+
+            if (article) {
+              article.all("pre code").forEach((e) => {
+                e.unwrap();
+                e.wrap({ tag: "doc-code" });
+              });
+            }
+          },
           hashChange() {
             const hash = decodeURIComponent(location.hash);
 
@@ -153,9 +167,9 @@
               this._nowBase = target;
 
               // 修正左侧导航，因为绑定了data，不能直接替换，要清空后添加进去
-              // this.articles = target.navs;
-              this.articles.length = 0;
-              this.articles.push(...target.navs);
+              // this.leftNavs = target.navs;
+              this.leftNavs.length = 0;
+              this.leftNavs.push(...target.navs);
             }
           },
           refreshRightNav() {
@@ -255,11 +269,6 @@
           },
         },
       };
-    }
-
-    export function routerChange(e) {
-      this.refreshLeftNav();
-      this.refreshRightNav();
     }
 
     function replaceSpecialCharacters(str) {

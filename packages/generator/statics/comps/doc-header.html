@@ -1,31 +1,33 @@
 <template component>
-  <style host>
-    doc-header > ul {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      margin-left: 24px;
-    }
-    doc-header > ul > li {
-      display: block;
-      margin: 0 32px 0 0;
-    }
-    doc-header > ul > li:first-child {
-      margin-left: 0;
-    }
-    doc-header li a {
-      color: inherit;
-      text-decoration: none;
-    }
+  <inject-host>
+    <style>
+      doc-header > ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        margin-left: 24px;
+      }
+      doc-header > ul > li {
+        display: block;
+        margin: 0 32px 0 0;
+      }
+      doc-header > ul > li:first-child {
+        margin-left: 0;
+      }
+      doc-header li a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-    doc-header li.active {
-      font-weight: bold;
-      color: var(--active-color);
-    }
-  </style>
+      doc-header li.active {
+        font-weight: bold;
+        color: var(--active-color);
+      }
+    </style>
+  </inject-host>
   <link rel="stylesheet" href="./doc-header.css" />
   <header>
     <div class="menu-btn" on:click="showLeftPannel = true">
@@ -41,7 +43,7 @@
     </div>
     <div class="right">
       <div class="right-btn" on:click="switchMode">
-        <x-if :value="isDark">
+        <x-if :value="isDark.value">
           <img src="./sources/light.svg" alt="" />
         </x-if>
         <x-else>
@@ -69,27 +71,35 @@
   </header>
 
   <script>
-    export const data = {
-      isDark: localStorage.isDark === "true",
-      showLeftPannel: false,
-    };
+    export default async function ({ load }) {
+      const { isDark } = await load("../data.mjs");
 
-    export const proto = {
-      switchMode() {
-        localStorage.isDark = this.isDark = !this.isDark;
-        this.refreshMode();
-      },
-      refreshMode() {
-        if (this.isDark) {
-          $("html").classList.add("dark");
-        } else {
-          $("html").classList.remove("dark");
-        }
-      },
-    };
-
-    export function ready() {
-      this.refreshMode();
+      return {
+        data: {
+          showLeftPannel: false,
+        },
+        attached() {
+          this.isDark = isDark;
+          this.refreshMode();
+        },
+        detached() {
+          this.isDark = {};
+        },
+        proto: {
+          switchMode() {
+            // localStorage.isDark = this.isDark = !this.isDark;
+            this.isDark.value = !this.isDark.value;
+            this.refreshMode();
+          },
+          refreshMode() {
+            if (this.isDark.value) {
+              $("html").classList.add("dark");
+            } else {
+              $("html").classList.remove("dark");
+            }
+          },
+        },
+      };
     }
   </script>
 </template>

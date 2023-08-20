@@ -1,0 +1,63 @@
+<template component>
+  <inject-host>
+    <x-if :value="isDark.value">
+      <link rel="stylesheet" href="./hljs-dark.css" />
+    </x-if>
+    <x-else>
+      <link rel="stylesheet" href="./hljs-light.css" />
+    </x-else>
+
+    <style>
+      doc-code code {
+        background-color: transparent !important;
+        font-size: 14px !important;
+      }
+    </style>
+  </inject-host>
+  <style>
+    :host {
+      display: block;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+        Liberation Mono, monospace;
+
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: var(--color-canvas-subtle);
+      border-radius: 6px;
+    }
+  </style>
+
+  <slot></slot>
+  <script>
+    export default async function ({ load }) {
+      const { isDark } = await load("../data.mjs");
+
+      return {
+        data: {
+          isDark: {},
+        },
+        attached() {
+          this.isDark = isDark;
+          this.refresh();
+
+          this.shadow.on("slotchange", (e) => {
+            this.refresh();
+          });
+        },
+        detached() {
+          this.isDark = {};
+        },
+        proto: {
+          refresh() {
+            const code = this.$("code");
+            if (code) {
+              hljs.highlightElement(this.$("code").ele);
+            }
+          },
+        },
+      };
+    }
+  </script>
+</template>

@@ -16,6 +16,10 @@
 
   const configSrc = document.currentScript.getAttribute("config");
 
+  await appendScript(
+    "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"
+  );
+
   // await appendScript(
   //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.6/dist/ofa.min.js",
   //   {
