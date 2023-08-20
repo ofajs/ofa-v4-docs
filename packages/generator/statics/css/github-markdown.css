@@ -1102,3 +1102,9 @@ html.dark body {
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
+
+
+code{
+  white-space: break-spaces !important;
+  word-break: break-all !important;
+}
