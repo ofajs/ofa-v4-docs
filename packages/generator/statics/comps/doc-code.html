@@ -16,6 +16,7 @@
   </inject-host>
   <style>
     :host {
+      position: relative;
       display: block;
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
         Liberation Mono, monospace;
@@ -27,9 +28,31 @@
       background-color: var(--color-canvas-subtle);
       border-radius: 6px;
     }
+
+    .copy-btn {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      border: #aaa solid 1px;
+      padding: 2px 4px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .copy-btn.succeed {
+      border-color: #4ec9b0;
+      color: #4ec9b0;
+    }
+
+    .copy-btn:hover {
+      background-color: rgba(170, 170, 170, 0.05);
+    }
   </style>
 
   <slot></slot>
+  <div class="copy-btn" on:click="clickCopy" class:succeed="copySucceed">
+    {{copySucceed ? 'Succeed' : 'Copy'}}
+  </div>
   <script>
     export default async function ({ load }) {
       const { isDark } = await load("../data.mjs");
@@ -37,6 +60,7 @@
       return {
         data: {
           isDark: {},
+          copySucceed: false,
         },
         attached() {
           this.isDark = isDark;
@@ -50,6 +74,15 @@
           this.isDark = {};
         },
         proto: {
+          clickCopy() {
+            this.copySucceed = true;
+
+            const code = htmlDecode(this.text);
+            copyToClipboard(code);
+            setTimeout(() => {
+              this.copySucceed = false;
+            }, 2000);
+          },
           refresh() {
             const code = this.$("code");
             if (code) {
@@ -58,6 +91,35 @@
           },
         },
       };
+    }
+
+    function htmlDecode(text) {
+      const element = document.createElement("textarea");
+      element.innerHTML = text;
+      let decodedText = element.value;
+
+      // 解码 Unicode 转义序列
+      decodedText = decodedText.replace(
+        /\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}/g,
+        function (match) {
+          return String.fromCharCode(
+            parseInt(match.replace(/\\u|\\x/g, ""), 16)
+          );
+        }
+      );
+
+      return decodedText;
+    }
+    function copyToClipboard(text) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+
+      document.body.appendChild(textarea);
+
+      textarea.select();
+      document.execCommand("copy");
+
+      document.body.removeChild(textarea);
     }
   </script>
 </template>

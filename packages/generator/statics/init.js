@@ -21,7 +21,7 @@
   );
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.0/dist/ofa.min.js",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.1/dist/ofa.min.js",
     {
       debug: "",
     }
@@ -86,7 +86,7 @@
   };
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.0/libs/scsr/scsr.mjs",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.1/libs/scsr/scsr.mjs",
     {
       type: "module",
     }
