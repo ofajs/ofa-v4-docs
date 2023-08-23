@@ -43,6 +43,14 @@ export default async function transMD(inputer, outputer, configUrl) {
       rel="stylesheet"
       href="http://127.0.0.1:5500/packages/generator/statics/css/public.css"
     />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7L1TCCJZT6');
+    </script>
   </head>
   <body>
     <o-app
