@@ -20,16 +20,16 @@
     "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"
   );
 
-  // await appendScript(
-  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.6/dist/ofa.min.js",
-  //   {
-  //     debug: "",
-  //   }
-  // );
+  await appendScript(
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.0/dist/ofa.min.js",
+    {
+      debug: "",
+    }
+  );
 
-  await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
-    type: "module",
-  });
+  // await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
+  //   type: "module",
+  // });
 
   $("body").on("doc-component-loaded", () => {
     $("#outer-layer").classList.add("fadeout");
@@ -85,14 +85,14 @@
     });
   };
 
-  // await appendScript(
-  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.1.4/libs/scsr/scsr.mjs",
-  //   {
-  //     type: "module",
-  //   }
-  // );
+  await appendScript(
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.0/libs/scsr/scsr.mjs",
+    {
+      type: "module",
+    }
+  );
 
-  await appendScript("http://127.0.0.1:5513/libs/scsr/scsr.mjs", {
-    type: "module",
-  });
+  // await appendScript("http://127.0.0.1:5513/libs/scsr/scsr.mjs", {
+  //   type: "module",
+  // });
 })();

@@ -62,6 +62,7 @@ html.dark {
 }
 .outer-layer.fadeout {
   animation: fadeout ease 0.3s;
+  animation-fill-mode: forwards;
 }
 @keyframes fadeout {
   0% {

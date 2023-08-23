@@ -49,6 +49,7 @@
       return {
         data: {
           articles: [],
+          navs: [],
         },
         attached() {
           this.articles = leftNavsData;
@@ -80,9 +81,9 @@
           },
         },
         routerChange(e) {
-          setTimeout(() => {
-            this.shadow.$("doc-container").scrollTop = 0;
-          }, 300);
+          // setTimeout(() => {
+          this.shadow.$("doc-container").scrollTop = 0;
+          // }, 300);
         },
       };
     }
