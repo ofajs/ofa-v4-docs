@@ -36,12 +36,12 @@ export default async function transMD(inputer, outputer, configUrl) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${title || newName}</title>
     <script
-      src="http://127.0.0.1:5500/packages/generator/statics/init.js"
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.1/packages/generator/statics/init.js"
       config="${configUrl}"
     ></script>
     <link
       rel="stylesheet"
-      href="http://127.0.0.1:5500/packages/generator/statics/css/public.css"
+      href="https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.1/packages/generator/statics/css/public.css"
     />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
     <script>
@@ -54,19 +54,19 @@ export default async function transMD(inputer, outputer, configUrl) {
   </head>
   <body>
     <o-app
-      src="http://127.0.0.1:5500/packages/generator/statics/app-config.mjs"
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.1/packages/generator/statics/app-config.mjs"
     >
       <template page>
         <link
           rel="stylesheet"
-          href="http://127.0.0.1:5500/packages/generator/statics/css/github-markdown.css"
+          href="https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.1/packages/generator/statics/css/github-markdown.css"
         />
         <article class="markdown-body">
         ${result}
         </article>
         <script>
           export const parent =
-            "http://127.0.0.1:5500/packages/generator/statics/pages/article-layout.html";
+            "https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.1/packages/generator/statics/pages/article-layout.html";
         </script>
       </template>
     </o-app>

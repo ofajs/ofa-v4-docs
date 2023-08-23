@@ -31,13 +31,6 @@
   //   type: "module",
   // });
 
-  $("body").on("doc-component-loaded", () => {
-    $("#outer-layer").classList.add("fadeout");
-    setTimeout(() => {
-      $("#outer-layer").remove();
-    }, 300);
-  });
-
   if (localStorage.isDark === "true") {
     $("html").classList.add("dark");
   } else {
@@ -70,6 +63,11 @@
 
       $("#header-layout").init(topNavs);
       $("#article-layout").init(articles);
+
+      $("#outer-layer").classList.add("fadeout");
+      setTimeout(() => {
+        $("#outer-layer").remove();
+      }, 300);
     });
   }
 
