@@ -66,8 +66,6 @@ ofa.js 使用基础的 HTML 和 JavaScript 文件来定义组件，避免引入�
 </template>
 ```
 
-请避免使用 `import` 来引用模块。如果需要依赖其他模块，请在 `export default` 函数中使用 `load` 函数来引用模块。
-
 在成功引入 ofa.js 后，会自动注册 `load-module` 组件，这是一个用于声明式引用模块的组件，类似于 script 标签。该组件会代理加载指定 `src` 的模块，并对需要加载的模块进行预处理。在本案例中，会加载模板并注册 simple-button 组件。
 
 `load-module` 组件还可以使用缩写 `l-m`，以减少代码量。
