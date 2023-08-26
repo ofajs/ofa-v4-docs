@@ -21,6 +21,9 @@
     }
     .right-aside {
       flex: 0 1 280px;
+      overflow: hidden;
+      opacity: 1;
+      transition: all ease 0.3s;
     }
 
     .article-container {
@@ -38,13 +41,18 @@
         display: none;
       }
     }
+
+    :host([hide-right]) .right-aside {
+      flex: 0 1 0px;
+      opacity: 0;
+    }
   </style>
   <div class="center-con">
     <div class="aside">
       <slot name="aside"></slot>
     </div>
     <div class="article-container">
-      <div style="padding-bottom: 32px">
+      <div>
         <slot></slot>
       </div>
     </div>

@@ -1,0 +1,99 @@
+<template component>
+  <l-m src="./simp-editor.html"></l-m>
+  <style>
+    .container {
+      display: flex;
+      height: calc(100vh - 52px);
+    }
+    .article {
+      width: 45%;
+      height: 100%;
+      overflow-y: auto;
+    }
+    .demo-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .demo-top {
+      flex: 1;
+    }
+    .demo-bottom {
+      flex: 1;
+    }
+
+    .browser {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .browser iframe {
+      flex: 1;
+      display: block;
+      width: 100%;
+      border: none;
+      outline: none;
+    }
+
+    .tools {
+      border-top: #8a8a8a solid 0.5px;
+      border-bottom: #8a8a8a solid 0.5px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+    }
+
+    ::slotted(article) {
+      padding: 16px 16px 32px 0;
+    }
+  </style>
+  <div class="container">
+    <div class="article">
+      <slot></slot>
+    </div>
+    <div class="demo-container">
+      <div class="demo-top">
+        <simp-editor :files="files"></simp-editor>
+      </div>
+      <div class="demo-bottom">
+        <div class="browser">
+          <div class="tools">PREVIEW</div>
+          <iframe attr:src="targetUrl"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    export default {
+      data: {
+        files: [],
+        targetUrl: "",
+      },
+      ready() {
+        const links = this.all("a[demo]").map((e) => {
+          const href = e.attr("href");
+          const isMain = e.attr("main") === "";
+          const isPreview = e.attr("preview") === "";
+
+          if (isPreview) {
+            this.targetUrl = href;
+          }
+
+          e.remove();
+
+          return {
+            name: href.replace(/.+\/(.+)/, "$1"),
+            href,
+            preview: isPreview,
+            main: isMain,
+          };
+        });
+
+        this.files = links;
+
+        console.log(links);
+      },
+    };
+  </script>
+</template>

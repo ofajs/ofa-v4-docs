@@ -55,6 +55,8 @@
     {{copySucceed ? 'Succeed' : 'Copy'}}
   </div>
   <script>
+    import hljs from "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/es/highlight.min.js";
+
     export default async function ({ load }) {
       const { isDark } = await load("../data.mjs");
 

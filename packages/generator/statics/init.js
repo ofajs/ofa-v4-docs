@@ -16,20 +16,16 @@
 
   const configSrc = document.currentScript.getAttribute("config");
 
-  await appendScript(
-    "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"
-  );
+  // await appendScript(
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.4/dist/ofa.min.js",
+  //   {
+  //     debug: "",
+  //   }
+  // );
 
-  await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.4/dist/ofa.min.js",
-    {
-      debug: "",
-    }
-  );
-
-  // await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
-  //   type: "module",
-  // });
+  await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
+    type: "module",
+  });
 
   if (localStorage.isDark === "true") {
     $("html").classList.add("dark");

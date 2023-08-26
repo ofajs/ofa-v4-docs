@@ -26,8 +26,8 @@ export default async function transMD(inputer, outputer, configUrl) {
 
     const newName = name.replace(/(.+)\..+/, "$1") + ".html";
 
-    // const root = `http://127.0.0.1:5500`;
-    const root = `https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.2`;
+    const root = `http://127.0.0.1:5500`;
+    // const root = `https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.2`;
 
     const agentCode = `
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
@@ -68,6 +68,7 @@ export default async function transMD(inputer, outputer, configUrl) {
           rel="stylesheet"
           href="${root}/packages/generator/statics/css/github-markdown.css"
         />
+        <style>article{padding:16px 0 32px;}</style>
         <article class="markdown-body">
         ${result}
         </article>

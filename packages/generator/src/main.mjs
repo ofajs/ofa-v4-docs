@@ -18,10 +18,10 @@ const init = async () => {
   // 第一层只获取目录，判断内部有 config 的情况下，为一个语言的文档网站
   entryViewer.forEach(async (name) => {
     const inputer = await entryViewer.read(name);
-    if (inputer.name && inputer.name !== "publics" && inputer.name !== "dist") {
-      const outputer = await outPutViewer.mkdir(name);
-
-      distTo(inputer, outputer);
+    if (inputer.name === "publics") {
+      debugger;
+    } else if (inputer.name && inputer.name !== "dist") {
+      distTo(inputer, await outPutViewer.mkdir(name));
     }
   });
 };
