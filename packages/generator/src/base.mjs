@@ -27,7 +27,7 @@ export class DirViewer extends Array {
     );
   }
 
-  async read(name) {
+  async read(name, encoding = "utf-8") {
     const childPath = `${this.path}/${name}`;
     const fileStats = await fs.stat(childPath);
 
@@ -38,12 +38,12 @@ export class DirViewer extends Array {
 
       return reobj;
     } else {
-      return await fs.readFile(childPath, "utf-8");
+      return await fs.readFile(childPath, encoding);
     }
   }
 
-  async write(name, content) {
-    await fs.writeFile(`${this.path}/${name}`, content);
+  async write(name, content, binary = "utf-8") {
+    await fs.writeFile(`${this.path}/${name}`, content, binary);
 
     await this.reload();
   }

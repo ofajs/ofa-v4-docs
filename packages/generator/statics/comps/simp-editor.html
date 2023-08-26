@@ -70,9 +70,6 @@
       display: block;
       font-family: monospace;
       line-height: 1.2em;
-      -moz-user-modify: read-write-plaintext-only;
-      -webkit-user-modify: read-write-plaintext-only;
-      user-modify: read-write-plaintext-only;
       outline: none;
     }
   </style>
@@ -90,7 +87,8 @@
       </x-fill>
     </div>
     <div class="main">
-      <pre><div class="main-inner" id="code" contenteditable="plaintext-only" on:blur="blurCode"></div></pre>
+      <!-- <pre><div class="main-inner" id="code" contenteditable="plaintext-only" on:blur="blurCode"></div></pre> -->
+      <pre><div class="main-inner" id="code"></div></pre>
     </div>
   </div>
   <script>

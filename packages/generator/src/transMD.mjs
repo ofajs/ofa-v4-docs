@@ -1,6 +1,6 @@
 import { marked } from "marked";
 
-export default async function transMD(inputer, outputer, configUrl) {
+export default async function transMD(inputer, outputer, configUrl, type) {
   inputer.forEach(async (name) => {
     const target = await inputer.read(name);
 
@@ -11,7 +11,8 @@ export default async function transMD(inputer, outputer, configUrl) {
       transMD(
         target,
         nextOupter,
-        configUrl === !/^\./.test(name) ? `./${configUrl}` : `../${configUrl}`
+        configUrl === !/^\./.test(name) ? `./${configUrl}` : `../${configUrl}`,
+        type
       );
       return;
     }
@@ -21,7 +22,7 @@ export default async function transMD(inputer, outputer, configUrl) {
     }
 
     // 对md内容进行转换
-    const title = target.replace(/#+ (.+)[\d\D]+/, "$1");
+    const title = target.replace(/#+ (.+)[\d\D]+/, "$1").trim();
     const result = marked(target);
 
     const newName = name.replace(/(.+)\..+/, "$1") + ".html";
@@ -40,9 +41,56 @@ export default async function transMD(inputer, outputer, configUrl) {
     </script>
     `;
 
-    outputer.write(
-      newName,
-      `
+    if (type === "document") {
+      outputer.write(
+        newName,
+        `
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>${title || newName}</title>
+      <script
+        src="${root}/packages/generator/statics/init.js"
+        config="${configUrl}"
+      ></script>
+      <link
+        rel="stylesheet"
+        href="${root}/packages/generator/statics/css/public.css"
+      />
+      ${!root.includes("127.0.0.1") ? agentCode : ""}
+    </head>
+    <body>
+      <o-app
+        src="${root}/packages/generator/statics/app-config.mjs"
+      >
+        <template page>
+          <link
+            rel="stylesheet"
+            href="${root}/packages/generator/statics/css/github-markdown.css"
+          />
+          <style>article{padding:16px 0 32px;}</style>
+          <article class="markdown-body">
+          ${result}
+          </article>
+          <script>
+            export const parent =
+              "${root}/packages/generator/statics/pages/article-layout.html";
+          </script>
+        </template>
+      </o-app>
+      <div class="outer-layer" id="outer-layer">
+        <div class="loading"></div>
+      </div>
+    </body>
+  </html>
+  `
+      );
+    } else if (type === "example") {
+      outputer.write(
+        newName,
+        `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -69,9 +117,11 @@ export default async function transMD(inputer, outputer, configUrl) {
           href="${root}/packages/generator/statics/css/github-markdown.css"
         />
         <style>article{padding:16px 0 32px;}</style>
-        <article class="markdown-body">
-        ${result}
-        </article>
+        <exm-article>
+          <article class="markdown-body" data-no-right>
+          ${result}
+          </article>
+        </exm-article>
         <script>
           export const parent =
             "${root}/packages/generator/statics/pages/article-layout.html";
@@ -84,6 +134,7 @@ export default async function transMD(inputer, outputer, configUrl) {
   </body>
 </html>
 `
-    );
+      );
+    }
   });
 }

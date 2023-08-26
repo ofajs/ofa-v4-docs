@@ -19,7 +19,7 @@ export default async function transConfig(configData, inputer) {
 
       docConfig.articles.push(item);
 
-      if (type === "document") {
+      if (type === "document" || type === "example") {
         const doc = await inputer.read(path);
 
         const summary = await doc.read("SUMMARY.md");
