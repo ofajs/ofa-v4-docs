@@ -1,0 +1,19 @@
+<template component>
+  <style>
+    :host {
+      display: inline-block;
+    }
+    .container {
+      border: red solid 1px;
+      padding: 8px;
+    }
+  </style>
+  <div class="container">{{val}}</div>
+  <script>
+    export default {
+      data: {
+        val: "Hello World",
+      },
+    };
+  </script>
+</template>

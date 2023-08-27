@@ -9,9 +9,11 @@
   <body>
     <div id="target"></div>
     <div id="target2"></div>
+    <div id="target3"></div>
     <script>
       $("#target").text = "hello world";
       $("#target2").html = "<span style='color:red;'>hello world 2</span>";
+      $("#target3").html = $("#target2").text;
     </script>
   </body>
 </html>

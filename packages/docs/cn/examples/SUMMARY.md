@@ -1,2 +1,6 @@
 - [开始](./index.md)
 - [事件反应](./event.md)
+- [组件的创建和使用](./simple-component.md)
+- [组件插槽](./slot.md)
+- [渲染文本](./render-text.md)
+- [获取和修改组件实例的值](./get-set-comp.md)
