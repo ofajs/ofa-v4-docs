@@ -73,6 +73,7 @@ export default async function transMD(inputer, outputer, configUrl, type) {
           <style>article{padding:16px 0 32px;}</style>
           <article class="markdown-body">
           ${result}
+          <article-footer></article-footer>
           </article>
           <script>
             export const parent =
@@ -116,10 +117,10 @@ export default async function transMD(inputer, outputer, configUrl, type) {
           rel="stylesheet"
           href="${root}/packages/generator/statics/css/github-markdown.css"
         />
-        <style>article{padding:16px 0 32px;}</style>
         <exm-article>
           <article class="markdown-body" data-no-right>
           ${result}
+          <article-footer></article-footer>
           </article>
         </exm-article>
         <script>

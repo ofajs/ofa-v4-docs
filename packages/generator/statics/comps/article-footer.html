@@ -1,0 +1,72 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      padding-top: 8px;
+      border-top: #aaa solid 0.5px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .previous {
+      margin-right: auto;
+    }
+    .next {
+      margin-left: auto;
+    }
+    a {
+      color: var(--active-color);
+      text-decoration: none;
+    }
+  </style>
+  <div class="container">
+    <!-- <x-if :value="isBack">
+      <a class="previous" on:click="goback">Previous</a>
+    </x-if> -->
+    <x-if :value="prevUrl">
+      <a attr:href="prevUrl" class="previous" olink>Previous</a>
+    </x-if>
+    <x-if :value="nextUrl">
+      <a attr:href="nextUrl" class="next" olink>Next</a>
+    </x-if>
+  </div>
+  <script>
+    export default {
+      data: {
+        prevUrl: "",
+        nextUrl: "",
+        // isBack: false,
+      },
+      proto: {
+        goback(e) {
+          e.preventDefault();
+          this.app.back();
+        },
+        init(navs) {
+          // 将数据扁平化
+          const items = navs.flatMap((e) => {
+            if (e.childs) {
+              return e.childs;
+            }
+
+            return e;
+          });
+          if (!items.length) {
+            return;
+          }
+          const index = items.findIndex((e) => e.href === location.href);
+
+          this.prevUrl = items[index - 1]?.href;
+          this.nextUrl = items[index + 1]?.href;
+
+          // const { routers } = this.app;
+          // if (routers.length > 1 && routers.slice(-2)[0].src === this.prevUrl) {
+          //   this.isBack = true;
+          // }
+        },
+      },
+    };
+  </script>
+</template>

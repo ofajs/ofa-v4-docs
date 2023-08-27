@@ -82,6 +82,7 @@
           this.articleWrapCode();
           this.refreshLeftNav();
           this.refreshRightNav();
+          this.initArticleBottomBtn();
 
           window.addEventListener("hashchange", () => this.hashChange());
         },
@@ -89,6 +90,7 @@
           this.articleWrapCode();
           this.refreshLeftNav();
           this.refreshRightNav();
+          this.initArticleBottomBtn();
         },
         detached() {
           // this.leftNavs = null;
@@ -97,15 +99,32 @@
           window.removeEventListener("hashchange", () => this.hashChange());
         },
         proto: {
-          articleWrapCode() {
-            const article = this.slice(-1)[0].shadow.$("article");
-
-            if (article) {
-              article.all("pre code").forEach((e) => {
-                e.unwrap();
-                e.wrap({ tag: "doc-code" });
-              });
+          get article() {
+            return this.slice(-1)[0]?.shadow?.$("article");
+          },
+          initArticleBottomBtn() {
+            const { article } = this;
+            if (!article) {
+              return;
             }
+
+            const { _nowBase } = this;
+            if (!_nowBase) {
+              return;
+            }
+
+            const ftEl = article.$("article-footer").init(_nowBase.navs);
+          },
+          articleWrapCode() {
+            const { article } = this;
+            if (!article) {
+              return;
+            }
+
+            article.all("pre code").forEach((e) => {
+              e.unwrap();
+              e.wrap({ tag: "doc-code" });
+            });
           },
           hashChange() {
             const hash = decodeURIComponent(location.hash);
@@ -132,6 +151,7 @@
 
             this.refreshLeftNav();
             this.refreshRightNav();
+            this.initArticleBottomBtn();
 
             setTimeout(() => this.hashChange(), 100);
           },
@@ -158,7 +178,7 @@
             }
           },
           refreshRightNav() {
-            const article = this.app.current.shadow.$("article");
+            const { article } = this;
 
             if (typeof article.data.noRight === "string") {
               this.hideRight = true;
