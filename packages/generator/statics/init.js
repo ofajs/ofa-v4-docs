@@ -17,7 +17,7 @@
   const configSrc = document.currentScript.getAttribute("config");
 
   // await appendScript(
-  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.4/dist/ofa.min.js",
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.0/dist/ofa.min.js",
   //   {
   //     debug: "",
   //   }
@@ -79,14 +79,14 @@
     });
   };
 
-  await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.4/libs/scsr/scsr.mjs",
-    {
-      type: "module",
-    }
-  );
+  // await appendScript(
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.4/libs/scsr/scsr.mjs",
+  //   {
+  //     type: "module",
+  //   }
+  // );
 
-  // await appendScript("http://127.0.0.1:5513/libs/scsr/scsr.mjs", {
-  //   type: "module",
-  // });
+  await appendScript("http://127.0.0.1:5513/libs/scsr/scsr.mjs", {
+    type: "module",
+  });
 })();

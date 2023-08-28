@@ -1,0 +1,32 @@
+<template component>
+  <style>
+    .editor {
+      display: inline-block;
+      min-width: 200px;
+      line-height: 30px;
+      height: 30px;
+      border: #aaa solid 1px;
+      border-radius: 4px;
+      padding: 4px;
+      font-size: 14px;
+    }
+  </style>
+  <div
+    class="editor"
+    contenteditable="plaintext-only"
+    :text="txt"
+    on:input="changeText"
+  ></div>
+  <script>
+    export default {
+      data: {
+        txt: "Default txt",
+      },
+      proto: {
+        changeText(e) {
+          this.txt = $(e.target).text;
+        },
+      },
+    };
+  </script>
+</template>
