@@ -3,4 +3,7 @@
 - [组件的创建和使用](./simple-component.md)
 - [组件插槽](./slot.md)
 - [渲染文本](./render-text.md)
+- [特性传递](./attribute-transmission.md)
 - [获取和修改组件实例的值](./get-set-comp.md)
+- [属性传递](./property-transmission.md)
+- [绑定事件](./bind-event.md)
