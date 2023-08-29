@@ -10,3 +10,7 @@
 - [嵌套组件](./nested-component.md)
 - [事件传递](./event-passing.md)
 - [模板语法：双向数据绑定](./sync.md)
+- [模板组件：条件渲染](./condition.md)
+- [模板组件：填充渲染](./fill.md)
+- [递归填充渲染](./fill-temp.md)
+- [生命周期](./life-cycle.md)

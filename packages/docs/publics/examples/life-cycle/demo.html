@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fill component</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.0/dist/ofa.min.js"></script>
+    <script>
+      let tempLogger = null;
+      function log(...args) {
+        if (!tempLogger) {
+          tempLogger = $(`<div style="margin:10px 0 0;padding:10px 0;border-top:#aaa solid 1px;"></div>`);
+          $("#logger").push(tempLogger);
+          setTimeout(() => {
+            tempLogger = null;
+          }, 100);
+        }
+
+        tempLogger.html += args.join(" , ") + "<br>";
+      }
+    </script>
+  </head>
+  <body>
+    <l-m src="./test-demo.html"></l-m>
+    <button id="additem">Add Test Demo</button>
+    <script>
+      $("#additem").on("click", () => {
+        $("body").push(`<test-demo></test-demo>`);
+      });
+    </script>
+    <div
+      style="
+        border: blue solid 1px;
+        font-size: 14px;
+        line-height: 1.3em;
+        margin: 16px;
+      "
+    >
+      Log⬇️
+      <button id="clear">Clear</button>
+      <script>
+        $("#clear").on("click", () => {
+          $("#logger").text = "";
+        });
+      </script>
+      <div id="logger"></div>
+    </div>
+    <test-demo></test-demo>
+  </body>
+</html>
