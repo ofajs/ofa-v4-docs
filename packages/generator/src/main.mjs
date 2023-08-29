@@ -18,29 +18,52 @@ const init = async () => {
   // 第一层只获取目录，判断内部有 config 的情况下，为一个语言的文档网站
   entryViewer.forEach(async (name) => {
     const inputer = await entryViewer.read(name);
-    if (inputer.name && inputer.name !== "publics" && inputer.name !== "dist") {
-      const outputer = await outPutViewer.mkdir(name);
-
-      distTo(inputer, outputer);
+    if (inputer.name === "publics") {
+      await copy(inputer, await outPutViewer.mkdir("publics"));
+    } else if (inputer.name && inputer.name !== "dist") {
+      distTo(inputer, await outPutViewer.mkdir(name));
     }
   });
 };
+
+async function copy(entry, output) {
+  for (let name of entry) {
+    const target = await entry.read(name, "binary");
+
+    if (target.path) {
+      await copy(target, await output.mkdir(name));
+    } else {
+      await output.write(name, target, "binary");
+    }
+  }
+}
 
 globalThis.init = init;
 
 // 输出文件到指定目录
 const distTo = async (inputer, outputer) => {
-  let configData = await inputer.read("config.json");
+  let configDataStr = await inputer.read("config.json");
 
-  if (!configData) {
+  if (!configDataStr) {
     return;
   }
 
-  const docConfig = await transConfig(JSON.parse(configData), inputer);
+  const cData = JSON.parse(configDataStr);
+
+  const docConfig = await transConfig(cData, inputer);
 
   await outputer.write("doc-config.json", JSON.stringify(docConfig));
 
-  transMD(inputer, outputer, "doc-config.json");
+  cData.groups.forEach(async (e) => {
+    const { path, type } = e;
+
+    transMD(
+      await inputer.read(path),
+      await outputer.mkdir(path),
+      "../doc-config.json",
+      type
+    );
+  });
 };
 
 init();

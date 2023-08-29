@@ -17,11 +17,7 @@
   const configSrc = document.currentScript.getAttribute("config");
 
   await appendScript(
-    "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"
-  );
-
-  await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.4/dist/ofa.min.js",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.2/dist/ofa.min.js",
     {
       debug: "",
     }
@@ -84,7 +80,7 @@
   };
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.4/libs/scsr/scsr.mjs",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.2/libs/scsr/scsr.mjs",
     {
       type: "module",
     }

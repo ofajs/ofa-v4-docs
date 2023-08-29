@@ -1,0 +1,26 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      padding: 5px;
+      border: red solid 1px;
+    }
+  </style>
+  <div>{{val + count}}</div>
+  <button on:click="changeVal">Click Me</button>
+  <button on:click="count++">Count++</button>
+  <script>
+    export default {
+      data: {
+        count: 0,
+        val: "Default",
+      },
+      proto: {
+        changeVal() {
+          this.count += 50;
+          this.val = "Hello World";
+        },
+      },
+    };
+  </script>
+</template>

@@ -2,6 +2,11 @@
   "langName": "简体中文",
   "groups": [
     {
+      "type": "example",
+      "path": "examples",
+      "name": "案例教程"
+    },
+    {
       "type": "document",
       "path": "docs",
       "name": "文档"

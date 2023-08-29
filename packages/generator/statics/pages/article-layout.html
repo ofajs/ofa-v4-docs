@@ -7,7 +7,7 @@
       height: 100%;
     }
   </style>
-  <article-container>
+  <article-container attr:hide-right="hideRight ? '' : null">
     <doc-aside slot="aside">
       <d-nav>
         <!-- <d-item>Release notes</d-item>
@@ -21,10 +21,10 @@
             <d-item>Running tests 3</d-item>
           </d-nav>
         </d-item> -->
-        <x-fill name="item" :value="leftNavs"></x-fill>
+        <x-fill name="dItem" :value="leftNavs"></x-fill>
       </d-nav>
     </doc-aside>
-    <template name="item">
+    <template name="dItem">
       <d-item attr:active="$host.leftGetActive($data)">
         <x-if :value="$data.href">
           <a attr:href="$data.href" olink>{{$data.name}}</a>
@@ -32,12 +32,12 @@
         <x-else>
           <span> {{$data.name}}</span>
           <d-nav slot="nav">
-            <x-fill :value="$data.childs" name="item"></x-fill>
+            <x-fill :value="$data.childs" name="dItem"></x-fill>
           </d-nav>
         </x-else>
       </d-item>
     </template>
-    <div style="padding: 16px 24px 0; position: relative">
+    <div style="padding: 0 24px 0; position: relative">
       <slot></slot>
     </div>
     <article-nav slot="right-aside">
@@ -52,25 +52,9 @@
           </li>
         </x-fill>
       </ul>
-      <!-- <ul>
-        <li>
-          <a href="">Inline HTML0</a>
-        </li>
-        <li class="invis">
-          <a href="">Inline HTML1</a>
-        </li>
-        <li class="active invis">
-          <a href="">Inline HTML2</a>
-        </li>
-        <li class="invis">
-          <a href="">Inline HTML3</a>
-        </li>
-        <li>
-          <a href="">Inline HTML4</a>
-        </li>
-      </ul> -->
     </article-nav>
   </article-container>
+  <!-- <footer style="height: 200px;background-color: aliceblue;">i am footer</footer> -->
   <script>
     export const parent = "./header-layout.html";
 
@@ -87,6 +71,7 @@
           _articlesBase: [],
           // 当前所处的 article name
           currentArticleIndex: "",
+          hideRight: false,
         },
         ready() {
           this.attr("id", "article-layout");
@@ -97,6 +82,7 @@
           this.articleWrapCode();
           this.refreshLeftNav();
           this.refreshRightNav();
+          this.initArticleBottomBtn();
 
           window.addEventListener("hashchange", () => this.hashChange());
         },
@@ -104,6 +90,7 @@
           this.articleWrapCode();
           this.refreshLeftNav();
           this.refreshRightNav();
+          this.initArticleBottomBtn();
         },
         detached() {
           // this.leftNavs = null;
@@ -112,15 +99,32 @@
           window.removeEventListener("hashchange", () => this.hashChange());
         },
         proto: {
-          articleWrapCode() {
-            const article = this.slice(-1)[0].shadow.$("article");
-
-            if (article) {
-              article.all("pre code").forEach((e) => {
-                e.unwrap();
-                e.wrap({ tag: "doc-code" });
-              });
+          get article() {
+            return this.slice(-1)[0]?.shadow?.$("article");
+          },
+          initArticleBottomBtn() {
+            const { article } = this;
+            if (!article) {
+              return;
             }
+
+            const { _nowBase } = this;
+            if (!_nowBase) {
+              return;
+            }
+
+            const ftEl = article.$("article-footer").init(_nowBase.navs);
+          },
+          articleWrapCode() {
+            const { article } = this;
+            if (!article) {
+              return;
+            }
+
+            article.all("pre code").forEach((e) => {
+              e.unwrap();
+              e.wrap({ tag: "doc-code" });
+            });
           },
           hashChange() {
             const hash = decodeURIComponent(location.hash);
@@ -147,6 +151,7 @@
 
             this.refreshLeftNav();
             this.refreshRightNav();
+            this.initArticleBottomBtn();
 
             setTimeout(() => this.hashChange(), 100);
           },
@@ -173,7 +178,14 @@
             }
           },
           refreshRightNav() {
-            const article = this.app.current.shadow.$("article");
+            const { article } = this;
+
+            if (typeof article.data.noRight === "string") {
+              this.hideRight = true;
+              return;
+            } else {
+              this.hideRight = false;
+            }
 
             let count = 0;
             let beforeTitle = "";
@@ -235,7 +247,7 @@
                 }
               });
 
-              this.shadow.$("article-nav").focusScroll &&
+              this.shadow.$("article-nav")?.focusScroll &&
                 this.shadow.$("article-nav").focusScroll();
             };
 

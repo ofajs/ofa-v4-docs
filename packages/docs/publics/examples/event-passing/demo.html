@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nested component demo</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.2/dist/ofa.min.js"></script>
+  </head>
+  <body>
+    <l-m src="./comp-one.html"></l-m>
+    <comp-one></comp-one>
+    <div id="logger"></div>
+    <script>
+      $("comp-one").on("super-update", (e) => {
+        $("#logger").text = e.data;
+      });
+    </script>
+  </body>
+</html>

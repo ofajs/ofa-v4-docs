@@ -22,12 +22,15 @@
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
         Liberation Mono, monospace;
 
-      padding: 16px;
       overflow: auto;
       font-size: 85%;
       line-height: 1.45;
       background-color: var(--color-canvas-subtle);
       border-radius: 6px;
+    }
+
+    .container {
+      padding: 16px;
     }
 
     .copy-btn {
@@ -38,6 +41,8 @@
       padding: 2px 4px;
       border-radius: 4px;
       cursor: pointer;
+      opacity: 0;
+      transition: all ease 0.2s;
     }
 
     .copy-btn.succeed {
@@ -48,13 +53,21 @@
     .copy-btn:hover {
       background-color: rgba(170, 170, 170, 0.05);
     }
+
+    .container:hover .copy-btn {
+      opacity: 1;
+    }
   </style>
 
-  <slot></slot>
-  <div class="copy-btn" on:click="clickCopy" class:succeed="copySucceed">
-    {{copySucceed ? 'Succeed' : 'Copy'}}
+  <div class="container">
+    <slot></slot>
+    <div class="copy-btn" on:click="clickCopy" class:succeed="copySucceed">
+      {{copySucceed ? 'Succeed' : 'Copy'}}
+    </div>
   </div>
   <script>
+    import hljs from "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/es/highlight.min.js";
+
     export default async function ({ load }) {
       const { isDark } = await load("../data.mjs");
 

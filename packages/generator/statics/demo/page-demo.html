@@ -11,6 +11,11 @@
     <o-app src="../app-config.mjs">
       <template page>
         <link rel="stylesheet" href="../css/github-markdown.css" />
+        <style>
+          article {
+            padding: 16px 0 32px;
+          }
+        </style>
         <article class="markdown-body">
           <h1>
             <a class="anchor" href="#inline-html"
@@ -167,6 +172,8 @@
           </p>
 
           <p>For example, to add an HTML table to a Markdown article:</p>
+
+          <article-footer></article-footer>
         </article>
         <script>
           export const parent = "../pages/article-layout.html";

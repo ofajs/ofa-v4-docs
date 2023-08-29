@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set props</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.2/dist/ofa.min.js"></script>
+  </head>
+  <body>
+    <div id="target"></div>
+    <div id="target2"></div>
+    <div id="target3"></div>
+    <input type="text" id="target4" placeholder="target4" />
+    <script>
+      $("#target").text = "hello world";
+      $("#target2").html = "<span style='color:red;'>hello world 2</span>";
+      $("#target3").html = $("#target2").text;
+      $("#target4").value = "hello world";
+    </script>
+  </body>
+</html>

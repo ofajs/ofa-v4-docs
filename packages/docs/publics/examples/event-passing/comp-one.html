@@ -1,0 +1,31 @@
+<template component>
+  <!-- Introducing Nested Components CompTwo -->
+  <l-m src="./comp-two.html"></l-m>
+  <style>
+    :host {
+      display: block;
+      padding: 10px;
+      border: blue solid 1px;
+    }
+    div {
+      padding: 5px;
+      border: red solid 1px;
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+  <div>{{val}}</div>
+  <comp-two on:update="updateHandler"></comp-two>
+  <script>
+    export default {
+      data: {
+        val: "default",
+      },
+      proto: {
+        updateHandler(e) {
+          this.val = e.data;
+        },
+      },
+    };
+  </script>
+</template>

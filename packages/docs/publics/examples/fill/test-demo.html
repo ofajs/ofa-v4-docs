@@ -1,0 +1,22 @@
+<template component>
+  <style>
+    .item {
+      border: #aaa solid 1px;
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+  <button on:click="count++">Count++</button>
+  <x-fill :value="arr">
+    <div class="item">$index : {{$index}}; $data : {{$data}};  count:{{$host.count}} </div>
+  </x-fill>
+
+  <script>
+    export default {
+      data: {
+        count: 0,
+        arr: ["I am A", "I am B", "I am C"],
+      },
+    };
+  </script>
+</template>
