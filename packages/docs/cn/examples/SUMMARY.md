@@ -16,3 +16,4 @@
 - [递归填充渲染](./fill-temp.md)
 - [生命周期](./life-cycle.md)
 - [表单数据](./form-data.md)
+- [自定义表单组件](./custom-form-element.md)
