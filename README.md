@@ -1,5 +1,7 @@
 # ofa-v4-docs
 
+This is just a website generation tool
+
 ## Directory structure
 
 The main files are located in the packages directory, here is the directory description: 
