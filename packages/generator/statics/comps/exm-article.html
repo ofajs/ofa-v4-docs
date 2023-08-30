@@ -108,7 +108,7 @@
     .bottom-tabs {
       display: none;
     }
-    @container (max-width: 700px)  {
+    @container (max-width: 700px) {
       .container {
         height: calc(100vh - 90px);
       }
@@ -140,6 +140,11 @@
                 attr:href="targetUrl"
                 target="_blank"
               ></a>
+
+              <div
+                class="tool-btn iconfont icon-shuaxin"
+                on:click="reloadFrame"
+              ></div>
             </div>
             <iframe attr:src="targetUrl"></iframe>
           </div>
@@ -180,7 +185,15 @@
         activeTab: "article",
         size: {},
       },
-      proto: {},
+      proto: {
+        reloadFrame() {
+          const targetUrl = this.targetUrl;
+          this.targetUrl = "";
+          setTimeout(() => {
+            this.targetUrl = targetUrl;
+          }, 1);
+        },
+      },
       attached() {
         this.size = size;
       },
