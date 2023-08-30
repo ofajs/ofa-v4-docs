@@ -1,14 +1,15 @@
 import { readDir } from "./base.mjs";
 import transConfig from "./transCOnfig.mjs";
 import transMD from "./transMD.mjs";
-
-globalThis.readDir = readDir;
+import path from "path";
+import { fileURLToPath } from "url";
 
 // 文档入口目录
-const entryDir = "/Users/huangyao/Documents/GitHub/ofa-v4-docs/packages/docs";
+const __filename = fileURLToPath(import.meta.url);
+const entryDir = path.resolve(__filename, "../../../docs");
 
 // 文档输出目录
-const outDir = "/Users/huangyao/Documents/GitHub/ofa-v4-docs/dist";
+const outDir = path.resolve(__filename, "../../../../dist");
 
 // 初始操作
 const init = async () => {
@@ -66,7 +67,7 @@ const distTo = async (inputer, outputer) => {
   });
 };
 
-init();
+// init();
 
 // setTimeout(init, 2000);
 // setTimeout(() => {}, 10000000);
