@@ -2,17 +2,22 @@
   <link rel="stylesheet" href="../font/iconfont.css" />
   <l-m src="./simp-editor.html"></l-m>
   <style>
+    .outer {
+      container-type: inline-size;
+    }
+
     .container {
       display: flex;
       height: calc(100vh - 52px);
     }
+
     .article {
-      width: 45%;
+      flex: 5 0 0;
       height: 100%;
       overflow-y: auto;
     }
     .demo-container {
-      flex: 1;
+      flex: 7 0 0;
       display: flex;
       flex-direction: column;
     }
@@ -70,37 +75,118 @@
     ::slotted(article) {
       padding: 16px 16px 32px 0;
     }
+
+    .bottom-tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      box-shadow: rgba(138, 138, 138, 0.231) 0 -2px 4px;
+    }
+
+    .bottom-tabs .tab {
+      position: relative;
+      padding: 0 10px;
+      margin: 0 6px;
+      user-select: none;
+    }
+    .bottom-tabs .tab.active {
+      color: var(--active-color);
+    }
+
+    .bottom-tabs .tab.active:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: var(--active-color);
+    }
+
+    .bottom-tabs {
+      display: none;
+    }
+    @container (max-width: 700px)  {
+      .container {
+        height: calc(100vh - 90px);
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .bottom-tabs {
+        display: flex;
+      }
+    }
   </style>
-  <div class="container">
-    <div class="article">
-      <slot></slot>
-    </div>
-    <div class="demo-container">
-      <div class="demo-top">
-        <simp-editor :files="files"></simp-editor>
+  <div class="outer">
+    <div class="container">
+      <div class="article" class:hide="activeTab !== 'article'">
+        <slot></slot>
       </div>
-      <div class="demo-bottom">
-        <div class="browser">
-          <div class="tools">
-            <h4>PREVIEW</h4>
-            <a
-              class="tool-btn iconfont icon-newtab"
-              attr:href="targetUrl"
-              target="_blank"
-            ></a>
-          </div>
-          <iframe attr:src="targetUrl"></iframe>
+      <div class="demo-container" class:hide="activeTab === 'article'">
+        <div class="demo-top" class:hide="activeTab !== 'code'">
+          <simp-editor :files="files"></simp-editor>
         </div>
+        <div class="demo-bottom" class:hide="activeTab !== 'preview'">
+          <div class="browser">
+            <div class="tools">
+              <h4>PREVIEW</h4>
+              <a
+                class="tool-btn iconfont icon-newtab"
+                attr:href="targetUrl"
+                target="_blank"
+              ></a>
+            </div>
+            <iframe attr:src="targetUrl"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-tabs">
+      <div
+        class="tab"
+        class:active="activeTab === 'article'"
+        on:click="activeTab = 'article'"
+      >
+        Article
+      </div>
+      <div
+        class="tab"
+        class:active="activeTab === 'code'"
+        on:click="activeTab = 'code'"
+      >
+        Code
+      </div>
+      <div
+        class="tab"
+        class:active="activeTab === 'preview'"
+        on:click="activeTab = 'preview'"
+      >
+        Preview
       </div>
     </div>
   </div>
   <script>
+    import { size } from "../data.mjs";
+
     export default {
       data: {
         files: [],
         targetUrl: "",
+        activeTab: "article",
+        size: {},
       },
       proto: {},
+      attached() {
+        this.size = size;
+      },
+      detached() {
+        this.size = {};
+      },
       ready() {
         const links = this.all("a[demo]").map((e) => {
           const href = e.attr("href");
