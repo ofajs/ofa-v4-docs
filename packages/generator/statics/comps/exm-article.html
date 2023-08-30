@@ -1,4 +1,5 @@
 <template component>
+  <link rel="stylesheet" href="../font/iconfont.css" />
   <l-m src="./simp-editor.html"></l-m>
   <style>
     .container {
@@ -37,11 +38,33 @@
     }
 
     .tools {
+      display: flex;
+      align-items: center;
       border-top: #8a8a8a solid 0.5px;
       border-bottom: #8a8a8a solid 0.5px;
       height: 40px;
       line-height: 40px;
       font-size: 12px;
+    }
+
+    .tools h4 {
+      margin: 0;
+      padding: 0;
+      margin-right: 20px;
+    }
+
+    .tool-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      cursor: pointer;
+      user-select: none;
+      text-decoration: none;
+      color: inherit;
+    }
+    .tool-btn:hover {
+      background-color: rgba(255, 255, 255, 0.06);
     }
 
     ::slotted(article) {
@@ -58,7 +81,14 @@
       </div>
       <div class="demo-bottom">
         <div class="browser">
-          <div class="tools">PREVIEW</div>
+          <div class="tools">
+            <h4>PREVIEW</h4>
+            <a
+              class="tool-btn iconfont icon-newtab"
+              attr:href="targetUrl"
+              target="_blank"
+            ></a>
+          </div>
           <iframe attr:src="targetUrl"></iframe>
         </div>
       </div>
@@ -70,6 +100,7 @@
         files: [],
         targetUrl: "",
       },
+      proto: {},
       ready() {
         const links = this.all("a[demo]").map((e) => {
           const href = e.attr("href");

@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1277",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "136387",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "400962",
+      "name": "new-tab",
+      "font_class": "newtab",
+      "unicode": "e7cb",
+      "unicode_decimal": 59339
+    },
+    {
       "icon_id": "6151396",
       "name": "angle-right",
       "font_class": "angle-right",
