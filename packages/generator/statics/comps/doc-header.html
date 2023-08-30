@@ -1,4 +1,5 @@
 <template component>
+  <link rel="stylesheet" href="../font/iconfont.css" />
   <inject-host>
     <style>
       doc-header > ul {
@@ -30,9 +31,11 @@
   </inject-host>
   <link rel="stylesheet" href="./doc-header.css" />
   <header>
-    <div class="menu-btn" on:click="showLeftPannel = true">
-      <img src="./sources/menu.svg" height="20" alt="" />
-    </div>
+    <div
+      class="menu-btn iconfont icon-caidan"
+      on:click="showLeftPannel = true"
+      style="font-size: 24px"
+    ></div>
     <div class="logo">
       <slot name="logo"></slot>
     </div>
@@ -42,12 +45,16 @@
       </x-if>
     </div>
     <div class="right">
+      <slot name="right"></slot>
       <div class="right-btn" on:click="switchMode">
         <x-if :value="isDark.value">
-          <img src="./sources/light.svg" alt="" />
+          <span
+            class="iconfont icon-baitianmoshi"
+            style="font-size: 24px"
+          ></span>
         </x-if>
         <x-else>
-          <img src="./sources/dark.svg" alt="" />
+          <span class="iconfont icon-heiyemoshi" style="font-size: 24px"></span>
         </x-else>
       </div>
     </div>

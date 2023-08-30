@@ -1,5 +1,5 @@
 <template component>
-  <link rel="stylesheet" href="./hljs-dark.css" />
+  <link rel="stylesheet" attr:href="isDark.value ? './hljs-dark.css' : './hljs-light.css'" />
   <style>
     :host {
       display: block;
@@ -93,11 +93,19 @@
   </div>
   <script>
     import hljs from "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/es/highlight.min.js";
+    import { isDark } from "../data.mjs";
 
     export default {
       data: {
         active: "",
         files: [],
+        isDark: {},
+      },
+      attached() {
+        this.isDark = isDark;
+      },
+      detached() {
+        this.isDark = {};
       },
       watch: {
         active() {
