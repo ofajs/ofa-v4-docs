@@ -129,7 +129,11 @@
       </div>
       <div class="demo-container" class:hide="activeTab === 'article'">
         <div class="demo-top" class:hide="activeTab !== 'code'">
-          <simp-editor :files="files"></simp-editor>
+          <simp-editor
+            :files="files"
+            :edit-mode="editMode"
+            on:exm-change="reloadFrame"
+          ></simp-editor>
         </div>
         <div class="demo-bottom" class:hide="activeTab !== 'preview'">
           <div class="browser">
@@ -184,6 +188,7 @@
         targetUrl: "",
         activeTab: "article",
         size: {},
+        editMode: false,
       },
       proto: {
         reloadFrame() {
@@ -200,11 +205,23 @@
       detached() {
         this.size = {};
       },
-      ready() {
+      async ready() {
+        try {
+          const data = await fetch("/$").then((e) => e.json());
+          if (data.ok === 1) {
+            this.editMode = true;
+          }
+        } catch (err) {}
+
         const links = this.all("a[demo]").map((e) => {
-          const href = e.attr("href");
+          let href = e.attr("href");
           const isMain = e.attr("main") === "";
           const isPreview = e.attr("preview") === "";
+
+          if (this.editMode) {
+            const urldata = new URL(href);
+            href = `${urldata.origin}/$${urldata.pathname}`;
+          }
 
           if (isPreview) {
             this.targetUrl = href;

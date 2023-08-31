@@ -1,5 +1,8 @@
 <template component>
-  <link rel="stylesheet" attr:href="isDark.value ? './hljs-dark.css' : './hljs-light.css'" />
+  <link
+    rel="stylesheet"
+    attr:href="isDark.value ? './hljs-dark.css' : './hljs-light.css'"
+  />
   <style>
     :host {
       display: block;
@@ -87,8 +90,12 @@
       </x-fill>
     </div>
     <div class="main">
-      <!-- <pre><div class="main-inner" id="code" contenteditable="plaintext-only" on:blur="blurCode"></div></pre> -->
-      <pre><div class="main-inner" id="code"></div></pre>
+      <x-if :value="editMode">
+        <pre><div class="main-inner" id="code" contenteditable="plaintext-only" on:blur="blurCode" on:focus="focusCode"></div></pre>
+      </x-if>
+      <x-else>
+        <pre><div class="main-inner" id="code"></div></pre>
+      </x-else>
     </div>
   </div>
   <script>
@@ -100,6 +107,7 @@
         active: "",
         files: [],
         isDark: {},
+        editMode: false,
       },
       attached() {
         this.isDark = isDark;
@@ -115,6 +123,7 @@
           if (!val?.length) {
             return;
           }
+
           if (!this.active) {
             this.active = val[0].name;
 
@@ -144,9 +153,34 @@
         },
       },
       proto: {
-        blurCode() {
+        focusCode() {
+          this._cacheCode = this.shadow.$("#code").text;
+        },
+        async blurCode() {
+          if (this._cacheCode === this.shadow.$("#code").text) {
+            return;
+          }
+
           this.shadow.$("#code").html = encodeHTML(this.shadow.$("#code").text);
           hljs.highlightElement(this.shadow.$("#code").ele);
+
+          const activeItem = this.files.find((e) => e.name === this.active);
+
+          if (activeItem) {
+            activeItem.content = this.shadow.$("#code").text;
+
+            // 保存代码
+            const result = await fetch(activeItem.href, {
+              method: "POST",
+              body: this.shadow.$("#code").text,
+            }).then((e) => e.json());
+
+            if (result.ok === 1) {
+              this.emit("exm-change", {
+                bubbles: false,
+              });
+            }
+          }
         },
         refreshText() {
           clearTimeout(this._text_timer);
