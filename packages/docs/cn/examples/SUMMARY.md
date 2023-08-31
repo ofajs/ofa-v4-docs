@@ -18,3 +18,11 @@
   - [生命周期](./life-cycle.md)
   - [表单数据](./form-data.md)
   - [自定义表单组件](./custom-form-element.md)
+- 开发应用
+  - [使用页面组件](./use-page.md)
+  - [使用app组件](./use-app.md)
+  - [配置app参数](./app-config.md)
+  - [为app定制loading](./app-loading.md)
+  - [设置404页面](./set404.md)
+  - [使用 hash router](./use-hash-router.md)
+  - [使用scsr方案](./use-scsr.md)
