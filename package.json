@@ -1,6 +1,6 @@
 {
   "name": "ofa-v4-docs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Documentation site for ofa.js v4",
   "main": "index.js",
   "repository": {

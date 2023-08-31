@@ -150,7 +150,9 @@
                 on:click="reloadFrame"
               ></div>
             </div>
-            <iframe attr:src="targetUrl"></iframe>
+            <x-if :value="targetUrl">
+              <iframe attr:src="targetUrl"></iframe>
+            </x-if>
           </div>
         </div>
       </div>
