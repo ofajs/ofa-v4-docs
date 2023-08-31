@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page1</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/dist/ofa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/libs/scsr/dist/scsr.min.js"></script>
+  </head>
+  <body>
+    <o-app src="./app-config.mjs">
+      <template page>
+        <h1>{{title}}</h1>
+        <button on:click="goBack">GO BACK</button>
+        <!-- or -->
+        <!-- <button on:click="back()">GO BACK</button> -->
+        <script>
+          export default ({ query }) => {
+            return {
+              data: {
+                title: "I am Page 2",
+              },
+              proto: {
+                goBack() {
+                  this.back();
+                },
+              },
+            };
+          };
+        </script>
+      </template>
+    </o-app>
+  </body>
+</html>
