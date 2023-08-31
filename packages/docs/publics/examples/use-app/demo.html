@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>use component</title>
+    <title>render text demo</title>
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/dist/ofa.min.js"></script>
+    <style>
+      o-app {
+        display: block;
+        width: 320px;
+        height: 320px;
+        border: #aaa solid 1px;
+      }
+    </style>
   </head>
   <body>
-    <l-m src="./my-comp.html"></l-m>
-    <my-comp></my-comp>
+    <o-app>
+      <o-page src="./page1.html?count=100"></o-page>
+    </o-app>
   </body>
 </html>

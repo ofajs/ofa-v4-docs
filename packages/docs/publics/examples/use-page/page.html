@@ -1,0 +1,14 @@
+<template page>
+  <h1>{{title}} {{count}}</h1>
+  <button on:click="count++">Count++</button>
+  <script>
+    export default ({ query }) => {
+      return {
+        data: {
+          title: "Hello Page",
+          count: query.count || 0,
+        },
+      };
+    };
+  </script>
+</template>

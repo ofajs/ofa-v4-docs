@@ -17,7 +17,7 @@
   const configSrc = document.currentScript.getAttribute("config");
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.3/dist/ofa.min.js",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/dist/ofa.min.js",
     {
       debug: "",
     }
@@ -44,7 +44,8 @@
       const topNavs = [];
 
       articles.forEach((e) => {
-        const href = new URL(e.navs[0].href, url).href;
+        let href = e.navs[0].href || e.navs[0].childs[0].href;
+        href = new URL(href, url).href;
 
         e.href = href;
 
@@ -80,7 +81,7 @@
   };
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.3/libs/scsr/scsr.mjs",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/libs/scsr/scsr.mjs",
     {
       type: "module",
     }

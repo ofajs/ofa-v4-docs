@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>render text demo</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/dist/ofa.min.js"></script>
+    <style>
+      o-app {
+        display: block;
+        width: 320px;
+        height: 320px;
+        border: #aaa solid 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <l-m
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/libs/router/dist/router.min.mjs"
+    ></l-m>
+    <o-router fix-body>
+      <o-app src="./app-config.mjs"> </o-app>
+    </o-router>
+  </body>
+</html>
