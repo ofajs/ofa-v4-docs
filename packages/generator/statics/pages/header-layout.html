@@ -29,26 +29,16 @@
         </x-fill>
       </ul>
       <div slot="mobile-aside" class="mobile-aside">
-        <x-fill name="item" :value="articles"></x-fill>
+        <doc-aside slot="aside" :active-href="leftActiveUrl"> </doc-aside>
       </div>
-      <a class="iconfont icon-github-fill github-link" slot="right" href="https://github.com/kirakiray/ofa.js"></a>
+      <a
+        class="iconfont icon-github-fill github-link"
+        slot="right"
+        href="https://github.com/kirakiray/ofa.js"
+      ></a>
     </doc-header>
     <slot></slot>
   </doc-container>
-
-  <template name="item">
-    <d-item attr:active="$host.leftGetActive($data)">
-      <x-if :value="$data.href">
-        <a attr:href="$data.href" olink>{{$data.name}}</a>
-      </x-if>
-      <x-else>
-        <span> {{$data.name}}</span>
-        <d-nav slot="nav">
-          <x-fill :value="$data.childs" name="item"></x-fill>
-        </d-nav>
-      </x-else>
-    </d-item>
-  </template>
 
   <script>
     export default async function ({ load }) {
@@ -56,6 +46,7 @@
 
       return {
         data: {
+          leftActiveUrl: "",
           articles: [],
           navs: [],
         },
@@ -67,6 +58,7 @@
         },
         ready() {
           this.attr("id", "header-layout");
+          this.leftActiveUrl = `${location.origin}${location.pathname}`;
         },
         proto: {
           init(data) {
@@ -79,19 +71,10 @@
             }
             return false;
           },
-          leftGetActive(data) {
-            const now = `${location.origin}${location.pathname}`;
-            if (data.href === now) {
-              return "";
-            }
-
-            return null;
-          },
         },
         routerChange(e) {
-          // setTimeout(() => {
+          this.leftActiveUrl = `${location.origin}${location.pathname}`;
           this.shadow.$("doc-container").scrollTop = 0;
-          // }, 300);
         },
       };
     }

@@ -16,8 +16,15 @@
 
   const configSrc = document.currentScript.getAttribute("config");
 
+  // await appendScript(
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.6/dist/ofa.min.js",
+  //   {
+  //     debug: "",
+  //   }
+  // );
+
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/dist/ofa.min.js",
+    "http://127.0.0.1:5513/dist/ofa.js",
     {
       debug: "",
     }
@@ -81,7 +88,7 @@
   };
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/libs/scsr/scsr.mjs",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.6/libs/scsr/scsr.mjs",
     {
       type: "module",
     }

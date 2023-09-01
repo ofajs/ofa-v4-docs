@@ -1,34 +1,46 @@
 <template component>
-  <style>
-    :host {
-      display: block;
-      box-sizing: border-box;
-      padding-left: 16px;
-      padding-right: 16px;;
-      max-height: calc(100vh - 60px);
-      overflow-y: auto;
-      color: var(--aside-color);
-    }
-  </style>
-  <div style="height: 10px;"></div>
-  <slot></slot>
+  <d-nav>
+    <x-fill name="dItem" :value="leftNavs"></x-fill>
+  </d-nav>
+  <template name="dItem">
+    <d-item attr:active="$host.leftGetActive($data)">
+      <x-if :value="$data.href">
+        <a attr:href="$data.href" olink on:click="$ele.refresh()"
+          >{{$data.name}}</a
+        >
+      </x-if>
+      <x-else>
+        <span> {{$data.name}}</span>
+        <d-nav slot="nav">
+          <x-fill :value="$data.childs" name="dItem"></x-fill>
+        </d-nav>
+      </x-else>
+    </d-item>
+  </template>
 
   <script>
-    export function attached() {
-      // this.$("d-nav").on("click", (e) => {
-      //   const $target = $(e.target);
+    import { leftNavsData } from "../data.mjs";
 
-      //   if ($target.tag === "d-nav" || $target.$('[slot="nav"]')) {
-      //     return;
-      //   }
+    export default {
+      data: {
+        leftNavs: [],
+        activeHref: "",
+      },
+      proto: {
+        leftGetActive(data) {
+          if (data.href === this.activeHref) {
+            return "";
+          }
 
-      //   // 删除旧的激活状态
-      //   this.all("d-item[active]").forEach((e) => {
-      //     e.active = null;
-      //   });
-
-      //   $target.setActive();
-      // });
-    }
+          return null;
+        },
+      },
+      attached() {
+        this.leftNavs = leftNavsData;
+      },
+      detached() {
+        this.leftNavs = [];
+      },
+    };
   </script>
 </template>
