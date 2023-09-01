@@ -26,6 +26,17 @@
         leftNavs: [],
         activeHref: "",
       },
+      watch: {
+        activeHref() {
+          clearTimeout(this._timer);
+          this._timer = setTimeout(() => {
+            const target = this.shadow.$("d-item[active='']");
+            if (!isElementVisible(target.ele)) {
+              target.ele.scrollIntoView();
+            }
+          }, 300);
+        },
+      },
       proto: {
         leftGetActive(data) {
           if (data.href === this.activeHref) {
@@ -42,5 +53,22 @@
         this.leftNavs = [];
       },
     };
+
+    function isElementVisible(element) {
+      var rect = element.getBoundingClientRect();
+
+      var windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+      var windowWidth =
+        window.innerWidth || document.documentElement.clientWidth;
+
+      var isVisible =
+        rect.top < windowHeight &&
+        rect.bottom > 0 &&
+        rect.left < windowWidth &&
+        rect.right > 0;
+
+      return isVisible;
+    }
   </script>
 </template>
