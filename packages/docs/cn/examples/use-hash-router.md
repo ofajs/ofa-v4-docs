@@ -5,7 +5,7 @@
 这个案例请点击 <span style='font-family: "iconfont"'>&#xe7cb;</span> 按钮，以用新页面的方式打开来尝试；
 
 ```html
-<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.4/libs/router/dist/router.min.mjs"></l-m>
+<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.6/libs/router/dist/router.min.mjs"></l-m>
 <o-router fix-body>
   <o-app src="./app-config.mjs"></o-app>
 </o-router>
