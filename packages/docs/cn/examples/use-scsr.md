@@ -14,4 +14,5 @@ SCSR 是通过直接运行单文件模式的页面模块，而无需使用 `o-pa
 
 <a href="../../publics/examples/use-scsr/page1.html" main demo preview></a>
 <a href="../../publics/examples/use-scsr/page2.html" demo></a>
+<a href="../../publics/examples/use-scsr/public.css" demo></a>
 <a href="../../publics/examples/use-scsr/app-config.mjs" demo></a>
