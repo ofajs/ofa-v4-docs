@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "cd packages/generator && npm run build",
+    "dev": "cd packages/generator && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yao",

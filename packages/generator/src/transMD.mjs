@@ -2,6 +2,10 @@ import { marked } from "marked";
 
 export default async function transMD(inputer, outputer, configUrl, type) {
   inputer.forEach(async (name) => {
+    if (name === "SUMMARY.md") {
+      return;
+    }
+
     const target = await inputer.read(name);
 
     if (target.name) {
