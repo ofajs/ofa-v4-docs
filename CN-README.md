@@ -9,6 +9,7 @@
 - **docs** : 存放 ofa.js 文档的目录。 
 - **generator** : 将 .md 文件转换为 HTML 的库。 
 - **translator** : 将某种语言的 .md 文件翻译成其他语言版本的库。 
+- **statics** : 项目运行用的静态文件。
 
 <!-- ## 工作流程 
 
