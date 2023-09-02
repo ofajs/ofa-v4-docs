@@ -10,7 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const entryDir = path.resolve(__filename, "../../../docs");
 
 // 文档输出目录
-const outDir = path.resolve(__filename, "../../../../dist");
+// const outDir = path.resolve(__filename, "../../../../dist");
+const outDir = path.resolve("/Users/huangyao/Documents/GitHub/o_blog/");
 
 // 初始操作
 const init = async () => {

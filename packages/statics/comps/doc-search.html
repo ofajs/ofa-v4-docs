@@ -102,10 +102,15 @@
       background-color: var(--body-bg-color);
       border-radius: 3px;
       box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px;
+      cursor: pointer;
+    }
+
+    .result-block:hover {
+      background-color: var(--aside-hover-bg);
     }
 
     .block-title {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: bold;
     }
 
@@ -128,41 +133,93 @@
               class="iconfont icon-search"
               style="padding: 0 12px; font-size: 22px"
             ></span>
-            <input type="text" class="search" />
+            <input
+              type="text"
+              class="search"
+              sync:value="stext"
+              on:input="searchChange"
+            />
           </div>
-          <!-- <div class="recent-search">No recent search</div> -->
-          <div class="results">
-            <div class="article-name">事件反应</div>
-            <div class="result-block">
-              <div class="block-title">注册事件</div>
+          <x-if :value="results.length">
+            <div class="results">
+              <x-fill :value="results">
+                <div>
+                  <div class="article-name">{{$data.title}}</div>
+                  <x-fill :value="$data.matchs" name="res-block"></x-fill>
+                </div>
+              </x-fill>
+
+              <template name="res-block">
+                <div class="result-block" on:click="$host.clickItem($data)">
+                  <div class="block-title">{{$data.heading}}</div>
+                  <x-if :value="$data.type !== 'h'">
+                    <div class="block-desc">{{$data.snippets}}</div>
+                  </x-if>
+                </div>
+              </template>
             </div>
-            <div class="result-block">
-              <div class="block-title">注册事件1</div>
-              <div class="block-desc">我是描述文档</div>
-            </div>
-            <div class="result-block">
-              <div class="block-title">注册事件2</div>
-            </div>
-          </div>
+          </x-if>
+          <x-else>
+            <div class="recent-search">No recent search</div>
+          </x-else>
         </div>
       </div>
     </div>
   </x-if>
 
   <script>
-    export default {
-      data: {
-        showPannel: true,
-      },
-      watch: {
-        showPannel(val) {
-          if (val) {
-            setTimeout(() => {
-              this.shadow.$("input").ele.focus();
-            }, 300);
-          }
+    const searchWorker = new Worker("/search-worker.js");
+
+    export default async ({ load }) => {
+      return {
+        data: {
+          showPannel: false,
+          stext: "",
+          results: [],
         },
-      },
+        watch: {
+          showPannel(val) {
+            if (val) {
+              setTimeout(() => {
+                this.shadow.$("input").ele.focus();
+              }, 300);
+            }
+          },
+        },
+        proto: {
+          searchChange(e) {
+            clearTimeout(this._timer);
+            this._timer = setTimeout(() => {
+              if (!this.stext) {
+                this.results = [];
+                return;
+              }
+
+              searchWorker.postMessage({ searchText: this.stext, lang: "cn" });
+            }, 500);
+          },
+          clickItem(data) {
+            console.log(data);
+
+            this.showPannel = false;
+            this.app.goto(`/${data.path}?search=${this.stext}&pid=${data.pId}`);
+          },
+        },
+        attached() {
+          this._f = (e) => {
+            const { results, text } = e.data;
+
+            if (text === this.stext) {
+              this.results = results;
+            }
+          };
+          searchWorker.addEventListener("message", this._f);
+        },
+        detached() {
+          searchWorker.removeEventListener("message", this._f);
+          this._f = null;
+        },
+      };
     };
   </script>
 </template>

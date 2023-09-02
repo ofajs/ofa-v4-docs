@@ -21,27 +21,29 @@ async function getArticleBase(inputer, obj) {
 
     const tokens = marked.lexer(data);
 
-    obj[name] = tokens
-      .filter((e) => {
-        switch (e.type) {
-          case "heading":
-          case "list":
-          case "paragraph":
-            return true;
-        }
+    if (/\.md$/.test(name)) {
+      name = name.replace(/\.md/, "");
+    }
 
-        return false;
-      })
+    obj[name] = tokens
+      .filter((e) => e.type !== "space")
       .map((e) => {
         let t;
 
         switch (e.type) {
           case "heading":
             t = "h";
+            break;
           case "list":
             t = "l";
+            break;
           case "paragraph":
             t = "p";
+            break;
+        }
+
+        if (!t) {
+          return 0;
         }
 
         return {

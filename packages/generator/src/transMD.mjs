@@ -80,8 +80,12 @@ export default async function transMD(inputer, outputer, configUrl, type) {
           <article-footer></article-footer>
           </article>
           <script>
-            export const parent =
-              "${root}/packages/statics/pages/article-layout.html";
+            import pageInit from '${root}/packages/statics/page-init.mjs';
+
+            export const parent = "${root}/packages/statics/pages/article-layout.html";
+            export default async (...args)=> {
+              return await pageInit(PATH,args);
+            }
           </script>
         </template>
       </o-app>
@@ -128,8 +132,12 @@ export default async function transMD(inputer, outputer, configUrl, type) {
           </article>
         </exm-article>
         <script>
-          export const parent =
-            "${root}/packages/statics/pages/article-layout.html";
+          import pageInit from '${root}/packages/statics/page-init.mjs';
+
+          export const parent = "${root}/packages/statics/pages/article-layout.html";
+          export default async (...args)=> {
+            return await pageInit(PATH,args);
+          }
         </script>
       </template>
     </o-app>
