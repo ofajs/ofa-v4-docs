@@ -1,0 +1,168 @@
+<template component>
+  <link rel="stylesheet" href="../font/iconfont.css" />
+  <style>
+    :host {
+      display: block;
+    }
+    .right-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 18px;
+      user-select: none;
+      cursor: pointer;
+      transition: all ease 0.2s;
+    }
+
+    .right-btn:hover {
+      background-color: var(--aside-hover-bg);
+    }
+
+    .mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .outer {
+      width: 100%;
+      max-width: 600px;
+      height: 90%;
+    }
+
+    .container {
+      box-sizing: border-box;
+      padding: 1px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: rgab(0, 0, 0, 0.1) 0 0 5px;
+      background-color: var(--search-bg-color);
+    }
+
+    .search-con {
+      display: flex;
+      align-items: center;
+      margin: 16px;
+      height: 40px;
+      border: var(--active-color) solid 2px;
+      border-radius: 5px;
+    }
+
+    .search {
+      display: block;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .recent-search {
+      padding: 0 16px;
+      min-height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--article-nav-font-color);
+      user-select: none;
+    }
+
+    .results {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+
+    .article-name {
+      padding: 4px 16px 0px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--active-color);
+    }
+
+    .result-block {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      flex-direction: column;
+      height: 60px;
+      margin: 8px 16px;
+      padding: 0 14px;
+      background-color: var(--body-bg-color);
+      border-radius: 3px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px;
+    }
+
+    .block-title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .block-desc {
+      font-size: 13px;
+    }
+  </style>
+  <div
+    class="btn iconfont icon-search right-btn"
+    on:click="showPannel = true"
+    style="font-size: 18px"
+  ></div>
+
+  <x-if :value="showPannel">
+    <div class="mask" on:click="showPannel = false">
+      <div class="outer">
+        <div class="container" on:click="$event.stopPropagation()">
+          <div class="search-con">
+            <span
+              class="iconfont icon-search"
+              style="padding: 0 12px; font-size: 22px"
+            ></span>
+            <input type="text" class="search" />
+          </div>
+          <!-- <div class="recent-search">No recent search</div> -->
+          <div class="results">
+            <div class="article-name">事件反应</div>
+            <div class="result-block">
+              <div class="block-title">注册事件</div>
+            </div>
+            <div class="result-block">
+              <div class="block-title">注册事件1</div>
+              <div class="block-desc">我是描述文档</div>
+            </div>
+            <div class="result-block">
+              <div class="block-title">注册事件2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </x-if>
+
+  <script>
+    export default {
+      data: {
+        showPannel: true,
+      },
+      watch: {
+        showPannel(val) {
+          if (val) {
+            setTimeout(() => {
+              this.shadow.$("input").ele.focus();
+            }, 300);
+          }
+        },
+      },
+    };
+  </script>
+</template>
