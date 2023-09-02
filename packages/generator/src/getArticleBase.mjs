@@ -33,8 +33,19 @@ async function getArticleBase(inputer, obj) {
         return false;
       })
       .map((e) => {
+        let t;
+
+        switch (e.type) {
+          case "heading":
+            t = "h";
+          case "list":
+            t = "l";
+          case "paragraph":
+            t = "p";
+        }
+
         return {
-          t: e.type,
+          t,
           c: removeMarkdownFormats(e.text || e.raw),
         };
       });

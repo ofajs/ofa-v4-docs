@@ -56,23 +56,23 @@ export default async function transMD(inputer, outputer, configUrl, type) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>${title || newName}</title>
       <script
-        src="${root}/packages/generator/statics/init.js"
+        src="${root}/packages/statics/init.js"
         config="${configUrl}"
       ></script>
       <link
         rel="stylesheet"
-        href="${root}/packages/generator/statics/css/public.css"
+        href="${root}/packages/statics/css/public.css"
       />
       ${!root.includes("127.0.0.1") ? agentCode : ""}
     </head>
     <body>
       <o-app
-        src="${root}/packages/generator/statics/app-config.mjs"
+        src="${root}/packages/statics/app-config.mjs"
       >
         <template page>
           <link
             rel="stylesheet"
-            href="${root}/packages/generator/statics/css/github-markdown.css"
+            href="${root}/packages/statics/css/github-markdown.css"
           />
           <style>article{padding:16px 0 32px;}</style>
           <article class="markdown-body">
@@ -81,7 +81,7 @@ export default async function transMD(inputer, outputer, configUrl, type) {
           </article>
           <script>
             export const parent =
-              "${root}/packages/generator/statics/pages/article-layout.html";
+              "${root}/packages/statics/pages/article-layout.html";
           </script>
         </template>
       </o-app>
@@ -103,23 +103,23 @@ export default async function transMD(inputer, outputer, configUrl, type) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${title || newName}</title>
     <script
-      src="${root}/packages/generator/statics/init.js"
+      src="${root}/packages/statics/init.js"
       config="${configUrl}"
     ></script>
     <link
       rel="stylesheet"
-      href="${root}/packages/generator/statics/css/public.css"
+      href="${root}/packages/statics/css/public.css"
     />
     ${!root.includes("127.0.0.1") ? agentCode : ""}
   </head>
   <body>
     <o-app
-      src="${root}/packages/generator/statics/app-config.mjs"
+      src="${root}/packages/statics/app-config.mjs"
     >
       <template page>
         <link
           rel="stylesheet"
-          href="${root}/packages/generator/statics/css/github-markdown.css"
+          href="${root}/packages/statics/css/github-markdown.css"
         />
         <exm-article>
           <article class="markdown-body" data-no-right>
@@ -129,7 +129,7 @@ export default async function transMD(inputer, outputer, configUrl, type) {
         </exm-article>
         <script>
           export const parent =
-            "${root}/packages/generator/statics/pages/article-layout.html";
+            "${root}/packages/statics/pages/article-layout.html";
         </script>
       </template>
     </o-app>

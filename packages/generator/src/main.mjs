@@ -3,13 +3,15 @@ import transConfig from "./transCOnfig.mjs";
 import transMD from "./transMD.mjs";
 import path from "path";
 import { fileURLToPath } from "url";
+import getArticleBase from "./getArticleBase.mjs";
 
 // 文档入口目录
 const __filename = fileURLToPath(import.meta.url);
 const entryDir = path.resolve(__filename, "../../../docs");
 
 // 文档输出目录
-const outDir = path.resolve(__filename, "../../../../dist");
+// const outDir = path.resolve(__filename, "../../../../dist");
+const outDir = path.resolve("/Users/huangyao/Documents/GitHub/o_blog/");
 
 // 初始操作
 const init = async () => {
@@ -55,19 +57,31 @@ const distTo = async (inputer, outputer) => {
 
   await outputer.write("doc-config.json", JSON.stringify(docConfig));
 
-  cData.groups.forEach(async (e) => {
-    const { path, type } = e;
+  const searchJson = {};
 
-    transMD(
-      await inputer.read(path),
-      await outputer.mkdir(path),
-      "../doc-config.json",
-      type
-    );
-  });
+  await Promise.all(
+    cData.groups.map(async (e) => {
+      const { path, type } = e;
+
+      const obj = {};
+
+      await getArticleBase(await inputer.read(path), obj);
+
+      searchJson[path] = obj;
+
+      transMD(
+        await inputer.read(path),
+        await outputer.mkdir(path),
+        "../doc-config.json",
+        type
+      );
+    })
+  );
+
+  outputer.write("libs.json", JSON.stringify(searchJson));
 };
 
-// init();
+init();
 
 // setTimeout(init, 2000);
 // setTimeout(() => {}, 10000000);
