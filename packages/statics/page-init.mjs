@@ -1,3 +1,5 @@
+import { wrapSubstringWithSpan } from "./util.mjs";
+
 export default async (PATH, [{ query }]) => {
   return {
     attached() {
@@ -5,7 +7,9 @@ export default async (PATH, [{ query }]) => {
         setTimeout(() => {
           const target = this.shadow.$("article")[query.pid];
 
-          target.html = wrapSubstringWithSpan(target.text, query.search);
+          if (query.search) {
+            target.html = wrapSubstringWithSpan(target.text, query.search);
+          }
 
           target.ele.scrollIntoView();
         }, 500);
@@ -13,10 +17,3 @@ export default async (PATH, [{ query }]) => {
     },
   };
 };
-
-function wrapSubstringWithSpan(str, substr) {
-  return str.replace(
-    new RegExp(substr, "gi"),
-    "<span style='color:var(--active-color)'>$&</span>"
-  );
-}

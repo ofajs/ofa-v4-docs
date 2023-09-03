@@ -140,7 +140,7 @@
               on:input="searchChange"
             />
           </div>
-          <x-if :value="results.length">
+          <x-if :value="results.length && stext">
             <div class="results">
               <x-fill :value="results">
                 <div>
@@ -159,6 +159,13 @@
               </template>
             </div>
           </x-if>
+          <x-else-if :value="isNoResult">
+            <div class="recent-search">No results for "{{stext}}"</div>
+          </x-else-if>
+          <x-else-if :value="clickHistorys.length">
+            <div class="article-name">Recent</div>
+            <x-fill :value="clickHistorys" name="res-block"></x-fill>
+          </x-else-if>
           <x-else>
             <div class="recent-search">No recent search</div>
           </x-else>
@@ -176,6 +183,8 @@
           showPannel: false,
           stext: "",
           results: [],
+          clickHistorys: [],
+          isNoResult: false,
         },
         watch: {
           showPannel(val) {
@@ -188,6 +197,7 @@
         },
         proto: {
           searchChange(e) {
+            this.isNoResult = false;
             clearTimeout(this._timer);
             this._timer = setTimeout(() => {
               if (!this.stext) {
@@ -199,10 +209,38 @@
             }, 500);
           },
           clickItem(data) {
-            console.log(data);
+            let historys = [];
+
+            try {
+              const his = JSON.parse(localStorage.__recent);
+
+              if (his) {
+                historys = his;
+              }
+            } catch (err) {}
+
+            const target = historys.find(
+              (e) =>
+                e.pId === data.pId &&
+                e.heading === data.heading &&
+                e.path === data.path
+            );
+
+            if (!target) {
+              historys.unshift({
+                ...data,
+                stext: this.stext,
+              });
+            }
 
             this.showPannel = false;
-            this.app.goto(`/${data.path}?search=${this.stext}&pid=${data.pId}`);
+            this.app.goto(
+              `/${data.path}?search=${this.stext || data.stext || ""}&pid=${
+                data.pId
+              }`
+            );
+
+            localStorage.__recent = JSON.stringify(historys);
           },
         },
         attached() {
@@ -210,10 +248,18 @@
             const { results, text } = e.data;
 
             if (text === this.stext) {
+              if (!results.length) {
+                this.isNoResult = true;
+              }
               this.results = results;
             }
           };
           searchWorker.addEventListener("message", this._f);
+
+          try {
+            const historys = JSON.parse(localStorage.__recent);
+            this.clickHistorys = historys;
+          } catch (err) {}
         },
         detached() {
           searchWorker.removeEventListener("message", this._f);
