@@ -161,6 +161,26 @@
     .history-block .icon-guanbi:hover {
       color: var(--active-color);
     }
+
+    .before-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+    }
+
+    .search-loading {
+      animation: loading-anm linear 0.5s infinite;
+    }
+
+    @keyframes loading-anm {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   </style>
   <div class="btn" on:click="showPannel = true" style="font-size: 18px">
     <span class="iconfont icon-search"></span>
@@ -172,10 +192,20 @@
       <div class="outer">
         <div class="container" on:click="$event.stopPropagation()">
           <div class="search-con">
-            <span
-              class="iconfont icon-search"
-              style="padding: 0 12px; font-size: 22px"
-            ></span>
+            <div class="before-icon">
+              <x-if :value="loading">
+                <span
+                  class="iconfont icon-jiazailoading-A search-loading"
+                  style="font-size: 26px"
+                ></span>
+              </x-if>
+              <x-else>
+                <span
+                  class="iconfont icon-search"
+                  style="font-size: 22px"
+                ></span>
+              </x-else>
+            </div>
             <input
               type="text"
               class="search"
@@ -214,9 +244,9 @@
                     style="font-size: 28px"
                   ></span>
                   <div style="flex: 1" on:click="$host.clickItem($data)">
-                    <div class="block-title">{{$data.heading}}</div>
+                    <div class="block-title" :html="$data.heading"></div>
                     <x-if :value="$data.type !== 'h'">
-                      <div class="block-desc">{{$data.snippets}}</div>
+                      <div class="block-desc" :html="$data.snippets"></div>
                     </x-if>
                   </div>
                   <span
@@ -248,6 +278,7 @@
           results: [],
           clickHistorys: null,
           isNoResult: false,
+          loading: false,
         },
         watch: {
           showPannel(val) {
@@ -278,11 +309,14 @@
             this._timer = setTimeout(() => {
               if (!this.stext) {
                 this.results = [];
+                this.loading = false;
                 return;
               }
 
+              this.loading = true;
+
               searchWorker.postMessage({ searchText: this.stext, lang: "cn" });
-            }, 500);
+            }, 200);
           },
           clickItem(data) {
             const target = this.clickHistorys.find(
@@ -309,55 +343,30 @@
         },
         attached() {
           this._f = (e) => {
-            // const { results, text } = e.data;
+            const { results, text } = e.data;
 
-            // if (text === this.stext) {
-            //   if (!results.length) {
-            //     this.isNoResult = true;
-            //   }
-            //   results.forEach((e) => {
-            //     e.matchs.forEach((item) => {
-            //       item.heading = wrapSubstringWithSpan(
-            //         item.heading,
-            //         this.stext
-            //       );
-            //       if (item.snippets) {
-            //         item.snippets = wrapSubstringWithSpan(
-            //           item.snippets,
-            //           this.stext
-            //         );
-            //       }
-            //     });
-            //   });
+            if (text === this.stext) {
+              this.loading = false;
+              if (!results.length) {
+                this.isNoResult = true;
+              }
+              results.forEach((e) => {
+                e.matchs.forEach((item) => {
+                  item.heading = wrapSubstringWithSpan(
+                    item.heading,
+                    this.stext
+                  );
+                  if (item.snippets) {
+                    item.snippets = wrapSubstringWithSpan(
+                      item.snippets,
+                      this.stext
+                    );
+                  }
+                });
+              });
 
-            //   this.results = results;
-            // }
-
-            this.results = [
-              {
-                title: "ofa.js - 渐进式前端框架",
-                matchs: [
-                  {
-                    heading:
-                      "取代 <span style='color:var(--active-color)'>jQ</span>uery",
-                    snippets:
-                      "取代 <span style='color:var(--active-color)'>jQ</span>uery",
-                    type: "h",
-                    pId: 4,
-                    path: "cn/docs/introduce.html",
-                  },
-                  {
-                    heading:
-                      "取代 <span style='color:var(--active-color)'>jQ</span>uery",
-                    snippets:
-                      "...框架，而是倾向于使用<span style='color:var(--active-color)'>jQ</span>uery进行简单...",
-                    type: "p",
-                    pId: 5,
-                    path: "cn/docs/introduce.html",
-                  },
-                ],
-              },
-            ];
+              this.results = results;
+            }
           };
           searchWorker.addEventListener("message", this._f);
 
