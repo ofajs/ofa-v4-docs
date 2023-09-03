@@ -16,12 +16,12 @@
 
   const configSrc = document.currentScript.getAttribute("config");
 
-  await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.8/dist/ofa.min.js",
-    {
-      debug: "",
-    }
-  );
+  // await appendScript(
+  //   "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.9/dist/ofa.min.js",
+  //   {
+  //     debug: "",
+  //   }
+  // );
 
   // await appendScript(
   //   "http://127.0.0.1:5513/dist/ofa.js",
@@ -30,9 +30,9 @@
   //   }
   // );
 
-  // await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
-  //   type: "module",
-  // });
+  await appendScript("http://127.0.0.1:5513/packages/ofa/main.mjs", {
+    type: "module",
+  });
 
   if (localStorage.isDark === "true") {
     $("html").classList.add("dark");
@@ -88,7 +88,7 @@
   };
 
   await appendScript(
-    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.8/libs/scsr/scsr.mjs",
+    "https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.9/libs/scsr/scsr.mjs",
     {
       type: "module",
     }
