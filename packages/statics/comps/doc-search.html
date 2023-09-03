@@ -234,7 +234,7 @@
           <x-else-if :value="isNoResult">
             <div class="recent-search">No results for "{{stext}}"</div>
           </x-else-if>
-          <x-else-if :value="clickHistorys.length">
+          <x-else-if :value="clickHistorys?.length">
             <div class="article-name">Recent</div>
             <div class="historys-con">
               <x-fill :value="clickHistorys">
@@ -319,6 +319,10 @@
             }, 200);
           },
           clickItem(data) {
+            if (!this.clickHistorys) {
+              this.clickHistorys = [];
+            }
+
             const target = this.clickHistorys.find(
               (e) =>
                 e.pId === data.pId &&
