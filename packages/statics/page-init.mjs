@@ -1,6 +1,12 @@
 import { wrapSubstringWithSpan } from "./util.mjs";
 
 export default async (PATH, [{ query }]) => {
+  console.log(PATH);
+
+  if (!query.search) {
+    debugger;
+  }
+
   return {
     attached() {
       if (query.pid) {

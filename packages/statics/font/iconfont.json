@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "200845",
+      "name": "3.1收藏",
+      "font_class": "31shoucang",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "1727441",
+      "name": "213收藏",
+      "font_class": "shoucang",
+      "unicode": "e8c2",
+      "unicode_decimal": 59586
+    },
+    {
+      "icon_id": "1727570",
+      "name": "333加载loading-A",
+      "font_class": "jiazailoading-A",
+      "unicode": "e8fc",
+      "unicode_decimal": 59644
+    },
+    {
+      "icon_id": "5387522",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "eaf2",
+      "unicode_decimal": 60146
+    },
+    {
+      "icon_id": "5387536",
+      "name": "历史记录",
+      "font_class": "lishijilu",
+      "unicode": "eaf7",
+      "unicode_decimal": 60151
+    },
+    {
       "icon_id": "6151301",
       "name": "search",
       "font_class": "search",
