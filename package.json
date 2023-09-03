@@ -1,6 +1,6 @@
 {
   "name": "ofa-v4-docs",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Documentation site for ofa.js v4",
   "main": "index.js",
   "repository": {
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "cd packages/generator && npm run build",
+    "dev": "cd packages/generator && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yao",

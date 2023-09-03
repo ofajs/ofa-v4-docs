@@ -13,3 +13,10 @@ export function isElementVisible(element) {
 
   return isVisible;
 }
+
+export function wrapSubstringWithSpan(str, substr) {
+  return str.replace(
+    new RegExp(substr, "gi"),
+    "<span style='color:var(--active-color)'>$&</span>"
+  );
+}

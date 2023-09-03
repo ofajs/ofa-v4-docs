@@ -9,6 +9,7 @@ The main files are located in the packages directory, here is the directory desc
 - **docs** : Directory for ofa.js documentation. 
 - **generator** : Library for converting .md files to HTML. 
 - **translator** : Library to translate .md files from one language to another. 
+- **statics** : Static files for running the project.
 
 <!-- ## Workflow 
 

@@ -2,6 +2,10 @@ import { marked } from "marked";
 
 export default async function transMD(inputer, outputer, configUrl, type) {
   inputer.forEach(async (name) => {
+    if (name === "SUMMARY.md") {
+      return;
+    }
+
     const target = await inputer.read(name);
 
     if (target.name) {
@@ -28,7 +32,7 @@ export default async function transMD(inputer, outputer, configUrl, type) {
     const newName = name.replace(/(.+)\..+/, "$1") + ".html";
 
     // const root = `http://127.0.0.1:5500`;
-    const root = `https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.1.8`;
+    const root = `https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.2.0`;
 
     const agentCode = `
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
@@ -52,23 +56,23 @@ export default async function transMD(inputer, outputer, configUrl, type) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>${title || newName}</title>
       <script
-        src="${root}/packages/generator/statics/init.js"
+        src="${root}/packages/statics/init.js"
         config="${configUrl}"
       ></script>
       <link
         rel="stylesheet"
-        href="${root}/packages/generator/statics/css/public.css"
+        href="${root}/packages/statics/css/public.css"
       />
       ${!root.includes("127.0.0.1") ? agentCode : ""}
     </head>
     <body>
       <o-app
-        src="${root}/packages/generator/statics/app-config.mjs"
+        src="${root}/packages/statics/app-config.mjs"
       >
         <template page>
           <link
             rel="stylesheet"
-            href="${root}/packages/generator/statics/css/github-markdown.css"
+            href="${root}/packages/statics/css/github-markdown.css"
           />
           <style>article{padding:16px 0 32px;}</style>
           <article class="markdown-body">
@@ -76,8 +80,12 @@ export default async function transMD(inputer, outputer, configUrl, type) {
           <article-footer></article-footer>
           </article>
           <script>
-            export const parent =
-              "${root}/packages/generator/statics/pages/article-layout.html";
+            import pageInit from '${root}/packages/statics/page-init.mjs';
+
+            export const parent = "${root}/packages/statics/pages/article-layout.html";
+            export default async (...args)=> {
+              return await pageInit(PATH,args);
+            }
           </script>
         </template>
       </o-app>
@@ -99,23 +107,23 @@ export default async function transMD(inputer, outputer, configUrl, type) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${title || newName}</title>
     <script
-      src="${root}/packages/generator/statics/init.js"
+      src="${root}/packages/statics/init.js"
       config="${configUrl}"
     ></script>
     <link
       rel="stylesheet"
-      href="${root}/packages/generator/statics/css/public.css"
+      href="${root}/packages/statics/css/public.css"
     />
     ${!root.includes("127.0.0.1") ? agentCode : ""}
   </head>
   <body>
     <o-app
-      src="${root}/packages/generator/statics/app-config.mjs"
+      src="${root}/packages/statics/app-config.mjs"
     >
       <template page>
         <link
           rel="stylesheet"
-          href="${root}/packages/generator/statics/css/github-markdown.css"
+          href="${root}/packages/statics/css/github-markdown.css"
         />
         <exm-article>
           <article class="markdown-body" data-no-right>
@@ -124,8 +132,12 @@ export default async function transMD(inputer, outputer, configUrl, type) {
           </article>
         </exm-article>
         <script>
-          export const parent =
-            "${root}/packages/generator/statics/pages/article-layout.html";
+          import pageInit from '${root}/packages/statics/page-init.mjs';
+
+          export const parent = "${root}/packages/statics/pages/article-layout.html";
+          export default async (...args)=> {
+            return await pageInit(PATH,args);
+          }
         </script>
       </template>
     </o-app>

@@ -32,10 +32,6 @@ header {
   cursor: pointer;
   transition: all ease 0.2s;
 }
-.right-btn img {
-  width: auto;
-  height: 70%;
-}
 .right-btn:hover {
   background-color: var(--aside-hover-bg);
 }
