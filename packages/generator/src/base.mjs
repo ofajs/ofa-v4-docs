@@ -18,7 +18,26 @@ export class DirViewer extends Array {
   }
 
   async reload() {
-    const results = await fs.readdir(this.path);
+    let results;
+    try {
+      results = await fs.readdir(this.path);
+    } catch (err) {
+      // 确保目录存在
+      const paths = this.path.split("/");
+
+      let tartPath = "";
+      for (let e of paths) {
+        tartPath += e + "/";
+
+        const stat = await fs.stat(tartPath).catch(() => null);
+
+        if (!stat) {
+          await fs.mkdir(tartPath);
+        }
+      }
+
+      results = await fs.readdir(this.path);
+    }
 
     this.length = 0;
 
@@ -82,4 +101,15 @@ export async function readDir(path) {
   await viewer.opened;
 
   return viewer;
+}
+
+export async function write(path, content) {
+  const dirpath = path.replace(/(.+)\/(.+)/, "$1");
+  const name = path.replace(/(.+)\/(.+)/, "$2");
+
+  const viewer = new DirViewer(dirpath);
+
+  await viewer.opened;
+
+  return await viewer.write(name, content);
 }
