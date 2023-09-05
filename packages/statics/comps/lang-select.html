@@ -51,9 +51,11 @@
     </select>
   </div>
   <script>
+    import { lang } from "../data.mjs";
+
     export default {
       data: {
-        lang: location.pathname.replace(/\/(.+?)\/.+/, "$1"),
+        lang,
         options: [
           {
             name: "简体中文",

@@ -25,3 +25,5 @@ export const isDark = $.stanz({
 isDark.watch(() => {
   localStorage.isDark = isDark.value;
 });
+
+export const lang = location.pathname.replace(/\/(.+?)\/.+/, "$1");
