@@ -1,5 +1,6 @@
 <template page>
   <l-m src="../comps/doc-search.html"></l-m>
+  <l-m src="../comps/lang-select.html"></l-m>
   <link rel="stylesheet" href="../font/iconfont.css" />
   <style>
     :host {
@@ -32,12 +33,14 @@
       <div slot="mobile-aside" class="mobile-aside">
         <doc-aside slot="aside" :active-href="leftActiveUrl"> </doc-aside>
       </div>
-      <doc-search slot="right" style="margin-right: 16px"></doc-search>
       <a
         class="iconfont icon-github-fill github-link"
         slot="right"
         href="https://github.com/kirakiray/ofa.js"
       ></a>
+
+      <lang-select slot="right"></lang-select>
+      <doc-search slot="right" style="margin-right: 16px"></doc-search>
     </doc-header>
     <slot></slot>
   </doc-container>
