@@ -267,6 +267,7 @@
 
   <script>
     import { wrapSubstringWithSpan } from "../util.mjs";
+    import { lang } from "../data.mjs";
 
     const searchWorker = new Worker("/search-worker.js");
 
@@ -284,7 +285,7 @@
           showPannel(val) {
             if (val) {
               setTimeout(() => {
-                this.shadow.$("input").ele.focus();
+                this.shadow.$("input") && this.shadow.$("input").ele.focus();
               }, 300);
             }
           },
@@ -315,7 +316,10 @@
 
               this.loading = true;
 
-              searchWorker.postMessage({ searchText: this.stext, lang: "cn" });
+              searchWorker.postMessage({
+                searchText: this.stext,
+                lang,
+              });
             }, 200);
           },
           clickItem(data) {
