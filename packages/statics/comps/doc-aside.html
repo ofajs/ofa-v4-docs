@@ -32,7 +32,7 @@
           clearTimeout(this._timer);
           this._timer = setTimeout(() => {
             const target = this.shadow.$("d-item[active='']");
-            if (!isElementVisible(target.ele)) {
+            if (target && !isElementVisible(target.ele)) {
               target.ele.scrollIntoView();
             }
           }, 300);
