@@ -1,0 +1,12 @@
+```html
+<!-- template.html -->
+<style>
+[fontcolor="red"]{
+    color: red;
+}
+</style>
+
+<div attr:fontcolor="val">
+ I am text
+</div>
+```

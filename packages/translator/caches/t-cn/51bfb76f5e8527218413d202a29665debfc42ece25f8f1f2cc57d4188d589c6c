@@ -1,0 +1,1 @@
+在上面的例子中，我們通過 `$('<div style="color:red">I am text</div>')` 創建了一個新的 `div` 元素，並將其添加到了 `body` 中。

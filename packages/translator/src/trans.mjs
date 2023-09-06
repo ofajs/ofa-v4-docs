@@ -64,8 +64,10 @@ const init = async () => {
   }
 };
 
-setTimeout(init, 3000);
-setTimeout(() => {}, 1000000);
+init();
+
+// setTimeout(init, 3000);
+// setTimeout(() => {}, 1000000);
 
 // 获取所有的正文内容，并进行哈希匹配
 const getHashLineData = async (

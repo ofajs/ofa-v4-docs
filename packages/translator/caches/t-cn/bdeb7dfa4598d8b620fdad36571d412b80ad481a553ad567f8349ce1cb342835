@@ -1,0 +1,3 @@
+- `selector`: 選擇要綁定事件處理函數的元素。 
+- `eventName`: 要綁定的事件名稱。 
+- `eventHandler`: 要執行的事件處理函數。

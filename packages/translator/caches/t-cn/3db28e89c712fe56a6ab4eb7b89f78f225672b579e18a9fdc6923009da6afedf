@@ -1,0 +1,12 @@
+```html
+<button id="btn">Click Me</button>
+<script>
+  // 綁定點擊事件處理函數
+  $("#btn").on("click", () => {
+    alert("Button clicked!");
+  });
+
+  // 通過 emit 方法觸發按鈕的點擊事件
+  $("#btn").emit("click");
+</script>
+```

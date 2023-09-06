@@ -1,0 +1,1 @@
+在 ofa.js 中，組件生命周期是在特定時間點觸發的鉤子函數。這些鉤子函數讓你能更精細地控制和交互，ofa.js 有五個關鍵生命周期鉤子：`created`、`ready`、`watch`、`loaded`、`attached` 和 `detached`，分別在不同時刻觸發。

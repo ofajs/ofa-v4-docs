@@ -1,0 +1,7 @@
+```html
+<div id="example">Hello World</div>
+<script>
+    const $div = $('#example');
+    console.log($div.tag); // Output: "div"
+</script>
+```

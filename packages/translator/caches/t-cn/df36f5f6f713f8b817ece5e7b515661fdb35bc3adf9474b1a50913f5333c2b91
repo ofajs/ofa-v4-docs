@@ -1,0 +1,1 @@
+如果你使用的是 Visual Studio Code 編輯器，你可以簡單地安裝一個支持靜態服務器的插件。我們推薦使用 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 插件。

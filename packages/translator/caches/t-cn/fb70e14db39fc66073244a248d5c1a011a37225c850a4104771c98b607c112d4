@@ -1,0 +1,1 @@
+`load-module` 組件是一個定制的**聲明式加載器**庫，提供了強大的功能，可以擴展支持各種類型的文件，或者對 JavaScript 模塊進行中轉處理。它已經拆分成了一個獨立的項目，具體的使用文檔在 [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)。

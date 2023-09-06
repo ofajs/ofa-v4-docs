@@ -1,0 +1,1 @@
+在上面的示例中，首先通過 `$(".parent")` 選擇了具有 `parent` 類的父元素，然後使用 `$(".child")` 在該父元素內查找具有 `child` 類的子元素。然後修改了子元素的文本內容為 "Modified child element"。

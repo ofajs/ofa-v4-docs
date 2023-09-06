@@ -1,0 +1,1 @@
+邏輯代碼放在 js 文件內，這個 js 需要標識 `export const type = $.COMP;`，以通知頁面這是一個組件模塊。在這種拆分模式下，模塊代碼可以使用 `import` 等 ES Module 的標準語法。

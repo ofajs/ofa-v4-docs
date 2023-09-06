@@ -1,0 +1,1 @@
+在上述示例中，`{{username}}` 將會被組件的 `data` 中的 `username` 屬性值所替代，從而在界面上顯示出 "Welcome, JohnDoe!"。

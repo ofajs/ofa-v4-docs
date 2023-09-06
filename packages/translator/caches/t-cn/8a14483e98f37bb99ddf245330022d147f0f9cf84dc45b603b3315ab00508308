@@ -1,0 +1,37 @@
+```javascript
+// button-component.mjs
+export const type = $.COMP; // 這個必須優先定義，不能作為動態參數
+export const tag = "my-button";
+export const temp = "./my-button-template.html";
+
+export default async function ({ load, url, query }) {
+  console.log("url:", url); // 輸出當前模塊的文件名
+  console.log("query:", query); // 輸出當前模塊的 URL 參數轉成的對象
+
+  const asyncData = await load("./async-data.mjs"); // 使用 load 異步加載模塊
+  console.log("asyncData:", asyncData); // 輸出異步加載的模塊數據
+
+  return {
+    data: {
+      count: 0,
+    },
+    attrs: {
+      buttonText: "Click Me",
+    },
+    watch: {
+      count(newValue, { watchers }) {
+        let oldValue;
+        if (watchers) {
+          oldValue = watchers[0].oldValue;
+        }
+        console.log(`count changed from ${oldValue} to ${newValue}`);
+      },
+    },
+    proto: {
+      sayHello() {
+        alert("Hello Count:" + this.count);
+      },
+    },
+  };
+}
+```

@@ -1,0 +1,9 @@
+```html
+<!-- template.html -->
+<style>
+  button.active{
+    background-color: red;
+  }
+</style>
+<button class:active="isActive">Active Button</button>
+```

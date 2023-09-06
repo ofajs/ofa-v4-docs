@@ -1,0 +1,1 @@
+在上面的示例中，當你點擊提交按鈕 "Submit" 後，它會顯示 "Hello, {name}! Form submission prevented."，但不會觸發 "Form Submitted!" 的警報。這是因為我們在提交按鈕的點擊事件處理程序中調用了 `event.preventDefault()`，阻止了表單的提交默認行為。

@@ -1,0 +1,1 @@
+在 `home.html` 頁面中點擊 "GO TO HELP" 後，將平滑跳轉到 `help.html` 頁面，實現了客戶端渲染的平滑跳轉效果。

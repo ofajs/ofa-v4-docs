@@ -1,0 +1,9 @@
+```html
+<div id="myElement" style="color: blue; font-size: 18px;">Hello World</div>
+<script>
+  const myElement = $("#myElement");
+
+  // 修改元素的顏色樣式，同時保留其他樣式屬性不變
+  myElement.css = { ...myElement.css, color: 'red' };
+</script>
+```

@@ -1,0 +1,1 @@
+在上述示例中，`:text="greeting"` 將組件的 `data` 中的 `greeting` 屬性值綁定到 `<p>` 元素的文本內容上。`:value="inputValue"` 將組件的 `data` 中的 `inputValue` 屬性值綁定到 `<input>` 元素的 `value` 屬性上。對於自定義組件，`custom-prop` 是自定義組件的屬性名，它將組件的 `data` 中的 `customValue` 屬性值傳遞給自定義組件。

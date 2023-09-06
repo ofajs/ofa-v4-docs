@@ -1,0 +1,14 @@
+```html
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+<script>
+  // 查找所有 p 標簽元素
+  const allParagraphs = $.all("p");
+
+  // 修改所有 p 標簽元素的文本內容
+  allParagraphs.forEach((paragraph, index) => {
+    paragraph.text = `Modified Paragraph ${index + 1}`;
+  });
+</script>
+```

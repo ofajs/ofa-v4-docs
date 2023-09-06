@@ -1,0 +1,1 @@
+在上面的示例中，使用 `$.all("p")` 查找到頁面中的所有 `p` 標簽元素，並對它們進行了批量操作，將文本內容修改為 "Modified Paragraph 1"、"Modified Paragraph 2" 和 "Modified Paragraph 3"。

@@ -1,0 +1,15 @@
+```html
+<div class="parent">
+  <p>Hello World</p>
+  <div class="child">
+    <span>This is a child element</span>
+  </div>
+</div>
+<script>
+  // 直接查找符合條件的子元素
+  const childElement = $('div .child');
+
+  // 修改子元素的文本內容
+  childElement.text = "Modified child element";
+</script>
+```

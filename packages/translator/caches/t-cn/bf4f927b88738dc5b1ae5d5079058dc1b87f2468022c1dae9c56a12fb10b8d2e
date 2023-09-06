@@ -1,0 +1,10 @@
+```javascript
+// simple-button.mjs
+export const type = $.COMP;
+
+// 需要注冊的組件名，當沒有定義 tag 屬性時，注冊的組件名與文件名保持一致
+// export const tag = 'simple-button';
+
+// 組件模板的地址，當沒有定義時，默認載入和當前模塊同目錄下的和組件同名的 html 文件
+// export const temp = './simple-button.html';
+```

@@ -1,0 +1,1 @@
+生命周期鉤子函數提供了在組件不同階段執行代碼的機會。在 `ofa.js` 中，有五個主要的生命周期鉤子函數，它們分別是：`created`、`ready`、`watch`、`attached` 和 `detached`。

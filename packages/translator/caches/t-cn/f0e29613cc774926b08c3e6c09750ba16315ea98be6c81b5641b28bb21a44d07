@@ -1,0 +1,6 @@
+```javascript
+const myComponent = $("my-component"); // 獲取組件實例
+const shadowContainer = myComponent.shadow; // 獲取組件的 Shadow DOM 容器
+
+$("my-component").shadow.$("h1").css.color = 'red' // 將 Shadow DOM 的 h1 改為紅色
+```

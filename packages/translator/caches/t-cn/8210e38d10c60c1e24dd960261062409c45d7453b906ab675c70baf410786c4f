@@ -1,0 +1,16 @@
+```html
+<!-- layout-page.html -->
+<template page>
+  <style>
+    /* 設置容器元素為 relative 定位 */
+    .parent-container {
+      position: relative;
+    }
+  </style>
+  
+  <!-- 設置容器元素，用於插入子頁面 -->
+  <div class="parent-container">
+    <slot></slot>
+  </div>
+</template>
+```

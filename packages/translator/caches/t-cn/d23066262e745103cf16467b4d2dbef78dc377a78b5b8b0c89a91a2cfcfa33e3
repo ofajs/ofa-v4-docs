@@ -1,0 +1,1 @@
+在上述示例中，`attr:fontcolor="val"` 會將宿主組件的 `val` 屬性綁定到 `<div>` 元素的 `fontcolor` attribute上。
