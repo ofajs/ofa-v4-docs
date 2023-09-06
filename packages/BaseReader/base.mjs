@@ -1,12 +1,53 @@
 import fs from "fs/promises";
 
 export default class BaseReader {
-  constructor(path) {
+  constructor(path, recursive) {
+    let resolve, reject;
+
     Object.defineProperties(this, {
       path: {
         value: path,
       },
+      loaded: {
+        value: new Promise((res, rej) => {
+          resolve = res;
+          reject = rej;
+        }),
+      },
     });
+
+    (async () => {
+      const stat = await fs.stat(path).catch(() => null);
+
+      if (stat) {
+        resolve();
+        return;
+      }
+
+      if (recursive) {
+        // 确保目录存在
+        const paths = path.split("/");
+
+        let tartPath = "";
+        for (let e of paths) {
+          tartPath += e + "/";
+
+          const stat2 = await fs.stat(tartPath).catch(() => null);
+
+          if (!stat2) {
+            await fs.mkdir(tartPath);
+          }
+        }
+
+        resolve();
+        return;
+      }
+
+      const desc = `Directory does not exist: ${path}`;
+      console.log("Directory does not exist, reader is invalid", this);
+      reject(desc);
+      throw new Error(desc);
+    })();
   }
 
   get name() {
@@ -18,16 +59,19 @@ export default class BaseReader {
     return new BaseReader(this.path.replace(/(.+)\/.+/, "$1"));
   }
 
-  names() {
+  async names() {
+    await this.loaded;
     return fs.readdir(this.path);
   }
 
   async stat(name) {
+    await this.loaded;
     return await fs.stat(`${this.path}/${name}`).catch(() => null);
   }
 
   // 读取文件或目录
   async read(name, options) {
+    await this.loaded;
     const childPath = `${this.path}/${name}`;
     const childStats = await this.stat(name);
 
@@ -52,12 +96,14 @@ export default class BaseReader {
 
   // 写入文件
   async write(name, content, binary = "utf-8") {
+    await this.loaded;
     await fs.writeFile(`${this.path}/${name}`, content, binary);
 
     return true;
   }
   // 写入目录
   async mkdir(name, recursive = false) {
+    await this.loaded;
     const path = `${this.path}/${name}`;
     const stat = await this.stat(name);
 
@@ -76,6 +122,7 @@ export default class BaseReader {
 
   // 剪切或更换名字
   async move(name, newName, targetReader = this) {
+    await this.loaded;
     if (targetReader === this && name === newName) {
       return true;
     }
@@ -109,6 +156,7 @@ export default class BaseReader {
 
   // 删除文件或目录
   async remove(name) {
+    await this.loaded;
     await fs.rm(`${this.path}/${name}`, { recursive: true });
 
     return true;

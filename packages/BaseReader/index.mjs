@@ -11,7 +11,7 @@ export async function write(path, content) {
   const dirpath = path.replace(/(.+)\/(.+)/, "$1");
   const name = path.replace(/(.+)\/(.+)/, "$2");
 
-  const reader = new BaseReader(dirpath);
+  const reader = new BaseReader(dirpath, true);
 
   return await reader.write(name, content);
 }

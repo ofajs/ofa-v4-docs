@@ -1,10 +1,11 @@
 import crypto from "crypto";
 import { marked } from "marked";
-import { readDir, write } from "../../BaseReader/index.mjs";
+import { readDir } from "../../BaseReader/index.mjs";
 import setting from "./setting.mjs";
 import fanyi from "./fanyi.mjs";
+import { getHashLineData } from "./util.mjs";
 
-const { entry, caches, needs } = setting;
+const { entry, mainLang, caches, needs } = setting;
 
 const init = async () => {
   const cachesReader = await readDir(caches);
@@ -15,7 +16,9 @@ const init = async () => {
     const names = await langCaches.names();
 
     // 将原文转换成段落哈希和哈希文章
-    const { hashObj } = await getHashLineData(await readDir(entry));
+    const { hashObj } = await getHashLineData(
+      await readDir(`${entry}/${mainLang}`)
+    );
 
     const hashEntries = Object.entries(hashObj);
 
@@ -68,47 +71,3 @@ init();
 
 // setTimeout(init, 3000);
 // setTimeout(() => {}, 1000000);
-
-// 获取所有的正文内容，并进行哈希匹配
-const getHashLineData = async (
-  inputer,
-  path = "",
-  hashObj = {},
-  articles = {}
-) => {
-  const names = await inputer.names();
-  for (let name of names) {
-    const data = await inputer.read(name);
-
-    if (data.name) {
-      await getHashLineData(data, `${path}/${name}`, hashObj, articles);
-      continue;
-    }
-
-    if (!/\.md$/.test(name)) {
-      continue;
-    }
-
-    // 去除无用行数
-    const mdDatas = marked.lexer(data).filter((e) => e.type !== "space");
-
-    const articleHash = [];
-
-    for (let e of mdDatas) {
-      const { raw } = e;
-      const hash = calculateHash(raw);
-      hashObj[hash] = raw;
-      articleHash.push(hash);
-    }
-
-    articles[`${path}/${name}`] = articleHash;
-  }
-
-  return { hashObj, articles };
-};
-
-function calculateHash(str) {
-  const hash = crypto.createHash("sha256");
-  hash.update(str);
-  return hash.digest("hex");
-}
