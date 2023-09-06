@@ -1,0 +1,1 @@
+在上面的示例中，當你點擊按鈕 "Click Me" 後，它會顯示 "Button Clicked!"，但不會觸發 "Inner Div Clicked!" 和 "Outer Div Clicked!"。這是因為我們在按鈕的點擊事件處理程序中調用了 `event.stopPropagation()`，阻止了事件的進一步傳播。

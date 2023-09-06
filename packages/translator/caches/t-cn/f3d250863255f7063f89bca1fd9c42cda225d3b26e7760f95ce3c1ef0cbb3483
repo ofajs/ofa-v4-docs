@@ -1,0 +1,1 @@
+在組件文件中，首先添加一個 `<template component></template>` 元素。將組件需要渲染的內容放置在這個 `template` 元素內。最終，這些內容將被渲染到組件的 Shadow DOM 內，Shadow DOM 與外部環境隔離，以防止汙染外部環境。

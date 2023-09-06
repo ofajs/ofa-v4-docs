@@ -1,0 +1,1 @@
+在上面的示例中，首先使用 `$(".container")` 查找到具有 `container` 類的元素，然後通過 `.all(".item")` 在該容器內查找所有帶有 `item` 類的子元素，並對它們進行了批量操作，將文本內容修改為 "Modified Item 1"、"Modified Item 2" 和 "Modified Item 3"。

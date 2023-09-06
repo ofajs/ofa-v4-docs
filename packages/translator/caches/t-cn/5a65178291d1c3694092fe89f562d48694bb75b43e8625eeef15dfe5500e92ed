@@ -1,0 +1,5 @@
+```html
+<!-- lifecycle-demo-template.html -->
+<l-m src="../simple-button/simple-button.mjs"></l-m>
+<simple-button>Click Me ({{count}})</simple-button>
+```

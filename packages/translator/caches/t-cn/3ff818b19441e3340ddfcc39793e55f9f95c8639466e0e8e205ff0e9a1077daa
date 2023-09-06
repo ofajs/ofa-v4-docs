@@ -1,0 +1,27 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent and Parents Attributes</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <div>
+    <span>
+      <a id="example">Hello World</a>
+    </span>
+  </div>
+  <script>
+    const $a = $('#example');
+
+    const $parentSpan = $a.parent;
+    console.log($parentSpan.tag); // Output: "span"
+
+    const $parentsArray = $a.parents;
+    console.log($parentsArray.map($ele => $ele.tag)); // Output: ["span", "div", "body", "html"]
+  </script>
+</body>
+</html>
+```

@@ -1,0 +1,23 @@
+```html
+<template component>
+  comp1 =>
+  <input type="text" sync:value="obj.val" />
+  <script>
+    export const tag = "comp-three";
+
+    export default async function ({ load }) {
+      const { data } = await load("./data.mjs");
+
+      return {
+        data: {
+        //   obj: data // ❌ 這種操作是錯誤的，直接設置數據，無法回收
+          obj: {},
+        },
+        ready() {
+          this.obj = data; // ❌ 在 ready 生命周期中設置，無法確定何時清空，可能會導致內存泄漏。最安全的方法是在 attached 生命周期內設置，在 detached 後刪除
+        },
+      };
+    }
+  </script>
+</template>
+```

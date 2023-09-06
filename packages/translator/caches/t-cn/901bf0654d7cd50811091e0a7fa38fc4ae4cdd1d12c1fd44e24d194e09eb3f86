@@ -1,0 +1,11 @@
+```html
+<div>
+    <span>First</span>
+    <span>Second</span>
+    <span id="target">Third</span>
+</div>
+<script>
+    const $targetSpan = $('#target');
+    console.log($targetSpan.index); // Output: 2
+</script>
+```

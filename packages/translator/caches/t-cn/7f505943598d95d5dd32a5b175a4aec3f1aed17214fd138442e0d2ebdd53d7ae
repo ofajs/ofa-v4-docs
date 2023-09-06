@@ -1,0 +1,1 @@
+初始化 `formData` 時，需要將自定義組件的選擇器特征添加到參數中（盡管 `formData` 方法默認的參數為 `"input,select,textarea"`）。這樣，`formData` 就能夠與自定義組件進行聯動。

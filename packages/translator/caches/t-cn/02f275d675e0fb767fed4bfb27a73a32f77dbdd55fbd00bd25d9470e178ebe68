@@ -1,0 +1,13 @@
+```javascript
+// MyComponent.mjs
+export default () => {
+  return {
+    attached(){
+      const appTag = this.app;
+
+      const currentPage = appTag.current;
+      console.log(`當前激活的頁面是：${currentPage}`);
+    }
+  };
+}
+```

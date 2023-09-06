@@ -1,0 +1,1 @@
+可以使用 `$ele.css = 'color:red;...'` 的方式來設置元素的 style，其中 `'color:red;...'` 是一個包含 CSS 樣式規則的字符串。

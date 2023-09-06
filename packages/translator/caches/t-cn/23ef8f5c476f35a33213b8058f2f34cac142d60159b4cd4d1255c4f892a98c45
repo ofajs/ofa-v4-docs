@@ -1,0 +1,43 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList Demo</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+    <script src="ofa.js"></script>
+  </head>
+  <body>
+    <h2>classList Demo</h2>
+    <div id="box" class="box">I am a box</div>
+    <br />
+    <button id="btnAdd">Add Highlight</button>
+    <button id="btnRemove">Remove Highlight</button>
+    <button id="btnToggle">Toggle Highlight</button>
+
+    <script>
+      const boxElement = $('#box');
+      const btnAdd = $('#btnAdd');
+      const btnRemove = $('#btnRemove');
+      const btnToggle = $('#btnToggle');
+
+      btnAdd.on('click', () => {
+        boxElement.classList.add('highlight');
+      });
+
+      btnRemove.on('click', () => {
+        boxElement.classList.remove('highlight');
+      });
+
+      btnToggle.on('click', () => {
+        boxElement.classList.toggle('highlight');
+      });
+    </script>
+  </body>
+</html>
+```

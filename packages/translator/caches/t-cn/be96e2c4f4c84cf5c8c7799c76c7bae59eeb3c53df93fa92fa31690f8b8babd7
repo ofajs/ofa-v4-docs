@@ -1,0 +1,6 @@
+```javascript
+// 父頁面的頁面模塊
+export const routerChange = (current, type) => {
+  console.log(`路由切換：當前頁面為 ${current.src}，切換方式為 ${type}`);
+};
+```

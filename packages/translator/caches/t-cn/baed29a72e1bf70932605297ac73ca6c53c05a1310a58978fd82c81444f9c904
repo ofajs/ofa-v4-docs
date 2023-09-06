@@ -1,0 +1,4 @@
+```html
+<!-- template.html -->
+<button on:click="increaseCount">Increase Count</button>
+```

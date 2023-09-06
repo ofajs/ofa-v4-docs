@@ -1,0 +1,1 @@
+另一種方式是使用 `page._rendered` 屬性，它是一個 Promise。當頁面加載完成後，這個 Promise 會進入 `resolve` 狀態。你可以通過 `await page._rendered` 來等待頁面加載完成，然後執行相應的操作。

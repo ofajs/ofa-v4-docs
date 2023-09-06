@@ -1,0 +1,1 @@
+SCSR 的全稱是 Static Client-Side Rendering，又稱為靜態客戶端渲染。它是 CSR（Client-Side Rendering）的一種變種，在保留了 CSR 用戶體驗的基礎上，還能夠讓頁面在靜態狀態下被搜索引擎爬取。

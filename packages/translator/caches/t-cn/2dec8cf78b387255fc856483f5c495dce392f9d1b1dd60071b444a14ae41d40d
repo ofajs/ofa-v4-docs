@@ -1,0 +1,1 @@
+案例中通過 `<l-m src="./comp-two.html"></l-m>` 引入了名為 CompTwo 的嵌套組件。

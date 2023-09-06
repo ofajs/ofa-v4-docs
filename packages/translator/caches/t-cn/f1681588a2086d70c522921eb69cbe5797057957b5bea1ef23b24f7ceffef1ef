@@ -1,0 +1,7 @@
+```javascript
+async function doSomethingAfterPageLoad() {
+  await page._rendered;
+  // 頁面已加載完成
+  // 執行你的操作
+}
+```

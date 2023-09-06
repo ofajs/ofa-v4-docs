@@ -1,0 +1,5 @@
+```javascript
+// button-component.mjs
+export const type = $.COMP;
+export const tag = "my-button"; // 將組件名注冊為 'my-button'
+```

@@ -1,0 +1,1 @@
+引入了 `ofa.js` 後，全局作用域中將注冊 `$` 符號。通過 `$('xxx')` 來選擇符合條件的第一個元素，其中 `xxx` 是標準的 [CSS 選擇器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) 內容。
