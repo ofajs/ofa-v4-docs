@@ -1,12 +1,12 @@
 import path from "path";
 import { fileURLToPath } from "url";
-import BaseReader from "./index.mjs";
+import BaseReader from "./base.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const entryDir = path.resolve(__filename, "../test");
 console.log(entryDir);
 
-const init = async () => {
+const testBase = async () => {
   const reader = new BaseReader(entryDir);
 
   console.log("parent: ", reader.parent);
@@ -32,7 +32,7 @@ const init = async () => {
   await haha.write("h1", "hahahahhaha");
 
   // 目录重命名
-  console.dir("fff2:", await reader.move("fff", "fff2"));
+  console.log("fff2:", await reader.move("fff", "fff2"));
 
   setTimeout(() => {
     reader.remove("fff2", true);
@@ -40,4 +40,4 @@ const init = async () => {
 };
 
 setTimeout(() => {}, 10000000);
-setTimeout(init, 3000);
+setTimeout(testBase, 3000);
