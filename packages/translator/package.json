@@ -12,7 +12,7 @@
     "dev": "nodemon --inspect src/main.mjs",
     "build": "node src/main.mjs",
     "trans": "node src/trans.mjs",
-    "devt": "nodemon --ins src/trans.mjs",
+    "devt": "nodemon --inspect src/trans.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yao",
