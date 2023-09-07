@@ -1,0 +1,1 @@
+In the example, we defined the `comp-two` component, which internally uses the `inject-host` component to inject styles. This allows us to style the elements inside the `comp-two` component using the injected styles without affecting other components.

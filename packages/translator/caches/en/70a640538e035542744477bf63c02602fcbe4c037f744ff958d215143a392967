@@ -1,0 +1,1 @@
+The following example demonstrates how to use the `sync` attribute in a component to achieve two-way data binding between an input field and the data model:

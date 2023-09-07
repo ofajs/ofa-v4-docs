@@ -1,0 +1,3 @@
+- By adding `<style>` tags inside `inject-host`, we can define specific styles for the component. These styles will only affect the elements of the current component and will not spread to other components.
+- When injecting styles, it is important to avoid using overly generic selectors to prevent affecting the styles of other components. Specificity and uniqueness of selectors should be maintained.
+- `inject-host` can also inject external style sheet files using the `<link rel="stylesheet" href="target/style.css">` approach.

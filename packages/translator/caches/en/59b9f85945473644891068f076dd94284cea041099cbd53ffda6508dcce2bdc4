@@ -1,0 +1,1 @@
+The `proto` parameter is used to define the component's own methods, which can be used internally within the component or externally by selecting the component and running the methods.

@@ -1,0 +1,3 @@
+- **$data**: Represents the data of the fill item. By manipulating $data, you can access or modify the data of each fill item.
+- **$index**: Represents the index of the current data item in the data collection.
+- **$host**: Represents the current component itself. If you want to get the component's data or call the component's methods, you need to use $host to access the component.

@@ -1,0 +1,1 @@
+When initializing `formData`, you need to add the selector feature of the custom component to the parameters (although the default parameter of the `formData` method is '"input,select,textarea"'). This way, `formData` can interact with custom components.

@@ -1,0 +1,1 @@
+In this example, we select the <button> element using `$` and bind the `click` event using the `on` method. When the button is clicked, the callback function is triggered and the text content of the `target` element is changed to "Hello, world!".

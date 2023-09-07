@@ -1,0 +1,1 @@
+Since the data is shared, it is necessary to ensure that the data is reclaimed at the appropriate time to avoid memory leaks.

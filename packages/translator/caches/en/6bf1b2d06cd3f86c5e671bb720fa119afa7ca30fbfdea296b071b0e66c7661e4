@@ -1,0 +1,1 @@
+Lifecycle hooks provide an opportunity to execute code at different stages of a component. In `ofa.js`, there are five main lifecycle hooks: `created`, `ready`, `watch`, `attached`, and `detached`.
