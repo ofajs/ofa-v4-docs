@@ -69,7 +69,7 @@ const init = async () => {
   }
 };
 
-// init();
+init();
 
-setTimeout(init, 3000);
+// setTimeout(init, 3000);
 // setTimeout(() => {}, 1000000);
