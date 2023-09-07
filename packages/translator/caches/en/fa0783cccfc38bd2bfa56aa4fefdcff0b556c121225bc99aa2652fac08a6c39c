@@ -1,0 +1,19 @@
+```html
+<template page>
+  <div class="container">
+    <button on:click="toabout">Go to About Page</button>
+  </div>
+
+  <script>
+    export default async ({ query }) => {
+      return {
+        proto: {
+          toabout() {
+            this.goto("./about.mjs");
+          },
+        },
+      };
+    };
+  </script>
+</template>
+```

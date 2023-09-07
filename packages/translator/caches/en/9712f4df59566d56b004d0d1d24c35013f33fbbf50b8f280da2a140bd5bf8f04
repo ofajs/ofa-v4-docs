@@ -1,0 +1,1 @@
+When using `x-fill` for fill rendering, you just need to pass the corresponding template name to the `name` attribute to render the content of the separate template. In addition, fill rendering also supports recursive filling, which means you can continue to use the same template name inside the template for nested filling.

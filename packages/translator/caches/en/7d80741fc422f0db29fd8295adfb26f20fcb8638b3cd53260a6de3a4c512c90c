@@ -1,0 +1,1 @@
+It should be noted that the component's route state is maintained within the application, but the route data is not bound to the current browser tab. This allows for easy navigation and transitions between pages in the application.

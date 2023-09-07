@@ -1,5 +1,3 @@
-import crypto from "crypto";
-import { marked } from "marked";
 import { readDir } from "../../BaseReader/index.mjs";
 import setting from "./setting.mjs";
 import fanyi from "./fanyi.mjs";
@@ -31,17 +29,20 @@ const init = async () => {
 
     // 将所有文案进行分组，保持一组的文案在1k内
     // 确保每次翻译的字符串在 1k 左右
-    let cacheObj = {};
+    let cacheObj = {},
+      cacheCount = 0;
     for (let i = 0, len = needTrans.length; i < len; i++) {
       const [hash, content] = needTrans[i];
       cacheObj[hash] = content;
 
       // 判断是否超过1k
       const nowLen = JSON.stringify(Object.values(cacheObj));
+      cacheCount++;
 
       if (nowLen.length > 1000 || i === len - 1) {
         const ens = Object.entries(cacheObj);
 
+        console.log(`开始翻译 ${lang} ：${count} - ${count + cacheCount}`);
         const afterArr = await fanyi(
           ens.map((e) => e[1]),
           lang
@@ -57,9 +58,10 @@ const init = async () => {
         );
 
         cacheObj = {};
+        cacheCount = 0;
 
         console.clear();
-        console.log(`翻译 ${lang} 中：${count} / ${total}`);
+        console.log(`已翻译 ${lang} ：${count} / ${total}`);
       }
     }
 

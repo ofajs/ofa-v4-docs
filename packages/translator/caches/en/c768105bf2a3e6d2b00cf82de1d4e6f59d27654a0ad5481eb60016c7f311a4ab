@@ -1,0 +1,1 @@
+First, create a file named `simple-button.html`, which uses the `<template>` tag and adds the `component` attribute to identify it as a component.

@@ -1,0 +1,6 @@
+- **home**: The homepage of the application, which is the page displayed when initially loaded.
+- **loading**: The loading content displayed before the module is fully loaded when clicking on a page transition. You can return a string as the loading content.
+- **pageAnime**: The animation effect during page transitions, using an object that contains CSS style attributes.
+  - **current**: Represents the style when the page is the current page.
+  - **next**: Represents the style when the page is not yet entered.
+  - **previous**: Represents the style when the page is about to exit.

@@ -1,0 +1,1 @@
+Note: The `emit` method does not simulate a mouse click or any other actual event. It only directly invokes the bound event handler functions. Therefore, if you want to trigger the execution of an event in specific circumstances, you can use the `emit` method.

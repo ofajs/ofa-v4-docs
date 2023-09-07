@@ -1,0 +1,13 @@
+```html
+<div id="myElement" style="color: blue; font-size: 18px;">Hello World</div>
+<script>
+  // Get the color style of the element
+  const myElement = $("#myElement");
+  const colorStyle = myElement.css.color;
+  console.log(colorStyle); // Output: "blue"
+
+  // Get the font size style of the element
+  const fontSizeStyle = myElement.css.fontSize;
+  console.log(fontSizeStyle); // Output: "18px"
+</script>
+```

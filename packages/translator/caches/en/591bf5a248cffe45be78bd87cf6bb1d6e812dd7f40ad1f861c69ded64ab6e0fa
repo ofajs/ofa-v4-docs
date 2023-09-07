@@ -1,0 +1,1 @@
+By using the form of `sync:xxx='yyy'`, you can achieve two-way data binding. This keeps the attribute `xxx` of the target element in sync with the property `yyy` of the host component, so that changes in the target attribute will be reflected in the host property, and changes in the host property will also be synced to the target attribute.

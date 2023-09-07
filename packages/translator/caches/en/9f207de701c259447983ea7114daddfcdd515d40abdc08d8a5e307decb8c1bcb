@@ -1,0 +1,1 @@
+The `xxx` after `on:click="xxx"` can be the method name defined within the component or a function expression. If using a function expression, the `this` keyword does not need to be explicitly written, as the variable scope will be automatically bound to the component itself.

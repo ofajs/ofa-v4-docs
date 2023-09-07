@@ -1,0 +1,3 @@
+- `selector`: The element to remove the event handler from.
+- `eventName`: The event name to remove.
+- `eventHandler`: The event handler to remove.

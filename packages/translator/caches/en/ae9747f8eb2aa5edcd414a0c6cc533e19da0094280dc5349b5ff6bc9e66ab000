@@ -1,0 +1,1 @@
+In the example above, the application tag was obtained by using the selector `.app`, and then the current active page address was accessed through the `app.current` property.

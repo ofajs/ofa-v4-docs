@@ -1,0 +1,1 @@
+Through two-way data binding, you can easily establish a connection between the user interface and the data model, so that changes in the data can be automatically reflected in the interface, and user input on the interface can immediately affect the data model.

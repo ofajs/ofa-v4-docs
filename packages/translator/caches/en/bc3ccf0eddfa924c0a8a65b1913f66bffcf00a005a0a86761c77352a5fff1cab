@@ -1,0 +1,1 @@
+Note: The property names in the `dataset` object are converted to camel case, excluding the `"data-"` part. For example, `data-info` becomes `dataset.info`. If you want to set a `data-*` attribute, you can also achieve it through the `dataset` object.

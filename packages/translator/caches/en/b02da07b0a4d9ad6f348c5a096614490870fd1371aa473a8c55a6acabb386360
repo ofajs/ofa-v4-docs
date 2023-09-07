@@ -1,0 +1,1 @@
+When you bind an event, sometimes you may want to stop the event from further propagation (bubbling) or cancel the default behavior of the event. Below we will explain how to stop bubbling and cancel default events after the event is triggered.

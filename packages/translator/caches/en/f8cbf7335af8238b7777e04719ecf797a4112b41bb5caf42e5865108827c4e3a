@@ -1,0 +1,1 @@
+Due to the isolation of Web Components, it is difficult to directly modify the styles of elements inside component slots. To address this issue, ofa.js provides a component called `inject-host`, which injects styles into the host layer to configure the appearance of the component more flexibly.

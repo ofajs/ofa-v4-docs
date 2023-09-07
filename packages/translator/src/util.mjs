@@ -1,3 +1,6 @@
+import crypto from "crypto";
+import { marked } from "marked";
+
 // 获取所有的正文内容，并进行哈希匹配
 export const getHashLineData = async (
   inputer,

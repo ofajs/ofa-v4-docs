@@ -1,0 +1,38 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siblings Attributes</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <div>
+    <span>Zero</span>
+    <span>First</span>
+    <span id="example">Second</span>
+    <span>Third</span>
+    <span>Four</span>
+  </div>
+  <script>
+    const $span = $('#example');
+
+    const $nextSibling = $span.next;
+    console.log($nextSibling.tag); // Output: "span"
+
+    const $nextSiblingsArray = $span.nexts;
+    console.log($nextSiblingsArray.map($ele => $ele.text)) // Output: ["Third", "Four"]
+
+    const $prevSibling = $span.prev;
+    console.log($prevSibling.tag); // Output: "span"
+
+    const $prevSiblingsArray = $span.prevs;
+    console.log($prevSiblingsArray.map($ele => $ele.text)) // Output: ["Zero", "First"]
+
+    const $siblings = $span.siblings;
+    console.log($siblings.map($ele => $ele.text)) // Output: ["Zero", "First", "Third", "Four"]
+  </script>
+</body>
+</html>
+```

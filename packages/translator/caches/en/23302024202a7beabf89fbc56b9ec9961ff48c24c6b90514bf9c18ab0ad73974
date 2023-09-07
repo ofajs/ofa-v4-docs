@@ -1,0 +1,1 @@
+When the `o-page` component is inside the `o-app` component, you can use the `<a>` tag with the `olink` attribute to achieve page redirection. This redirection will not affect the current page, but will only navigate within the `o-app` component, similar to using `<iframe>`.

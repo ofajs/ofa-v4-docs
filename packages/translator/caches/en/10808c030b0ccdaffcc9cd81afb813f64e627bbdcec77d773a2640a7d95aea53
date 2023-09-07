@@ -1,0 +1,1 @@
+You can also use asynchronous functions to define the 'default' data in order to dynamically return the registration parameters of the component.

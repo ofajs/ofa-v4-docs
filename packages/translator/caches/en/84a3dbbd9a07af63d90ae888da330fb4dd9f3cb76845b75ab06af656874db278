@@ -1,0 +1,1 @@
+`x-if` component is used to dynamically render content based on conditions. It accepts a `value` attribute to determine whether to render its child elements. If the `value` is `true`, the child elements will be rendered; otherwise, they will not be rendered.

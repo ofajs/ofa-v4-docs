@@ -58,6 +58,10 @@
         lang,
         options: [
           {
+            name: "English",
+            value: "en",
+          },
+          {
             name: "简体中文",
             value: "cn",
           },
@@ -75,7 +79,31 @@
             /\/.+?\/(.+)/,
             "$1"
           )}`;
+
+          localStorage.__userlang = val;
         },
+      },
+      ready() {
+        let userLang = localStorage.__userlang;
+
+        if (!userLang) {
+          userLang = "en";
+          const localLang = navigator.language || navigator.userLanguage;
+
+          if (/^zh\-/.test(localLang)) {
+            if (localLang === "zh-CN") {
+              userLang = "cn";
+            } else {
+              userLang = "t-cn";
+            }
+          }
+
+          if (lang !== userLang) {
+            this.changeLang({ target: { value: userLang } });
+          }
+
+          localStorage.__userlang = userLang;
+        }
       },
     };
   </script>

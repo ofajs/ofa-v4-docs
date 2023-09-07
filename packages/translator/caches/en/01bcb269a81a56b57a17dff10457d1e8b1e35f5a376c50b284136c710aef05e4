@@ -1,0 +1,1 @@
+`$('xxx xxxx')` searches for elements that match the second selector condition in the global scope, and then finds elements that match the first selector condition within those elements. This allows for directly finding the child element that meets the conditions.

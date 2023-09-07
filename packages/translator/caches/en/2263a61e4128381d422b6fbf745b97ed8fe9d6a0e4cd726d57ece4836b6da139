@@ -1,0 +1,1 @@
+Under normal circumstances, we recommend using the direct reference method to add ofa.js, while the use of npm is used to be compatible with frameworks like React and Vue.

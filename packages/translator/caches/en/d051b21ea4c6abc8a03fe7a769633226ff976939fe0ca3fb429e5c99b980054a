@@ -1,0 +1,1 @@
+The `tag` property is used to get the lowercase tag name of the current element, similar to the `tagName` property of DOM elements.

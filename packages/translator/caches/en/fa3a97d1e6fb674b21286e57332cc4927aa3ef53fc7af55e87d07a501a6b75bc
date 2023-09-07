@@ -1,0 +1,1 @@
+Although **ofa.js** cannot directly use components developed with frameworks like Vue and React, components developed based on **ofa.js** can be used by Vue and React, providing greater flexibility and extensibility for developers using different technology stacks.

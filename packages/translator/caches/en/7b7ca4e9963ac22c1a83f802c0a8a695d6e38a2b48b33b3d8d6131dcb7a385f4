@@ -1,0 +1,1 @@
+In the example above, first use `$(".container")` to find elements with the class `container`, then use `.all(".item")` to find all child elements with the class `item` within that container, and perform batch operations on them, modifying the text content to "Modified Item 1", "Modified Item 2", and "Modified Item 3".

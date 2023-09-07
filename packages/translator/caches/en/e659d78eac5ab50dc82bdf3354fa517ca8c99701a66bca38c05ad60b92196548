@@ -1,0 +1,1 @@
+Using the `$` instance, we can directly use array methods to manipulate child elements, such as `push` and `pop`:

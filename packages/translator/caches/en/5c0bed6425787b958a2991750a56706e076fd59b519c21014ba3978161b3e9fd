@@ -1,0 +1,1 @@
+With `ofa.js`, you can easily develop custom form element components with standard form features. Just add a `value` attribute and set the `name` attribute for your custom component, and your homemade component can be used as a standard form element. By updating the `value` property of the component, you can interact with the form element.

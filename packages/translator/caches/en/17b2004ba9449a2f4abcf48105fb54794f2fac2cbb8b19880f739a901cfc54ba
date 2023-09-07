@@ -1,0 +1,1 @@
+The template of the parent page container needs to set a `<slot>` element so that the sub-page can be inserted into the specified position of the parent page. At the same time, make sure that the container element of the `<slot>` element is set to `position: relative`, which is very important because the sub-page will be absolutely positioned within the parent page container.

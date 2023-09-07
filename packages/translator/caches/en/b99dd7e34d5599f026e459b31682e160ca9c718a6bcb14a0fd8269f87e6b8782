@@ -1,0 +1,1 @@
+In the above example, we obtained instances of '$' for all 'p' elements and used the 'push' method to add a new 'div' element as a child element, and then used the 'pop' method to remove the last child element.
