@@ -1,0 +1,1 @@
+You can modify a specific style property of an element without affecting other properties by using `$ele.css = {...$ele.css, color:'red'}`. This allows you to modify only one property without rewriting the entire style.

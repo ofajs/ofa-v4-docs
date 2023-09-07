@@ -1,0 +1,2 @@
+- The `parent` attribute is used to get the direct parent element of the current element. 
+- The `parents` attribute is used to get an array of all ancestor elements of the current element (including the parent's parent, the parent's parent's parent, and so on).

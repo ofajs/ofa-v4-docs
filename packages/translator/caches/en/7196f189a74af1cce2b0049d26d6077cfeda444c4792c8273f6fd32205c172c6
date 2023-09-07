@@ -1,0 +1,1 @@
+`temp` is a string type property used to define the address of the component template. When `temp` is not defined, it defaults to loading an HTML file with the same name as the component in the same directory as the current module.

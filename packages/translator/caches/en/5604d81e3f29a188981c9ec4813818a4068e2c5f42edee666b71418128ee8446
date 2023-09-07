@@ -1,0 +1,1 @@
+`watch` is an object type property used to listen for changes in `data`. The listener function is placed here. Once registered successfully, the listener function will be immediately executed.

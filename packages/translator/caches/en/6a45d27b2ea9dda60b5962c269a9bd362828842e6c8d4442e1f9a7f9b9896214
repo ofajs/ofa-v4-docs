@@ -1,0 +1,1 @@
+In the above example, the `routerChange` function takes two parameters: `current` represents the current page address, and `type` represents the type of navigation. When the page undergoes a router change, this function is triggered and outputs the corresponding information.

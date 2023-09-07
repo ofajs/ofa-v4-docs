@@ -1,0 +1,1 @@
+Using the form `class:xxx="yyy"`, you can dynamically add or remove class names to the target element based on the property value of the host component. When the host component's `yyy` property is `true`, the target element will add the class name `xxx`; otherwise, it will remove that class name.

@@ -1,0 +1,5 @@
+```javascript
+const myElement = $('#myElement');
+const info = myElement.data.info;
+console.log(info); // Output: "some information"
+```

@@ -1,0 +1,1 @@
+Micro Frontends is a front-end architecture pattern designed to help teams better build and maintain large, complex front-end applications. It draws on the ideas of microservices architecture, dividing front-end applications into smaller independent parts, each of which can be developed, tested, and deployed by different teams.

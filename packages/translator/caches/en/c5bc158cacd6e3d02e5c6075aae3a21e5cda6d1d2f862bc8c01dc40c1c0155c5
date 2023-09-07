@@ -1,0 +1,1 @@
+`attached` lifecycle hook is triggered when the component is added to the document. In this stage, it is suitable for obtaining size-related information of the component's elements, performing data binding, and global event operations.

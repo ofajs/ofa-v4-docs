@@ -1,0 +1,1 @@
+Create a single-file page module, similar to creating a component module, using the '<template page>' tag to wrap the template code of the page. Inside this tag, you can freely use template syntax to interact with other components or page modules.

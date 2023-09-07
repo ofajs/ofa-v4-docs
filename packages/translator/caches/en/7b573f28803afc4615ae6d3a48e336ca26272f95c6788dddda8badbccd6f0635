@@ -1,0 +1,1 @@
+The `one` method is used to bind event handlers that will only execute once when the event is triggered for the first time. After executing once, the event handler will be automatically removed, preventing duplicate triggers.

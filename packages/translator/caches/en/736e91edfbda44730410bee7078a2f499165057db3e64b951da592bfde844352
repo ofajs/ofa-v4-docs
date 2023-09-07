@@ -1,0 +1,1 @@
+The object returned by the `formData()` method is called the Stanz object. Stanz is part of the `$` extension library and provides efficient handling and listening functionality for form data.

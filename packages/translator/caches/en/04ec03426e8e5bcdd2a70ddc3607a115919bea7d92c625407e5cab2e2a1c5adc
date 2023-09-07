@@ -1,0 +1,1 @@
+In the above example, we have defined a component named 'lifecycle-demo' and placed a button in its template. Through different lifecycle hooks, we can observe the logs triggered at each stage in the console.

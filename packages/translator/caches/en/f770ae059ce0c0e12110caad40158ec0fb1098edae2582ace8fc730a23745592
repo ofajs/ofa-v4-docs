@@ -1,0 +1,1 @@
+In the example above, `x-fill` uses a filling template called `nestedFillTemplate` and passes a complex nested object to it. The filling template uses `{{ $data.title }}` to render the object's title and also uses nested `x-fill` to fill the contents of the child items, achieving nested content generation.

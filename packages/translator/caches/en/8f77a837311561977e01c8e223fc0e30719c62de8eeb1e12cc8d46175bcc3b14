@@ -1,0 +1,15 @@
+```javascript
+// custom-component.mjs
+export const type = $.COMP;
+
+export default {
+  data: {
+    count: 0,
+  },
+  ready() {
+    this.shadow.$("slot").on("slotchange", () => {
+      console.log("Slot content has changed");
+    });
+  },
+};
+```

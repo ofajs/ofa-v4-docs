@@ -1,0 +1,7 @@
+```javascript
+// MyComponent.mjs
+export default async ({ load }) => {
+  //   await load('./pages/next-page.mjs');
+  load('./pages/next-page.mjs'); // This is used only for caching, not necessary for non-current page modules, no need to add await
+};
+```

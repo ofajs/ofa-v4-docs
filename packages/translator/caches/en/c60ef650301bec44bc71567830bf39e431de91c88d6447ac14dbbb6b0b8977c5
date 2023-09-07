@@ -1,0 +1,1 @@
+In the page module, `page._loaded` is a boolean property that becomes `true` after the page content is fully loaded. You can use this property to check if the page has finished loading.

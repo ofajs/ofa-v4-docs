@@ -1,0 +1,23 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Form Data</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" name="username" value="John Doe">
+    <input type="email" name="email" value="johndoe@example.com">
+    <input type="checkbox" name="accept" checked>
+  </form>
+  <script>
+    const data = $("#myForm").formData('input[type="text"], input[type="email"]');
+    console.log(data);
+    // Output: { username: "John Doe", email: "johndoe@example.com" }
+  </script>
+</body>
+</html>
+```

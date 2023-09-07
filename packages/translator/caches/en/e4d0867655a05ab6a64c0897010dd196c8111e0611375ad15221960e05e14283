@@ -1,0 +1,1 @@
+In the above example, by setting a container element with a `slot`, the sub-page will be inserted into that container. Make sure the container element has relative positioning so that the sub-page can be positioned relative to it.

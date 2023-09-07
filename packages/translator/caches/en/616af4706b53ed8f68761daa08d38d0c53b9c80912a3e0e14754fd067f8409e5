@@ -1,0 +1,1 @@
+First, you need to import the `o-router` component into your page. You can do this by referencing the `router.mjs` file in the following way:

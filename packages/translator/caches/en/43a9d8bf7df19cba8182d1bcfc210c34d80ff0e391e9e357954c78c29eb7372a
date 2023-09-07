@@ -1,0 +1,1 @@
+3. Use the `o-app` tag in the HTML file and reference the configuration data's ES module using the `src` attribute.
