@@ -1,5 +1,3 @@
-import crypto from "crypto";
-import { marked } from "marked";
 import { readDir } from "../../BaseReader/index.mjs";
 import setting from "./setting.mjs";
 import fanyi from "./fanyi.mjs";
