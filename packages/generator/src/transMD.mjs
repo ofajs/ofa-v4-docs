@@ -31,8 +31,8 @@ export default async function transMD(inputer, outputer, configUrl, type) {
 
     const newName = name.replace(/(.+)\..+/, "$1") + ".html";
 
-    // const root = `http://127.0.0.1:5500`;
-    const root = `https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.3.0`;
+    const root = `http://127.0.0.1:5500`;
+    // const root = `https://cdn.jsdelivr.net/gh/kirakiray/ofa-v4-docs@0.3.0`;
 
     const agentCode = `
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
