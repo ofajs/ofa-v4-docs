@@ -184,7 +184,7 @@
   </style>
   <div class="btn" on:click="showPannel = true" style="font-size: 18px">
     <span class="iconfont icon-search"></span>
-    <div class="placeholder">Search</div>
+    <div class="placeholder">{{locals.search}}</div>
   </div>
 
   <x-if :value="showPannel">
@@ -232,10 +232,10 @@
             </div>
           </x-if>
           <x-else-if :value="isNoResult">
-            <div class="recent-search">No results for "{{stext}}"</div>
+            <div class="recent-search">{{locals._t('noresult',{stext})}}</div>
           </x-else-if>
           <x-else-if :value="clickHistorys?.length">
-            <div class="article-name">Recent</div>
+            <div class="article-name">{{locals.recent}}</div>
             <div class="historys-con">
               <x-fill :value="clickHistorys">
                 <div class="history-block">
@@ -258,7 +258,7 @@
             </div>
           </x-else-if>
           <x-else>
-            <div class="recent-search">No recent search</div>
+            <div class="recent-search">{{locals.norecent}}</div>
           </x-else>
         </div>
       </div>
@@ -268,6 +268,7 @@
   <script>
     import { wrapSubstringWithSpan } from "../util.mjs";
     import { lang } from "../data.mjs";
+    import locals from "../locals/main.mjs";
 
     const searchWorker = new Worker("/search-worker.js");
 
@@ -280,6 +281,7 @@
           clickHistorys: null,
           isNoResult: false,
           loading: false,
+          locals: {},
         },
         watch: {
           showPannel(val) {
@@ -350,6 +352,8 @@
           },
         },
         attached() {
+          this.locals = locals;
+
           this._f = (e) => {
             const { results, text } = e.data;
 
@@ -386,6 +390,7 @@
         detached() {
           searchWorker.removeEventListener("message", this._f);
           this._f = null;
+          this.locals = {};
         },
       };
     };
