@@ -85,7 +85,7 @@
           on:click="$host.active = $data.name"
         >
           {{$data.name}}
-          <x-if :value="$data.preview"> (In Preview) </x-if>
+          <x-if :value="$data.preview"> ({{$host.locals.inpreview}}) </x-if>
         </div>
       </x-fill>
     </div>
@@ -101,6 +101,7 @@
   <script>
     import hljs from "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/es/highlight.min.js";
     import { isDark } from "../data.mjs";
+    import locals from "../locals/main.mjs";
 
     export default {
       data: {
@@ -108,12 +109,15 @@
         files: [],
         isDark: {},
         editMode: false,
+        locals: {},
       },
       attached() {
         this.isDark = isDark;
+        this.locals = locals;
       },
       detached() {
         this.isDark = {};
+        this.locals = {};
       },
       watch: {
         active() {

@@ -138,16 +138,18 @@
         <div class="demo-bottom" class:hide="activeTab !== 'preview'">
           <div class="browser">
             <div class="tools">
-              <h4>PREVIEW</h4>
+              <h4>{{locals.preview}}</h4>
               <a
                 class="tool-btn iconfont icon-newtab"
                 attr:href="targetUrl"
                 target="_blank"
+                attr:title="locals.tabopen"
               ></a>
 
               <div
                 class="tool-btn iconfont icon-shuaxin"
                 on:click="reloadFrame"
+                attr:title="locals.refresh"
               ></div>
             </div>
             <x-if :value="targetUrl">
@@ -183,6 +185,7 @@
   </div>
   <script>
     import { size } from "../data.mjs";
+    import locals from "../locals/main.mjs";
 
     export default {
       data: {
@@ -191,6 +194,7 @@
         activeTab: "article",
         size: {},
         editMode: false,
+        locals: {},
       },
       proto: {
         reloadFrame() {
@@ -203,9 +207,11 @@
       },
       attached() {
         this.size = size;
+        this.locals = locals;
       },
       detached() {
         this.size = {};
+        this.locals = {};
       },
       async ready() {
         try {
