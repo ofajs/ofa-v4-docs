@@ -65,11 +65,26 @@ const init = async () => {
       }
     }
 
+    if (names.length > hashEntries.length) {
+      const usefullKeys = Object.keys(hashObj);
+
+      // 删除多余的段落翻译
+      const unuseFullKeys = names.filter((e) => !usefullKeys.includes(e));
+
+      unuseFullKeys.forEach((name) => {
+        langCaches.remove(name);
+      });
+
+      console.log(
+        `删除 ${lang} 中多余的段落数据：${unuseFullKeys.length}条完成`
+      );
+    }
+
     console.log(`翻译 ${lang} 完成`);
   }
 };
 
-init();
+// init();
 
-// setTimeout(init, 3000);
+setTimeout(init, 3000);
 // setTimeout(() => {}, 1000000);
