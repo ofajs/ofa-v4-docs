@@ -4,7 +4,7 @@ Inside ofa.js, we have created a custom component called 'o-page', which aims to
 
 ## Page Module
 
-Create a single-file page module, similar to creating a component module, using the '<template page>' tag to wrap the template code of the page. Inside this tag, you can freely use template syntax to interact with other components or page modules.
+When creating a single-file page module, it is similar to creating a component module. Use the `template` tag to wrap the template code of the page and add the `page` attribute. Inside this tag, you can freely use template syntax to interact with other components or page modules.
 
 ```html
 <!-- my-single-file-page.html -->
@@ -12,7 +12,7 @@ Create a single-file page module, similar to creating a component module, using 
   <h1>{{pageTitle}}</h1>
   <p>Welcome to my single file page!</p>
   <script>
-    // Avoid using import in single-file mode
+    // Avoid using import in the single-file mode
     // import data from './other/module.mjs';
 
     export default async ({ load }) => {
@@ -28,8 +28,7 @@ Create a single-file page module, similar to creating a component module, using 
   </script>
 </template>
 ```
-
-In your HTML file, use the 'src' attribute of the '<o-page>' tag to reference the file path of the page module. The content of the page will be rendered within this component.
+In the HTML file, use the `o-page` tag's `src` attribute to specify the file path of the page module. The page content will be rendered inside this component.
 
 ```html
 <!DOCTYPE html>

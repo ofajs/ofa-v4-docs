@@ -6,7 +6,7 @@
       width: 100%;
       height: 100%;
     }
-    
+
     .left-container {
       box-sizing: border-box;
       padding-left: 16px;
@@ -118,7 +118,7 @@
             if (hash) {
               const target = this[0].shadow.$(hash);
               if (target) {
-                target.ele.scrollIntoView({});
+                target.ele.scrollIntoView();
               }
             } else {
               $("#header-layout").shadow.$("doc-container").scrollTop = 0;
