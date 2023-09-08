@@ -2,7 +2,7 @@
   "groups": [
     {
       "type": "example",
-      "path": "examples",
+      "path": "cases",
       "name": "案例教程"
     },
     {
