@@ -293,7 +293,7 @@
             if (val === null) {
               return;
             }
-            localStorage.__recent = JSON.stringify(val);
+            localStorage[`__recent_${lang}`] = JSON.stringify(val);
           },
         },
         proto: {
@@ -379,7 +379,7 @@
           searchWorker.addEventListener("message", this._f);
 
           try {
-            const historys = JSON.parse(localStorage.__recent);
+            const historys = JSON.parse(localStorage[`__recent_${lang}`]);
             this.clickHistorys = historys;
           } catch (err) {}
         },
