@@ -67,6 +67,12 @@
         },
         proto: {
           init(data) {
+            data.forEach((e) => {
+              e.name = e.name
+                .split(" ")
+                .map((e2) => e2[0].toUpperCase() + e2.slice(1))
+                .join(" ");
+            });
             this.navs = data;
           },
           isActive(data) {
