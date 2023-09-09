@@ -79,10 +79,12 @@
         changeLang(e) {
           const val = e.target.value;
 
-          window.location = `/${val}/${location.pathname.replace(
-            /\/.+?\/(.+)/,
-            "$1"
-          )}`;
+          if (val !== lang) {
+            window.location = `/${val}/${location.pathname.replace(
+              /\/.+?\/(.+)/,
+              "$1"
+            )}`;
+          }
 
           localStorage.__userlang = val;
         },
@@ -100,6 +102,8 @@
             } else {
               userLang = "t-cn";
             }
+          } else if (/^es\-/.test(localLang)) {
+            userLang = "es";
           }
 
           if (lang !== userLang) {
