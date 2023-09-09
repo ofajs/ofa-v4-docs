@@ -12,7 +12,7 @@ Puedes utilizar una biblioteca de SCSR de la siguiente manera:
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/scsr/dist/scsr.min.js"></script>
 ```
 
-## SCSR 的工作原理
+## Cómo funciona SCSR
 
 SCSR es un módulo de página que se ejecuta directamente en modo de archivo único, sin necesidad de utilizar la etiqueta `o-page`, lo que permite renderear en la página. Específicamente, se pone el código de plantilla del módulo de página directamente dentro de `o-app`.
 

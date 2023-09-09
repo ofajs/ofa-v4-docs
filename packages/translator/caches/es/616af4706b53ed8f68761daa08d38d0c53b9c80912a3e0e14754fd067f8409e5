@@ -1,1 +1,1 @@
-首先，你需要在页面中引用 `o-router` 组件。你可以通过以下方式引用 `router.mjs` 文件：
+Primero, necesitas referenciar el componente `o-router` en tu página. Puede hacer referencia al archivo `router.mjs` de la siguiente manera:

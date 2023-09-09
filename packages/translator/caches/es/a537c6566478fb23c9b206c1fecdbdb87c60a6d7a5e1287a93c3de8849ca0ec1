@@ -1,1 +1,1 @@
-创建一个单文件页面模块时，类似于创建组件模块。使用 `template` 标签来包裹页面的模板代码，并添加 `page` 属性。在该标签内部，可以自由使用模板语法与其他组件或页面模块进行交互。
+La creación de un módulo de página de un solo archivo es similar a la creación de un módulo de componentes. Utilice la etiqueta `template` para envolver el código de plantilla de la página y añadir el atributo `page`. Dentro de esta etiqueta, siéntete libre de utilizar la sintaxis de la plantilla para interactuar con otros componentes o módulos de página.

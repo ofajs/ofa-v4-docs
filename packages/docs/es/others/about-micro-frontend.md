@@ -1,4 +1,4 @@
-# 关于微前端
+# Sobre Micro Front End
 
 Micro front-end is a front-end architectural pattern designed to help teams build and maintain large, complex front-end applications. It draws on the ideas of microservices architecture and divides front-end applications into smaller independent parts, each of which can be developed, tested, and deployed by different teams.
 

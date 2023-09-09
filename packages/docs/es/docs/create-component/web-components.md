@@ -17,13 +17,13 @@ const shadowContainer = myComponent.shadow; // Obtener el contenedor Shadow DOM 
 $("my-component").shadow.$("h1").css.color = 'red' // Cambiar el color de h1 en el Shadow DOM a rojo
 ```
 
-## Web Components 中的常用 CSS 选择器
+## Selectores CSS comunes en componentes web
 
-Web Components 提供了一些特殊的 CSS 选择器，用于选择和样式化组件内部的不同部分。以下是一些常用的选择器：
+Web Components proporciona algunos selectores CSS especiales para seleccionar y dar estilo a diferentes partes del interior del componente. Estos son algunos de los selectores más utilizados:
 
-### :host 选择器
+### :host recogedor
 
-`:host` 选择器用于选择组件自身的外部容器。可以通过这个选��器来定义组件的样式。
+El selector `:host` se utiliza para seleccionar el contenedor externo del propio componente. El estilo del componente puede definirse a través de este selector.
 
 ```css
 :host {
@@ -33,9 +33,9 @@ Web Components 提供了一些特殊的 CSS 选择器，用于选择和样式化
 }
 ```
 
-### ::slotted() 选择器
+### Selector ::slotted()
 
-`::slotted()` 选择器用于选择被插槽内容包裹的元素。可以在组件内部的样式中使用这个选择器来样式化被插槽的内容。
+El selector `::slotted()` se utiliza para seleccionar el elemento envuelto por el contenido ranurado. Se puede aplicar estilo al contenido con este selector en los estilos internos del componente.
 
 ```css
 ::slotted(p) {
@@ -44,13 +44,13 @@ Web Components 提供了一些特殊的 CSS 选择器，用于选择和样式化
 }
 ```
 
-## 插槽（Slot）的使用
+## Uso de las ranuras
 
-插槽是 Web Components 中用于在组件内部嵌入外部内容的机制。插槽允许开发者将自定义的内容传递到组件内部，实现更灵活的组件结构。
+Las ranuras son el mecanismo utilizado en Web Components para incrustar contenido externo dentro de un componente. Las ranuras permiten a los desarrolladores pasar contenido personalizado dentro de los componentes, lo que posibilita una estructura de componentes más flexible.
 
-### 单个插槽
+### Ranura única
 
-在组件模板中，可以使用 `<slot>` 元素来定义插槽。外部传入的内容会被插入到插槽内部。
+Las ranuras pueden definirse en plantillas de componentes utilizando el elemento `<slot>`. El contenido entrante externo se inserta dentro de la ranura.
 
 ```html
 <!-- MyComponent.html -->
@@ -60,15 +60,15 @@ Web Components 提供了一些特殊的 CSS 选择器，用于选择和样式化
 ```
 
 ```html
-<!-- 使用 MyComponent -->
+<!-- use MyComponent -->
 <my-component>
   <p>This is a slot content.</p>
 </my-component>
 ```
 
-### 多个命名插槽
+### Varias ranuras con nombre
 
-除了默认插槽外，还可以定义多个命名插槽。命名插槽允许开发者将不同的内容插入到不同的插槽位置。
+Además de los espacios predeterminados, pueden definirse varios espacios con nombre. Las ranuras con nombre permiten a los desarrolladores insertar contenidos diferentes en las distintas ubicaciones de las ranuras.
 
 ```html
 <!-- MyComponent.html -->

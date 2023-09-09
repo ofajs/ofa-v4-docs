@@ -1,1 +1,1 @@
-默认情况下，`formData()` 监听目标元素内的所有 `input`、`select` 和 `textarea` 元素。你可以通过传递选择器来监听特定的表单元素。
+Por defecto, `formData()` escucha todos los elementos `input`, `select` y `textarea` dentro del elemento de destino. Puedes pasar selectores para escuchar elementos específicos del formulario.

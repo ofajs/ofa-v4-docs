@@ -1,8 +1,8 @@
 - [Introduction](./introduce.md)
 - Using ofa.js
   - [How to use ofa.js](./get-started/index.md)
-  - [First example](./get-started/hello-world.md)
-  - [Selecting elements and handling events](./get-started/elements-and-events.md)
+  - [First case](./get-started/hello-world.md)
+  - [Selecting elements and related events](./get-started/elements-and-events.md)
   - [Basic concepts of instances](./get-started/basic-concept.md)
   - [Introduction to common properties](./get-started/common-properties.md)
   - [CSS](./get-started/css.md)
@@ -10,16 +10,20 @@
   - [Box model](./get-started/box-model.md)
   - [Form data](./get-started/formdata.md)
 - Creating and using components
-  - [Creation and usage](./create-component/index.md)
+  - [Making and using](./create-component/index.md)
   - [Parameter description](./create-component/parameter-description.md)
-  - [Life cycle](./create-component/life-cycle.md)
-  - [Encapsulation and componentization: general knowledge of componentization](./create-component/web-components.md)
+  - [Lifecycle](./create-component/life-cycle.md)
+  - [General knowledge of componentization](./create-component/web-components.md)
   - [Template syntax](./create-component/template-syntax.md)
   - [Template components](./create-component/template-component.md)
 - Creating applications
   - [Using o-app](./create-app/index.md)
   - [Using Page component](./create-app/page.md)
   - [Using App component](./create-app/app.md)
-  - [Subrouting functionality](./create-app/subrouting.md)
+  - [Child routing functionality](./create-app/subrouting.md)
   - [Route binding](./create-app/o-router.md)
   - [SCSR solution](./create-app/scsr.md)
+<!-- - Others
+  - [Data sharing](./others/data-sharing.md)
+  - [ofa.js and micro frontends](./others/about-micro-frontend.md) -->
+

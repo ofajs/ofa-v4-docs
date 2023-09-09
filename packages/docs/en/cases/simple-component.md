@@ -1,10 +1,10 @@
 # Component Creation and Usage
 
-Once the ofa.js loading is complete, a component named `load-module` will be registered globally and can be referenced using the abbreviation `l-m`. It is used similar to the `<script>` tag, by referencing the address of the component you developed through the `src` attribute.
+Once the loading of ofa.js is completed, a component named 'load-module' will be registered globally, and you can reference it using the abbreviation 'l-m'. Its usage is similar to that of the 'script' tag, where you reference the address of your developed component through the 'src' attribute.
 
 Now, let's start creating our own component. First, create an HTML file with a name that matches the component name.
 
-In the component file, first add a `<template component></template>` element. Place the content that the component needs to render inside this `template` element. Eventually, this content will be rendered into the component's Shadow DOM, which is isolated from the external environment to prevent pollution of the external environment.
+In the component file, first add a `template` element and add a `component` attribute. Place the content that the component needs to render inside this `template` element. Finally, this content will be rendered into the component's Shadow DOM. Shadow DOM is isolated from the external environment to prevent contamination of the external environment.
 
 Next, simply use the `l-m` component to reference the component you developed. On the page, use the component tag you defined directly.
 

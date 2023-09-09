@@ -35,5 +35,5 @@ Además, `ofa.js` también ofrece una solución completa de **enrutamiento** y *
 </html>
 ```
 
-上面是一个简单的应用教程代码示例，接下来会逐步讲解应用的开发过程。
+Lo anterior es un ejemplo sencillo del código tutorial de la aplicación, seguido de una explicación paso a paso del proceso de desarrollo de la aplicación.
 

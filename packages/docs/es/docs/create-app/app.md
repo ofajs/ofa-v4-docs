@@ -133,7 +133,7 @@ Puedes utilizar el atributo `on:click` en la plantilla de la página para vincul
 ```html
 <template page>
   <div class="container">
-    <button on:click="toabout">跳转到关于页面</button>
+    <button on:click="toabout">Ir a la página Acerca de</button>
   </div>
 
   <script>
@@ -150,37 +150,37 @@ Puedes utilizar el atributo `on:click` en la plantilla de la página para vincul
 </template>
 ```
 
-又或者直接卸载目标元素上：
+O tal vez descargar directamente en el elemento de destino:
 
 ```html
-<button on:click="goto('./pages/about.mjs')">跳转到关于页面</button>
+<button on:click="goto('./pages/about.mjs')">Ir a la página Acerca de</button>
 ```
 
-### 替换跳转和返回页面
+### Sustituir páginas de salto y retorno
 
-除了 `goto` 方法外，`o-app` 还支持 `replace` 和 `back` 方法。
+Además del método `goto`, `o-app` también admite los métodos `replace` y `back`.
 
-- `replace` 方法用于替换跳转，它会取代当前页面的路由，使新页面成为当前页面的路由。
+- El método `replace` se utiliza para reemplazar un salto, reemplaza la ruta de la página actual, haciendo que la nueva página sea la ruta de la página actual.
 
 ```html
-<button on:click="replace('./pages/settings.mjs')">跳转并替换当前页面</button>
+<button on:click="replace('./pages/settings.mjs')">Saltar y reemplazar la página actual</button>
 ```
 
-- `back` 方法用于返回到前一个页面。
+- El método `back` se utiliza para volver a la página anterior.
 
 ```html
-<button on:click="back()">返回上一页</button>
+<button on:click="back()">Volver a la página anterior</button>
 ```
 
-需要注意的是，应用内会保持组件的路由状态，但路由数据不会绑定到当前浏览器标签上。这样，你可以方便地在应用中实现页面之间的跳转和导航。
+Tenga en cuenta que el estado de enrutamiento del componente se mantiene dentro de la aplicación, pero los datos de enrutamiento no están vinculados a la pestaña actual del navegador. De este modo, puede saltar y navegar fácilmente entre páginas dentro de la aplicación.
 
-如果你想实现路由和页面的绑定，可以使用 o-router 组件，我们将在后面的章节中详细介绍。
+Si desea implementar el enrutamiento y la vinculación de páginas, puede utilizar el componente o-router, que cubriremos en detalle en una sección posterior.
 
-通过以上方法，你可以在 `o-app` 应用中实现灵活的路由跳转，让用户能够方便地浏览不同的页面内容。
+Con el método anterior, puedes implementar saltos de ruta flexibles en la aplicación `o-app`, para que los usuarios puedan navegar fácilmente por los diferentes contenidos de las páginas.
 
-## 访问应用和当前页面
+## Acceso a la aplicación y a la página actual
 
-在应用内的各个元素（包括组件），你通过 **app** 属性来获取它们所在的 `o-app` 实例。这对于需要与整个应用进行交互的操作非常有用。
+Elementos individuales (incluyendo componentes) dentro de la aplicación, se obtiene la instancia `o-app` en la que se encuentran a través del atributo **app**. Esto es útil para las operaciones que requieren la interacción con toda la aplicación.
 
 A través de la propiedad `app.current`, puedes obtener la dirección del módulo de página actualmente activo.
 

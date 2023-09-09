@@ -49,7 +49,7 @@ A continuación se muestra un ejemplo:
 
 En el caso anterior, después de abrir la página durante un segundo, se cambiará el contenido de los elementos **p**, **#desk** y **.logger** respectivamente.
 
-## 事件绑定
+## vinculación de eventos
 
 Después de seleccionar un elemento con éxito, puedes asignarle eventos. Como se mencionó anteriormente en el ejemplo "Hello World", asignamos un evento de clic al elemento con el id "btn". Cuando se hace clic en el botón, la función asignada se ejecutará.
 

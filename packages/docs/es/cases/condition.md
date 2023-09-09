@@ -1,8 +1,8 @@
-# 条件渲染
+# renderizado condicional
 
-模板内除了有模板语法，也有模板组件；
+Dentro de las plantillas hay componentes de plantilla además de la sintaxis de plantilla;
 
-> **模板组件** es un componente diseñado específicamente para plantillas, este tipo de componentes solo se pueden usar dentro de una plantilla;
+> **componente de plantilla** es un componente diseñado específicamente para plantillas, este tipo de componentes solo se pueden usar dentro de una plantilla;
 
 La renderización condicional le permite insertar contenido diferente en un componente dinámicamente en función de una condición específica. A continuación se muestra un ejemplo de cómo utilizar la renderización condicional dentro de un componente.
 

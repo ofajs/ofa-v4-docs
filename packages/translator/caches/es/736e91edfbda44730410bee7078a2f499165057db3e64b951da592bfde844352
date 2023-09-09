@@ -1,1 +1,1 @@
-`formData()` 方法返回的对象被称为 Stanz 对象。Stanz 是 `$` 扩展库的一部分，提供了对表单数据的高效处理和监听功能。
+El objeto devuelto por el método `formData()` se conoce como objeto Stanz.Stanz forma parte de la biblioteca de extensiones `$` y proporciona un procesamiento y escucha eficientes para los datos de formulario.

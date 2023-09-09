@@ -39,6 +39,10 @@ export default async (content, lang) => {
       throw "暂不支持这种语言:" + lang;
   }
 
+  if (/\n/.test(result)) {
+    debugger;
+  }
+
   let data;
   try {
     data = JSON.parse(result);

@@ -1,3 +1,3 @@
 ```html
-<button on:click="back()">返回上一页</button>
+<button on:click="back()">Volver a la página anterior</button>
 ```

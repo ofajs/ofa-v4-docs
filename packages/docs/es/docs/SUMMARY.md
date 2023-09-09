@@ -1,29 +1,29 @@
-- [Introducción](./introduce.md)
-- Uso de ofa.js
-  - [Cómo usar ofa.js](./get-started/index.md)
-  - [Primer ejemplo](./get-started/hello-world.md)
-  - [Selección de elementos y eventos relacionados](./get-started/elements-and-events.md)
-  - [Concepto básico de instancia](./get-started/basic-concept.md)
-  - [Introducción a propiedades comunes](./get-started/common-properties.md)
+- [Introduction](./introduce.md)
+- Use ofa.js
+  - [How to use ofa.js](./get-started/index.md)
+  - [First case](./get-started/hello-world.md)
+  - [Selection of elements and events](./get-started/elements-and-events.md)
+  - [Basic concepts of instances](./get-started/basic-concept.md)
+  - [Introduction to common properties](./get-started/common-properties.md)
   - [css](./get-started/css.md)
-  - [classList y data](./get-started/classlist-and-data.md)
-  - [Modelo de caja](./get-started/box-model.md)
-  - [Datos de formulario](./get-started/formdata.md)
-- Creación y uso de componentes
-  - [Creación y uso](./create-component/index.md)
-  - [Descripción de parámetros](./create-component/parameter-description.md)
-  - [Ciclo de vida](./create-component/life-cycle.md)
-  - [Encapsulación y componentización: Conocimientos generales sobre componentes](./create-component/web-components.md)
-  - [Sintaxis de plantillas](./create-component/template-syntax.md)
-  - [Componentes de plantilla](./create-component/template-component.md)
-- Crear una aplicación
-  - [Uso de o-app](./create-app/index.md)
-  - [Uso de componente Page](./create-app/page.md)
-  - [Uso de componente App](./create-app/app.md)
-  - [Funcionalidad de subrutas](./create-app/subrouting.md)
-  - [Enlace de ruta](./create-app/o-router.md)
-  - [Esquema SCSR](./create-app/scsr.md)
-<!-- - Otros
-  - [Compartir datos](./others/data-sharing.md)
-  - [ofa.js y micro front-end](./others/about-micro-frontend.md) -->
+  - [classList and data](./get-started/classlist-and-data.md)
+  - [Box model](./get-started/box-model.md)
+  - [Form data](./get-started/formdata.md)
+- Creating and using components
+  - [Creation and usage](./create-component/index.md)
+  - [Parameter description](./create-component/parameter-description.md)
+  - [Lifecycle](./create-component/life-cycle.md)
+  - [General knowledge of componentization](./create-component/web-components.md)
+  - [Template syntax](./create-component/template-syntax.md)
+  - [Template component](./create-component/template-component.md)
+- Creating applications
+  - [Using o-app](./create-app/index.md)
+  - [Using Page component](./create-app/page.md)
+  - [Using App component](./create-app/app.md)
+  - [Subrouting functionality](./create-app/subrouting.md)
+  - [Route binding](./create-app/o-router.md)
+  - [SCSR solution](./create-app/scsr.md)
+<!-- - Other
+  - [Data sharing](./others/data-sharing.md)
+  - [ofa.js and micro frontend](./others/about-micro-frontend.md) -->
 

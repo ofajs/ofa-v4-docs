@@ -28,5 +28,5 @@ require("ofa.js"); // cmd
 
 Después de agregar los recursos, ofa.js establecerá una propiedad `$` en el ámbito global, todas las funciones estarán disponibles en `$`, y el siguiente tutorial explicará su uso en detalle;
 
-通常情况下，我们建议采用直接引用的方式添加 ofa.js，而使用 npm 的方式则用于与类似 React 和 Vue 等框架进行兼容。
+En general, recomendamos añadir ofa.js como referencia directa, y utilizar npm para la compatibilidad con frameworks como React y Vue.
 

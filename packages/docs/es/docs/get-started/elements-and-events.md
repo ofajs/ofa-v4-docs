@@ -57,7 +57,7 @@ En el ejemplo anterior, primero se selecciona el elemento padre con la clase `pa
 
 En el ejemplo anterior, se usa directamente `$('div .child')` para encontrar el elemento hijo con la clase `child` y se modifica su contenido de texto a "Elemento hijo modificado".
 
-### 选择多个元素
+### Seleccionar varios elementos
 
 #### Usar `$.all('xxx')` para buscar elementos globales
 

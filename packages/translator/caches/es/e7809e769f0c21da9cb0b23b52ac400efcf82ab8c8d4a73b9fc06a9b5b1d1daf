@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- 引用 o-router 组件 -->
+    <!-- Referencia al componente o-router -->
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js"></script>
   </head>
   <body>
-    <!-- 使用 o-router 组件，并设置 fix-body 属性 -->
+    <!-- Utiliza el componente o-router y establece la propiedad fix-body -->
     <o-router fix-body> 
       <o-app src="app-config.mjs"></o-app>
     </o-router>

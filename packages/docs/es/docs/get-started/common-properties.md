@@ -14,9 +14,9 @@ La propiedad `tag` se utiliza para obtener el nombre de etiqueta (en minúsculas
 </script>
 ```
 
-## ele 属性
+## ele attribute
 
-`ele` 属性 se utiliza para obtener el elemento DOM real de la instancia `$`, lo que permite realizar operaciones JavaScript nativas en ese elemento.
+`ele` causalidad se utiliza para obtener el elemento DOM real de la instancia `$`, lo que permite realizar operaciones JavaScript nativas en ese elemento.
 
 ```html
 <div id="example">Hola Mundo</div>
@@ -27,7 +27,7 @@ La propiedad `tag` se utiliza para obtener el nombre de etiqueta (en minúsculas
 </script>
 ```
 
-## index 属性
+## atributo index
 
 `index` atributo se utiliza para obtener el índice de clasificación del elemento actual entre los elementos del mismo nivel, comenzando desde 0.
 

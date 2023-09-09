@@ -1,3 +1,3 @@
 ```html
-<button on:click="goto('./pages/about.mjs')">跳转到关于页面</button>
+<button on:click="goto('./pages/about.mjs')">Ir a la página Acerca de</button>
 ```

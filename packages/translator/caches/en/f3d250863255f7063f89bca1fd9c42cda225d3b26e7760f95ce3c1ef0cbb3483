@@ -1,1 +1,0 @@
-In the component file, first add a `<template component></template>` element. Place the content that the component needs to render inside this `template` element. Eventually, this content will be rendered into the component's Shadow DOM, which is isolated from the external environment to prevent pollution of the external environment.

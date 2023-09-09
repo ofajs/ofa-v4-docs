@@ -53,7 +53,7 @@ export const data = {
 };
 ```
 
-### x-if + x-else-if + x-else 组件
+### x-if + x-else-if + x-else components
 
 `x-if` aún puede combinarse con `x-else-if` y `x-else` para lograr una representación condicional múltiple.
 

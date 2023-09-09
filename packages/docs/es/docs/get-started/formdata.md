@@ -35,9 +35,9 @@ El método `formData` se utiliza para generar un objeto que contiene los valores
 </html>
 ```
 
-## 监听特定表单元素
+## Escuchar elementos específicos del formulario
 
-默认情况下，`formData()` 监听目标元素内的所有 `input`、`select` 和 `textarea` 元素。你可以通过传递选择器来监听特定的表单元素。
+Por defecto, `formData()` escucha todos los elementos `input`, `select` y `textarea` dentro del elemento de destino. Puedes pasar selectores para escuchar elementos específicos del formulario.
 
 ```html
 <!DOCTYPE html>
@@ -63,11 +63,11 @@ El método `formData` se utiliza para generar un objeto que contiene los valores
 </html>
 ```
 
-## Stanz 对象
+## Objetos Stanz
 
-`formData()` 方法返回的对象被称为 Stanz 对象。Stanz 是 `$` 扩展库的一部分，提供了对表单数据的高效处理和监听功能。
+El objeto devuelto por el método `formData()` se conoce como objeto Stanz.Stanz forma parte de la biblioteca de extensiones `$` y proporciona un procesamiento y escucha eficientes para los datos de formulario.
 
-你可以通过访问 [https://github.com/kirakiray/stanz](https://github.com/kirakiray/stanz) 来详细了解 Stanz 的使用教程和功能。
+Puede obtener más información sobre los tutoriales y las funciones de Stanz visitando [https://github.com/kirakiray/stanz](https://github.com/kirakiray/stanz).
 
 A través de la funcionalidad de formulario anterior, puedes manejar fácilmente los valores y cambios de los elementos del formulario, mejorando la conveniencia y eficiencia de las operaciones del formulario.
 

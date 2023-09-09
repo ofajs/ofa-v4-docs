@@ -1,1 +1,1 @@
-在 ofa.js 内部，我们构建了一个名为 `o-page` 的自定义组件，旨在为页面的开发提供便利。这个组件在应用开发中扮演着关键的角色。当你想要使用组件的模板语法，但又不想创建全新的组件时，`o-page` 组件将成为你的最佳选择。
+Dentro de ofa.js, construimos un componente personalizado llamado `o-page` que está diseñado para facilitar el desarrollo de páginas. Este componente juega un papel clave en el desarrollo de aplicaciones. Cuando quieras utilizar la sintaxis de plantilla de un componente, pero no quieras crear un componente completamente nuevo, el componente `o-page` será tu mejor opción.

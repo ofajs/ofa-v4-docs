@@ -33,6 +33,17 @@ const tw = {
   refresh: "刷新頁面",
 };
 
+const es = {
+  search: "Buscar",
+  recent: "Reciente",
+  norecent: "No hay registros de búsqueda",
+  noresult: 'No se encontraron resultados para "{{stext}}"',
+  inpreview: "En vista previa",
+  preview: "Vista previa de la página",
+  tabopen: "Abrir en nueva pestaña",
+  refresh: "Actualizar página",
+};
+
 const locals = $.stanz(en);
 
 locals._t = (key, data) => {
@@ -52,6 +63,9 @@ switch (lang) {
     break;
   case "t-cn":
     Object.assign(locals, tw);
+    break;
+  case "es":
+    Object.assign(locals, es);
     break;
 }
 

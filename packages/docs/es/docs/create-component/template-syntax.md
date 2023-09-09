@@ -30,11 +30,11 @@ En el ejemplo anterior, `{{username}}` será reemplazado por el valor de la prop
 
 Utilizando la sintaxis de enlace de atributos `:xxx='yyy'`, puedes vincular las propiedades del componente a los atributos de los elementos dentro de la plantilla. Este enlace es unidireccional, los cambios en las propiedades afectarán a los atributos de los elementos en la plantilla, pero no al revés.
 
-以下是一些常见的属性绑定示例：
+He aquí algunos ejemplos comunes de vinculación de propiedades:
 
 ```html
 <!-- template.html -->
-<l-m src="custom-component.mjs"></l-m>  <!-- 加载 custom-component 组件 -->
+<l-m src="custom-component.mjs"></l-m>  <!-- Carga de componentes personalizados -->
 <div>
     <p :text="greeting"></p>
     <input :value="inputValue" />
@@ -55,7 +55,7 @@ export const data = {
 
 En el ejemplo anterior, `:text="greeting"` enlaza el valor de la propiedad `greeting` del `data` del componente al contenido de texto del elemento `<p>`. `:value="inputValue"` enlaza el valor de la propiedad `inputValue` del `data` del componente al atributo `value` del elemento `<input>`. Para componentes personalizados, `custom-prop` es el nombre de la propiedad del componente personalizado, y se pasa el valor de la propiedad `customValue` del `data` del componente al componente personalizado.
 
-## 事件绑定
+## vinculación de eventos
 
 Usando el formato `on:click="yyy"`, puedes enlazar un evento especificado del elemento objetivo (por ejemplo, `click`) a una propiedad `yyy` del componente anfitrión. De esta manera, cuando se acciona el evento especificado en el elemento objetivo, se llama al método de propiedad respectivo en el componente anfitrión.
 

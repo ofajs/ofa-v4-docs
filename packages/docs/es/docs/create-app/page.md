@@ -1,10 +1,10 @@
-# 开发页面
+# página de desarrollo
 
-在 ofa.js 内部，我们构建了一个名为 `o-page` 的自定义组件，旨在为页面的开发提供便利。这个组件在应用开发中扮演着关键的角色。当你想要使用组件的模板语法，但又不想创建全新的组件时，`o-page` 组件将成为你的最佳选择。
+Dentro de ofa.js, construimos un componente personalizado llamado `o-page` que está diseñado para facilitar el desarrollo de páginas. Este componente juega un papel clave en el desarrollo de aplicaciones. Cuando quieras utilizar la sintaxis de plantilla de un componente, pero no quieras crear un componente completamente nuevo, el componente `o-page` será tu mejor opción.
 
-## 页面模块
+## módulo de página
 
-创建一个单文件页面模块时，类似于创建组件模块。使用 `template` 标签来包裹页面的模板代码，并添加 `page` 属性。在该标签内部，可以自由使用模板语法与其他组件或页面模块进行交互。
+La creación de un módulo de página de un solo archivo es similar a la creación de un módulo de componentes. Utilice la etiqueta `template` para envolver el código de plantilla de la página y añadir el atributo `page`. Dentro de esta etiqueta, siéntete libre de utilizar la sintaxis de la plantilla para interactuar con otros componentes o módulos de página.
 
 ```html
 <!-- my-single-file-page.html -->
@@ -12,11 +12,11 @@
   <h1>{{pageTitle}}</h1>
   <p>Welcome to my single file page!</p>
   <script>
-    // 在单文件模式下，避免使用 import
+    // En el modo de archivo único, evite utilizar import
     // import data from './other/module.mjs';
 
     export default async ({ load }) => {
-      // 引用其他模块
+      // Referencias a otros módulos
       // const data = await load("./other/module.mjs");
 
       return {
@@ -28,7 +28,7 @@
   </script>
 </template>
 ```
-在 HTML 文件中，使用 `o-page` 标签的 `src` 属性指定页面模块的文件路径。页面内容将在该组件内部进行渲染。
+En el archivo HTML, utilice el atributo `src` de la etiqueta `o-page` para especificar la ruta del archivo del módulo de página. El contenido de la página se mostrará dentro de ese componente.
 
 ```html
 <!DOCTYPE html>

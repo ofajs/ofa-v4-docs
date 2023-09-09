@@ -1,4 +1,4 @@
- # CSS 的用法
+ # Uso de CSS
 
 En `ofa.js`, puedes manipular el estilo CSS de los elementos de la siguiente manera:
 

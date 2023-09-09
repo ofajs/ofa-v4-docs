@@ -1,1 +1,1 @@
-`::slotted()` 选择器用于选择被插槽内容包裹的元素。可以在组件内部的样式中使用这个选择器来样式化被插槽的内容。
+El selector `::slotted()` se utiliza para seleccionar el elemento envuelto por el contenido ranurado. Se puede aplicar estilo al contenido con este selector en los estilos internos del componente.

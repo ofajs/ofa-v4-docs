@@ -1,1 +1,1 @@
-除了 `goto` 方法外，`o-app` 还支持 `replace` 和 `back` 方法。
+Además del método `goto`, `o-app` también admite los métodos `replace` y `back`.

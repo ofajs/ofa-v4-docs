@@ -1,1 +1,1 @@
-`o-router` 组件是一个用于将 `o-app` 内的路由绑定到当前浏览器标签页的组件，它能够帮助你更方便地管理页面路由和展示。
+El componente `o-router` es un componente utilizado para enlazar rutas dentro de `o-app` a la pestaña actual del navegador, lo que ayuda a gestionar el enrutamiento y la presentación de la página más fácilmente.

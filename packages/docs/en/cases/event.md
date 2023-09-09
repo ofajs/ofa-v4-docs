@@ -4,7 +4,7 @@ You can use the `on` method to bind events. **Events** are the most basic concep
 
 The following example demonstrates how to bind a click event:
 
-In this example, we select the <button> element using `$` and bind the `click` event using the `on` method. When the button is clicked, the callback function is triggered and the text content of the `target` element is changed to "Hello, world!".
+In this example, we selected the `button` element using `$` and bound the `click` event using the `on` method. When the button is clicked, the callback function is triggered, changing the text content of the `target` element to "Hello, world!".
 
 If you want to learn more about available event types, please refer to the [Events](https://developer.mozilla.org/en-US/docs/Web/Events) documentation.
 

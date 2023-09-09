@@ -1,1 +1,1 @@
-`:host` 选择器用于选择组件自身的外部容器。可以通过这个选��器来定义组件的样式。
+El selector `:host` se utiliza para seleccionar el contenedor externo del propio componente. El estilo del componente puede definirse a través de este selector.

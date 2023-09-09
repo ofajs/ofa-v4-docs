@@ -1,1 +1,1 @@
-在 HTML 文件中，使用 `o-page` 标签的 `src` 属性指定页面模块的文件路径。页面内容将在该组件内部进行渲染。
+En el archivo HTML, utilice el atributo `src` de la etiqueta `o-page` para especificar la ruta del archivo del módulo de página. El contenido de la página se mostrará dentro de ese componente.
