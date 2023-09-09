@@ -1,0 +1,1 @@
+El gancho del ciclo de vida `ready` se activa justo después de que se inicializan los datos y la plantilla del componente, lo que significa que el componente está listo. En esta fase, puedes acceder a los datos del componente y la plantilla ya ha sido renderizada, por lo que puedes realizar operaciones relacionadas con la interacción visual.

@@ -1,0 +1,1 @@
+En el módulo de página `page1.html`, definimos un título y un botón. Al hacer clic en el botón, se navegará a otro módulo de página llamado `page2.html`. También agregamos un enlace con el atributo `olink`, que navegará a `page2.html` al hacer clic en él.

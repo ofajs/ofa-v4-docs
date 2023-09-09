@@ -1,0 +1,1 @@
+El selector `::slotted()` se utiliza para seleccionar el elemento envuelto por el contenido ranurado. Se puede aplicar estilo al contenido con este selector en los estilos internos del componente.

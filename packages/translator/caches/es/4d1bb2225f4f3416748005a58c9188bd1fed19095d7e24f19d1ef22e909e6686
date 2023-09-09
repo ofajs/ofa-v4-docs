@@ -1,0 +1,1 @@
+Utilizando la sintaxis de enlace de atributos `:xxx='yyy'`, puedes vincular las propiedades del componente a los atributos de los elementos dentro de la plantilla. Este enlace es unidireccional, los cambios en las propiedades afectarán a los atributos de los elementos en la plantilla, pero no al revés.

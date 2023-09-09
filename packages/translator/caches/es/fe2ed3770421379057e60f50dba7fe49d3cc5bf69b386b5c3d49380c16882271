@@ -1,0 +1,1 @@
+Las propiedades `data-*` de los elementos se pueden utilizar para almacenar datos personalizados en HTML, y se pueden acceder a estas propiedades a través del objeto `data`.

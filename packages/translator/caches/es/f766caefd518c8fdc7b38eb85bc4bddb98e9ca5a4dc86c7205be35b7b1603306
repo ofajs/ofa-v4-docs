@@ -1,0 +1,26 @@
+```html
+<!-- demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-button</title>
+    <script src="../ofa.js"></script>
+    <l-m src="./button-component.mjs"></l-m>
+  </head>
+  <body>
+    <my-button button-text="Mi Botón"></my-button>
+    <script>
+      $("my-button").on("click", () => {
+        $("my-button").count++;
+      });
+
+      setTimeout(() => {
+        $("my-button").sayHello();
+      }, 1000);
+    </script>
+  </body>
+</html>
+
+```

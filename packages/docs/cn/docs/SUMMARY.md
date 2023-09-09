@@ -13,7 +13,7 @@
   - [制作和使用](./create-component/index.md)
   - [参数说明](./create-component/parameter-description.md)
   - [生命周期](./create-component/life-cycle.md)
-  - [封装与组件化：组件化常规知识](./create-component/web-components.md)
+  - [组件化常规知识](./create-component/web-components.md)
   - [模板语法](./create-component/template-syntax.md)
   - [模板组件](./create-component/template-component.md)
 - 制作应用

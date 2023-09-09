@@ -1,0 +1,1 @@
+El código lógico se coloca en un archivo JavaScript que debe incluir la declaración 'export const type = $.COMP;' para notificar a la página que se trata de un módulo de componente. En este modo de separación, se pueden utilizar las sintaxis estándar de los módulos ES como 'import' para el código del módulo.

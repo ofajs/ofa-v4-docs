@@ -9,6 +9,8 @@ const en = {
   preview: "Preview",
   tabopen: "New tab opens",
   refresh: "Refresh",
+  previous: "Previous",
+  next: "Next",
 };
 
 const cn = {
@@ -20,6 +22,8 @@ const cn = {
   preview: "预览网页",
   tabopen: "新标签打开",
   refresh: "刷新页面",
+  previous: "上一篇",
+  next: "下一篇",
 };
 
 const tw = {
@@ -31,6 +35,21 @@ const tw = {
   preview: "預覽網頁",
   tabopen: "新標籤打開",
   refresh: "刷新頁面",
+  previous: "上一篇",
+  next: "下一篇",
+};
+
+const es = {
+  search: "Buscar",
+  recent: "Reciente",
+  norecent: "No hay registros de búsqueda",
+  noresult: 'No se encontraron resultados para "{{stext}}"',
+  inpreview: "En vista previa",
+  preview: "Vista previa de la página",
+  tabopen: "Abrir en nueva pestaña",
+  refresh: "Actualizar página",
+  previous: "Anterior",
+  next: "Siguiente",
 };
 
 const locals = $.stanz(en);
@@ -52,6 +71,9 @@ switch (lang) {
     break;
   case "t-cn":
     Object.assign(locals, tw);
+    break;
+  case "es":
+    Object.assign(locals, es);
     break;
 }
 

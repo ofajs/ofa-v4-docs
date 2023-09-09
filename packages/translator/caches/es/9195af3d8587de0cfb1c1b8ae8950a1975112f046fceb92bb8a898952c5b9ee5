@@ -1,0 +1,1 @@
+Puedes usar `$ele.css.xxx` para obtener estilos CSS específicos de un elemento, donde `xxx` es el nombre de la propiedad CSS que deseas obtener.

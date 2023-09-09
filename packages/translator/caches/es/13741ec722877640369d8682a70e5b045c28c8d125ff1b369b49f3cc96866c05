@@ -1,0 +1,7 @@
+```html
+<div id="condition-container">
+  <x-if :value="showContent">
+    <div>Se renderiza porque showContent es verdadero.</div>
+  </x-if>
+</div>
+```

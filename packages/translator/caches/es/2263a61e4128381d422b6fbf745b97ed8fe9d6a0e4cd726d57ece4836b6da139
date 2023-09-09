@@ -1,0 +1,1 @@
+En general, recomendamos añadir ofa.js como referencia directa, y utilizar npm para la compatibilidad con frameworks como React y Vue.

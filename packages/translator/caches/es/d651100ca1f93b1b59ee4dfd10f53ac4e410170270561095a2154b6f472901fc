@@ -1,0 +1,1 @@
+El gancho del ciclo de vida `loaded` se activa después de que se carguen todas las dependencias en la plantilla del componente. Esta fase garantiza que todas las dependencias se hayan cargado antes de renderizar el componente. Es el momento adecuado para eliminar los estilos de carga añadidos en la fase `ready`. 

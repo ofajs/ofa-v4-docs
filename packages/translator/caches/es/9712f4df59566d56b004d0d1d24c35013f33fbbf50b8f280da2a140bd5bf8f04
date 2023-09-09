@@ -1,0 +1,1 @@
+Cuando utiliza el relleno `x-fill`, simplemente necesita pasar el nombre de la plantilla correspondiente al atributo `name` para renderizar el contenido de la plantilla independiente. Además, la renderización de relleno también admite relleno recursivo, lo que significa que puede seguir utilizando el mismo nombre de plantilla dentro de la plantilla para una renderización anidada.

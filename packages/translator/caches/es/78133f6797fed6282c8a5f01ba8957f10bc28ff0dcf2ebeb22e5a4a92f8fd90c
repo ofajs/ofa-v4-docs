@@ -1,0 +1,1 @@
+Es importante tener en cuenta que el uso de este componente puede afectar el estilo de la capa principal. Por lo tanto, al invadir el estilo, se debe mantener una convención de nomenclatura para evitar afectar el estilo de la capa principal.

@@ -1,0 +1,1 @@
+Ten en cuenta que los nombres de las propiedades en el objeto `dataset` se convierten a notación camel case eliminando `"data-"` de la propiedad original. Por ejemplo, `data-info` se convierte en `dataset.info`. Si deseas establecer una propiedad `data-*`, también puedes hacerlo a través del objeto `dataset`:

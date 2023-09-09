@@ -1,0 +1,17 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear nuevo elemento</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <script>
+    const $ele = $('<div style="color:red">Soy un texto</div>');
+    $('body').push($ele);
+  </script>
+</body>
+</html>
+```

@@ -1,0 +1,1 @@
+El módulo de la página principal puede configurar una función `routerChange` para escuchar los cambios de ruta. Cuando se produce un cambio de ruta en la página sin actualizar la página principal, se activará el evento `routerChange`. Este evento pasará la información de la página actual y el tipo de cambio (`type`).

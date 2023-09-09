@@ -1,0 +1,33 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevenir Comportamiento Predeterminado de Evento</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" />
+    <button id="submitBtn">Enviar</button>
+  </form>
+
+  <script>
+    const form = $('#myForm');
+    const submitBtn = $('#submitBtn');
+
+    submitBtn.on('click', (event) => {
+      event.preventDefault(); // Cancelar el comportamiento predeterminado del evento
+      const name = $('#name').value;
+      alert(`¡Hola, ${name}! Envío del formulario prevenido.`);
+    });
+
+    form.on('submit', () => {
+      alert('¡Formulario enviado!');
+    });
+  </script>
+</body>
+</html>
+```

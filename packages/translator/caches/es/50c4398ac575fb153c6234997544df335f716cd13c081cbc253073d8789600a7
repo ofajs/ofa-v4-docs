@@ -1,0 +1,3 @@
+- Las funciones registradas con `watch` solo se activarán una vez durante un cambio de hilo único. Por lo tanto, incluso si el valor de escucha se modifica varias veces en un hilo único, solo se activará una vez.
+- El primer parámetro es el valor actual.
+- El segundo parámetro es un objeto que contendrá un conjunto de datos llamado `watchers`. En la mayoría de los casos, solo habrá un objeto en `watchers`, donde se puede obtener el `oldValue` de este objeto. Si el valor de escucha ha sido modificado varias veces en un hilo único, este conjunto de datos registrará varios cambios.

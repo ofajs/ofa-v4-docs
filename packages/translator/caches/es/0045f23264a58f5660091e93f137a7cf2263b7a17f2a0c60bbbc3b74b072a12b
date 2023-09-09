@@ -1,0 +1,1 @@
+Nota: El uso del método `emit` no simula un clic de mouse u otros eventos reales, solo llama directamente a la función de manejo del evento vinculada. Por lo tanto, si deseas ejecutar un evento en situaciones específicas, puedes utilizar el método `emit`.

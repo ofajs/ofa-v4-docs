@@ -1,0 +1,1 @@
+En ofa.js, cada componente tiene un contenedor Shadow DOM para aislar su contenido interno. El contenido de la plantilla se renderiza en este contenedor. Además, las instancias de componentes obtenidas a través de `$` también tienen acceso al contenedor Shadow DOM interno a través de la propiedad `shadow`, lo que permite operar y acceder a los elementos internos del componente.

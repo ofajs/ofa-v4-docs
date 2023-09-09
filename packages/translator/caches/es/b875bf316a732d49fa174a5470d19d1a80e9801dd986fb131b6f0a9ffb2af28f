@@ -1,0 +1,1 @@
+En el ejemplo anterior, `x-fill` utiliza una plantilla de relleno llamada `fillTemplate` y le pasa un objeto. En la plantilla de relleno se utiliza `{{ $data }}` para renderizar cada elemento del objeto, logrando así un relleno cíclico de diferentes contenidos de cadenas.

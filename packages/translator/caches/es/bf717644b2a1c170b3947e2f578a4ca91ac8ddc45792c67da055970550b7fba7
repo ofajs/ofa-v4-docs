@@ -1,0 +1,1 @@
+Elementos individuales (incluyendo componentes) dentro de la aplicación, se obtiene la instancia `o-app` en la que se encuentran a través del atributo **app**. Esto es útil para las operaciones que requieren la interacción con toda la aplicación.

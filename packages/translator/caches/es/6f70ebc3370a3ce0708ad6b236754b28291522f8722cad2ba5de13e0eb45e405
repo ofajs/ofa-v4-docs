@@ -1,0 +1,36 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detener la propagación del evento</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <div id="outer">
+    <div id="inner">
+      <button id="btn">Haz clic</button>
+    </div>
+  </div>
+
+  <script>
+    const btn = $('#btn');
+    const innerDiv = $('#inner');
+
+    btn.on('click', (event) => {
+      alert('¡Botón pulsado!');
+      event.stopPropagation(); // Detener la propagación del evento
+    });
+
+    innerDiv.on('click', () => {
+      alert('¡Div interno pulsado!');
+    });
+
+    $('#outer').on('click', () => {
+      alert('¡Div externo pulsado!');
+    });
+  </script>
+</body>
+</html>
+```

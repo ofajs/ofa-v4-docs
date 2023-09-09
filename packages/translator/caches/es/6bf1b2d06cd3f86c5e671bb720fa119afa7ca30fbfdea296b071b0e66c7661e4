@@ -1,0 +1,1 @@
+Los hooks del ciclo de vida proporcionan la oportunidad de ejecutar código en diferentes etapas del componente. En `ofa.js`, hay cinco hooks principales del ciclo de vida que son: `created`, `ready`, `watch`, `attached` y `detached`.

@@ -1,0 +1,1 @@
+La propagación del evento se refiere a cuando se activa un evento en un elemento y se propaga hacia arriba a lo largo del árbol del DOM, activando secuencialmente eventos del mismo tipo en elementos padres. Si deseas detener la propagación después de manejar un evento en un elemento específico, puedes utilizar el método `event.stopPropagation()`.

@@ -1,0 +1,1 @@
+En el ejemplo anterior, la función `routerChange` recibe dos parámetros, `current` que representa la dirección actual de la página, y `type` que representa el tipo de redirección. Cuando se produce un cambio de ruta en la página, esta función se activa y muestra la información correspondiente.

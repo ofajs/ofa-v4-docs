@@ -1,0 +1,1 @@
+Por defecto, `formData()` escucha todos los elementos `input`, `select` y `textarea` dentro del elemento de destino. Puedes pasar selectores para escuchar elementos específicos del formulario.

@@ -1,0 +1,8 @@
+- width: representa el ancho del área de contenido del elemento, sin incluir el padding, el borde y el margen.
+- height: representa la altura del área de contenido del elemento, sin incluir el padding, el borde y el margen.
+- clientWidth: representa el ancho del área de contenido visible del elemento, incluyendo el padding pero sin incluir el borde y el margen.
+- clientHeight: representa la altura del área de contenido visible del elemento, incluyendo el padding pero sin incluir el borde y el margen.
+- offsetWidth: representa el ancho total del elemento, incluyendo el área de contenido, el padding, el borde y el margen.
+- offsetHeight: representa la altura total del elemento, incluyendo el área de contenido, el padding, el borde y el margen.
+- outerWidth: representa el ancho total del elemento, incluyendo el área de contenido, el padding, el borde, el margen pero sin incluir el ancho de la barra de desplazamiento.
+- outerHeight: representa la altura total del elemento, incluyendo el área de contenido, el padding, el borde, el margen pero sin incluir la altura de la barra de desplazamiento.

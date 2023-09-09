@@ -1,0 +1,45 @@
+```html
+<!-- simple-button.html -->
+<template component>
+  <style>
+    .shadow-button {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    .shadow-button:hover {
+      opacity: 0.8;
+    }
+
+    .shadow-button:active {
+      transform: translateY(4px);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
+  <button class="shadow-button">
+    <slot></slot>
+  </button>
+
+  <script>
+    // No utilizar import
+    // import data from './other/module.mjs';
+
+    // Nombre del componente que se necesita registrar, si no se define el atributo tag, el nombre del componente registrado será igual al nombre del archivo
+    export const tag = 'simple-button';
+
+    export default async ({load}) => {
+      // Importar otro módulo
+      // const data = await load("./other/module.mjs");
+    }
+  </script>
+</template>
+```

@@ -1,0 +1,1 @@
+En este ejemplo, puedes ver cómo utilizar el método `formData` para mapear automáticamente los datos del formulario al objeto `fdata`. Esto te permite obtener o modificar los valores de los elementos del formulario a través de la manipulación del objeto `fdata`, y estos cambios se sincronizarán automáticamente con los elementos del formulario correspondientes.

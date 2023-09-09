@@ -1,0 +1,1 @@
+El componente `x-if` se utiliza para renderizar contenido de forma dinámica según condiciones. Acepta una propiedad `value` que determina si se renderizan sus elementos hijos o no. Si `value` es `true`, los elementos hijos se renderizan, de lo contrario no se renderizan.

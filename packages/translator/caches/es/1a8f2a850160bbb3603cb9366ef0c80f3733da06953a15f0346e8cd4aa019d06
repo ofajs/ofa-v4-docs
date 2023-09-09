@@ -1,0 +1,29 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de evento de pasar el cursor sobre</title>
+    <script src="../ofa.js"></script>
+    <style>
+      #text-area {
+        font-size: 18px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="text-area">Pasa el cursor aquí.</div>
+    <script>
+      $("#text-area").on("mouseenter", () => {
+        $("#text-area").css.color = 'red';
+      });
+
+      $("#text-area").on("mouseleave", () => {
+        $("#text-area").css.color = 'black';
+      });
+    </script>
+  </body>
+</html>
+```

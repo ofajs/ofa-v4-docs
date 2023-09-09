@@ -1,0 +1,1 @@
+En el ejemplo anterior, `attr:fontcolor="val"` vinculará el atributo `val` del componente principal al atributo `fontcolor` del elemento `<div>`.

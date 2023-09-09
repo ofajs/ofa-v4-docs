@@ -1,0 +1,31 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipular elementos secundarios</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <div>
+    <p>First Paragraph</p>
+  </div>
+  <script>
+    const $paragraphs = $('p');
+    
+    // Agregar un nuevo elemento 'div' como elemento secundario
+    const $newDiv = $('<div>New Div</div>');
+    $paragraphs.push($newDiv);
+
+    setTimeout(()=>{
+      // Eliminar el último elemento secundario
+      $paragraphs.pop();
+
+      console.log($paragraphs);
+    },1000)
+
+  </script>
+</body>
+</html>
+```

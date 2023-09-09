@@ -1,0 +1,2 @@
+En este ejemplo, creamos un componente llamado `test-demo`. El componente contiene un botón que, al hacer clic, incrementará la propiedad `count`. Usando las etiquetas `<x-if>`, `<x-else-if>` y `<x-else>`, implementamos la lógica de la renderización condicional.
+

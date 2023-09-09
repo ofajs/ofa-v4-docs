@@ -1,0 +1,16 @@
+```html
+<!-- demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple-button</title>
+    <script src="ofa.js"></script>
+    <l-m src="./simple-button.mjs"></l-m> 
+  </head>
+  <body>
+    <simple-button>Soy un botón</simple-button>
+  </body>
+</html>
+```

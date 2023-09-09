@@ -1,0 +1,1 @@
+Utilizando la sintaxis de rendimiento de texto `{{ key }}`, puedes renderizar datos como contenido de texto y agregarlos a la plantilla del componente. Cuando los datos cambian, el contenido de texto correspondiente se actualizará automáticamente.

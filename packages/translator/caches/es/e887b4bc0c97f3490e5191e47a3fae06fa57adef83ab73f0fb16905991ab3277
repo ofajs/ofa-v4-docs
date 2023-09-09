@@ -1,0 +1,3 @@
+- El método `goto` para navegar a una página.
+- El método `back` para regresar a la página anterior.
+- El método `replace` para realizar una navegación de reemplazo en la página actual.

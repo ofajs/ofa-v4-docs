@@ -1,0 +1,10 @@
+```html
+<div id="fill-container" style="padding: 16px; background-color: #eee">
+  <x-fill name="fillTemplate" :value="['Item 1', 'Item 2', 'Item 3']"></x-fill>
+</div>
+<template name="fillTemplate">
+  <div class="fill-item" style="margin: 10px; padding: 10px; border: red solid 1px">
+    {{ $data }}
+  </div>
+</template>
+```

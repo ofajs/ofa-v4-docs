@@ -1,0 +1,17 @@
+# Ciclo de vida
+
+Los hooks del ciclo de vida proporcionan la oportunidad de ejecutar código en diferentes etapas del componente. En `ofa.js`, hay cinco hooks principales del ciclo de vida que son: `created`, `ready`, `watch`, `attached` y `detached`.
+
+- **created()**: Se llama cuando se crea el componente, en este momento el shadow root aún no se ha renderizado. Puede realizar algunas configuraciones de inicialización aquí, pero no puede acceder a los elementos dentro del shadow root.
+  
+- **ready()**: Se llama después de que se haya completado la renderización del shadow root, generalmente se utiliza para la lógica de inicialización del componente. En esta etapa, puede acceder y manipular los elementos dentro del shadow root, así como realizar otras operaciones que necesite realizar después de la renderización.
+
+- **watch**: Utilice el objeto `watch` para estar atento a los cambios en los datos. Después de que se complete `ready`, se activará una vez el `watch` correspondiente al valor en `data`. Luego, cada vez que el valor de la clave correspondiente cambie, se activará la función correspondiente dentro de `watch`.
+
+- **attached()**: Se llama cuando el componente se agrega al documento, en este momento puede realizar operaciones de interacción con el entorno externo, como obtener la apariencia del componente o inicializar la lógica de datos compartidos.
+
+- **detached()**: Se llama cuando el componente se elimina del documento. En esta etapa, puede realizar tareas de limpieza, cancelar la interacción con el entorno externo y liberar recursos.
+
+<a href="../../publics/examples/life-cycle/demo.html" preview demo></a>
+<a href="../../publics/examples/life-cycle/test-demo.html" main demo></a>
+

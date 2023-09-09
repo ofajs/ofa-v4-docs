@@ -1,0 +1,20 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keydown</title>
+    <script src="../ofa.js"></script>
+  </head>
+  <body>
+    <h3>Viendo las impresiones después de abrir la consola</h3>
+    <input type="text" id="input-box" placeholder="Presiona cualquier tecla" />
+    <script>
+      $("#input-box").on("keydown", (event) => {
+        console.log("keydown:", event.key);
+      });
+    </script>
+  </body>
+</html>
+```

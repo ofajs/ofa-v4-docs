@@ -1,0 +1,12 @@
+```html
+<p>Soy una etiqueta P</p>
+<div id="desk">Soy un escritorio</div>
+<div class="logger">Soy un registrador</div>
+<script>
+    setTimeout(() => {
+        $("p").text = "cambiar etiqueta P";
+        $("#desk").text = "cambiar #desk";
+        $(".logger").text = "cambiar .logger";
+    }, 1000);
+</script>
+```

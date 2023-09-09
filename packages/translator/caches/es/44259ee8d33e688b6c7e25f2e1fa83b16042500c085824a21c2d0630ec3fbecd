@@ -1,0 +1,1 @@
+En el ejemplo anterior, se activa manualmente el evento de clic del botón usando el método `emit`, lo que resulta en una ventana emergente que muestra el mensaje "¡Botón clickeado!", aunque no se haya hecho clic en el botón físicamente.

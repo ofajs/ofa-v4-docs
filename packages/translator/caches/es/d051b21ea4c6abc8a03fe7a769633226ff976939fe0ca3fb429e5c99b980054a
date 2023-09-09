@@ -1,0 +1,1 @@
+La propiedad `tag` se utiliza para obtener el nombre de etiqueta (en minúsculas) del elemento actual, similar a la propiedad `tagName` del elemento DOM.

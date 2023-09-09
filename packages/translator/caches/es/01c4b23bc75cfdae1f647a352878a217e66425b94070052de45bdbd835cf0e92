@@ -1,0 +1,1 @@
+Puede utilizar el método `on` para vincular eventos. Los **eventos** son el concepto más básico en el desarrollo, ya que las aplicaciones requieren eventos para generar respuestas y lograr la interactividad.
