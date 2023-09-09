@@ -26,18 +26,27 @@
       <a class="previous" on:click="goback">Previous</a>
     </x-if> -->
     <x-if :value="prevUrl">
-      <a attr:href="prevUrl" class="previous" olink>Previous</a>
+      <a attr:href="prevUrl" class="previous" olink>{{locals.previous}}</a>
     </x-if>
     <x-if :value="nextUrl">
-      <a attr:href="nextUrl" class="next" olink>Next</a>
+      <a attr:href="nextUrl" class="next" olink>{{locals.next}}</a>
     </x-if>
   </div>
   <script>
+    import locals from "../locals/main.mjs";
+
     export default {
       data: {
         prevUrl: "",
         nextUrl: "",
         // isBack: false,
+        locals: {},
+      },
+      attached() {
+        this.locals = locals;
+      },
+      detached() {
+        this.locals = {};
       },
       proto: {
         goback(e) {
