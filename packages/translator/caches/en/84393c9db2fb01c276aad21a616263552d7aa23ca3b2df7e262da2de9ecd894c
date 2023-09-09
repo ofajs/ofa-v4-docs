@@ -1,0 +1,1 @@
+In the above example, we first select a `div` element with an `id` of "example". Then, we use the `attr` method to get the `name` attribute of the element and print it to the console. Next, we use the `attr` method to set the `title` attribute of the element to "change title".
