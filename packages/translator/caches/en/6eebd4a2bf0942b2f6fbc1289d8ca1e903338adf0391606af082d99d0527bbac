@@ -1,1 +1,0 @@
-Once the ofa.js loading is complete, a component named `load-module` will be registered globally and can be referenced using the abbreviation `l-m`. It is used similar to the `<script>` tag, by referencing the address of the component you developed through the `src` attribute.

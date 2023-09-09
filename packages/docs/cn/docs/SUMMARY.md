@@ -5,6 +5,7 @@
   - [选择元素和事件相关](./get-started/elements-and-events.md)
   - [实例的基础概念](./get-started/basic-concept.md)
   - [常用属性介绍](./get-started/common-properties.md)
+  - [常用方法介绍](./get-started/common-function.md)
   - [css](./get-started/css.md)
   - [classList 和 data](./get-started/classlist-and-data.md)
   - [盒模型](./get-started/box-model.md)
