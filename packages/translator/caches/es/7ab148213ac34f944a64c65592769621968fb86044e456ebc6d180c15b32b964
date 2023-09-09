@@ -1,0 +1,1 @@
+Después de importar `ofa.js`, se registrará el símbolo `$` en el ámbito global. Puedes seleccionar el primer elemento que cumpla con la condición usando `$('xxx')`, donde `xxx` es el contenido estándar de [selector CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors).

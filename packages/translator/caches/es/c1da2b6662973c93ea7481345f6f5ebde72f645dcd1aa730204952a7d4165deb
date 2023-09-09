@@ -1,0 +1,1 @@
+En el ejemplo, definimos un componente llamado `comp-two`, que utiliza el componente `inject-host` para inyectar estilos. Esto nos permite ajustar los estilos de los elementos dentro del componente `comp-two` mediante los estilos inyectados, sin afectar a otros componentes.

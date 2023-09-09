@@ -1,0 +1,1 @@
+En este ejemplo, creamos una estructura de aplicación utilizando el componente `o-app` y luego cargamos un módulo de página llamado `page1.html` en él.

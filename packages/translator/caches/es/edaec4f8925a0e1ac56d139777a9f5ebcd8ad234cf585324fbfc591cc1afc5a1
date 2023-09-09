@@ -1,0 +1,3 @@
+- En el parámetro `data`, se define el dato con el nombre `testText` y se le asigna un valor inicial de "Soy testText".
+- La declaración `sync:value="testText"` establece una vinculación bidireccional entre el valor del cuadro de texto y el dato `testText`. Por lo tanto, cuando el usuario ingresa contenido en el cuadro de texto, el dato `testText` se actualiza en tiempo real y viceversa.
+- De manera similar, la declaración `sync:txt="testText"` establece una vinculación bidireccional entre la propiedad `txt` del componente personalizado y el dato `testText`. Cuando la propiedad `txt` del componente cambia, el dato `testText` se actualiza en tiempo real y viceversa.

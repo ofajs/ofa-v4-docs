@@ -1,0 +1,21 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hola-mundo</title>
+    <script src="../ofa.js"></script>
+  </head>
+  <body>
+    <div id="desk">Haz clic en el botón</div>
+    <br />
+    <button id="btn">Soy un botón</button>
+    <script>
+      $("#btn").on("click", () => {
+        $("#desk").html = "<b>Hola Mundo</b>";
+      });
+    </script>
+  </body>
+</html>
+```

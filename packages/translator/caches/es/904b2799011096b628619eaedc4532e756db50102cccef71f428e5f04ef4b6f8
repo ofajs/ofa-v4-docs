@@ -1,0 +1,1 @@
+El método `off` se utiliza para eliminar los controladores de eventos vinculados a través del método `on`. Cuando no se necesita más un controlador de eventos para un evento en particular, se puede utilizar el método `off` para eliminarlo del elemento y evitar la ejecución repetida o las fugas de memoria.

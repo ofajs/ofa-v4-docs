@@ -1,0 +1,23 @@
+```javascript
+// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  nestedData: {
+    title: "Parent",
+    children: [
+      {
+        title: "Child 1",
+        children: [
+          { title: "Grandchild 1" },
+          { title: "Grandchild 2" },
+        ],
+      },
+      {
+        title: "Child 2",
+        children: [{ title: "Grandchild 3" }],
+      },
+    ],
+  },
+};
+```

@@ -1,0 +1,1 @@
+El método `formData` se utiliza para generar un objeto que contiene los valores de todos los elementos del formulario. Este objeto reflejará instantáneamente los cambios en los elementos del formulario.

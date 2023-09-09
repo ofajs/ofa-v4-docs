@@ -1,0 +1,1 @@
+Poner toda la lógica en un solo componente no es una elección sabia; podemos dividir la lógica en componentes separados y luego importar otro componente mediante `l-m` para usarlo;

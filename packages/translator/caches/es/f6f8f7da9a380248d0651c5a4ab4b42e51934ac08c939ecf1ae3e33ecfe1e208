@@ -1,0 +1,22 @@
+```html
+<!-- my-single-file-page.html -->
+<template page>
+  <h1>{{pageTitle}}</h1>
+  <p>Welcome to my single file page!</p>
+  <script>
+    // 在单文件模式下，避免使用 import
+    // import data from './other/module.mjs';
+
+    export default async ({ load }) => {
+      // 引用其他模块
+      // const data = await load("./other/module.mjs");
+
+      return {
+        data: {
+          pageTitle: "My Single File Page",
+        },
+      };
+    }
+  </script>
+</template>
+```

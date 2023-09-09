@@ -1,0 +1,1 @@
+ofa.js, a diferencia de otros frameworks de terceros, no adopta el modelo de gestión de estado tradicional. El autor considera que las actualizaciones de estado deberían ser imperceptibles, es decir, los cambios en los datos deberían provocar automáticamente una actualización de los mismos.

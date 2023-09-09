@@ -1,0 +1,1 @@
+En el ejemplo, se importa un componente anidado llamado CompTwo utilizando `<l-m src="./comp-two.html"></l-m>`.

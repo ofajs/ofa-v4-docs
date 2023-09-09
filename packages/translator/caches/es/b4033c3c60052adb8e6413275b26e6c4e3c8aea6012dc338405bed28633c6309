@@ -1,0 +1,1 @@
+`$("xxx").$('xxxx')` es una forma de seleccionar un elemento padre y luego buscar elementos hijos que cumplan cierta condición dentro de ese padre. En este caso, `$("xxx")` selecciona un elemento padre y luego se utiliza `$('xxxx')` para buscar elementos hijos que cumplan la condición dentro de ese padre.

@@ -1,0 +1,1 @@
+En el ejemplo anterior, cuando se hace clic en el botón, se llama al método `increaseCount` del componente principal para aumentar el valor del atributo `count`.

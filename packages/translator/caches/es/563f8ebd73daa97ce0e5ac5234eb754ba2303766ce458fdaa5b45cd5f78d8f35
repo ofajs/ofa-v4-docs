@@ -1,0 +1,1 @@
+El componente `x-fill` te permite llenar dinámicamente contenido en una plantilla, y puede generar contenido diferente según los valores de las propiedades del componente anfitrión. El componente `x-fill` utiliza la propiedad `name` para especificar la plantilla de llenado que se va a utilizar, y pasa los datos a la plantilla de llenado a través de la propiedad `value`.

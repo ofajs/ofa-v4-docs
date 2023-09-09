@@ -1,0 +1,1 @@
+Las instancias creadas con '$' no tienen una propiedad 'children' como los elementos del DOM. Sin embargo, podemos acceder a los elementos secundarios directos de la instancia utilizando índices de matriz:

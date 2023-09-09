@@ -1,0 +1,1 @@
+La forma de utilizarlo es agregar el atributo `:name="key"` en el elemento, donde `name` es el nombre del atributo que se desea establecer en el elemento de destino, y `key` es el nombre clave de la propiedad que se pasa desde el componente personalizado.

@@ -12,7 +12,7 @@ export default {
   // 本地存放段落翻译的地方
   caches: cacheDirs,
   // 需要翻译的版本
-  needs: ["t-cn", "en"],
+  needs: ["t-cn", "en", "es"],
 };
 
 // 语言显示映射表
@@ -20,4 +20,5 @@ export const langMapping = {
   cn: "简体中文",
   "t-cn": "繁体中文",
   en: "English",
+  es: "Lengua española",
 };

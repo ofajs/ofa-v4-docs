@@ -1,0 +1,1 @@
+En el ejemplo anterior, cuando haces clic en el botón "Haz clic", se muestra "¡Botón pulsado!", pero no se activa "¡Div interno pulsado!" y "¡Div externo pulsado!". Esto se debe a que hemos llamado a `event.stopPropagation()` en el controlador de eventos de clic del botón, lo que evita la propagación del evento.

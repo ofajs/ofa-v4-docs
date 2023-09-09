@@ -1,0 +1,6 @@
+```javascript
+const myComponent = $("my-component"); // Obtener instancia del componente
+const shadowContainer = myComponent.shadow; // Obtener el contenedor Shadow DOM del componente
+
+$("my-component").shadow.$("h1").css.color = 'red' // Cambiar el color de h1 en el Shadow DOM a rojo
+```

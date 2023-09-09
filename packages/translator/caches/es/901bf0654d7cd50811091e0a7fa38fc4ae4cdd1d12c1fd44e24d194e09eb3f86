@@ -1,0 +1,11 @@
+```html
+<div>
+    <span>Primero</span>
+    <span>Segundo</span>
+    <span id="target">Tercero</span>
+</div>
+<script>
+    const $spanDestino = $('#target');
+    console.log($spanDestino.index); // Resultado: 2
+</script>
+```

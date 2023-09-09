@@ -19,15 +19,22 @@ export default async (content, lang) => {
     obj[i] = e;
   });
 
+  const str = JSON.stringify(obj).replace(/\n/g, "\\n");
+
   let result;
   switch (lang) {
     case "en": {
-      const str = JSON.stringify(obj).replace(/\n/g, "\\n");
       result = await chat(
         `Translate the value within the object to English, return the object structure: \n${str}`
       );
       break;
     }
+    case "es":
+      // 西班牙语
+      result = await chat(
+        `Translate the value within the object to Spanish, return the object structure: \n${str}`
+      );
+      break;
     default:
       throw "暂不支持这种语言:" + lang;
   }

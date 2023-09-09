@@ -1,0 +1,14 @@
+```javascript
+// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  count: 0,
+};
+
+export const proto = {
+  increaseCount() {
+    this.count++;
+  },
+};
+```

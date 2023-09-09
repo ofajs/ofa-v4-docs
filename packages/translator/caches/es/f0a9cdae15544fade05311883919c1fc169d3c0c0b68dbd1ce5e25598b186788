@@ -1,0 +1,33 @@
+```html
+<!-- home.html --><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./public.css" />
+    <script src="../../ofa.js"></script>
+    <script src="./scsr.min.js"></script>
+  </head>
+  <body>
+    <o-app src="./app.mjs">
+      <template page>
+        <div class="container">
+          <h1 class="title">¡Hola, mundo!</h1>
+          <p class="subtitle">Bienvenido a mi página ofa.js.</p>
+          <div>count => {{count}}</div>
+          <a href="./pages/help.html" olink>IR A AYUDA</a>
+        </div>
+
+        <script>
+          export default async ({ query }) => {
+            return {
+              data: { count: query.count || 0 },
+            };
+          };
+        </script>
+      </template>
+    </o-app>
+  </body>
+</html>
+```

@@ -1,0 +1,6 @@
+```html
+<!-- template.html -->
+<div>
+    <p>Bienvenido, {{username}}!</p>
+</div>
+```

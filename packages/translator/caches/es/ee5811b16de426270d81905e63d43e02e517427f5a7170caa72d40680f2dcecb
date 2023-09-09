@@ -1,0 +1,2 @@
+La renderización condicional le permite insertar contenido diferente en un componente dinámicamente en función de una condición específica. A continuación se muestra un ejemplo de cómo utilizar la renderización condicional dentro de un componente.
+

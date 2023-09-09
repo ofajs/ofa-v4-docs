@@ -1,0 +1,1 @@
+El evento `slotchange` se activa cuando el contenido del slot cambia. Puedes utilizar este evento para realizar operaciones relacionadas con el contenido del slot.

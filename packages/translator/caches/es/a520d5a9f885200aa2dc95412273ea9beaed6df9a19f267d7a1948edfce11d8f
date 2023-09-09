@@ -1,0 +1,1 @@
+A continuación se muestra un ejemplo de personalización de carga para el componente 'o-app'. En este ejemplo, hemos creado una barra de progreso que aumenta gradualmente durante la carga de la página y alcanza el 100% una vez que se completa la carga, luego se elimina el elemento de carga.

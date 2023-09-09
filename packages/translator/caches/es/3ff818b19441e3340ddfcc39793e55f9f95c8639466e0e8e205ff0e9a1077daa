@@ -1,0 +1,27 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atributos Parent y Parents</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <div>
+    <span>
+      <a id="example">Hola Mundo</a>
+    </span>
+  </div>
+  <script>
+    const $a = $('#example');
+
+    const $spanPadre = $a.parent;
+    console.log($spanPadre.tag); // Resultado: "span"
+
+    const $arregloParents = $a.parents;
+    console.log($arregloParents.map($ele => $ele.tag)); // Resultado: ["span", "div", "body", "html"]
+  </script>
+</body>
+</html>
+```

@@ -1,0 +1,1 @@
+En el ejemplo anterior, `x-fill` utiliza una plantilla de llenado llamada `nestedFillTemplate` y pasa un objeto anidado complejo a ella. La plantilla de llenado utiliza `{{ $data.title }}` para renderizar el título del objeto, y también utiliza `x-fill` anidado para llenar el contenido de los elementos secundarios, logrando así una generación de contenido anidado.

@@ -1,0 +1,1 @@
+SCSR renderiza el módulo de página en modo de archivo único sin necesidad de utilizar la etiqueta `o-page`, específicamente anidando el código de plantilla del módulo de página directamente dentro de `o-app`.

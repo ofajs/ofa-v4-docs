@@ -1,0 +1,1 @@
+Dentro del módulo de página, `page._loaded` es una propiedad booleana que se establece en `true` una vez que el contenido de la página ha cargado. Puedes usar esta propiedad para verificar si la página ha cargado completamente.

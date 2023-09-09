@@ -1,0 +1,1 @@
+El método `one` se utiliza para vincular un controlador de eventos que solo se ejecutará una vez cuando se active el evento por primera vez. Después de ejecutarse una vez, el controlador de eventos se eliminará automáticamente para evitar activaciones repetidas.

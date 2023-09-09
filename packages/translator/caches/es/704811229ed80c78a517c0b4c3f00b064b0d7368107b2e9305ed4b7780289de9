@@ -1,0 +1,9 @@
+1. **Implementación independiente**: cada componente y página se puede desarrollar, probar e implementar de forma independiente, lo que permite al equipo lanzar nuevas funcionalidades y solucionar problemas más rápidamente.
+
+2. **Integración**: las aplicaciones desarrolladas con **ofa.js** pueden combinar diferentes módulos en una sola aplicación. Esto se puede lograr compartiendo aplicaciones, páginas, componentes, entre otros.
+
+3. **Equipos separados**: cada módulo frontend (componente/página/aplicación) puede ser desarrollado y mantenido por equipos separados, lo que fomenta la autonomía y la innovación del equipo.
+
+4. **Recursos compartidos**: en un proyecto con **ofa.js**, generalmente existen recursos compartidos como estilos, componentes y páginas, para garantizar la coherencia y la eficiencia.
+
+5. **Carga bajo demanda**: las aplicaciones desarrolladas con **ofa.js** pueden cargar módulos según sea necesario, lo que mejora el rendimiento y la velocidad de carga de la aplicación.

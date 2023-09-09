@@ -1,0 +1,1 @@
+En el ejemplo anterior, cuando haces clic en el botón de envío "Enviar", mostrará "¡Hola, {name}! Envío del formulario prevenido.", pero no mostrará la alerta "¡Formulario enviado!". Esto se debe a que llamamos a `event.preventDefault()` en el controlador de eventos del clic del botón de envío, lo que evita el comportamiento predeterminado de envío del formulario.

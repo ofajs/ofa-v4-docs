@@ -1,0 +1,5 @@
+```javascript
+import "ofa.js"; // esm
+// or
+require("ofa.js"); // cmd
+```

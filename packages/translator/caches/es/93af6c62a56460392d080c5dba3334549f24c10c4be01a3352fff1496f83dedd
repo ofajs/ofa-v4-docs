@@ -1,0 +1,1 @@
+Dentro de un componente, puedes usar la propiedad `on` para realizar bindings de eventos y dotar al componente de capacidad interactiva. Aquí se muestra cómo realizar bindings de eventos dentro de un componente para lograr efectos interactivos.

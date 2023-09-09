@@ -1,0 +1,1 @@
+A continuación, escribe el código del modelo del componente dentro del elemento `<template>`. Luego, debajo del contenido de la plantilla, agrega una etiqueta `<script>` donde incluirás el código JavaScript del componente.

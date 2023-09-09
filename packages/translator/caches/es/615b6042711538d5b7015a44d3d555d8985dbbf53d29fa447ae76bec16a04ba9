@@ -1,0 +1,1 @@
+- `$ele.classList`: Devuelve el objeto classList del elemento, que se utiliza para manipular los nombres de clase del elemento.

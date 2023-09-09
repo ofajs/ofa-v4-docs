@@ -1,0 +1,13 @@
+```html
+<div id="myElement">Hola Mundo</div>
+<script>
+  const myElement = $("#myElement");
+
+  // Establecer el estilo del elemento
+  myElement.css = {
+    color: "red",
+    fontSize: "24px",
+    backgroundColor: "yellow",
+  };
+</script>
+```

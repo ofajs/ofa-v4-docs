@@ -1,0 +1,2 @@
+- El atributo `parent` se utiliza para obtener el elemento padre directo del elemento actual. 
+- El atributo `parents` se utiliza para obtener un arreglo de todos los elementos ancestros del elemento actual (incluyendo el padre del padre, el padre del padre del padre, etc.).

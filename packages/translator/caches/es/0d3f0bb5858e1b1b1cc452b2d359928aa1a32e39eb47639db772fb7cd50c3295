@@ -1,0 +1,1 @@
+SCSR, cuyo nombre completo es Representación de Cliente en el lado del Cliente Estático (Static Client-Side Rendering, en inglés), es una variante de RSC en el que, además de mantener la experiencia de usuario de RSC, permite que las páginas sean rastreadas por los motores de búsqueda en su estado estático.

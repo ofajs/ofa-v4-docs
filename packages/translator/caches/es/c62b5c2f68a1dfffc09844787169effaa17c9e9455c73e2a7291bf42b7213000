@@ -1,0 +1,19 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de evento de clic</title>
+    <script src="../ofa.js"></script>
+  </head>
+  <body>
+    <button id="btn">Abre la consola y haz clic en mí</button>
+    <script>
+      $("#btn").on("click", () => {
+        console.log("¡Se hizo clic en el botón!");
+      });
+    </script>
+  </body>
+</html>
+```

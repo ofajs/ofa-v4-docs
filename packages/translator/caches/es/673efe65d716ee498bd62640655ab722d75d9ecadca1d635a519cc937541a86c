@@ -1,0 +1,6 @@
+- **home**: La página de inicio de la aplicación, es decir, la página que se muestra al cargar inicialmente.
+- **loading**: Contenido que se muestra mientras se carga el módulo cuando se hace clic en un enlace de la página de la aplicación. Puede proporcionar una cadena de texto como contenido de carga.
+- **pageAnime**: Efecto de animación al cambiar de página, utiliza un objeto que contiene propiedades de estilo CSS.
+  - **current**: Estilo de la página actual.
+  - **next**: Estilo de la página que está ingresando.
+  - **previous**: Estilo de la página que está saliendo.
