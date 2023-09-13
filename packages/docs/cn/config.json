@@ -1,19 +1,17 @@
 {
-  "groups": [
+  "github": "https://github.com/kirakiray/ofa.js",
+  "navs": [
     {
-      "type": "example",
-      "path": "cases",
-      "name": "案例教程"
+      "name": "案例教程",
+      "summary": "./cases/SUMMARY.md"
     },
     {
-      "type": "document",
-      "path": "docs",
-      "name": "文档"
+      "name": "文档",
+      "summary": "./docs/SUMMARY.md"
     },
     {
-      "type": "document",
-      "path": "others",
-      "name": "其他"
+      "name": "其他",
+      "summary": "./others/SUMMARY.md"
     }
   ]
 }

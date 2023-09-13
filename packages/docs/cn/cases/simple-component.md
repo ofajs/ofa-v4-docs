@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/simple-component/demo.html" preview demo></a>
+<a href="../../publics/examples/simple-component/my-comp.html" main demo></a>
+<a href="../../publics/examples/simple-component/public.css" demo></a>
+</template>
+
 # 组件的创建和使用
 
 一旦完成对 ofa.js 的加载，全局会注册一个名为 `load-module` 的组件，你可以使用缩写 `l-m` 来引用它。其使用方式类似于 `script` 标签，通过 `src` 属性来引用你开发好的组件地址。
@@ -11,7 +17,3 @@
 需要注意的是，注册的组件名只能使用小写英文字母和 **-** 符号，并且必须包含至少一个 **-**。这个命名规则需要遵循。
 
 通过本示例，你可以了解如何创建一个名为 `my-comp` 的组件，并在另一个页面中使用它。同时可以通过链接外部的 CSS 文件来设置组件的样式。
-
-<a href="../../publics/examples/simple-component/demo.html" preview demo></a>
-<a href="../../publics/examples/simple-component/my-comp.html" main demo></a>
-<a href="../../publics/examples/simple-component/public.css" demo></a>
