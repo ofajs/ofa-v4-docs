@@ -8,14 +8,15 @@
     "url": "git+https://github.com/kirakiray/ofa-v4-docs.git"
   },
   "scripts": {
-    "build": "cd packages/generator && npm run build",
-    "dev": "cd packages/generator && npm run dev",
-    "tb": "nodemon --inspect ../o-book/shell/ ./packages/docs/index.html"
+    "devmon": "nodemon --inspect ../o-book/shell/ dev",
+    "dev": "node ../o-book/shell/ dev",
+    "build": "node ../o-book/shell/ build"
   },
   "author": "Yao",
   "license": "CC-BY-NC-SA-4.0",
   "obook": {
     "input": "./packages/docs/index.html",
-    "output": "../o-book/dist"
+    "output": "../o-book/dist",
+    "port": 44038
   }
 }
