@@ -9,4 +9,4 @@ Con la sintaxis de **propiedad de transmisión**, se puede aplicar los datos del
 
 La forma de utilizarlo es agregar el atributo `:name="key"` en el elemento, donde `name` es el nombre del atributo que se desea establecer en el elemento de destino, y `key` es el nombre clave de la propiedad que se pasa desde el componente personalizado.
 
-之前在提到了<a href='./index.html' olink>使用选择器的方式来设置属性</a>，而这里介绍的是属性传递语法设置属性；
+Antes mencioné <a href='./index.html' olink>la forma de utilizar selectores para establecer atributos</a>, mientras que lo que se presenta aquí es la sintaxis de transmisión de atributos para establecer atributos;

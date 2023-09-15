@@ -9,4 +9,4 @@ With the **property transmission** template syntax, you can apply the component'
 
 The method is to add the attribute `:name="key"` to the element, where `name` is the name of the target element attribute to be set, and `key` is the property key you want to pass from your custom component.
 
-之前在提到了<a href='./index.html' olink>使用选择器的方式来设置属性</a>，而这里介绍的是属性传递语法设置属性；
+Previously, we mentioned using selectors to set attributes in <a href='./index.html' olink>a link</a>, while what is being introduced here is the attribute-passing syntax for setting attributes.

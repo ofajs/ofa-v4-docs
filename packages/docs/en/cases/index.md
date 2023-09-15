@@ -1,4 +1,7 @@
-To learn more about available properties and methods, please refer to the API documentation.
+<template is="exm-article">
+<a href="../../publics/examples/set-props.html" preview></a>
+</template>
+
 # Quick Start
 
 To get started, simply integrate the `ofajs` project into your project by importing the CDN address:

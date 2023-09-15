@@ -1,1 +1,6 @@
-Through this example, you can learn how to create a component called 'my-comp' and use it in another page. You can also set the style of the component by linking an external CSS file.
+<template is="exm-article">
+<a href="../../publics/examples/sync/demo.html" preview></a>
+<a href="../../publics/examples/sync/test-demo.html" main></a>
+<a href="../../publics/examples/sync/custom-input.html"></a>
+</template>
+

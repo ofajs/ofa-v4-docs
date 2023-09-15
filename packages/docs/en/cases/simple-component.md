@@ -1,4 +1,8 @@
-Through this example, you can learn how to create a component called 'my-comp' and use it in another page. You can also set the style of the component by linking an external CSS file.
+<template is="exm-article">
+<a href="../../publics/examples/simple-component/demo.html" preview></a>
+<a href="../../publics/examples/simple-component/my-comp.html" main></a>
+<a href="../../publics/examples/simple-component/public.css"></a>
+</template>
 
 # Component Creation and Usage
 

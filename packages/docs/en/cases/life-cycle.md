@@ -3,7 +3,7 @@
 <a href="../../publics/examples/life-cycle/test-demo.html" main></a>
 </template>
 
-# 生命周期
+# life cycle
 
 Lifecycle hooks provide an opportunity to execute code at different stages of a component. In `ofa.js`, there are five main lifecycle hooks: `created`, `ready`, `watch`, `attached`, and `detached`.
 

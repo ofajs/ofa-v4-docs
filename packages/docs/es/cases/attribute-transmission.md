@@ -9,4 +9,4 @@ El parámetro `attrs` y el parámetro `data` son similares en funcionalidad, los
 
 > Aquí, las **características** se refieren a los [atributos](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) del elemento
 
-在外部使用组件时，也可以通过特性将数据传递到组件内部。需要注意的是，通过特性传递的数据只能是字符串类型。
+Cuando se utiliza un componente externo, también se pueden pasar datos al interior del componente a través de atributos. Es importante tener en cuenta que los datos pasados a través de atributos solo pueden ser de tipo cadena de caracteres.

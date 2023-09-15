@@ -12,4 +12,4 @@ Where
 
 Text rendering is wrapped with double curly braces, i.e. `{{xxx}}`, where xxx represents the attribute name of the component.
 
-案例演示了如何渲染组件元素的 val 属性：
+case demonstrates how to render the val data of a component element:

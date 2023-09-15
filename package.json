@@ -9,8 +9,9 @@
   },
   "scripts": {
     "devmon": "nodemon --inspect ../o-book/shell/ dev",
-    "dev": "node ../o-book/shell/ dev",
-    "build": "node ../o-book/shell/ build"
+    "bmon": "nodemon --inspect ../o-book/shell/ build dev",
+    "dev": "obook dev",
+    "build": "obook build"
   },
   "author": "Yao",
   "license": "CC-BY-NC-SA-4.0",
@@ -18,5 +19,8 @@
     "input": "./packages/docs/index.html",
     "output": "../o-book/dist",
     "port": 44038
+  },
+  "devDependencies": {
+    "o-book": "^2.0.4"
   }
 }

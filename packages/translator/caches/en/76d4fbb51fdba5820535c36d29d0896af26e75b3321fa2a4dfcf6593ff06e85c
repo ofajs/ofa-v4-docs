@@ -1,1 +1,6 @@
-This example demonstrates how to create a component called 'sync'. The component's template contains multiple links. Note that only strings or numbers can be passed as data for syncing, other data types are not supported.
+<template is="exm-article">
+<a href="../../publics/examples/use-app/demo.html" preview></a>
+<a href="../../publics/examples/use-app/page1.html" main></a>
+<a href="../../publics/examples/use-app/page2.html"></a>
+</template>
+

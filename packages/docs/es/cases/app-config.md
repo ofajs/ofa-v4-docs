@@ -16,4 +16,4 @@ Estos parámetros son un módulo ES donde puede configurar los siguientes parám
   - **next**: Estilo de la página que está ingresando.
   - **previous**: Estilo de la página que está saliendo.
 
-通过这种方式，您可以根据应用的需要，自定义首页、加载中样式和页面跳转动画等参数，从而为应用带来更加个性化的体验。
+De esta manera, puedes personalizar la página de inicio, el estilo de carga y las animaciones de transición de página, entre otros parámetros, según las necesidades de tu aplicación, brindando así una experiencia más personalizada.

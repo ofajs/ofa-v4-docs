@@ -11,4 +11,5 @@ Entre ellas. `data` parámetro es utilizado para definir los datos predeterminad
 
 La representación de texto se realiza mediante llaves dobles, es decir `{{xxx}}`, donde xxx representa el nombre del atributo del componente.
 
-案例演示了如何渲染组件元素的 val 属性：
+El caso de uso demuestra cómo representar la propiedad "val" de elementos de componentes:
+
