@@ -1,3 +1,10 @@
+<template is="exm-article">
+<a href="../../publics/examples/use-hash-router/demo.html" preview></a>
+<a href="../../publics/examples/use-hash-router/page1.html" main></a>
+<a href="../../publics/examples/use-hash-router/page2.html"></a>
+<a href="../../publics/examples/use-hash-router/app-config.mjs"></a>
+</template>
+
 # Using hash router
 
 Solo necesitas utilizar el componente `o-router` para asociar las rutas dentro del componente `app` con la página web actual. Una vez que la página y la ruta estén vinculadas, incluso después de recargar la página, el estado de la ruta se mantendrá.
@@ -10,9 +17,4 @@ En este ejemplo, haz clic en el botón <span style='font-family: "iconfont"'>&#x
   <o-app src="./app-config.mjs"></o-app>
 </o-router>
 ```
-
-<a href="../../publics/examples/use-hash-router/demo.html" vista previa demo></a>
-<a href="../../publics/examples/use-hash-router/page1.html" demo principal></a>
-<a href="../../publics/examples/use-hash-router/page2.html" demo></a>
-<a href="../../publics/examples/use-hash-router/app-config.mjs" demo></a>
 

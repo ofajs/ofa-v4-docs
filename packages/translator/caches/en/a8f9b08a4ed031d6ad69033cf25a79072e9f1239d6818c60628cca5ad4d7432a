@@ -1,0 +1,1 @@
+Throughout the example, by using the `inject-host` inside the `comp-two` component, we can flexibly set and apply styles within the component without breaking other component styles.

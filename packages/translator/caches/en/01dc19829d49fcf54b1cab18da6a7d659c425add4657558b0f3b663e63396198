@@ -1,1 +1,0 @@
-Once a component is successfully loaded, it can be used anywhere using the corresponding component name. Even if the `l-m` component is used to load the same component multiple times in different places, the component will not be loaded multiple times. This mechanism ensures component reuse and consistency.

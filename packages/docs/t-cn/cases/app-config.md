@@ -1,3 +1,10 @@
+<template is="exm-article">
+  <a href="../../publics/examples/use-config/demo.html" preview></a>
+  <a href="../../publics/examples/use-config/app-config.mjs" main></a>
+  <a href="../../publics/examples/use-config/page1.html"></a>
+  <a href="../../publics/examples/use-config/page2.html"></a>
+</template>
+
 # 配置 app 參數
 
 您可以通過為 `o-app` 標簽單獨設置外部模塊來配置應用的參數。
@@ -12,8 +19,3 @@
   - **previous**: 表示頁面在要退出時的樣式。
 
 通過這種方式，您可以根據應用的需要，自定義首頁、加載中樣式和頁面跳轉動畫等參數，從而為應用帶來更加個性化的體驗。
-
-<a href="../../publics/examples/use-config/demo.html" preview demo></a>
-<a href="../../publics/examples/use-config/app-config.mjs" main demo></a>
-<a href="../../publics/examples/use-config/page1.html" demo></a>
-<a href="../../publics/examples/use-config/page2.html" demo></a>

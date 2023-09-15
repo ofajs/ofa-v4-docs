@@ -1,3 +1,10 @@
+<template is="exm-article">
+<a href="../../publics/examples/use-hash-router/demo.html" preview></a>
+<a href="../../publics/examples/use-hash-router/page1.html" main></a>
+<a href="../../publics/examples/use-hash-router/page2.html"></a>
+<a href="../../publics/examples/use-hash-router/app-config.mjs"></a>
+</template>
+
 # Using hash router
 
 You can associate the routes within the app component with the current webpage by using the o-router component. Once the page is bound to the route, even if the page is refreshed, the route state will be maintained.
@@ -10,9 +17,4 @@ In this example, please click the <span style='font-family: "iconfont"'>&#xe7cb;
   <o-app src="./app-config.mjs"></o-app>
 </o-router>
 ```
-
-<a href="../../publics/examples/use-hash-router/demo.html" preview demo></a>
-<a href="../../publics/examples/use-hash-router/page1.html" main demo></a>
-<a href="../../publics/examples/use-hash-router/page2.html" demo></a>
-<a href="../../publics/examples/use-hash-router/app-config.mjs" demo></a>
 

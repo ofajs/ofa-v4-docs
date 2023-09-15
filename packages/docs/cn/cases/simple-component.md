@@ -1,7 +1,7 @@
 <template is="exm-article">
-<a href="../../publics/examples/simple-component/demo.html" preview demo></a>
-<a href="../../publics/examples/simple-component/my-comp.html" main demo></a>
-<a href="../../publics/examples/simple-component/public.css" demo></a>
+<a href="../../publics/examples/simple-component/demo.html" preview></a>
+<a href="../../publics/examples/simple-component/my-comp.html" main></a>
+<a href="../../publics/examples/simple-component/public.css"></a>
 </template>
 
 # 组件的创建和使用

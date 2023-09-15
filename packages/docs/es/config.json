@@ -1,1 +1,1 @@
-{"groups":[{"type":"example","path":"cases","name":"Tutoriales de casos"},{"type":"document","path":"docs","name":"Archivo"},{"type":"document","path":"others","name":"el resto"}]}
+{"github":"https://github.com/kirakiray/ofa.js","navs":[{"name":"案例教程","summary":"./cases/SUMMARY.md"},{"name":"文档","summary":"./docs/SUMMARY.md"},{"name":"其他","summary":"./others/SUMMARY.md"}]}

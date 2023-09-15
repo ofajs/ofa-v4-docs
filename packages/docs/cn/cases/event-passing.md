@@ -1,7 +1,7 @@
 <template is="exm-article">
-<a href="../../publics/examples/event-passing/demo.html" preview demo></a>
-<a href="../../publics/examples/event-passing/comp-one.html" main demo></a>
-<a href="../../publics/examples/event-passing/comp-two.html" demo></a>
+<a href="../../publics/examples/event-passing/demo.html" preview></a>
+<a href="../../publics/examples/event-passing/comp-one.html" main></a>
+<a href="../../publics/examples/event-passing/comp-two.html"></a>
 </template>
 
 # 事件传递

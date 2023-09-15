@@ -1,3 +1,7 @@
+<template is="exm-article">
+<a href="../../publics/examples/set-props.html" preview></a>
+</template>
+
 # Empezar rápido
 
 Para empezar, simplemente integra el proyecto `ofajs` en tu proyecto mediante la URL del CDN:
@@ -14,7 +18,4 @@ Después de importar `ofa.js`, se registrará el símbolo `$` en el ámbito glob
 
 En el ejemplo anterior, utilizamos el símbolo `$` para seleccionar tres elementos con diferentes `id`, y modificamos su contenido estableciendo las propiedades `text`, `html` y `value`.
 
-Para obtener más información sobre las propiedades y métodos disponibles, consulta la documentación de la API.
-
-<a href="../../publics/examples/set-props.html" demo preview></a>
-
+Para obtener más información sobre las propiedades y métodos disponibles, consulte la documentación de la API.

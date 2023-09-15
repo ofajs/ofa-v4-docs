@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/life-cycle/demo.html" preview></a>
+<a href="../../publics/examples/life-cycle/test-demo.html" main></a>
+</template>
+
 # Ciclo de vida
 
 Los hooks del ciclo de vida proporcionan la oportunidad de ejecutar código en diferentes etapas del componente. En `ofa.js`, hay cinco hooks principales del ciclo de vida que son: `created`, `ready`, `watch`, `attached` y `detached`.
@@ -11,7 +16,4 @@ Los hooks del ciclo de vida proporcionan la oportunidad de ejecutar código en d
 - **attached()**: Se llama cuando el componente se agrega al documento, en este momento puede realizar operaciones de interacción con el entorno externo, como obtener la apariencia del componente o inicializar la lógica de datos compartidos.
 
 - **detached()**: Se llama cuando el componente se elimina del documento. En esta etapa, puede realizar tareas de limpieza, cancelar la interacción con el entorno externo y liberar recursos.
-
-<a href="../../publics/examples/life-cycle/demo.html" preview demo></a>
-<a href="../../publics/examples/life-cycle/test-demo.html" main demo></a>
 

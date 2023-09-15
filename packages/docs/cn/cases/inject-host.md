@@ -1,7 +1,7 @@
 <template is="exm-article">
-<a href="../../publics/examples/inject-host/demo.html" preview demo></a>
-<a href="../../publics/examples/inject-host/comp-one.html" demo></a>
-<a href="../../publics/examples/inject-host/comp-two.html" main demo></a>
+<a href="../../publics/examples/inject-host/demo.html" preview></a>
+<a href="../../publics/examples/inject-host/comp-one.html"></a>
+<a href="../../publics/examples/inject-host/comp-two.html" main></a>
 </template>
 
 # inject-host 组件

@@ -23,14 +23,14 @@ const init = async () => {
     const langLibs = await cachesReader.read(lang);
 
     // 转换 config.json
-    const groupsNames = await fanyi(
-      configData.groups.map((e) => e.name),
+    const navNames = await fanyi(
+      configData.navs.map((e) => e.name),
       lang
     );
 
     const jdata = JSON.parse(JSON.stringify(configData));
-    jdata.groups.forEach((e, i) => {
-      e.name = groupsNames[i];
+    jdata.navs.forEach((e, i) => {
+      e.name = navNames[i];
     });
 
     const outpter = await docsDir.mkdir(lang, true);

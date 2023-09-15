@@ -1,3 +1,10 @@
+<template is="exm-article">
+  <a href="../../publics/examples/use-config/demo.html" preview></a>
+  <a href="../../publics/examples/use-config/app-config.mjs" main></a>
+  <a href="../../publics/examples/use-config/page1.html"></a>
+  <a href="../../publics/examples/use-config/page2.html"></a>
+</template>
+
 # Configurar parámetros de la aplicación
 
 Puede configurar los parámetros de la aplicación proporcionando un módulo externo para la etiqueta `o-app`.
@@ -9,9 +16,4 @@ Estos parámetros son un módulo ES donde puede configurar los siguientes parám
   - **next**: Estilo de la página que está ingresando.
   - **previous**: Estilo de la página que está saliendo.
 
-A través de este método, puede personalizar la página principal, los estilos de carga y las animaciones de cambio de página según las necesidades de la aplicación, para brindar una experiencia más personalizada a la aplicación.
-
-<a href="../../publics/examples/use-config/demo.html" preview demo></a>
-<a href="../../publics/examples/use-config/app-config.mjs" main demo></a>
-<a href="../../publics/examples/use-config/page1.html" demo></a>
-<a href="../../publics/examples/use-config/page2.html" demo></a>
+通过这种方式，您可以根据应用的需要，自定义首页、加载中样式和页面跳转动画等参数，从而为应用带来更加个性化的体验。

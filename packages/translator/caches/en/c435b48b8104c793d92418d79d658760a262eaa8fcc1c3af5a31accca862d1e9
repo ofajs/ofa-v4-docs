@@ -1,1 +1,0 @@
-When using components externally, data can also be passed to the components through features. It should be noted that the data passed through features can only be of type string.

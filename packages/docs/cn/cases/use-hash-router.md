@@ -1,8 +1,8 @@
 <template is="exm-article">
-<a href="../../publics/examples/use-hash-router/demo.html" preview demo></a>
-<a href="../../publics/examples/use-hash-router/page1.html" main demo></a>
-<a href="../../publics/examples/use-hash-router/page2.html" demo></a>
-<a href="../../publics/examples/use-hash-router/app-config.mjs" demo></a>
+<a href="../../publics/examples/use-hash-router/demo.html" preview></a>
+<a href="../../publics/examples/use-hash-router/page1.html" main></a>
+<a href="../../publics/examples/use-hash-router/page2.html"></a>
+<a href="../../publics/examples/use-hash-router/app-config.mjs"></a>
 </template>
 
 # 使用 hash router

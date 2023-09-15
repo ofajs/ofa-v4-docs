@@ -1,6 +1,6 @@
 <template is="exm-article">
-<a href="../../publics/examples/property-transmission/demo.html" preview demo></a>
-<a href="../../publics/examples/property-transmission/test-demo.html" main demo></a>
+<a href="../../publics/examples/property-transmission/demo.html" preview></a>
+<a href="../../publics/examples/property-transmission/test-demo.html" main></a>
 </template>
 
 # 属性传递

@@ -1,6 +1,6 @@
 <template is="exm-article">
-<a href="../../publics/examples/simple-btn/demo.html" preview demo></a>
-<a href="../../publics/examples/simple-btn/simple-btn.html" main demo></a>
+<a href="../../publics/examples/simple-btn/demo.html" preview></a>
+<a href="../../publics/examples/simple-btn/simple-btn.html" main></a>
 </template>
 
 # 组件插槽

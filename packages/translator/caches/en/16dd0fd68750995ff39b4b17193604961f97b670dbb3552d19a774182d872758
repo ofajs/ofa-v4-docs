@@ -1,0 +1,1 @@
+This example demonstrates how to create a component called 'sync'. The component's template contains multiple links. Note that only strings or numbers can be passed as data for syncing, other data types are not supported.

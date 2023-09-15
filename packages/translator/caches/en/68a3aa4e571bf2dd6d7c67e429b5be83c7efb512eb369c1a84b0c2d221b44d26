@@ -1,1 +1,0 @@
-It is worth noting that data synchronization can only pass **strings** or **numbers**, and cannot pass other data types.

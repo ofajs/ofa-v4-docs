@@ -1,7 +1,7 @@
 <template is="exm-article">
-<a href="../../publics/examples/use-app/demo.html" preview demo></a>
-<a href="../../publics/examples/use-app/page1.html" main demo></a>
-<a href="../../publics/examples/use-app/page2.html" demo></a>
+<a href="../../publics/examples/use-app/demo.html" preview></a>
+<a href="../../publics/examples/use-app/page1.html" main></a>
+<a href="../../publics/examples/use-app/page2.html"></a>
 </template>
 
 # 使用 app 组件

@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/condition/demo.html" preview></a>
+<a href="../../publics/examples/condition/test-demo.html" main></a>
+</template>
+
 # renderizado condicional
 
 Dentro de las plantillas hay componentes de plantilla además de la sintaxis de plantilla;
@@ -13,7 +18,4 @@ En este ejemplo, creamos un componente llamado `test-demo`. El componente contie
 - La etiqueta `<x-else>` no requiere un atributo `value`, se renderizará su contenido cuando ninguna de las condiciones anteriores se cumpla. En este ejemplo, si `count` no es par ni un múltiplo de 3, aparecerá un texto verde. También se puede usar `x-else` inmediatamente después de `x-if`;
 
 De esta manera, puede renderizar contenido diferente dinámicamente según diferentes condiciones, logrando un efecto de interacción y presentación flexible.
-
-<a href="../../publics/examples/condition/demo.html" preview demo></a>
-<a href="../../publics/examples/condition/test-demo.html" main demo></a>
 

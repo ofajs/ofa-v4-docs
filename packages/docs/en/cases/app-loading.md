@@ -1,3 +1,10 @@
+<template is="exm-article">
+  <a href="../../publics/examples/app-loading/demo.html" preview></a>
+  <a href="../../publics/examples/app-loading/app-config.mjs" main></a>
+  <a href="../../publics/examples/app-loading/page1.html"></a>
+  <a href="../../publics/examples/app-loading/page2.html"></a>
+</template>
+
 # Customize loading for app
 
 Here is an example of customizing loading for the `o-app` component. In this example, we create a beautiful progress bar for loading, which gradually grows during page loading, reaches 100% directly after loading is complete, and then removes the loading element.
@@ -37,7 +44,3 @@ export const loading = () => {
 
 Through this code, you can add a unique loading effect to your application, giving users a better experience during page transitions.
 
-<a href="../../publics/examples/app-loading/demo.html" preview demo></a>
-<a href="../../publics/examples/app-loading/app-config.mjs" main demo></a>
-<a href="../../publics/examples/app-loading/page1.html" demo></a>
-<a href="../../publics/examples/app-loading/page2.html" demo></a>

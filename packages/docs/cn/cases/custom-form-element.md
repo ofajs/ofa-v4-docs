@@ -1,7 +1,7 @@
 <template is="exm-article">
-<a href="../../publics/examples/custom-form-element/demo.html" preview demo></a>
-<a href="../../publics/examples/custom-form-element/test-demo.html" main demo></a>
-<a href="../../publics/examples/custom-form-element/custom-input.html" demo></a>
+<a href="../../publics/examples/custom-form-element/demo.html" preview></a>
+<a href="../../publics/examples/custom-form-element/test-demo.html" main></a>
+<a href="../../publics/examples/custom-form-element/custom-input.html"></a>
 </template>
 
 # 自定义表单组件

@@ -1,8 +1,8 @@
 <template is="exm-article">
 <a href="../../publics/examples/use-scsr/page1.html" main demo preview></a>
-<a href="../../publics/examples/use-scsr/page2.html" demo></a>
-<a href="../../publics/examples/use-scsr/public.css" demo></a>
-<a href="../../publics/examples/use-scsr/app-config.mjs" demo></a>
+<a href="../../publics/examples/use-scsr/page2.html"></a>
+<a href="../../publics/examples/use-scsr/public.css"></a>
+<a href="../../publics/examples/use-scsr/app-config.mjs"></a>
 </template>
 
 # 使用 SCSR 方案

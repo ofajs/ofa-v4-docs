@@ -1,1 +1,1 @@
-{"groups":[{"type":"example","path":"cases","name":"Tutorial"},{"type":"document","path":"docs","name":"Documentation"},{"type":"document","path":"others","name":"Other"}]}
+{"github":"https://github.com/kirakiray/ofa.js","navs":[{"name":"Tutorial","summary":"./cases/SUMMARY.md"},{"name":"Document","summary":"./docs/SUMMARY.md"},{"name":"Other","summary":"./others/SUMMARY.md"}]}

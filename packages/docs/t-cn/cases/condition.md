@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/condition/demo.html" preview></a>
+<a href="../../publics/examples/condition/test-demo.html" main></a>
+</template>
+
 # 條件渲染
 
 模板內除了有模板語法，也有模板組件；
@@ -13,7 +18,4 @@
 - `<x-else>` 標簽不需要 `value` 屬性，它會在前面的條件都不滿足時渲染其內部的內容。在這個示例中，如果 `count` 既不是偶數也不是 3 的倍數，將顯示綠色文本。使用 `x-else` 時也可以緊跟在 `x-if` 後面；
 
 通過這種方式，您可以根據不同的條件動態地渲染不同的內容，實現靈活的交互和展示效果。
-
-<a href="../../publics/examples/condition/demo.html" preview demo></a>
-<a href="../../publics/examples/condition/test-demo.html" main demo></a>
 

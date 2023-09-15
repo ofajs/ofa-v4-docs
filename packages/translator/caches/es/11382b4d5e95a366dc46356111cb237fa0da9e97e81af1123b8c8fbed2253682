@@ -1,1 +1,0 @@
-This example demonstrates how to create a component named 'simple-btn'. The component's template contains a slot where content can be inserted into the component. By adding the ':host' selector to the component's style, styles can be added to the component. On another page, use the 'l-m' component to reference the 'simple-btn' component and insert content into it.

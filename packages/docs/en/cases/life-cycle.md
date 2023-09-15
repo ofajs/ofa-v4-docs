@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/life-cycle/demo.html" preview></a>
+<a href="../../publics/examples/life-cycle/test-demo.html" main></a>
+</template>
+
 # 生命周期
 
 Lifecycle hooks provide an opportunity to execute code at different stages of a component. In `ofa.js`, there are five main lifecycle hooks: `created`, `ready`, `watch`, `attached`, and `detached`.
@@ -11,7 +16,4 @@ Lifecycle hooks provide an opportunity to execute code at different stages of a 
 - **attached()**: Called when the component is added to the document. You can perform operations that interact with the external environment, such as obtaining the appearance of the component or initializing shared data.
 
 - **detached()**: Called when the component is removed from the document. At this stage, you can perform cleanup, cancel interaction with the external environment, and release resources.
-
-<a href="../../publics/examples/life-cycle/demo.html" preview demo></a>
-<a href="../../publics/examples/life-cycle/test-demo.html" main demo></a>
 

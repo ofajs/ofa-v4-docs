@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/use-app/demo.html" preview></a>
+<a href="../../publics/examples/use-app/page1.html" main></a>
+<a href="../../publics/examples/use-app/page2.html"></a>
+</template>
+
 # 使用 app 組件
 
 在 `ofa.js` 中，您可以使用 `o-app` 組件來創建整個應用的布局結構，並在其中加載不同的頁面模塊。通過使用 `o-app` 組件、`o-page` 組件和頁面模塊，您可以構建整個應用的頁面結構，並實現頁面之間的導航
@@ -16,8 +22,3 @@
 在 `page1.html` 頁面模塊中，我們定義了一個標題和一個按鈕，點擊按鈕會跳轉到另一個頁面模塊 `page2.html`。我們還添加了一個帶有 `olink` 屬性的鏈接，點擊鏈接同樣會導航到 `page2.html`。
 
 在 `page2.html` 頁面模塊中，我們同樣定義了一個標題和一個按鈕，點擊按鈕會返回上一頁，實現頁面導航。
-
-<a href="../../publics/examples/use-app/demo.html" preview demo></a>
-<a href="../../publics/examples/use-app/page1.html" main demo></a>
-<a href="../../publics/examples/use-app/page2.html" demo></a>
-

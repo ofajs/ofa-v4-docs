@@ -1,6 +1,6 @@
 <template is="exm-article">
-<a href="../../publics/examples/fill-var/demo.html" preview demo></a>
-<a href="../../publics/examples/fill-var/test-demo.html" main demo></a>
+<a href="../../publics/examples/fill-var/demo.html" preview></a>
+<a href="../../publics/examples/fill-var/test-demo.html" main></a>
 </template>
 
 # 填充渲染

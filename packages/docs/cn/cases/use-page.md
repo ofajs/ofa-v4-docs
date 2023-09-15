@@ -1,6 +1,6 @@
 <template is="exm-article">
-<a href="../../publics/examples/use-page/demo.html" preview demo></a>
-<a href="../../publics/examples/use-page/page.html" main demo></a>
+<a href="../../publics/examples/use-page/demo.html" preview></a>
+<a href="../../publics/examples/use-page/page.html" main></a>
 </template>
 
 # 使用页面组件

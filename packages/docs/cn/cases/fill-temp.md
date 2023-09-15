@@ -1,6 +1,6 @@
 <template is="exm-article">
-<a href="../../publics/examples/fill-temps/demo.html" preview demo></a>
-<a href="../../publics/examples/fill-temps/test-demo.html" main demo></a>
+<a href="../../publics/examples/fill-temps/demo.html" preview></a>
+<a href="../../publics/examples/fill-temps/test-demo.html" main></a>
 </template>
 
 # 递归填充渲染

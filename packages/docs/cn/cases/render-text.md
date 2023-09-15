@@ -1,6 +1,6 @@
 <template is="exm-article">
-<a href="../../publics/examples/render-text/demo.html" preview demo></a>
-<a href="../../publics/examples/render-text/text-demo.html" main demo></a>
+<a href="../../publics/examples/render-text/demo.html" preview></a>
+<a href="../../publics/examples/render-text/text-demo.html" main></a>
 </template>
 
 # 文本渲染
