@@ -22,6 +22,6 @@
     "port": 44038
   },
   "devDependencies": {
-    "o-book": "^2.0.7"
+    "o-book": "^2.0.8"
   }
 }
