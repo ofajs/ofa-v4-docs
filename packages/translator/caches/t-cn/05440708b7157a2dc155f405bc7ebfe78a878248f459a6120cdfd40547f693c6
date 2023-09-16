@@ -1,0 +1,6 @@
+<template is="exm-article">
+<a href="../../publics/examples/simple-component/demo.html" preview></a>
+<a href="../../publics/examples/simple-component/my-comp.html" main></a>
+<a href="../../publics/examples/simple-component/public.css"></a>
+</template>
+

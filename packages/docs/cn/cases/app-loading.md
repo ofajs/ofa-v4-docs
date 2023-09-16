@@ -1,3 +1,10 @@
+<template is="exm-article">
+  <a href="../../publics/examples/app-loading/demo.html" preview></a>
+  <a href="../../publics/examples/app-loading/app-config.mjs" main></a>
+  <a href="../../publics/examples/app-loading/page1.html"></a>
+  <a href="../../publics/examples/app-loading/page2.html"></a>
+</template>
+
 # 为 app 定制 loading
 
 以下是一个为 `o-app` 组件定制 loading 的示例。在这个示例中，我们为 loading 创建了一个漂亮的进度条，它会在页面加载期间逐渐增长，加载完成后会直接到达 100%，然后将 loading 元素删除。
@@ -37,7 +44,3 @@ export const loading = () => {
 
 通过这段代码，您可以为您的应用添加一个独特的加载效果，让用户在页面切换过程中有更好的体验。
 
-<a href="../../publics/examples/app-loading/demo.html" preview demo></a>
-<a href="../../publics/examples/app-loading/app-config.mjs" main demo></a>
-<a href="../../publics/examples/app-loading/page1.html" demo></a>
-<a href="../../publics/examples/app-loading/page2.html" demo></a>

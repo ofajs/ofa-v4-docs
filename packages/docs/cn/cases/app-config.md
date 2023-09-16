@@ -1,3 +1,10 @@
+<template is="exm-article">
+  <a href="../../publics/examples/use-config/demo.html" preview></a>
+  <a href="../../publics/examples/use-config/app-config.mjs" main></a>
+  <a href="../../publics/examples/use-config/page1.html"></a>
+  <a href="../../publics/examples/use-config/page2.html"></a>
+</template>
+
 # 配置 app 参数
 
 您可以通过为 `o-app` 标签单独设置外部模块来配置应用的参数。
@@ -12,8 +19,3 @@
   - **previous**: 表示页面在要退出时的样式。
 
 通过这种方式，您可以根据应用的需要，自定义首页、加载中样式和页面跳转动画等参数，从而为应用带来更加个性化的体验。
-
-<a href="../../publics/examples/use-config/demo.html" preview demo></a>
-<a href="../../publics/examples/use-config/app-config.mjs" main demo></a>
-<a href="../../publics/examples/use-config/page1.html" demo></a>
-<a href="../../publics/examples/use-config/page2.html" demo></a>

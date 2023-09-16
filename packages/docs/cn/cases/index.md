@@ -1,3 +1,7 @@
+<template is="exm-article">
+<a href="../../publics/examples/set-props.html" preview></a>
+</template>
+
 # 快速开始
 
 要开始使用，只需通过引入 CDN 地址将项目 `ofajs` 集成到你的项目中：
@@ -15,5 +19,3 @@
 在上述示例中，我们使用了 `$` 符号来选择三个具有不同 `id` 的元素，并通过设置 `text` 、 `html` 和 `value` 属性来修改其内容。
 
 要了解更多可用的属性和方法，请查阅 API 文档。
-
-<a href="../../publics/examples/set-props.html" demo preview></a>

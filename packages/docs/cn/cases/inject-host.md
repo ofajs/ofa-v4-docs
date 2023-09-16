@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/inject-host/demo.html" preview></a>
+<a href="../../publics/examples/inject-host/comp-one.html"></a>
+<a href="../../publics/examples/inject-host/comp-two.html" main></a>
+</template>
+
 # inject-host 组件
 
 鉴于 Web Components 的隔离性，很难直接修改组件插槽内元素的样式。为了应对这个问题，ofa.js 提供了一个名为 `inject-host` 的组件；`inject-host` 组件会向宿主层注入样式，从而更灵活地配置组件的外观。
@@ -13,7 +19,3 @@
 - `inject-host` 也可以注入外部的样式表文件，通过 `<link rel="stylesheet" href="target/style.css">` 的方式。
 
 在整个示例中，通过使用 `comp-two` 组件内的 `inject-host`，我们可以在不破坏其他组件样式的情况下，灵活地设置并应用组件内部的样式。
-
-<a href="../../publics/examples/inject-host/demo.html" preview demo></a>
-<a href="../../publics/examples/inject-host/comp-one.html" demo></a>
-<a href="../../publics/examples/inject-host/comp-two.html" main demo></a>

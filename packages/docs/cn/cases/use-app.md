@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/use-app/demo.html" preview></a>
+<a href="../../publics/examples/use-app/page1.html" main></a>
+<a href="../../publics/examples/use-app/page2.html"></a>
+</template>
+
 # 使用 app 组件
 
 在 `ofa.js` 中，您可以使用 `o-app` 组件来创建整个应用的布局结构，并在其中加载不同的页面模块。通过使用 `o-app` 组件、`o-page` 组件和页面模块，您可以构建整个应用的页面结构，并实现页面之间的导航
@@ -16,7 +22,3 @@
 在 `page1.html` 页面模块中，我们定义了一个标题和一个按钮，点击按钮会跳转到另一个页面模块 `page2.html`。我们还添加了一个带有 `olink` 属性的链接，点击链接同样会导航到 `page2.html`。
 
 在 `page2.html` 页面模块中，我们同样定义了一个标题和一个按钮，点击按钮会返回上一页，实现页面导航。
-
-<a href="../../publics/examples/use-app/demo.html" preview demo></a>
-<a href="../../publics/examples/use-app/page1.html" main demo></a>
-<a href="../../publics/examples/use-app/page2.html" demo></a>

@@ -1,0 +1,6 @@
+<template is="exm-article">
+<a href="../../publics/examples/nested-component/demo.html" preview></a>
+<a href="../../publics/examples/nested-component/comp-one.html" main></a>
+<a href="../../publics/examples/nested-component/comp-two.html"></a>
+</template>
+

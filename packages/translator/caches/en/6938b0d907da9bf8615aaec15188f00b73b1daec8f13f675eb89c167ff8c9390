@@ -1,0 +1,1 @@
+In this example, we can see how to use the `formData` method to automatically map form data to the `fdata` object. This allows you to access or modify the values of form elements by manipulating the `fdata` object, and these changes will also be automatically synchronized to the corresponding form elements.

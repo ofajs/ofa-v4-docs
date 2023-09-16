@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/life-cycle/demo.html" preview></a>
+<a href="../../publics/examples/life-cycle/test-demo.html" main></a>
+</template>
+
 # 生命周期
 
 生命周期鉤子函數提供了在組件不同階段執行代碼的機會。在 `ofa.js` 中，有五個主要的生命周期鉤子函數，它們分別是：`created`、`ready`、`watch`、`attached` 和 `detached`。
@@ -11,7 +16,4 @@
 - **attached()**: 當組件被添加到 document 中時調用，此時可以進行與外部環境交互的操作，如獲取組件外觀或初始化共享數據的邏輯。
 
 - **detached()**: 當組件從 document 中移除時調用。在這個階段，您可以執行清理工作，取消與外部環境的交互，並釋放資源。
-
-<a href="../../publics/examples/life-cycle/demo.html" preview demo></a>
-<a href="../../publics/examples/life-cycle/test-demo.html" main demo></a>
 

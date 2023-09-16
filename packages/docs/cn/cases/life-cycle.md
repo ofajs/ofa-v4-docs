@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/life-cycle/demo.html" preview></a>
+<a href="../../publics/examples/life-cycle/test-demo.html" main></a>
+</template>
+
 # 生命周期
 
 生命周期钩子函数提供了在组件不同阶段执行代码的机会。在 `ofa.js` 中，有五个主要的生命周期钩子函数，它们分别是：`created`、`ready`、`watch`、`attached` 和 `detached`。
@@ -12,6 +17,4 @@
 
 - **detached()**: 当组件从 document 中移除时调用。在这个阶段，您可以执行清理工作，取消与外部环境的交互，并释放资源。
 
-<a href="../../publics/examples/life-cycle/demo.html" preview demo></a>
-<a href="../../publics/examples/life-cycle/test-demo.html" main demo></a>
 

@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/sync/demo.html" preview></a>
+<a href="../../publics/examples/sync/test-demo.html" main></a>
+<a href="../../publics/examples/sync/custom-input.html"></a>
+</template>
+
 # 雙向數據綁定
 
 通過使用 `sync` 語法，您可以在用戶界面的交互元素（例如輸入框或自定義組件）與數據模型之間建立實時的雙向關聯。
@@ -11,8 +17,3 @@
 通過雙向數據綁定，您可以輕松地在用戶界面和數據模型之間建立聯系，使得數據的變化能夠自動反映在界面上，同時用戶在界面上的輸入也能立即影響到數據模型。
 
 值得注意的是，數據同步只能傳遞 **字符串** 或 **數字**，無法傳遞其他數據類型。
-
-<a href="../../publics/examples/sync/demo.html" preview demo></a>
-<a href="../../publics/examples/sync/test-demo.html" main demo></a>
-<a href="../../publics/examples/sync/custom-input.html" demo></a>
-

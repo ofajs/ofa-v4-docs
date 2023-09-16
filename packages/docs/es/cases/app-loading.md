@@ -1,3 +1,10 @@
+<template is="exm-article">
+  <a href="../../publics/examples/app-loading/demo.html" preview></a>
+  <a href="../../publics/examples/app-loading/app-config.mjs" main></a>
+  <a href="../../publics/examples/app-loading/page1.html"></a>
+  <a href="../../publics/examples/app-loading/page2.html"></a>
+</template>
+
 # Personalizar la carga de la aplicación
 
 A continuación se muestra un ejemplo de personalización de carga para el componente 'o-app'. En este ejemplo, hemos creado una barra de progreso que aumenta gradualmente durante la carga de la página y alcanza el 100% una vez que se completa la carga, luego se elimina el elemento de carga.
@@ -37,7 +44,3 @@ export const loading = () => {
 
 A través de este código, puedes agregar un efecto de carga único a tu aplicación para que los usuarios tengan una mejor experiencia durante el cambio de páginas.
 
-<a href="../../publics/examples/app-loading/demo.html" preview demo></a>
-<a href="../../publics/examples/app-loading/app-config.mjs" main demo></a>
-<a href="../../publics/examples/app-loading/page1.html" demo></a>
-<a href="../../publics/examples/app-loading/page2.html" demo></a>

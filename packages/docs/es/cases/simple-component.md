@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/simple-component/demo.html" preview></a>
+<a href="../../publics/examples/simple-component/my-comp.html" main></a>
+<a href="../../publics/examples/simple-component/public.css"></a>
+</template>
+
 # Component creation and usage
 
 Una vez que se complete la carga de ofa.js, se registrará globalmente un componente llamado `load-module`, que se puede referenciar utilizando la abreviatura `l-m`. Su uso es similar a la etiqueta `script`, mediante el uso del atributo `src` para referenciar la dirección de tu componente desarrollado.
@@ -10,9 +16,4 @@ Next, simply use the 'l-m' component to reference your developed component. On t
 
 It is important to note that the registered component name can only use lowercase letters and the hyphen '-' symbol, and must contain at least one '-'. This naming rule must be followed.
 
-Through this example, you can learn how to create a component named 'my-comp' and use it on another page. You can also use an external CSS file to style the component.
-
-<a href="../../publics/examples/simple-component/demo.html" preview demo></a>
-<a href="../../publics/examples/simple-component/my-comp.html" main demo></a>
-<a href="../../publics/examples/simple-component/public.css" demo></a>
-
+A través de este ejemplo, puedes aprender cómo crear un componente llamado `my-comp` y usarlo en otra página. También puedes establecer el estilo del componente mediante la vinculación de una hoja de estilo externa.

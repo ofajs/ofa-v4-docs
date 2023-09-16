@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/sync/demo.html" preview></a>
+<a href="../../publics/examples/sync/test-demo.html" main></a>
+<a href="../../publics/examples/sync/custom-input.html"></a>
+</template>
+
 # Two-way data binding
 
 By using the `sync` syntax, you can establish a real-time, two-way relationship between interactive elements (such as input fields or custom components) in the user interface and the data model.
@@ -10,9 +16,5 @@ The following example demonstrates how to use the `sync` attribute in a componen
 
 Through two-way data binding, you can easily establish a connection between the user interface and the data model, so that changes in the data can be automatically reflected in the interface, and user input on the interface can immediately affect the data model.
 
-It is worth noting that data synchronization can only pass **strings** or **numbers**, and cannot pass other data types.
-
-<a href="../../publics/examples/sync/demo.html" preview demo></a>
-<a href="../../publics/examples/sync/test-demo.html" main demo></a>
-<a href="../../publics/examples/sync/custom-input.html" demo></a>
+This example shows how to create a component called 'simple-btn'. The component's template contains a slot where content can be inserted. Add styles to the component by using the ':host' selector. In another page, use the 'l-m' component to reference the 'simple-btn' component and insert content into it.
 

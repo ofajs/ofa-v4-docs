@@ -1,0 +1,1 @@
+En todo el ejemplo, utilizando el componente 'comp-two' dentro de 'inject-host', podemos establecer y aplicar de manera flexible los estilos internos del componente sin interferir con los estilos de otros componentes.

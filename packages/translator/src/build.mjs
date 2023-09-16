@@ -23,19 +23,19 @@ const init = async () => {
     const langLibs = await cachesReader.read(lang);
 
     // 转换 config.json
-    const groupsNames = await fanyi(
-      configData.groups.map((e) => e.name),
-      lang
-    );
+    // const navNames = await fanyi(
+    //   configData.navs.map((e) => e.name),
+    //   lang
+    // );
 
-    const jdata = JSON.parse(JSON.stringify(configData));
-    jdata.groups.forEach((e, i) => {
-      e.name = groupsNames[i];
-    });
+    // const jdata = JSON.parse(JSON.stringify(configData));
+    // jdata.navs.forEach((e, i) => {
+    //   e.name = navNames[i];
+    // });
 
-    const outpter = await docsDir.mkdir(lang, true);
+    // const outpter = await docsDir.mkdir(lang, true);
 
-    outpter.write("config.json", JSON.stringify(jdata));
+    // outpter.write("config.json", JSON.stringify(jdata));
 
     // 写入正文
     for (let p of Object.keys(articles)) {

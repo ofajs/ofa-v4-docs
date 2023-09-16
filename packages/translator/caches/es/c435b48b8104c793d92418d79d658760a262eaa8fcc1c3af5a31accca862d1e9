@@ -1,1 +1,0 @@
-Al usar componentes externamente, también puedes transmitir datos al interior del componente a través de características. Cabe destacar que los datos transmitidos a través de características solo pueden ser de tipo cadena.

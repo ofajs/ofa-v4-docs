@@ -1,3 +1,10 @@
+<template is="exm-article">
+<a href="../../publics/examples/use-hash-router/demo.html" preview></a>
+<a href="../../publics/examples/use-hash-router/page1.html" main></a>
+<a href="../../publics/examples/use-hash-router/page2.html"></a>
+<a href="../../publics/examples/use-hash-router/app-config.mjs"></a>
+</template>
+
 # 使用 hash router
 
 只需使用 o-router 组件，即可将 app 组件内的路由与当前网页关联起来。一旦页面与路由绑定，即使进行页面刷新，也能保持页面的路由状态。
@@ -10,8 +17,3 @@
   <o-app src="./app-config.mjs"></o-app>
 </o-router>
 ```
-
-<a href="../../publics/examples/use-hash-router/demo.html" preview demo></a>
-<a href="../../publics/examples/use-hash-router/page1.html" main demo></a>
-<a href="../../publics/examples/use-hash-router/page2.html" demo></a>
-<a href="../../publics/examples/use-hash-router/app-config.mjs" demo></a>

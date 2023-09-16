@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/render-text/demo.html" preview></a>
+<a href="../../publics/examples/render-text/text-demo.html" main></a>
+</template>
+
 # 文本渲染
 
 在组件文件中，你可以添加一个 `script` 标签来编写组件的逻辑代码。通过暴露的 `default` 对象，可以设置组件参数。
@@ -7,6 +12,3 @@
 文本渲染采用双大括号进行包裹，即 `{{xxx}}`，其中的 xxx 表示组件的属性名；
 
 案例演示了如何渲染组件元素的 val 属性：
-
-<a href="../../publics/examples/render-text/demo.html" preview demo></a>
-<a href="../../publics/examples/render-text/text-demo.html" main demo></a>

@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/condition/demo.html" preview></a>
+<a href="../../publics/examples/condition/test-demo.html" main></a>
+</template>
+
 # Conditional Rendering
 
 In addition to template syntax, templates also have template components;
@@ -13,7 +18,4 @@ In this example, we create a component called `test-demo`. The component contain
 - The `<x-else>` tag does not require a `value` attribute. It will render its content when none of the previous conditions are met. In this example, if `count` is neither an even number nor a multiple of 3, green text will be displayed. `<x-else>` can also immediately follow `<x-if>`;
 
 Using this approach, you can dynamically render different content based on different conditions, achieving flexible interaction and display effects.
-
-<a href="../../publics/examples/condition/demo.html" preview demo></a>
-<a href="../../publics/examples/condition/test-demo.html" main demo></a>
 

@@ -1,3 +1,8 @@
+<template is="exm-article">
+<a href="../../publics/examples/render-text/demo.html" preview></a>
+<a href="../../publics/examples/render-text/text-demo.html" main></a>
+</template>
+
 # Text Rendering
 
 In the component file, you can add a `script` tag to write the logic code for the component. The component parameters can be set through the exposed `default` object.
@@ -7,8 +12,4 @@ Where
 
 Text rendering is wrapped with double curly braces, i.e. `{{xxx}}`, where xxx represents the attribute name of the component.
 
-The example demonstrates how to render the val attribute of the component element.
-
-<a href="../../publics/examples/render-text/demo.html" preview demo></a>
-<a href="../../publics/examples/render-text/text-demo.html" main demo></a>
-
+case demonstrates how to render the val data of a component element:

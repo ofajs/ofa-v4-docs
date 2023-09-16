@@ -1,1 +1,0 @@
-En este ejemplo, utilizamos el componente personalizado `custom-input` para crear un cuadro de texto editable. Este componente se utiliza como un elemento de formulario y utiliza el atributo `value` para la interacción de datos. Al utilizar el método `formData`, agregamos `"input,custom-input"` como parámetro para inicializar correctamente los datos del formulario.

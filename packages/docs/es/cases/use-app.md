@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/use-app/demo.html" preview></a>
+<a href="../../publics/examples/use-app/page1.html" main></a>
+<a href="../../publics/examples/use-app/page2.html"></a>
+</template>
+
 # Uso del componente app
 
 En `ofa.js`, puede utilizar el componente `o-app` para crear la estructura de diseño de toda la aplicación y cargar módulos de página dentro de él. Al utilizar los componentes `o-app`, `o-page` y módulos de página, puede construir la estructura de página de toda la aplicación e implementar la navegación entre páginas
@@ -15,9 +21,4 @@ En este ejemplo, creamos una estructura de aplicación utilizando el componente 
 
 En el módulo de página `page1.html`, definimos un título y un botón. Al hacer clic en el botón, se navegará a otro módulo de página llamado `page2.html`. También agregamos un enlace con el atributo `olink`, que navegará a `page2.html` al hacer clic en él.
 
-En el módulo de página `page2.html`, también definimos un título y un botón. Al hacer clic en el botón, regresaremos a la página anterior, completando así la navegación entre páginas.
-
-<a href="../../publics/examples/use-app/demo.html" preview demo></a>
-<a href="../../publics/examples/use-app/page1.html" main demo></a>
-<a href="../../publics/examples/use-app/page2.html" demo></a>
-
+En la página del módulo `page2.html`, también hemos definido un título y un botón. Al hacer clic en el botón, se regresará a la página anterior, logrando la navegación de la página.

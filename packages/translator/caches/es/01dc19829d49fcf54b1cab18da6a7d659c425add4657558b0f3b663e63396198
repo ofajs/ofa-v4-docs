@@ -1,1 +1,0 @@
-Una vez que un componente se ha cargado correctamente, se puede utilizar en cualquier lugar, sin importar cuántas veces se cargue el componente 'l-m' en diferentes lugares con el mismo componente. Este mecanismo garantiza la reutilización y coherencia del componente.

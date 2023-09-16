@@ -1,3 +1,9 @@
+<template is="exm-article">
+<a href="../../publics/examples/inject-host/demo.html" preview></a>
+<a href="../../publics/examples/inject-host/comp-one.html"></a>
+<a href="../../publics/examples/inject-host/comp-two.html" main></a>
+</template>
+
 # Componente inject-host
 
 Debido al aislamiento de los Web Components, es difícil modificar directamente el estilo de los elementos en el slot de un componente. Para hacer frente a este problema, ofa.js proporciona un componente llamado `inject-host`; este componente inyectará estilos en la capa principal para configurar la apariencia del componente de forma más flexible.
@@ -12,9 +18,4 @@ Al mismo tiempo, también debemos tener en cuenta lo siguiente:
 - Al inyectar estilos, se deben evitar selectores demasiado generales para no afectar el estilo de otros componentes. Es importante mantener la singularidad y especificidad de los selectores.
 - `inject-host` también puede inyectar hojas de estilo externas usando la siguiente sintaxis: `<link rel="stylesheet" href="target/style.css">`.
 
-En este ejemplo, al utilizar el componente `inject-host` dentro del componente `comp-two`, podemos configurar y aplicar estilos internos del componente sin afectar los estilos de otros componentes.
-
-<a href="../../publics/examples/inject-host/demo.html" preview demo></a>
-<a href="../../publics/examples/inject-host/comp-one.html" demo></a>
-<a href="../../publics/examples/inject-host/comp-two.html" main demo></a>
-
+En todo el ejemplo, utilizando el componente 'comp-two' dentro de 'inject-host', podemos establecer y aplicar de manera flexible los estilos internos del componente sin interferir con los estilos de otros componentes.

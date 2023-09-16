@@ -1,3 +1,10 @@
+<template is="exm-article">
+<a href="../../publics/examples/use-scsr/page1.html" main demo preview></a>
+<a href="../../publics/examples/use-scsr/page2.html"></a>
+<a href="../../publics/examples/use-scsr/public.css"></a>
+<a href="../../publics/examples/use-scsr/app-config.mjs"></a>
+</template>
+
 # Usando el esquema SCSR
 
 En este ejemplo, haz clic en el botón <span style='font-family: "iconfont"'>&#xe7cb;</span> para abrirlo en una nueva página y probarlo;
@@ -11,9 +18,4 @@ SCSR renderiza el módulo de página en modo de archivo único sin necesidad de 
 ## Consideraciones
 
 Para todas las páginas que utilizan el esquema SCSR, aparte del contenido descriptivo de la página (como título, meta: descripción, palabras clave) y el contenido de la plantilla de la página, todos los recursos referenciados deben mantenerse consistentes para asegurar una experiencia de usuario coherente después de la navegación y actualización de la página.
-
-<a href="../../publics/examples/use-scsr/page1.html" main demo preview></a>
-<a href="../../publics/examples/use-scsr/page2.html" demo></a>
-<a href="../../publics/examples/use-scsr/public.css" demo></a>
-<a href="../../publics/examples/use-scsr/app-config.mjs" demo></a>
 

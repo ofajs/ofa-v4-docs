@@ -1,0 +1,6 @@
+<template is="exm-article">
+<a href="../../publics/examples/sync/demo.html" preview></a>
+<a href="../../publics/examples/sync/test-demo.html" main></a>
+<a href="../../publics/examples/sync/custom-input.html"></a>
+</template>
+
