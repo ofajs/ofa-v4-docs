@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configurar parámetros de la aplicación</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+  <a href="../../publics/examples/use-config/demo.html" preview></a>
+  <a href="../../publics/examples/use-config/app-config.mjs" main></a>
+  <a href="../../publics/examples/use-config/page1.html"></a>
+  <a href="../../publics/examples/use-config/page2.html"></a>
+</template>
+
+<h1>Configurar parámetros de la aplicación</h1>
+<p>Puede configurar los parámetros de la aplicación proporcionando un módulo externo para la etiqueta <code>o-app</code>.
+Estos parámetros son un módulo ES donde puede configurar los siguientes parámetros:</p>
+<ul>
+<li><strong>home</strong>: La página de inicio de la aplicación, es decir, la página que se muestra al cargar inicialmente.</li>
+<li><strong>loading</strong>: Contenido que se muestra mientras se carga el módulo cuando se hace clic en un enlace de la página de la aplicación. Puede proporcionar una cadena de texto como contenido de carga.</li>
+<li><strong>pageAnime</strong>: Efecto de animación al cambiar de página, utiliza un objeto que contiene propiedades de estilo CSS.<ul>
+<li><strong>current</strong>: Estilo de la página actual.</li>
+<li><strong>next</strong>: Estilo de la página que está ingresando.</li>
+<li><strong>previous</strong>: Estilo de la página que está saliendo.</li>
+</ul>
+</li>
+</ul>
+<p>De esta manera, puedes personalizar la página de inicio, el estilo de carga y las animaciones de transición de página, entre otros parámetros, según las necesidades de tu aplicación, brindando así una experiencia más personalizada.</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

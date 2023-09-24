@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用页面组件</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/use-page/demo.html" preview></a>
+<a href="../../publics/examples/use-page/page.html" main></a>
+</template>
+
+<h1>使用页面组件</h1>
+<p>一旦加载了 <code>ofa.js</code>，全局会自动添加一个名为 <code>o-page</code> 的页面组件。这个组件用于加载页面模块，页面模块是一种特殊的组件模块，不会注册为自定义标签，而是通过 <code>o-page</code> 组件来加载。</p>
+<p>页面模块类似于组件模块，但是有一些不同之处。页面模块使用 <code>page</code> 属性来定义模板，而不是 <code>component</code> 属性。页面模块的开发逻辑和组件模块一样，使用相同的模板语法和模板组件等。然而，页面模块不能使用 <code>attrs</code> 特性，因为页面的参数通常通过 URL 传递，而不是通过 <code>data</code> 或 <code>attrs</code>。</p>
+<p>在示例中，<code>o-page</code> 组件用于加载 <code>page.html</code> 页面模块。页面模块中使用 <code>page</code> 属性定义模板，然后通过 JavaScript 函数返回一个对象来设置数据。URL 中的查询参数 <code>count</code> 会被传递到页面模块中，并被用于初始化数据。页面内的按钮点击事件可以更新数据并在页面中呈现。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

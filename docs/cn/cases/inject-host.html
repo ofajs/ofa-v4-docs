@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inject-host 组件</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/inject-host/demo.html" preview></a>
+<a href="../../publics/examples/inject-host/comp-one.html"></a>
+<a href="../../publics/examples/inject-host/comp-two.html" main></a>
+</template>
+
+<h1>inject-host 组件</h1>
+<p>鉴于 Web Components 的隔离性，很难直接修改组件插槽内元素的样式。为了应对这个问题，ofa.js 提供了一个名为 <code>inject-host</code> 的组件；<code>inject-host</code> 组件会向宿主层注入样式，从而更灵活地配置组件的外观。</p>
+<p>需要注意的是，使用此组件可能会影响宿主层的样式。因此，在侵入样式时应保持命名的规范性，以避免影响宿主的样式。</p>
+<p>示例中，我们定义了 <code>comp-two</code> 组件，内部使用了 <code>inject-host</code> 组件来注入样式。这使得我们可以通过注入的样式对 <code>comp-two</code> 组件内的元素进行样式设置，而不会影响到其他组件。</p>
+<p>同时，以下内容也需要特别注意：</p>
+<ul>
+<li>通过在 <code>inject-host</code> 内添加 <code>&lt;style&gt;</code> 标签，我们可以定义组件内的特定样式。这些样式只会影响到当前组件的元素，而不会波及到其他组件。</li>
+<li>在注入样式时，应当避免使用过于普通的选择器，以免影响到其他组件的样式。需要保持选择器的唯一性和特定性。</li>
+<li><code>inject-host</code> 也可以注入外部的样式表文件，通过 <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;target/style.css&quot;&gt;</code> 的方式。</li>
+</ul>
+<p>在整个示例中，通过使用 <code>comp-two</code> 组件内的 <code>inject-host</code>，我们可以在不破坏其他组件样式的情况下，灵活地设置并应用组件内部的样式。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

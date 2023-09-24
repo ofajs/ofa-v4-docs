@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>條件渲染</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/condition/demo.html" preview></a>
+<a href="../../publics/examples/condition/test-demo.html" main></a>
+</template>
+
+<h1>條件渲染</h1>
+<p>模板內除了有模板語法，也有模板組件；</p>
+<blockquote>
+<p><strong>模板組件</strong> 是專門為了模板而設計的組件，這類組件只能在模板內使用；</p>
+</blockquote>
+<p>條件渲染允許您在特定條件下，動態地在組件中插入不同的內容。以下是一個演示如何在組件內使用條件渲染的示例。</p>
+<p>在這個示例中，我們創建了一個名為 <code>test-demo</code> 的組件。組件內包含一個按鈕，點擊按鈕會使 <code>count</code> 屬性自增。通過 <code>&lt;x-if&gt;</code>、<code>&lt;x-else-if&gt;</code> 和 <code>&lt;x-else&gt;</code> 標簽，我們實現了條件渲染的邏輯。</p>
+<ul>
+<li><code>&lt;x-if&gt;</code> 標簽接受一個 <code>value</code> 屬性，用於定義條件。如果 <code>value</code> 的值為 <code>true</code>，則渲染 <code>&lt;x-if&gt;</code> 內部的內容。在這個示例中，如果 <code>count</code> 為偶數，將顯示紅色文本。</li>
+<li><code>&lt;x-else-if&gt;</code> 標簽也接受一個 <code>value</code> 屬性，用於定義條件。如果前面的條件不滿足且 <code>value</code> 的值為 <code>true</code>，則渲染 <code>&lt;x-else-if&gt;</code> 內部的內容。在這個示例中，如果 <code>count</code> 為 3 的倍數，將顯示藍色文本。</li>
+<li><code>&lt;x-else&gt;</code> 標簽不需要 <code>value</code> 屬性，它會在前面的條件都不滿足時渲染其內部的內容。在這個示例中，如果 <code>count</code> 既不是偶數也不是 3 的倍數，將顯示綠色文本。使用 <code>x-else</code> 時也可以緊跟在 <code>x-if</code> 後面；</li>
+</ul>
+<p>通過這種方式，您可以根據不同的條件動態地渲染不同的內容，實現靈活的交互和展示效果。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

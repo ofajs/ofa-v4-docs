@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propiedades comunes</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Propiedades comunes</h1>
+<p>En la instancia <code>$</code>, además de seleccionar elementos a través de selectores, también se proporcionan algunas propiedades comunes para facilitar la manipulación y búsqueda de elementos.</p>
+<h2>Propiedad tag</h2>
+<p>La propiedad <code>tag</code> se utiliza para obtener el nombre de etiqueta (en minúsculas) del elemento actual, similar a la propiedad <code>tagName</code> del elemento DOM.</p>
+<pre><code class="language-html">&lt;div id=&quot;example&quot;&gt;Hola mundo&lt;/div&gt;
+&lt;script&gt;
+    const $div = $(&#39;#example&#39;);
+    console.log($div.tag); // Salida: &quot;div&quot;
+&lt;/script&gt;
+</code></pre>
+<h2>ele attribute</h2>
+<p><code>ele</code> causalidad se utiliza para obtener el elemento DOM real de la instancia <code>$</code>, lo que permite realizar operaciones JavaScript nativas en ese elemento.</p>
+<pre><code class="language-html">&lt;div id=&quot;example&quot;&gt;Hola Mundo&lt;/div&gt;
+&lt;script&gt;
+    const $div = $(&#39;#example&#39;);
+    const elementoActual = $div.ele;
+    elementoActual.style.color = &quot;rojo&quot;; // Cambiar el color del texto a rojo
+&lt;/script&gt;
+</code></pre>
+<h2>atributo index</h2>
+<p><code>index</code> atributo se utiliza para obtener el índice de clasificación del elemento actual entre los elementos del mismo nivel, comenzando desde 0.</p>
+<pre><code class="language-html">&lt;div&gt;
+    &lt;span&gt;Primero&lt;/span&gt;
+    &lt;span&gt;Segundo&lt;/span&gt;
+    &lt;span id=&quot;target&quot;&gt;Tercero&lt;/span&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    const $spanDestino = $(&#39;#target&#39;);
+    console.log($spanDestino.index); // Resultado: 2
+&lt;/script&gt;
+</code></pre>
+<h2>parent y parents atributos</h2>
+<ul>
+<li>El atributo <code>parent</code> se utiliza para obtener el elemento padre directo del elemento actual. </li>
+<li>El atributo <code>parents</code> se utiliza para obtener un arreglo de todos los elementos ancestros del elemento actual (incluyendo el padre del padre, el padre del padre del padre, etc.).</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Atributos Parent y Parents&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;span&gt;
+      &lt;a id=&quot;example&quot;&gt;Hola Mundo&lt;/a&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    const $a = $(&#39;#example&#39;);
+
+    const $spanPadre = $a.parent;
+    console.log($spanPadre.tag); // Resultado: &quot;span&quot;
+
+    const $arregloParents = $a.parents;
+    console.log($arregloParents.map($ele =&gt; $ele.tag)); // Resultado: [&quot;span&quot;, &quot;div&quot;, &quot;body&quot;, &quot;html&quot;]
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>next, nexts, prev, prevs, siblings properties</h2>
+<ul>
+<li>La propiedad <code>next</code> se utiliza para obtener el siguiente elemento hermano del elemento actual. </li>
+<li>La propiedad <code>nexts</code> se utiliza para obtener un array de todos los elementos hermanos del elemento actual que se encuentran después de él. </li>
+<li>La propiedad <code>prev</code> se utiliza para obtener el elemento hermano anterior del elemento actual. </li>
+<li>La propiedad <code>prevs</code> se utiliza para obtener un array de todos los elementos hermanos del elemento actual que se encuentran antes de él. </li>
+<li>La propiedad <code>siblings</code> se utiliza para obtener todos los elementos hermanos del elemento actual, sin incluirlo a él mismo.</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Atributos de los Hermanos&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;span&gt;Zero&lt;/span&gt;
+    &lt;span&gt;First&lt;/span&gt;
+    &lt;span id=&quot;example&quot;&gt;Second&lt;/span&gt;
+    &lt;span&gt;Third&lt;/span&gt;
+    &lt;span&gt;Four&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    const $span = $(&#39;#example&#39;);
+
+    const $nextSibling = $span.next;
+    console.log($nextSibling.tag); // Salida: &quot;span&quot;
+
+    const $nextSiblingsArray = $span.nexts;
+    console.log($nextSiblingsArray.map($ele =&gt; $ele.text)) // Salida: [&quot;Third&quot;, &quot;Four&quot;]
+
+    const $prevSibling = $span.prev;
+    console.log($prevSibling.tag); // Salida: &quot;span&quot;
+
+    const $prevSiblingsArray = $span.prevs;
+    console.log($prevSiblingsArray.map($ele =&gt; $ele.text)) // Salida: [&quot;Zero&quot;, &quot;First&quot;]
+
+    const $siblings = $span.siblings;
+    console.log($siblings.map($ele =&gt; $ele.text)) // Salida: [&quot;Zero&quot;, &quot;First&quot;, &quot;Third&quot;, &quot;Four&quot;]
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

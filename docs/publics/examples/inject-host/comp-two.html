@@ -1,0 +1,35 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      margin: 5px 0;
+      padding: 5px;
+      border: green solid 1px;
+      font-size: 14px;
+    }
+  </style>
+  <inject-host>
+    <style>
+      /* Injects styles that affect only the elements within the comp-two component. */
+      comp-two ul {
+        margin: 0;
+        padding: 0;
+      }
+      comp-two ul li {
+        display: inline-block;
+        padding: 3px 8px;
+        list-style-type: none;
+        font-weight: bold;
+        color: white;
+        background-color: red;
+      }
+
+      /* ❌: too common selector; affects comp-one divs too! */
+      div {
+        color: red;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="target/style.css"> -->
+  </inject-host>
+  comp two: <slot></slot>
+</template>

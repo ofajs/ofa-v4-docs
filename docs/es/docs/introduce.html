@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ofa.js - Marco progresivo de front-end</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>ofa.js - Marco progresivo de front-end</h1>
+<h2>Qué es ofa.js</h2>
+<p>ofa.js is a progressive front-end framework designed to allow developers to enter front-end development and usage processes with minimal cost. It provides a series of simple and powerful tools and APIs that make front-end development more efficient and convenient.</p>
+<h2>razón de ser</h2>
+<h3>Sustituye a jQuery</h3>
+<p>In many small projects, we may not need to introduce large frameworks like React and Vue, but prefer to use jQuery for simple front-end operations. ofa.js improves the API of jQuery and replaces many of jQuery&#39;s methods with properties, making the use of ofa.js more suitable in many scenarios.</p>
+<h3>Streamline front-end development and usage processes</h3>
+<p>The goal of ofa.js is to simplify the cumbersome front-end development process. It allows developers to build front-end applications faster without having to learn complex tools such as Node.js, npm, and scaffolding. With it, you can go back to the experience of developing with just one library.</p>
+<h3>Convertirse en un marco de desarrollo front-end</h3>
+<p>ofa.js aims to be a &quot;silver bullet&quot; that can solve a variety of front-end development problems and provide comprehensive solutions. It is not just a toolbox, but a comprehensive front-end development framework.</p>
+<h2>especificidades</h2>
+<h3>Desarrollo de componentes fácil de usar</h3>
+<p>There is almost no learning cost for developing components using ofa.js. ofa.js provides a concise and intuitive API that allows developers to quickly create and integrate components while keeping the code clean and easy to maintain.</p>
+<h3>Modularidad incorporada, actualizaciones de estado y soluciones de integración de aplicaciones.</h3>
+<p>ofa.js has built-in solutions for modularization, state updates, and application integration, allowing developers to complete complex front-end development tasks without having to look for third-party libraries or tools.</p>
+<h3>Se ofrecen soluciones oficiales de enrutamiento y SSG (Static Site Generation).</h3>
+<p>ofa.js also provides official solutions for routing and SSG (static site generation), helping developers better manage front-end routing and generate static sites, improving application performance and SEO friendliness.</p>
+<h3>Racionalización del tamaño del código</h3>
+<p>ofa.js&#39;s code has been carefully optimized, and the size of the .min file after compression is only 38kb (only 14kb under gzip). This makes ofa.js an efficient front-end framework that can be quickly loaded and used in various network environments.</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

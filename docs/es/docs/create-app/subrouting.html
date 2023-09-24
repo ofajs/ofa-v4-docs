@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modo de subruta</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Modo de subruta</h1>
+<p>En ofa.js, configurar subrutas es ligeramente diferente a otras prácticas en marcos front-end. ofa.js utiliza un enfoque más intuitivo al establecer una página padre como contenedor en el módulo de la página para cumplir con los requisitos de las subrutas.</p>
+<h2>Configuración del contenedor de página padre</h2>
+<p>Para crear subrutas, primero se debe establecer el parámetro &#39;parent&#39; en el módulo de la página secundaria para especificar la dirección del contenedor de la página padre. De esta manera, cuando se carga la página secundaria, ofa.js automáticamente envuelve la página secundaria dentro del contenedor de la página padre.</p>
+<pre><code class="language-html">&lt;template page&gt;
+  &lt;h1&gt;Página 1&lt;/h1&gt;
+
+  &lt;script&gt;
+    export const parent = &quot;./layout-page.html&quot;;
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<p>En el ejemplo anterior, el módulo de la página secundaria especifica la dirección del contenedor de la página padre utilizando el parámetro &#39;parent&#39;.</p>
+<h2>Configuración de la plantilla del contenedor de la página principal</h2>
+<p>La plantilla del contenedor de la página principal necesita tener un elemento <code>&lt;slot&gt;</code> para que las páginas secundarias puedan insertarse en la posición especificada de la página principal. Además, asegúrate de que el elemento contenedor del <code>&lt;slot&gt;</code> esté configurado como <code>position: relative</code>, esto es muy importante, ya que las páginas secundarias se posicionan absolutamente dentro del contenedor de la página principal.</p>
+<p>A continuación se muestra un ejemplo de plantilla del contenedor de la página principal:</p>
+<pre><code class="language-html">&lt;!-- layout-page.html --&gt;
+&lt;template page&gt;
+  &lt;style&gt;
+    /* Configura el elemento contenedor como posición relativa */
+    .parent-container {
+      position: relative;
+    }
+  &lt;/style&gt;
+  
+  &lt;!-- Configura el elemento contenedor para insertar las páginas secundarias --&gt;
+  &lt;div class=&quot;parent-container&quot;&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>En el ejemplo anterior, al configurar un elemento contenedor con <code>slot</code>, las páginas secundarias se insertarán en ese contenedor. Asegúrate de que el elemento contenedor tenga una posición relativa para que las páginas secundarias se posicionen en relación a él.</p>
+<p>Utilizando este enfoque, puedes configurar de manera más visual las rutas secundarias y lograr la carga y el renderizado de las páginas secundarias mediante la asociación entre el contenedor de la página principal y las páginas secundarias.</p>
+<h2>Listener de rutas de la página principal</h2>
+<p>En algunas situaciones, varias páginas comparten la misma página principal como contenedor y cuando se realiza una navegación entre estas páginas, la página principal no se refresca. En este caso, la página principal aún puede escuchar los cambios de ruta para realizar acciones correspondientes sin refrescar la página.</p>
+<h3>Escuchar los cambios de ruta</h3>
+<p>El módulo de la página principal puede configurar una función <code>routerChange</code> para escuchar los cambios de ruta. Cuando se produce un cambio de ruta en la página sin actualizar la página principal, se activará el evento <code>routerChange</code>. Este evento pasará la información de la página actual y el tipo de cambio (<code>type</code>).</p>
+<p>A continuación se muestra un ejemplo de un módulo de página principal que demuestra cómo configurar la función <code>routerChange</code> para escuchar los cambios de ruta:</p>
+<pre><code class="language-javascript">// Módulo de página principal
+export const routerChange = (current, type) =&gt; {
+  console.log(`Cambio de ruta: página actual ${current.src}, tipo de cambio ${type}`);
+};
+</code></pre>
+<p>En el ejemplo anterior, la función <code>routerChange</code> recibe dos parámetros, <code>current</code> que representa la dirección actual de la página, y <code>type</code> que representa el tipo de redirección. Cuando se produce un cambio de ruta en la página, esta función se activa y muestra la información correspondiente.</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

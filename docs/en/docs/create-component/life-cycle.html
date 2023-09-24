@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component Lifecycle</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Component Lifecycle</h1>
+<p>In ofa.js, the component lifecycle is triggered by specific hooks at certain times. These hooks allow you to have finer control and interaction. ofa.js has five key lifecycle hooks: <code>created</code>, <code>ready</code>, <code>watch</code>, <code>loaded</code>, <code>attached</code>, and <code>detached</code>, which are triggered at different moments.</p>
+<h2>Lifecycle Hooks</h2>
+<h3>created</h3>
+<p>The <code>created</code> lifecycle hook is triggered when the component is created. At this stage, the component&#39;s data has not been initialized and the template content has not been rendered. You can perform some initialization operations or prepare data to be used in subsequent stages.</p>
+<h3>ready</h3>
+<p>The <code>ready</code> lifecycle hook is triggered right after the component&#39;s data and template have been initialized, indicating that the component is ready. At this stage, you can access the component&#39;s data and the template has been fully rendered, allowing you to perform some interactions with the interface.</p>
+<p>If the component&#39;s template depends on other components, this stage does not wait for the dependencies to be loaded. Therefore, this stage is suitable for adding loading styles to the component, but you need to wait for the dependencies to be loaded before performing any relevant operations.</p>
+<h3>watch</h3>
+<p>Once the <code>ready</code> stage is completed, the listener functions in the associated <code>watch</code> object will be triggered once. Afterwards, when a value of the data changes, the corresponding key&#39;s listener function will be triggered again.</p>
+<h3>loaded</h3>
+<p>The <code>loaded</code> lifecycle hook is triggered after all dependencies within the component template have been loaded. This stage ensures that all dependencies have been loaded before rendering the component. It is suitable for removing the loading styles added in the <code>ready</code> stage.</p>
+<h3>attached</h3>
+<p><code>attached</code> lifecycle hook is triggered when the component is added to the document. In this stage, it is suitable for obtaining size-related information of the component&#39;s elements, performing data binding, and global event operations.</p>
+<h3>detached</h3>
+<p><code>detached</code> lifecycle hook is triggered when the component is removed from the document. In this stage, you can perform some cleanup operations, such as canceling event listeners or releasing resources, to prevent memory leaks.</p>
+<h2>Example Demonstration</h2>
+<p>Here is an example demonstrating how to use these lifecycle hooks:</p>
+<pre><code class="language-javascript">// lifecycle-demo.mjs
+export const type = $.COMP;
+export const tag = &quot;lifecycle-demo&quot;;
+export const temp = &quot;./lifecycle-demo-template.html&quot;;
+
+export default async function () {
+  return {
+    data: {
+      count: 0,
+    },
+    watch: {
+      count(count) {
+        console.log(&quot;count: &quot;, count);
+      },
+    },
+    created() {
+      console.log(&quot;created: Component created, data not initialized.&quot;);
+    },
+    ready() {
+      console.log(
+        &quot;ready: Component is ready with initialized data and template.&quot;
+      );
+
+      this.on(&quot;click&quot;, () =&gt; {
+        this.count++;
+      });
+    },
+    attached() {
+      console.log(&quot;attached: Component attached to DOM.&quot;);
+    },
+    detached() {
+      console.log(&quot;detached: Component detached from DOM.&quot;);
+    },
+  };
+}
+</code></pre>
+<pre><code class="language-html">&lt;!-- lifecycle-demo-template.html --&gt;
+&lt;l-m src=&quot;../simple-button/simple-button.mjs&quot;&gt;&lt;/l-m&gt;
+&lt;simple-button&gt;Click Me ({{count}})&lt;/simple-button&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- lifecycle-demo.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Lifecycle Demo&lt;/title&gt;
+    &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+    &lt;l-m src=&quot;./lifecycle-demo.mjs&quot;&gt;&lt;/l-m&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;lifecycle-demo&gt;&lt;/lifecycle-demo&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>In the above example, we have defined a component named &#39;lifecycle-demo&#39; and placed a button in its template. Through different lifecycle hooks, we can observe the logs triggered at each stage in the console.</p>
+<h2>Lifecycle Flow Chart</h2>
+<img src="../../../publics/life-cycle.png" width="512" />
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

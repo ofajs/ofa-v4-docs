@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>制作應用</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>制作應用</h1>
+<p>使用 <code>o-app</code> 標簽可以輕松地創建一個完整的應用程序窗口。下面是如何制作一個應用並配置它的步驟：</p>
+<h2>基礎代碼</h2>
+<ol>
+<li>創建一個 HTML 文件，設置 <code>o-app</code> 標簽為應用的顯示窗口。確保為 <code>o-app</code> 設置全屏的樣式，以使應用占據整個視口。</li>
+</ol>
+<pre><code class="language-html">&lt;!-- app.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;My App&lt;/title&gt;
+  &lt;style&gt;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    o-app {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  &lt;/style&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-app&gt;&lt;/o-app&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li><p>創建一個 es 模塊，用於設置應用的配置數據。配置數據包括以下選項：</p>
+<ul>
+<li><code>home</code>：字符串類型，應用的首頁的頁面模塊地址。</li>
+<li><code>loading</code>：函數類型，應用在加載新頁面時，會運行這個函數，得到的內容會插入到應用中，作為加載時的提示，等到頁面加載完成後，會自動去除這個 loading 元素。</li>
+<li><code>fail</code>：函數類型，應用加載頁面失敗時，會運行這個函數，返回得到的值會顯示在應用中作為加載失敗的提示。函數會帶有加載失敗頁面的 <code>src</code> 地址和錯誤報錯對象。</li>
+<li><code>pageAnime</code>：頁面之間切換時的動畫配置。</li>
+</ul>
+</li>
+</ol>
+<p>下面是應用的配置數據示例：</p>
+<pre><code class="language-javascript">// app-config.mjs
+export const home = &quot;./pages/home.mjs?count=1&quot;;
+
+export const loading = () =&gt; {
+  const loadingEl = $(`&lt;div style=&quot;width:100%;height:100%;display:flex;justify-content:center;align-items:center;word-break:break-all;&quot;&gt;Loading&lt;/div&gt;`);
+  return loadingEl;
+};
+
+export const fail = ({ src, error }) =&gt; {
+  return `&lt;div style=&quot;width:100%;height:100%;display:flex;justify-content:center;align-items:center;word-break:break-all;&quot; data-testid=&quot;error-container&quot;&gt;
+    &lt;div style=&quot;padding:20px;text-align:center;&quot;&gt;
+      &lt;h3&gt;Load Fail&lt;/h3&gt; 
+      &lt;p&gt;${error.stack}&lt;/p&gt;
+      ${src}
+      &lt;div&gt;
+        &lt;button on:click=&quot;back()&quot;&gt;Back&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`;
+};
+
+export const pageAnime = {
+  current: {
+    opacity: 1,
+    transform: &quot;translate(0, 0)&quot;,
+  },
+  next: {
+    opacity: 0,
+    transform: &quot;translate(30px, 0)&quot;,
+  },
+  previous: {
+    opacity: 0,
+    transform: &quot;translate(-30px, 0)&quot;,
+  },
+};
+</code></pre>
+<ol start="3">
+<li>在 HTML 文件中使用 <code>o-app</code> 標簽，並通過 <code>src</code> 屬性引用配置數據的 es 模塊。</li>
+</ol>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;My App&lt;/title&gt;
+  &lt;style&gt;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    o-app {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  &lt;/style&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-app src=&quot;./app-config.mjs&quot;&gt;&lt;/o-app&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>通過以上步驟，你已經成功制作了一個使用 <code>o-app</code> 組件的應用程序窗口。<code>o-app</code> 組件會根據配置數據中的設置加載頁面，展示加載中的提示或加載失敗的提示，並支持頁面切換動畫。這樣，你可以快速搭建一個功能完整且具有交互性的應用程序。</p>
+<h2>路由跳轉</h2>
+<p>在 <code>o-app</code> 應用中，你可以輕松地實現路由跳轉，從一個頁面模塊跳轉到另一個頁面模塊。下面介紹幾種不同的方式來進行路由跳轉。</p>
+<h3>使用 <code>&lt;a&gt;</code> 標簽進行路由跳轉</h3>
+<p>你可以在頁面的 HTML 中使用 <code>&lt;a&gt;</code> 標簽來實現路由跳轉。需要將 <code>href</code> 屬性指定為目標頁面模塊的路徑，並添加 <code>olink</code> 屬性，以告知 <code>o-app</code> 組件這是一個路由鏈接。</p>
+<pre><code class="language-html">&lt;a href=&quot;./pages/home.mjs?count=2&quot; olink&gt;跳轉到首頁&lt;/a&gt;
+</code></pre>
+<h3>goto</h3>
+<p>你可以在頁面模板中使用 <code>on:click</code> 屬性來綁定點擊事件，並調用模塊上的 <code>goto</code> 方法進行路由跳轉。</p>
+<pre><code class="language-html">&lt;template page&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;button on:click=&quot;toabout&quot;&gt;跳轉到關於頁面&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    export default async ({ query }) =&gt; {
+      return {
+        proto: {
+          toabout() {
+            this.goto(&quot;./about.mjs&quot;);
+          },
+        },
+      };
+    };
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<p>又或者直接卸載目標元素上：</p>
+<pre><code class="language-html">&lt;button on:click=&quot;goto(&#39;./pages/about.mjs&#39;)&quot;&gt;跳轉到關於頁面&lt;/button&gt;
+</code></pre>
+<h3>替換跳轉和返回頁面</h3>
+<p>除了 <code>goto</code> 方法外，<code>o-app</code> 還支持 <code>replace</code> 和 <code>back</code> 方法。</p>
+<ul>
+<li><code>replace</code> 方法用於替換跳轉，它會取代當前頁面的路由，使新頁面成為當前頁面的路由。</li>
+</ul>
+<pre><code class="language-html">&lt;button on:click=&quot;replace(&#39;./pages/settings.mjs&#39;)&quot;&gt;跳轉並替換當前頁面&lt;/button&gt;
+</code></pre>
+<ul>
+<li><code>back</code> 方法用於返回到前一個頁面。</li>
+</ul>
+<pre><code class="language-html">&lt;button on:click=&quot;back()&quot;&gt;返回上一頁&lt;/button&gt;
+</code></pre>
+<p>需要注意的是，應用內會保持組件的路由狀態，但路由數據不會綁定到當前瀏覽器標簽上。這樣，你可以方便地在應用中實現頁面之間的跳轉和導航。</p>
+<p>如果你想實現路由和頁面的綁定，可以使用 o-router 組件，我們將在後面的章節中詳細介紹。</p>
+<p>通過以上方法，你可以在 <code>o-app</code> 應用中實現靈活的路由跳轉，讓用戶能夠方便地瀏覽不同的頁面內容。</p>
+<h2>訪問應用和當前頁面</h2>
+<p>在應用內的各個元素（包括組件），你通過 <strong>app</strong> 屬性來獲取它們所在的 <code>o-app</code> 實例。這對於需要與整個應用進行交互的操作非常有用。</p>
+<p>通過 <code>app.current</code> 屬性，你可以獲取當前激活的頁面模塊的地址。</p>
+<p>以下是一個使用示例：</p>
+<pre><code class="language-javascript">// MyComponent.mjs
+export default () =&gt; {
+  return {
+    attached(){
+      const appTag = this.app;
+
+      const currentPage = appTag.current;
+      console.log(`當前激活的頁面是：${currentPage}`);
+    }
+  };
+}
+</code></pre>
+<p>在上面的示例中，通過選擇器 <code>.app</code> 獲取了應用標簽，然後通過訪問 <code>app.current</code> 屬性獲取了當前激活的頁面地址。</p>
+<h2>使用技巧：提前緩存下一頁</h2>
+<p>在一些場景下，你可能已經預知用戶即將跳轉到下一頁。為了提高用戶體驗，你可以提前緩存下一頁的頁面模塊，這樣在實際跳轉時可以立即加載，減少用戶等待的時間，讓用戶體驗更加流暢。。</p>
+<p>在當前頁面的 JavaScript 代碼中，調用 <code>load</code> 方法並傳入下一頁的模塊路徑，該模塊將被加載並緩存。</p>
+<pre><code class="language-javascript">// MyComponent.mjs
+export default async ({ load }) =&gt; {
+  //   await load(&#39;./pages/next-page.mjs&#39;);
+  load(&#39;./pages/next-page.mjs&#39;); // 這是一個僅用於緩存，非當前頁必須模塊，無需添加 await
+};
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

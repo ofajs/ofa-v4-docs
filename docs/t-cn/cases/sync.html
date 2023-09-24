@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>雙向數據綁定</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/sync/demo.html" preview></a>
+<a href="../../publics/examples/sync/test-demo.html" main></a>
+<a href="../../publics/examples/sync/custom-input.html"></a>
+</template>
+
+<h1>雙向數據綁定</h1>
+<p>通過使用 <code>sync</code> 語法，您可以在用戶界面的交互元素（例如輸入框或自定義組件）與數據模型之間建立實時的雙向關聯。</p>
+<p>以下示例演示了如何在組件中使用 <code>sync</code> 屬性來實現輸入框與數據模型之間的雙向數據綁定：</p>
+<ul>
+<li>在 <code>data</code> 參數中，我們定義了名為 <code>testText</code> 的數據，並為其設置初始值為 &quot;I am testText&quot;。</li>
+<li>使用 <code>sync:value=&quot;testText&quot;</code> 表示輸入框的值與 <code>testText</code> 數據之間建立了雙向數據綁定。因此，當用戶在輸入框中輸入內容時，<code>testText</code> 數據會實時更新，反之亦然。</li>
+<li>同樣，使用 <code>sync:txt=&quot;testText&quot;</code> 表示自定義組件的 <code>txt</code> 屬性與 <code>testText</code> 數據之間建立了雙向數據綁定。組件的 <code>txt</code> 屬性發生變化時，<code>testText</code> 數據會實時更新，反之亦然。</li>
+</ul>
+<p>通過雙向數據綁定，您可以輕松地在用戶界面和數據模型之間建立聯系，使得數據的變化能夠自動反映在界面上，同時用戶在界面上的輸入也能立即影響到數據模型。</p>
+<p>值得注意的是，數據同步只能傳遞 <strong>字符串</strong> 或 <strong>數字</strong>，無法傳遞其他數據類型。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

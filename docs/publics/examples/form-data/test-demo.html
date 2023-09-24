@@ -1,0 +1,51 @@
+<template component>
+  <button on:click="fdata.A1 = 'Default'">Reset A1</button>
+  <div id="target">
+    <div>
+      <input type="text" name="A1" placeholder="write something" />
+    </div>
+    <div>
+      <label>
+        Man
+        <input type="radio" name="sex" value="man" checked />
+      </label>
+      <label>
+        Lady
+        <input type="radio" name="sex" value="lady" />
+      </label>
+    </div>
+    <div>
+      <label>
+        One
+        <input type="checkbox" name="num" value="1" />
+      </label>
+      <label>
+        Two
+        <input type="checkbox" name="num" value="2" />
+      </label>
+      <label>
+        Three
+        <input type="checkbox" name="num" value="3" />
+      </label>
+    </div>
+  </div>
+  <div>{{fdata}}</div>
+
+  <script>
+    export default {
+      data: {
+        count: 0,
+        fdata: {},
+      },
+      attached() {
+        // 挂载表单数据
+        this.fdata = this.shadow.$("#target").formData();
+      },
+      detached() {
+        // 回收
+        this.fdata.revoke();
+        this.fdata = null;
+      },
+    };
+  </script>
+</template>

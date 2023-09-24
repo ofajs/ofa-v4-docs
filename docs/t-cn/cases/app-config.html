@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配置 app 參數</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+  <a href="../../publics/examples/use-config/demo.html" preview></a>
+  <a href="../../publics/examples/use-config/app-config.mjs" main></a>
+  <a href="../../publics/examples/use-config/page1.html"></a>
+  <a href="../../publics/examples/use-config/page2.html"></a>
+</template>
+
+<h1>配置 app 參數</h1>
+<p>您可以通過為 <code>o-app</code> 標簽單獨設置外部模塊來配置應用的參數。</p>
+<p>這些參數是一個 ES 模塊，您可以配置以下參數：</p>
+<ul>
+<li><strong>home</strong>: 應用的首頁，即初始加載時顯示的頁面。</li>
+<li><strong>loading</strong>: 在應用頁面點擊跳轉時，在未完成模塊加載前，顯示的加載中內容。您可以通過返回一個字符串作為 loading 內容。</li>
+<li><strong>pageAnime</strong>: 頁面跳轉時的動畫效果，使用的是一個包含 CSS 樣式屬性的對象。<ul>
+<li><strong>current</strong>: 表示頁面處於當前頁時的樣式。</li>
+<li><strong>next</strong>: 表示頁面在未進場時的樣式。</li>
+<li><strong>previous</strong>: 表示頁面在要退出時的樣式。</li>
+</ul>
+</li>
+</ul>
+<p>通過這種方式，您可以根據應用的需要，自定義首頁、加載中樣式和頁面跳轉動畫等參數，從而為應用帶來更加個性化的體驗。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

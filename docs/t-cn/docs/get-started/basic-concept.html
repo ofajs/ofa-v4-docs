@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>實例的基礎概念</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>實例的基礎概念</h1>
+<p><code>$</code> 實例是對頁面上元素的封裝，除了用於選擇現有的元素外，它還可以直接創建新元素並進行操作。在本章中，我們將介紹如何創建新元素以及對 <code>$</code> 實例的一些操作。</p>
+<h2>創建新元素</h2>
+<p>通過 <code>$</code> 實例，我們可以直接創建新的元素並進行操作，例如：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Create New Element&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script&gt;
+    const $ele = $(&#39;&lt;div style=&quot;color:red&quot;&gt;I am text&lt;/div&gt;&#39;);
+    $(&#39;body&#39;).push($ele);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的例子中，我們通過 <code>$(&#39;&lt;div style=&quot;color:red&quot;&gt;I am text&lt;/div&gt;&#39;)</code> 創建了一個新的 <code>div</code> 元素，並將其添加到了 <code>body</code> 中。</p>
+<h2>獲取子元素</h2>
+<p>通過 <code>$</code> 獲取的實例，並不像 DOM 元素那樣擁有 <code>children</code> 屬性。但是我們可以通過數組索引來訪問實例的直接子元素：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Access Child Elements&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;p&gt;First Paragraph&lt;/p&gt;
+    &lt;p&gt;Second Paragraph&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    const $div = $(&#39;div&#39;);
+    console.log($div[0]); // Output: &lt;p&gt;First Paragraph&lt;/p&gt;
+    console.log($div[1]); // Output: &lt;p&gt;Second Paragraph&lt;/p&gt;
+    console.log($div.length); // Output: 2
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的例子中，我們獲取了 <code>div</code> 元素，並通過索引來訪問第一個和第二個 <code>p</code> 元素。同時，我們還使用了 <code>$div.length</code> 獲取了子元素的數量。</p>
+<h2>操作子元素</h2>
+<p>通過 <code>$</code> 實例，我們還可以直接使用數組的方法來操作子元素，例如 <code>push</code> 和 <code>pop</code>：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Manipulate Child Elements&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;p&gt;First Paragraph&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    const $paragraphs = $(&#39;p&#39;);
+    
+    // 添加新的 div 元素作為子元素
+    const $newDiv = $(&#39;&lt;div&gt;New Div&lt;/div&gt;&#39;);
+    $paragraphs.push($newDiv);
+
+    setTimeout(()=&gt;{
+      // 刪除最後一個子元素
+      $paragraphs.pop();
+
+      console.log($paragraphs);
+    },1000)
+
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的例子中，我們獲取了所有 <code>p</code> 元素的 <code>$</code> 實例，並使用 <code>push</code> 方法添加了一個新的 <code>div</code> 元素作為子元素，然後使用 <code>pop</code> 方法移除了最後一個子元素。</p>
+<p>通過上述示例，你可以了解 <code>$</code> 實例的一些基本操作，包括創建新元素和對子元素的訪問與操作。 <code>$</code> 實例提供了簡便的方法來操作頁面上的元素。</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

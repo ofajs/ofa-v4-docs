@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encapsulation and Componentization: Basic Knowledge of Componentization</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Encapsulation and Componentization: Basic Knowledge of Componentization</h1>
+<p>ofa.js is a wrapping library based on Web Components technology, aiming to simplify and accelerate the component development process. By hiding the complex technical details behind, it enables developers to focus more on building high-quality components and applications.</p>
+<p>To better develop components, it is necessary to learn some knowledge of Web Components. The knowledge points introduced below can not only be applied in ofa.js, but also benefit you in other frameworks that use Web Components.</p>
+<h2>Shadow DOM Container</h2>
+<p>In Web Components, the Shadow DOM provides an isolated container for encapsulating the internal styles and structure of a component. This means that the internal styles and DOM structure of a component will not interfere with the external styles and structure, ensuring the predictability and maintainability of the component.</p>
+<p>In ofa.js, each component has a Shadow DOM container for isolating the internal content of the component. The template content is rendered into this container. The component instance obtained through <code>$</code> can also access the internal Shadow DOM container through the <code>shadow</code> property, thus achieving operations and access to the internal elements of the component.</p>
+<pre><code class="language-javascript">const myComponent = $(&quot;my-component&quot;); // Get the component instance
+const shadowContainer = myComponent.shadow; // Get the Shadow DOM container of the component
+
+$(&quot;my-component&quot;).shadow.$(&quot;h1&quot;).css.color = &#39;red&#39; // Change the h1 in the Shadow DOM to red
+</code></pre>
+<h2>Common CSS Selectors in Web Components</h2>
+<p>Web Components provide some special CSS selectors for selecting and styling different parts within the component. Here are some common selectors:</p>
+<h3>:host Selector</h3>
+<p><code>:host</code> selector is used to select the outer container of the component itself. This selector can be used to define the style of the component.</p>
+<pre><code class="language-css">:host {
+  display: block;
+  border: 1px solid black;
+  padding: 10px;
+}
+</code></pre>
+<h3>::slotted() Selector</h3>
+<p><code>::slotted()</code> selector is used to select the elements wrapped by slotted content. This selector can be used in internal styles of the component to style the slotted content.</p>
+<pre><code class="language-css">::slotted(p) {
+  font-size: 18px;
+  color: blue;
+}
+</code></pre>
+<h2>Usage of Slots</h2>
+<p>Slots are mechanisms in Web Components used to embed external content within the component. Slots allow developers to pass custom content into the component, enabling more flexible component structures.</p>
+<h3>Single Slot</h3>
+<p>In the component template, the <code>&lt;slot&gt;</code> element can be used to define a slot. The content provided from outside will be inserted into the slot.</p>
+<pre><code class="language-html">&lt;!-- MyComponent.html --&gt;
+&lt;div&gt;
+  &lt;h2&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- Using MyComponent --&gt;
+&lt;my-component&gt;
+  &lt;p&gt;This is a slot content.&lt;/p&gt;
+&lt;/my-component&gt;
+</code></pre>
+<h3>Multiple Named Slots</h3>
+<p>In addition to the default slot, multiple named slots can also be defined. Named slots allow developers to insert different contents into different slot positions.</p>
+<pre><code class="language-html">&lt;!-- MyComponent.html --&gt;
+&lt;div&gt;
+    &lt;header&gt;&lt;slot name=&quot;header&quot;&gt;&lt;/slot&gt;&lt;/header&gt;
+    &lt;main&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/main&gt;
+    &lt;footer&gt;&lt;slot name=&quot;footer&quot;&gt;&lt;/slot&gt;&lt;/footer&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- Using MyComponent --&gt;
+&lt;my-component&gt;
+  &lt;div slot=&quot;header&quot;&gt;Header Content&lt;/div&gt;
+  &lt;p&gt;This is main content.&lt;/p&gt;
+  &lt;div slot=&quot;footer&quot;&gt;Footer Content&lt;/div&gt;
+&lt;/my-component&gt;
+</code></pre>
+<h2>Usage of slotchange event</h2>
+<p>The <code>slotchange</code> event is triggered when the content of a slot changes. This event can be listened to in order to perform actions related to the slot content.</p>
+<pre><code class="language-javascript">// custom-component.mjs
+export const type = $.COMP;
+
+export default {
+  data: {
+    count: 0,
+  },
+  ready() {
+    this.shadow.$(&quot;slot&quot;).on(&quot;slotchange&quot;, () =&gt; {
+      console.log(&quot;Slot content has changed&quot;);
+    });
+  },
+};
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

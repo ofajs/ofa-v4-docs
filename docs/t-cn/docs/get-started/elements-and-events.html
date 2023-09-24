@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>獲取元素和事件相關</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>獲取元素和事件相關</h1>
+<p>該章節旨在加強對上一章內容的理解，包括選擇元素 和 事件綁定。</p>
+<h2>選擇元素</h2>
+<p>在之前的章節中，我們已經了解了通過 $ 符號從全局獲取某個元素的方法。接下來，我們將介紹其他獲取元素的方法。</p>
+<h3>從元素內查找某個元素</h3>
+<h4>使用 <code>$(&quot;xxx&quot;).$(&#39;xxxx&#39;)</code> 的方式</h4>
+<p><code>$(&quot;xxx&quot;).$(&#39;xxxx&#39;)</code> 是通過先選擇一個父元素，然後在其內部查找符合條件的子元素的方式。其中，<code>$(&quot;xxx&quot;)</code> 選擇了一個父元素，然後使用 <code>$(&#39;xxxx&#39;)</code> 在該父元素內查找符合條件的子元素。</p>
+<h4>示例</h4>
+<pre><code class="language-html">&lt;div class=&quot;parent&quot;&gt;
+  &lt;p&gt;Hello World&lt;/p&gt;
+  &lt;div class=&quot;child&quot;&gt;
+    &lt;span&gt;This is a child element&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // 選擇父元素並查找子元素
+  const parentElement = $(&quot;.parent&quot;);
+  const childElement = parentElement.$(&quot;.child&quot;);
+
+  // 修改子元素的文本內容
+  childElement.text = &quot;Modified child element&quot;;
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，首先通過 <code>$(&quot;.parent&quot;)</code> 選擇了具有 <code>parent</code> 類的父元素，然後使用 <code>$(&quot;.child&quot;)</code> 在該父元素內查找具有 <code>child</code> 類的子元素。然後修改了子元素的文本內容為 &quot;Modified child element&quot;。</p>
+<h3>使用 <code>$(&#39;xxx xxxx&#39;)</code> 的方式</h3>
+<p><code>$(&#39;xxx xxxx&#39;)</code> 是通過在全局範圍內查找符合第二個選擇器條件的元素，然後在這些元素內部查找符合第一個選擇器條件的元素。這種方式可以直接一步到位地查找到符合條件的子元素。</p>
+<h4>示例</h4>
+<pre><code class="language-html">&lt;div class=&quot;parent&quot;&gt;
+  &lt;p&gt;Hello World&lt;/p&gt;
+  &lt;div class=&quot;child&quot;&gt;
+    &lt;span&gt;This is a child element&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // 直接查找符合條件的子元素
+  const childElement = $(&#39;div .child&#39;);
+
+  // 修改子元素的文本內容
+  childElement.text = &quot;Modified child element&quot;;
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，直接使用 <code>$(&#39;div .child&#39;)</code> 查找到具有 <code>child</code> 類的子元素，並修改了子元素的文本內容為 &quot;Modified child element&quot;。</p>
+<h3>選擇多個元素</h3>
+<h4>使用 <code>$.all(&#39;xxx&#39;)</code> 查找全局的元素</h4>
+<p><code>$.all(&#39;xxx&#39;)</code> 方法用於查找頁面中所有符合選擇器條件的元素，並將它們作為一個元素集合返回。這樣可以選擇頁面中的多個元素進行批量操作。</p>
+<h4>示例</h4>
+<pre><code class="language-html">&lt;p&gt;Paragraph 1&lt;/p&gt;
+&lt;p&gt;Paragraph 2&lt;/p&gt;
+&lt;p&gt;Paragraph 3&lt;/p&gt;
+&lt;script&gt;
+  // 查找所有 p 標簽元素
+  const allParagraphs = $.all(&quot;p&quot;);
+
+  // 修改所有 p 標簽元素的文本內容
+  allParagraphs.forEach((paragraph, index) =&gt; {
+    paragraph.text = `Modified Paragraph ${index + 1}`;
+  });
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，使用 <code>$.all(&quot;p&quot;)</code> 查找到頁面中的所有 <code>p</code> 標簽元素，並對它們進行了批量操作，將文本內容修改為 &quot;Modified Paragraph 1&quot;、&quot;Modified Paragraph 2&quot; 和 &quot;Modified Paragraph 3&quot;。</p>
+<h3>從元素內查找所有符合條件的元素</h3>
+<p>除了可以在全局範圍內查找元素，還可以從某個元素內查找所有符合條件的子元素，使用方式為：<code>$(&#39;xxx&#39;).all(&#39;xxxx&#39;)</code>。</p>
+<h4>示例</h4>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;p&gt;Hello World&lt;/p&gt;
+  &lt;div class=&quot;item&quot;&gt;Item 1&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Item 2&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+  // 從容器內查找所有帶有 &quot;item&quot; 類的子元素
+  const container = $(&quot;.container&quot;);
+  const items = container.all(&quot;.item&quot;);
+
+  // 修改所有子元素的文本內容
+  items.forEach((item, index) =&gt; {
+    item.text = `Modified Item ${index + 1}`;
+  });
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，首先使用 <code>$(&quot;.container&quot;)</code> 查找到具有 <code>container</code> 類的元素，然後通過 <code>.all(&quot;.item&quot;)</code> 在該容器內查找所有帶有 <code>item</code> 類的子元素，並對它們進行了批量操作，將文本內容修改為 &quot;Modified Item 1&quot;、&quot;Modified Item 2&quot; 和 &quot;Modified Item 3&quot;。</p>
+<h2>事件</h2>
+<p>前面已經講過 <code>on</code> 綁定事件的使用方法，後面介紹幾個和事件相關的方法；</p>
+<h3>off 方法的使用文檔</h3>
+<p><code>off</code> 方法用於移除通過 <code>on</code> 方法綁定的事件處理函數。當不再需要某個事件的處理函數時，可以使用 <code>off</code> 方法將其從元素上移除，以避免重復執行或內存泄漏。</p>
+<h4>語法</h4>
+<pre><code class="language-javascript">$(selector).off(eventName, eventHandler);
+</code></pre>
+<ul>
+<li><code>selector</code>: 選擇要移除事件處理函數的元素。 </li>
+<li><code>eventName</code>: 要移除的事件名稱。 </li>
+<li><code>eventHandler</code>: 要移除的事件處理函數。</li>
+</ul>
+<h4>示例</h4>
+<pre><code class="language-html">&lt;button id=&quot;btn&quot;&gt;Click Me&lt;/button&gt;
+&lt;script&gt;
+  const handleClick = () =&gt; {
+    alert(&quot;Button clicked!&quot;);
+  };
+
+  // 綁定點擊事件處理函數
+  $(&quot;#btn&quot;).on(&quot;click&quot;, handleClick);
+
+  // 5秒後移除點擊事件處理函數
+  setTimeout(() =&gt; {
+    $(&quot;#btn&quot;).off(&quot;click&quot;, handleClick);
+  }, 5000);
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，當點擊按鈕時，會彈出一個對話框顯示 &quot;Button clicked!&quot;。但是在5秒後，通過 <code>off</code> 方法移除了點擊事件處理函數，所以按鈕再次點擊時不會觸發彈出對話框。</p>
+<h3>one 方法的使用文檔</h3>
+<p><code>one</code> 方法用於綁定事件處理函數，但該處理函數只會在第一次觸發事件時執行一次。在執行一次後，事件處理函數會被自動移除，避免重復觸發。</p>
+<h4>語法</h4>
+<pre><code class="language-javascript">$(selector).one(eventName, eventHandler);
+</code></pre>
+<ul>
+<li><code>selector</code>: 選擇要綁定事件處理函數的元素。 </li>
+<li><code>eventName</code>: 要綁定的事件名稱。 </li>
+<li><code>eventHandler</code>: 要執行的事件處理函數。</li>
+</ul>
+<h4>示例</h4>
+<pre><code class="language-html">&lt;button id=&quot;btn&quot;&gt;Click Me Once&lt;/button&gt;
+&lt;script&gt;
+  // 綁定點擊事件處理函數，但只會執行一次
+  $(&quot;#btn&quot;).one(&quot;click&quot;, () =&gt; {
+    alert(&quot;Button clicked once!&quot;);
+  });
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，當點擊按鈕時，會彈出一個對話框顯示 &quot;Button clicked once!&quot;。但是在第一次點擊後，事件處理函數就會被移除，所以後續點擊按鈕不會再觸發彈出對話框。</p>
+<h3>emit 方法的使用文檔</h3>
+<p><code>emit</code> 方法用於手動觸發元素上綁定的特定事件。通過 <code>emit</code> 方法可以在不進行實際操作的情況下觸發事件處理函數的執行。</p>
+<h4>語法</h4>
+<pre><code class="language-javascript">$(selector).emit(eventName);
+</code></pre>
+<ul>
+<li><code>selector</code>: 選擇要觸發事件的元素。 </li>
+<li><code>eventName</code>: 要觸發的事件名稱。</li>
+</ul>
+<h4>示例</h4>
+<pre><code class="language-html">&lt;button id=&quot;btn&quot;&gt;Click Me&lt;/button&gt;
+&lt;script&gt;
+  // 綁定點擊事件處理函數
+  $(&quot;#btn&quot;).on(&quot;click&quot;, () =&gt; {
+    alert(&quot;Button clicked!&quot;);
+  });
+
+  // 通過 emit 方法觸發按鈕的點擊事件
+  $(&quot;#btn&quot;).emit(&quot;click&quot;);
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，通過 <code>emit</code> 方法手動觸發了按鈕的點擊事件，結果會彈出一個對話框顯示 &quot;Button clicked!&quot;，盡管沒有實際點擊按鈕。</p>
+<p>注意：使用 <code>emit</code> 方法不會模擬鼠標點擊或其他實際事件，它只會直接調用已綁定的事件處理函數。所以，如果你希望在特定情況下觸發事件的執行，可以使用 <code>emit</code> 方法。</p>
+<p>當你綁定事件後，有時你可能希望阻止事件的進一步傳播（冒泡）或取消事件的默認行為。下面將介紹如何在事件觸發後禁止冒泡和取消默認事件。</p>
+<h3>禁止事件冒泡</h3>
+<p>事件冒泡是指當一個元素上的事件被觸發時，它會沿著 DOM 樹向上冒泡，依次觸發父元素上的同類型事件。如果你希望在特定元素上處理事件後阻止其繼續冒泡，可以使用 <code>event.stopPropagation()</code> 方法。</p>
+<p>示例代碼：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Stop Event Bubbling&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;outer&quot;&gt;
+    &lt;div id=&quot;inner&quot;&gt;
+      &lt;button id=&quot;btn&quot;&gt;Click Me&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    const btn = $(&#39;#btn&#39;);
+    const innerDiv = $(&#39;#inner&#39;);
+
+    btn.on(&#39;click&#39;, (event) =&gt; {
+      alert(&#39;Button Clicked!&#39;);
+      event.stopPropagation(); // 阻止事件冒泡
+    });
+
+    innerDiv.on(&#39;click&#39;, () =&gt; {
+      alert(&#39;Inner Div Clicked!&#39;);
+    });
+
+    $(&#39;#outer&#39;).on(&#39;click&#39;, () =&gt; {
+      alert(&#39;Outer Div Clicked!&#39;);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的示例中，當你點擊按鈕 &quot;Click Me&quot; 後，它會顯示 &quot;Button Clicked!&quot;，但不會觸發 &quot;Inner Div Clicked!&quot; 和 &quot;Outer Div Clicked!&quot;。這是因為我們在按鈕的點擊事件處理程序中調用了 <code>event.stopPropagation()</code>，阻止了事件的進一步傳播。</p>
+<h3>取消事件的默認行為</h3>
+<p>有些元素上的事件在觸發時會有默認的行為。例如，點擊提交按鈕會導致表單提交，點擊鏈接會跳轉到鏈接的地址等。如果你希望阻止事件的默認行為，可以使用 <code>event.preventDefault()</code> 方法。</p>
+<p>示例代碼：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Prevent Default Event&lt;/title&gt;
+  &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form id=&quot;myForm&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;name&quot; /&gt;
+    &lt;button id=&quot;submitBtn&quot;&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;script&gt;
+    const form = $(&#39;#myForm&#39;);
+    const submitBtn = $(&#39;#submitBtn&#39;);
+
+    submitBtn.on(&#39;click&#39;, (event) =&gt; {
+      event.preventDefault(); // 取消事件的默認行為
+      const name = $(&#39;#name&#39;).value;
+      alert(`Hello, ${name}! Form submission prevented.`);
+    });
+
+    form.on(&#39;submit&#39;, () =&gt; {
+      alert(&#39;Form Submitted!&#39;);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上面的示例中，當你點擊提交按鈕 &quot;Submit&quot; 後，它會顯示 &quot;Hello, {name}! Form submission prevented.&quot;，但不會觸發 &quot;Form Submitted!&quot; 的警報。這是因為我們在提交按鈕的點擊事件處理程序中調用了 <code>event.preventDefault()</code>，阻止了表單的提交默認行為。</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 的用法</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>CSS 的用法</h1>
+<p>在 <code>ofa.js</code> 中，你可以通過以下方式來操作元素的 CSS 樣式；</p>
+<h2>獲取元素的具體 CSS 樣式</h2>
+<p>可以使用 <code>$ele.css.xxx</code> 來獲取元素的具體 CSS 樣式，其中 <code>xxx</code> 是你想要獲取的 CSS 屬性名。</p>
+<h3>示例</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; style=&quot;color: blue; font-size: 18px;&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  // 獲取元素的顏色樣式
+  const myElement = $(&quot;#myElement&quot;);
+  const colorStyle = myElement.css.color;
+  console.log(colorStyle); // Output: &quot;blue&quot;
+
+  // 獲取元素的字體大小樣式
+  const fontSizeStyle = myElement.css.fontSize;
+  console.log(fontSizeStyle); // Output: &quot;18px&quot;
+&lt;/script&gt;
+</code></pre>
+<h2>設置某個樣式屬性</h2>
+<p>可以使用 <code>$ele.css.xxx = &#39;&#39;</code> 的方式來設置元素的 CSS 樣式，其中 <code>xxx</code> 是你想要設置的 CSS 屬性名。通過將屬性值設為空字符串，可以將指定的樣式屬性移除。</p>
+<h3>示例</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; style=&quot;color: blue; font-size: 18px;&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // 設置元素的顏色樣式
+  myElement.css.color = &#39;red&#39;;
+  // 移除元素的字體大小樣式
+  myElement.css.fontSize = &#39;&#39;;
+&lt;/script&gt;
+</code></pre>
+<h2>賦值對象</h2>
+<p>可以使用 <code>$ele.css = {xxx}</code> 的方式來設置元素的 style，其中 <code>xxx</code> 是一個包含 CSS 屬性名和屬性值的對象。</p>
+<h3>示例</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // 設置元素的樣式
+  myElement.css = {
+    color: &quot;red&quot;,
+    fontSize: &quot;24px&quot;,
+    backgroundColor: &quot;yellow&quot;,
+  };
+&lt;/script&gt;
+</code></pre>
+<h2>賦值字符串</h2>
+<p>可以使用 <code>$ele.css = &#39;color:red;...&#39;</code> 的方式來設置元素的 style，其中 <code>&#39;color:red;...&#39;</code> 是一個包含 CSS 樣式規則的字符串。</p>
+<h3>示例</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // 設置元素的樣式
+  myElement.css = &#39;color:red; font-size:24px; background-color:yellow;&#39;;
+&lt;/script&gt;
+</code></pre>
+<h2>設置 css 的技巧</h2>
+<p>你可以通過 <code>$ele.css = {...$ele.css, color:&#39;red&#39;}</code> 的方式來修改元素的某個樣式屬性，而不影響其他樣式屬性。這種方式可以在不重寫整個樣式的情況下，只修改其中一個屬性。</p>
+<h3>示例</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; style=&quot;color: blue; font-size: 18px;&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // 修改元素的顏色樣式，同時保留其他樣式屬性不變
+  myElement.css = { ...myElement.css, color: &#39;red&#39; };
+&lt;/script&gt;
+</code></pre>
+<p>在上面的示例中，通過使用 <code>{ ...myElement.css, color: &#39;red&#39; }</code>，我們只修改了元素的顏色樣式，而將其他樣式屬性保持不變。這是一個很方便的技巧，可以靈活地修改元素的樣式。</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

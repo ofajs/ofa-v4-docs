@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>página de desarrollo</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>página de desarrollo</h1>
+<p>Dentro de ofa.js, construimos un componente personalizado llamado <code>o-page</code> que está diseñado para facilitar el desarrollo de páginas. Este componente juega un papel clave en el desarrollo de aplicaciones. Cuando quieras utilizar la sintaxis de plantilla de un componente, pero no quieras crear un componente completamente nuevo, el componente <code>o-page</code> será tu mejor opción.</p>
+<h2>módulo de página</h2>
+<p>La creación de un módulo de página de un solo archivo es similar a la creación de un módulo de componentes. Utilice la etiqueta <code>template</code> para envolver el código de plantilla de la página y añadir el atributo <code>page</code>. Dentro de esta etiqueta, siéntete libre de utilizar la sintaxis de la plantilla para interactuar con otros componentes o módulos de página.</p>
+<pre><code class="language-html">&lt;!-- my-single-file-page.html --&gt;
+&lt;template page&gt;
+  &lt;h1&gt;{{pageTitle}}&lt;/h1&gt;
+  &lt;p&gt;Welcome to my single file page!&lt;/p&gt;
+  &lt;script&gt;
+    // En el modo de archivo único, evite utilizar import
+    // import data from &#39;./other/module.mjs&#39;;
+
+    export default async ({ load }) =&gt; {
+      // Referencias a otros módulos
+      // const data = await load(&quot;./other/module.mjs&quot;);
+
+      return {
+        data: {
+          pageTitle: &quot;My Single File Page&quot;,
+        },
+      };
+    }
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<p>En el archivo HTML, utilice el atributo <code>src</code> de la etiqueta <code>o-page</code> para especificar la ruta del archivo del módulo de página. El contenido de la página se mostrará dentro de ese componente.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;My App&lt;/title&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-page src=&quot;./my-single-file-page.html&quot;&gt;&lt;/o-page&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>Modo de archivos dobles</h2>
+<p>El modo de archivos dobles separa las <code>plantillas estáticas</code> y el <code>código lógico</code>, lo que hace que el contenido de la página sea más claro.</p>
+<p>A continuación se muestran los pasos para usar el componente <code>o-page</code> y los módulos de página:</p>
+<ol>
+<li>Crear un módulo de página:</li>
+</ol>
+<p>Similar a crear un módulo de componente, crea un módulo de página, pero establece la propiedad <code>type</code> en <code>$.PAGE</code>. Los parámetros disponibles para el módulo de página incluyen <code>temp</code>, <code>data</code>, <code>proto</code> y <code>watch</code>.</p>
+<pre><code class="language-javascript">// my-page.mjs
+export const type = $.PAGE;
+
+export const temp = &quot;./my-page-template.html&quot;;
+
+export const data = {
+  pageTitle: &quot;My Page&quot;,
+};
+
+export const proto = {
+  // ...
+};
+
+export const watch = {
+  // ...
+};
+</code></pre>
+<ol start="2">
+<li>Crear una plantilla de página:</li>
+</ol>
+<p>En el mismo directorio que el módulo de página, crea un archivo de plantilla de página llamado <code>my-page-template.html</code>. En este archivo de plantilla, puedes usar la sintaxis de plantilla para realizar interacciones, similar a la sintaxis de plantilla mencionada anteriormente para los componentes.</p>
+<pre><code class="language-html">&lt;!-- my-page-template.html --&gt;
+&lt;h1&gt;{{pageTitle}}&lt;/h1&gt;
+&lt;p&gt;Bienvenido a mi página!&lt;/p&gt;
+</code></pre>
+<p>En tu archivo HTML, utiliza la etiqueta <code>&lt;o-page&gt;</code> para usar el componente <code>o-page</code> y utiliza el atributo <code>src</code> para hacer referencia a la ruta del archivo del módulo de página. El contenido de la página se renderizará dentro de este componente.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Mi Aplicación&lt;/title&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-page src=&quot;./my-page.mjs&quot;&gt;&lt;/o-page&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>De esta manera, cuando abras la página, el componente <code>o-page</code> cargará dinámicamente el módulo de página <code>my-page.mjs</code> y renderizará el contenido de la página según las plantillas y datos del módulo. El ciclo de vida y la sintaxis de las plantillas del módulo de página se mantienen consistentes con los módulos de componentes, lo que hace que el desarrollo y la gestión de las páginas sean más unificados y flexibles.</p>
+<h2>Verificar si la página ha cargado completamente</h2>
+<p>En algunas ocasiones, es posible que necesites verificar si la página ha cargado completamente para realizar algunas operaciones específicas. <code>ofa.js</code> proporciona varias formas de verificar si la página ha cargado completamente.</p>
+<h3>Usar la propiedad <code>page._loaded</code></h3>
+<p>Dentro del módulo de página, <code>page._loaded</code> es una propiedad booleana que se establece en <code>true</code> una vez que el contenido de la página ha cargado. Puedes usar esta propiedad para verificar si la página ha cargado completamente.</p>
+<pre><code class="language-javascript">if (page._loaded) {
+  // La página ha cargado completamente
+  // Realiza tus operaciones
+} else {
+  // Escucha el evento &#39;page-loaded&#39;
+  page.addEventListener(&#39;page-loaded&#39;, () =&gt; {
+    // Operaciones a realizar después de que la página ha cargado
+  });
+}
+</code></pre>
+<h3>Usar la propiedad <code>page._rendered</code></h3>
+<p>Otra forma de verificar si la página ha cargado completamente es usando la propiedad <code>page._rendered</code>, que es una promesa. Una vez que la página ha cargado, esta promesa entrará en el estado <code>resolve</code>. Puedes esperar a que la página cargue completamente usando <code>await page._rendered</code> y luego realizar las operaciones correspondientes.</p>
+<pre><code class="language-javascript">async function hacerAlgoDespuesDeCargarPagina() {
+  await page._rendered;
+  // La página ha cargado completamente
+  // Realiza tus operaciones
+}
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

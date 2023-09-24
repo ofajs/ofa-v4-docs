@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Micro Front End</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Sobre Micro Front End</h1>
+<p>Micro front-end is a front-end architectural pattern designed to help teams build and maintain large, complex front-end applications. It draws on the ideas of microservices architecture and divides front-end applications into smaller independent parts, each of which can be developed, tested, and deployed by different teams.</p>
+<p>En el proceso de expansión continua de las aplicaciones tradicionales de frontend monolíticas, puede volverse difícil de mantener y expandir. El objetivo de la microfrontend es dividir la aplicación en módulos más pequeños y más manejables, lo que permite que los equipos de desarrollo puedan desarrollar y implementar estos módulos de manera independiente, mejorando así la eficiencia del equipo y la mantenibilidad de la aplicación.</p>
+<p><strong>ofa.js</strong> tiene las características innatas de la microfrontend. A diferencia de otros frameworks, los componentes, páginas y aplicaciones desarrollados con <strong>ofa.js</strong> no requieren precompilación. En contraste, frameworks como React, Vue y Angular requieren una compilación previa en el entorno de Node.js para generar el código cliente. Sin embargo, el código de desarrollo de <strong>ofa.js</strong> se puede colocar directamente en un servidor estático sin necesidad de pasos de compilación adicionales, lo que permite ver, utilizar y ejecutar los cambios en tiempo real.</p>
+<p><strong>ofa.js</strong> cumple con los cinco aspectos clave de la microfrontend:</p>
+<ol>
+<li><p><strong>Implementación independiente</strong>: cada componente y página se puede desarrollar, probar e implementar de forma independiente, lo que permite al equipo lanzar nuevas funcionalidades y solucionar problemas más rápidamente.</p>
+</li>
+<li><p><strong>Integración</strong>: las aplicaciones desarrolladas con <strong>ofa.js</strong> pueden combinar diferentes módulos en una sola aplicación. Esto se puede lograr compartiendo aplicaciones, páginas, componentes, entre otros.</p>
+</li>
+<li><p><strong>Equipos separados</strong>: cada módulo frontend (componente/página/aplicación) puede ser desarrollado y mantenido por equipos separados, lo que fomenta la autonomía y la innovación del equipo.</p>
+</li>
+<li><p><strong>Recursos compartidos</strong>: en un proyecto con <strong>ofa.js</strong>, generalmente existen recursos compartidos como estilos, componentes y páginas, para garantizar la coherencia y la eficiencia.</p>
+</li>
+<li><p><strong>Carga bajo demanda</strong>: las aplicaciones desarrolladas con <strong>ofa.js</strong> pueden cargar módulos según sea necesario, lo que mejora el rendimiento y la velocidad de carga de la aplicación.</p>
+</li>
+</ol>
+<p>Aunque <strong>ofa.js</strong> no puede utilizar directamente componentes desarrollados con frameworks como Vue y React, los componentes desarrollados con <strong>ofa.js</strong> pueden ser utilizados por Vue y React, lo que brinda a los desarrolladores de diferentes tecnologías más flexibilidad y capacidad de extensión.</p>
+<p><strong>Cómo usar Web Components en Vue:</strong></p>
+<ul>
+<li><a href="https://github.com/vuejs/vue-web-component-wrapper">Envoltura de Componente Web de Vue</a></li>
+<li><a href="https://vuejs.org/v2/cookbook/packaging-sfc-for-npm.html#Using-with-vue-custom-element">Integración de Vue con Web Components</a></li>
+<li><a href="https://www.robinwieruch.de/vue-web-components">Cómo usar Web Components en Vue</a></li>
+</ul>
+<p><strong>En React, usando Web Components:</strong></p>
+<ul>
+<li><a href="https://reactjs.org/docs/web-components.html">Usar Web Components con React</a></li>
+<li><a href="https://alligator.io/react/using-web-components-in-react/">Usar Web Components en React</a></li>
+<li><a href="https://blog.bitsrc.io/integrating-web-components-in-react-17a52a6a28e4">Integrar Web Components en React</a></li>
+</ul>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

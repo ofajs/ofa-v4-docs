@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creando una Aplicación</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Creando una Aplicación</h1>
+<p>Con la etiqueta <code>o-app</code> puedes crear fácilmente una ventana de aplicación completa. A continuación se muestra cómo crear una aplicación y configurarla:</p>
+<h2>Código Básico</h2>
+<ol>
+<li>Crea un archivo HTML y establece la etiqueta <code>o-app</code> como la ventana de visualización de la aplicación. Asegúrate de establecer el estilo de pantalla completa para <code>o-app</code> para que la aplicación ocupe toda la vista.</li>
+</ol>
+<pre><code class="language-html">&lt;!-- app.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Mi Aplicación&lt;/title&gt;
+  &lt;style&gt;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    o-app {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  &lt;/style&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-app&gt;&lt;/o-app&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li><p>Crea un módulo ES para establecer los datos de configuración de la aplicación. Los datos de configuración incluyen las siguientes opciones:</p>
+<ul>
+<li><code>home</code>: Tipo de cadena, dirección del módulo de página de inicio de la aplicación.</li>
+<li><code>loading</code>: Tipo de función, esta función se ejecutará cuando la aplicación cargue una nueva página. El resultado de esta función se insertará en la aplicación como un mensaje de carga y se eliminará automáticamente una vez que se haya cargado la página.</li>
+<li><code>fail</code>: Tipo de función, esta función se ejecutará cuando falle la carga de una página de la aplicación. El valor devuelto se mostrará en la aplicación como un mensaje de carga fallida. La función tendrá la dirección <code>src</code> de la página de carga fallida y el objeto de error.</li>
+<li><code>pageAnime</code>: Configuración de animación al cambiar entre páginas.</li>
+</ul>
+</li>
+</ol>
+<p>A continuación se muestra un ejemplo de los datos de configuración de la aplicación:</p>
+<pre><code class="language-javascript">// app-config.mjs
+export const home = &quot;./pages/home.mjs?count=1&quot;;
+
+export const loading = () =&gt; {
+  const loadingEl = $(`&lt;div style=&quot;width:100%;height:100%;display:flex;justify-content:center;align-items:center;word-break:break-all;&quot;&gt;Cargando&lt;/div&gt;`);
+  return loadingEl;
+};
+
+export const fail = ({ src, error }) =&gt; {
+  return `&lt;div style=&quot;width:100%;height:100%;display:flex;justify-content:center;align-items:center;word-break:break-all;&quot; data-testid=&quot;error-container&quot;&gt;
+    &lt;div style=&quot;padding:20px;text-align:center;&quot;&gt;
+      &lt;h3&gt;Error de Carga&lt;/h3&gt; 
+      &lt;p&gt;${error.stack}&lt;/p&gt;
+      ${src}
+      &lt;div&gt;
+        &lt;button on:click=&quot;back()&quot;&gt;Volver&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;`;
+};
+
+export const pageAnime = {
+  current: {
+    opacity: 1,
+    transform: &quot;translate(0, 0)&quot;,
+  },
+  next: {
+    opacity: 0,
+    transform: &quot;translate(30px, 0)&quot;,
+  },
+  previous: {
+    opacity: 0,
+    transform: &quot;translate(-30px, 0)&quot;,
+  },
+};
+</code></pre>
+<ol start="3">
+<li>En el archivo HTML, utiliza la etiqueta <code>o-app</code> y referencia los datos de configuración como un módulo <code>es</code> a través del atributo <code>src</code>.</li>
+</ol>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Mi Aplicación&lt;/title&gt;
+  &lt;style&gt;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    o-app {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  &lt;/style&gt;
+  &lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;o-app src=&quot;./app-config.mjs&quot;&gt;&lt;/o-app&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Con los pasos anteriores, has creado exitosamente una ventana de aplicación que utiliza el componente <code>o-app</code>. El componente <code>o-app</code> cargará la página de acuerdo a la configuración de los datos, mostrando una indicación de carga o un mensaje de error, y admite animaciones de cambio de página. Esto te permite construir rápidamente una aplicación con funcionalidad completa e interactiva.</p>
+<h2>Navegación por rutas</h2>
+<p>En la aplicación <code>o-app</code>, puedes realizar fácilmente la navegación por rutas, saltando de un módulo de página a otro. A continuación, se presentan diferentes formas de realizar la navegación por rutas.</p>
+<h3>Utilizar la etiqueta <code>&lt;a&gt;</code> para la navegación por rutas</h3>
+<p>Puedes utilizar la etiqueta <code>&lt;a&gt;</code> en el HTML de la página para realizar la navegación por rutas. Debes especificar la ruta del módulo de página de destino en el atributo <code>href</code> y agregar el atributo <code>olink</code> para indicar al componente <code>o-app</code> que se trata de un enlace de ruta.</p>
+<pre><code class="language-html">&lt;a href=&quot;./pages/home.mjs?count=2&quot; olink&gt;Ir a la página de inicio&lt;/a&gt;
+</code></pre>
+<h3>goto</h3>
+<p>Puedes utilizar el atributo <code>on:click</code> en la plantilla de la página para vincular un evento de clic y llamar al método <code>goto</code> en el módulo para realizar la navegación por rutas.</p>
+<pre><code class="language-html">&lt;template page&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;button on:click=&quot;toabout&quot;&gt;Ir a la página Acerca de&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    export default async ({ query }) =&gt; {
+      return {
+        proto: {
+          toabout() {
+            this.goto(&quot;./about.mjs&quot;);
+          },
+        },
+      };
+    };
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<p>O tal vez descargar directamente en el elemento de destino:</p>
+<pre><code class="language-html">&lt;button on:click=&quot;goto(&#39;./pages/about.mjs&#39;)&quot;&gt;Ir a la página Acerca de&lt;/button&gt;
+</code></pre>
+<h3>Sustituir páginas de salto y retorno</h3>
+<p>Además del método <code>goto</code>, <code>o-app</code> también admite los métodos <code>replace</code> y <code>back</code>.</p>
+<ul>
+<li>El método <code>replace</code> se utiliza para reemplazar un salto, reemplaza la ruta de la página actual, haciendo que la nueva página sea la ruta de la página actual.</li>
+</ul>
+<pre><code class="language-html">&lt;button on:click=&quot;replace(&#39;./pages/settings.mjs&#39;)&quot;&gt;Saltar y reemplazar la página actual&lt;/button&gt;
+</code></pre>
+<ul>
+<li>El método <code>back</code> se utiliza para volver a la página anterior.</li>
+</ul>
+<pre><code class="language-html">&lt;button on:click=&quot;back()&quot;&gt;Volver a la página anterior&lt;/button&gt;
+</code></pre>
+<p>Tenga en cuenta que el estado de enrutamiento del componente se mantiene dentro de la aplicación, pero los datos de enrutamiento no están vinculados a la pestaña actual del navegador. De este modo, puede saltar y navegar fácilmente entre páginas dentro de la aplicación.</p>
+<p>Si desea implementar el enrutamiento y la vinculación de páginas, puede utilizar el componente o-router, que cubriremos en detalle en una sección posterior.</p>
+<p>Con el método anterior, puedes implementar saltos de ruta flexibles en la aplicación <code>o-app</code>, para que los usuarios puedan navegar fácilmente por los diferentes contenidos de las páginas.</p>
+<h2>Acceso a la aplicación y a la página actual</h2>
+<p>Elementos individuales (incluyendo componentes) dentro de la aplicación, se obtiene la instancia <code>o-app</code> en la que se encuentran a través del atributo <strong>app</strong>. Esto es útil para las operaciones que requieren la interacción con toda la aplicación.</p>
+<p>A través de la propiedad <code>app.current</code>, puedes obtener la dirección del módulo de página actualmente activo.</p>
+<p>Aquí tienes un ejemplo de uso:</p>
+<pre><code class="language-javascript">// MyComponent.mjs
+export default () =&gt; {
+  return {
+    attached() {
+      const appTag = this.app;
+
+      const currentPage = appTag.current;
+      console.log(`La página actualmente activa es: ${currentPage}`);
+    }
+  };
+}
+</code></pre>
+<p>En el ejemplo anterior, se obtiene la etiqueta de la aplicación mediante el selector <code>.app</code>, y luego se accede a la propiedad <code>app.current</code> para obtener la dirección de la página actualmente activa.</p>
+<h2>Consejo de uso: Cachear la siguiente página de antemano</h2>
+<p>En algunos casos, es posible que sepas de antemano que el usuario va a navegar a la siguiente página. Para mejorar la experiencia del usuario, puedes cachear de antemano el módulo de página siguiente, de modo que se pueda cargar inmediatamente durante la navegación real, reduciendo así el tiempo de espera del usuario y haciendo que la experiencia sea más fluida.</p>
+<p>En el código JavaScript de la página actual, llama al método <code>load</code> y pasa la ruta del módulo de la siguiente página. Este módulo se cargará y cacheará.</p>
+<pre><code class="language-javascript">// MyComponent.mjs
+export default async ({ load }) =&gt; {
+  //   await load(&#39;./pages/next-page.mjs&#39;);
+  load(&#39;./pages/next-page.mjs&#39;); // Esto es solo para cachear, no es un módulo necesario para la página actual, por lo que no es necesario agregar await
+};
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

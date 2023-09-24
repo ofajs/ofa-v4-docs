@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>为 app 定制 loading</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+  <a href="../../publics/examples/app-loading/demo.html" preview></a>
+  <a href="../../publics/examples/app-loading/app-config.mjs" main></a>
+  <a href="../../publics/examples/app-loading/page1.html"></a>
+  <a href="../../publics/examples/app-loading/page2.html"></a>
+</template>
+
+<h1>为 app 定制 loading</h1>
+<p>以下是一个为 <code>o-app</code> 组件定制 loading 的示例。在这个示例中，我们为 loading 创建了一个漂亮的进度条，它会在页面加载期间逐渐增长，加载完成后会直接到达 100%，然后将 loading 元素删除。</p>
+<p>您可以将以下代码复制并用于定制您的应用的 loading 效果：</p>
+<pre><code class="language-javascript">export const loading = () =&gt; {
+  const loadingEl = $({
+    tag: &quot;div&quot;,
+    css: {
+      width: &quot;100%&quot;,
+      height: &quot;100%&quot;,
+      position: &quot;absolute&quot;,
+      zIndex: 1000,
+      left: 0,
+      top: 0,
+    },
+    html: `
+      &lt;div style=&quot;transition: all 10s cubic-bezier(0, 0, 0.22, 0.84) 0s; height: 2px;width: 0;background-color: rgb(0, 161, 46);&quot;&gt;&lt;/div&gt;
+    `,
+  });
+
+  setTimeout(() =&gt; (loadingEl[0].style.width = &quot;98%&quot;));
+
+  loadingEl.remove = () =&gt; {
+    loadingEl[0].style[&quot;transition-duration&quot;] = &quot;0.1s&quot;;
+    loadingEl[0].style.width = &quot;100%&quot;;
+    setTimeout(() =&gt; {
+      $.fn.remove.call(loadingEl);
+    }, 200);
+  };
+
+  return loadingEl;
+};
+</code></pre>
+<p>通过这段代码，您可以为您的应用添加一个独特的加载效果，让用户在页面切换过程中有更好的体验。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

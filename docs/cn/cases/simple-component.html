@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>组件的创建和使用</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/simple-component/demo.html" preview></a>
+<a href="../../publics/examples/simple-component/my-comp.html" main></a>
+<a href="../../publics/examples/simple-component/public.css"></a>
+</template>
+
+<h1>组件的创建和使用</h1>
+<p>一旦完成对 ofa.js 的加载，全局会注册一个名为 <code>load-module</code> 的组件，你可以使用缩写 <code>l-m</code> 来引用它。其使用方式类似于 <code>script</code> 标签，通过 <code>src</code> 属性来引用你开发好的组件地址。</p>
+<p>现在，让我们开始制作自己的组件。首先，创建一个 HTML 文件，文件名需要与组件名保持一致。</p>
+<p>在组件文件中，首先添加一个 <code>template</code> 元素，并添加 <code>component</code>属性。将组件需要渲染的内容放置在这个 <code>template</code> 元素内。最终，这些内容将被渲染到组件的 Shadow DOM 内，Shadow DOM 与外部环境隔离，以防止污染外部环境。</p>
+<p>接下来，只需使用 <code>l-m</code> 组件来引用你开发好的组件。在页面上，直接使用你定义的组件标签即可。</p>
+<p>需要注意的是，注册的组件名只能使用小写英文字母和 <strong>-</strong> 符号，并且必须包含至少一个 <strong>-</strong>。这个命名规则需要遵循。</p>
+<p>通过本示例，你可以了解如何创建一个名为 <code>my-comp</code> 的组件，并在另一个页面中使用它。同时可以通过链接外部的 CSS 文件来设置组件的样式。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

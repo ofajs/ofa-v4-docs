@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inject-host component</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/inject-host/demo.html" preview></a>
+<a href="../../publics/examples/inject-host/comp-one.html"></a>
+<a href="../../publics/examples/inject-host/comp-two.html" main></a>
+</template>
+
+<h1>inject-host component</h1>
+<p>Due to the isolation of Web Components, it is difficult to directly modify the styles of elements inside component slots. To address this issue, ofa.js provides a component called <code>inject-host</code>, which injects styles into the host layer to configure the appearance of the component more flexibly.</p>
+<p>It should be noted that using this component may affect the styles of the host layer. Therefore, when intruding on styles, naming conventions should be maintained to avoid affecting the styles of the host.</p>
+<p>In the example, we defined the <code>comp-two</code> component, which internally uses the <code>inject-host</code> component to inject styles. This allows us to style the elements inside the <code>comp-two</code> component using the injected styles without affecting other components.</p>
+<p>At the same time, the following points should also be noted:</p>
+<ul>
+<li>By adding <code>&lt;style&gt;</code> tags inside <code>inject-host</code>, we can define specific styles for the component. These styles will only affect the elements of the current component and will not spread to other components.</li>
+<li>When injecting styles, it is important to avoid using overly generic selectors to prevent affecting the styles of other components. Specificity and uniqueness of selectors should be maintained.</li>
+<li><code>inject-host</code> can also inject external style sheet files using the <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;target/style.css&quot;&gt;</code> approach.</li>
+</ul>
+<p>Throughout the example, by using the <code>inject-host</code> inside the <code>comp-two</code> component, we can flexibly set and apply styles within the component without breaking other component styles.</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

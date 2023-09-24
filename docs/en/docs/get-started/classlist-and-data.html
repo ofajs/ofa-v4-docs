@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList and data</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>classList and data</h1>
+<h2>classList</h2>
+<p>In <code>ofa.js</code>, you can manipulate an element&#39;s classList using the following methods: </p>
+<ul>
+<li><code>$ele.classList</code>: Returns the element&#39;s classList object, used for manipulating the element&#39;s class names.</li>
+</ul>
+<h3>classList usage for adding and removing class names</h3>
+<ul>
+<li>Adding a class name: <code>$ele.classList.add(&#39;className&#39;)</code>, adds the specified class name to the element&#39;s classList. </li>
+<li>Removing a class name: <code>$ele.classList.remove(&#39;className&#39;)</code>, removes the specified class name from the element&#39;s classList. </li>
+<li>Toggling a class name: <code>$ele.classList.toggle(&#39;className&#39;)</code>, removes it if the element&#39;s classList already contains the class name; otherwise, adds it.</li>
+</ul>
+<h3>Example</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;title&gt;classList Demo&lt;/title&gt;
+  &lt;style&gt;
+    .highlight {
+      background-color: yellow;
+    }
+  &lt;/style&gt;
+  &lt;script src=&quot;ofa.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2&gt;classList Demo&lt;/h2&gt;
+&lt;div id=&quot;box&quot; class=&quot;box&quot;&gt;I am a box&lt;/div&gt;
+&lt;br /&gt;
+&lt;button id=&quot;btnAdd&quot;&gt;Add Highlight&lt;/button&gt;
+&lt;button id=&quot;btnRemove&quot;&gt;Remove Highlight&lt;/button&gt;
+&lt;button id=&quot;btnToggle&quot;&gt;Toggle Highlight&lt;/button&gt;
+
+&lt;script&gt;
+  const boxElement = $(&#39;#box&#39;);
+  const btnAdd = $(&#39;#btnAdd&#39;);
+  const btnRemove = $(&#39;#btnRemove&#39;);
+  const btnToggle = $(&#39;#btnToggle&#39;);
+
+  btnAdd.on(&#39;click&#39;, () =&gt; {
+    boxElement.classList.add(&#39;highlight&#39;);
+  });
+
+  btnRemove.on(&#39;click&#39;, () =&gt; {
+    boxElement.classList.remove(&#39;highlight&#39;);
+  });
+
+  btnToggle.on(&#39;click&#39;, () =&gt; {
+    boxElement.classList.toggle(&#39;highlight&#39;);
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>In this example, there is a <code>&lt;div&gt;</code> element with an initial class name of <code>box</code>, as well as three buttons: Add Highlight, Remove Highlight, and Toggle Highlight. </p>
+<ul>
+<li>When the &quot;Add Highlight&quot; button is clicked, the <code>highlight</code> class name is added to the <code>&lt;div&gt;</code> element using the <code>classList.add()</code> method, giving it a yellow background color. </li>
+<li>When the &quot;Remove Highlight&quot; button is clicked, the <code>highlight</code> class name is removed from the <code>&lt;div&gt;</code> element&#39;s class name using the <code>classList.remove()</code> method, restoring the original style. </li>
+<li>When the &quot;Toggle Highlight&quot; button is clicked, the <code>highlight</code> class name of the <code>&lt;div&gt;</code> element is toggled using the <code>classList.toggle()</code> method. If the class name already exists, it is removed; if it doesn&#39;t exist, it is added, achieving a style toggle.</li>
+</ul>
+<p>This way, you can use the <code>classList</code> object to manage the class names of an element, dynamically controlling its styles.</p>
+<h2>Usage of data</h2>
+<p>In <code>ofa.js</code>, you can manipulate an element&#39;s data attribute in the following ways: </p>
+<ul>
+<li><code>$ele.data</code>: Returns the dataset object of the element, used for manipulating its data attribute.</li>
+</ul>
+<h3>Specific usage of dataset</h3>
+<p>An element&#39;s <code>data-*</code> attributes can be used to store custom data in HTML and can be accessed using the <code>data</code> object.</p>
+<p>For example, if an element has a <code>data-info</code> attribute:</p>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; data-info=&quot;some information&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>You can use <code>dataset</code> to access that attribute:</p>
+<pre><code class="language-javascript">const myElement = $(&#39;#myElement&#39;);
+const info = myElement.data.info;
+console.log(info); // Output: &quot;some information&quot;
+</code></pre>
+<p>Note: The property names in the <code>dataset</code> object are converted to camel case, excluding the <code>&quot;data-&quot;</code> part. For example, <code>data-info</code> becomes <code>dataset.info</code>. If you want to set a <code>data-*</code> attribute, you can also achieve it through the <code>dataset</code> object.</p>
+<pre><code class="language-javascript">myElement.data.anotherInfo = &quot;another value&quot;;
+</code></pre>
+<p>This will add a <code>data-another-info</code> attribute to the element and set its value to &quot;another value&quot;.</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

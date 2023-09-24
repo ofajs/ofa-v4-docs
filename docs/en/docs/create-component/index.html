@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating and Using Components</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Creating and Using Components</h1>
+<p>ofa.js uses basic HTML and JavaScript files to define components, avoiding the need to introduce new file types to reduce learning costs. With a certain understanding of HTML, you can quickly develop and use ofa.js components.</p>
+<h2>Steps before creating a component</h2>
+<p>Before creating a component, there are some preparations to be made. Since creating a component involves browser requests for resources, if you simply double-click to open the HTML file for viewing, it will be viewed under the &quot;file&quot; protocol. Under the &quot;file&quot; protocol, loading JavaScript modules may result in errors. Therefore, you need to prepare a static server to view the components correctly.</p>
+<p>If you are using the Visual Studio Code editor, you can simply install a plugin that supports a static server. We recommend using the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> plugin.</p>
+<p>After installing the plugin, simply right-click on the <code>demo.html</code> file and select &quot;Open with Live Server&quot;, and the plugin will automatically open the file in static server mode.</p>
+<p>If you are using another editor, you can also create an Nginx or Apache server as long as it supports viewing static HTML. This ensures that you can preview and develop your components normally.</p>
+<h2>Creating a Button Component</h2>
+<p>Next, we will create a simple button component named <strong>simple-button</strong>, which will have a more beautiful style than native buttons.</p>
+<p>First, create a file named <code>simple-button.html</code>, which uses the <code>&lt;template&gt;</code> tag and adds the <code>component</code> attribute to identify it as a component.</p>
+<p>Then, write the template code for the component inside the <code>&lt;template&gt;</code> tag. Next, add a <code>&lt;script&gt;</code> tag below the template content to include the component&#39;s JavaScript code.</p>
+<pre><code class="language-html">&lt;!-- simple-button.html --&gt;
+&lt;template component&gt;
+  &lt;style&gt;
+    .shadow-button {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    .shadow-button:hover {
+      opacity: 0.8;
+    }
+
+    .shadow-button:active {
+      transform: translateY(4px);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  &lt;/style&gt;
+
+  &lt;button class=&quot;shadow-button&quot;&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/button&gt;
+
+  &lt;script&gt;
+    // Do not use import
+    // import data from &#39;./other/module.mjs&#39;;
+
+    // Component name to be registered, if tag property is not defined, the registered component name will be the same as the file name
+    export const tag = &#39;simple-button&#39;;
+
+    export default async ({load}) =&gt; {
+      // Reference other modules
+      // const data = await load(&quot;./other/module.mjs&quot;);
+    }
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<p>After successfully introducing ofa.js, the <code>load-module</code> component will be automatically registered. This is a component used to declaratively import modules, similar to a script tag. This component acts as a proxy to load the specified <code>src</code> module and preprocess the modules that need to be loaded. In this example, it will load the template and register the simple-button component.</p>
+<p>The <code>load-module</code> component can also be abbreviated as <code>l-m</code> to reduce the amount of code.</p>
+<pre><code class="language-html">&lt;!-- demo.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;title&gt;simple-button&lt;/title&gt;
+&lt;script src=&quot;../../ofa.js&quot;&gt;&lt;/script&gt;
+&lt;!-- &lt;load-module src=&quot;./simple-button.html&quot;&gt;&lt;/load-module&gt; --&gt;
+&lt;!-- l-m component is equivalent to the load-module component, it can be written with less code --&gt;
+&lt;l-m src=&quot;./simple-button.html&quot;&gt;&lt;/l-m&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;simple-button&gt;I am a button&lt;/simple-button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The <code>load-module</code> component is a custom <strong>declarative loader</strong> library that provides powerful functionality and can extend support for various types of files or intermediate processing of JavaScript modules. It has been split into a separate project, and the specific usage documentation is available at <a href="https://github.com/kirakiray/drill.js">https://github.com/kirakiray/drill.js</a>.</p>
+<h3>Dual file mode</h3>
+<p>Dual file mode separates the <code>static template</code> and <code>logical code</code>, making the component clearer.</p>
+<p>The logical code is placed in a js file, and this js file needs to indicate <code>export const type = $.COMP;</code> to inform the page that this is a component module. In this split mode, module code can use standard syntax like <code>import</code> of ES Modules.</p>
+<p>The button component consists of two files:</p>
+<ol>
+<li><strong>simple-button.html</strong>: HTML template and styles for the button component.</li>
+</ol>
+<pre><code class="language-html">&lt;!-- simple-button.html --&gt;
+&lt;style&gt;
+  .shadow-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .shadow-button:hover {
+    opacity: 0.8;
+  }
+
+  .shadow-button:active {
+    transform: translateY(4px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+&lt;/style&gt;
+
+&lt;button class=&quot;shadow-button&quot;&gt;
+  &lt;slot&gt;&lt;/slot&gt;
+&lt;/button&gt;
+</code></pre>
+<ol start="2">
+<li><strong>simple-button.mjs</strong>: Registration code for the button component.</li>
+</ol>
+<pre><code class="language-javascript">// simple-button.mjs
+export const type = $.COMP;
+
+// Component name to be registered, when tag attribute is not defined, the registered component name remains the same as the file name
+// export const tag = &#39;simple-button&#39;;
+
+// Template URL for the component, when not defined, the component will default to loading the html file with the same name in the same directory as the current module
+// export const temp = &#39;./simple-button.html&#39;;
+</code></pre>
+<p>To use this component, import this module using <code>l-m</code>. Here is an example page using simple-button (dual-file mode).</p>
+<pre><code class="language-html">&lt;!-- demo.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;simple-button&lt;/title&gt;
+    &lt;script src=&quot;ofa.js&quot;&gt;&lt;/script&gt;
+    &lt;l-m src=&quot;./simple-button.mjs&quot;&gt;&lt;/l-m&gt; 
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;simple-button&gt;I am a button&lt;/simple-button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>

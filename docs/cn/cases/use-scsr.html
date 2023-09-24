@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用 SCSR 方案</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/use-scsr/page1.html" main demo preview></a>
+<a href="../../publics/examples/use-scsr/page2.html"></a>
+<a href="../../publics/examples/use-scsr/public.css"></a>
+<a href="../../publics/examples/use-scsr/app-config.mjs"></a>
+</template>
+
+<h1>使用 SCSR 方案</h1>
+<p>在这个示例中，请点击 <span style='font-family: "iconfont"'>&#xe7cb;</span> 按钮，以新页面的方式打开并尝试；</p>
+<p>SCSR 的全称是 Static Client-Side Rendering，又称为静态客户端渲染。它是 CSR（Client-Side Rendering）的一种变种，在保留了 CSR 用户体验的基础上，还能够让页面在静态状态下被搜索引擎爬取。</p>
+<p>当前网站采用的正是 SCSR 方案构建；</p>
+<p>SCSR 通过直接运行单文件模式的页面模块，无需使用 <code>o-page</code> 标签，实现在页面上进行渲染。具体而言，就是将页面模块的模板代码直接嵌套在 <code>o-app</code> 内。</p>
+<h2>注意事项</h2>
+<p>对于所有采用 SCSR 方案的页面，除了页面描述性的内容（如 title、meta:description、keywords）和页面模板内容外，其他引用的资源必须保持一致，以确保在页面跳转和刷新后的用户体验一致。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.1/statics/init.js" type="module"></script>
+  </body>
+</html>
