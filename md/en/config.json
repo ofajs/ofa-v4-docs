@@ -1,11 +1,9 @@
 {
   "github": "https://github.com/kirakiray/ofa.js",
-  "logo": {
-    "text": "ofa.js"
-  },
+  "logo": { "text": "ofa.js" },
   "navs": [
-    { "name": "Tutorial", "summary": "./cases/SUMMARY.md" },
-    { "name": "Documentation", "summary": "./docs/SUMMARY.md" },
+    { "name": "Tutorials", "summary": "./cases/SUMMARY.md" },
+    { "name": "Document", "summary": "./docs/SUMMARY.md" },
     { "name": "Other", "summary": "./others/SUMMARY.md" }
   ]
 }
