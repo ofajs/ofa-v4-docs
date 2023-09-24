@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS usage</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>CSS usage</h1>
+<p>In <code>ofa.js</code>, you can manipulate the CSS styles of an element using the following methods;</p>
+<h2>Get specific CSS style of an element</h2>
+<p>You can use <code>$ele.css.xxx</code> to get the specific CSS style of an element, where <code>xxx</code> is the CSS property name you want to retrieve.</p>
+<h3>Example</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; style=&quot;color: blue; font-size: 18px;&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  // Get the color style of the element
+  const myElement = $(&quot;#myElement&quot;);
+  const colorStyle = myElement.css.color;
+  console.log(colorStyle); // Output: &quot;blue&quot;
+
+  // Get the font size style of the element
+  const fontSizeStyle = myElement.css.fontSize;
+  console.log(fontSizeStyle); // Output: &quot;18px&quot;
+&lt;/script&gt;
+</code></pre>
+<h2>Set a specific style property</h2>
+<p>You can set the CSS style of an element using the <code>$ele.css.xxx = &#39;&#39;</code> syntax, where <code>xxx</code> is the CSS property name you want to set. By assigning an empty string as the property value, you can remove the specified style property.</p>
+<h3>Example</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; style=&quot;color: blue; font-size: 18px;&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // Set the color style of the element
+  myElement.css.color = &#39;red&#39;;
+  // Remove the font size style of the element
+  myElement.css.fontSize = &#39;&#39;;
+&lt;/script&gt;
+</code></pre>
+<h2>Assigning an object</h2>
+<p>You can set the element&#39;s style using <code>$ele.css = {xxx}</code>, where <code>xxx</code> is an object containing CSS property names and values.</p>
+<h3>Example</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // Set the styles of the element
+  myElement.css = {
+    color: &quot;red&quot;,
+    fontSize: &quot;24px&quot;,
+    backgroundColor: &quot;yellow&quot;,
+  };
+&lt;/script&gt;
+</code></pre>
+<h2>Assigning Strings</h2>
+<p>You can set the style of an element using the <code>$ele.css = &#39;color:red;...&#39;</code> syntax, where <code>&#39;color:red;...&#39;</code> is a string that contains CSS style rules.</p>
+<h3>Example</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // Set the style of the element
+  myElement.css = &#39;color:red; font-size:24px; background-color:yellow;&#39;;
+&lt;/script&gt;
+</code></pre>
+<h2>Tips for setting CSS</h2>
+<p>You can modify a specific style property of an element without affecting other properties by using <code>$ele.css = {...$ele.css, color:&#39;red&#39;}</code>. This allows you to modify only one property without rewriting the entire style.</p>
+<h3>Example</h3>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; style=&quot;color: blue; font-size: 18px;&quot;&gt;Hello World&lt;/div&gt;
+&lt;script&gt;
+  const myElement = $(&quot;#myElement&quot;);
+
+  // Modify the color style of the element while keeping other style properties unchanged
+  myElement.css = { ...myElement.css, color: &#39;red&#39; };
+&lt;/script&gt;
+</code></pre>
+<p>In the example above, by using <code>{ ...myElement.css, color: &#39;red&#39; }</code>, we only modified the color style of the element while keeping other style properties unchanged. This is a convenient technique that allows flexible modification of element styles.</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

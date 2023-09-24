@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Syntax</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Template Syntax</h1>
+<p><code>ofa.js</code> provides a series of powerful template syntax that allows you to manipulate component&#39;s interface elements and data more flexibly. These template syntax can help you achieve rich interface effects and interactive experiences.</p>
+<h2>Text Rendering Syntax</h2>
+<p>By using the rendering text syntax <code>{{key}}</code>, you can render data as text content and embed it into the component&#39;s template. The corresponding text content will also be automatically updated when the data changes.</p>
+<p>Here is an example using text rendering syntax:</p>
+<pre><code class="language-html">&lt;!-- template.html --&gt;
+&lt;div&gt;
+    &lt;p&gt;Welcome, {{username}}!&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  username: &quot;JohnDoe&quot;,
+};
+</code></pre>
+<p>In the example above, <code>{{username}}</code> will be replaced by the value of the <code>username</code> property in the component&#39;s <code>data</code>, thus displaying &quot;Welcome, JohnDoe!&quot; on the interface.</p>
+<h2>Attribute Binding Syntax</h2>
+<p>Using the attribute binding syntax <code>:xxx=&#39;yyy&#39;</code>, you can bind a component&#39;s property to the attribute of an element within the template. This binding is one-way, where changes in the property will affect the attribute of the element but not vice versa.</p>
+<p>Here are some common examples of property bindings:</p>
+<pre><code class="language-html">&lt;!-- template.html --&gt;
+&lt;l-m src=&quot;custom-component.mjs&quot;&gt;&lt;/l-m&gt;  &lt;!-- load custom-component --&gt;
+&lt;div&gt;
+    &lt;p :text=&quot;greeting&quot;&gt;&lt;/p&gt;
+    &lt;input :value=&quot;inputValue&quot; /&gt;
+    &lt;custom-component :custom-prop=&quot;customValue&quot;&gt;&lt;/custom-component&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  greeting: &quot;Hello, World!&quot;,
+  inputValue: &quot;&quot;,
+  customValue: &quot;Custom Value&quot;,
+};
+</code></pre>
+<p>In the example above, <code>:text=&quot;greeting&quot;</code> binds the value of the <code>greeting</code> property in the component&#39;s <code>data</code> to the text content of the <code>&lt;p&gt;</code> element. <code>:value=&quot;inputValue&quot;</code> binds the value of the <code>inputValue</code> property in the component&#39;s <code>data</code> to the <code>value</code> attribute of the <code>&lt;input&gt;</code> element. For custom components, <code>custom-prop</code> is the name of the property in the custom component that receives the value of the <code>customValue</code> property in the component&#39;s <code>data</code>.</p>
+<h2>Event Binding</h2>
+<p>Using the format <code>on:click=&quot;yyy&quot;</code>, you can bind a specified event (e.g., <code>click</code>) of the target element to a property <code>yyy</code> in the host component. This way, when the target element triggers the specified event, it will invoke the corresponding property method in the host component.</p>
+<p>Here is an example:</p>
+<pre><code class="language-html">&lt;!-- template.html --&gt;
+&lt;button on:click=&quot;increaseCount&quot;&gt;Increase Count&lt;/button&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  count: 0,
+};
+
+export const proto = {
+  increaseCount() {
+    this.count++;
+  },
+};
+</code></pre>
+<p>In the example above, when the button is clicked, it will call the <code>increaseCount</code> method of the host component to increase the value of the <code>count</code> property.</p>
+<h2>Attribute binding</h2>
+<p>Using the form <code>attr:xxx=&quot;yyy&quot;</code>, you can bind the specified attribute <code>xxx</code> of the target element to the property <code>yyy</code> of the host component. This way, the attribute of the target element will change as the property of the host component changes.</p>
+<pre><code class="language-html">&lt;!-- template.html --&gt;
+&lt;style&gt;
+[fontcolor=&quot;red&quot;]{
+    color: red;
+}
+&lt;/style&gt;
+
+&lt;div attr:fontcolor=&quot;val&quot;&gt;
+ I am text
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  val: &quot;red&quot;,
+};
+</code></pre>
+<p>In the example above, <code>attr:fontcolor=&quot;val&quot;</code> will bind the host component&#39;s <code>val</code> property to the <code>fontcolor</code> attribute of the <code>&lt;div&gt;</code> element.</p>
+<h2>Dynamic class binding</h2>
+<p>Using the form <code>class:xxx=&quot;yyy&quot;</code>, you can dynamically add or remove class names to the target element based on the property value of the host component. When the host component&#39;s <code>yyy</code> property is <code>true</code>, the target element will add the class name <code>xxx</code>; otherwise, it will remove that class name.</p>
+<pre><code class="language-html">&lt;!-- template.html --&gt;
+&lt;style&gt;
+  button.active{
+    background-color: red;
+  }
+&lt;/style&gt;
+&lt;button class:active=&quot;isActive&quot;&gt;Active Button&lt;/button&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  isActive: false,
+};
+</code></pre>
+<p>In the example above, if the <code>isActive</code> property is <code>true</code>, the button will add the <code>active</code> class name to apply specific styles.</p>
+<h2>Two-way Data Binding</h2>
+<p>By using the form of <code>sync:xxx=&#39;yyy&#39;</code>, you can achieve two-way data binding. This keeps the attribute <code>xxx</code> of the target element in sync with the property <code>yyy</code> of the host component, so that changes in the target attribute will be reflected in the host property, and changes in the host property will also be synced to the target attribute.</p>
+<p>Here is an example:</p>
+<pre><code class="language-html">&lt;!-- template.html --&gt;
+&lt;input sync:value=&quot;inputValue&quot; /&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  inputValue: &quot;Initial Value&quot;,
+};
+</code></pre>
+<p>In the example above, <code>sync:value=&quot;inputValue&quot;</code> achieves two-way data binding, so when the value of the input box changes, <code>inputValue</code> will be automatically updated; conversely, when <code>inputValue</code> changes, the value of the input box will also change accordingly.</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

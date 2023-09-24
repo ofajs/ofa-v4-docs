@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>模板渲染組件</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>模板渲染組件</h1>
+<p>除了能夠使用模板語法，ofa.js 還提供了專用於模板內部的渲染組件，包括條件渲染組件和填充渲染組件。</p>
+<h2>條件渲染組件</h2>
+<h3>x-if 組件</h3>
+<p><code>x-if</code> 組件是用來根據條件動態渲染內容的組件。它接受一個 <code>value</code> 屬性，根據該屬性的值來判斷是否渲染其子元素。如果 <code>value</code> 為 <code>true</code>，則渲染子元素，否則不渲染。</p>
+<p>以下是一個使用 <code>x-if</code> 的示例，用於根據條件渲染不同的內容：</p>
+<pre><code class="language-html">&lt;div id=&quot;condition-container&quot;&gt;
+  &lt;x-if :value=&quot;showContent&quot;&gt;
+    &lt;div&gt;I am rendered because showContent is true.&lt;/div&gt;
+  &lt;/x-if&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  showContent: true,
+};
+</code></pre>
+<h3>x-else 組件</h3>
+<p><code>x-if</code> 可以與 <code>x-else</code> 配合使用，實現條件切換渲染。</p>
+<p>以下是一個使用 <code>x-if</code> 和 <code>x-else</code> 的示例，根據不同的條件切換渲染的內容：</p>
+<pre><code class="language-html">&lt;div id=&quot;condition-container&quot;&gt;
+  &lt;x-if :value=&quot;showContent&quot;&gt;
+    &lt;div&gt;I am rendered because showContent is true.&lt;/div&gt;
+  &lt;/x-if&gt;
+  &lt;x-else&gt;
+    &lt;div&gt;I am rendered because showContent is false.&lt;/div&gt;
+  &lt;/x-else&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  showContent: false,
+};
+</code></pre>
+<h3>x-if + x-else-if + x-else 組件</h3>
+<p><code>x-if</code> 還可以與 <code>x-else-if</code> 和 <code>x-else</code> 組合使用，實現多條件的渲染。</p>
+<p>以下是一個使用 <code>x-if</code>、<code>x-else-if</code> 和 <code>x-else</code> 的示例，根據多個條件切換渲染的內容：</p>
+<pre><code class="language-html">&lt;div id=&quot;condition-container&quot;&gt;
+  &lt;x-if :value=&quot;condition === &#39;A&#39;&quot;&gt;
+    &lt;div&gt;I am rendered for condition A.&lt;/div&gt;
+  &lt;/x-if&gt;
+  &lt;x-else-if :value=&quot;condition === &#39;B&#39;&quot;&gt;
+    &lt;div&gt;I am rendered for condition B.&lt;/div&gt;
+  &lt;/x-else-if&gt;
+  &lt;x-else&gt;
+    &lt;div&gt;I am rendered for other conditions.&lt;/div&gt;
+  &lt;/x-else&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  condition: &#39;B&#39;,
+};
+</code></pre>
+<p>在上述示例中，根據 <code>condition</code> 的不同值，會渲染不同的內容，實現了多條件切換渲染的效果。</p>
+<h2>模板組件之：x-fill</h2>
+<p><code>x-fill</code> 組件允許你在模板中動態填充內容，可以根據宿主組件的屬性值來生成不同的內容。<code>x-fill</code> 組件使用 <code>name</code> 屬性來指定要使用的填充模板，並通過 <code>value</code> 屬性傳遞數據給填充模板。</p>
+<h3>x-fill 填充數組字符串的示例</h3>
+<p>以下是一個使用 <code>x-fill</code> 填充數組字符串的示例，通過循環填充不同的字符串內容：</p>
+<pre><code class="language-html">&lt;div id=&quot;fill-container&quot; style=&quot;padding: 16px; background-color: #eee&quot;&gt;
+  &lt;x-fill name=&quot;fillTemplate&quot; :value=&quot;[&#39;Item 1&#39;, &#39;Item 2&#39;, &#39;Item 3&#39;]&quot;&gt;&lt;/x-fill&gt;
+&lt;/div&gt;
+&lt;template name=&quot;fillTemplate&quot;&gt;
+  &lt;div class=&quot;fill-item&quot; style=&quot;margin: 10px; padding: 10px; border: red solid 1px&quot;&gt;
+    {{ $data }}
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>在上述示例中，<code>x-fill</code> 使用名為 <code>fillTemplate</code> 的填充模板，並傳遞一個數組給它。填充模板中使用了 <code>{{ $data }}</code> 來渲染數組中的每個元素，從而實現了循環填充不同的字符串內容。</p>
+<h3>x-fill 填充對象並且能自舉填充的示例</h3>
+<p><code>x-fill</code> 還可以填充包含更復雜結構的對象，並且支持自嵌套填充。</p>
+<p>以下是一個使用 <code>x-fill</code> 填充對象並且能自嵌套填充的示例，展示了如何生成嵌套的內容：</p>
+<pre><code class="language-html">&lt;div id=&quot;fill-container&quot; style=&quot;padding: 16px; background-color: #eee&quot;&gt;
+  &lt;x-fill name=&quot;nestedFillTemplate&quot; :value=&quot;nestedData&quot;&gt;&lt;/x-fill&gt;
+&lt;/div&gt;
+&lt;template name=&quot;nestedFillTemplate&quot;&gt;
+  &lt;div class=&quot;nested-item&quot; style=&quot;margin: 10px; padding: 10px; border: red solid 1px&quot;&gt;
+    {{ $data.title }}
+    &lt;x-fill name=&quot;nestedFillTemplate&quot; :value=&quot;$data.children&quot;&gt;&lt;/x-fill&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  nestedData: {
+    title: &quot;Parent&quot;,
+    children: [
+      {
+        title: &quot;Child 1&quot;,
+        children: [
+          { title: &quot;Grandchild 1&quot; },
+          { title: &quot;Grandchild 2&quot; },
+        ],
+      },
+      {
+        title: &quot;Child 2&quot;,
+        children: [{ title: &quot;Grandchild 3&quot; }],
+      },
+    ],
+  },
+};
+</code></pre>
+<p>在上述示例中，<code>x-fill</code> 使用名為 <code>nestedFillTemplate</code> 的填充模板，並傳遞一個復雜的嵌套對象給它。填充模板中使用了 <code>{{ $data.title }}</code> 來渲染對象的標題，同時又使用了嵌套的 <code>x-fill</code> 來填充子項的內容，實現了嵌套的內容生成。</p>
+<h3>$data、$ele、$host 在模板內的含義</h3>
+<p>在填充模板內，你可以使用特殊的標識符來訪問不同的數據：</p>
+<ul>
+<li><code>{{ $data }}</code>：表示傳遞給填充模板的數據，即 <code>value</code> 屬性的值。</li>
+<li><code>{{ $ele }}</code>：表示當前填充模板所在的元素，可以用於訪問元素的屬性和樣式。</li>
+<li><code>{{ $host }}</code>：表示宿主組件的實例，可以用於訪問宿主組件的屬性和方法。</li>
+</ul>
+<p>這些特殊標識符可以幫助你在填充模板內動態地訪問和渲染不同的數據。在示例中，你可以看到如何使用 <code>{{ $data.title }}</code> 來訪問傳遞的數據的標題，以及如何使用 <code>{{ $host.num }}</code> 來訪問宿主組件的屬性。</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>子路由模式</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>子路由模式</h1>
+<p>在 ofa.js 中，設置子路由與一些前端框架的做法略有不同。ofa.js 使用一種更加直觀的方式，通過在頁面模塊上設置父頁面來作為容器，從而實現子路由的需求。</p>
+<h2>設置父頁面容器</h2>
+<p>要創建子路由，首先需要在子頁面的頁面模塊上設置 <code>parent</code> 參數，指定父頁面的頁面模塊地址。這樣，在子頁面加載時，ofa.js 會自動將子頁面包裹在父頁面容器中。</p>
+<pre><code class="language-html">&lt;template page&gt;
+  &lt;h1&gt;Page 1&lt;/h1&gt;
+
+  &lt;script&gt;
+    export const parent = &quot;./layout-page.html&quot;;
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<p>在上述示例中，子頁面的頁面模塊通過 <code>parent</code> 參數指定了父頁面容器的地址。</p>
+<h2>父頁面容器模板設置</h2>
+<p>父頁面容器的模板需要設置一個 <code>&lt;slot&gt;</code> 元素，以便子頁面能夠插入到父頁面的指定位置。同時，確保 <code>&lt;slot&gt;</code> 元素的容器元素設置為 <code>position: relative</code>，這是非常重要的，因為子頁面會在父頁面容器中絕對定位。</p>
+<p>以下是一個父頁面容器的示例模板：</p>
+<pre><code class="language-html">&lt;!-- layout-page.html --&gt;
+&lt;template page&gt;
+  &lt;style&gt;
+    /* 設置容器元素為 relative 定位 */
+    .parent-container {
+      position: relative;
+    }
+  &lt;/style&gt;
+  
+  &lt;!-- 設置容器元素，用於插入子頁面 --&gt;
+  &lt;div class=&quot;parent-container&quot;&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>在上述示例中，通過設置一個帶有 <code>slot</code> 的容器元素，子頁面會被插入到該容器中。確保容器元素具有相對定位，這樣子頁面可以根據容器定位。</p>
+<p>通過使用這種方式，你可以更直觀地配置子路由，通過設置父頁面容器和子頁面的關聯，來實現子頁面的加載和渲染。</p>
+<h2>父頁面的路由監聽</h2>
+<p>在某些情況下，多個頁面共用同一個父頁面作為容器，當這些頁面之間進行跳轉時，父頁面不會被刷新。這種情況下，父頁面仍然可以監聽路由的變動，以便在不刷新頁面的情況下執行相應的操作。</p>
+<h3>監聽路由變動</h3>
+<p>父頁面模塊可以設置一個 <code>routerChange</code> 函數，用於監聽路由的變動。當頁面發生路由切換且不刷新父頁面時，將觸發 <code>routerChange</code> 事件。這個事件會傳遞當前頁面的信息，以及跳轉的方式（<code>type</code>）。</p>
+<p>以下是一個父頁面模塊的示例，展示了如何設置 <code>routerChange</code> 函數來監聽路由變動：</p>
+<pre><code class="language-javascript">// 父頁面的頁面模塊
+export const routerChange = (current, type) =&gt; {
+  console.log(`路由切換：當前頁面為 ${current.src}，切換方式為 ${type}`);
+};
+</code></pre>
+<p>在上述示例中，<code>routerChange</code> 函數接收兩個參數，<code>current</code> 表示當前頁面的地址，<code>type</code> 表示跳轉的方式。當頁面發生路由切換時，該函數會被觸發，並輸出相應的信息。</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

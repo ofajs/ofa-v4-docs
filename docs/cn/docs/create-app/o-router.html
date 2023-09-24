@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>o-router 组件的使用</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>o-router 组件的使用</h1>
+<p><code>o-router</code> 组件是一个用于将 <code>o-app</code> 内的路由绑定到当前浏览器标签页的组件，它能够帮助你更方便地管理页面路由和展示。</p>
+<h2>引用 o-router 组件</h2>
+<p>首先，你需要在页面中引用 <code>o-router</code> 组件。你可以通过以下方式引用 <code>router.mjs</code> 文件：</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2>使用 o-router 组件</h2>
+<p>使用 <code>o-router</code> 组件是通过将其包裹在 <code>o-app</code> 组件外部来实现的。这样可以将应用内的路由绑定到当前浏览器标签上。</p>
+<pre><code class="language-html">&lt;o-router&gt;
+    &lt;o-app src=&quot;app-config.mjs&quot;&gt;&lt;/o-app&gt;
+&lt;/o-router&gt;
+</code></pre>
+<h2>fix-body 属性</h2>
+<p><code>o-router</code> 组件还提供了 <code>fix-body</code> 属性，当你设置了该属性后，组件会自动为 <code>&lt;html&gt;</code> 标签添加样式，使应用的尺寸等于页面的大小，从而让应用的内容充满整个窗口。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;router test&lt;/title&gt;
+    &lt;script src=&quot;ofa.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- 引用 o-router 组件 --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- 使用 o-router 组件，并设置 fix-body 属性 --&gt;
+    &lt;o-router fix-body&gt; 
+      &lt;o-app src=&quot;app-config.mjs&quot;&gt;&lt;/o-app&gt;
+    &lt;/o-router&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

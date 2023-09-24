@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using the app component</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/use-app/demo.html" preview></a>
+<a href="../../publics/examples/use-app/page1.html" main></a>
+<a href="../../publics/examples/use-app/page2.html"></a>
+</template>
+
+<h1>Using the app component</h1>
+<p>In <code>ofa.js</code>, you can use the <code>o-app</code> component to create the layout structure of the entire application and load different page modules within it. By using the <code>o-app</code> component, <code>o-page</code> component, and page modules, you can build the page structure of the entire application and implement navigation between pages.</p>
+<p>When the <code>o-page</code> component is inside the <code>o-app</code> component, you can use the <code>&lt;a&gt;</code> tag with the <code>olink</code> attribute to achieve page redirection. This redirection will not affect the current page, but will only navigate within the <code>o-app</code> component, similar to using <code>&lt;iframe&gt;</code>.</p>
+<p>If the <code>o-page</code> component is inside the <code>o-app</code> component, you can also use the following methods:</p>
+<ul>
+<li>Use the <code>goto</code> method to perform page navigation</li>
+<li>Use the <code>back</code> method to go back to the previous page</li>
+<li>Use the <code>replace</code> method to replace the current page with a new one</li>
+</ul>
+<p>By using the <code>o-app</code> component, you can build the layout structure of the entire application and load different page modules into it. The routing feature provided by <code>o-app</code> makes navigation between pages more convenient and flexible.</p>
+<p>In this example, we created an application layout using the <code>o-app</code> component and loaded a page module <code>page1.html</code> into it.</p>
+<p>In the <code>page1.html</code> page module, we defined a title and a button. Clicking the button will navigate to another page module <code>page2.html</code>. We also added a link with the <code>olink</code> attribute, which will also navigate to <code>page2.html</code> when clicked.</p>
+<p>In the <code>page2.html</code> page module, we also defined a title and a button. Clicking the button will return to the previous page, implementing page navigation.</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

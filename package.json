@@ -1,5 +1,6 @@
 {
   "name": "ofa-v4-docs",
+  "type": "module",
   "version": "0.3.4",
   "description": "Documentation site for ofa.js v4",
   "main": "index.js",
@@ -8,20 +9,29 @@
     "url": "git+https://github.com/kirakiray/ofa-v4-docs.git"
   },
   "scripts": {
-    "devmon": "nodemon --inspect ../o-book/shell/ dev",
-    "bmon": "nodemon --inspect ../o-book/shell/ build dev",
+    "devm": "node ../o-book/shell/ update",
     "dev": "obook dev",
-    "build": "obook build"
+    "build": "obook build",
+    "trans": "obook trans"
   },
   "author": "Yao",
   "license": "CC-BY-NC-SA-4.0",
   "obook": {
-    "input": "./packages/docs/index.html",
-    "output": "../o_blog",
-    "output2": "../o-book/dist",
+    "input": "./md/_preview.html",
+    "output": "./docs",
     "port": 44038
   },
+  "obook-translate": {
+    "caches": "./caches",
+    "main": "cn",
+    "dirs": {
+      "cn": "./md/cn",
+      "t-cn": "./md/t-cn",
+      "en": "./md/en",
+      "es": "./md/es"
+    }
+  },
   "devDependencies": {
-    "o-book": "^2.0.8"
+    "obook": "^2.1.10"
   }
 }

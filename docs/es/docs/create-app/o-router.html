@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uso del componente o-router</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Uso del componente o-router</h1>
+<p>El componente <code>o-router</code> es un componente utilizado para enlazar rutas dentro de <code>o-app</code> a la pestaña actual del navegador, lo que ayuda a gestionar el enrutamiento y la presentación de la página más fácilmente.</p>
+<h2>Referencia al componente o-router</h2>
+<p>Primero, necesitas referenciar el componente <code>o-router</code> en tu página. Puede hacer referencia al archivo <code>router.mjs</code> de la siguiente manera:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2>Usando el componente o-router</h2>
+<p>El uso del componente <code>o-router</code> se consigue envolviéndolo en el exterior del componente <code>o-app</code>. Esto vincula las rutas in-app a la pestaña actual del navegador.</p>
+<pre><code class="language-html">&lt;o-router&gt;
+    &lt;o-app src=&quot;app-config.mjs&quot;&gt;&lt;/o-app&gt;
+&lt;/o-router&gt;
+</code></pre>
+<h2>atributo fix-body</h2>
+<p>El componente <code>o-router</code> también proporciona el atributo <code>fix-body</code>, cuando estableces este atributo, el componente estiliza automáticamente la etiqueta <code>&lt;html&gt;</code> para que el tamaño de la aplicación sea igual al tamaño de la página de forma que el contenido de la aplicación llene toda la ventana.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;router test&lt;/title&gt;
+    &lt;script src=&quot;ofa.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Referencia al componente o-router --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Utiliza el componente o-router y establece la propiedad fix-body --&gt;
+    &lt;o-router fix-body&gt; 
+      &lt;o-app src=&quot;app-config.mjs&quot;&gt;&lt;/o-app&gt;
+    &lt;/o-router&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

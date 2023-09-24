@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用 app 组件</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/use-app/demo.html" preview></a>
+<a href="../../publics/examples/use-app/page1.html" main></a>
+<a href="../../publics/examples/use-app/page2.html"></a>
+</template>
+
+<h1>使用 app 组件</h1>
+<p>在 <code>ofa.js</code> 中，您可以使用 <code>o-app</code> 组件来创建整个应用的布局结构，并在其中加载不同的页面模块。通过使用 <code>o-app</code> 组件、<code>o-page</code> 组件和页面模块，您可以构建整个应用的页面结构，并实现页面之间的导航</p>
+<p>当 <code>o-page</code> 组件位于 <code>o-app</code> 内部时，您可以使用带有 <code>olink</code> 属性的 <code>&lt;a&gt;</code> 标签来实现页面跳转。这种跳转不会影响当前页面，而是只会在 <code>o-app</code> 内部进行跳转，类似于使用 <code>&lt;iframe&gt;</code>。</p>
+<p>如果 <code>o-page</code> 组件在 <code>o-app</code> 内部，您还可以使用以下方法：</p>
+<ul>
+<li><code>goto</code> 方法来进行页面跳转</li>
+<li><code>back</code> 方法返回上一页</li>
+<li><code>replace</code> 方法进行当前页面的替换式跳转</li>
+</ul>
+<p>通过使用 <code>o-app</code> 组件，您可以构建整个应用的布局结构，并在其中加载不同的页面模块。同时，<code>o-app</code> 提供的路由功能使得页面之间的跳转变得更加方便和灵活。</p>
+<p>在这个示例中，我们通过 <code>o-app</code> 组件创建了一个应用布局，然后在其中加载了一个页面模块 <code>page1.html</code>。</p>
+<p>在 <code>page1.html</code> 页面模块中，我们定义了一个标题和一个按钮，点击按钮会跳转到另一个页面模块 <code>page2.html</code>。我们还添加了一个带有 <code>olink</code> 属性的链接，点击链接同样会导航到 <code>page2.html</code>。</p>
+<p>在 <code>page2.html</code> 页面模块中，我们同样定义了一个标题和一个按钮，点击按钮会返回上一页，实现页面导航。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

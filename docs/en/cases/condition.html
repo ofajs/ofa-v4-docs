@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Rendering</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/condition/demo.html" preview></a>
+<a href="../../publics/examples/condition/test-demo.html" main></a>
+</template>
+
+<h1>Conditional Rendering</h1>
+<p>In addition to template syntax, templates also have template components;</p>
+<blockquote>
+<p><strong>Template components</strong> are components designed specifically for templates and can only be used within templates;</p>
+</blockquote>
+<p>Conditional rendering allows you to dynamically insert different content into a component under specific conditions. Here is an example demonstrating how to use conditional rendering within a component.</p>
+<p>In this example, we create a component called <code>test-demo</code>. The component contains a button that increments the <code>count</code> property. Using the <code>&lt;x-if&gt;</code>, <code>&lt;x-else-if&gt;</code>, and <code>&lt;x-else&gt;</code> tags, we implement the logic for conditional rendering.</p>
+<ul>
+<li>The <code>&lt;x-if&gt;</code> tag accepts a <code>value</code> attribute to define the condition. If the value of <code>value</code> is <code>true</code>, the content inside <code>&lt;x-if&gt;</code> will be rendered. In this example, if <code>count</code> is an even number, red text will be displayed.</li>
+<li>The <code>&lt;x-else-if&gt;</code> tag also accepts a <code>value</code> attribute to define the condition. If the previous condition is not met and the value of <code>value</code> is <code>true</code>, the content inside <code>&lt;x-else-if&gt;</code> will be rendered. In this example, if <code>count</code> is a multiple of 3, blue text will be displayed.</li>
+<li>The <code>&lt;x-else&gt;</code> tag does not require a <code>value</code> attribute. It will render its content when none of the previous conditions are met. In this example, if <code>count</code> is neither an even number nor a multiple of 3, green text will be displayed. <code>&lt;x-else&gt;</code> can also immediately follow <code>&lt;x-if&gt;</code>;</li>
+</ul>
+<p>Using this approach, you can dynamically render different content based on different conditions, achieving flexible interaction and display effects.</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

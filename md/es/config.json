@@ -1,0 +1,11 @@
+{
+  "github": "https://github.com/kirakiray/ofa.js",
+  "logo": {
+    "text": "ofa.js"
+  },
+  "navs": [
+    { "name": "Tutoriales", "summary": "./cases/SUMMARY.md" },
+    { "name": "documentación", "summary": "./docs/SUMMARY.md" },
+    { "name": "el resto", "summary": "./others/SUMMARY.md" }
+  ]
+}

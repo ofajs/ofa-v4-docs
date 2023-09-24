@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primer caso</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Primer caso</h1>
+<p>A continuación se muestra un caso en el que al hacer clic en un botón se cambia el texto a &quot;Hola mundo&quot;:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;hola-mundo&lt;/title&gt;
+    &lt;script src=&quot;../ofa.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;desk&quot;&gt;Haz clic en el botón&lt;/div&gt;
+    &lt;br /&gt;
+    &lt;button id=&quot;btn&quot;&gt;Soy un botón&lt;/button&gt;
+    &lt;script&gt;
+      $(&quot;#btn&quot;).on(&quot;click&quot;, () =&gt; {
+        $(&quot;#desk&quot;).html = &quot;&lt;b&gt;Hola Mundo&lt;/b&gt;&quot;;
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Después de hacer clic en el botón, se mostrará el texto &quot;Hola Mundo&quot; en negrita.</p>
+<p>Ahora, vamos a explicar en detalle los conceptos básicos.</p>
+<h2>Selector</h2>
+<p>Después de haber importado <code>ofa.js</code>, el símbolo <code>$</code> estará registrado en el alcance global. Puedes seleccionar el <strong>primer</strong> elemento que cumpla con la condición utilizando <code>$(&#39;xxx&#39;)</code>, donde <code>xxx</code> es un selector CSS estándar. Puedes hacer clic en el enlace para ver los detalles específicos del selector.</p>
+<p>A continuación se muestra un ejemplo:</p>
+<pre><code class="language-html">&lt;p&gt;Soy una etiqueta P&lt;/p&gt;
+&lt;div id=&quot;desk&quot;&gt;Soy un escritorio&lt;/div&gt;
+&lt;div class=&quot;logger&quot;&gt;Soy un registrador&lt;/div&gt;
+&lt;script&gt;
+    setTimeout(() =&gt; {
+        $(&quot;p&quot;).text = &quot;cambiar etiqueta P&quot;;
+        $(&quot;#desk&quot;).text = &quot;cambiar #desk&quot;;
+        $(&quot;.logger&quot;).text = &quot;cambiar .logger&quot;;
+    }, 1000);
+&lt;/script&gt;
+</code></pre>
+<p>En el caso anterior, después de abrir la página durante un segundo, se cambiará el contenido de los elementos <strong>p</strong>, <strong>#desk</strong> y <strong>.logger</strong> respectivamente.</p>
+<h2>vinculación de eventos</h2>
+<p>Después de seleccionar un elemento con éxito, puedes asignarle eventos. Como se mencionó anteriormente en el ejemplo &quot;Hello World&quot;, asignamos un evento de clic al elemento con el id &quot;btn&quot;. Cuando se hace clic en el botón, la función asignada se ejecutará.</p>
+<p>Puedes hacer clic para ver ejemplos de enlaces en el capítulo <a href="./example-event.html">Ejemplos de eventos</a> y aprender sobre algunos casos de asignación de eventos.</p>
+<p>Todos los eventos disponibles se pueden encontrar en <a href="https://developer.mozilla.org/en-US/docs/Web/Events">Web Events</a> para obtener la lista completa de eventos.</p>
+<h2>Propiedades</h2>
+<p>En los dos casos anteriores, mostramos el uso de las propiedades <code>html</code> y <code>text</code>.</p>
+<p>También puedes obtener el contenido de un elemento utilizando las propiedades <code>html</code> o <code>text</code>, como se muestra a continuación:</p>
+<pre><code class="language-html">&lt;div id=&quot;t1&quot;&gt;
+    &lt;span style=&quot;color: red&quot;&gt;Soy texto&lt;/span&gt;
+&lt;/div&gt;
+&lt;div id=&quot;t2&quot;&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;div id=&quot;t3&quot;&gt;&lt;/div&gt;
+&lt;br /&gt;
+&lt;script&gt;
+    $(&quot;#t2&quot;).text = $(&quot;#t1&quot;).html;
+    $(&quot;#t3&quot;).html = $(&quot;#t1&quot;).html;
+&lt;/script&gt;
+</code></pre>
+<p>En este ejemplo, asignamos el contenido HTML del elemento #t1 a los elementos #t2 y #t3.</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

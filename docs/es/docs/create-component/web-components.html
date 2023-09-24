@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encapsulación y Componentización: Conocimientos generales de la componentización</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Encapsulación y Componentización: Conocimientos generales de la componentización</h1>
+<p>ofa.js es una biblioteca de encapsulamiento basada en la tecnología de Web Components, con el objetivo de simplificar y acelerar el proceso de desarrollo de componentes. Al ocultar los detalles técnicos complejos, los desarrolladores pueden centrarse más en la construcción de componentes y aplicaciones de alta calidad.</p>
+<p>Para desarrollar componentes de manera más efectiva, es necesario aprender algunos conceptos de Web Components. Los puntos mencionados a continuación no solo se pueden aplicar en ofa.js, sino que también podrían beneficiarte al utilizar otros frameworks que empleen Web Components.</p>
+<h2>Contenedor Shadow DOM</h2>
+<p>En Web Components, Shadow DOM proporciona un contenedor aislado para encapsular los estilos y la estructura interna de un componente. Esto significa que los estilos y la estructura DOM internos del componente no interferirán con los estilos y estructuras externas, lo que garantiza la previsibilidad y mantenibilidad del componente.</p>
+<p>En ofa.js, cada componente tiene un contenedor Shadow DOM para aislar su contenido interno. El contenido de la plantilla se renderiza en este contenedor. Además, las instancias de componentes obtenidas a través de <code>$</code> también tienen acceso al contenedor Shadow DOM interno a través de la propiedad <code>shadow</code>, lo que permite operar y acceder a los elementos internos del componente.</p>
+<pre><code class="language-javascript">const myComponent = $(&quot;my-component&quot;); // Obtener instancia del componente
+const shadowContainer = myComponent.shadow; // Obtener el contenedor Shadow DOM del componente
+
+$(&quot;my-component&quot;).shadow.$(&quot;h1&quot;).css.color = &#39;red&#39; // Cambiar el color de h1 en el Shadow DOM a rojo
+</code></pre>
+<h2>Selectores CSS comunes en componentes web</h2>
+<p>Web Components proporciona algunos selectores CSS especiales para seleccionar y dar estilo a diferentes partes del interior del componente. Estos son algunos de los selectores más utilizados:</p>
+<h3>:host recogedor</h3>
+<p>El selector <code>:host</code> se utiliza para seleccionar el contenedor externo del propio componente. El estilo del componente puede definirse a través de este selector.</p>
+<pre><code class="language-css">:host {
+  display: block;
+  border: 1px solid black;
+  padding: 10px;
+}
+</code></pre>
+<h3>Selector ::slotted()</h3>
+<p>El selector <code>::slotted()</code> se utiliza para seleccionar el elemento envuelto por el contenido ranurado. Se puede aplicar estilo al contenido con este selector en los estilos internos del componente.</p>
+<pre><code class="language-css">::slotted(p) {
+  font-size: 18px;
+  color: blue;
+}
+</code></pre>
+<h2>Uso de las ranuras</h2>
+<p>Las ranuras son el mecanismo utilizado en Web Components para incrustar contenido externo dentro de un componente. Las ranuras permiten a los desarrolladores pasar contenido personalizado dentro de los componentes, lo que posibilita una estructura de componentes más flexible.</p>
+<h3>Ranura única</h3>
+<p>Las ranuras pueden definirse en plantillas de componentes utilizando el elemento <code>&lt;slot&gt;</code>. El contenido entrante externo se inserta dentro de la ranura.</p>
+<pre><code class="language-html">&lt;!-- MyComponent.html --&gt;
+&lt;div&gt;
+  &lt;h2&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- use MyComponent --&gt;
+&lt;my-component&gt;
+  &lt;p&gt;This is a slot content.&lt;/p&gt;
+&lt;/my-component&gt;
+</code></pre>
+<h3>Varias ranuras con nombre</h3>
+<p>Además de los espacios predeterminados, pueden definirse varios espacios con nombre. Las ranuras con nombre permiten a los desarrolladores insertar contenidos diferentes en las distintas ubicaciones de las ranuras.</p>
+<pre><code class="language-html">&lt;!-- MyComponent.html --&gt;
+&lt;div&gt;
+    &lt;header&gt;&lt;slot name=&quot;header&quot;&gt;&lt;/slot&gt;&lt;/header&gt;
+    &lt;main&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/main&gt;
+    &lt;footer&gt;&lt;slot name=&quot;footer&quot;&gt;&lt;/slot&gt;&lt;/footer&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- Utilizando MyComponent --&gt;
+&lt;my-component&gt;
+  &lt;div slot=&quot;header&quot;&gt;Contenido de Encabezado&lt;/div&gt;
+  &lt;p&gt;Este es el contenido principal.&lt;/p&gt;
+  &lt;div slot=&quot;footer&quot;&gt;Contenido de Pie de página&lt;/div&gt;
+&lt;/my-component&gt;
+</code></pre>
+<h2>Uso del evento slotchange</h2>
+<p>El evento <code>slotchange</code> se activa cuando el contenido del slot cambia. Puedes utilizar este evento para realizar operaciones relacionadas con el contenido del slot.</p>
+<pre><code class="language-javascript">// custom-component.mjs
+export const type = $.COMP;
+
+export default {
+  data: {
+    count: 0,
+  },
+  ready() {
+    this.shadow.$(&quot;slot&quot;).on(&quot;slotchange&quot;, () =&gt; {
+      console.log(&quot;El contenido del slot ha cambiado&quot;);
+    });
+  },
+};
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

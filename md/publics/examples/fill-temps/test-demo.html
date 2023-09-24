@@ -1,0 +1,45 @@
+<template component>
+  <style>
+    .item {
+      border: #aaa solid 1px;
+      padding: 5px;
+      margin: 5px 10px;
+    }
+  </style>
+  <x-fill :value="arr" name="item"> </x-fill>
+
+  <template name="item">
+    <div class="item">
+      val : {{$data.val}}
+      <x-fill :value="$data.childs" name="item"></x-fill>
+    </div>
+  </template>
+
+  <script>
+    export default {
+      data: {
+        count: 0,
+        arr: [
+          { val: "I am A" },
+          {
+            val: "I am B",
+            childs: [
+              {
+                val: "I am B1",
+              },
+              {
+                val: "I am B2",
+                childs: [
+                  {
+                    val: "I am B2-1",
+                  },
+                ],
+              },
+            ],
+          },
+          { val: "I am C" },
+        ],
+      },
+    };
+  </script>
+</template>

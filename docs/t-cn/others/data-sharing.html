@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>數據共享</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>數據共享</h1>
+<p>ofa.js與其他第三方框架不同，不采用傳統的狀態管理模式。作者認為狀態更新應該是無感知的，即改變數據後應自動觸發數據更新。</p>
+<p>ofa.js天生就具備出色的數據共享能力，它的實例基於數據共享庫 <a href="https://github.com/kirakiray/stanz">Stanz</a> 進行開發。實例上的對象都是可同步的。如果要實現數據共享，只需創建一個獨立的 Stanz 對象，然後讓所有組件直接引用即可。</p>
+<p>下面的案例展示了如何共享數據：</p>
+<pre><code class="language-javascript">// data.mjs
+export const data = $.stanz({
+  val: &quot;I am shared data&quot;,
+});
+</code></pre>
+<pre><code class="language-html">&lt;!-- comp1.html --&gt;
+&lt;template component&gt;
+  &lt;style&gt;
+    :host {
+      display: block;
+      padding: 10px;
+      margin: 10px;
+      border: red solid 1px;
+    }
+  &lt;/style&gt;
+  &lt;div&gt;
+    {{obj}}
+    &lt;br /&gt;
+    comp1 =&gt;
+    &lt;input type=&quot;text&quot; sync:value=&quot;obj.val&quot; /&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    export const tag = &quot;comp-one&quot;;
+
+    export default async function ({ load }) {
+      const { data } = await load(&quot;./data.mjs&quot;);
+
+      return {
+        data: {
+          obj: {},
+        },
+        attached() {
+          this.obj = data;
+        },
+        detached() {
+          this.obj = null;
+        },
+      };
+    }
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- comp2.html --&gt;
+&lt;template component&gt;
+  &lt;style&gt;
+    :host {
+      display: block;
+      padding: 10px;
+      margin: 5px;
+      border: green solid 1px;
+    }
+  &lt;/style&gt;
+  &lt;div&gt;
+    &lt;span style=&quot;color: #5e5c5c; font-size: 12px;&quot;&gt;comp2&lt;/span&gt;=&gt; {{obj.val}}
+  &lt;/div&gt;
+  &lt;script&gt;
+    export const tag = &quot;comp-two&quot;;
+
+    export default async function ({ load }) {
+      const { data } = await load(&quot;./data.mjs&quot;);
+
+      return {
+        data: {
+          obj: {},
+        },
+        attached() {
+          this.obj = data;
+        },
+        detached() {
+          this.obj = null;
+        },
+      };
+    }
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- demo.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;data sharing&lt;/title&gt;
+    &lt;script src=&quot;ofa.js&quot;&gt;&lt;/script&gt;
+    &lt;l-m src=&quot;./comp1.html&quot;&gt;&lt;/l-m&gt;
+    &lt;l-m src=&quot;./comp2.html&quot;&gt;&lt;/l-m&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;comp-one&gt;&lt;/comp-one&gt;
+    &lt;comp-two&gt;&lt;/comp-two&gt;
+    &lt;comp-two&gt;&lt;/comp-two&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在上述示例中，兩個組件在 <code>attached</code> 生命周期時，將數據寫入到組件本身。然後，組件的 <code>obj</code> 就成為共享數據。在 <code>detached</code> 生命周期後，將之前共享的數據設置為 <code>null</code>，以確保數據得到回收。</p>
+<h2>注意事項</h2>
+<p>由於數據是共享的，務必要確保在適當的時候回收數據，以避免內存泄漏。</p>
+<pre><code class="language-html">&lt;template component&gt;
+  comp1 =&gt;
+  &lt;input type=&quot;text&quot; sync:value=&quot;obj.val&quot; /&gt;
+  &lt;script&gt;
+    export const tag = &quot;comp-three&quot;;
+
+    export default async function ({ load }) {
+      const { data } = await load(&quot;./data.mjs&quot;);
+
+      return {
+        data: {
+        //   obj: data // ❌ 這種操作是錯誤的，直接設置數據，無法回收
+          obj: {},
+        },
+        ready() {
+          this.obj = data; // ❌ 在 ready 生命周期中設置，無法確定何時清空，可能會導致內存泄漏。最安全的方法是在 attached 生命周期內設置，在 detached 後刪除
+        },
+      };
+    }
+  &lt;/script&gt;
+&lt;/template&gt;
+</code></pre>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

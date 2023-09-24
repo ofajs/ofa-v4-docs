@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList 和 data</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>classList 和 data</h1>
+<h2>classList</h2>
+<p>在 <code>ofa.js</code> 中，你可以通過以下方式來操作元素的 classList： </p>
+<ul>
+<li><code>$ele.classList</code>: 返回元素的 classList 對象，用於操作元素的類名。</li>
+</ul>
+<h3>classList 增刪用法</h3>
+<ul>
+<li>添加類名：<code>$ele.classList.add(&#39;className&#39;)</code>，將指定的類名添加到元素的 classList 中。 </li>
+<li>移除類名：<code>$ele.classList.remove(&#39;className&#39;)</code>，從元素的 classList 中移除指定的類名。 </li>
+<li>切換類名：<code>$ele.classList.toggle(&#39;className&#39;)</code>，如果元素的 classList 中已經存在該類名，則移除它；否則添加該類名。</li>
+</ul>
+<h3>示例</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;classList Demo&lt;/title&gt;
+    &lt;style&gt;
+      .highlight {
+        background-color: yellow;
+      }
+    &lt;/style&gt;
+    &lt;script src=&quot;ofa.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;classList Demo&lt;/h2&gt;
+    &lt;div id=&quot;box&quot; class=&quot;box&quot;&gt;I am a box&lt;/div&gt;
+    &lt;br /&gt;
+    &lt;button id=&quot;btnAdd&quot;&gt;Add Highlight&lt;/button&gt;
+    &lt;button id=&quot;btnRemove&quot;&gt;Remove Highlight&lt;/button&gt;
+    &lt;button id=&quot;btnToggle&quot;&gt;Toggle Highlight&lt;/button&gt;
+
+    &lt;script&gt;
+      const boxElement = $(&#39;#box&#39;);
+      const btnAdd = $(&#39;#btnAdd&#39;);
+      const btnRemove = $(&#39;#btnRemove&#39;);
+      const btnToggle = $(&#39;#btnToggle&#39;);
+
+      btnAdd.on(&#39;click&#39;, () =&gt; {
+        boxElement.classList.add(&#39;highlight&#39;);
+      });
+
+      btnRemove.on(&#39;click&#39;, () =&gt; {
+        boxElement.classList.remove(&#39;highlight&#39;);
+      });
+
+      btnToggle.on(&#39;click&#39;, () =&gt; {
+        boxElement.classList.toggle(&#39;highlight&#39;);
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>在這個示例中，有一個帶有初始類名 <code>box</code> 的 <code>&lt;div&gt;</code> 元素，以及三個按鈕：Add Highlight、Remove Highlight 和 Toggle Highlight。 </p>
+<ul>
+<li>當點擊 &quot;Add Highlight&quot; 按鈕時，通過 <code>classList.add()</code> 方法將 <code>highlight</code> 類名添加到 <code>&lt;div&gt;</code> 元素中，使其具有黃色背景色。 </li>
+<li>當點擊 &quot;Remove Highlight&quot; 按鈕時，通過 <code>classList.remove()</code> 方法從 <code>&lt;div&gt;</code> 元素的類名中移除 <code>highlight</code> 類名，恢復原始樣式。 </li>
+<li>當點擊 &quot;Toggle Highlight&quot; 按鈕時，通過 <code>classList.toggle()</code> 方法切換 <code>&lt;div&gt;</code> 元素的 <code>highlight</code> 類名。如果原本有該類名，則移除它，如果原本沒有該類名，則添加它，實現樣式的切換。</li>
+</ul>
+<p>這樣，你就可以通過 <code>classList</code> 對象來管理元素的類名，從而實現對元素樣式的動態控制。</p>
+<h2>data 的用法</h2>
+<p>在 <code>ofa.js</code> 中，你可以通過以下方式來操作元素的 data 屬性： </p>
+<ul>
+<li><code>$ele.data</code>: 返回元素的 dataset 對象，用於操作元素的 data 屬性。</li>
+</ul>
+<h3>dataset 的具體用法</h3>
+<p>元素的 <code>data-*</code> 屬性可以用於在 HTML 中存儲自定義數據，可以通過 <code>data</code> 對象來訪問這些屬性。</p>
+<p>例如，如果有一個元素定義了 <code>data-info</code> 屬性：</p>
+<pre><code class="language-html">&lt;div id=&quot;myElement&quot; data-info=&quot;some information&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>你可以使用 <code>dataset</code> 來訪問該屬性：</p>
+<pre><code class="language-javascript">const myElement = $(&#39;#myElement&#39;);
+const info = myElement.data.info;
+console.log(info); // Output: &quot;some information&quot;
+</code></pre>
+<p>注意：<code>dataset</code> 對象中的屬性名會將 <code>&quot;data-&quot;</code> 後面的部分轉換為駝峰式命名。例如，<code>data-info</code> 變成了 <code>dataset.info</code>。如果要設置 <code>data-*</code> 屬性，也可以通過 <code>dataset</code> 對象來實現：</p>
+<pre><code class="language-javascript">myElement.data.anotherInfo = &quot;another value&quot;;
+</code></pre>
+<p>這樣就會在元素上添加一個 <code>data-another-info</code> 屬性，並設置其值為 <code>&quot;another value&quot;</code>。</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

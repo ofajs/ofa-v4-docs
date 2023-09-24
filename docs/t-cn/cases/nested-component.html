@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>嵌套組件</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/nested-component/demo.html" preview></a>
+<a href="../../publics/examples/nested-component/comp-one.html" main></a>
+<a href="../../publics/examples/nested-component/comp-two.html"></a>
+</template>
+
+<h1>嵌套組件</h1>
+<p>全部過多的邏輯放到一個組件上，不是一個明智的選擇；我們可以將邏輯分到另外的組件，在通過 <code>l-m</code> 方式導入另一個組件來使用；</p>
+<p>案例中通過 <code>&lt;l-m src=&quot;./comp-two.html&quot;&gt;&lt;/l-m&gt;</code> 引入了名為 CompTwo 的嵌套組件。</p>
+<p>通過 <code>&lt;comp-two :txt=&quot;val&quot;&gt;&lt;/comp-two&gt;</code> 使用了嵌套組件，並將當前組件的 val 屬性作為 txt 屬性傳遞給嵌套組件。這樣，嵌套組件可以使用傳遞過來的數據進行渲染。</p>
+<p>在 <code>&lt;comp-two&gt;&lt;/comp-two&gt;</code> 中，我們在不傳遞任何屬性的情況下使用了嵌套組件。這裏的使用方式取決於嵌套組件本身的邏輯和設計。</p>
+<p>只要一個組件加載成功，無論在何處，都可以使用相應名稱的組件。即使在多個地方多次使用 <code>l-m</code> 組件加載相同的組件，也不會導致組件被多次加載。這種機制保證了組件的重用和一致性。</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componente de Renderización de Plantilla</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <article class="markdown-body"><h1>Componente de Renderización de Plantilla</h1>
+<p>Además de poder utilizar la sintaxis de plantillas, ofa.js también proporciona componentes de renderización dedicados para su uso dentro de las plantillas, incluyendo componentes de renderización condicional y de rellenado.</p>
+<h2>Componentes de Renderización Condicional</h2>
+<h3>Componente x-if</h3>
+<p>El componente <code>x-if</code> se utiliza para renderizar contenido de forma dinámica según condiciones. Acepta una propiedad <code>value</code> que determina si se renderizan sus elementos hijos o no. Si <code>value</code> es <code>true</code>, los elementos hijos se renderizan, de lo contrario no se renderizan.</p>
+<p>A continuación se muestra un ejemplo de uso de <code>x-if</code> para renderizar diferentes contenidos según una condición:</p>
+<pre><code class="language-html">&lt;div id=&quot;condition-container&quot;&gt;
+  &lt;x-if :value=&quot;showContent&quot;&gt;
+    &lt;div&gt;Se renderiza porque showContent es verdadero.&lt;/div&gt;
+  &lt;/x-if&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  showContent: true,
+};
+</code></pre>
+<h3>Componente x-else</h3>
+<p><code>x-if</code> se puede utilizar junto con <code>x-else</code> para alternar la renderización de condiciones.</p>
+<p>A continuación se muestra un ejemplo de uso de <code>x-if</code> y <code>x-else</code> para alternar la renderización de contenido según diferentes condiciones:</p>
+<pre><code class="language-html">&lt;div id=&quot;condition-container&quot;&gt;
+  &lt;x-if :value=&quot;showContent&quot;&gt;
+    &lt;div&gt;Se renderiza porque showContent es verdadero.&lt;/div&gt;
+  &lt;/x-if&gt;
+  &lt;x-else&gt;
+    &lt;div&gt;Se renderiza porque showContent es falso.&lt;/div&gt;
+  &lt;/x-else&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  showContent: false,
+};
+</code></pre>
+<h3>x-if + x-else-if + x-else components</h3>
+<p><code>x-if</code> aún puede combinarse con <code>x-else-if</code> y <code>x-else</code> para lograr una representación condicional múltiple.</p>
+<p>A continuación se muestra un ejemplo de uso de <code>x-if</code>, <code>x-else-if</code> y <code>x-else</code> para alternar el contenido de acuerdo a múltiples condiciones:</p>
+<pre><code class="language-html">&lt;div id=&quot;condition-container&quot;&gt;
+  &lt;x-if :value=&quot;condition === &#39;A&#39;&quot;&gt;
+    &lt;div&gt;Se renderiza cuando la condición es A.&lt;/div&gt;
+  &lt;/x-if&gt;
+  &lt;x-else-if :value=&quot;condition === &#39;B&#39;&quot;&gt;
+    &lt;div&gt;Se renderiza cuando la condición es B.&lt;/div&gt;
+  &lt;/x-else-if&gt;
+  &lt;x-else&gt;
+    &lt;div&gt;Se renderiza para otras condiciones.&lt;/div&gt;
+  &lt;/x-else&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  condition: &#39;B&#39;,
+};
+</code></pre>
+<p>En el ejemplo anterior, se renderiza contenido diferente según el valor de <code>condition</code>, logrando así un cambio de representación condicional múltiple.</p>
+<h2>Componente de plantilla: x-fill</h2>
+<p>El componente <code>x-fill</code> te permite llenar dinámicamente contenido en una plantilla, y puede generar contenido diferente según los valores de las propiedades del componente anfitrión. El componente <code>x-fill</code> utiliza la propiedad <code>name</code> para especificar la plantilla de llenado que se va a utilizar, y pasa los datos a la plantilla de llenado a través de la propiedad <code>value</code>.</p>
+<h3>Ejemplo de llenado de cadenas de un arreglo con x-fill</h3>
+<p>A continuación se muestra un ejemplo de llenado de cadenas de un arreglo utilizando <code>x-fill</code>, y se llena contenido diferente mediante un bucle:</p>
+<pre><code class="language-html">&lt;div id=&quot;fill-container&quot; style=&quot;padding: 16px; background-color: #eee&quot;&gt;
+  &lt;x-fill name=&quot;fillTemplate&quot; :value=&quot;[&#39;Item 1&#39;, &#39;Item 2&#39;, &#39;Item 3&#39;]&quot;&gt;&lt;/x-fill&gt;
+&lt;/div&gt;
+&lt;template name=&quot;fillTemplate&quot;&gt;
+  &lt;div class=&quot;fill-item&quot; style=&quot;margin: 10px; padding: 10px; border: red solid 1px&quot;&gt;
+    {{ $data }}
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p>En el ejemplo anterior, <code>x-fill</code> utiliza una plantilla de relleno llamada <code>fillTemplate</code> y le pasa un objeto. En la plantilla de relleno se utiliza <code>{{ $data }}</code> para renderizar cada elemento del objeto, logrando así un relleno cíclico de diferentes contenidos de cadenas.</p>
+<h3>Ejemplo de rellenado de <code>x-fill</code> con capacidad de autocompletado</h3>
+<p><code>x-fill</code> también puede rellenar objetos con estructuras más complejas y es compatible con el relleno anidado.</p>
+<p>A continuación se muestra un ejemplo de cómo utilizar <code>x-fill</code> para rellenar un objeto con capacidad de relleno anidado, mostrando cómo generar contenido anidado:</p>
+<pre><code class="language-html">&lt;div id=&quot;fill-container&quot; style=&quot;padding: 16px; background-color: #eee&quot;&gt;
+  &lt;x-fill name=&quot;nestedFillTemplate&quot; :value=&quot;nestedData&quot;&gt;&lt;/x-fill&gt;
+&lt;/div&gt;
+&lt;template name=&quot;nestedFillTemplate&quot;&gt;
+  &lt;div class=&quot;nested-item&quot; style=&quot;margin: 10px; padding: 10px; border: red solid 1px&quot;&gt;
+    {{ $data.title }}
+    &lt;x-fill name=&quot;nestedFillTemplate&quot; :value=&quot;$data.children&quot;&gt;&lt;/x-fill&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<pre><code class="language-javascript">// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  nestedData: {
+    title: &quot;Parent&quot;,
+    children: [
+      {
+        title: &quot;Child 1&quot;,
+        children: [
+          { title: &quot;Grandchild 1&quot; },
+          { title: &quot;Grandchild 2&quot; },
+        ],
+      },
+      {
+        title: &quot;Child 2&quot;,
+        children: [{ title: &quot;Grandchild 3&quot; }],
+      },
+    ],
+  },
+};
+</code></pre>
+<p>En el ejemplo anterior, <code>x-fill</code> utiliza una plantilla de llenado llamada <code>nestedFillTemplate</code> y pasa un objeto anidado complejo a ella. La plantilla de llenado utiliza <code>{{ $data.title }}</code> para renderizar el título del objeto, y también utiliza <code>x-fill</code> anidado para llenar el contenido de los elementos secundarios, logrando así una generación de contenido anidado.</p>
+<h3>$data, $ele, $host en el significado de la plantilla</h3>
+<p>Dentro de la plantilla de llenado, puedes utilizar identificadores especiales para acceder a diferentes datos:</p>
+<ul>
+<li><code>{{ $data }}</code>: representa los datos pasados a la plantilla de llenado, es decir, el valor del atributo <code>value</code>.</li>
+<li><code>{{ $ele }}</code>: representa el elemento en el que se encuentra la plantilla de llenado y se utiliza para acceder a los atributos y estilos del elemento.</li>
+<li><code>{{ $host }}</code>: representa la instancia del componente principal y se utiliza para acceder a los atributos y métodos del componente principal.</li>
+</ul>
+<p>Estos identificadores especiales te ayudan a acceder y renderizar diferentes datos dinámicamente dentro de la plantilla de llenado. En el ejemplo, puedes ver cómo se utiliza <code>{{ $data.title }}</code> para acceder al título de los datos pasados y cómo se utiliza <code>{{ $host.num }}</code> para acceder a los atributos del componente principal.</p>
+
+  <article-footer></article-footer>
+  </article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

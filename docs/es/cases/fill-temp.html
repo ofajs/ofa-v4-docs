@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relleno y Renderización recursiva</title>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script>
+      let configUrl = "../config.json";
+    </script>
+    
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L1TCCJZT6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "G-7L1TCCJZT6");
+        </script>
+        <script src="/init-sw.js"></script>
+      
+  </head>
+  <body>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+      <template page>
+        <style>
+          .markdown-body::before,
+          .markdown-body::after {
+            display: block;
+            content: "";
+            height: 1px;
+          }
+          .markdown-body::after {
+            height: 32px;
+          }
+        </style>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+        />
+        <exm-article><article class="markdown-body"><template is="exm-article">
+<a href="../../publics/examples/fill-temps/demo.html" preview></a>
+<a href="../../publics/examples/fill-temps/test-demo.html" main></a>
+</template>
+
+<h1>Relleno y Renderización recursiva</h1>
+<p>La renderización de relleno le permite utilizar plantillas independientes para renderizar datos y agregarles un nombre usando el elemnto <code>&lt;template&gt;</code> con el atributo <code>name</code>. Esto le permite renderizar datos con estructuras anidadas y crear componentes más complejos.</p>
+<p>Cuando utiliza el relleno <code>x-fill</code>, simplemente necesita pasar el nombre de la plantilla correspondiente al atributo <code>name</code> para renderizar el contenido de la plantilla independiente. Además, la renderización de relleno también admite relleno recursivo, lo que significa que puede seguir utilizando el mismo nombre de plantilla dentro de la plantilla para una renderización anidada.</p>
+<p>En el ejemplo, hemos definido una plantilla independiente llamada <code>item</code> y hemos pasado el nombre de la plantilla correspondiente al usar <code>x-fill</code>. De esta manera, cada elemento en los datos se renderizará utilizando esta plantilla y la plantilla puede volver a usar el mismo nombre para el relleno recursivo. Esto le permite manejar datos con estructuras anidadas de manera flexible y lograr una renderización de componentes más compleja.</p>
+
+  <article-footer></article-footer>
+  </article></exm-article>
+        <script>
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+
+          export default async (...args) => {
+            return await pageInit(PATH, args);
+          };
+        </script>
+      </template>
+    </o-app>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+  </body>
+</html>

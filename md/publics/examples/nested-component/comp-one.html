@@ -1,0 +1,27 @@
+<template component>
+  <!-- Introducing Nested Components CompTwo -->
+  <l-m src="./comp-two.html"></l-m>
+  <style>
+    :host {
+      display: block;
+      padding: 10px;
+      border: blue solid 1px;
+    }
+    div {
+      padding: 5px;
+      border: red solid 1px;
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+  <div>I am Comp 1 , <input type="text" sync:value="val" /></div>
+  <comp-two :txt="val"></comp-two>
+  <comp-two></comp-two>
+  <script>
+    export default {
+      data: {
+        val: "the one val",
+      },
+    };
+  </script>
+</template>
