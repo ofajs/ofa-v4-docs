@@ -9,7 +9,7 @@
     "url": "git+https://github.com/kirakiray/ofa-v4-docs.git"
   },
   "scripts": {
-    "devm": "node ../o-book/shell/ trans",
+    "devm": "node ../o-book/shell/ update",
     "dev": "obook dev",
     "build": "obook build",
     "trans": "obook trans"
