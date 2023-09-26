@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sintaxis de la plantilla</title>
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/dist/ofa.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/libs/scsr/scsr.mjs"
       type="module"
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/public.css" />
     <style>
       html,
       body {
@@ -34,9 +34,9 @@
       
   </head>
   <body>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
-    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/app-config.mjs">
       <template page>
         <style>
           .markdown-body::before,
@@ -51,7 +51,7 @@
         </style>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/github-markdown.css"
         />
         <article class="markdown-body"><h1>Sintaxis de la plantilla</h1>
 <p><code>ofa.js</code> proporciona una serie de potentes características de sintaxis de plantillas que te permiten manipular de manera más flexible los elementos e datos de interfaz de los componentes. Estas características de sintaxis de plantillas te ayudan a lograr efectos de interfaz ricos y experiencias de interacción.</p>
@@ -166,12 +166,12 @@ export const data = {
 </code></pre>
 <p>En el ejemplo anterior, <code>sync:value=&quot;inputValue&quot;</code> logra un doble enlace de datos, cuando el valor del cuadro de texto cambie, <code>inputValue</code> se actualizará automáticamente; por otro lado, cuando <code>inputValue</code> cambie, el valor del cuadro de texto también cambiará.</p>
 
-  <article-footer></article-footer>
-  </article>
+    <article-footer></article-footer>
+    </article>
         <script>
-          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/layouts/article-layout.html";
 
-          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/document-page-init.mjs";
 
           export default async (...args) => {
             return await pageInit(PATH, args);
@@ -180,6 +180,6 @@ export const data = {
       </template>
     </o-app>
     <div id="loading"></div>
-    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/init.js" type="module"></script>
   </body>
 </html>

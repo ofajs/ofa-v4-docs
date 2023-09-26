@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>封装和组件化：组件化常规知识</title>
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/dist/ofa.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/libs/scsr/scsr.mjs"
       type="module"
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/public.css" />
     <style>
       html,
       body {
@@ -34,9 +34,9 @@
       
   </head>
   <body>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
-    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/app-config.mjs">
       <template page>
         <style>
           .markdown-body::before,
@@ -51,7 +51,7 @@
         </style>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/github-markdown.css"
         />
         <article class="markdown-body"><h1>封装和组件化：组件化常规知识</h1>
 <p>ofa.js 是一个基于 Web Components 技术的封装库，旨在简化和加速组件开发过程。它通过将复杂的技术细节隐藏在背后，让开发者能够更专注地构建高质量的组件和应用。</p>
@@ -128,12 +128,12 @@ export default {
 };
 </code></pre>
 
-  <article-footer></article-footer>
-  </article>
+    <article-footer></article-footer>
+    </article>
         <script>
-          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/layouts/article-layout.html";
 
-          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/document-page-init.mjs";
 
           export default async (...args) => {
             return await pageInit(PATH, args);
@@ -142,6 +142,6 @@ export default {
       </template>
     </o-app>
     <div id="loading"></div>
-    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/init.js" type="module"></script>
   </body>
 </html>

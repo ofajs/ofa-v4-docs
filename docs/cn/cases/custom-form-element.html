@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自定义表单组件</title>
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/dist/ofa.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/libs/scsr/scsr.mjs"
       type="module"
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/public.css" />
     <style>
       html,
       body {
@@ -34,9 +34,9 @@
       
   </head>
   <body>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
-    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/app-config.mjs">
       <template page>
         <style>
           .markdown-body::before,
@@ -51,7 +51,7 @@
         </style>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/github-markdown.css"
         />
         <exm-article><article class="markdown-body"><template is="exm-article">
 <a href="../../publics/examples/custom-form-element/demo.html" preview></a>
@@ -64,12 +64,12 @@
 <p>初始化 <code>formData</code> 时，需要将自定义组件的选择器特征添加到参数中（尽管 <code>formData</code> 方法默认的参数为 <code>&quot;input,select,textarea&quot;</code>）。这样，<code>formData</code> 就能够与自定义组件进行联动。</p>
 <p>在这个示例中，我们通过自定义组件 <code>custom-input</code> 来实现一个可编辑的文本输入框。该组件被用作表单元素，并使用 <code>value</code> 属性进行数据交互。使用 <code>formData</code> 方法时，我们将 <code>&quot;input,custom-input&quot;</code> 添加为参数，以便正确地初始化表单数据。</p>
 
-  <article-footer></article-footer>
-  </article></exm-article>
+    <article-footer></article-footer>
+    </article></exm-article>
         <script>
-          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/layouts/article-layout.html";
 
-          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/document-page-init.mjs";
 
           export default async (...args) => {
             return await pageInit(PATH, args);
@@ -78,6 +78,6 @@
       </template>
     </o-app>
     <div id="loading"></div>
-    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/init.js" type="module"></script>
   </body>
 </html>

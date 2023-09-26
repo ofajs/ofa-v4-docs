@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>静态客户端渲染(SCSR)</title>
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/dist/ofa.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/libs/scsr/scsr.mjs"
       type="module"
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/public.css" />
     <style>
       html,
       body {
@@ -34,9 +34,9 @@
       
   </head>
   <body>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
-    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/app-config.mjs">
       <template page>
         <style>
           .markdown-body::before,
@@ -51,7 +51,7 @@
         </style>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/github-markdown.css"
         />
         <article class="markdown-body"><h1>静态客户端渲染(SCSR)</h1>
 <h2>什么是 SCSR？</h2>
@@ -136,12 +136,12 @@
 <p>我们计划在未来提供一个完整的 SSR（Server-Side Rendering）方案。这个方案的原理大致是先获取下一页的元素内容，然后与当前页的标签内容进行对比，从而进行动态的增加、删除和修改属性值等操作。不过需要注意的是，这个 SSR 方案会比较耗费时间，因为这个过程涉及到复杂的元素比较和修改操作。</p>
 <p>ofa.js 是一个新兴的框架，而且作者的业余时间也有限，暂时还没有完整开发出这个 SSR 方案。但如果未来 ofa.js 能够得到更多的用户使用，并且出现了对于 SSR 方案的强烈需求时，作者会继续完善并开发这个方案。目前，作者会专注于框架的稳定性和功能扩展，同时也欢迎用户的反馈和建议，以便未来更好地满足用户的需求。</p>
 
-  <article-footer></article-footer>
-  </article>
+    <article-footer></article-footer>
+    </article>
         <script>
-          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/layouts/article-layout.html";
 
-          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/document-page-init.mjs";
 
           export default async (...args) => {
             return await pageInit(PATH, args);
@@ -150,6 +150,6 @@
       </template>
     </o-app>
     <div id="loading"></div>
-    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/init.js" type="module"></script>
   </body>
 </html>

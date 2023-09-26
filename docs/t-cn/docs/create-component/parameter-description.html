@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>組件的注冊參數詳解</title>
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/dist/ofa.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/dist/ofa.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.14/libs/scsr/scsr.mjs"
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.16/libs/scsr/scsr.mjs"
       type="module"
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/public.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/public.css" />
     <style>
       html,
       body {
@@ -34,9 +34,9 @@
       
   </head>
   <body>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-container.html"></l-m>
-    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/comps/doc-header/doc-header.html"></l-m>
-    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/app-config.mjs">
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-container.html"></l-m>
+    <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/comps/doc-header/doc-header.html"></l-m>
+    <o-app src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/app-config.mjs">
       <template page>
         <style>
           .markdown-body::before,
@@ -51,7 +51,7 @@
         </style>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/css/github-markdown.css"
+          href="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/css/github-markdown.css"
         />
         <article class="markdown-body"><h1>組件的注冊參數詳解</h1>
 <p>在 ofa.js 中，你可以在組件模塊中定義一些特定的注冊參數，以便更靈活地配置組件。下面詳細說明了每個注冊參數，並附帶了相應的示例演示。</p>
@@ -258,12 +258,12 @@ export default async function ({ load, url, query }) {
 <p>在這個示例中，我們演示了如何使用 ofa.js 的注冊參數來定制化組件的行為。通過合理地配置這些參數，你可以更好地適應不同的組件需求，實現更靈活的組件開發。</p>
 <p>寫一下 組件的注冊參數 的 proto 使用文檔</p>
 
-  <article-footer></article-footer>
-  </article>
+    <article-footer></article-footer>
+    </article>
         <script>
-          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/layouts/article-layout.html";
+          export const parent = "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/layouts/article-layout.html";
 
-          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/page-init.mjs";
+          import pageInit from "https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/document-page-init.mjs";
 
           export default async (...args) => {
             return await pageInit(PATH, args);
@@ -272,6 +272,6 @@ export default async function ({ load, url, query }) {
       </template>
     </o-app>
     <div id="loading"></div>
-    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.10/statics/init.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/obook@2.1.14/statics/init.js" type="module"></script>
   </body>
 </html>
