@@ -1,9 +1,0 @@
-{
-  "github": "https://github.com/kirakiray/ofa.js",
-  "logo": { "text": "ofa.js" },
-  "navs": [
-    { "name": "Tutorials", "summary": "./cases/SUMMARY.md" },
-    { "name": "Document", "summary": "./docs/SUMMARY.md" },
-    { "name": "Other", "summary": "./others/SUMMARY.md" }
-  ]
-}

@@ -1,1 +1,20 @@
-{"github":"https://github.com/kirakiray/ofa.js","logo":{"text":"ofa.js"},"navs":[{"name":"案例教程","summary":"./cases/SUMMARY.md","articles":[{"name":"基础教程","childs":[{"name":"开始","href":"./index.md"},{"name":"事件反应","href":"./event.md"},{"name":"组件的创建和使用","href":"./simple-component.md"},{"name":"组件插槽","href":"./slot.md"},{"name":"模板语法：渲染文本","href":"./render-text.md"},{"name":"特性传递","href":"./attribute-transmission.md"},{"name":"获取和修改组件实例的值","href":"./get-set-comp.md"},{"name":"模板语法：属性传递","href":"./property-transmission.md"},{"name":"模板语法：绑定事件","href":"./bind-event.md"},{"name":"嵌套组件","href":"./nested-component.md"},{"name":"inject-host 组件","href":"./inject-host.md"},{"name":"事件传递","href":"./event-passing.md"},{"name":"模板语法：双向数据绑定","href":"./sync.md"},{"name":"模板组件：条件渲染","href":"./condition.md"},{"name":"模板组件：填充渲染","href":"./fill.md"},{"name":"递归填充渲染","href":"./fill-temp.md"},{"name":"生命周期","href":"./life-cycle.md"},{"name":"表单数据","href":"./form-data.md"},{"name":"自定义表单组件","href":"./custom-form-element.md"}]},{"name":"开发应用","childs":[{"name":"使用页面组件","href":"./use-page.md"},{"name":"使用app组件","href":"./use-app.md"},{"name":"配置app参数","href":"./app-config.md"},{"name":"为app定制loading","href":"./app-loading.md"},{"name":"设置404页面","href":"./set404.md"},{"name":"使用 hash router","href":"./use-hash-router.md"},{"name":"使用scsr方案","href":"./use-scsr.md"}]}]},{"name":"文档","summary":"./docs/SUMMARY.md","articles":[{"name":"介绍","href":"./introduce.md"},{"name":"使用 ofa.js","childs":[{"name":"如何使用ofa.js","href":"./get-started/index.md"},{"name":"第一个案例","href":"./get-started/hello-world.md"},{"name":"选择元素和事件相关","href":"./get-started/elements-and-events.md"},{"name":"实例的基础概念","href":"./get-started/basic-concept.md"},{"name":"常用属性介绍","href":"./get-started/common-properties.md"},{"name":"常用方法介绍","href":"./get-started/common-function.md"},{"name":"css","href":"./get-started/css.md"},{"name":"classList 和 data","href":"./get-started/classlist-and-data.md"},{"name":"盒模型","href":"./get-started/box-model.md"},{"name":"表单数据","href":"./get-started/formdata.md"}]},{"name":"组件的创建和使用","childs":[{"name":"制作和使用","href":"./create-component/index.md"},{"name":"参数说明","href":"./create-component/parameter-description.md"},{"name":"生命周期","href":"./create-component/life-cycle.md"},{"name":"组件化常规知识","href":"./create-component/web-components.md"},{"name":"模板语法","href":"./create-component/template-syntax.md"},{"name":"模板组件","href":"./create-component/template-component.md"}]},{"name":"制作应用","childs":[{"name":"使用 o-app","href":"./create-app/index.md"},{"name":"使用Page组件","href":"./create-app/page.md"},{"name":"使用App组件","href":"./create-app/app.md"},{"name":"子路由功能","href":"./create-app/subrouting.md"},{"name":"路由绑定","href":"./create-app/o-router.md"},{"name":"SCSR方案","href":"./create-app/scsr.md"},{"name":"数据共享","href":"./others/data-sharing.md"},{"name":"ofa.js和微前端","href":"./others/about-micro-frontend.md"}]}]},{"name":"其他","summary":"./others/SUMMARY.md","articles":[{"name":"数据共享","href":"./data-sharing.md"},{"name":"ofa.js和微前端","href":"./about-micro-frontend.md"}]}],"urls":[{"lang":"en","src":"./en/config.json"},{"lang":"cn","src":"./cn/config.json"},{"lang":"t-cn","src":"./t-cn/config.json"},{"lang":"es","src":"./es/config.json"}]}
+{
+  "github": "https://github.com/kirakiray/ofa.js",
+  "logo": {
+    "text": "ofa.js"
+  },
+  "navs": [
+    {
+      "name": "案例教程",
+      "summary": "./cases/SUMMARY.md"
+    },
+    {
+      "name": "文档",
+      "summary": "./docs/SUMMARY.md"
+    },
+    {
+      "name": "其他",
+      "summary": "./others/SUMMARY.md"
+    }
+  ]
+}
