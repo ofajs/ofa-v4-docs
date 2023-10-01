@@ -32,6 +32,6 @@
     }
   },
   "devDependencies": {
-    "obook": "^2.1.16"
+    "obook": "^2.1.17"
   }
 }
