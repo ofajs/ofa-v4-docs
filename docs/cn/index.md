@@ -5,12 +5,12 @@
 
 <simp-block>
 
-<punch-logo style="margin-bottom:16px;">
+<punch-logo style="margin-bottom:32px;">
     <img src="../publics/logo.svg" width="100" logo />
     <h2>ofa.js</h2>
-    <h3 slot="fly">npm</h3>
-    <h3 slot="fly">nodejs</h3>
-    <h3 slot="fly">webpack</h3>
+    <img src="../publics/npm-logo.png" slot="fly" height="40" />
+    <img src="../publics/nodejs-logo.png" slot="fly" height="40" />
+    <img src="../publics/webpack-logo.png" slot="fly" height="40" />
 </punch-logo>
 
 ## 新时代最简单的 JavaScript 框架
