@@ -23,10 +23,22 @@
 
 <simp-block>
 
-## 最简单的 JavaScript 框架
+## 甚至不用看文档，也会使用组件
 
-### 不用学习npm，nodejs，webpack，直接动手就能用
+</simp-block>
 
-[案例教程](./cases/index.md)
+<simp-block>
+
+## 银弹型开发框架
+
+### 简化了网页组件的封装，既能当普通库使用，也能开发网页应用
+
+</simp-block>
+
+<simp-block>
+
+## jQuery的替代品
+
+### 类似 jQuery 一样的 api，用起来特别流畅
 
 </simp-block>

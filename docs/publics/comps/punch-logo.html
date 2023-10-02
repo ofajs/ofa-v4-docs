@@ -1,11 +1,21 @@
 <template component>
   <inject-host>
+    <style>
+      punch-logo[pauseanime] * {
+        animation-play-state: paused !important;
+      }
+    </style>
     <style :html="ijStyle"></style>
   </inject-host>
   <style>
     :host {
       display: block;
     }
+
+    :host([pauseanime]) * {
+      animation-play-state: paused !important;
+    }
+
     .container {
       position: relative;
       display: inline-block;
@@ -119,6 +129,7 @@
     export default {
       attrs: {
         isdark: 0,
+        pauseanime: "",
       },
       data: {
         ijStyle: "",
@@ -154,6 +165,30 @@
         this._pstyle = pstyle;
 
         $("head").push(pstyle);
+
+        let imgs = [];
+        this.forEach((e) => {
+          if (e.tag === "img") {
+            if (e.attr("src")) {
+              imgs.push(e.attr("src"));
+            }
+          }
+        });
+
+        Promise.all(
+          imgs.map(
+            (src) =>
+              new Promise((res) => {
+                const img = new Image();
+                img.onload = () => {
+                  res();
+                };
+                img.src = src;
+              })
+          )
+        ).then(() => {
+          this.pauseanime = null;
+        });
       },
       detached() {
         this._pstyle.remove();
