@@ -1,6 +1,6 @@
 # ofa.js 新时代渐进式JavaScript框架
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.19/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.20/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 
 <simp-block>
@@ -31,13 +31,19 @@
 
 ```
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.min.js"></script>
+<!-- 将 ofa.js 引入项目 -->
+```
+
+```
 <l-m src="http://127.0.0.1:5500/docs/publics/comps/punch-logo.html"></l-m>
+<!-- 加载开发好的 punch-logo 组件 -->
 ```
 
 ```html
+<!-- 使用 punch-logo 组件 -->
 <punch-logo>
-    <p logo>ASASASS</p>
-    <h2>ofa.js</h2>
+    <img src="https://obook.ofajs.com/publics/logo.svg" logo height="90" />
+    <h2>book</h2>
     <p slot="fly">PUA</p>
     <p slot="fly">ASD</p>
     <p slot="fly">AAA</p>

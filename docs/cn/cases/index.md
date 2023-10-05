@@ -7,7 +7,7 @@
 要开始使用，只需通过引入 CDN 地址将项目 `ofajs` 集成到你的项目中：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.2.5/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.js"></script>
 ```
 
 这是一个简单的示例，演示了如何使用 `ofa.js` 修改 DOM 元素的内容：
