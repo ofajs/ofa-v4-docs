@@ -1,0 +1,199 @@
+<template component>
+  <inject-host>
+    <style>
+      punch-logo[pauseanime] * {
+        animation-play-state: paused !important;
+      }
+    </style>
+    <style :html="ijStyle"></style>
+  </inject-host>
+  <style>
+    :host {
+      display: block;
+    }
+
+    :host([pauseanime]) * {
+      animation-play-state: paused !important;
+    }
+
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+    ::slotted(h2) {
+      font-size: 0;
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-left: 14px;
+      transition: all ease 0.3s;
+      transition-delay: 0.3s;
+    }
+    ::slotted(h2.show) {
+      margin: 0;
+      padding: 0;
+      font-size: 50px;
+      opacity: 1;
+    }
+
+    .fly-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+
+    ::slotted([slot="fly"]) {
+      margin: 0;
+      padding: 0;
+      /* background-color: #fff; */
+      background-color: var(--punch-logo-bg-color, transparent);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .main {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      animation: mainRoute ease 1.2s;
+    }
+
+    @keyframes mainRoute {
+      0% {
+        transform: rotate(-90deg);
+      }
+      80% {
+        transform: rotate(-90deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+    .outer {
+      animation: punch cubic-bezier(0.34, -0.42, 0.52, 1.6) 0.8s;
+    }
+
+    @keyframes punch {
+      0% {
+        opacity: 0;
+        transform: translate(200px, 0);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(200px, 0);
+      }
+      100% {
+        transform: translate(0%, 0);
+      }
+    }
+  </style>
+  <div class="container">
+    <div class="outer">
+      <div class="main">
+        <slot></slot>
+      </div>
+    </div>
+    <div class="fly-container">
+      <slot name="fly"></slot>
+    </div>
+  </div>
+  <script>
+    const getOutAnime = (name) => {
+      const y = Math.random() * 100 - 50;
+
+      return `
+      @keyframes ${name} {
+        0% {
+          opacity:1;
+          transform: translate(0px, 0px);
+        }
+        40% {
+          transform: translate(0px, 0px);
+        }
+        80%{
+          opacity:1;
+        }
+        100% {
+          opacity:0;
+          transform: translate(-200px, ${y}px) rotate(600deg) scale(.6);
+        }
+      }
+      `;
+    };
+
+    export default {
+      attrs: {
+        isdark: 0,
+        pauseanime: "",
+      },
+      data: {
+        ijStyle: "",
+      },
+      ready() {
+        this.shadow.$(".main").one("animationend", () => {
+          if (this.$("h2")) {
+            this.$("h2").classList.add("show");
+            setTimeout(() => {
+              this.$("h2").css.transition = "none";
+            }, 500);
+          }
+        });
+
+        let ijStyle = "";
+        this.forEach((e, i) => {
+          if (e.attr("slot") === "fly") {
+            const name = `flyAnime-${i}`;
+            ijStyle += getOutAnime(name);
+
+            e.css = `animation: ${name} ease 1.5s; animation-fill-mode: both;`;
+          }
+        });
+        this.ijStyle = ijStyle;
+      },
+      attached() {
+        const pstyle = $(`<style>
+          html.dark{
+            --punch-logo-bg-color:#fff;
+          }  
+        </style>`);
+
+        this._pstyle = pstyle;
+
+        $("head").push(pstyle);
+
+        let imgs = [];
+        this.forEach((e) => {
+          if (e.tag === "img") {
+            if (e.attr("src")) {
+              imgs.push(e.attr("src"));
+            }
+          }
+        });
+
+        Promise.all(
+          imgs.map(
+            (src) =>
+              new Promise((res) => {
+                const img = new Image();
+                img.onload = () => {
+                  res();
+                };
+                img.src = src;
+              })
+          )
+        ).then(() => {
+          this.pauseanime = null;
+        });
+      },
+      detached() {
+        this._pstyle.remove();
+        this._pstyle = null;
+      },
+    };
+  </script>
+</template>

@@ -1,8 +1,10 @@
 {
   "github": "https://github.com/kirakiray/ofa.js",
   "logo": {
+    "url": "../publics/logo.svg",
     "text": "ofa.js"
   },
+  "pages": ["./index.md"],
   "navs": [
     {
       "name": "案例教程",

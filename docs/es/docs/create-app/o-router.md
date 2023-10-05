@@ -7,7 +7,7 @@ El componente `o-router` es un componente utilizado para enlazar rutas dentro de
 Primero, necesitas referenciar el componente `o-router` en tu página. Puede hacer referencia al archivo `router.mjs` de la siguiente manera:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/router/dist/router.min.js"></script>
 ```
 
 ## Usando el componente o-router
@@ -33,7 +33,7 @@ El componente `o-router` también proporciona el atributo `fix-body`, cuando est
     <title>router test</title>
     <script src="ofa.js"></script>
     <!-- Referencia al componente o-router -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- Utiliza el componente o-router y establece la propiedad fix-body -->

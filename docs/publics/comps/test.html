@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test component</title>
+    <script
+      src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/packages/ofa/main.mjs"
+      type="module"
+    ></script>
+    <!-- <script
+      src="http://127.0.0.1:5513/packages/ofa/main.mjs"
+      type="module"
+    ></script> -->
+  </head>
+  <body>
+    <l-m src="./punch-logo.html"></l-m>
+
+    <div style="display: flex; align-items: center; justify-content: center">
+      <punch-logo>
+        <img src="../logo.svg" width="100" logo />
+        <h2>ofa.js</h2>
+        <h3 slot="fly">npm</h3>
+        <h3 slot="fly">nodejs</h3>
+        <h3 slot="fly">webpack</h3>
+      </punch-logo>
+    </div>
+  </body>
+</html>

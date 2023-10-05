@@ -7,7 +7,7 @@
     <title>router test</title>
     <script src="ofa.js"></script>
     <!-- Referencia al componente o-router -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.0.0/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- Utiliza el componente o-router y establece la propiedad fix-body -->
