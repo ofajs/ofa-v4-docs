@@ -1,6 +1,6 @@
 # ofa.js 新时代渐进式JavaScript框架
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.17/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.18/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 
 <simp-block>
