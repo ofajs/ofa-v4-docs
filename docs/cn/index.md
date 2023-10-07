@@ -1,11 +1,11 @@
 # ofa.js 新时代渐进式JavaScript框架
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.20/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.23/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 
 <simp-block>
 
-<punch-logo style="margin-bottom:32px;">
+<punch-logo>
     <img src="../publics/logo.svg" width="100" logo alt="ofa.js" />
     <h2>ofa.js</h2>
     <img src="../publics/npm-logo.png" slot="fly" height="40" alt="npm" />
@@ -23,34 +23,90 @@
 
 <simp-block>
 
-## 甚至不用看文档，也会使用组件
+## 甚至不看文档，也会使用组件
 
-现在，我们来尝试一下使用上面一拳撞飞logo的组件；
+现在，直接新建一个html，尝试一下使用一拳撞飞logo的组件；
 
 <html-viewer style="width:100%;">
 
 ```
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.min.js"></script>
 <!-- 将 ofa.js 引入项目 -->
-```
-
-```
-<l-m src="http://127.0.0.1:5500/docs/publics/comps/punch-logo.html"></l-m>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.min.js"></script>
 <!-- 加载开发好的 punch-logo 组件 -->
+<l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
 ```html
 <!-- 使用 punch-logo 组件 -->
-<punch-logo>
-    <img src="https://obook.ofajs.com/publics/logo.svg" logo height="90" />
-    <h2>book</h2>
-    <p slot="fly">PUA</p>
-    <p slot="fly">ASD</p>
-    <p slot="fly">AAA</p>
+<punch-logo style="margin:50px 0 0 100px;">
+    <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
+    <h2>不加班了</h2>
+    <p slot="fly">现在就要</p>
+    <p slot="fly">晚点再走</p>
+    <p slot="fly">周末加班</p>
 </punch-logo>
 ```
 
 </html-viewer>
+
+</simp-block>
+
+<simp-block>
+
+## 一步封装组件，无繁琐流程
+
+传统的 web components 封装需要学习很多知识，现在你只需要一个文件
+
+<comp-viewer comp-name="my-switch" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <style>
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      background-color: #ccc;
+      transition: background-color 0.4s;
+      border-radius: 34px;
+      cursor: pointer;
+    }
+
+    .slider {
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: transform 0.4s;
+      border-radius: 50%;
+    }
+
+    .switch.checked {
+      background-color: #2196f3;
+    }
+
+    .switch.checked .slider {
+      transform: translateX(26px);
+    }
+  </style>
+  <div class="switch" class:checked="checked" on:click="checked = !checked">
+    <span class="slider"></span>
+  </div>
+  <script>
+    export default {
+      tag: "my-switch",
+      data: {
+        checked: true,
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
 
 </simp-block>
 
