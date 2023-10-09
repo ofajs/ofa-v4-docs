@@ -2,6 +2,7 @@
 
 <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.24/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
+<l-m src="../publics/comps/support-platforms.html"></l-m>
 
 <simp-block>
 
@@ -19,17 +20,19 @@
 
 [案例教程](./cases/index.md)
 
+```html
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.min.js"></script>
+```
+
 </simp-block>
 
 <simp-block>
 
 ## 基于  web components 开发
 
-### 新时代已到，是时候使用 web components 了，直接粘贴到文件上使用吧
+### 新时代已到，是时候使用 web components 了
 
-```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.min.js"></script>
-```
+<support-platforms></support-platforms>
 
 <a>下载初始项目</a>
 <a>在线查看初始化好的项目</a>
