@@ -1,0 +1,22 @@
+<template page>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 20px;
+    }
+  </style>
+  <div class="container">渲染文本：{{txt}}</div>
+  <script>
+    export default {
+      data: {
+        txt: "我是 txt",
+      },
+      ready() {
+        $("title").text = "我是txt";
+      },
+    };
+  </script>
+</template>

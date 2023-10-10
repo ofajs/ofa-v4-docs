@@ -1,0 +1,96 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .tab {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 16px;
+      margin: 4px 0;
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: underline;
+    }
+    .tab.active {
+      background-color: var(--active-color);
+      color: #fff;
+      text-decoration: none;
+    }
+    .main {
+      margin-top: 16px;
+    }
+
+    @media screen and (max-width: 800px) {
+      .tab {
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  </style>
+  <div class="container">
+    <div class="tabs">
+      <x-fill :value="tabs">
+        <div
+          class="tab"
+          class:active="$host.active === $data.name"
+          on:click="$host.clickTab($data.name)"
+        >
+          {{$data.name}} render
+        </div>
+      </x-fill>
+    </div>
+    <div class="main">
+      <slot></slot>
+    </div>
+  </div>
+  <script>
+    export default {
+      data: {
+        active: "",
+        tabs: [],
+      },
+      proto: {
+        refresh() {
+          this.forEach((e) => {
+            const switchName = e.attr("switch-name");
+
+            if (switchName !== this.active) {
+              e.css.display = "none";
+            } else {
+              e.css.display = "block";
+            }
+          });
+        },
+        clickTab(name) {
+          this.active = name;
+
+          this.refresh();
+        },
+      },
+      attached() {
+        this.tabs = this.map((e, i) => {
+          const switchName = e.attr("switch-name");
+
+          if (switchName) {
+            if (i === 0) {
+              this.active = switchName;
+            }
+            return {
+              name: switchName,
+            };
+          }
+        }).filter((e) => e);
+
+        this.refresh();
+      },
+    };
+  </script>
+</template>

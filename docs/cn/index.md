@@ -3,6 +3,55 @@
 <l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.24/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
+<l-m src="../publics/comps/case-switch.html"></l-m>
+
+<simp-block>
+
+## 提供多种便利的模板语法
+
+<case-switch>
+
+<comp-viewer switch-name="text" comp-name="render-text" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <div>渲染文本: {{txt}}</div>
+  <script>
+    export default {
+      tag: "render-text",
+      data: {
+        txt:"我是txt"
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+<comp-viewer switch-name="prop" comp-name="render-prop" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <div :text="txt1"></div>
+  <div :html="txt2"></div>
+  <script>
+    export default {
+      tag: "render-prop",
+      data: {
+        txt1:"<b>我是txt1</b>",
+        txt2:"<b>我是txt2</b>",
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+</case-switch>
+
+</simp-block>
 
 <simp-block>
 
@@ -28,22 +77,25 @@
 
 <simp-block>
 
-## 基于  web components 开发
+## ofa.js 基于  web components 封装
 
-### 新时代已到，是时候使用 web components 了
+### 新时代已到，web components 已被普遍支持，试一下 ofa.js 看好不好用
 
 <support-platforms></support-platforms>
 
-<a>下载初始项目</a>
-<a>在线查看初始化好的项目</a>
+<a href="../publics/download/start.zip" download="ofa-start.zip">下载初始化项目</a>
+<a href="../publics/download/start/index.html" target="_blank">在线查看初始化项目</a>
 
 </simp-block>
 
+
 <simp-block>
 
-## 甚至不看文档，也会使用组件
+## 极低的使用门槛
 
-现在，直接新建一个html，尝试一下使用一拳撞飞logo的组件；
+无论你使用哪个前端框架，基本避不开先把框架的入门指南看一遍，才能开始使用基于该框架开发的东西
+
+而基于 ofa.js 开发的组件可以不看 ofa.js 的入门指南，现在，直接新建一个html，尝试一下使用一拳撞飞logo的组件
 
 <html-viewer style="width:100%;">
 

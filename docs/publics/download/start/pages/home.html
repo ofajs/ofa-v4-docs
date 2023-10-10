@@ -1,0 +1,57 @@
+<template page>
+  <l-m
+    src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"
+  ></l-m>
+  <style>
+    .container {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .logo {
+      margin-top: 100px;
+      width: 100px;
+    }
+
+    .links a {
+      margin: 8px;
+    }
+
+    h2 {
+      margin: 32px 0 16px;
+    }
+  </style>
+  <div class="container">
+    <img src="../images/logo.svg" class="logo" alt="logo" />
+    <h1>欢迎来到 ofa.js App</h1>
+    <h2>使用方法</h2>
+    <div class="links">
+      <a href="./syntax/text.html" olink>文本渲染</a>
+    </div>
+    <p>
+      更多使用方法，请访问
+      <a href="https://ofajs.com/" target="_blank">ofa.js官方文档</a>
+    </p>
+    <h2>官方地址</h2>
+    <div class="links">
+      <a href="https://ofajs.com/" target="_blank">官网</a>
+      <a href="https://github.com/kirakiray/ofa.js" target="_blank"
+        >ofa.js Github 仓库</a
+      >
+      <a href="https://github.com/kirakiray/ofa.js/issues" target="_blank"
+        >提交错误</a
+      >
+    </div>
+  </div>
+  <script>
+    export default {
+      ready() {
+        $("title").text = "home";
+      },
+    };
+  </script>
+</template>
