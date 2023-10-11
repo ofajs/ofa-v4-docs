@@ -7,7 +7,7 @@ The `o-router` component is used to bind the routes within `o-app` to the curren
 First, you need to import the `o-router` component into your page. You can do this by referencing the `router.mjs` file in the following way:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
 ```
 
 ## Using the o-router component
@@ -33,7 +33,7 @@ The `o-router` component also provides the `fix-body` attribute. When you set th
     <title>router test</title>
     <script src="ofa.js"></script>
     <!-- Importing the o-router component -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- Using the o-router component and setting the fix-body attribute -->

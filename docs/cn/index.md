@@ -1,11 +1,5 @@
 # ofa.js 新时代渐进式JavaScript框架
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.24/blocks/simp-block.html"></l-m>
-<l-m src="../publics/comps/punch-logo.html"></l-m>
-<l-m src="../publics/comps/support-platforms.html"></l-m>
-<l-m src="../publics/comps/case-switch.html"></l-m>
-<l-m src="../publics/comps/split-code.html"></l-m>
-
 <simp-block>
 
 <punch-logo>
@@ -18,21 +12,21 @@
 
 ## 新时代最简单的 JavaScript 框架
 
-### 不用学习npm，nodejs，webpack，直接动手就能用
+### 无需繁琐学习，无需 npm、nodejs、webpack，即刻上手
 
 [案例教程](./cases/index.md)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
 ```
 
 </simp-block>
 
 <simp-block>
 
-## ofa.js 基于  web components 封装
+## 基于 Web Components 封装的 ofa.js
 
-### 新时代已到，web components 已被普遍支持，试一下 ofa.js 看好不好用
+### 走进新时代，Web Components 已广泛支持，尝试一下 ofa.js，看它是否适合您。
 
 <support-platforms></support-platforms>
 
@@ -43,17 +37,15 @@
 
 <simp-block>
 
-## 极低的使用门槛
+## 极低使用门槛
 
-无论你使用哪个前端框架，基本避不开先把框架的入门指南看一遍，才能开始使用基于该框架开发的东西
-
-而基于 ofa.js 开发的组件可以不看 ofa.js 的入门指南，现在，直接新建一个html，尝试一下使用一拳撞飞logo的组件
+与其他前端框架不同，使用基于ofa.js开发的组件无需阅读繁杂入门指南。立刻创建一个 HTML 文件，体验一下“一拳撞飞logo”的组件。
 
 <html-viewer style="width:100%;">
 
 ```
 <!-- 将 ofa.js 引入项目 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
 <!-- 加载开发好的 punch-logo 组件 -->
 <l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
@@ -75,9 +67,9 @@
 
 <simp-block>
 
-## 一步封装组件，无繁琐流程
+## 一步封装组件，摆脱繁琐流程
 
-传统的 web components 封装需要学习很多知识，现在你只需要一个文件
+以往的 Web Components 封装涉及繁杂的知识学习，而现在，只需一个文件。
 
 <comp-viewer comp-name="my-switch" max-height="500" style="width:100%;">
 
@@ -135,7 +127,7 @@
 
 <simp-block>
 
-## 提供多种便利的模板语法
+## 提供多样便捷的模板语法
 
 <case-switch>
 
@@ -269,9 +261,9 @@
 
 <simp-block>
 
-## jQuery的替代品
+## 可替代 jQuery 的选择
 
-### 都是 script 一行代码引用自身的库，类似 jQuery 一样的 api，用起来特别顺手
+### 拥有与 jQuery 类似的 API，让您感受同样的便捷。
 
 <split-code>
 
@@ -301,6 +293,12 @@ var child = $("#target")[0]; // 获取第一个子元素
 
 ## 使用案例
 
-<a href="https://obook.ofajs.com/">obook 最简单的建站工具</a>
+<a href="https://obook.ofajs.com/">obook 最简单的文档建站工具</a>
 
 </simp-block>
+
+<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.24/blocks/simp-block.html"></l-m>
+<l-m src="../publics/comps/punch-logo.html"></l-m>
+<l-m src="../publics/comps/support-platforms.html"></l-m>
+<l-m src="../publics/comps/case-switch.html"></l-m>
+<l-m src="../publics/comps/split-code.html"></l-m>

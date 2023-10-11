@@ -9,7 +9,7 @@ SCSR, cuyo nombre completo es Renderizado de Cliente Estático (Static Client-Si
 Puedes utilizar una biblioteca de SCSR de la siguiente manera:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/scsr/dist/scsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/scsr/dist/scsr.min.js"></script>
 ```
 
 ## Cómo funciona SCSR
