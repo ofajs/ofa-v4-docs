@@ -35,8 +35,8 @@
 
 <support-platforms></support-platforms>
 
-<a href="../publics/download/start.zip" target="_blank" download="ofa-start.zip">下载初始化项目</a>
-<a href="../publics/download/start/index.html" target="_blank">在线查看初始化项目</a>
+<a href="../publics/download/ofajs-start.zip" target="_blank">下载初始化项目</a>
+<a href="../publics/download/ofajs-start/index.html" target="_blank">在线查看初始化项目</a>
 
 </simp-block>
 
