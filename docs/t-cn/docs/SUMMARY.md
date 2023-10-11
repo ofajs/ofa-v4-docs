@@ -24,7 +24,4 @@
   - [子路由功能](./create-app/subrouting.md)
   - [路由綁定](./create-app/o-router.md)
   - [SCSR方案](./create-app/scsr.md)
-<!-- - 其他
-  - [數據共享](./others/data-sharing.md)
-  - [ofa.js和微前端](./others/about-micro-frontend.md) -->
 

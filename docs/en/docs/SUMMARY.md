@@ -24,7 +24,4 @@
   - [Subrouting](./create-app/subrouting.md)
   - [Route Binding](./create-app/o-router.md)
   - [SCSR Solution](./create-app/scsr.md)
-<!-- - Others
-  - [Data Sharing](./others/data-sharing.md)
-  - [ofa.js and Micro Frontends](./others/about-micro-frontend.md) -->
 
