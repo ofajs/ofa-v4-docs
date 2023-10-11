@@ -16,6 +16,7 @@
       margin: 4px 0;
       cursor: pointer;
       font-size: 18px;
+      border-radius: 5px;
       text-decoration: underline;
     }
     .tab.active {
@@ -43,7 +44,7 @@
           class:active="$host.active === $data.name"
           on:click="$host.clickTab($data.name)"
         >
-          {{$data.name}} render
+          {{$data.name}}
         </div>
       </x-fill>
     </div>

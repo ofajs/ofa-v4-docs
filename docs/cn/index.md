@@ -7,54 +7,6 @@
 
 <simp-block>
 
-## 提供多种便利的模板语法
-
-<case-switch>
-
-<comp-viewer switch-name="text" comp-name="render-text" max-height="500" style="width:100%;">
-
-```html
-<template component>
-  <div>渲染文本: {{txt}}</div>
-  <script>
-    export default {
-      tag: "render-text",
-      data: {
-        txt:"我是txt"
-      },
-    };
-  </script>
-</template>
-```
-
-</comp-viewer>
-
-<comp-viewer switch-name="prop" comp-name="render-prop" max-height="500" style="width:100%;">
-
-```html
-<template component>
-  <div :text="txt1"></div>
-  <div :html="txt2"></div>
-  <script>
-    export default {
-      tag: "render-prop",
-      data: {
-        txt1:"<b>我是txt1</b>",
-        txt2:"<b>我是txt2</b>",
-      },
-    };
-  </script>
-</template>
-```
-
-</comp-viewer>
-
-</case-switch>
-
-</simp-block>
-
-<simp-block>
-
 <punch-logo>
     <img src="../publics/logo.svg" width="100" logo alt="ofa.js" />
     <h2>ofa.js</h2>
@@ -83,7 +35,7 @@
 
 <support-platforms></support-platforms>
 
-<a href="../publics/download/start.zip" download="ofa-start.zip">下载初始化项目</a>
+<a href="../publics/download/start.zip" target="_blank" download="ofa-start.zip">下载初始化项目</a>
 <a href="../publics/download/start/index.html" target="_blank">在线查看初始化项目</a>
 
 </simp-block>
@@ -177,6 +129,141 @@
 ```
 
 </comp-viewer>
+
+</simp-block>
+
+
+<simp-block>
+
+## 提供多种便利的模板语法
+
+<case-switch>
+
+<comp-viewer switch-name="Render Text" comp-name="text-demo" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <div>渲染文本: {{txt}}</div>
+  <script>
+    export default {
+      tag: "text-demo",
+      data: {
+        txt:"我是txt"
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+<comp-viewer switch-name="Set Properties" comp-name="prop-demo" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <div :text="txt1"></div>
+  <div :html="txt2"></div>
+  <script>
+    export default {
+      tag: "prop-demo",
+      data: {
+        txt1:"<b>我是txt1</b>",
+        txt2:"<b>我是txt2</b>",
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+
+<comp-viewer switch-name="Sync Data" comp-name="sync-demo" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <div>{{txt}}</div>
+  <input type="text" sync:value="txt" />
+  <script>
+    export default {
+      tag: "sync-demo",
+      data: {
+        txt:"I am txt",
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+<comp-viewer switch-name="Bind Event" comp-name="event-demo" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <div>count: {{count}}</div>
+  <button on:click="count++">count++</button>
+  <script>
+    export default {
+      tag: "event-demo",
+      data: {
+        count: 0
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+<comp-viewer switch-name="Use If" comp-name="if-demo" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <x-if :value="count % 2">
+    <div style="color:red">{{count}}</div>
+  </x-if>
+  <x-else>
+    <div style="color:blue">{{count}}</div>
+  </x-else>
+  <button on:click="count++">count++</button>
+  <script>
+    export default {
+      tag: "if-demo",
+      data: {
+        count: 0
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+
+<comp-viewer switch-name="Use Fill" comp-name="fill-demo" max-height="500" style="width:100%;">
+
+```html
+<template component>
+  <ul>
+  <x-fill :value="lists">
+    <li>{{$index}} - {{$data.name}}</li>
+  </x-fill>
+  </ul>
+  <script>
+    export default {
+      tag: "fill-demo",
+      data: {
+        lists:[{name:"One"}, {name:"Two"}, {name:"Three"}]
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+
+</case-switch>
 
 </simp-block>
 
