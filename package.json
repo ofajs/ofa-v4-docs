@@ -9,10 +9,10 @@
     "url": "git+https://github.com/kirakiray/ofa-v4-docs.git"
   },
   "scripts": {
-    "devm": "node ../o-book/shell/ trans",
+    "devm": "node ../o-book/shell/ build",
     "dev": "obook dev",
-    "build": "obook build",
-    "trans": "obook trans"
+    "build": "node ../o-book/shell/ build",
+    "trans": "node ../o-book/shell/ trans"
   },
   "author": "Yao",
   "license": "CC-BY-NC-SA-4.0",
