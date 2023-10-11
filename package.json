@@ -9,7 +9,7 @@
     "url": "git+https://github.com/kirakiray/ofa-v4-docs.git"
   },
   "scripts": {
-    "devm": "node ../o-book/shell/ update",
+    "devm": "node ../o-book/shell/ trans",
     "dev": "obook dev",
     "build": "obook build",
     "trans": "obook trans"
@@ -24,9 +24,11 @@
   "obook-translate": {
     "caches": "./caches",
     "main": "cn",
+    "concurrent": 6,
     "dirs": {
       "cn": "./docs/cn",
-      "t-cn": "./docs/t-cn"
+      "t-cn": "./docs/t-cn",
+      "en": "./docs/en"
     }
   },
   "devDependencies": {
