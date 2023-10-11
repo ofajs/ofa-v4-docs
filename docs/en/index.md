@@ -1,4 +1,4 @@
-# ofa.js Progressive JavaScript Framework for the New Era
+# ofa.js Progressive JavaScript Framework for the new Generation
 
 <simp-block>
 
@@ -10,7 +10,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## The easiest JavaScript framework for the new era
+## The easiest JavaScript framework for the new generation
 
 ### No need for tedious learning, no need for npm, nodejs, webpack, get started immediately
 
@@ -26,7 +26,7 @@
 
 ## ofa.js Packaged Based on Web Components
 
-### Enter the new era, Web Components are widely supported. Try ofa.js and see if it suits you.
+### Enter the new generation, Web Components are widely supported. Try ofa.js and see if it suits you.
 
 <support-platforms></support-platforms>
 
