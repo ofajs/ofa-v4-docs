@@ -1,1 +1,1 @@
-In addition to finding elements globally, you can also find all child elements that meet the condition from a specific element using the following method: `$('xxx').all('xxxx')`.
+In addition to searching for elements globally, you can also search for all matching child elements within a specific element using the following syntax: `$('xxx').all('xxxx')`.

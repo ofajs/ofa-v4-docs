@@ -16,6 +16,6 @@
   }
 </style>
 
-<!-- Using template rendering syntax to render component data as text -->
+<!-- Use template rendering syntax to render component data as text -->
 <button class="shadow-button">{{buttonText}} - count:{{count}}</button>
 ```

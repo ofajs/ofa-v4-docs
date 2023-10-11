@@ -1,9 +1,9 @@
-1. **Independent Deployment**: Each component and page can be independently developed, tested, and deployed, enabling teams to release new features and address issues more rapidly.
+1. Independent Deployment: Each component and page can be developed, tested, and deployed independently, enabling teams to release new features and resolve issues more quickly.
 
-2. **Integration**: Applications developed based on **ofa.js** can combine different modules. This can be achieved through sharing combinations of applications, pages, and components, among other methods.
+2. Integration: Applications developed based on ofa.js can combine different modules together. This can be achieved through sharing compositions via applications, pages, components, etc.
 
-3. **Independent Teams**: Each front-end module (component/page/application) can be developed and maintained by independent teams, thereby encouraging team autonomy and innovation.
+3. Independent Teams: Each frontend module (component/page/application) can be developed and maintained by an independent team, encouraging autonomy and innovation within teams.
 
-4. **Shared Resources**: In **ofa.js** projects, there are usually shared resources such as styles, components, and pages, to ensure consistency and efficiency.
+4. Shared Resources: In the ofa.js project, there are usually shared resources such as styles, components, and pages to ensure consistency and efficiency.
 
-5. **On-demand Loading**: **ofa.js** applications can load modules as needed, thereby improving application performance and loading speed.
+5. On-demand Loading: Applications in ofa.js can load modules as needed, enhancing application performance and loading speed.

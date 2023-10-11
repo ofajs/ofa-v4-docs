@@ -1,1 +1,0 @@
-Una vez que un componente se carga correctamente, se puede utilizar en cualquier lugar utilizando su nombre correspondiente. Incluso si se carga el mismo componente varias veces en diferentes lugares usando el componente 'l-m', no se volverá a cargar. Este mecanismo garantiza la reutilización y consistencia de los componentes.

@@ -1,1 +1,1 @@
-The method is to add the attribute `:name="key"` to the element, where `name` is the name of the target element attribute to be set, and `key` is the property key you want to pass from your custom component.
+The usage is to add the attribute `:name="key"` to the element, where `name` is the attribute name to be set for the target element, and `key` is the property key that you want to pass in your custom component.

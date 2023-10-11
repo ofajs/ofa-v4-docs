@@ -1,1 +1,1 @@
-You can use `<a>` tags in the HTML of the page to implement route navigation. The `href` attribute should be specified as the path to the target page module, and the `olink` attribute should be added to inform the `o-app` component that this is a route link.
+You can use the `<a>` tag in the HTML of the page to implement routing. You need to specify the `href` attribute as the path of the target page module and add the `olink` attribute to inform the `o-app` component that this is a routing link.

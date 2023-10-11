@@ -5,11 +5,11 @@
   <a href="../../publics/examples/app-loading/page2.html"></a>
 </template>
 
-# Customize loading for app
+# Customizing loading for the app
 
-Here is an example of customizing loading for the `o-app` component. In this example, we create a beautiful progress bar for loading, which gradually grows during page loading, reaches 100% directly after loading is complete, and then removes the loading element.
+The following is an example of customizing the loading of the `o-app` component. In this example, we have created a beautiful progress bar for loading, which will gradually grow during the page loading process and reach 100% directly after loading is complete, then delete the loading element.
 
-You can copy and use the following code to customize the loading effect for your application:
+You can copy and use the following code to customize the loading effect of your application:
 
 ```javascript
 export const loading = () => {
@@ -42,5 +42,5 @@ export const loading = () => {
 };
 ```
 
-Through this code, you can add a unique loading effect to your application, giving users a better experience during page transitions.
+With this code snippet, you can add a unique loading effect to your application, providing users with a better experience during page transitions.
 

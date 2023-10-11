@@ -1,1 +1,1 @@
-The logical code is placed in a js file, and this js file needs to indicate `export const type = $.COMP;` to inform the page that this is a component module. In this split mode, module code can use standard syntax like `import` of ES Modules.
+The logic code is put in a js file, and this js file needs to indicate `export const type = $.COMP;` to notify the page that it is a component module. In this split mode, the module code can use standard syntax like `import` in ES Module.

@@ -1,1 +1,0 @@
-Algunos elementos tienen un comportamiento predeterminado cuando se activa un evento. Por ejemplo, hacer clic en un botón de envío enviará el formulario, hacer clic en un enlace redirigirá a la dirección del enlace, etc. Si deseas evitar el comportamiento predeterminado de un evento, puedes usar el método `event.preventDefault()`.

@@ -1,3 +1,3 @@
-- In the `data` parameter, we define a data called `testText` and set its initial value to "I am testText".
-- Using `sync:value="testText"` indicates that the value of the input field is bound to the `testText` data. Therefore, when the user enters content in the input field, the `testText` data will be updated in real-time, and vice versa.
-- Similarly, using `sync:txt="testText"` indicates that the `txt` attribute of the custom component is bound to the `testText` data. When the `txt` attribute of the component changes, the `testText` data will be updated in real-time, and vice versa.
+- In the `data` parameter, we defined a data called `testText` and set its initial value to "I am testText".
+- Using `sync:value="testText"` represents a two-way data binding between the value of the input box and the `testText` data. Therefore, when the user enters content in the input box, the `testText` data will be updated in real time, and vice versa.
+- Similarly, using `sync:txt="testText"` represents a two-way data binding between the `txt` property of the custom component and the `testText` data. When the `txt` property of the component changes, the `testText` data will be updated in real time, and vice versa.

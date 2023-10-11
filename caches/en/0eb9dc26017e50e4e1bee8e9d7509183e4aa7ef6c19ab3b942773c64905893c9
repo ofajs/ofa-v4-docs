@@ -1,1 +1,1 @@
-You can set the style of an element using the `$ele.css = 'color:red;...'` syntax, where `'color:red;...'` is a string that contains CSS style rules.
+You can use `$ele.css = 'color:red;...'` to set the style of an element, where `'color:red;...'` is a string that contains CSS style rules.

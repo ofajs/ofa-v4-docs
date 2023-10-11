@@ -1,3 +1,0 @@
-```html
-<button on:click="back()">Volver a la página anterior</button>
-```

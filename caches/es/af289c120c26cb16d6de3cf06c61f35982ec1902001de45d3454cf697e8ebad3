@@ -1,1 +1,0 @@
-La renderización de relleno le permite utilizar plantillas independientes para renderizar datos y agregarles un nombre usando el elemnto `<template>` con el atributo `name`. Esto le permite renderizar datos con estructuras anidadas y crear componentes más complejos.

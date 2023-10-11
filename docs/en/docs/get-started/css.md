@@ -1,10 +1,10 @@
- # CSS usage
+# Usage of CSS
 
-In `ofa.js`, you can manipulate the CSS styles of an element using the following methods;
+In `ofa.js`, you can manipulate CSS styles of elements using the following methods:
 
-## Get specific CSS style of an element
+## Get the specific CSS styles of an element
 
-You can use `$ele.css.xxx` to get the specific CSS style of an element, where `xxx` is the CSS property name you want to retrieve.
+You can use `$ele.css.xxx` to get the specific CSS style of an element, where `xxx` is the CSS property name you want to get.
 
 ### Example
 
@@ -22,9 +22,9 @@ You can use `$ele.css.xxx` to get the specific CSS style of an element, where `x
 </script>
 ```
 
-## Set a specific style property
+Setting a style property
 
-You can set the CSS style of an element using the `$ele.css.xxx = ''` syntax, where `xxx` is the CSS property name you want to set. By assigning an empty string as the property value, you can remove the specified style property.
+You can use `$ele.css.xxx = ''` to set the CSS style of an element, where `xxx` is the CSS property name you want to set. By setting the property value to an empty string, you can remove the specified style property.
 
 ### Example
 
@@ -40,9 +40,9 @@ You can set the CSS style of an element using the `$ele.css.xxx = ''` syntax, wh
 </script>
 ```
 
-## Assigning an object
+## Assignment Object
 
-You can set the element's style using `$ele.css = {xxx}`, where `xxx` is an object containing CSS property names and values.
+You can use `$ele.css = {xxx}` to set the style of an element, where `xxx` is an object that contains CSS property names and values.
 
 ### Example
 
@@ -51,7 +51,7 @@ You can set the element's style using `$ele.css = {xxx}`, where `xxx` is an obje
 <script>
   const myElement = $("#myElement");
 
-  // Set the styles of the element
+  // Set the style of the element
   myElement.css = {
     color: "red",
     fontSize: "24px",
@@ -62,7 +62,7 @@ You can set the element's style using `$ele.css = {xxx}`, where `xxx` is an obje
 
 ## Assigning Strings
 
-You can set the style of an element using the `$ele.css = 'color:red;...'` syntax, where `'color:red;...'` is a string that contains CSS style rules.
+You can use `$ele.css = 'color:red;...'` to set the style of an element, where `'color:red;...'` is a string that contains CSS style rules.
 
 ### Example
 
@@ -76,9 +76,9 @@ You can set the style of an element using the `$ele.css = 'color:red;...'` synta
 </script>
 ```
 
-## Tips for setting CSS
+## Tips for Setting CSS
 
-You can modify a specific style property of an element without affecting other properties by using `$ele.css = {...$ele.css, color:'red'}`. This allows you to modify only one property without rewriting the entire style.
+You can modify a specific style property of an element by using `$ele.css = {...$ele.css, color:'red'}`, without affecting other style properties. This method allows you to modify only one property without rewriting the entire style.
 
 ### Example
 
@@ -92,5 +92,5 @@ You can modify a specific style property of an element without affecting other p
 </script>
 ```
 
-In the example above, by using `{ ...myElement.css, color: 'red' }`, we only modified the color style of the element while keeping other style properties unchanged. This is a convenient technique that allows flexible modification of element styles.
+In the example above, by using `{ ...myElement.css, color: 'red' }`, we only modified the color style of the element, while keeping other style properties unchanged. This is a convenient trick that allows flexible modifications of the element's style.
 

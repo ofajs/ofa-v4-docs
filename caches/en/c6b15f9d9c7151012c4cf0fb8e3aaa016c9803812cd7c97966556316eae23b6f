@@ -1,2 +1,1 @@
-Where
-	`data` parameter is used to define the default data of the component elements. Once instantiated, you can use **template syntax**.
+`data` parameter is used to define the default data for component elements. Once the instantiation is complete, you can use **template syntax**.

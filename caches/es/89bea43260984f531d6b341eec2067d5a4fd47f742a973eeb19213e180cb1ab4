@@ -1,1 +1,0 @@
-Usando el componente `o-app`, puedes construir la estructura de diseño de toda la aplicación y cargar diferentes módulos de página en ella. Además, la funcionalidad de enrutamiento proporcionada por `o-app` permite una navegación fácil y flexible entre páginas.

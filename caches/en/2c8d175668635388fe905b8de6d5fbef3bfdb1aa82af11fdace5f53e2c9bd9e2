@@ -1,1 +1,1 @@
-This example showcases the usage of the 'use-app' component. It contains multiple links that lead to different pages.
+This example demonstrates how to create a component called `simple-btn`. The template of the component includes a slot where content can be inserted into the component. The component is styled by adding the `:host` selector to its styles. In another page, the `simple-btn` component is referenced using the `l-m` component and content is inserted into it.

@@ -1,1 +1,0 @@
-Usando la forma `class:xxx="yyy"`, puedes agregar o eliminar dinámicamente el nombre de clase al elemento objetivo según el valor del atributo del componente principal. Cuando el atributo `yyy` del componente principal es `true`, se agregará el nombre de clase `xxx` al elemento objetivo; de lo contrario, se eliminará ese nombre de clase.

@@ -1,8 +1,8 @@
-# Common Methods
+# Commonly Used Methods
 
 ## attr
 
-The `attr` method allows you to get or set the attribute of an element.
+`attr` method allows you to get or set the attributes of an element.
 
 ```html
 <div id="example" name="i am hello word">Hello World</div>
@@ -13,5 +13,5 @@ The `attr` method allows you to get or set the attribute of an element.
 </script>
 ```
 
-In the above example, we first select a `div` element with an `id` of "example". Then, we use the `attr` method to get the `name` attribute of the element and print it to the console. Next, we use the `attr` method to set the `title` attribute of the element to "change title".
+In the above example, we first selected a `div` element with an `id` of "example". Then, we used the `attr` method to get the `name` attribute of this element and print it to the console. Next, we used the `attr` method to set the `title` attribute of this element to "change title".
 

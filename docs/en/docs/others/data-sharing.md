@@ -1,10 +1,10 @@
 # Data Sharing
 
-ofa.js is different from other third-party frameworks as it does not use traditional state management patterns. The author believes that state updates should be transparent, meaning that data updates should automatically trigger updates. 
+ofa.js is different from other third-party frameworks by not adopting a traditional state management pattern. The author believes that state updates should be seamless, meaning that changing the data should automatically trigger data updates.
 
-ofa.js inherently possesses excellent data sharing capabilities, as its instances are developed based on the data sharing library [Stanz](https://github.com/kirakiray/stanz). Objects on instances are all synchronizable. To achieve data sharing, simply create a separate Stanz object and have all components directly reference it.
+ofa.js has excellent data sharing capabilities. Its instances are developed based on the data sharing library [Stanz](https://github.com/kirakiray/stanz). The objects on the instances are all synchronous. If you want to achieve data sharing, you just need to create a separate Stanz object and let all components refer to it directly.
 
-The following example illustrates how to share data:
+The following example demonstrates how to share data:
 
 ```javascript
 // data.mjs
@@ -32,10 +32,8 @@ export const data = $.stanz({
   </div>
   <script>
     export const tag = "comp-one";
-
     export default async function ({ load }) {
       const { data } = await load("./data.mjs");
-
       return {
         data: {
           obj: {},
@@ -108,11 +106,11 @@ export const data = $.stanz({
 </html>
 ```
 
-In the above example, when the two components are in the `attached` lifecycle, they write data to the component itself. Then, the `obj` of the component becomes the shared data. After the `detached` lifecycle, the previously shared data is set to `null` to ensure that the data is reclaimed.
+In the above example, two components write data to themselves during the `attached` lifecycle. Then, the `obj` in the component becomes the shared data. After the `detached` lifecycle, the previously shared data is set to `null` to ensure data recycling.
 
-## Precautions
+## Caveat
 
-Since the data is shared, it is necessary to ensure that the data is reclaimed at the appropriate time to avoid memory leaks.
+Due to data sharing, it is necessary to ensure that data is recycled at the appropriate time to avoid memory leaks.
 
 ```html
 <template component>
@@ -126,11 +124,11 @@ Since the data is shared, it is necessary to ensure that the data is reclaimed a
 
       return {
         data: {
-        //   obj: data // ❌ This operation is incorrect, directly setting the data cannot be reclaimed
+        //   obj: data // ❌ This operation is wrong, setting data directly cannot be recycled
           obj: {},
         },
         ready() {
-          this.obj = data; // ❌ Setting it in the ready lifecycle is uncertain when it will be cleared, which may cause memory leaks. The safest method is to set it in the attached lifecycle and delete it after detached
+          this.obj = data; // ❌ Setting in the ready lifecycle cannot determine when to clear, which may cause memory leaks. The safest method is to set it in the attached lifecycle and delete it after detached
         },
       };
     }

@@ -1,1 +1,1 @@
-In this example, there is a `<div>` element with an initial class name of `box`, as well as three buttons: Add Highlight, Remove Highlight, and Toggle Highlight. 
+In this example, there is a `<div>` element with an initial class name `box`, and three buttons: Add Highlight, Remove Highlight, and Toggle Highlight.

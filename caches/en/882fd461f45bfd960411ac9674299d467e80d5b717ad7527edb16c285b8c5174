@@ -1,1 +1,1 @@
-By using the `sync` syntax, you can establish a real-time, two-way relationship between interactive elements (such as input fields or custom components) in the user interface and the data model.
+By using the `sync` syntax, you can establish real-time bidirectional associations between user interface interactive elements (such as input boxes or custom components) and data models.

@@ -1,0 +1,8 @@
+<punch-logo>
+    <img src="../publics/logo.svg" width="100" logo alt="ofa.js" />
+    <h2>ofa.js</h2>
+    <img src="../publics/npm-logo.png" slot="fly" height="40" alt="npm" />
+    <img src="../publics/nodejs-logo.png" slot="fly" height="40" alt="nodejs" />
+    <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
+</punch-logo>
+

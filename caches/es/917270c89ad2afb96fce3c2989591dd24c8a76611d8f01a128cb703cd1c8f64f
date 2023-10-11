@@ -1,1 +1,0 @@
-En el ejemplo anterior, `sync:value="inputValue"` logra un doble enlace de datos, cuando el valor del cuadro de texto cambie, `inputValue` se actualizará automáticamente; por otro lado, cuando `inputValue` cambie, el valor del cuadro de texto también cambiará.

@@ -1,1 +1,0 @@
-Después de seleccionar un elemento con éxito, puedes asignarle eventos. Como se mencionó anteriormente en el ejemplo "Hello World", asignamos un evento de clic al elemento con el id "btn". Cuando se hace clic en el botón, la función asignada se ejecutará.

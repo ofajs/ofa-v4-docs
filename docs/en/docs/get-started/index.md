@@ -1,22 +1,22 @@
 # Getting Started
 ## How to Use
-### Direct Reference
+### Direct Quote
 
-You can directly reference ofa.js to your page using CDN like this:
+You can directly reference ofa.js to your page by using the CDN address: 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
 ```
 
-### Installation via npm
+### Install via npm
 
-First, install ofa.js in your project:
+First, install ofa.js in your project: 
 
 ```shell
 npm install ofa.js --save
 ```
 
-Then import the ofa.js module in your project:
+Then import the ofa.js module into the project:
 
 ```javascript
 import "ofa.js"; // esm
@@ -24,9 +24,9 @@ import "ofa.js"; // esm
 require("ofa.js"); // cmd
 ```
 
-### Usage
+### Use
 
-After referencing the resource, ofa.js will set a `$` property on the global scope. All the functionalities will be available on `$`. The following tutorials will explain its usage in detail.
+After referencing the resource, ofa.js will set a `$` property on the global scope, and all functionalities are accessed through `$`. Its usage will be explained in detail in the following tutorials.
 
-Under normal circumstances, we recommend using the direct reference method to add ofa.js, while the use of npm is used to be compatible with frameworks like React and Vue.
+Usually, we recommend using the direct injection method to add ofa.js, while the npm method is used for compatibility with frameworks such as React and Vue.
 

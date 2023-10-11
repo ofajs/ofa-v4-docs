@@ -1,1 +1,0 @@
-En tu archivo HTML, utiliza la etiqueta `<o-page>` para usar el componente `o-page` y utiliza el atributo `src` para hacer referencia a la ruta del archivo del módulo de página. El contenido de la página se renderizará dentro de este componente.

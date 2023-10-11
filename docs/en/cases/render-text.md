@@ -3,13 +3,12 @@
 <a href="../../publics/examples/render-text/text-demo.html" main></a>
 </template>
 
-# Text Rendering
+# Text rendering
 
-In the component file, you can add a `script` tag to write the logic code for the component. The component parameters can be set through the exposed `default` object.
+In the component file, you can add a `script` tag to write the logic code of the component. You can set component parameters through the exposed `default` object.
 
-Where
-	`data` parameter is used to define the default data of the component elements. Once instantiated, you can use **template syntax**.
+`data` parameter is used to define the default data for component elements. Once the instantiation is complete, you can use **template syntax**.
 
-Text rendering is wrapped with double curly braces, i.e. `{{xxx}}`, where xxx represents the attribute name of the component.
+Text rendering is wrapped in double braces, that is `{{xxx}}`, where xxx represents the component's attribute name.
 
-case demonstrates how to render the val data of a component element:
+This case demonstrates how to render the val attribute of component elements.

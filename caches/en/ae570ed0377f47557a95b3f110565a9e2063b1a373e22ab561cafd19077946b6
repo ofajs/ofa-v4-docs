@@ -10,11 +10,11 @@
 
       return {
         data: {
-        //   obj: data // ❌ This operation is incorrect, directly setting the data cannot be reclaimed
+        //   obj: data // ❌ This operation is wrong, setting data directly cannot be recycled
           obj: {},
         },
         ready() {
-          this.obj = data; // ❌ Setting it in the ready lifecycle is uncertain when it will be cleared, which may cause memory leaks. The safest method is to set it in the attached lifecycle and delete it after detached
+          this.obj = data; // ❌ Setting in the ready lifecycle cannot determine when to clear, which may cause memory leaks. The safest method is to set it in the attached lifecycle and delete it after detached
         },
       };
     }

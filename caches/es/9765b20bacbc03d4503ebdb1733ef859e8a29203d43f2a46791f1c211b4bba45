@@ -1,1 +1,0 @@
-En algunos casos, es posible que sepas de antemano que el usuario va a navegar a la siguiente página. Para mejorar la experiencia del usuario, puedes cachear de antemano el módulo de página siguiente, de modo que se pueda cargar inmediatamente durante la navegación real, reduciendo así el tiempo de espera del usuario y haciendo que la experiencia sea más fluida.

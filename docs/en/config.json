@@ -1,9 +1,11 @@
 {
   "github": "https://github.com/kirakiray/ofa.js",
-  "logo": { "text": "ofa.js" },
+  "logo": { "url": "../publics/logo.svg", "text": "ofa.js" },
+  "pages": ["./index.md"],
+  "footer": "./footer.md",
   "navs": [
-    { "name": "Tutorials", "summary": "./cases/SUMMARY.md" },
-    { "name": "Document", "summary": "./docs/SUMMARY.md" },
+    { "name": "Case tutorial", "summary": "./cases/SUMMARY.md" },
+    { "name": "Document ", "summary": "./docs/SUMMARY.md" },
     { "name": "Other", "summary": "./others/SUMMARY.md" }
   ]
 }

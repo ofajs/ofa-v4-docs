@@ -1,16 +1,16 @@
-# Getting Elements and Events
+# Get Elements and Events Related
 
-This section aims to enhance understanding of the previous chapter, including selecting elements and binding events.
+This chapter aims to enhance understanding of the previous chapter, including selecting elements and event binding.
 
 ## Selecting Elements
 
-In previous chapters, we have learned how to retrieve a specific element from the global scope using the $ symbol. Now, we will introduce other methods for selecting elements.
+In the previous chapters, we have learned how to access a specific element from the global scope using the $ symbol. Next, we will introduce other methods of accessing elements.
 
-### Finding an Element Within Another Element
+### Look for an element within an element
 
-#### Using the `$("xxx").$('xxxx')` syntax
+#### Using `$("xxx").$('xxxx')` method
 
-`$("xxx").$('xxxx')` is a way to select a parent element first, then find the child element that matches the given condition within it. Here, `$("xxx")` selects a parent element, and `$('xxxx')` searches for the child element within that parent element.
+`$("xxx").$('xxxx')` is a way to select a parent element first and then find the child element that meets the condition inside it. In this example, `$("xxx")` selects a parent element, and then uses `$('xxxx')` to find the child element that meets the condition within that parent element.
 
 #### Example
 
@@ -22,7 +22,7 @@ In previous chapters, we have learned how to retrieve a specific element from th
   </div>
 </div>
 <script>
-  // Select parent element and find child element
+  // Select the parent element and find the child element
   const parentElement = $(".parent");
   const childElement = parentElement.$(".child");
 
@@ -31,11 +31,11 @@ In previous chapters, we have learned how to retrieve a specific element from th
 </script>
 ```
 
-In the example above, firstly the parent element with the class `parent` is selected using `$(".parent")`, and then the child element with the class `child` is found within that parent element using `$(".child")`. Then the text content of the child element is modified to "Modified child element".
+In the example above, first select the parent element with the `parent` class using `$(".parent")`, and then use `$(".child")` to search for the child element with the `child` class within this parent element. Then modify the text content of the child element to "Modified child element".
 
-### Using the `$('xxx xxxx')` approach
+### Using `$('xxx xxxx')` method
 
-`$('xxx xxxx')` searches for elements that match the second selector condition in the global scope, and then finds elements that match the first selector condition within those elements. This allows for directly finding the child element that meets the conditions.
+`$('xxx xxxx')` is used to find elements that match the second selector condition within the global scope, and then search for elements that match the first selector condition within these elements. This approach allows for directly finding the desired child elements in one step.
 
 #### Example
 
@@ -47,7 +47,7 @@ In the example above, firstly the parent element with the class `parent` is sele
   </div>
 </div>
 <script>
-  // Directly find the child element that meets the conditions
+  // Find the child element that meets the criteria directly
   const childElement = $('div .child');
 
   // Modify the text content of the child element
@@ -55,13 +55,13 @@ In the example above, firstly the parent element with the class `parent` is sele
 </script>
 ```
 
-In the example above, the child element with the class `child` is directly found using `$('div .child')`, and then the text content of the child element is modified to "Modified child element".
+In the above example, you directly use `$('div .child')` to find the child elements with the `child` class and modify their text content to "Modified child element".
 
-### Select multiple elements
+### Selecting Multiple Elements
 
-#### Use `$.all('xxx')` to find global elements
+#### Use `$.all('xxx')` to search for global elements.
 
-The `$.all('xxx')` method is used to find all elements in the page that match the selector condition and return them as a collection of elements. This allows you to select multiple elements in the page for batch operations.
+The `$.all('xxx')` method is used to find all elements on the page that meet the selector condition and return them as a collection of elements. This allows for batch operations on multiple elements in the page.
 
 #### Example
 
@@ -80,11 +80,11 @@ The `$.all('xxx')` method is used to find all elements in the page that match th
 </script>
 ```
 
-In the above example, using `$.all("p")` finds all the `p` tag elements on the page and performs batch operations on them by modifying their text content to "Modified Paragraph 1", "Modified Paragraph 2", and "Modified Paragraph 3".
+In the example above, `$.all("p")` is used to find all the `p` tag elements on the page and perform a batch operation on them, modifying their text content to "Modified Paragraph 1", "Modified Paragraph 2", and "Modified Paragraph 3".
 
-### Find all elements that meet the condition within an element
+### Finding all elements that meet the conditions within an element
 
-In addition to finding elements globally, you can also find all child elements that meet the condition from a specific element using the following method: `$('xxx').all('xxxx')`.
+In addition to searching for elements globally, you can also search for all matching child elements within a specific element using the following syntax: `$('xxx').all('xxxx')`.
 
 #### Example
 
@@ -107,15 +107,15 @@ In addition to finding elements globally, you can also find all child elements t
 </script>
 ```
 
-In the example above, first use `$(".container")` to find elements with the class `container`, then use `.all(".item")` to find all child elements with the class `item` within that container, and perform batch operations on them, modifying the text content to "Modified Item 1", "Modified Item 2", and "Modified Item 3".
+In the above example, first use `$(".container")` to find elements with the class `container`, then use `.all(".item")` to find all child elements with the class `item` within that container, and perform batch operations on them, modifying their text content to "Modified Item 1", "Modified Item 2", and "Modified Item 3".
 
 ## Events
 
-We have already discussed the usage of `on` to bind events. Here are a few other methods related to events;
+We have already discussed the usage of `on` to bind events. Now let's introduce a few methods related to events.
 
-### Documentation for the use of the `off` method
+### Usage documentation for the `off` method
 
-The `off` method is used to remove event handlers bound using the `on` method. When an event handler is no longer needed, it can be removed from the element using the `off` method to avoid duplicate execution or memory leaks.
+The `off` method is used to remove event handlers that have been bound using the `on` method. When a handler for a certain event is no longer needed, the `off` method can be used to remove it from the element, preventing it from being executed repeatedly or causing memory leaks.
 
 #### Syntax
 
@@ -123,9 +123,9 @@ The `off` method is used to remove event handlers bound using the `on` method. W
 $(selector).off(eventName, eventHandler);
 ```
 
-- `selector`: The element to remove the event handler from.
-- `eventName`: The event name to remove.
-- `eventHandler`: The event handler to remove.
+- `selector`: Select the element to remove the event handler from.
+- `eventName`: The name of the event to be removed.
+- `eventHandler`: The event handler to be removed.
 
 #### Example
 
@@ -146,11 +146,11 @@ $(selector).off(eventName, eventHandler);
 </script>
 ```
 
-In the example above, when the button is clicked, a dialog box displaying "Button clicked!" will appear. However, after 5 seconds, the click event handler is removed using the `off` method, so clicking the button again will not trigger the dialog box.
+In the above example, when the button is clicked, a dialog displaying "Button clicked!" will pop up. However, after 5 seconds, the click event handler is removed using the `off` method, so the dialog will not pop up again when the button is clicked.
 
-### Documentation for the use of the `one` method
+### Documentation for the use of the one method
 
-The `one` method is used to bind event handlers that will only execute once when the event is triggered for the first time. After executing once, the event handler will be automatically removed, preventing duplicate triggers.
+`one` method is used to bind event handlers, but this handler will only be executed once when the event is triggered for the first time. After being executed once, the event handler will be automatically removed to avoid repetitive triggering.
 
 #### Syntax
 
@@ -158,27 +158,27 @@ The `one` method is used to bind event handlers that will only execute once when
 $(selector).one(eventName, eventHandler);
 ```
 
-- `selector`: Selects the element to bind the event handler to.
-- `eventName`: The name of the event to bind.
-- `eventHandler`: The event handler to execute.
+- `selector`: Element to bind event handler to.
+- `eventName`: Event name to bind.
+- `eventHandler`: Event handling function to be executed.
 
 #### Example
 
 ```html
 <button id="btn">Click Me Once</button>
 <script>
-  // Bind the click event handler, but only execute it once
+  // Bind the click event handling function, but it will only be executed once
   $("#btn").one("click", () => {
     alert("Button clicked once!");
   });
 </script>
 ```
 
-In the above example, when the button is clicked, a dialog box with the message "Button clicked once!" will appear. However, after the first click, the event handler will be removed, so subsequent clicks will not trigger the dialog box.
+In the above example, when the button is clicked, a dialog box will appear displaying "Button clicked once!". However, after the first click, the event handler will be removed, so subsequent button clicks will not trigger the dialog box.
 
-### Documentation for the `emit` method
+### Documentation for the emit method
 
-The `emit` method is used to manually trigger a specific event bound to an element. It allows for executing event handler functions without performing any actual operations.
+`emit` method is used to manually trigger a specific event bound to an element. By using the `emit` method, we can trigger the execution of event handling functions without performing any actual operations.
 
 #### Syntax
 
@@ -186,7 +186,7 @@ The `emit` method is used to manually trigger a specific event bound to an eleme
 $(selector).emit(eventName);
 ```
 
-- `selector`: Selects the element to trigger the event on.
+- `selector`: Select the element to trigger the event.
 - `eventName`: The name of the event to trigger.
 
 #### Example
@@ -194,26 +194,27 @@ $(selector).emit(eventName);
 ```html
 <button id="btn">Click Me</button>
 <script>
-  // Bind the click event handler
+  // Bind click event handler
   $("#btn").on("click", () => {
     alert("Button clicked!");
   });
 
-  // Trigger the click event on the button using the emit method
+  // Trigger the click event of the button using the emit method
   $("#btn").emit("click");
 </script>
 ```
 
-In the above example, the `emit` method is used to manually trigger the click event on the button. This will result in a dialog box with the message "Button clicked!" even though the button was not actually clicked.
+In the example above, the `emit` method is used to manually trigger the button's click event. As a result, a dialog box will appear displaying "Button clicked!" even though the button was not actually clicked.
 
-Note: The `emit` method does not simulate a mouse click or any other actual event. It only directly invokes the bound event handler functions. Therefore, if you want to trigger the execution of an event in specific circumstances, you can use the `emit` method.
+Note: Using the `emit` method does not simulate mouse clicks or other actual events. It simply directly calls the bound event handling function. Therefore, if you want to trigger the execution of an event under specific circumstances, you can use the `emit` method.
 
-When you bind an event, sometimes you may want to stop the event from further propagation (bubbling) or cancel the default behavior of the event. Below we will explain how to stop bubbling and cancel default events after the event is triggered.
+When you bind an event, sometimes you may want to stop the event from further propagation (bubbling) or cancel the default behavior of the event. Below, we will introduce how to prevent event propagation and cancel default events after the event is triggered.
 
 ### Stop Event Bubbling
-Event bubbling refers to when an event on an element is triggered, it will bubble up along the DOM tree, triggering the same type of event on parent elements one by one. If you want to stop it from bubbling further after handling the event on a specific element, you can use the `event.stopPropagation()` method.
 
-Example code:
+Event bubbling refers to the propagation of an event along the DOM tree when it is triggered on an element, sequentially triggering the same type of event on parent elements. If you want to stop the event from further bubbling after handling it on a specific element, you can use the `event.stopPropagation()` method.
+
+Example code: 
 
 ```html
 <!DOCTYPE html>
@@ -237,7 +238,7 @@ Example code:
 
     btn.on('click', (event) => {
       alert('Button Clicked!');
-      event.stopPropagation(); // Stop event bubbling
+      event.stopPropagation(); // 阻止事件冒泡
     });
 
     innerDiv.on('click', () => {
@@ -251,14 +252,13 @@ Example code:
 </body>
 </html>
 ```
+In the example above, when you click the button "Click Me", it will display "Button Clicked!" but not trigger "Inner Div Clicked!" and "Outer Div Clicked!". This is because we called `event.stopPropagation()` in the button's click event handler, which prevents the event from further propagation.
 
-In the above example, when you click the "Click Me" button, it will display "Button Clicked!" but will not trigger "Inner Div Clicked!" and "Outer Div Clicked!". This is because we called `event.stopPropagation()` in the button's click event handler, stopping the event from further propagation.
+### Cancel Default Behavior of an Event
 
-### Prevent Default Event
+Some events on certain elements have default behaviors when triggered. For example, clicking a submit button will cause the form to be submitted, clicking a link will navigate to the link's address, and so on. If you want to prevent the default behavior of an event, you can use the `event.preventDefault()` method.
 
-Some events on elements have default behaviors when triggered. For example, clicking a submit button will submit the form, clicking a link will redirect to the link's address, and so on. If you want to prevent the default behavior of an event, you can use the `event.preventDefault()` method.
-
-Example code:
+Example code: 
 
 ```html
 <!DOCTYPE html>
@@ -281,7 +281,7 @@ Example code:
     const submitBtn = $('#submitBtn');
 
     submitBtn.on('click', (event) => {
-      event.preventDefault(); // Prevent the default behavior of the event
+      event.preventDefault(); // Cancel the default behavior of the event
       const name = $('#name').value;
       alert(`Hello, ${name}! Form submission prevented.`);
     });
@@ -294,5 +294,5 @@ Example code:
 </html>
 ```
 
-In the above example, when you click the submit button "Submit", it will display "Hello, {name}! Form submission prevented.", but it will not trigger the alert "Form Submitted!". This is because we call `event.preventDefault()` in the click event handler of the submit button to prevent the default submission behavior of the form.
+In the example above, when you click the "Submit" button, it will display "Hello, {name}! Form submission prevented.", but it will not trigger the "Form Submitted!" alert. This is because we called `event.preventDefault()` in the event handler for the submit button, preventing the form's default submission behavior.
 

@@ -1,1 +1,0 @@
-Usando el atributo `shadow`, puedes acceder al contenido del Shadow DOM del componente. Esto te permite acceder y manipular los elementos y estilos dentro del Shadow DOM desde el interior del componente.

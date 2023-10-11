@@ -1,3 +1,0 @@
-- `{{ $data }}`: representa los datos pasados a la plantilla de llenado, es decir, el valor del atributo `value`.
-- `{{ $ele }}`: representa el elemento en el que se encuentra la plantilla de llenado y se utiliza para acceder a los atributos y estilos del elemento.
-- `{{ $host }}`: representa la instancia del componente principal y se utiliza para acceder a los atributos y métodos del componente principal.

@@ -1,1 +1,0 @@
-Tenga en cuenta que el estado de enrutamiento del componente se mantiene dentro de la aplicación, pero los datos de enrutamiento no están vinculados a la pestaña actual del navegador. De este modo, puede saltar y navegar fácilmente entre páginas dentro de la aplicación.

@@ -4,18 +4,18 @@
 <a href="../../publics/examples/inject-host/comp-two.html" main></a>
 </template>
 
-# inject-host component
+# inject-host Component
 
-Due to the isolation of Web Components, it is difficult to directly modify the styles of elements inside component slots. To address this issue, ofa.js provides a component called `inject-host`, which injects styles into the host layer to configure the appearance of the component more flexibly.
+Given the isolation of Web Components, it is difficult to directly modify the styles of elements within component slots. To address this problem, ofa.js provides a component called `inject-host`; the `inject-host` component injects styles into the host layer, allowing for more flexible configuration of the component's appearance.
 
-It should be noted that using this component may affect the styles of the host layer. Therefore, when intruding on styles, naming conventions should be maintained to avoid affecting the styles of the host.
+It should be noted that using this component may affect the styles of the host layer. Therefore, when intruding styles, naming conventions should be followed to avoid affecting the styles of the host.
 
 In the example, we defined the `comp-two` component, which internally uses the `inject-host` component to inject styles. This allows us to style the elements inside the `comp-two` component using the injected styles without affecting other components.
 
-At the same time, the following points should also be noted:
+At the same time, special attention should also be paid to the following content: 
 
-- By adding `<style>` tags inside `inject-host`, we can define specific styles for the component. These styles will only affect the elements of the current component and will not spread to other components.
-- When injecting styles, it is important to avoid using overly generic selectors to prevent affecting the styles of other components. Specificity and uniqueness of selectors should be maintained.
-- `inject-host` can also inject external style sheet files using the `<link rel="stylesheet" href="target/style.css">` approach.
+- By adding `<style>` tags within `inject-host`, we can define specific styles for components. These styles will only affect the elements within the current component and will not extend to other components.
+- When injecting styles, it is important to avoid using common selectors that may affect the styles of other components. It is necessary to maintain the uniqueness and specificity of the selectors.
+- `inject-host` can also inject external stylesheet files using the `<link rel="stylesheet" href="target/style.css">` format.
 
-Throughout the example, by using the `inject-host` inside the `comp-two` component, we can flexibly set and apply styles within the component without breaking other component styles.
+In the entire example, by using `inject-host` in the `comp-two` component, we can flexibly set and apply the styles within the component without breaking the styles of other components.

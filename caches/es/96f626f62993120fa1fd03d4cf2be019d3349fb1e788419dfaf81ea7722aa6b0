@@ -1,1 +1,0 @@
-El componente `o-router` es un componente utilizado para enlazar rutas dentro de `o-app` a la pestaña actual del navegador, lo que ayuda a gestionar el enrutamiento y la presentación de la página más fácilmente.

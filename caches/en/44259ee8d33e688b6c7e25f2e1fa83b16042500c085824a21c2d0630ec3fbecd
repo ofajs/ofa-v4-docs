@@ -1,1 +1,1 @@
-In the above example, the `emit` method is used to manually trigger the click event on the button. This will result in a dialog box with the message "Button clicked!" even though the button was not actually clicked.
+In the example above, the `emit` method is used to manually trigger the button's click event. As a result, a dialog box will appear displaying "Button clicked!" even though the button was not actually clicked.

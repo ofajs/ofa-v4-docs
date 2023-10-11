@@ -1,1 +1,1 @@
-With the **property transmission** template syntax, you can apply the component's data to element attributes within the template.
+By using **props binding** in template syntax, you can apply component data to element attributes within the template.

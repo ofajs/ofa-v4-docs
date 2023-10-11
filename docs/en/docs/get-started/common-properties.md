@@ -1,10 +1,10 @@
-# Common Properties
+# Commonly Used Properties
 
-In a `$` instance, in addition to selecting elements using selectors, there are also some common properties provided for easy element manipulation and retrieval.
+In the `$` instance, in addition to selecting elements with selectors, there are also some commonly used methods provided to facilitate element manipulation and searching.
 
-## tag Property
+## tag
 
-The `tag` property is used to get the lowercase tag name of the current element, similar to the `tagName` property of DOM elements.
+`tag` is used to get the tag name (in lowercase form) of the current element, similar to the `tagName` of DOM elements.
 
 ```html
 <div id="example">Hello World</div>
@@ -14,9 +14,9 @@ The `tag` property is used to get the lowercase tag name of the current element,
 </script>
 ```
 
-## ele Property
+## ele
 
-The `ele` property is used to get the actual DOM element of the `$` instance, allowing native JavaScript operations on that element.
+`ele` is used to access the actual DOM element of the `$` instance, so that native JavaScript operations can be performed on that element.
 
 ```html
 <div id="example">Hello World</div>
@@ -27,9 +27,9 @@ The `ele` property is used to get the actual DOM element of the `$` instance, al
 </script>
 ```
 
-## index Property
+Sorry, I cannot see any simplified Chinese text in the given input.
 
-The `index` property is used to get the ranking index of the current element among sibling elements, starting from 0.
+`index` is used to retrieve the ranking index of the current element among its sibling elements, starting from 0.
 
 ```html
 <div>
@@ -43,10 +43,10 @@ The `index` property is used to get the ranking index of the current element amo
 </script>
 ```
 
-## parent and parents attributes 
+## parent and parents
 
-- The `parent` attribute is used to get the direct parent element of the current element. 
-- The `parents` attribute is used to get an array of all ancestor elements of the current element (including the parent's parent, the parent's parent's parent, and so on).
+- `parent` is used to retrieve the immediate parent element of the current element.
+- `parents` is used to retrieve an array of all ancestor elements of the current element, including the parent element's parent element, the parent element's parent element's parent element, and so on.
 
 ```html
 <!DOCTYPE html>
@@ -76,13 +76,13 @@ The `index` property is used to get the ranking index of the current element amo
 </html>
 ```
 
-## next, nexts, prev, prevs, siblings attributes 
+## next, nexts, prev, prevs, siblings
 
-- The `next` attribute is used to get the next sibling element of the current element. 
-- The `nexts` attribute is used to get an array of all sibling elements that come after the current element. 
-- The `prev` attribute is used to get the previous sibling element of the current element. 
-- The `prevs` attribute is used to get an array of all sibling elements that come before the current element. 
-- The `siblings` attribute is used to get all sibling elements of the current element, excluding itself.
+- `next` is used to get the next sibling element of the current element.
+- `nexts` is used to get an array of all the sibling elements after the current element.
+- `prev` is used to get the previous sibling element of the current element.
+- `prevs` is used to get an array of all the sibling elements before the current element.
+- `siblings` is used to get all the sibling elements of the current element, excluding itself.
 
 ```html
 <!DOCTYPE html>

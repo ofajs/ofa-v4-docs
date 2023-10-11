@@ -2,37 +2,37 @@
 
 ## What is ofa.js
 
-ofa.js is a progressive front-end framework designed to allow developers to enter the front-end development and usage process at the lowest cost. It provides a series of simple yet powerful tools and APIs to make front-end development more efficient and convenient.
+ofa.js is a progressive front-end framework designed to allow developers to enter front-end development and usage processes at the lowest cost. It provides a series of simple yet powerful tools and APIs to make front-end development more efficient and convenient.
 
 ## Purpose of Existence
 
-### Replace jQuery
+### Replacing jQuery
 
-In many small projects, we may not need to introduce large frameworks like React and Vue, but prefer to use jQuery for simple front-end operations. ofa.js improves the API of jQuery and replaces many of jQuery's methods with properties, making ofa.js more suitable in many scenarios.
+In many small projects, we may not need to introduce large frameworks like React and Vue, but prefer to use jQuery for simple front-end operations. ofa.js improves jQuery's API and replaces many of jQuery's methods with properties, making it more suitable to use ofa.js in many scenarios.
 
-### Simplify front-end development and usage process
+### Simplify Front-end Development and Usage Process
 
-ofa.js aims to simplify the cumbersome front-end development process. It allows developers to build front-end applications more quickly without the need to learn complex tools such as Node.js, npm, and scaffolding. With it, you can go back to the experience of just importing one library to develop.
+The goal of ofa.js is to simplify the tedious front-end development process. It allows developers to build front-end applications faster without the need to learn complex tools such as Node.js, npm, and scaffolding. With ofa.js, you can go back to the experience of development with just importing a library.
 
-### Become a Silver Bullet Front-end Development Framework
+Become a silver bullet type front-end development framework.
 
-ofa.js aims to be a "silver bullet", capable of solving various front-end development problems and providing comprehensive solutions. It is not just a utility library, but a comprehensive front-end development framework.
+ofa.js aims to be a "silver bullet" that can solve various frontend development problems and provide comprehensive solutions. It is not just a utility library, but a comprehensive frontend development framework.
 
 ## Features
 
-### Easy-to-use component development
+### Easy-to-use Component Development
 
-There is almost no learning cost for components developed using ofa.js. ofa.js provides a concise and intuitive API that allows developers to quickly create and integrate components while keeping the code clean and maintainable.
+The components developed using ofa.js have almost no learning cost. ofa.js provides a concise and intuitive API, allowing developers to quickly create and integrate components while keeping the code clean and easy to maintain.
 
-### Built-in modularization, state update, and application integration solutions
+### Built-in modular, state update, and application integration solutions
 
-ofa.js has integrated solutions for modularization, state updating, and application integration, allowing developers to complete complex front-end development tasks without the need for additional third-party libraries or tools.
+The ofa.js has already integrated solutions such as modularity, state update, and application integration, allowing developers to complete complex front-end development tasks without the need to search for third-party libraries or tools.
 
-### Officially provided routing and SSG (Static Site Generation) solutions
+Officially provided routing and SSG (Static Site Generation) solutions
 
-ofa.js also provides official solutions for routing and SSG, helping developers better manage front-end routing and generate static websites to improve application performance and SEO friendliness.
+ofa.js also provides official solutions for routing and SSG, helping developers better manage frontend routing and generating static websites to improve application performance and SEO friendliness.
 
 ### Compact code size
 
-ofa.js code has been carefully optimized, and the compressed .min file size is only 38kb (only 14kb under gzip). This makes ofa.js an efficient front-end framework that can be quickly loaded and used in various network environments.
+The code of ofa.js has been carefully optimized, and the size of the compressed .min file is only 38kb (14kb under gzip). This makes ofa.js an efficient front-end framework that can be quickly loaded and used in various network environments.
 

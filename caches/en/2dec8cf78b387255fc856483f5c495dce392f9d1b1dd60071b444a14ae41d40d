@@ -1,1 +1,1 @@
-The nested component named CompTwo is imported through `<l-m src="./comp-two.html"></l-m>` in the example case.
+In the case, the nested component named CompTwo is imported using `<l-m src="./comp-two.html"></l-m>`.

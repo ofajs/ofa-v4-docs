@@ -1,1 +1,1 @@
-The nested component is used through `<comp-two :txt="val"></comp-two>` and the val property of the current component is passed as the txt property to the nested component. This way, the nested component can use the passed data for rendering.
+By using `<comp-two :txt="val"></comp-two>`, a nested component is used and the val attribute of the current component is passed to the nested component as txt attribute. This way, the nested component can render using the passed data.

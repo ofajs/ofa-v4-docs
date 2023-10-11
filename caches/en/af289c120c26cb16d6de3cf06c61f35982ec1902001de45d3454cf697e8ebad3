@@ -1,1 +1,1 @@
-Fill rendering allows you to render data using separate templates and add a `name` attribute to the `<template>` element for naming. This allows you to render nested data structures and create more complex components.
+Filling rendering allows you to render data using independent templates, with the addition of the `name` attribute to the `<template>` element for naming purposes. This allows you to achieve data rendering with nested structures, thereby creating more complex components.

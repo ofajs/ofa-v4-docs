@@ -1,1 +1,1 @@
-In this example, we created an application layout using the `o-app` component and loaded a page module `page1.html` into it.
+In this example, we create an application layout using the `o-app` component and then load a page module `page1.html` within it.

@@ -1,1 +1,0 @@
-En el ejemplo anterior, dos componentes escriben datos en sí mismos durante el ciclo de vida 'attached'. Luego, el objeto 'obj' del componente se convierte en datos compartidos. Después del ciclo de vida 'detached', se establecen los datos compartidos previos como 'null' para asegurar que los datos se recojan. 

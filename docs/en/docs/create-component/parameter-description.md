@@ -1,16 +1,16 @@
-# Explanation of Component Registration Parameters
+# Explanation of registration parameters for components
 
-In ofa.js, you can define some specific registration parameters in the component module to configure the component more flexibly. The following explains each registration parameter in detail, accompanied by relevant demonstration examples.
+In ofa.js, you can define certain specific registration parameters in the component module to configure the component more flexibly. The following explains each registration parameter in detail, accompanied by corresponding examples for demonstration.
 
 ## Basic Parameters
 
-The basic parameters are the most basic configurations for registering a component and include the following properties:
+Basic parameters are the most basic configuration for registering a component, which includes the following attributes:
 
-### Component Identifier
+##### Component Identification
 
-The component module must have 'export const type = $.COMP' to identify it as a component module.
+The component module must have `export const type = $.COMP` to identify it as a component module.
 
-Example:
+Example: 
 
 ```javascript
 // button-component.mjs
@@ -19,33 +19,33 @@ export const type = $.COMP;
 
 ### tag
 
-`tag` represents the registered component name. When `tag` property is not defined, the registered component name remains the same as the file name.
+`tag` represents the registered component name. When the `tag` attribute is not defined, the registered component name remains the same as the file name.
 
-Example:
+Example: 
 
 ```javascript
 // button-component.mjs
 export const type = $.COMP;
-export const tag = "my-button"; // Register component name as 'my-button'
+export const tag = "my-button"; // Register the component name as 'my-button'
 ```
 
 ### temp
 
-`temp` is a string type property used to define the address of the component template. When `temp` is not defined, it defaults to loading an HTML file with the same name as the component in the same directory as the current module.
+`temp` is a string-type property used to define the address of the component template. When `temp` is not defined, the HTML file with the same name as the component in the same directory as the current module will be loaded by default.
 
-Example:
+Example: 
 
 ```javascript
 // button-component.mjs
 export const type = $.COMP;
-export const temp = "./my-button-template.html"; // Specify the address of the component template as './my-button-template.html'
+export const temp = "./my-button-template.html"; // 指定组件模板的地址为 './my-button-template.html'
 ```
 
 ### data
 
-`data` is an object type property used to generate default custom data added after the component is created.
+`data` is an object-type property used to add default custom data to the generated component.
 
-Example:
+Example: 
 
 ```javascript
 // button-component.mjs
@@ -57,9 +57,9 @@ export const data = {
 
 ### attrs
 
-`attrs` is an object type property belonging to `data`, but this data will be reflected in the element's attributes, and changes to the attributes will dynamically change the component's `data`. When there is a capital letter key, it will be converted to `-` camel case naming in the component attribute.
+`attrs` is an object-type attribute, which also belongs to `data`, but this data will be reflected in the attributes of the element. Changes in the attributes will also dynamically change the `data` of the component. When there is a capital key, it will be transformed into a kebab-case naming in the component attribute.
 
-Example:
+Example: 
 
 ```javascript
 // button-component.mjs
@@ -71,7 +71,7 @@ export const attrs = {
 
 ### proto
 
-In the registration parameter of the component, you can add a `proto` object to define the methods that need to be added to the component's prototype. This way, when creating an instance of the component, these attributes and methods will be added to the prototype of the instance, allowing all instances to access and share these methods.
+In the registration parameter of the component, you can add a `proto` object to define the methods that need to be added to the component prototype. In this way, when creating an instance of the component, these properties and methods will be added to the prototype of the instance, so that all instances can access and share these methods.
 
 ```javascript
 // MyComponent.js
@@ -90,13 +90,13 @@ export const proto = {
 
 ### watch
 
-`watch` is an object type property used to listen for changes in `data`. The listener function is placed here. Once registered successfully, the listener function will be immediately executed.
+`watch` is an object type property used to listen to the changes of `data`. The listener function is placed here. After being successfully registered, the value being listened to will be executed immediately.
 
-- The function registered by `watch` will only be triggered once during a single thread change. Therefore, even if the monitored value is modified multiple times within a thread, it will only be triggered once.
+- The function registered with `watch` will only be triggered once during a single-threaded change. Therefore, even if the value being listened to is modified multiple times within a single thread, it will only be triggered once.
 - The first parameter is the current value.
-- The second parameter is an object that contains a `watchers` data set. In most cases, the `watchers` object will only contain one object. You can retrieve the `oldValue` from this object. When the monitored value has been changed multiple times within a single thread, this data set will record multiple changes.
+- The second parameter is an object that contains the `watchers` data set. In general, there will only be one object on `watchers`, and you can obtain the `oldValue` from this object. When the value being listened to in a single thread is changed multiple times, this data set will record the changes multiple times.
 
-Example:
+Example: 
 
 ```javascript
 // button-component.mjs
@@ -115,9 +115,9 @@ export const watch = {
 };
 ```
 
-## Example Code
+## Example code
 
-The following is a complete example code, including the definition of basic parameters and the component template.
+The following is a complete example code, including the definition of basic parameters and component templates.
 
 ```javascript
 // button-component.mjs
@@ -168,7 +168,7 @@ export const proto = {
   }
 </style>
 
-<!-- Using template rendering syntax to render component data as text -->
+<!-- Use template rendering syntax to render component data as text -->
 <button class="shadow-button">{{buttonText}} - count:{{count}}</button>
 ```
 
@@ -201,18 +201,18 @@ export const proto = {
 
 ### default
 
-You can also use asynchronous functions to define the 'default' data in order to dynamically return the registration parameters of the component.
+You can also use asynchronous functions to define the `default` data, in order to dynamically return the registration parameters of the component.
 
-The 'function' of the function will bring an object that contains
+Functions in JavaScript will introduce an object that includes
 
- 'load', 'url', and 'query':
+`load`, `url`, and `query`:
 
-- The 'load' method is an asynchronous loading function, which can be loaded asynchronously by using the same method as asynchronous 'import', and can load asynchronous modules using 'const data = await load(xxx)'.
-- Modules loaded through 'load' will have the same effect as those loaded by 'load-module'. The 'load' method is a functional version of the 'load-module' component, and specific usage can be found in the documentation of [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js).
-- 'url' is the filename of the current module.
-- 'query' is an object converted from URL parameters when loading this module.
+- The `load` method is an asynchronous loading function, used in the same way as asynchronous `import` loading. You can use `const data = await load(xxx)` to load asynchronous modules.
+- Modules loaded through `load` have the same effect as modules loaded through `load-module`. The `load` method is a function version of the `load-module` component. For specific usage, you can refer to the documentation of [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js).
+- `url` is the file name of the current module.
+- `query` is an object converted from the URL parameters when loading this module.
 
-Here is an example of using 'default':
+Below are examples of using `default`:
 
 ```javascript
 // button-component.mjs
@@ -221,11 +221,11 @@ export const tag = "my-button";
 export const temp = "./my-button-template.html";
 
 export default async function ({ load, url, query }) {
-  console.log("url:", url); // Outputs the filename of the current module
-  console.log("query:", query); // Outputs the object converted from the URL parameters of the current module
+  console.log("url:", url); // Output the file name of the current module
+  console.log("query:", query); // Output the object converted from the URL parameters of the current module
 
-  const asyncData = await load("./async-data.mjs"); // Loads the module asynchronously using 'load'
-  console.log("asyncData:", asyncData); // Outputs the asynchronously loaded module data
+  const asyncData = await load("./async-data.mjs"); // Use load to asynchronously load modules
+  console.log("asyncData:", asyncData); // Output the asynchronously loaded module data
 
   return {
     data: {
@@ -252,7 +252,7 @@ export default async function ({ load, url, query }) {
 }
 ```
 
-In this example, we demonstrate how to customize the behavior of a component using the registration parameters ofa.js. By configuring these parameters properly, you can better adapt to different component requirements and achieve more flexible component development.
+In this example, we demonstrate how to customize the behavior of components using the registration parameters of ofa.js. By configuring these parameters appropriately, you can better adapt to different component requirements and achieve more flexible component development.
 
-Write a documentation on how to use the registration parameters of the component proto.
+Write a documentation on the use of the proto registration parameters for components.
 

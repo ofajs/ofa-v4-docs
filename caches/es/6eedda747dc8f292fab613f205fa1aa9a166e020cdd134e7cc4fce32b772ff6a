@@ -1,1 +1,0 @@
-Las ranuras son el mecanismo utilizado en Web Components para incrustar contenido externo dentro de un componente. Las ranuras permiten a los desarrolladores pasar contenido personalizado dentro de los componentes, lo que posibilita una estructura de componentes más flexible.

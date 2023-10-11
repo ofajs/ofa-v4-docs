@@ -1,8 +1,0 @@
-```html
-<!-- Utilizando MyComponent -->
-<my-component>
-  <div slot="header">Contenido de Encabezado</div>
-  <p>Este es el contenido principal.</p>
-  <div slot="footer">Contenido de Pie de página</div>
-</my-component>
-```

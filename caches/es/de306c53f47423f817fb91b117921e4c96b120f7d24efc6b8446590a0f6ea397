@@ -1,1 +1,0 @@
-En el código JavaScript de la página actual, llama al método `load` y pasa la ruta del módulo de la siguiente página. Este módulo se cargará y cacheará.

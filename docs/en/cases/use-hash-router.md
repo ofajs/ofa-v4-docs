@@ -5,14 +5,14 @@
 <a href="../../publics/examples/use-hash-router/app-config.mjs"></a>
 </template>
 
-# Using hash router
+# Use hash router
 
-You can associate the routes within the app component with the current webpage by using the o-router component. Once the page is bound to the route, even if the page is refreshed, the route state will be maintained.
+Just use the o-router component to link the routing inside the app component to the current webpage. Once the page is bound to the router, the routing state of the page can be maintained even when the page is refreshed.
 
 In this example, please click the <span style='font-family: "iconfont"'>&#xe7cb;</span> button to open and try in a new page.
 
-```html
-<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/router/dist/router.min.mjs"></l-m>
+```
+<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.mjs"></l-m>
 <o-router fix-body>
   <o-app src="./app-config.mjs"></o-app>
 </o-router>

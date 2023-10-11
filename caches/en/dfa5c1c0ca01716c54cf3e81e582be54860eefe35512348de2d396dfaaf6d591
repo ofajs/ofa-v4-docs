@@ -1,1 +1,1 @@
-`detached` lifecycle hook is triggered when the component is removed from the document. In this stage, you can perform some cleanup operations, such as canceling event listeners or releasing resources, to prevent memory leaks.
+`detached` lifecycle hook is triggered when a component is removed from the document. During this stage, you can perform some cleanup operations, such as unregistering event listeners or releasing resources, to prevent memory leaks.

@@ -1,3 +1,0 @@
-- `selector`: Selecciona el elemento al que se desea vincular la función de manejo del evento.
-- `eventName`: Nombre del evento que se desea vincular.
-- `eventHandler`: Función de manejo del evento a ejecutar.

@@ -1,1 +1,1 @@
-`$("xxx").$('xxxx')` is a way to select a parent element first, then find the child element that matches the given condition within it. Here, `$("xxx")` selects a parent element, and `$('xxxx')` searches for the child element within that parent element.
+`$("xxx").$('xxxx')` is a way to select a parent element first and then find the child element that meets the condition inside it. In this example, `$("xxx")` selects a parent element, and then uses `$('xxxx')` to find the child element that meets the condition within that parent element.

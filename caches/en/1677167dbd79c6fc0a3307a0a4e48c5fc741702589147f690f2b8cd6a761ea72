@@ -1,1 +1,1 @@
-In the above example, when the two components are in the `attached` lifecycle, they write data to the component itself. Then, the `obj` of the component becomes the shared data. After the `detached` lifecycle, the previously shared data is set to `null` to ensure that the data is reclaimed.
+In the above example, two components write data to themselves during the `attached` lifecycle. Then, the `obj` in the component becomes the shared data. After the `detached` lifecycle, the previously shared data is set to `null` to ensure data recycling.

@@ -6,7 +6,7 @@
   </div>
 </div>
 <script>
-  // Select parent element and find child element
+  // Select the parent element and find the child element
   const parentElement = $(".parent");
   const childElement = parentElement.$(".child");
 

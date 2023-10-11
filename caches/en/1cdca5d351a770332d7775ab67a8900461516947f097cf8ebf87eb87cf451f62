@@ -1,1 +1,1 @@
-You can get the address of the currently active page module through the `app.current` property.
+You can retrieve the address of the currently active page module through the `app.current` property.

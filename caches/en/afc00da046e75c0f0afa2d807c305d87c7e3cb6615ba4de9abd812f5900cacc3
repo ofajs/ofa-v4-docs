@@ -1,1 +1,1 @@
-In the example above, the child element with the class `child` is directly found using `$('div .child')`, and then the text content of the child element is modified to "Modified child element".
+In the above example, you directly use `$('div .child')` to find the child elements with the `child` class and modify their text content to "Modified child element".

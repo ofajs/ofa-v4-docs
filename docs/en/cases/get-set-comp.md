@@ -3,12 +3,8 @@
 <a href="../../publics/examples/render-text/text-demo.html"></a>
 </template>
 
-# Get and modify component instance values
+# Get and Modify the Value of a Component Instance
 
-You can also get or modify the data of a component from the outside.
+From the outside, you can also access or modify the data of the components.
 
-<template is="exm-article">
-<a href="../../publics/examples/render-text/demo2.html" preview main></a>
-<a href="../../publics/examples/render-text/text-demo.html"></a>
-</template>
-
+The example demonstrates how to manipulate the data of a component externally.

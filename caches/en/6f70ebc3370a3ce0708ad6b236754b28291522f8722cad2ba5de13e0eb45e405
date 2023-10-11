@@ -20,7 +20,7 @@
 
     btn.on('click', (event) => {
       alert('Button Clicked!');
-      event.stopPropagation(); // Stop event bubbling
+      event.stopPropagation(); // 阻止事件冒泡
     });
 
     innerDiv.on('click', () => {

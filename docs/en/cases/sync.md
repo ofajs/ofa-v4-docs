@@ -4,17 +4,16 @@
 <a href="../../publics/examples/sync/custom-input.html"></a>
 </template>
 
-# Two-way data binding
+# Two-way Data Binding
 
-By using the `sync` syntax, you can establish a real-time, two-way relationship between interactive elements (such as input fields or custom components) in the user interface and the data model.
+By using the `sync` syntax, you can establish real-time bidirectional associations between user interface interactive elements (such as input boxes or custom components) and data models.
 
-The following example demonstrates how to use the `sync` attribute in a component to achieve two-way data binding between an input field and the data model:
+The following example demonstrates how to use the `sync` attribute in a component to achieve two-way data binding between an input box and a data model:
 
-- In the `data` parameter, we define a data called `testText` and set its initial value to "I am testText".
-- Using `sync:value="testText"` indicates that the value of the input field is bound to the `testText` data. Therefore, when the user enters content in the input field, the `testText` data will be updated in real-time, and vice versa.
-- Similarly, using `sync:txt="testText"` indicates that the `txt` attribute of the custom component is bound to the `testText` data. When the `txt` attribute of the component changes, the `testText` data will be updated in real-time, and vice versa.
+- In the `data` parameter, we defined a data called `testText` and set its initial value to "I am testText".
+- Using `sync:value="testText"` represents a two-way data binding between the value of the input box and the `testText` data. Therefore, when the user enters content in the input box, the `testText` data will be updated in real time, and vice versa.
+- Similarly, using `sync:txt="testText"` represents a two-way data binding between the `txt` property of the custom component and the `testText` data. When the `txt` property of the component changes, the `testText` data will be updated in real time, and vice versa.
 
-Through two-way data binding, you can easily establish a connection between the user interface and the data model, so that changes in the data can be automatically reflected in the interface, and user input on the interface can immediately affect the data model.
+Through two-way data binding, you can easily establish a connection between the user interface and the data model, so that changes in data can be automatically reflected in the interface, and user input on the interface can immediately affect the data model.
 
-This example shows how to create a component called 'simple-btn'. The component's template contains a slot where content can be inserted. Add styles to the component by using the ':host' selector. In another page, use the 'l-m' component to reference the 'simple-btn' component and insert content into it.
-
+It is worth noting that data synchronization can only transmit **strings** or **numbers**, and cannot transmit other data types.

@@ -1,7 +1,7 @@
 ```html
 <button id="btn">Click Me Once</button>
 <script>
-  // Bind the click event handler, but only execute it once
+  // Bind the click event handling function, but it will only be executed once
   $("#btn").one("click", () => {
     alert("Button clicked once!");
   });

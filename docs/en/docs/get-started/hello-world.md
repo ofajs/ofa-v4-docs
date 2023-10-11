@@ -1,6 +1,6 @@
 # First Case
 
-The following is an example where the text is changed to "Hello World" after clicking the button:
+Here is an example, when the button is clicked, change the text to "Hello World":
 
 ```html
 <!DOCTYPE html>
@@ -24,15 +24,15 @@ The following is an example where the text is changed to "Hello World" after cli
 </html>
 ```
 
-After clicking the button, the text "Hello World" will be displayed in bold.
+When you click the button, the bold "Hello World" text will be displayed.
 
 Now, let's explain the basic concepts in detail.
 
-## Selector
+## Selectors
 
-After importing `ofa.js`, the `$` symbol will be registered in the global scope. Use `$('xxx')` to select the **first** element that meets the conditions, where `xxx` is a standard [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) content. You can click the link to view specific selector contents.
+After importing `ofa.js`, the `$` symbol will be registered in the global scope. Use `$('xxx')` to select the **first** element that matches the specified condition, where `xxx` is a standard [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors). You can click on the link to view the specific selector syntax.
 
-Here is an example:
+Following is an example: 
 
 ```html
 <p>I am P tag</p>
@@ -47,21 +47,21 @@ Here is an example:
 </script>
 ```
 
-In the above example, after opening the page for one second, the text content of **p tags**, **#desk**, and **.logger** will be changed respectively.
+In the example above, after one second of opening the page, the text content of the **p tag**, **#desk**, and **.logger** will be changed respectively.
 
 ## Event Binding
 
-After successfully selecting an element, you can bind events to the element. Just like in the "Hello World" example mentioned before, we bound a click event to the element with id "btn". When the button is clicked, the bound function will be executed.
+Once you have successfully selected an element, you can bind events to it. As mentioned in the previous "Hello World" example, we bind a click event to the element with the ID "btn". When the button is clicked, the bound function will be executed.
 
-You can click to go to the [Event Examples](./example-event.md) section to learn about some examples of event binding.
+You can click to jump and view [example events](./example-event.md) section to learn some examples of event binding.
 
-For a complete list of available events, you can refer to [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events).
+Refer to [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list of all available events.
 
-## Properties
+## Attributes
 
-In the above two examples, we demonstrated the use of the `html` and `text` properties respectively.
+In the above two examples, we have demonstrated the use of the `html` and `text` attributes.
 
-You can also use the `html` or `text` properties to retrieve the content of an element, as shown below:
+You can also get the content of an element through the `html` or `text` attributes, as shown below:
 
 ```html
 <div id="t1">
@@ -77,5 +77,4 @@ You can also use the `html` or `text` properties to retrieve the content of an e
 </script>
 ```
 
-In this example, we assigned the HTML content of the #t1 element to the #t2 and #t3 elements.
-
+In this example, we assign the HTML content within the #t1 element to the #t2 and #t3 elements.

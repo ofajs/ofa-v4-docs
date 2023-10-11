@@ -6,7 +6,7 @@ export default () => {
       const appTag = this.app;
 
       const currentPage = appTag.current;
-      console.log(`The currently active page is: ${currentPage}`);
+      console.log(`The current activated page is: ${currentPage}`);
     }
   };
 }

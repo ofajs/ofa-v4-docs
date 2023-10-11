@@ -1,1 +1,0 @@
-En el mismo directorio que el módulo de página, crea un archivo de plantilla de página llamado `my-page-template.html`. En este archivo de plantilla, puedes usar la sintaxis de plantilla para realizar interacciones, similar a la sintaxis de plantilla mencionada anteriormente para los componentes.

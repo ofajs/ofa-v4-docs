@@ -1,8 +1,8 @@
-# Event examples
+# Event Example
 
-## Click event (click)
+## Click Event
 
-In this example, when the button is clicked, a message will be output to the console.
+In this case, when the button is clicked, a message will be output to the console.
 
 ```html
 <!DOCTYPE html>
@@ -24,11 +24,10 @@ In this example, when the button is clicked, a message will be output to the con
 </html>
 ```
 
-## Mouseenter event
+Mouseenter event
 
-In this example, when the mouse enters the text area, the text color will change to red.
+In this case, when the mouse enters the text area, the text color will change to red.
 
-```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,11 +55,10 @@ In this example, when the mouse enters the text area, the text color will change
     </script>
   </body>
 </html>
-```
 
-## Keyboard Key Event (keydown)
+## Keyboard Key Events (keydown)
 
-In this example, when any key is pressed in the input box, the information of the pressed key will be output to the console.
+In this case, when any key is pressed in the input box, the information of the pressed key will be output to the console.
 
 ```html
 <!DOCTYPE html>
@@ -83,7 +81,7 @@ In this example, when any key is pressed in the input box, the information of th
 </html>
 ```
 
-These examples demonstrate the usage of click events, mouseover events, and keyboard key events respectively. You can try copying these code snippets into an HTML file and run it in a browser to see the effects.
+These examples demonstrate the usage of click events, mouse hover events, and keyboard key events. You can try copying these codes into an HTML file and running it in a browser to see the result.
 
-For a complete list of available events, you can refer to [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events).
+Refer to [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list of all available events.
 

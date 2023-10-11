@@ -1,1 +1,0 @@
-Si es necesario atravesar los límites del Shadow DOM del componente para desencadenar un evento, se puede agregar el atributo `composed`.

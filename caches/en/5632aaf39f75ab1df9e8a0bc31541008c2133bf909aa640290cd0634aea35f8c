@@ -1,1 +1,1 @@
-In the component template, the `<slot>` element can be used to define a slot. The content provided from outside will be inserted into the slot.
+In component templates, `<slot>` element can be used to define slots. Contents passed from the outside will be inserted into the slots.

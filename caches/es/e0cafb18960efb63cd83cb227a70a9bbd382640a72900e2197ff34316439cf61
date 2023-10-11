@@ -1,1 +1,0 @@
-Estos identificadores especiales te ayudan a acceder y renderizar diferentes datos dinámicamente dentro de la plantilla de llenado. En el ejemplo, puedes ver cómo se utiliza `{{ $data.title }}` para acceder al título de los datos pasados y cómo se utiliza `{{ $host.num }}` para acceder a los atributos del componente principal.

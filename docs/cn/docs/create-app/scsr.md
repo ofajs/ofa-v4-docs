@@ -9,7 +9,7 @@ SCSR 全名 Static Client-Side Rendering，称为静态客户端渲染；静态�
 你可以通过以下方式引用 SCSR 库：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.20/libs/scsr/dist/scsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/scsr/dist/scsr.min.js"></script>
 ```
 
 ## SCSR 的工作原理

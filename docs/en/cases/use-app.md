@@ -8,18 +8,17 @@
 
 In `ofa.js`, you can use the `o-app` component to create the layout structure of the entire application and load different page modules within it. By using the `o-app` component, `o-page` component, and page modules, you can build the page structure of the entire application and implement navigation between pages.
 
-When the `o-page` component is inside the `o-app` component, you can use the `<a>` tag with the `olink` attribute to achieve page redirection. This redirection will not affect the current page, but will only navigate within the `o-app` component, similar to using `<iframe>`.
+When the `o-page` component is inside `o-app`, you can use the `<a>` tag with the `olink` attribute to achieve page navigation. This navigation will not affect the current page, but will only navigate within `o-app`, similar to using an `<iframe>`.
 
-If the `o-page` component is inside the `o-app` component, you can also use the following methods:
+If the `o-page` component is within `o-app`, you can also use the following method:
+- Use the `goto` method to navigate to another page.
+- Use the `back` method to return to the previous page.
+- Use the `replace` method for replacing the current page during navigation.
 
-- Use the `goto` method to perform page navigation
-- Use the `back` method to go back to the previous page
-- Use the `replace` method to replace the current page with a new one
+By using the `o-app` component, you can build the layout structure of the entire application and load different page modules in it. At the same time, the routing function provided by `o-app` makes it more convenient and flexible to navigate between pages.
 
-By using the `o-app` component, you can build the layout structure of the entire application and load different page modules into it. The routing feature provided by `o-app` makes navigation between pages more convenient and flexible.
+In this example, we create an application layout using the `o-app` component and then load a page module `page1.html` within it.
 
-In this example, we created an application layout using the `o-app` component and loaded a page module `page1.html` into it.
+In the `page1.html` page module, we defined a title and a button. Clicking the button will navigate to another page module `page2.html`. We also added a link with the `olink` attribute, and clicking the link will also navigate to `page2.html`.
 
-In the `page1.html` page module, we defined a title and a button. Clicking the button will navigate to another page module `page2.html`. We also added a link with the `olink` attribute, which will also navigate to `page2.html` when clicked.
-
-In the `page2.html` page module, we also defined a title and a button. Clicking the button will return to the previous page, implementing page navigation.
+In the `page2.html` module, we also defined a title and a button, clicking the button will go back to the previous page, implementing page navigation.

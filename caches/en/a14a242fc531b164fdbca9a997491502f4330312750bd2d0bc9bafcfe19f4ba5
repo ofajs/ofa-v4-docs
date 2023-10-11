@@ -1,1 +1,1 @@
-`x-if` can be used in conjunction with `x-else` to achieve conditional switching of rendering.
+`x-if` can be used in conjunction with `x-else` to achieve conditional rendering switch.

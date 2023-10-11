@@ -1,3 +1,0 @@
-- `selector`: Selector para el elemento donde se eliminará el controlador de eventos. 
-- `eventName`: Nombre del evento que se eliminará. 
-- `eventHandler`: Controlador de eventos que se eliminará.

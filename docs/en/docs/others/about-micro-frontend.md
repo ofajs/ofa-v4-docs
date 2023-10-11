@@ -1,27 +1,26 @@
 # About Micro Frontends
 
-Micro Frontends is a front-end architecture pattern designed to help teams better build and maintain large, complex front-end applications. It draws on the ideas of microservices architecture, dividing front-end applications into smaller independent parts, each of which can be developed, tested, and deployed by different teams.
+Micro frontend is a frontend architectural pattern aimed at helping teams build and maintain large, complex frontend applications more effectively. It draws inspiration from the microservices architecture by breaking down the frontend application into smaller, independent parts that can be developed, tested, and deployed by different teams.
 
-In the process of expanding traditional monolithic front-end applications, it may become difficult to maintain and expand. The goal of micro frontends is to split the application into smaller and more manageable modules, enabling development teams to independently develop and deploy these modules, thereby improving team efficiency and application maintainability.
+During the process of continuously expanding traditional monolithic front-end applications, they may become difficult to maintain and scale. The goal of micro frontends is to split the application into smaller and more manageable modules, enabling development teams to independently develop and deploy these modules, thereby improving team efficiency and application maintainability.
 
-**ofa.js** naturally possesses the characteristics of micro frontends. What sets it apart from other frameworks is that components, pages, and applications developed based on **ofa.js** do not require pre-compilation. In comparison to frameworks like React, Vue, and Angular, which need to be built in a Node.js environment to generate client-side code, **ofa.js** development code can be directly placed on a static server, without the need for additional build steps, allowing real-time viewing, usage, and execution.
+**ofa.js** has inherent micro front-end features. The key difference between it and other frameworks is that components, pages, and applications developed with **ofa.js** do not require pre-compilation. In comparison to frameworks like React, Vue, and Angular, which require a build step in a Node.js environment to generate client-side code, **ofa.js** allows development code to be directly hosted on a static server without additional build steps. This enables real-time viewing, usage, and execution.
 
-**ofa.js** adheres to the five core characteristics of micro frontends:
+**ofa.js** conforms to the five core features of microfronts:
 
-1. **Independent Deployment**: Each component and page can be independently developed, tested, and deployed, enabling teams to release new features and address issues more rapidly.
+1. Independent Deployment: Each component and page can be developed, tested, and deployed independently, enabling teams to release new features and resolve issues more quickly.
 
-2. **Integration**: Applications developed based on **ofa.js** can combine different modules. This can be achieved through sharing combinations of applications, pages, and components, among other methods.
+2. Integration: Applications developed based on ofa.js can combine different modules together. This can be achieved through sharing compositions via applications, pages, components, etc.
 
-3. **Independent Teams**: Each front-end module (component/page/application) can be developed and maintained by independent teams, thereby encouraging team autonomy and innovation.
+3. Independent Teams: Each frontend module (component/page/application) can be developed and maintained by an independent team, encouraging autonomy and innovation within teams.
 
-4. **Shared Resources**: In **ofa.js** projects, there are usually shared resources such as styles, components, and pages, to ensure consistency and efficiency.
+4. Shared Resources: In the ofa.js project, there are usually shared resources such as styles, components, and pages to ensure consistency and efficiency.
 
-5. **On-demand Loading**: **ofa.js** applications can load modules as needed, thereby improving application performance and loading speed.
+5. On-demand Loading: Applications in ofa.js can load modules as needed, enhancing application performance and loading speed.
 
-Although **ofa.js** cannot directly use components developed with frameworks like Vue and React, components developed based on **ofa.js** can be used by Vue and React, providing greater flexibility and extensibility for developers using different technology stacks.
+Although **ofa.js** cannot directly develop components using frameworks such as Vue and React, components developed based on **ofa.js** can be used by Vue and React. This provides developers with different technology stacks with greater flexibility and extensibility.
 
 **Using Web Components in Vue:**
-
 - [Vue Web Component Wrapper](https://github.com/vuejs/vue-web-component-wrapper)
 - [Integrating Vue with Web Components](https://vuejs.org/v2/cookbook/packaging-sfc-for-npm.html#Using-with-vue-custom-element)
 - [How to Use Web Components in Vue](https://www.robinwieruch.de/vue-web-components)

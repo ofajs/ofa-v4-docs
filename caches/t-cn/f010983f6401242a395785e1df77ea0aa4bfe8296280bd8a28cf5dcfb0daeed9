@@ -1,0 +1,15 @@
+```html
+<template component>
+  <div :text="txt1"></div>
+  <div :html="txt2"></div>
+  <script>
+    export default {
+      tag: "prop-demo",
+      data: {
+        txt1:"<b>我是txt1</b>",
+        txt2:"<b>我是txt2</b>",
+      },
+    };
+  </script>
+</template>
+```

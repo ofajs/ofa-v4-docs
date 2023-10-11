@@ -1,1 +1,1 @@
-Another way is to use the `page._rendered` property, which is a Promise. This Promise enters the `resolve` state after the page is loaded. You can use `await page._rendered` to wait for the page to finish loading and then perform the corresponding operations.
+Another way is to use the `page._rendered` property, which is a Promise. When the page is loaded, this Promise will enter the `resolve` state. You can use `await page._rendered` to wait for the page to load, and then perform corresponding operations.

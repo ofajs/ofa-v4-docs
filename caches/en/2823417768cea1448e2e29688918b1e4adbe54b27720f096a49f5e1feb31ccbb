@@ -1,1 +1,0 @@
-The `index` property is used to get the ranking index of the current element among sibling elements, starting from 0.

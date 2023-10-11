@@ -1,1 +1,0 @@
-En ofa.js, el ciclo de vida del componente se activa en momentos específicos mediante funciones gancho. Estas funciones gancho te permiten controlar e interactuar de forma más precisa. ofa.js tiene cinco ganchos de ciclo de vida clave: `created`, `ready`, `watch`, `loaded`, `attached` y `detached`, que se activan en diferentes momentos.

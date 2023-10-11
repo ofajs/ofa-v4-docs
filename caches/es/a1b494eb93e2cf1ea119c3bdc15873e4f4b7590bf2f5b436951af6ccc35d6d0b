@@ -1,1 +1,0 @@
-El método `emit` se utiliza para activar manualmente eventos específicos vinculados a un elemento. A través del método `emit`, se puede ejecutar la función de manejo del evento sin realizar ninguna acción real.

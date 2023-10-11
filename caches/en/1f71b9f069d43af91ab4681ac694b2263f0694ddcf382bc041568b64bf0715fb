@@ -12,20 +12,20 @@
     <p>First Paragraph</p>
   </div>
   <script>
-    const $paragraphs = $('p');
-    
-    // Add a new div element as a child
-    const $newDiv = $('<div>New Div</div>');
-    $paragraphs.push($newDiv);
+    const $paragraphs = $('p');
 
-    setTimeout(()=>{
-      // Remove the last child
-      $paragraphs.pop();
+    // Add a new div element as a child element
+    const $newDiv = $('<div>New Div</div>');
+    $paragraphs.push($newDiv);
 
-      console.log($paragraphs);
-    },1000)
+    setTimeout(()=>{
+      // Remove the last child element
+      $paragraphs.pop();
 
-  </script>
+      console.log($paragraphs);
+    },1000)
+
+  </script>
 </body>
 </html>
 ```

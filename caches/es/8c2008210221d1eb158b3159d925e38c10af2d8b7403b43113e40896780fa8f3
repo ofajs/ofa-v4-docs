@@ -1,1 +1,0 @@
-Además de buscar elementos a nivel global, también se puede buscar todos los elementos que cumplan la condición dentro de un elemento específico, utilizando la siguiente sintaxis: `$('xxx').all('xxxx')`.

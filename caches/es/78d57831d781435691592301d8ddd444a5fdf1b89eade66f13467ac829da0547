@@ -1,3 +1,0 @@
-```html
-<button on:click="goto('./pages/about.mjs')">Ir a la página Acerca de</button>
-```

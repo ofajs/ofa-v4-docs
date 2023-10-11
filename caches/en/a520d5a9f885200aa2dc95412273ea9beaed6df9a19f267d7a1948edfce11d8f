@@ -1,1 +1,1 @@
-Here is an example of customizing loading for the `o-app` component. In this example, we create a beautiful progress bar for loading, which gradually grows during page loading, reaches 100% directly after loading is complete, and then removes the loading element.
+The following is an example of customizing the loading of the `o-app` component. In this example, we have created a beautiful progress bar for loading, which will gradually grow during the page loading process and reach 100% directly after loading is complete, then delete the loading element.

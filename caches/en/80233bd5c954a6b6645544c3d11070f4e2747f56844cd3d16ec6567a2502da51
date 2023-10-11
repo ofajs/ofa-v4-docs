@@ -1,2 +1,4 @@
-## Usage of slotchange event
+## Usage of the "slotchange" event
+
+The "slotchange" event is used to detect changes in the assigned nodes within a web component.
 

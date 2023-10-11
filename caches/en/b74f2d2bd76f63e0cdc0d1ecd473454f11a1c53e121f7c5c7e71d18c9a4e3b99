@@ -1,1 +1,1 @@
-You can associate the routes within the app component with the current webpage by using the o-router component. Once the page is bound to the route, even if the page is refreshed, the route state will be maintained.
+Just use the o-router component to link the routing inside the app component to the current webpage. Once the page is bound to the router, the routing state of the page can be maintained even when the page is refreshed.

@@ -1,1 +1,1 @@
-You can also use the `html` or `text` properties to retrieve the content of an element, as shown below:
+You can also get the content of an element through the `html` or `text` attributes, as shown below:

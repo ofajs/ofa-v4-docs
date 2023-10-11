@@ -3,7 +3,7 @@
 <script>
   const myElement = $("#myElement");
 
-  // Set the styles of the element
+  // Set the style of the element
   myElement.css = {
     color: "red",
     fontSize: "24px",

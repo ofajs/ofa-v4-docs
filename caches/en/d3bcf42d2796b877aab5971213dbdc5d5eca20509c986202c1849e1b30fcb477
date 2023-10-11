@@ -1,1 +1,0 @@
-Then, write the template code for the component inside the `<template>` tag. Next, add a `<script>` tag below the template content to include the component's JavaScript code.

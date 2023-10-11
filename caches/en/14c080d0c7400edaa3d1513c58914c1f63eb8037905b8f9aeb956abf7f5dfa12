@@ -1,1 +1,1 @@
-Here is an example of a parent page module that demonstrates how to set up a `routerChange` function to listen to route changes:
+Below is an example of a parent page module, demonstrating how to set up the `routerChange` function to listen for route changes:

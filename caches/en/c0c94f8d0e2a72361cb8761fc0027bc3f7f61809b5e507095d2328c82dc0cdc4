@@ -1,1 +1,1 @@
-In the above example, after opening the page for one second, the text content of **p tags**, **#desk**, and **.logger** will be changed respectively.
+In the example above, after one second of opening the page, the text content of the **p tag**, **#desk**, and **.logger** will be changed respectively.

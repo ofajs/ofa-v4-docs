@@ -1,1 +1,1 @@
-In the above example, when the button is clicked, a dialog box with the message "Button clicked once!" will appear. However, after the first click, the event handler will be removed, so subsequent clicks will not trigger the dialog box.
+In the above example, when the button is clicked, a dialog box will appear displaying "Button clicked once!". However, after the first click, the event handler will be removed, so subsequent button clicks will not trigger the dialog box.

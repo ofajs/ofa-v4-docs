@@ -1,1 +1,0 @@
-A través de `sync:xxx='yyy'`, puedes conseguir el doble enlace de datos. Esto hace que la propiedad `xxx` del elemento objetivo y la propiedad `yyy` del componente anfitrión se mantengan sincronizadas, es decir, los cambios en la propiedad objetivo se reflejarán en la propiedad anfitrión, y los cambios en la propiedad anfitrión también se sincronizarán con la propiedad objetivo.

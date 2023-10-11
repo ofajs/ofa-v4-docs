@@ -1,1 +1,0 @@
-En el ejemplo anterior, si el atributo `isActive` es `true`, el botón agregará el nombre de clase `active`, aplicando un estilo específico.

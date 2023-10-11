@@ -1,1 +1,1 @@
-By adding `<slot></slot>` tags in the template, you can place content in the slots inside the corresponding component tags when using the component.
+By adding the `<slot></slot>` tag in the template, you can place the content inside the corresponding component label's slot when using the component.

@@ -1,1 +1,1 @@
-In `<comp-two></comp-two>`, the nested component is used without passing any properties. The usage here depends on the logic and design of the nested component itself.
+In `<comp-two></comp-two>`, we used nested components without passing any properties. The usage here depends on the logic and design of the nested component itself.

@@ -1,1 +1,1 @@
-Dual file mode separates the `static template` and `logical code`, making the component clearer.
+Dual-file mode separates `static templates` and `logic code`, making components more clear.

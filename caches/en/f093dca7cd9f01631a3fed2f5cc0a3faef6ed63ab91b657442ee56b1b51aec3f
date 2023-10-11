@@ -1,1 +1,1 @@
-In ofa.js, setting subroutes is slightly different from the practices of some frontend frameworks. ofa.js uses a more intuitive approach by setting the parent page as the container on the page module, to achieve the demand for subroutes.
+In ofa.js, setting up sub-routes is slightly different from other front-end frameworks. ofa.js uses a more intuitive approach by setting the parent page as a container on the page module to achieve the needs of sub-routes.

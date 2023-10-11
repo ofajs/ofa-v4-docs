@@ -1,1 +1,1 @@
-After successfully selecting an element, you can bind events to the element. Just like in the "Hello World" example mentioned before, we bound a click event to the element with id "btn". When the button is clicked, the bound function will be executed.
+Once you have successfully selected an element, you can bind events to it. As mentioned in the previous "Hello World" example, we bind a click event to the element with the ID "btn". When the button is clicked, the bound function will be executed.

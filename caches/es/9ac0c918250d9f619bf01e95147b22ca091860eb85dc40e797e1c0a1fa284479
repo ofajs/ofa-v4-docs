@@ -1,1 +1,0 @@
-En este ejemplo, seleccionamos el elemento 'button' usando '$' y vinculamos el evento 'click' usando el método 'on'. Cuando se hace clic en el botón, se activará una función de devolución de llamada para cambiar el contenido de texto del elemento 'target' a '¡Hola, mundo!'. 

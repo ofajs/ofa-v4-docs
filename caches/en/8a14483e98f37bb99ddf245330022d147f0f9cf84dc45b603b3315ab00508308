@@ -5,11 +5,11 @@ export const tag = "my-button";
 export const temp = "./my-button-template.html";
 
 export default async function ({ load, url, query }) {
-  console.log("url:", url); // Outputs the filename of the current module
-  console.log("query:", query); // Outputs the object converted from the URL parameters of the current module
+  console.log("url:", url); // Output the file name of the current module
+  console.log("query:", query); // Output the object converted from the URL parameters of the current module
 
-  const asyncData = await load("./async-data.mjs"); // Loads the module asynchronously using 'load'
-  console.log("asyncData:", asyncData); // Outputs the asynchronously loaded module data
+  const asyncData = await load("./async-data.mjs"); // Use load to asynchronously load modules
+  console.log("asyncData:", asyncData); // Output the asynchronously loaded module data
 
   return {
     data: {

@@ -1,1 +1,0 @@
-Usando el formato `on:click="yyy"`, puedes enlazar un evento especificado del elemento objetivo (por ejemplo, `click`) a una propiedad `yyy` del componente anfitrión. De esta manera, cuando se acciona el evento especificado en el elemento objetivo, se llama al método de propiedad respectivo en el componente anfitrión.

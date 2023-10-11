@@ -1,0 +1,1 @@
+`on:click="xxx"` can be followed by either a method name defined within the component or a function expression. If using a function expression, there is no need to explicitly write the `this` keyword, as the variable scope will automatically be bound to the component itself.

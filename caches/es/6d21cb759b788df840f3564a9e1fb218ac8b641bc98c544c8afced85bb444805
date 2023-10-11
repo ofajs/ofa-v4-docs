@@ -1,1 +1,0 @@
-Puedes utilizar la etiqueta `<a>` en el HTML de la página para realizar la navegación por rutas. Debes especificar la ruta del módulo de página de destino en el atributo `href` y agregar el atributo `olink` para indicar al componente `o-app` que se trata de un enlace de ruta.

@@ -1,1 +1,0 @@
-A través de la sincronización bidireccional de datos, puede establecer fácilmente una conexión entre la interfaz de usuario y el modelo de datos, lo que permite que los cambios en los datos se reflejen automáticamente en la interfaz y que las entradas del usuario en la interfaz afecten de inmediato al modelo de datos.

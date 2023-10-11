@@ -6,9 +6,8 @@
 
 # Custom Form Components
 
-With `ofa.js`, you can easily develop custom form element components with standard form features. Just add a `value` attribute and set the `name` attribute for your custom component, and your homemade component can be used as a standard form element. By updating the `value` property of the component, you can interact with the form element.
+Using `ofa.js`, you can easily develop custom form element components with standard form features. Just add the `value` property and set the `name` attribute to your custom component, and your homemade component can be used as a standard form element. By updating the `value` property of the component, you can interact with the form element.
 
-When initializing `formData`, you need to add the selector feature of the custom component to the parameters (although the default parameter of the `formData` method is '"input,select,textarea"'). This way, `formData` can interact with custom components.
+When initializing `formData`, the selector features of custom components need to be added to the parameters (even though the default parameters for the `formData` method are `"input,select,textarea"`). This allows `formData` to be linked with custom components.
 
-In this example, we use a custom component `custom-input` to create an editable text input. The component is used as a form element and data interaction is done using the `value` attribute. When using the `formData` method, we add `"input,custom-input"` as a parameter to correctly initialize form data.
-
+In this example, we implement an editable text input box using the custom component `custom-input`. This component is used as a form element and interacts with data using the `value` attribute. When using the `formData` method, we add `"input, custom-input"` as parameters to correctly initialize the form data.

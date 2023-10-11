@@ -3,11 +3,10 @@
 <a href="../../publics/examples/simple-btn/simple-btn.html" main></a>
 </template>
 
-# Component Slots
+# Component Slot
 
-By adding `<slot></slot>` tags in the template, you can place content in the slots inside the corresponding component tags when using the component.
+By adding the `<slot></slot>` tag in the template, you can place the content inside the corresponding component label's slot when using the component.
 
-Custom components do not have the `display` property defined by default, so it needs to be manually defined for the component. In the component's style, the `:host` selector can be used to add styles to the component itself.
+Custom components do not have a defined 'display' property by default, so it needs to be defined manually. In the component's style, the ':host' selector can be used to add styles specific to the component itself.
 
-This example showcases the usage of the 'use-app' component. It contains multiple links that lead to different pages.
-
+This example demonstrates how to create a component called `simple-btn`. The template of the component includes a slot where content can be inserted into the component. The component is styled by adding the `:host` selector to its styles. In another page, the `simple-btn` component is referenced using the `l-m` component and content is inserted into it.

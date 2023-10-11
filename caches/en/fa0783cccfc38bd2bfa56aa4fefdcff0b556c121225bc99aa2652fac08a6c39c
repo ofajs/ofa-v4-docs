@@ -1,7 +1,7 @@
 ```html
 <template page>
   <div class="container">
-    <button on:click="toabout">Go to About Page</button>
+    <button on:click="toabout">Jump to About page</button>
   </div>
 
   <script>

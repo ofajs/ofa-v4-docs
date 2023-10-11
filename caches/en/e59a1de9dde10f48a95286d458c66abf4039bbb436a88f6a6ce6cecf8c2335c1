@@ -1,1 +1,1 @@
-- The `replace` method is used to replace navigation. It replaces the current page's route with the route of the new page.
+- The `replace` method is used to replace navigation, it replaces the current page's route with the route of the new page.

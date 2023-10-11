@@ -1,11 +1,11 @@
 ```javascript
 if (page._loaded) {
-  // Page has finished loading
-  // Perform your operations
+  // The page has been loaded
+  // Perform your actions
 } else {
-  // Listen to the page-loaded event
+  // Listen for the 'page-loaded' event
   page.addEventListener('page-loaded', () => {
-    // Operations to be performed after the page is loaded
+    // Actions to be performed after the page is loaded
   });
 }
 ```

@@ -1,10 +1,10 @@
 # Form Functionality
 
-The `$` object provides some convenient form functionality, making it easier and more efficient to handle form elements.
+`$` provides convenient form functions that make handling form elements easier and more efficient.
 
-## Generating an Object using formData
+## Create an object using formData
 
-The `formData` method is used to generate an object containing the values of all form elements within the target element. This object reflects the changes in form elements in real-time.
+`formData` method is used to generate an object containing the values of all form elements within the target element. This object will reflect the changes made to the form elements in real time.
 
 ```html
 <!DOCTYPE html>
@@ -35,9 +35,9 @@ The `formData` method is used to generate an object containing the values of all
 </html>
 ```
 
-## Listening to Specific Form Elements
+## Listening for specific form elements
 
-By default, `formData()` listens to all `input`, `select`, and `textarea` elements within the target element. You can listen to specific form elements by passing a selector.
+By default, `formData()` listens to all `input`, `select`, and `textarea` elements within the target element. You can specify specific form elements to listen to by passing a selector.
 
 ```html
 <!DOCTYPE html>
@@ -63,11 +63,11 @@ By default, `formData()` listens to all `input`, `select`, and `textarea` elemen
 </html>
 ```
 
-## Stanz Object
+## Stanz Objects
 
-The object returned by the `formData()` method is called the Stanz object. Stanz is part of the `$` extension library and provides efficient handling and listening functionality for form data.
+The object returned by the `formData()` method is called a Stanz object. Stanz is part of the `$` extension library, which provides efficient handling and monitoring functionality for form data.
 
-You can learn more about Stanz and its usage tutorials and features by visiting [https://github.com/kirakiray/stanz](https://github.com/kirakiray/stanz).
+You can find detailed tutorials and features of Stanz by visiting [https://github.com/kirakiray/stanz](https://github.com/kirakiray/stanz).
 
-By using the form function above, you can easily handle the values and changes of form elements, thereby improving the convenience and efficiency of form operations.
+Through the above form functionality, you can easily handle the values and changes of form elements, thereby improving the convenience and efficiency of form operations.
 

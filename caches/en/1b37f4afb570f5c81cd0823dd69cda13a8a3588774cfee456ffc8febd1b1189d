@@ -1,1 +1,1 @@
-By using this approach, you can more intuitively configure child routes by establishing the relationship between the parent page container and the sub-page for loading and rendering the sub-page.
+By using this approach, you can configure sub-routes more intuitively. By setting the association between the parent page container and the child pages, you can achieve the loading and rendering of the child pages.

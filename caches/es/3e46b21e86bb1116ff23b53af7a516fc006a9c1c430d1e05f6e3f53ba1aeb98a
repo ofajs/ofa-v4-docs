@@ -1,1 +1,0 @@
-El módulo del componente debe tener `export const type = $.COMP` para identificarlo como un módulo de componente.

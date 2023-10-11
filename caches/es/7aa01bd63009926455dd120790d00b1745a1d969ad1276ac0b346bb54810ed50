@@ -1,1 +1,0 @@
-Otra forma de verificar si la página ha cargado completamente es usando la propiedad `page._rendered`, que es una promesa. Una vez que la página ha cargado, esta promesa entrará en el estado `resolve`. Puedes esperar a que la página cargue completamente usando `await page._rendered` y luego realizar las operaciones correspondientes.

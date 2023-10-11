@@ -3,10 +3,10 @@
 <a href="../../publics/examples/property-transmission/test-demo.html" main></a>
 </template>
 
-# Property Transmission
+# Property Binding
 
-With the **property transmission** template syntax, you can apply the component's data to element attributes within the template.
+By using **props binding** in template syntax, you can apply component data to element attributes within the template.
 
-The method is to add the attribute `:name="key"` to the element, where `name` is the name of the target element attribute to be set, and `key` is the property key you want to pass from your custom component.
+The usage is to add the attribute `:name="key"` to the element, where `name` is the attribute name to be set for the target element, and `key` is the property key that you want to pass in your custom component.
 
-Previously, we mentioned using selectors to set attributes in <a href='./index.html' olink>a link</a>, while what is being introduced here is the attribute-passing syntax for setting attributes.
+Previously, it was mentioned to use selector syntax to set properties, and here we introduce the syntax of attribute passing to set properties;

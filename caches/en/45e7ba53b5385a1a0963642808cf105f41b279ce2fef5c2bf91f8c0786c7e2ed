@@ -1,1 +1,1 @@
-In the same directory as the page module, create a page template file named `my-page-template.html`. In this template file, you can use template syntax for interaction, similar to the component template syntax mentioned earlier.
+In the same directory as the page module, create a page template file named `my-page-template.html`. In this template file, you can use template syntax for interaction, which is similar to the component template syntax mentioned earlier.

@@ -17,10 +17,8 @@
   </div>
   <script>
     export const tag = "comp-one";
-
     export default async function ({ load }) {
       const { data } = await load("./data.mjs");
-
       return {
         data: {
           obj: {},

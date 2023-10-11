@@ -1,1 +1,1 @@
-Using the form `attr:xxx="yyy"`, you can bind the specified attribute `xxx` of the target element to the property `yyy` of the host component. This way, the attribute of the target element will change as the property of the host component changes.
+By using the `attr:xxx="yyy"` format, you can bind the specified attribute `xxx` of the target element to the property `yyy` of the host component. This way, the attribute of the target element will change along with the property of the host component.

@@ -6,7 +6,7 @@
   </div>
 </div>
 <script>
-  // Directly find the child element that meets the conditions
+  // Find the child element that meets the criteria directly
   const childElement = $('div .child');
 
   // Modify the text content of the child element

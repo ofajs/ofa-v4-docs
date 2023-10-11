@@ -1,1 +1,0 @@
-Después de agregar los recursos, ofa.js establecerá una propiedad `$` en el ámbito global, todas las funciones estarán disponibles en `$`, y el siguiente tutorial explicará su uso en detalle;

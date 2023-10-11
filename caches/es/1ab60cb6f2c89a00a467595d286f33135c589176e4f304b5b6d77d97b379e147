@@ -1,1 +1,0 @@
-Después de haber importado con éxito ofa.js, se registrará automáticamente el componente 'load-module', que es un componente utilizado para referenciar módulos de forma declarativa, similar a la etiqueta script. Este componente carga y procesa los módulos especificados en 'src'. En este ejemplo, se carga una plantilla y se registra el componente 'simple-button'.

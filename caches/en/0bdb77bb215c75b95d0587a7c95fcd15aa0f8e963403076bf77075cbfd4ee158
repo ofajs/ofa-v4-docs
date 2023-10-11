@@ -1,1 +1,1 @@
-ofa.js is different from other third-party frameworks as it does not use traditional state management patterns. The author believes that state updates should be transparent, meaning that data updates should automatically trigger updates. 
+ofa.js is different from other third-party frameworks by not adopting a traditional state management pattern. The author believes that state updates should be seamless, meaning that changing the data should automatically trigger data updates.

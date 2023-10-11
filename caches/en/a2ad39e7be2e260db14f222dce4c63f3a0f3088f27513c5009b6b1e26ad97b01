@@ -1,0 +1,2 @@
+- `parent` is used to retrieve the immediate parent element of the current element.
+- `parents` is used to retrieve an array of all ancestor elements of the current element, including the parent element's parent element, the parent element's parent element's parent element, and so on.

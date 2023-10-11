@@ -33,7 +33,7 @@
     // Do not use import
     // import data from './other/module.mjs';
 
-    // Component name to be registered, if tag property is not defined, the registered component name will be the same as the file name
+    // Component name to be registered, if tag attribute is not defined, the registered component name will be the same as the file name
     export const tag = 'simple-button';
 
     export default async ({load}) => {

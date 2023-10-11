@@ -1,1 +1,1 @@
-The `loaded` lifecycle hook is triggered after all dependencies within the component template have been loaded. This stage ensures that all dependencies have been loaded before rendering the component. It is suitable for removing the loading styles added in the `ready` stage.
+The `loaded` lifecycle hook is triggered after all dependencies in the component template have been loaded. This stage ensures that all dependencies are loaded before rendering the component. This is a good time to remove the Loading style added during the `ready` stage.

@@ -1,15 +1,15 @@
 # Box Model
 
-In front-end development, we often use some properties to represent the size of an element. These properties include width, height, clientWidth, clientHeight, offsetWidth, offsetHeight, outerWidth, and outerHeight. Understanding their meanings and usage is very important for developing responsive and dynamic layouts. Let's explain them one by one and demonstrate them with an example.
+In frontend development, some properties that represent element sizes are often used. These properties include width, height, clientWidth, clientHeight, offsetWidth, offsetHeight, outerWidth, and outerHeight. Understanding their meanings and usage is essential for developing responsive and dynamic layouts. Let's explain them one by one and demonstrate with an example.
 
-- width: represents the width of the content area of an element, excluding padding, border, and margin.
-- height: represents the height of the content area of an element, excluding padding, border, and margin.
-- clientWidth: represents the width of the visible content area of an element, including padding but excluding border and margin.
-- clientHeight: represents the height of the visible content area of an element, including padding but excluding border and margin.
-- offsetWidth: represents the overall width of an element, including the content area, padding, border, and margin.
-- offsetHeight: represents the overall height of an element, including the content area, padding, border, and margin.
-- outerWidth: represents the overall width of an element, including the content area, padding, border, and margin, but excluding the width of the scrollbar.
-- outerHeight: represents the overall height of an element, including the content area, padding, border, and margin, but excluding the height of the scrollbar.
+- width: Represents the width of the content area of an element, excluding padding, borders, and margins.
+- height: Represents the height of the content area of an element, excluding padding, borders, and margins.
+- clientWidth: Represents the visible width of the content area of an element, including padding but excluding borders and margins.
+- clientHeight: Represents the visible height of the content area of an element, including padding but excluding borders and margins.
+- offsetWidth: Represents the total width of an element, including content area, padding, borders, and margins.
+- offsetHeight: Represents the total height of an element, including content area, padding, borders, and margins.
+- outerWidth: Represents the total width of an element, including content area, padding, borders, margins, but excluding the width of the scroll bar.
+- outerHeight: Represents the total height of an element, including content area, padding, borders, margins, but excluding the height of the scroll bar.
 
 ```html
 <!DOCTYPE html>

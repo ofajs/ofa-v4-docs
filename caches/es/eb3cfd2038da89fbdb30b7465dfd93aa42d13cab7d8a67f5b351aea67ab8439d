@@ -1,1 +1,0 @@
-Con la forma `attr:xxx="yyy"`, puedes vincular el atributo especificado `xxx` del elemento objetivo al atributo `yyy` del componente principal. De esta manera, el atributo del elemento objetivo cambiará a medida que cambie el atributo del componente principal.

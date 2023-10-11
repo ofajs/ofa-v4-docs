@@ -1,0 +1,8 @@
+```javascript
+// jQuery Code
+$("#target").html("some html code"); // 設置 html
+$("#target").text("set text"); // 設置 text
+var ele_text = $("#target").text(); // 獲取 text
+var parents = $("#target").parents(); // 獲取所有父層的數組
+var child = $("#target").children()[0]; // 獲取第一個子元素
+```

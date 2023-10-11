@@ -1,1 +1,1 @@
-In the `page2.html` page module, we also defined a title and a button. Clicking the button will return to the previous page, implementing page navigation.
+In the `page2.html` module, we also defined a title and a button, clicking the button will go back to the previous page, implementing page navigation.

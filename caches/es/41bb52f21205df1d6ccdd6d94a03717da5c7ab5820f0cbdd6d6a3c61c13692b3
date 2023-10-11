@@ -1,1 +1,0 @@
-La instancia `$` es un encapsulamiento de los elementos en la página. Además de seleccionar elementos existentes, también puedes crear nuevos elementos y operar sobre ellos. En este capítulo, aprenderemos cómo crear nuevos elementos y realizar algunas operaciones en la instancia `$`.

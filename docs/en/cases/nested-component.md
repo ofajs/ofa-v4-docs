@@ -6,12 +6,12 @@
 
 # Nested Components
 
-Putting all the excessive logic into one component is not a wise choice; we can divide the logic into separate components and import another component using the `l-m` method.
+It is not a wise choice to put all excessive logic in one component; we can separate the logic into another component and import it in the current component using the `l-m` approach.
 
-The nested component named CompTwo is imported through `<l-m src="./comp-two.html"></l-m>` in the example case.
+In the case, the nested component named CompTwo is imported using `<l-m src="./comp-two.html"></l-m>`.
 
-The nested component is used through `<comp-two :txt="val"></comp-two>` and the val property of the current component is passed as the txt property to the nested component. This way, the nested component can use the passed data for rendering.
+By using `<comp-two :txt="val"></comp-two>`, a nested component is used and the val attribute of the current component is passed to the nested component as txt attribute. This way, the nested component can render using the passed data.
 
-In `<comp-two></comp-two>`, the nested component is used without passing any properties. The usage here depends on the logic and design of the nested component itself.
+In `<comp-two></comp-two>`, we used nested components without passing any properties. The usage here depends on the logic and design of the nested component itself.
 
-As long as a component loads successfully, it can be used anywhere using its respective name. Even if the `l-m` component is loaded multiple times in different places, it won't result in the component being loaded multiple times. This mechanism ensures component reusability and consistency.
+As long as a component is successfully loaded, it can be used anywhere with its corresponding name. Even if the "l-m" component is loaded multiple times in different places, it will not cause the component to be loaded multiple times. This mechanism ensures component reuse and consistency.

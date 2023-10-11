@@ -1,1 +1,1 @@
-When using the component externally, you can also pass data to the component internally through attributes. It should be noted that the data passed through attributes can only be of type string.
+When using components externally, data can also be passed to the component internally through attributes. It should be noted that data passed through attributes can only be of string type.

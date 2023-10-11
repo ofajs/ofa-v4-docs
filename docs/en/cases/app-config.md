@@ -7,15 +7,15 @@
 
 # Configure app parameters
 
-You can configure the parameters of the application by setting external modules for the `o-app` tag individually.
+You can configure the parameters of the application by setting external modules for the `o-app` tag.
 
 These parameters are an ES module, and you can configure the following parameters:
 
-- **home**: The homepage of the application, which is the page displayed when initially loaded.
-- **loading**: The loading content displayed before the module is fully loaded when clicking on a page transition. You can return a string as the loading content.
-- **pageAnime**: The animation effect during page transitions, using an object that contains CSS style attributes.
-  - **current**: Represents the style when the page is the current page.
-  - **next**: Represents the style when the page is not yet entered.
-  - **previous**: Represents the style when the page is about to exit.
+- **home**: The homepage of the application, which is the page displayed when it is initially loaded.
+- **loading**: The content displayed while modules are being loaded when navigating between pages in the application. You can provide a string as the loading content.
+- **pageAnime**: The animation effect used when navigating between pages, defined as an object with CSS style properties.
+  - **current**: Represents the style of the page when it is the current page.
+  - **next**: Represents the style of the page when it is entering.
+  - **previous**: Represents the style of the page when it is exiting.
 
-By doing so, you can customize parameters such as the homepage, loading style, and page transition animation according to the needs of the application, thereby bringing a more personalized experience to the application.
+Through this method, you can customize parameters such as the home page, loading style, and page transition animation according to the needs of the application, thus bringing a more personalized experience to the application.

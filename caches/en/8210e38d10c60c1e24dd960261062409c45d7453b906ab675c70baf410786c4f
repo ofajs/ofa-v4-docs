@@ -2,13 +2,13 @@
 <!-- layout-page.html -->
 <template page>
   <style>
-    /* Set the container element to relative position */
+    /* Set the container element as relative positioning */
     .parent-container {
       position: relative;
     }
   </style>
   
-  <!-- Set the container element for inserting the sub-page -->
+  <!-- Set the container element for inserting subpages -->
   <div class="parent-container">
     <slot></slot>
   </div>

@@ -1,6 +1,6 @@
-2. Create an ES module to set the configuration data for the application. The configuration data includes the following options:
+2. Create an ES module to set up the configuration data for the application. The configuration data includes the following options:
 
-- `home`: A string specifying the page module address for the application's homepage.
-- `loading`: A function that runs when the application is loading a new page. The content returned by this function will be inserted into the application as a loading indicator, and it will automatically be removed when the page finishes loading.
-- `fail`: A function that runs when the application fails to load a page. The value returned by this function will be displayed in the application as a loading failure message. The function receives the source address of the failed page and the error object.
-- `pageAnime`: The animation configuration for page transitions.
+   - `home`: String type, the page module address of the application's homepage.
+   - `loading`: Function type, this function will be executed when the application is loading a new page. The content obtained will be inserted into the application as a loading prompt. After the page is loaded, this loading element will be automatically removed.
+   - `fail`: Function type, this function will be executed when the application fails to load a page. The value returned will be displayed in the application as a loading failure prompt. The function will have the `src` address of the failed page and the error object.
+   - `pageAnime`: Animation configuration for page transitions.

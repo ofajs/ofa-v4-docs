@@ -1,9 +1,9 @@
-- **created()**: Called when the component is created, before the shadow root has started rendering. You can perform some initialization settings here, but you cannot access elements within the shadow root.
-  
-- **ready()**: Called after the shadow root has finished rendering. It is generally used for component initialization logic. At this stage, you can access and manipulate elements within the shadow root, as well as perform other operations that need to be done after rendering is complete.
+- **created()**: Called when the component is created, at this time the shadow root has not started rendering. You can perform some initialization settings here, but you cannot access the elements inside the shadow root.
 
-- **watch**: Observes changes in data by defining the `watch` object. After `ready` completes, a watch corresponding to the value in `data` will be triggered. Subsequently, each time the value of the corresponding key changes, the corresponding function within `watch` will be triggered.
+- **ready()**: Called after the shadow root has finished rendering, usually used for component initialization logic. At this stage, you can access and manipulate the elements inside the shadow root, as well as perform other operations that need to be executed after rendering is completed.
 
-- **attached()**: Called when the component is added to the document. You can perform operations that interact with the external environment, such as obtaining the appearance of the component or initializing shared data.
+- **watch**: Listen for changes in data by defining a `watch` object. After the `ready` event, the corresponding value on the `data` object will trigger a `watch`. Afterwards, whenever the value of the corresponding key changes, the corresponding function in the `watch` object will be triggered.
 
-- **detached()**: Called when the component is removed from the document. At this stage, you can perform cleanup, cancel interaction with the external environment, and release resources.
+- **attached()**: Called when the component is added to the document, at this time you can perform operations that interact with the external environment, such as obtaining the appearance of the component or initializing shared data.
+
+- **detached()**: Called when the component is removed from the document. At this stage, you can perform cleanup work, cancel interactions with the external environment, and release resources.

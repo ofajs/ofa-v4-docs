@@ -1,1 +1,0 @@
-Cuando hayas enlazado un evento, a veces puedes querer detener la propagación del evento (burbujeo) o cancelar el comportamiento predeterminado del evento. A continuación, se muestra cómo evitar la propagación y cancelar eventos predeterminados después de la activación del evento.

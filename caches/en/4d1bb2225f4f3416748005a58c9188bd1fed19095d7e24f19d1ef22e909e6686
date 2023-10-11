@@ -1,1 +1,1 @@
-Using the attribute binding syntax `:xxx='yyy'`, you can bind a component's property to the attribute of an element within the template. This binding is one-way, where changes in the property will affect the attribute of the element but not vice versa.
+Using the `:xxx='yyy'` attribute binding syntax, you can bind a component's property to an attribute on an element within the template. This binding is one-way, meaning that changes to the property will affect the element's attribute, but not vice versa.

@@ -1,1 +1,1 @@
-By using the rendering text syntax `{{key}}`, you can render data as text content and embed it into the component's template. The corresponding text content will also be automatically updated when the data changes.
+By using the `{{key}}` rendering syntax, you can render data as text content and embed it in the component's template. When the data changes, the corresponding text content will also be automatically updated.
