@@ -1,0 +1,22 @@
+<template page>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 20px;
+    }
+  </style>
+  <div class="container">Rendered Text: {{txt}}</div>
+  <script>
+    export default {
+      data: {
+        txt: "I am text",
+      },
+      ready() {
+        $("title").text = "txt";
+      },
+    };
+  </script>
+</template>

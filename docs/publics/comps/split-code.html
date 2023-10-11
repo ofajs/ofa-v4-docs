@@ -1,0 +1,89 @@
+<template component>
+  <inject-host>
+    <x-if :value="isDark.value">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/obook/statics/css/hljs-dark.css"
+      />
+    </x-if>
+    <x-else>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/obook/statics/css/hljs-light.css"
+      />
+    </x-else>
+    <style></style>
+  </inject-host>
+  <style>
+    :host {
+      display: block;
+      width: 100%;
+      border: rgba(170, 170, 170, 0.253) solid 1px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      text-align: left;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    ::slotted(*) {
+      flex: 1;
+    }
+    ::slotted(*:first-child) {
+      border-right: rgba(170, 170, 170, 0.253) solid 1px;
+    }
+    ::slotted(pre) {
+      margin: 0;
+    }
+
+    .outer {
+      container-type: inline-size;
+    }
+
+    @container (max-width: 700px) {
+      .container {
+        flex-direction: column;
+      }
+      ::slotted(*:first-child) {
+        border-right: none;
+        border-bottom: rgba(170, 170, 170, 0.253) solid 1px;
+      }
+    }
+
+    @container (max-width: 1100px) {
+      .container {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <div class="outer">
+    <div class="container">
+      <slot></slot>
+    </div>
+  </div>
+  <script>
+    import hljs from "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/es/highlight.min.js";
+
+    export default async ({ load }) => {
+      const { isDark } = await load("@obook/statics/data.mjs");
+
+      return {
+        data: {
+          isDark: {},
+        },
+        attached() {
+          this.isDark = isDark;
+          this.forEach((e) => {
+            hljs.highlightElement(e.$("code").ele);
+          });
+        },
+        detached() {
+          this.isDark = {};
+        },
+      };
+    };
+  </script>
+</template>
