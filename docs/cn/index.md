@@ -4,6 +4,7 @@
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
 <l-m src="../publics/comps/case-switch.html"></l-m>
+<l-m src="../publics/comps/split-code.html"></l-m>
 
 <simp-block>
 
@@ -39,7 +40,6 @@
 <a href="../publics/download/ofajs-start/index.html" target="_blank">在线查看初始化项目</a>
 
 </simp-block>
-
 
 <simp-block>
 
@@ -269,16 +269,38 @@
 
 <simp-block>
 
-## 银弹型开发框架
+## jQuery的替代品
 
-### 简化了网页组件的封装，既能当普通库使用，也能开发网页应用
+### 都是 script 一行代码引用自身的库，类似 jQuery 一样的 api，用起来特别顺手
+
+<split-code>
+
+```javascript
+// jQuery Code
+$("#target").html("some html code"); // 设置 html
+$("#target").text("set text"); // 设置 text
+var ele_text = $("#target").text(); // 获取 text
+var parents = $("#target").parents(); // 获取所有父层的数组
+var child = $("#target").children()[0]; // 获取第一个子元素
+```
+
+```javascript
+// ofa.js Code
+$("#target").html = "some html code";  // 设置 html
+$("#target").text = "set text"; // 设置 text
+var ele_text = $("#target").text; // 获取 text
+var parents = $("#target").parents; // 获取所有父层的数组
+var child = $("#target")[0]; // 获取第一个子元素
+```
+
+</split-code>
 
 </simp-block>
 
 <simp-block>
 
-## jQuery的替代品
+## 使用案例
 
-### 类似 jQuery 一样的 api，用起来特别流畅
+<a href="https://obook.ofajs.com/">obook 最简单的建站工具</a>
 
 </simp-block>

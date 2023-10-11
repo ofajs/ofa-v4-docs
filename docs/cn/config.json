@@ -5,6 +5,7 @@
     "text": "ofa.js"
   },
   "pages": ["./index.md"],
+  "footer": "./footer.md",
   "navs": [
     {
       "name": "案例教程",
