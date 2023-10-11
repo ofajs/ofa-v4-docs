@@ -1,5 +1,0 @@
-<template is="exm-article">
-<a href="../../publics/examples/bind-event/demo.html" preview></a>
-<a href="../../publics/examples/bind-event/test-demo.html" main></a>
-</template>
-

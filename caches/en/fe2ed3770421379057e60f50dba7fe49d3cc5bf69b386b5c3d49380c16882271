@@ -1,1 +1,0 @@
-An element's `data-*` attributes can be used to store custom data in HTML and can be accessed using the `data` object.

@@ -1,1 +1,0 @@
-In ofa.js, each component has a Shadow DOM container for isolating the internal content of the component. The template content is rendered into this container. The component instance obtained through `$` can also access the internal Shadow DOM container through the `shadow` property, thus achieving operations and access to the internal elements of the component.

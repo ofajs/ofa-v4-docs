@@ -1,1 +1,0 @@
-Cuando se utiliza un componente externo, también se pueden pasar datos al interior del componente a través de atributos. Es importante tener en cuenta que los datos pasados a través de atributos solo pueden ser de tipo cadena de caracteres.

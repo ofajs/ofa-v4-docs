@@ -1,1 +1,0 @@
-SCSR works by directly running the page module in single-file mode, without using the `o-page` tag, thus enabling rendering on the page. Specifically, it involves placing the template code of the page module directly within the `o-app`.

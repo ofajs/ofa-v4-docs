@@ -1,3 +1,0 @@
-```html
-<button on:click="replace('./pages/settings.mjs')">Saltar y reemplazar la página actual</button>
-```

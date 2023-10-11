@@ -1,4 +1,0 @@
-- La etiqueta `<x-if>` recibe un atributo `value` para definir la condición. Si el valor de `value` es `true`, se renderiza el contenido dentro de `<x-if>`. En este ejemplo, si `count` es par, aparecerá un texto rojo.
-- La etiqueta `<x-else-if>` también recibe un atributo `value` para definir la condición. Si la condición anterior no se cumple y el valor de `value` es `true`, se renderiza el contenido dentro de `<x-else-if>`. En este ejemplo, si `count` es un múltiplo de 3, aparecerá un texto azul.
-- La etiqueta `<x-else>` no requiere un atributo `value`, se renderizará su contenido cuando ninguna de las condiciones anteriores se cumpla. En este ejemplo, si `count` no es par ni un múltiplo de 3, aparecerá un texto verde. También se puede usar `x-else` inmediatamente después de `x-if`;
-

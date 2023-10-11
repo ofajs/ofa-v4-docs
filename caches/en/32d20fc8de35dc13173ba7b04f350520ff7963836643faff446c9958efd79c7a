@@ -1,1 +1,0 @@
-`attrs` parameter and `data` parameter are similar in functionality. The data set in `attrs` will be merged into `data`, but the data on `attrs` will be reflected in the component's own features.

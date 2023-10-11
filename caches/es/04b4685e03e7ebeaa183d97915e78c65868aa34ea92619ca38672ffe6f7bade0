@@ -1,6 +1,0 @@
-```javascript
-// data.mjs
-export const data = $.stanz({
-  val: "Comparto datos",
-});
-```

@@ -1,3 +1,0 @@
-- `{{ $data }}`: represents the data passed to the filling template, which is the value of the `value` attribute.
-- `{{ $ele }}`: represents the current element in which the filling template is located and can be used to access the element's attributes and styles.
-- `{{ $host }}`: represents the instance of the host component and can be used to access the host component's properties and methods.

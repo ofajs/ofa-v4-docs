@@ -1,1 +1,0 @@
-The instances retrieved using `$` do not have a `children` property like DOM elements. However, we can access the direct child elements of an instance using array indexes:

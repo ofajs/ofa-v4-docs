@@ -1,1 +1,0 @@
-`$('xxx xxxx')` permite buscar los elementos que cumplan con la segunda condición del selector en todo el alcance global, y luego buscar los elementos que cumplan con la primera condición del selector dentro de estos elementos. Esta forma permite encontrar directamente los elementos hijos que cumplan con la condición en un solo paso.

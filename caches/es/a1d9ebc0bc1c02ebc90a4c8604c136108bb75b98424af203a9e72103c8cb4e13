@@ -1,1 +1,0 @@
-Dentro de ofa.js, construimos un componente personalizado llamado `o-page` que está diseñado para facilitar el desarrollo de páginas. Este componente juega un papel clave en el desarrollo de aplicaciones. Cuando quieras utilizar la sintaxis de plantilla de un componente, pero no quieras crear un componente completamente nuevo, el componente `o-page` será tu mejor opción.

@@ -1,8 +1,0 @@
-```javascript
-// MyComponent.js
-export const type = $.COMP;
-
-export const data = {
-  inputValue: "Valor Inicial",
-};
-```

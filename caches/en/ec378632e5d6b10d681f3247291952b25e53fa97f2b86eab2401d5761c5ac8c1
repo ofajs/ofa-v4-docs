@@ -1,5 +1,0 @@
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const tag = "my-button"; // Register component name as 'my-button'
-```

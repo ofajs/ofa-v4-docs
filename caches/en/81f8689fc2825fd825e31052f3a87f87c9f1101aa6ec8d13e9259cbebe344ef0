@@ -1,4 +1,0 @@
-- The 'load' method is an asynchronous loading function, which can be loaded asynchronously by using the same method as asynchronous 'import', and can load asynchronous modules using 'const data = await load(xxx)'.
-- Modules loaded through 'load' will have the same effect as those loaded by 'load-module'. The 'load' method is a functional version of the 'load-module' component, and specific usage can be found in the documentation of [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js).
-- 'url' is the filename of the current module.
-- 'query' is an object converted from URL parameters when loading this module.

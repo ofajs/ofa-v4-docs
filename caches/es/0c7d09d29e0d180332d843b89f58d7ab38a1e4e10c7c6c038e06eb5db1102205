@@ -1,5 +1,0 @@
-- La propiedad `next` se utiliza para obtener el siguiente elemento hermano del elemento actual. 
-- La propiedad `nexts` se utiliza para obtener un array de todos los elementos hermanos del elemento actual que se encuentran después de él. 
-- La propiedad `prev` se utiliza para obtener el elemento hermano anterior del elemento actual. 
-- La propiedad `prevs` se utiliza para obtener un array de todos los elementos hermanos del elemento actual que se encuentran antes de él. 
-- La propiedad `siblings` se utiliza para obtener todos los elementos hermanos del elemento actual, sin incluirlo a él mismo.

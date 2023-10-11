@@ -1,1 +1,0 @@
-Using the attribute binding syntax `:xxx='yyy'`, you can bind a component's property to the attribute of an element within the template. This binding is one-way, where changes in the property will affect the attribute of the element but not vice versa.

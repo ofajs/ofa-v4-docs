@@ -1,1 +1,0 @@
-It should be noted that using this component may affect the styles of the host layer. Therefore, when intruding on styles, naming conventions should be maintained to avoid affecting the styles of the host.

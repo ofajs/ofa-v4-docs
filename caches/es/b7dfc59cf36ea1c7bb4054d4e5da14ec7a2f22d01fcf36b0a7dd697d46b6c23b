@@ -1,6 +1,0 @@
-<template is="exm-article">
-<a href="../../publics/examples/set404/demo.html" preview></a>
-<a href="../../publics/examples/set404/app-config.mjs" main></a>
-<a href="../../publics/examples/set404/page1.html"></a>
-</template>
-

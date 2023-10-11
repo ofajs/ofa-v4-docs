@@ -1,6 +1,0 @@
-```javascript
-const myComponent = $("my-component"); // Get the component instance
-const shadowContainer = myComponent.shadow; // Get the Shadow DOM container of the component
-
-$("my-component").shadow.$("h1").css.color = 'red' // Change the h1 in the Shadow DOM to red
-```

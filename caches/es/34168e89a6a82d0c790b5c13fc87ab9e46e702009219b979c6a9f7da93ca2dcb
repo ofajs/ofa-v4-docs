@@ -1,1 +1,0 @@
-Para crear subrutas, primero se debe establecer el parámetro 'parent' en el módulo de la página secundaria para especificar la dirección del contenedor de la página padre. De esta manera, cuando se carga la página secundaria, ofa.js automáticamente envuelve la página secundaria dentro del contenedor de la página padre.

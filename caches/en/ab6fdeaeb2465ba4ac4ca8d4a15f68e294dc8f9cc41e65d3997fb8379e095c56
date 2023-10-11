@@ -1,1 +1,0 @@
-In the registration parameter of the component, you can add a `proto` object to define the methods that need to be added to the component's prototype. This way, when creating an instance of the component, these attributes and methods will be added to the prototype of the instance, allowing all instances to access and share these methods.

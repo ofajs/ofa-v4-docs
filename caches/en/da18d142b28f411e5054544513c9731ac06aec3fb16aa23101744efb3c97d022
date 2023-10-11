@@ -1,1 +1,0 @@
-In addition to listening for native events, `on` can also be used to listen for custom events, which is important for event communication between components. Custom events are triggered through the `emit` method. By triggering custom events, custom data can be passed to the receiver.

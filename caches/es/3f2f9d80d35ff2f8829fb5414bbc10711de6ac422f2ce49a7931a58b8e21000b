@@ -1,1 +1,0 @@
-Puedes usar `$ele.css.xxx = ''` para establecer un estilo específico de un elemento, donde `xxx` es el nombre de la propiedad CSS que deseas establecer. Al asignar una cadena vacía como valor de la propiedad, puedes eliminar el estilo específico.

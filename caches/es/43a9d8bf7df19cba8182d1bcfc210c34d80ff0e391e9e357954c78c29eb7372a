@@ -1,1 +1,0 @@
-3. En el archivo HTML, utiliza la etiqueta `o-app` y referencia los datos de configuración como un módulo `es` a través del atributo `src`.

@@ -1,1 +1,0 @@
-Using the format `on:click="yyy"`, you can bind a specified event (e.g., `click`) of the target element to a property `yyy` in the host component. This way, when the target element triggers the specified event, it will invoke the corresponding property method in the host component.

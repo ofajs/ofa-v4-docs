@@ -1,1 +1,0 @@
-En algunas ocasiones, es posible que necesites verificar si la página ha cargado completamente para realizar algunas operaciones específicas. `ofa.js` proporciona varias formas de verificar si la página ha cargado completamente.

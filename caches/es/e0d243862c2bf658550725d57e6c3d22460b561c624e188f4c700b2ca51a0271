@@ -1,1 +1,0 @@
-En el ejemplo anterior, cuando se hace clic en el botón, se muestra una ventana emergente con el mensaje "¡Botón clickeado una vez!". Sin embargo, después del primer clic, la función de manejo del evento se eliminará, por lo que los siguientes clics en el botón no mostrarán la ventana emergente.

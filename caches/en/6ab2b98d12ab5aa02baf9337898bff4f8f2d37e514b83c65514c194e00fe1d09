@@ -1,1 +1,0 @@
-In your HTML file, use the `o-page` component with the `<o-page>` tag and reference the file path of the page module through the `src` attribute. The content of the page will be rendered inside this component.

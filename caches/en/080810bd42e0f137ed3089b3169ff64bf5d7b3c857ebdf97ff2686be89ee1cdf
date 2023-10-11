@@ -1,1 +1,0 @@
-The parent page module can set a `routerChange` function to listen to route changes. When the page changes its route without refreshing the parent page, the `routerChange` event will be triggered. This event will pass the information of the current page and the navigation type (`type`).

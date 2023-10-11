@@ -1,1 +1,0 @@
-En el archivo del componente, se puede agregar una etiqueta `script` para escribir el código lógico del componente. A través del objeto `default` expuesto, se pueden configurar los parámetros del componente.

@@ -1,1 +1,0 @@
-En el ejemplo anterior, obtenemos el elemento 'div' y accedemos a los primeros y segundos elementos 'p' utilizando índices. También usamos '$div.length' para obtener la cantidad de elementos secundarios.

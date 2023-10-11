@@ -1,1 +1,0 @@
-`x-fill` component allows you to dynamically fill content in a template. It can generate different content based on the attribute values of the host component. `x-fill` component uses the `name` attribute to specify the fill template to use and passes data to the fill template through the `value` attribute.

@@ -1,0 +1,19 @@
+```html
+<template component>
+  <x-if :value="count % 2">
+    <div style="color:red">{{count}}</div>
+  </x-if>
+  <x-else>
+    <div style="color:blue">{{count}}</div>
+  </x-else>
+  <button on:click="count++">count++</button>
+  <script>
+    export default {
+      tag: "if-demo",
+      data: {
+        count: 0
+      },
+    };
+  </script>
+</template>
+```

@@ -1,1 +1,0 @@
-In this way, when you open the page, the `o-page` component will dynamically load the `my-page.mjs` page module and render the page content based on the template and data in the module. The lifecycle and template syntax of the page module are consistent with the component module, making the development and management of pages more unified and flexible.

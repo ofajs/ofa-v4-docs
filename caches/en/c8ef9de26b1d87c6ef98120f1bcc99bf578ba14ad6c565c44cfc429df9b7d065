@@ -1,1 +1,0 @@
-`tag` represents the registered component name. When `tag` property is not defined, the registered component name remains the same as the file name.

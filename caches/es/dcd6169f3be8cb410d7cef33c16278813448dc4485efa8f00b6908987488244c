@@ -1,1 +1,0 @@
-El componente `o-router` también proporciona el atributo `fix-body`, cuando estableces este atributo, el componente estiliza automáticamente la etiqueta `<html>` para que el tamaño de la aplicación sea igual al tamaño de la página de forma que el contenido de la aplicación llene toda la ventana.

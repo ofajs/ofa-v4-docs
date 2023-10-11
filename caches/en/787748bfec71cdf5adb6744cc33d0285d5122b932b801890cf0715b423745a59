@@ -1,1 +1,0 @@
-In ofa.js, the component lifecycle is triggered by specific hooks at certain times. These hooks allow you to have finer control and interaction. ofa.js has five key lifecycle hooks: `created`, `ready`, `watch`, `loaded`, `attached`, and `detached`, which are triggered at different moments.

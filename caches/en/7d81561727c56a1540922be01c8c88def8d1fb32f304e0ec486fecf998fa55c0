@@ -1,1 +1,0 @@
-Similar to creating a component module, create a page module but set the `type` property to `$.PAGE`. The available parameters for the page module include `temp`, `data`, `proto`, and `watch`.

@@ -1,3 +1,0 @@
-- The function registered by `watch` will only be triggered once during a single thread change. Therefore, even if the monitored value is modified multiple times within a thread, it will only be triggered once.
-- The first parameter is the current value.
-- The second parameter is an object that contains a `watchers` data set. In most cases, the `watchers` object will only contain one object. You can retrieve the `oldValue` from this object. When the monitored value has been changed multiple times within a single thread, this data set will record multiple changes.

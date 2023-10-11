@@ -1,1 +1,0 @@
-Primero, necesitas referenciar el componente `o-router` en tu página. Puede hacer referencia al archivo `router.mjs` de la siguiente manera:

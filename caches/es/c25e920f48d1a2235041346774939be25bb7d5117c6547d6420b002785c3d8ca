@@ -1,1 +1,0 @@
-En el archivo del componente, primero agregue un elemento `template` y agregue el atributo `component`. Coloque el contenido que el componente necesita renderizar dentro de este elemento `template`. Finalmente, este contenido se renderizará en el Shadow DOM del componente, el cual está aislado del entorno externo para evitar contaminar el entorno externo.

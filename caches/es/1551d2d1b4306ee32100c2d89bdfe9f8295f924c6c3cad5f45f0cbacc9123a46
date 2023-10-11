@@ -1,7 +1,0 @@
-<template is="exm-article">
-  <a href="../../publics/examples/use-config/demo.html" preview></a>
-  <a href="../../publics/examples/use-config/app-config.mjs" main></a>
-  <a href="../../publics/examples/use-config/page1.html"></a>
-  <a href="../../publics/examples/use-config/page2.html"></a>
-</template>
-

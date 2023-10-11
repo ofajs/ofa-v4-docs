@@ -1,1 +1,0 @@
-After referencing the resource, ofa.js will set a `$` property on the global scope. All the functionalities will be available on `$`. The following tutorials will explain its usage in detail.

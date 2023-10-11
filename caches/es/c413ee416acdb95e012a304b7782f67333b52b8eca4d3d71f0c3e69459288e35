@@ -1,1 +1,0 @@
-`ele` causalidad se utiliza para obtener el elemento DOM real de la instancia `$`, lo que permite realizar operaciones JavaScript nativas en ese elemento.

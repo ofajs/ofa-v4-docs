@@ -1,1 +1,0 @@
-`::slotted()` selector is used to select the elements wrapped by slotted content. This selector can be used in internal styles of the component to style the slotted content.

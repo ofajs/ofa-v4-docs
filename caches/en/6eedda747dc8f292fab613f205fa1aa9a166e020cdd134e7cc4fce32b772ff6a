@@ -1,1 +1,0 @@
-Slots are mechanisms in Web Components used to embed external content within the component. Slots allow developers to pass custom content into the component, enabling more flexible component structures.

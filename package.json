@@ -26,9 +26,7 @@
     "main": "cn",
     "dirs": {
       "cn": "./docs/cn",
-      "t-cn": "./docs/t-cn",
-      "en": "./docs/en",
-      "es": "./docs/es"
+      "t-cn": "./docs/t-cn"
     }
   },
   "devDependencies": {

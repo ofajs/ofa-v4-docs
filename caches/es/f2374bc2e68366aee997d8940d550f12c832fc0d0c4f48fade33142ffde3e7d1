@@ -1,1 +1,0 @@
-`x-if` aún puede combinarse con `x-else-if` y `x-else` para lograr una representación condicional múltiple.

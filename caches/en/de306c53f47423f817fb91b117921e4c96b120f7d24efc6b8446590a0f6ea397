@@ -1,1 +1,0 @@
-In the JavaScript code of the current page, call the `load` method and pass the module path of the next page. This module will be loaded and cached.

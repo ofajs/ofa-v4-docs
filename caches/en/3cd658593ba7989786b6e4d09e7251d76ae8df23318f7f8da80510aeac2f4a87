@@ -1,1 +1,0 @@
-In the above example, the page module of the sub-page specifies the address of the parent page container using the `parent` parameter.

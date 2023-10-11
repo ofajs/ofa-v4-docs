@@ -1,7 +1,0 @@
-```javascript
-async function hacerAlgoDespuesDeCargarPagina() {
-  await page._rendered;
-  // La página ha cargado completamente
-  // Realiza tus operaciones
-}
-```

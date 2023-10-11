@@ -1,6 +1,0 @@
-```javascript
-// Parent page's page module
-export const routerChange = (current, type) => {
-  console.log(`Route Change: Current page is ${current.src}, navigation type is ${type}`);
-};
-```

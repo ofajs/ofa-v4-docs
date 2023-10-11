@@ -1,1 +1,0 @@
-Al inicializar `formData`, se debe agregar la característica de selector personalizada al parámetro (aunque el parámetro predeterminado de `formData` es `"input,select,textarea"`). De esta manera, `formData` puede interactuar con el componente personalizado.

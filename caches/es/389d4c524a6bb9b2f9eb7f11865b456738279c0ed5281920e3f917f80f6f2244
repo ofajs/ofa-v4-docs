@@ -1,1 +1,0 @@
-La representación de texto se realiza mediante llaves dobles, es decir `{{xxx}}`, donde xxx representa el nombre del atributo del componente.

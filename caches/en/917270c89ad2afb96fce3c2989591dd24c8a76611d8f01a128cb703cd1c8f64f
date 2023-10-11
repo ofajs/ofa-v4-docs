@@ -1,1 +1,0 @@
-In the example above, `sync:value="inputValue"` achieves two-way data binding, so when the value of the input box changes, `inputValue` will be automatically updated; conversely, when `inputValue` changes, the value of the input box will also change accordingly.

@@ -1,1 +1,0 @@
-In the above example, we retrieved the div element and accessed the first and second p elements using indexes. We also used `$div.length` to get the number of child elements.

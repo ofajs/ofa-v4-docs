@@ -1,1 +1,0 @@
-En el ejemplo anterior, hemos definido un componente llamado `lifecycle-demo` y hemos colocado un botón en su plantilla. Con diferentes ganchos de ciclo de vida, podemos observar registros de los distintos momentos en la consola.

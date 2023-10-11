@@ -1,1 +1,0 @@
-Solo necesitas utilizar el componente `o-router` para asociar las rutas dentro del componente `app` con la página web actual. Una vez que la página y la ruta estén vinculadas, incluso después de recargar la página, el estado de la ruta se mantendrá.

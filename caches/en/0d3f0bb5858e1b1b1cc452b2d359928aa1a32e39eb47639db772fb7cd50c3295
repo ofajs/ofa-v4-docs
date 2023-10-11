@@ -1,1 +1,0 @@
-SCSR stands for Static Client-Side Rendering, which is a variant of CSR (Client-Side Rendering). It retains the user experience of CSR while allowing the page to be crawled by search engines in its static state.

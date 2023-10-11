@@ -1,5 +1,0 @@
-- The `next` attribute is used to get the next sibling element of the current element. 
-- The `nexts` attribute is used to get an array of all sibling elements that come after the current element. 
-- The `prev` attribute is used to get the previous sibling element of the current element. 
-- The `prevs` attribute is used to get an array of all sibling elements that come before the current element. 
-- The `siblings` attribute is used to get all sibling elements of the current element, excluding itself.

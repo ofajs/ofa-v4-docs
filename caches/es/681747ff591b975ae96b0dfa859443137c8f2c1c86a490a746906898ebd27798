@@ -1,3 +1,0 @@
-- Añadir una clase: `$ele.classList.add('nombreClase')`, agrega el nombre de clase especificado a classList del elemento. 
-- Eliminar una clase: `$ele.classList.remove('nombreClase')`, elimina el nombre de clase especificado de classList del elemento. 
-- Alternar una clase: `$ele.classList.toggle('nombreClase')`, si el nombre de clase ya existe en classList del elemento, lo elimina; de lo contrario, lo agrega.

@@ -1,1 +1,0 @@
-In the component file, you can add a `script` tag to write the logic code for the component. The component parameters can be set through the exposed `default` object.

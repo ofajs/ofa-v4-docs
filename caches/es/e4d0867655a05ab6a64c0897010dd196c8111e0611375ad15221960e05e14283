@@ -1,1 +1,0 @@
-En el ejemplo anterior, al configurar un elemento contenedor con `slot`, las páginas secundarias se insertarán en ese contenedor. Asegúrate de que el elemento contenedor tenga una posición relativa para que las páginas secundarias se posicionen en relación a él.

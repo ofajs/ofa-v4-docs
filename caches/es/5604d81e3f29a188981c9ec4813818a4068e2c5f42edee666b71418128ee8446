@@ -1,1 +1,0 @@
-`watch` es una propiedad de tipo objeto que se utiliza para escuchar cambios en `data`. La función de escucha se registra aquí. Una vez registrado con éxito, el valor de escucha se ejecutará inmediatamente una vez.

@@ -1,1 +1,0 @@
-El objeto devuelto por el método `formData()` se conoce como objeto Stanz.Stanz forma parte de la biblioteca de extensiones `$` y proporciona un procesamiento y escucha eficientes para los datos de formulario.

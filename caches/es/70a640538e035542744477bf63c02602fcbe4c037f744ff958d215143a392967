@@ -1,1 +1,0 @@
-El siguiente ejemplo muestra cómo utilizar la propiedad `sync` en un componente para lograr una sincronización bidireccional entre un cuadro de texto y un modelo de datos:

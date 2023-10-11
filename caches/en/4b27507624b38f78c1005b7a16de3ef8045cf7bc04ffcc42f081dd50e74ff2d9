@@ -1,5 +1,0 @@
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const temp = "./my-button-template.html"; // Specify the address of the component template as './my-button-template.html'
-```

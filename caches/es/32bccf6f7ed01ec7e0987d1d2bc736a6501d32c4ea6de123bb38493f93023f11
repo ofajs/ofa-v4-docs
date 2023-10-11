@@ -1,1 +1,0 @@
-En `ofa.js`, puede utilizar el componente `o-app` para crear la estructura de diseño de toda la aplicación y cargar módulos de página dentro de él. Al utilizar los componentes `o-app`, `o-page` y módulos de página, puede construir la estructura de página de toda la aplicación e implementar la navegación entre páginas

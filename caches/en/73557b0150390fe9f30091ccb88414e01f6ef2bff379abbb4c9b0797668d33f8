@@ -1,1 +1,0 @@
-To use the `o-router` component, you need to wrap it outside of the `o-app` component. This way, you can bind the routes within the application to the current browser tab.

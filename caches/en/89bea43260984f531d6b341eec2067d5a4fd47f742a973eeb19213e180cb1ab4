@@ -1,1 +1,0 @@
-By using the `o-app` component, you can build the layout structure of the entire application and load different page modules into it. The routing feature provided by `o-app` makes navigation between pages more convenient and flexible.

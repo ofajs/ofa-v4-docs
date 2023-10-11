@@ -1,1 +1,0 @@
-In the HTML file, use the `o-page` tag's `src` attribute to specify the file path of the page module. The page content will be rendered inside this component.

@@ -1,1 +1,0 @@
-Once the `ready` stage is completed, the listener functions in the associated `watch` object will be triggered once. Afterwards, when a value of the data changes, the corresponding key's listener function will be triggered again.

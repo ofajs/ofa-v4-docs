@@ -1,9 +1,0 @@
-```html
-<!-- template.html -->
-<l-m src="custom-component.mjs"></l-m>  <!-- load custom-component -->
-<div>
-    <p :text="greeting"></p>
-    <input :value="inputValue" />
-    <custom-component :custom-prop="customValue"></custom-component>
-</div>
-```

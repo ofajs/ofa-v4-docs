@@ -1,1 +1,0 @@
-In the example above, if the `isActive` property is `true`, the button will add the `active` class name to apply specific styles.

@@ -1,6 +1,0 @@
-2. Crea un módulo ES para establecer los datos de configuración de la aplicación. Los datos de configuración incluyen las siguientes opciones:
-
-   - `home`: Tipo de cadena, dirección del módulo de página de inicio de la aplicación.
-   - `loading`: Tipo de función, esta función se ejecutará cuando la aplicación cargue una nueva página. El resultado de esta función se insertará en la aplicación como un mensaje de carga y se eliminará automáticamente una vez que se haya cargado la página.
-   - `fail`: Tipo de función, esta función se ejecutará cuando falle la carga de una página de la aplicación. El valor devuelto se mostrará en la aplicación como un mensaje de carga fallida. La función tendrá la dirección `src` de la página de carga fallida y el objeto de error.
-   - `pageAnime`: Configuración de animación al cambiar entre páginas.

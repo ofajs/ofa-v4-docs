@@ -1,1 +1,0 @@
-En el módulo de configuración de la aplicación, se puede personalizar el contenido que se muestra cuando la página no se puede cargar mediante la función `fail`.

@@ -1,6 +1,0 @@
-```javascript
-// Módulo de página principal
-export const routerChange = (current, type) => {
-  console.log(`Cambio de ruta: página actual ${current.src}, tipo de cambio ${type}`);
-};
-```

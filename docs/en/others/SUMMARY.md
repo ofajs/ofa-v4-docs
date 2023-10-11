@@ -1,3 +1,0 @@
-- [Data Sharing](./data-sharing.md)
-- [ofa.js and Micro Frontends](./about-micro-frontend.md)
-

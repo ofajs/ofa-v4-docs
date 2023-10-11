@@ -1,1 +1,0 @@
-En el archivo HTML, utilice el atributo `src` de la etiqueta `o-page` para especificar la ruta del archivo del módulo de página. El contenido de la página se mostrará dentro de ese componente.

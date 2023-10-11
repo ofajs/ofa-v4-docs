@@ -1,1 +1,0 @@
-En el ejemplo anterior, se renderiza contenido diferente según el valor de `condition`, logrando así un cambio de representación condicional múltiple.

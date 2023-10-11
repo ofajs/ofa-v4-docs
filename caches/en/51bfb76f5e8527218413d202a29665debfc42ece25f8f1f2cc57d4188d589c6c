@@ -1,1 +1,0 @@
-In the above example, we created a new div element using `$('<div style="color:red">I am text</div>')` and added it to the body.

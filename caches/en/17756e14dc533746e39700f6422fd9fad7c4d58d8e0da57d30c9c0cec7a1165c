@@ -1,5 +1,0 @@
-```html
-<!-- my-page-template.html -->
-<h1>{{pageTitle}}</h1>
-<p>Welcome to my page!</p>
-```

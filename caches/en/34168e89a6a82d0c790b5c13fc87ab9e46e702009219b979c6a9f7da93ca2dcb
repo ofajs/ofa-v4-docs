@@ -1,1 +1,0 @@
-To create subroutes, you first need to set the `parent` parameter on the page module of the child page, specifying the page module address of the parent page. This way, when the child page is loaded, ofa.js will automatically wrap the child page in the parent page container.

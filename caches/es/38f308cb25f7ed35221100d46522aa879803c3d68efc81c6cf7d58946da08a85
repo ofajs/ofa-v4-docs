@@ -1,9 +1,0 @@
-```html
-<button id="btn">Haz click una vez</button>
-<script>
-  // Vincula la función de manejo del evento de clic, pero solo se ejecutará una vez
-  $("#btn").one("click", () => {
-    alert("¡Botón clickeado una vez!");
-  });
-</script>
-```

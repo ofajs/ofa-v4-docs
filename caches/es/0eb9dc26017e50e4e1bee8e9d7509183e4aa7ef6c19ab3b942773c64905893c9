@@ -1,1 +1,0 @@
-Puede usar `$ele.css = 'color:red;...'` para establecer el estilo de un elemento, donde `'color:red;...'` es una cadena que contiene reglas de estilo CSS.

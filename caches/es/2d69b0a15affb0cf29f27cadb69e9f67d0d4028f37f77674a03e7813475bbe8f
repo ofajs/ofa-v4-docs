@@ -1,5 +1,0 @@
-<template is="exm-article">
-    <a href="../../publics/examples/attr-trans/demo.html" preview></a>
-    <a href="../../publics/examples/attr-trans/simple-btn.html" main></a>
-</template>
-

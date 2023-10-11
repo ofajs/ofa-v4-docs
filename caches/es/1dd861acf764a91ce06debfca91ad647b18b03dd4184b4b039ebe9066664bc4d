@@ -1,3 +1,0 @@
-- Cuando se hace clic en el botón 'Añadir resalte', se agrega la clase `highlight` al elemento `<div>` utilizando el método `classList.add()`, lo que le da un fondo amarillo.
-- Cuando se hace clic en el botón 'Eliminar resalte', se elimina la clase `highlight` del nombre de clase del elemento `<div>` utilizando el método `classList.remove()`, lo que restaura el estilo original.
-- Cuando se hace clic en el botón 'Alternar resalte', se alterna la presencia de la clase `highlight` en el elemento `<div>` utilizando el método `classList.toggle()`. Si la clase ya estaba presente, se elimina; si no estaba presente, se agrega, logrando así el cambio de estilo.

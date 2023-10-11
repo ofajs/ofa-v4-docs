@@ -1,1 +1,0 @@
-The `formData` method is used to generate an object containing the values of all form elements within the target element. This object reflects the changes in form elements in real-time.

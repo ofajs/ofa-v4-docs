@@ -1,1 +1,0 @@
-El uso del componente `o-router` se consigue envolviéndolo en el exterior del componente `o-app`. Esto vincula las rutas in-app a la pestaña actual del navegador.

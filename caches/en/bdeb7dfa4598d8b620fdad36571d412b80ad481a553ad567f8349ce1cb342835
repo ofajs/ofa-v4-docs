@@ -1,3 +1,0 @@
-- `selector`: Selects the element to bind the event handler to.
-- `eventName`: The name of the event to bind.
-- `eventHandler`: The event handler to execute.

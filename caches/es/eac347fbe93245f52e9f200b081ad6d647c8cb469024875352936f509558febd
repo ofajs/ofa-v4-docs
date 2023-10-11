@@ -1,1 +1,0 @@
-Puedes utilizar el atributo `on:click` en la plantilla de la página para vincular un evento de clic y llamar al método `goto` en el módulo para realizar la navegación por rutas.

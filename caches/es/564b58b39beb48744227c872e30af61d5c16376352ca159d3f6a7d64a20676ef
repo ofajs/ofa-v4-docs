@@ -1,3 +1,0 @@
-- **$data**: representa los datos del elemento de relleno. Al manipular $data, puede obtener o modificar los datos de cada elemento de relleno.
-- **$index**: representa el índice del elemento de datos actual en la colección de datos.
-- **$host**: representa el componente actual en sí mismo. Si desea obtener los datos del componente o llamar a sus métodos, debe utilizar $host para acceder al componente.

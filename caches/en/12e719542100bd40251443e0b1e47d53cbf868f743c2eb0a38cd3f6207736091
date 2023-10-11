@@ -1,1 +1,0 @@
-If you need to trigger events across the boundaries of Shadow DOM, you can add the `composed` attribute.
