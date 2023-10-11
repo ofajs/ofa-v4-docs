@@ -1,0 +1,1 @@
+Event bubbling refers to the propagation of an event along the DOM tree when it is triggered on an element, sequentially triggering the same type of event on parent elements. If you want to stop the event from further bubbling after handling it on a specific element, you can use the `event.stopPropagation()` method.

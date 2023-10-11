@@ -1,0 +1,1 @@
+In some cases, you may need to determine whether the page has been fully loaded so that you can perform certain operations. `ofa.js` provides several methods to determine if the page has finished loading.

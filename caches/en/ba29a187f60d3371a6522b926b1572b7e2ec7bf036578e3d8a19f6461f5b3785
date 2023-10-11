@@ -1,0 +1,1 @@
+In Web Components, Shadow DOM provides an isolated container for encapsulating the styles and structure of a component. This means that the styles and DOM structure inside the component will not interfere with the external styles and structure, ensuring the predictability and maintainability of the component.

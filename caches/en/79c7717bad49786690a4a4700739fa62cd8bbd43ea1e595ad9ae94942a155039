@@ -1,0 +1,1 @@
+In the above example, we used the `$` symbol to select three elements with different `id`s and modified their content by setting the `text`, `html`, and `value` attributes.

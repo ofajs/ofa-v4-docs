@@ -1,0 +1,1 @@
+In the example above, first select the parent element with the `parent` class using `$(".parent")`, and then use `$(".child")` to search for the child element with the `child` class within this parent element. Then modify the text content of the child element to "Modified child element".

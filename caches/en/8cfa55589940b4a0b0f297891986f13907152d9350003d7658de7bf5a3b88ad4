@@ -1,0 +1,1 @@
+In the above example, different content will be rendered based on the value of `condition`, achieving the effect of rendering with multiple conditions.

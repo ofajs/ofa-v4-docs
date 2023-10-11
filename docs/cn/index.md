@@ -55,8 +55,8 @@
 <punch-logo style="margin:50px 0 0 100px;">
     <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
     <h2>不加班了</h2>
-    <p slot="fly">现在就要</p>
-    <p slot="fly">晚点再走</p>
+    <p slot="fly">下班给我</p>
+    <p slot="fly">迟点下班</p>
     <p slot="fly">周末加班</p>
 </punch-logo>
 ```

@@ -1,0 +1,14 @@
+```html
+<template component>
+  <div>{{txt}}</div>
+  <input type="text" sync:value="txt" />
+  <script>
+    export default {
+      tag: "sync-demo",
+      data: {
+        txt:"I am txt",
+      },
+    };
+  </script>
+</template>
+```

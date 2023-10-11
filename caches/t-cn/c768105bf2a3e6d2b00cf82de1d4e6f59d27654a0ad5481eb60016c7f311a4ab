@@ -1,1 +1,0 @@
-首先，創建一個名為 `simple-button.html` 的文件，其中使用 `<template>` 標簽，並添加 `component` 屬性以標識為組件。

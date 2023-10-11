@@ -1,0 +1,1 @@
+The `:host` selector is used to select the outer container of the component itself. This selector can be used to define the style of the component.

@@ -1,0 +1,3 @@
+- Add Class Name: `$ele.classList.add('className')`, adds the specified class name to the element's classList.
+- Remove Class Name: `$ele.classList.remove('className')`, removes the specified class name from the element's classList.
+- Toggle Class Name: `$ele.classList.toggle('className')`, removes the class name if it already exists in the element's classList; otherwise, adds the class name.

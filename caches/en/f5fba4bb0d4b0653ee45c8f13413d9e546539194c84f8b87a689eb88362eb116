@@ -1,0 +1,1 @@
+By following the steps above, you have successfully created an application window using the `o-app` component. The `o-app` component will load the page based on the settings in the configuration data, display a loading prompt or a loading failure prompt, and support page transition animations. This way, you can quickly build a fully functional and interactive application.

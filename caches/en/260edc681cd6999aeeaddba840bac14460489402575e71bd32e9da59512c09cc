@@ -1,0 +1,8 @@
+```javascript
+// jQuery Code
+$("#target").html("some html code"); // Set html
+$("#target").text("set text"); // Set text
+var ele_text = $("#target").text(); // Get text
+var parents = $("#target").parents(); // Get an array of all parent layers
+var child = $("#target").children()[0]; // Get the first child element
+```

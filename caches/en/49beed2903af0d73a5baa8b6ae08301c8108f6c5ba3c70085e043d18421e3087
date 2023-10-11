@@ -1,0 +1,16 @@
+```html
+<div class="parent">
+  <p>Hello World</p>
+  <div class="child">
+    <span>This is a child element</span>
+  </div>
+</div>
+<script>
+  // Select the parent element and find the child element
+  const parentElement = $(".parent");
+  const childElement = parentElement.$(".child");
+
+  // Modify the text content of the child element
+  childElement.text = "Modified child element";
+</script>
+```

@@ -1,0 +1,1 @@
+`created` lifecycle hook is triggered when a component is created. At this stage, the component's data has not been initialized and the template content has not been rendered. You can perform some initialization operations at this stage or prepare data to be used in later stages.

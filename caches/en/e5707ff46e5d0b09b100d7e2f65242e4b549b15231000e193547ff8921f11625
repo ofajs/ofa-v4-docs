@@ -1,0 +1,1 @@
+It is not a wise choice to put all excessive logic in one component; we can separate the logic into another component and import it in the current component using the `l-m` approach.

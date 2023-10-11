@@ -1,0 +1,1 @@
+In the `page1.html` page module, we defined a title and a button. Clicking the button will navigate to another page module `page2.html`. We also added a link with the `olink` attribute, and clicking the link will also navigate to `page2.html`.

@@ -1,0 +1,1 @@
+`emit` method is used to manually trigger a specific event bound to an element. By using the `emit` method, we can trigger the execution of event handling functions without performing any actual operations.

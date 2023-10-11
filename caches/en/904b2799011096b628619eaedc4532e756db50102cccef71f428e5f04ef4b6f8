@@ -1,0 +1,1 @@
+The `off` method is used to remove event handlers that have been bound using the `on` method. When a handler for a certain event is no longer needed, the `off` method can be used to remove it from the element, preventing it from being executed repeatedly or causing memory leaks.

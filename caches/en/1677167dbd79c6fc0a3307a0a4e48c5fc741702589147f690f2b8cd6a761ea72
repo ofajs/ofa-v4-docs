@@ -1,0 +1,1 @@
+In the above example, two components write data to themselves during the `attached` lifecycle. Then, the `obj` in the component becomes the shared data. After the `detached` lifecycle, the previously shared data is set to `null` to ensure data recycling.

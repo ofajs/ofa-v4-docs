@@ -1,0 +1,8 @@
+// MyComponent.js
+export const type = $.COMP;
+
+export const data = {
+  greeting: "Hello, World!",
+  inputValue: "",
+  customValue: "Custom Value",
+};

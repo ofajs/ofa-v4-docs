@@ -1,0 +1,1 @@
+SCSR is a page module that runs in single-file mode without using the `o-page` tag, allowing rendering on the page. Specifically, the template code of the page module is directly placed within the `o-app`.

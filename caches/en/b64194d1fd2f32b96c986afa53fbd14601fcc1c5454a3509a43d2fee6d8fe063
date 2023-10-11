@@ -1,0 +1,1 @@
+Through SCSR, the content inside the `template` tag will be directly rendered on the page, and this part of the content is actually the page module in single-file mode.

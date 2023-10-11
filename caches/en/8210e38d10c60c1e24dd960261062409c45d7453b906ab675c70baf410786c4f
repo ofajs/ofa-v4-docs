@@ -1,0 +1,16 @@
+```html
+<!-- layout-page.html -->
+<template page>
+  <style>
+    /* Set the container element as relative positioning */
+    .parent-container {
+      position: relative;
+    }
+  </style>
+  
+  <!-- Set the container element for inserting subpages -->
+  <div class="parent-container">
+    <slot></slot>
+  </div>
+</template>
+```

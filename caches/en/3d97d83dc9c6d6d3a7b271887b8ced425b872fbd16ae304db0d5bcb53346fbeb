@@ -1,0 +1,1 @@
+In some cases, multiple pages share the same parent page as a container. When these pages navigate between each other, the parent page will not be refreshed. In this case, the parent page can still listen for changes in the route and perform corresponding operations without refreshing the page.

@@ -1,0 +1,1 @@
+`ready` lifecycle hook is triggered after the component's data and template are initialized, indicating that the component is ready. At this stage, you can access the component's data, and the template has been rendered, allowing you to perform some interactive operations related to the interface.

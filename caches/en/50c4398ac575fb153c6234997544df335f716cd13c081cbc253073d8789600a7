@@ -1,0 +1,3 @@
+- The function registered with `watch` will only be triggered once during a single-threaded change. Therefore, even if the value being listened to is modified multiple times within a single thread, it will only be triggered once.
+- The first parameter is the current value.
+- The second parameter is an object that contains the `watchers` data set. In general, there will only be one object on `watchers`, and you can obtain the `oldValue` from this object. When the value being listened to in a single thread is changed multiple times, this data set will record the changes multiple times.

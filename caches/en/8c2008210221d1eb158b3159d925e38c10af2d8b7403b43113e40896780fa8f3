@@ -1,0 +1,1 @@
+In addition to searching for elements globally, you can also search for all matching child elements within a specific element using the following syntax: `$('xxx').all('xxxx')`.

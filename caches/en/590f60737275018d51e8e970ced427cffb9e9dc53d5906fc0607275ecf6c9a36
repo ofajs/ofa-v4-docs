@@ -1,0 +1,1 @@
+Custom components do not have a defined 'display' property by default, so it needs to be defined manually. In the component's style, the ':host' selector can be used to add styles specific to the component itself.

@@ -1,0 +1,16 @@
+```html
+<button id="btn">Click Me</button>
+<script>
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+
+  // Bind click event handler
+  $("#btn").on("click", handleClick);
+
+  // Remove click event handler after 5 seconds
+  setTimeout(() => {
+    $("#btn").off("click", handleClick);
+  }, 5000);
+</script>
+```

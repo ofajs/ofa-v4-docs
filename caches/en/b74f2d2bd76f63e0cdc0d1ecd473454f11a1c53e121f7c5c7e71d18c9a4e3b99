@@ -1,0 +1,1 @@
+Just use the o-router component to link the routing inside the app component to the current webpage. Once the page is bound to the router, the routing state of the page can be maintained even when the page is refreshed.

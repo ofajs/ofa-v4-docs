@@ -1,0 +1,1 @@
+`tag` is used to get the tag name (in lowercase form) of the current element, similar to the `tagName` of DOM elements.

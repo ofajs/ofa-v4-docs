@@ -1,0 +1,1 @@
+You can use the `on:click` attribute in the page template to bind a click event and call the `goto` method on the module for routing.

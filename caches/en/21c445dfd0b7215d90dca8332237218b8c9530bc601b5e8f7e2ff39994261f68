@@ -1,0 +1,1 @@
+In the above example, `{{username}}` will be replaced by the value of the `username` property in the component's data, thus displaying "Welcome, JohnDoe!" on the interface.

@@ -1,0 +1,1 @@
+It is worth noting that data synchronization can only transmit **strings** or **numbers**, and cannot transmit other data types.

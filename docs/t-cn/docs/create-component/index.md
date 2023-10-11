@@ -16,9 +16,9 @@ ofa.js 使用基礎的 HTML 和 JavaScript 文件來定義組件，避免引入�
 
 下面，我們將創建一個簡單的按鈕組件，命名為 **simple-button**，它將具有比原生按鈕更美觀的樣式。
 
-首先，創建一個名為 `simple-button.html` 的文件，其中使用 `<template>` 標簽，並添加 `component` 屬性以標識為組件。
+首先，創建一個名為 `simple-button.html` 的文件，其中使用 `template` 標簽，並添加 `component` 屬性以標識為組件。
 
-然後，在 `<template>` 內部編寫組件的模板代碼。接著，在模板內容下方，添加一個 `<script>` 標簽，將組件的 JavaScript 代碼放入其中。
+然後，在 `template` 內部編寫組件的模板代碼。接著，在模板內容下方，添加一個 `script` 標簽，將組件的 JavaScript 代碼放入其中。
 
 ```html
 <!-- simple-button.html -->

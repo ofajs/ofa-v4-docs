@@ -1,0 +1,1 @@
+The `$.all('xxx')` method is used to find all elements on the page that meet the selector condition and return them as a collection of elements. This allows for batch operations on multiple elements in the page.

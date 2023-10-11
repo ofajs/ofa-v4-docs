@@ -1,0 +1,1 @@
+In the above example, when the button is clicked, a dialog displaying "Button clicked!" will pop up. However, after 5 seconds, the click event handler is removed using the `off` method, so the dialog will not pop up again when the button is clicked.

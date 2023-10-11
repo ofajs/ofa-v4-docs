@@ -1,0 +1,31 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulate Child Elements</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <div>
+    <p>First Paragraph</p>
+  </div>
+  <script>
+    const $paragraphs = $('p');
+
+    // Add a new div element as a child element
+    const $newDiv = $('<div>New Div</div>');
+    $paragraphs.push($newDiv);
+
+    setTimeout(()=>{
+      // Remove the last child element
+      $paragraphs.pop();
+
+      console.log($paragraphs);
+    },1000)
+
+  </script>
+</body>
+</html>
+```

@@ -1,0 +1,1 @@
+In the example above, `$.all("p")` is used to find all the `p` tag elements on the page and perform a batch operation on them, modifying their text content to "Modified Paragraph 1", "Modified Paragraph 2", and "Modified Paragraph 3".

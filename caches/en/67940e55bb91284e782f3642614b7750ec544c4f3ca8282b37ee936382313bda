@@ -1,0 +1,1 @@
+- `$ele.data`: Returns the dataset object of the element to manipulate the element's data attribute.

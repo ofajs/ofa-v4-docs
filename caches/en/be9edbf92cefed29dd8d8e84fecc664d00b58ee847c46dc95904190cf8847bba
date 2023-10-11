@@ -1,0 +1,1 @@
+In the configuration module of the application, customize the content displayed when the page fails to load by setting the `fail` function.

@@ -1,0 +1,11 @@
+```html
+<div id="myElement" style="color: blue; font-size: 18px;">Hello World</div>
+<script>
+  const myElement = $("#myElement");
+
+  // Set the color style of the element
+  myElement.css.color = 'red';
+  // Remove the font size style of the element
+  myElement.css.fontSize = '';
+</script>
+```

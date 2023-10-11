@@ -1,0 +1,1 @@
+Once `ofa.js` is loaded, a page component called `o-page` will be automatically added to the global scope. This component is used to load page modules, which are a special type of component module that is not registered as a custom tag, but loaded through the `o-page` component.

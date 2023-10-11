@@ -1,0 +1,1 @@
+Text rendering is wrapped in double braces, that is `{{xxx}}`, where xxx represents the component's attribute name.

@@ -1,0 +1,1 @@
+The `o-router` component also provides a `fix-body` attribute. When you set this attribute, the component will automatically add styles to the `<html>` tag so that the size of the application matches the size of the page, making the content of the application fill the entire window.

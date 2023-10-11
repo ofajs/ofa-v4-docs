@@ -1,0 +1,1 @@
+In some scenarios, you may already know that the user is about to navigate to the next page. To enhance the user experience, you can pre-cache the page modules of the next page, so that they can be loaded immediately when the actual navigation occurs. This reduces the waiting time for users and makes their experience smoother.

@@ -1,0 +1,1 @@
+If you are using a different editor, you can also create an Nginx or Apache server as long as it can support static HTML viewing. Doing so will ensure that you can preview and develop your components properly.

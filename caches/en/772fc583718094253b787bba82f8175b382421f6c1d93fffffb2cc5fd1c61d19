@@ -1,0 +1,1 @@
+In this example, we implement an editable text input box using the custom component `custom-input`. This component is used as a form element and interacts with data using the `value` attribute. When using the `formData` method, we add `"input, custom-input"` as parameters to correctly initialize the form data.

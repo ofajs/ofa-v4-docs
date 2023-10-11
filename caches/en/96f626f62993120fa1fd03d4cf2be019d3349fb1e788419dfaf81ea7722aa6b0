@@ -1,0 +1,1 @@
+The `o-router` component is a component used to bind the routes within `o-app` to the current browser tab. It can help you manage page routes and display more conveniently.

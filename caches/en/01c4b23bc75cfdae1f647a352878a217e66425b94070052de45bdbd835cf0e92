@@ -1,0 +1,1 @@
+You can use the `on` method to bind events. **Events** are the most fundamental concept in development. Applications rely on the triggering of events to generate feedback and achieve interactivity.

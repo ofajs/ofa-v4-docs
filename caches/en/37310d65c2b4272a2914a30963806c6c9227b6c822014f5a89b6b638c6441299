@@ -1,0 +1,14 @@
+```html
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+<script>
+  // Find all p tag elements
+  const allParagraphs = $.all("p");
+
+  // Modify the text content of all p tag elements
+  allParagraphs.forEach((paragraph, index) => {
+    paragraph.text = `Modified Paragraph ${index + 1}`;
+  });
+</script>
+```

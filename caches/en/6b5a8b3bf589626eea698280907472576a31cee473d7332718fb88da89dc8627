@@ -1,0 +1,1 @@
+`ele` is used to access the actual DOM element of the `$` instance, so that native JavaScript operations can be performed on that element.

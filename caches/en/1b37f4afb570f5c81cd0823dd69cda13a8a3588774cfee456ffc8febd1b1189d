@@ -1,0 +1,1 @@
+By using this approach, you can configure sub-routes more intuitively. By setting the association between the parent page container and the child pages, you can achieve the loading and rendering of the child pages.

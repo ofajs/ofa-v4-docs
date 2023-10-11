@@ -1,0 +1,12 @@
+```html
+<button id="btn">Click Me</button>
+<script>
+  // Bind click event handler
+  $("#btn").on("click", () => {
+    alert("Button clicked!");
+  });
+
+  // Trigger the click event of the button using the emit method
+  $("#btn").emit("click");
+</script>
+```

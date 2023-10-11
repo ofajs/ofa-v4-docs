@@ -1,0 +1,2 @@
+- `selector`: Select the element to trigger the event.
+- `eventName`: The name of the event to trigger.

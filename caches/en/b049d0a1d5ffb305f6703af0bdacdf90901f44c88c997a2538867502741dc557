@@ -1,0 +1,1 @@
+In many applications, handling form data is a common task. To simplify this process, ofa.js provides a secondary abstraction for handling form data, offering the `formData` method. With this method, you can easily map the values of form elements to an object, and automatically update the data of this object when the values of the form elements change, and vice versa.

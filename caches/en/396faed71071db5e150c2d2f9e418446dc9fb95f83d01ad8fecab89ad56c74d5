@@ -1,0 +1,10 @@
+```html
+<div id="condition-container">
+  <x-if :value="showContent">
+    <div>I am rendered because showContent is true.</div>
+  </x-if>
+  <x-else>
+    <div>I am rendered because showContent is false.</div>
+  </x-else>
+</div>
+```

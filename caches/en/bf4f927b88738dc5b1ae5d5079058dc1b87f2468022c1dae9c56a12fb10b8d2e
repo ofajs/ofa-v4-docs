@@ -1,0 +1,10 @@
+```javascript
+// simple-button.mjs
+export const type = $.COMP;
+
+// The component name that needs to be registered. When the tag attribute is not defined, the registered component name is the same as the file name
+// export const tag = 'simple-button';
+
+// The address of the component template. When not defined, the component with the same name as the current module is loaded by default in the same directory
+// export const temp = './simple-button.html';
+```

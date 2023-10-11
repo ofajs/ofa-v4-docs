@@ -1,0 +1,1 @@
+Usually, we recommend using the direct injection method to add ofa.js, while the npm method is used for compatibility with frameworks such as React and Vue.

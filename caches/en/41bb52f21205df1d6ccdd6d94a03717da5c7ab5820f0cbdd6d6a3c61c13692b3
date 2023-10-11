@@ -1,0 +1,1 @@
+The `$` instance encapsulates elements on the page and can be used to select existing elements as well as to create and manipulate new elements. In this chapter, we will introduce how to create new elements and perform some operations on the `$` instance.

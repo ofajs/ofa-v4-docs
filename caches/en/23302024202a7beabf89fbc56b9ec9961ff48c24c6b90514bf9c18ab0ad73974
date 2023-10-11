@@ -1,0 +1,1 @@
+When the `o-page` component is inside `o-app`, you can use the `<a>` tag with the `olink` attribute to achieve page navigation. This navigation will not affect the current page, but will only navigate within `o-app`, similar to using an `<iframe>`.

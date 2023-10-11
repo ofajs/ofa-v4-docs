@@ -1,0 +1,1 @@
+Using the `o-router` component is achieved by wrapping it outside the `o-app` component. This allows binding the application's routes to the current browser tab.

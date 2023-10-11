@@ -1,0 +1,1 @@
+By default, `formData()` listens to all `input`, `select`, and `textarea` elements within the target element. You can specify specific form elements to listen to by passing a selector.

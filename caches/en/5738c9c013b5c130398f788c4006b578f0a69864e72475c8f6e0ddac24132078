@@ -1,0 +1,1 @@
+In the example above, when you click the "Submit" button, it will display "Hello, {name}! Form submission prevented.", but it will not trigger the "Form Submitted!" alert. This is because we called `event.preventDefault()` in the event handler for the submit button, preventing the form's default submission behavior.

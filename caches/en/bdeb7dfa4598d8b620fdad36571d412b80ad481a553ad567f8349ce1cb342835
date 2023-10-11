@@ -1,0 +1,3 @@
+- `selector`: Element to bind event handler to.
+- `eventName`: Event name to bind.
+- `eventHandler`: Event handling function to be executed.

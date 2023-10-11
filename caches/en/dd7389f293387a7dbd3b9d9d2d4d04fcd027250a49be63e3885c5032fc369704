@@ -1,0 +1,1 @@
+In addition to being able to use template syntax, ofa.js also provides dedicated rendering components for templates, including conditional rendering components and filling rendering components.

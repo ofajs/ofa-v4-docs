@@ -1,0 +1,37 @@
+```javascript
+// button-component.mjs
+export const type = $.COMP; // This must be defined first and cannot be a dynamic parameter
+export const tag = "my-button";
+export const temp = "./my-button-template.html";
+
+export default async function ({ load, url, query }) {
+  console.log("url:", url); // Output the file name of the current module
+  console.log("query:", query); // Output the object converted from the URL parameters of the current module
+
+  const asyncData = await load("./async-data.mjs"); // Use load to asynchronously load modules
+  console.log("asyncData:", asyncData); // Output the asynchronously loaded module data
+
+  return {
+    data: {
+      count: 0,
+    },
+    attrs: {
+      buttonText: "Click Me",
+    },
+    watch: {
+      count(newValue, { watchers }) {
+        let oldValue;
+        if (watchers) {
+          oldValue = watchers[0].oldValue;
+        }
+        console.log(`count changed from ${oldValue} to ${newValue}`);
+      },
+    },
+    proto: {
+      sayHello() {
+        alert("Hello Count:" + this.count);
+      },
+    },
+  };
+}
+```

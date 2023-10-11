@@ -1,0 +1,1 @@
+ofa.js has excellent data sharing capabilities. Its instances are developed based on the data sharing library [Stanz](https://github.com/kirakiray/stanz). The objects on the instances are all synchronous. If you want to achieve data sharing, you just need to create a separate Stanz object and let all components refer to it directly.

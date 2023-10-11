@@ -1,0 +1,23 @@
+```html
+<template component>
+  comp1 =>
+  <input type="text" sync:value="obj.val" />
+  <script>
+    export const tag = "comp-three";
+
+    export default async function ({ load }) {
+      const { data } = await load("./data.mjs");
+
+      return {
+        data: {
+        //   obj: data // ❌ This operation is wrong, setting data directly cannot be recycled
+          obj: {},
+        },
+        ready() {
+          this.obj = data; // ❌ Setting in the ready lifecycle cannot determine when to clear, which may cause memory leaks. The safest method is to set it in the attached lifecycle and delete it after detached
+        },
+      };
+    }
+  </script>
+</template>
+```

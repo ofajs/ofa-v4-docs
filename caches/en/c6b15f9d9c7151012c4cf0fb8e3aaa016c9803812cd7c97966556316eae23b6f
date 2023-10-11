@@ -1,0 +1,1 @@
+`data` parameter is used to define the default data for component elements. Once the instantiation is complete, you can use **template syntax**.

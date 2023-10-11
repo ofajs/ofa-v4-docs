@@ -1,0 +1,1 @@
+In the above example, `x-fill` uses a filling template called `fillTemplate` and passes an array to it. The `{{ $data }}` is used in the filling template to render each element in the array, thus achieving the cyclic filling of different string contents.
