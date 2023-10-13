@@ -71,6 +71,8 @@ export default async function () {
   };
 }
 ```
+
+
 ```html
 <!-- lifecycle-demo-template.html -->
 <l-m src="../simple-button/simple-button.mjs"></l-m>

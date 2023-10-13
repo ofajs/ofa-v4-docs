@@ -14,6 +14,7 @@
 </script>
 ```
 
+
 ## ele
 
 `ele` 用於獲取 `$` 實例的實際 DOM 元素，從而可以對該元素進行原生的 JavaScript 操作。
@@ -26,6 +27,7 @@
     actualElement.style.color = "red"; // Change text color to red
 </script>
 ```
+
 
 ## index 
 
@@ -42,6 +44,7 @@
     console.log($targetSpan.index); // Output: 2
 </script>
 ```
+
 
 ## parent 和 parents  
 
@@ -75,6 +78,7 @@
 </body>
 </html>
 ```
+
 
 ## next、nexts、prev、prevs、siblings  
 
@@ -122,4 +126,3 @@
 </body>
 </html>
 ```
-

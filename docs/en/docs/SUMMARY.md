@@ -24,4 +24,3 @@
   - [Subrouting](./create-app/subrouting.md)
   - [Route Binding](./create-app/o-router.md)
   - [SCSR Solution](./create-app/scsr.md)
-

@@ -96,3 +96,4 @@ In the above example, we obtained instances of all `p` elements using `$` and ad
 
 Through the examples above, you can understand some basic operations of the `$` instance, including creating new elements and accessing and manipulating child elements. The `$` instance provides a convenient way to manipulate elements on the page.
 
+

@@ -94,4 +94,3 @@ myElement.data.anotherInfo = "another value";
 ```
 
 這樣就會在元素上添加一個 `data-another-info` 屬性，並設置其值為 `"another value"`。
-

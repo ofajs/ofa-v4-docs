@@ -297,9 +297,8 @@ var child = $("#target")[0]; // Get the first child element
 
 </simp-block>
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.26/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.27/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
 <l-m src="../publics/comps/case-switch.html"></l-m>
 <l-m src="../publics/comps/split-code.html"></l-m>
-

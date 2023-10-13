@@ -30,8 +30,5 @@
       "t-cn": "./docs/t-cn",
       "en": "./docs/en"
     }
-  },
-  "devDependencies": {
-    "obook": "^2.1.26"
   }
 }

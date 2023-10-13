@@ -134,4 +134,3 @@ async function doSomethingAfterPageLoad() {
   // Perform your operations
 }
 ```
-

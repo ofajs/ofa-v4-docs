@@ -17,3 +17,4 @@ Lifecycle hooks provide an opportunity to execute code at different stages of a 
 
 - **detached()**: Called when the component is removed from the document. At this stage, you can perform cleanup work, cancel interactions with the external environment, and release resources.
 
+

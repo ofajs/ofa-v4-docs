@@ -93,4 +93,3 @@ You can modify a specific style property of an element by using `$ele.css = {...
 ```
 
 In the example above, by using `{ ...myElement.css, color: 'red' }`, we only modified the color style of the element, while keeping other style properties unchanged. This is a convenient trick that allows flexible modifications of the element's style.
-

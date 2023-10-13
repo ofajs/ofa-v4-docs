@@ -26,4 +26,3 @@
   - [Setting Up 404 Page](./set404.md)
   - [Using Hash Router](./use-hash-router.md)
   - [Using SCSR Solution](./use-scsr.md)
-

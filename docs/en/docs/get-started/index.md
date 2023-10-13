@@ -29,4 +29,3 @@ require("ofa.js"); // cmd
 After referencing the resource, ofa.js will set a `$` property on the global scope, and all functionalities are accessed through `$`. Its usage will be explained in detail in the following tutorials.
 
 Usually, we recommend using the direct injection method to add ofa.js, while the npm method is used for compatibility with frameworks such as React and Vue.
-

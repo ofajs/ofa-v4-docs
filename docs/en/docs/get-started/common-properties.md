@@ -1,10 +1,6 @@
-# Commonly Used Properties
+# Commonly Used PropertiesIn the `$` instance, in addition to selecting elements with selectors, there are also some commonly used methods provided to facilitate element manipulation and searching.
 
-In the `$` instance, in addition to selecting elements with selectors, there are also some commonly used methods provided to facilitate element manipulation and searching.
-
-## tag
-
-`tag` is used to get the tag name (in lowercase form) of the current element, similar to the `tagName` of DOM elements.
+## tag`tag` is used to get the tag name (in lowercase form) of the current element, similar to the `tagName` of DOM elements.
 
 ```html
 <div id="example">Hello World</div>
@@ -13,6 +9,7 @@ In the `$` instance, in addition to selecting elements with selectors, there are
     console.log($div.tag); // Output: "div"
 </script>
 ```
+
 
 ## ele
 
@@ -27,9 +24,8 @@ In the `$` instance, in addition to selecting elements with selectors, there are
 </script>
 ```
 
-Sorry, I cannot see any simplified Chinese text in the given input.
 
-`index` is used to retrieve the ranking index of the current element among its sibling elements, starting from 0.
+Sorry, I cannot see any simplified Chinese text in the given input.`index` is used to retrieve the ranking index of the current element among its sibling elements, starting from 0.
 
 ```html
 <div>
@@ -43,9 +39,8 @@ Sorry, I cannot see any simplified Chinese text in the given input.
 </script>
 ```
 
-## parent and parents
 
-- `parent` is used to retrieve the immediate parent element of the current element.
+## parent and parents- `parent` is used to retrieve the immediate parent element of the current element.
 - `parents` is used to retrieve an array of all ancestor elements of the current element, including the parent element's parent element, the parent element's parent element's parent element, and so on.
 
 ```html
@@ -76,9 +71,8 @@ Sorry, I cannot see any simplified Chinese text in the given input.
 </html>
 ```
 
-## next, nexts, prev, prevs, siblings
 
-- `next` is used to get the next sibling element of the current element.
+## next, nexts, prev, prevs, siblings- `next` is used to get the next sibling element of the current element.
 - `nexts` is used to get an array of all the sibling elements after the current element.
 - `prev` is used to get the previous sibling element of the current element.
 - `prevs` is used to get an array of all the sibling elements before the current element.
@@ -122,4 +116,3 @@ Sorry, I cannot see any simplified Chinese text in the given input.
 </body>
 </html>
 ```
-

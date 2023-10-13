@@ -17,4 +17,3 @@ In this example, please click the <span style='font-family: "iconfont"'>&#xe7cb;
   <o-app src="./app-config.mjs"></o-app>
 </o-router>
 ```
-

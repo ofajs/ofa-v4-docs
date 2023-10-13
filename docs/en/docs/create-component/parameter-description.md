@@ -255,4 +255,3 @@ export default async function ({ load, url, query }) {
 In this example, we demonstrate how to customize the behavior of components using the registration parameters of ofa.js. By configuring these parameters appropriately, you can better adapt to different component requirements and achieve more flexible component development.
 
 Write a documentation on the use of the proto registration parameters for components.
-

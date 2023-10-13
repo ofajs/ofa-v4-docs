@@ -94,4 +94,3 @@ myElement.data.anotherInfo = "another value";
 ```
 
 This will add a `data-another-info` attribute to the element and set its value to "another value".
-

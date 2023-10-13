@@ -63,4 +63,3 @@ export const routerChange = (current, type) => {
 ```
 
 In the above example, the `routerChange` function receives two parameters. `current` represents the address of the current page, and `type` represents the type of navigation. When the page undergoes a router change, this function will be triggered and output the corresponding information.
-

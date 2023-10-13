@@ -18,4 +18,3 @@ In this example, we create a component called `test-demo`. The component contain
 - The `x-else` tag does not require a `value` attribute. It will render its content when none of the previous conditions are met. In this example, if `count` is neither an even number nor a multiple of 3, green text will be displayed. The `x-else` tag can also be placed immediately after `x-if`.
 
 Through this method, you can dynamically render different content based on different conditions, achieving flexible interaction and display effects.
-

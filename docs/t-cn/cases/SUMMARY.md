@@ -26,4 +26,3 @@
   - [設置404頁面](./set404.md)
   - [使用 hash router](./use-hash-router.md)
   - [使用scsr方案](./use-scsr.md)
-

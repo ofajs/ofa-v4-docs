@@ -215,4 +215,3 @@ export default async ({ load }) => {
   load('./pages/next-page.mjs'); // This is only used for caching and is not a necessary module for the current page, so there is no need to add await
 };
 ```
-

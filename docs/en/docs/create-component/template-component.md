@@ -171,4 +171,3 @@ When filling in the template, you can use special placeholders to access differe
 - `{{ $host }}`: represents the instance of the host component, can be used to access the host component's properties and methods.
 
 These special identifiers can help you dynamically access and render different data within the template. In the example, you can see how `{{ $data.title }}` is used to access the title of the passed data, and how `{{ $host.num }}` is used to access the property of the host component.
-

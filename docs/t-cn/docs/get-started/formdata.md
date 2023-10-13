@@ -70,4 +70,3 @@
 你可以通過訪問 [https://github.com/kirakiray/stanz](https://github.com/kirakiray/stanz) 來詳細了解 Stanz 的使用教程和功能。
 
 通過以上的表單功能，你可以輕松地處理表單元素的值和變化，從而提高表單操作的便捷性和效率。
-

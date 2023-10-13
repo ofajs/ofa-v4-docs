@@ -215,4 +215,3 @@ export default async ({ load }) => {
   load('./pages/next-page.mjs'); // 這是一個僅用於緩存，非當前頁必須模塊，無需添加 await
 };
 ```
-

@@ -43,4 +43,3 @@ The `o-router` component also provides a `fix-body` attribute. When you set this
   </body>
 </html>
 ```
-

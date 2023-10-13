@@ -13,3 +13,4 @@ During the filling and rendering process, you can use the following special vari
 - **$index**: Represents the index of the current data item in the data collection.
 - **$host**: Represents the current component itself. If you want to obtain the data of the component or call the component's methods, you need to use $host to access the component.
 
+

@@ -17,4 +17,3 @@
   <o-app src="./app-config.mjs"></o-app>
 </o-router>
 ```
-

@@ -162,6 +162,7 @@ $(selector).one(eventName, eventHandler);
 - `eventName`: Event name to bind.
 - `eventHandler`: Event handling function to be executed.
 
+
 #### Example
 
 ```html
@@ -185,7 +186,7 @@ In the above example, when the button is clicked, a dialog box will appear displ
 ```javascript
 $(selector).emit(eventName);
 ```
-
+ 
 - `selector`: Select the element to trigger the event.
 - `eventName`: The name of the event to trigger.
 
@@ -207,6 +208,7 @@ $(selector).emit(eventName);
 In the example above, the `emit` method is used to manually trigger the button's click event. As a result, a dialog box will appear displaying "Button clicked!" even though the button was not actually clicked.
 
 Note: Using the `emit` method does not simulate mouse clicks or other actual events. It simply directly calls the bound event handling function. Therefore, if you want to trigger the execution of an event under specific circumstances, you can use the `emit` method.
+
 
 When you bind an event, sometimes you may want to stop the event from further propagation (bubbling) or cancel the default behavior of the event. Below, we will introduce how to prevent event propagation and cancel default events after the event is triggered.
 
@@ -252,6 +254,8 @@ Example code:
 </body>
 </html>
 ```
+
+
 In the example above, when you click the button "Click Me", it will display "Button Clicked!" but not trigger "Inner Div Clicked!" and "Outer Div Clicked!". This is because we called `event.stopPropagation()` in the button's click event handler, which prevents the event from further propagation.
 
 ### Cancel Default Behavior of an Event
@@ -295,4 +299,3 @@ Example code:
 ```
 
 In the example above, when you click the "Submit" button, it will display "Hello, {name}! Form submission prevented.", but it will not trigger the "Form Submitted!" alert. This is because we called `event.preventDefault()` in the event handler for the submit button, preventing the form's default submission behavior.
-

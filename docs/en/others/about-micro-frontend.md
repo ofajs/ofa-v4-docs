@@ -29,4 +29,3 @@ Although **ofa.js** cannot directly develop components using frameworks such as 
 - [Using Web Components with React](https://reactjs.org/docs/web-components.html)
 - [Using Web Components in React](https://alligator.io/react/using-web-components-in-react/)
 - [Integrating Web Components into React](https://blog.bitsrc.io/integrating-web-components-in-react-17a52a6a28e4)
-

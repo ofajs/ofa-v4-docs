@@ -24,6 +24,7 @@ In this case, when the button is clicked, a message will be output to the consol
 </html>
 ```
 
+
 Mouseenter event
 
 In this case, when the mouse enters the text area, the text color will change to red.
@@ -56,6 +57,7 @@ In this case, when the mouse enters the text area, the text color will change to
   </body>
 </html>
 
+
 ## Keyboard Key Events (keydown)
 
 In this case, when any key is pressed in the input box, the information of the pressed key will be output to the console.
@@ -84,4 +86,3 @@ In this case, when any key is pressed in the input box, the information of the p
 These examples demonstrate the usage of click events, mouse hover events, and keyboard key events. You can try copying these codes into an HTML file and running it in a browser to see the result.
 
 Refer to [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list of all available events.
-

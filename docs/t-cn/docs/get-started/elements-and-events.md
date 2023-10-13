@@ -162,6 +162,7 @@ $(selector).one(eventName, eventHandler);
 - `eventName`: 要綁定的事件名稱。 
 - `eventHandler`: 要執行的事件處理函數。
 
+
 #### 示例
 
 ```html
@@ -185,7 +186,7 @@ $(selector).one(eventName, eventHandler);
 ```javascript
 $(selector).emit(eventName);
 ```
-
+ 
 - `selector`: 選擇要觸發事件的元素。 
 - `eventName`: 要觸發的事件名稱。
 
@@ -207,6 +208,7 @@ $(selector).emit(eventName);
 在上面的示例中，通過 `emit` 方法手動觸發了按鈕的點擊事件，結果會彈出一個對話框顯示 "Button clicked!"，盡管沒有實際點擊按鈕。
 
 注意：使用 `emit` 方法不會模擬鼠標點擊或其他實際事件，它只會直接調用已綁定的事件處理函數。所以，如果你希望在特定情況下觸發事件的執行，可以使用 `emit` 方法。
+
 
 當你綁定事件後，有時你可能希望阻止事件的進一步傳播（冒泡）或取消事件的默認行為。下面將介紹如何在事件觸發後禁止冒泡和取消默認事件。
 
@@ -296,4 +298,3 @@ $(selector).emit(eventName);
 ```
 
 在上面的示例中，當你點擊提交按鈕 "Submit" 後，它會顯示 "Hello, {name}! Form submission prevented."，但不會觸發 "Form Submitted!" 的警報。這是因為我們在提交按鈕的點擊事件處理程序中調用了 `event.preventDefault()`，阻止了表單的提交默認行為。
-

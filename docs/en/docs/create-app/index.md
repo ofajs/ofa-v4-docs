@@ -36,4 +36,3 @@ In addition, the official `ofa.js` also provides a complete **routing** and **SS
 ```
 
 Above is a simple application tutorial code example. The development process of the application will be explained step by step.
-

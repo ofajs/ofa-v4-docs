@@ -18,4 +18,3 @@ SCSR achieves rendering on the page by directly running the single-file mode of 
 ## Caveat
 
 For all pages using the SCSR scheme, except for descriptive content such as title, meta:description, keywords, and page template content, all referenced resources must remain consistent to ensure a consistent user experience after page redirection and refresh.
-

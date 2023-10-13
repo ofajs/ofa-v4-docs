@@ -70,4 +70,3 @@ The object returned by the `formData()` method is called a Stanz object. Stanz i
 You can find detailed tutorials and features of Stanz by visiting [https://github.com/kirakiray/stanz](https://github.com/kirakiray/stanz).
 
 Through the above form functionality, you can easily handle the values and changes of form elements, thereby improving the convenience and efficiency of form operations.
-

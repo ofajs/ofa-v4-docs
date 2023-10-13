@@ -63,4 +63,3 @@ export const routerChange = (current, type) => {
 ```
 
 在上述示例中，`routerChange` 函數接收兩個參數，`current` 表示當前頁面的地址，`type` 表示跳轉的方式。當頁面發生路由切換時，該函數會被觸發，並輸出相應的信息。
-

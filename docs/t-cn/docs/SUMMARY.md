@@ -24,4 +24,3 @@
   - [子路由功能](./create-app/subrouting.md)
   - [路由綁定](./create-app/o-router.md)
   - [SCSR方案](./create-app/scsr.md)
-

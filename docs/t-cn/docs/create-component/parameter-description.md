@@ -255,4 +255,3 @@ export default async function ({ load, url, query }) {
 在這個示例中，我們演示了如何使用 ofa.js 的注冊參數來定制化組件的行為。通過合理地配置這些參數，你可以更好地適應不同的組件需求，實現更靈活的組件開發。
 
 寫一下 組件的注冊參數 的 proto 使用文檔
-

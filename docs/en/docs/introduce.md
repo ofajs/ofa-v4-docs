@@ -35,4 +35,3 @@ ofa.js also provides official solutions for routing and SSG, helping developers 
 ### Compact code size
 
 The code of ofa.js has been carefully optimized, and the size of the compressed .min file is only 38kb (14kb under gzip). This makes ofa.js an efficient front-end framework that can be quickly loaded and used in various network environments.
-

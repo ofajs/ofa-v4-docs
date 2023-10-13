@@ -137,4 +137,3 @@ export const data = $.stanz({
   </script>
 </template>
 ```
-
