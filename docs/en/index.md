@@ -1,4 +1,4 @@
-# ofa.js Progressive JavaScript Framework for the new Generation
+# ofa.js - The No Build JavaScript frameworks
 
 <simp-block>
 
@@ -10,7 +10,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## The easiest JavaScript framework for the new generation
+## The No Build JavaScript frameworks
 
 ### No need for tedious learning, no need for npm, nodejs, webpack, get started immediately
 

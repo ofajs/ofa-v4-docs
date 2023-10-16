@@ -1,4 +1,4 @@
-# ofa.js 新時代漸進式JavaScript框架
+# ofa.js - 不需要打包的 JavaScript 框架
 
 <simp-block>
 
@@ -10,7 +10,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## 新時代最簡單的 JavaScript 框架
+## 不需要打包的 JavaScript 框架
 
 ### 無需繁瑣學習，無需 npm、nodejs、webpack，即刻上手
 
