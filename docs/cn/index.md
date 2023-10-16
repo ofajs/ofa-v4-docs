@@ -1,4 +1,4 @@
-# ofa.js 新时代渐进式JavaScript框架
+# ofa.js - 不需要打包的 JavaScript 框架
 
 <simp-block>
 

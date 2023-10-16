@@ -1,4 +1,4 @@
-# ofa.js Progressive JavaScript Framework for the new Generation
+# ofa.js - The No Build JavaScript frameworks
 
 <simp-block>
 
