@@ -10,7 +10,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## 新时代最简单的 JavaScript 框架
+## 不需要打包的 JavaScript 框架
 
 ### 无需繁琐学习，无需 npm、nodejs、webpack，即刻上手
 
