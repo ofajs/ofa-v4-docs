@@ -1,0 +1,90 @@
+# API 介绍
+
+ofa.js API 如下：
+
+- 实例相关
+  - $
+    - 获取接元素
+    - 生成元素
+      - 字符串
+      - 对象
+  - all
+  - prev
+  - prevs
+  - next
+  - nexts
+  - siblings
+  - parent
+  - parents
+  - ele
+  - clone
+  - root
+  - children
+    - 提一句可以使用所有 Array 的方法
+- 节点操作
+  - 提醒不要在渲染模板内使用
+  - LikeArray的方法
+    - 可以直接使用生成元素
+    - push
+    - pop
+    - shift
+    - unshift
+    - splice
+    - 包括所有的map,forEach
+  - after
+  - before
+  - remove
+  - wrap
+  - unwrap
+- 修改值
+  - html
+  - text
+  - attr
+  - css
+  - style
+  - classList
+  - data
+- 事件相关
+  - on
+  - emit
+    - 穿透组件
+    - 停留事件在元素上
+  - one
+  - off
+- 组件或页面内
+  - shadow
+  - host
+  - app
+  - refresh
+  - PATH
+- 模板专用
+  - 渲染字符串
+    - 提醒不会占位
+  - sync
+  - prop
+  - class
+  - x-if
+    - x-else-if
+    - x-else
+  - x-fill
+- 其他
+  - 盒模型
+    - width
+    - height
+    - clientWidth
+    - clientHeight
+    - offsetWidth
+    - offsetHeight
+    - outerWidth
+    - outerHeight
+  - is
+  - index
+  - length
+  - extend
+  - formData
+- stanz数据相关
+  - watch
+  - watchTick
+  - unwatch
+  - toJSON
+  - toString
