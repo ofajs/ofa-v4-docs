@@ -1,5 +1,7 @@
 # ofa.js - 不需要打包的 JavaScript 框架
 
+<!-- desc: ofa.js 是一種全新的構建用戶界面的框架，無需繁瑣的構建過程，直接引用即可輕松使用。它摒棄了對 npm、Node.js 和 webpack 的依賴，重新回歸了 jQuery 時代的便捷性。 -->
+
 <simp-block>
 
 <punch-logo>
@@ -297,7 +299,7 @@ var child = $("#target")[0]; // 獲取第一個子元素
 
 </simp-block>
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.28/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.30/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
 <l-m src="../publics/comps/case-switch.html"></l-m>
