@@ -1,5 +1,7 @@
 # ofa.js - The No Build JavaScript frameworks
 
+<!-- desc: ofa.js is a new framework for building user interfaces. It can be easily used by directly referencing it, without the need for a complicated building process. It eliminates the dependencies on npm, Node.js, and webpack, and brings back the convenience of the jQuery era. -->
+
 <simp-block>
 
 <punch-logo>
@@ -297,7 +299,7 @@ var child = $("#target")[0]; // Get the first child element
 
 </simp-block>
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.28/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.30/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
 <l-m src="../publics/comps/case-switch.html"></l-m>
