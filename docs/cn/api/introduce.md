@@ -8,6 +8,7 @@ ofa.js API 如下：
     - 生成元素
       - 字符串
       - 对象
+    - 选择符合条件的子元素
   - all
   - prev
   - prevs
