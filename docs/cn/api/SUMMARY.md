@@ -26,3 +26,6 @@
   - [html](./props/html.md)
   - [attr](./props/attr.md)
   - [css](./props/css.md)
+  - [style](./props/style.md)
+  - [classList](./props/class-list.md)
+  - [data](./props/data.md)
