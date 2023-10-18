@@ -16,3 +16,8 @@
   - [子元素](./instance/children.md)
 - 节点操作
   - [添加或删除子节点](./operation/array-like.md)
+  - [before](./operation/before.md)
+  - [after](./operation/after.md)
+  - [remove](./operation/remove.md)
+  - [wrap](./operation/wrap.md)
+  - [unwrap](./operation/unwrap.md)
