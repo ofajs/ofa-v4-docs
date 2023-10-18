@@ -13,4 +13,6 @@
   - [ele](./instance/ele.md)
   - [shadow](./instance/shadow.md)
   - [root](./instance/root.md)
-  - [children](./instance/children.md)
+  - [子元素](./instance/children.md)
+- 节点操作
+  - [添加或删除子节点](./operation/array-like.md)
