@@ -21,3 +21,8 @@
   - [remove](./operation/remove.md)
   - [wrap](./operation/wrap.md)
   - [unwrap](./operation/unwrap.md)
+- 属性操作
+  - [text](./props/text.md)
+  - [html](./props/html.md)
+  - [attr](./props/attr.md)
+  - [css](./props/css.md)
