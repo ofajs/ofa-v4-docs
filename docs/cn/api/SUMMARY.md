@@ -33,3 +33,4 @@
   - [on](./event/on.md)
   - [one](./event/one.md)
   - [emit](./event/emit.md)
+  - [off](./event/off.md)
