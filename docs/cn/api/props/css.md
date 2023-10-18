@@ -1,11 +1,15 @@
 # css
 
-可以获取或设置目标的样式；
+`css` 方法用于获取或设置目标元素的样式。
+
+## 直接使用
+
+你可以直接使用 `css` 方法来获取或设置元素的样式。下面是一个示例：
 
 <html-viewer>
 
 ```
-<!-- 将 ofa.js 引入项目 -->
+<!-- 引入 ofa.js 到你的项目 -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
@@ -28,12 +32,12 @@
 
 ## 全量设置
 
-获取的css对象，可以得到直接设置在元素上的 style 值；
+通过获取的 `css` 对象，你可以得到直接设置在元素上的 style 值。下面是一个示例：
 
 <html-viewer>
 
 ```
-<!-- 将 ofa.js 引入项目 -->
+<!-- 引入 ofa.js 到你的项目 -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
@@ -59,6 +63,31 @@
 
 </html-viewer>
 
-利用 css对象的特性，可以快速的修正目标元素的样式；
+使用 `css` 对象的特性，你可以快速地调整目标元素的样式。
 
+## 模板语法方式使用
 
+你还可以通过模板语法来设置目标元素的样式。下面是一个示例：
+
+<comp-viewer comp-name="css-demo">
+
+```html
+<template component>
+  <div :css.color="txt">I am target</div>
+  <script>
+    export default {
+      tag: "css-demo",
+      data: {
+        txt: "red"
+      },
+      ready(){
+        setTimeout(()=>{
+          this.txt = "blue";
+        }, 500);
+      }
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
