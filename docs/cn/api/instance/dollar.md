@@ -83,6 +83,14 @@
 
 </html-viewer>
 
+## 获取影子节点内的子元素
+
+可以通过 [shadow](./shadow.md) 属性获取实例后，在通过 `$` 方法获取想要的元素；
+
+```javascript
+$('my-component').shadow.$("selector").method(xxx)
+```
+
 ## 生成元素实例
 
 除了获取现有的元素实例，`$` 还可以用于创建新的元素实例，并将其添加到页面中。

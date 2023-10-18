@@ -10,3 +10,7 @@
   - [parent](./instance/parent.md)
   - [parents](./instance/parents.md)
   - [clone](./instance/clone.md)
+  - [ele](./instance/ele.md)
+  - [shadow](./instance/shadow.md)
+  - [root](./instance/root.md)
+  - [children](./instance/children.md)
