@@ -1,3 +1,12 @@
 - [API介绍](./introduce.md)
 - 实例相关
   - [$ 方法](./instance/dollar.md)
+  - [all](./instance/all.md)
+  - [prev](./instance/prev.md)
+  - [prevs](./instance/prevs.md)
+  - [next](./instance/next.md)
+  - [nexts](./instance/nexts.md)
+  - [siblings](./instance/siblings.md)
+  - [parent](./instance/parent.md)
+  - [parents](./instance/parents.md)
+  - [clone](./instance/clone.md)
