@@ -14,6 +14,8 @@
   - [shadow](./instance/shadow.md)
   - [root](./instance/root.md)
   - [子元素](./instance/children.md)
+  - [host](./instance/host.md)
+  - [app](./instance/app.md)
 - 节点操作
   - [添加或删除子节点](./operation/array-like.md)
   - [before](./operation/before.md)
