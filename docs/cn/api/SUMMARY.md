@@ -36,3 +36,9 @@
   - [one](./event/one.md)
   - [emit](./event/emit.md)
   - [off](./event/off.md)
+- 模版语法
+  - [文本渲染](./temp-syntax/text-render.md)
+  - [class](./temp-syntax/class.md)
+  - [sync](./temp-syntax/sync.md)
+  - [条件渲染](./temp-syntax/condition.md)
+  - [列表渲染](./temp-syntax/fill.md)
