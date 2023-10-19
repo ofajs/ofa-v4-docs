@@ -19,7 +19,7 @@
 [案例教程](./cases/index.md)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
 </simp-block>
@@ -47,7 +47,7 @@
 
 ```
 <!-- 将 ofa.js 引入项目 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 <!-- 加载开发好的 punch-logo 组件 -->
 <l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
@@ -299,7 +299,7 @@ var child = $("#target")[0]; // 获取第一个子元素
 
 </simp-block>
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.30/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
 <l-m src="../publics/comps/case-switch.html"></l-m>
