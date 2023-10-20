@@ -91,3 +91,21 @@
 ```
 
 </comp-viewer>
+
+## 设置 css 的技巧
+
+你可以通过 `$ele.css = {...$ele.css, color:'red'}` 的方式来修改元素的某个样式属性，而不影响其他样式属性。这种方式可以在不重写整个样式的情况下，只修改其中一个属性。
+
+### 示例
+
+```html
+<div id="myElement" style="color: blue; font-size: 18px;">Hello World</div>
+<script>
+  const myElement = $("#myElement");
+
+  // 修改元素的颜色样式，同时保留其他样式属性不变
+  myElement.css = { ...myElement.css, color: 'red' };
+</script>
+```
+
+在上面的示例中，通过使用 `{ ...myElement.css, color: 'red' }`，我们只修改了元素的颜色样式，而将其他样式属性保持不变。这是一个很方便的技巧，可以灵活地修改元素的样式。

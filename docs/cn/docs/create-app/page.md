@@ -1,4 +1,4 @@
-# 开发页面
+# 使用 o-page 组件
 
 在 ofa.js 内部，我们构建了一个名为 `o-page` 的自定义组件，旨在为页面的开发提供便利。这个组件在应用开发中扮演着关键的角色。当你想要使用组件的模板语法，但又不想创建全新的组件时，`o-page` 组件将成为你的最佳选择。
 
@@ -12,13 +12,7 @@
   <h1>{{pageTitle}}</h1>
   <p>Welcome to my single file page!</p>
   <script>
-    // 在单文件模式下，避免使用 import
-    // import data from './other/module.mjs';
-
     export default async ({ load }) => {
-      // 引用其他模块
-      // const data = await load("./other/module.mjs");
-
       return {
         data: {
           pageTitle: "My Single File Page",
@@ -102,35 +96,3 @@ export const watch = {
 ```
 
 这样，当你打开页面时，`o-page` 组件会动态加载 `my-page.mjs` 这个页面模块，并根据模块中的模板和数据渲染页面内容。页面模块的生命周期和模板语法与组件模块保持一致，使得页面的开发和管理变得更加统一和灵活。
-
-## 判断页面是否加载完成
-
-在某些情况下，你可能需要判断页面是否已经完全加载完成，以便执行一些特定的操作。`ofa.js` 提供了几种方式来判断页面是否加载完成。
-
-### 使用 `page._loaded` 属性
-
-在页面模块中，`page._loaded` 是一个布尔属性，当页面内容加载完成后，该属性会变为 `true`。你可以使用这个属性来判断页面是否加载完成。
-
-```javascript
-if (page._loaded) {
-  // 页面已加载完成
-  // 执行你的操作
-} else {
-  // 监听 page-loaded 事件
-  page.addEventListener('page-loaded', () => {
-    // 页面加载完成后执行的操作
-  });
-}
-```
-
-### 使用 `page._rendered` 属性
-
-另一种方式是使用 `page._rendered` 属性，它是一个 Promise。当页面加载完成后，这个 Promise 会进入 `resolve` 状态。你可以通过 `await page._rendered` 来等待页面加载完成，然后执行相应的操作。
-
-```javascript
-async function doSomethingAfterPageLoad() {
-  await page._rendered;
-  // 页面已加载完成
-  // 执行你的操作
-}
-```

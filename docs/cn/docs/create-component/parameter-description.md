@@ -6,17 +6,6 @@
 
 基础参数是注册组件的最基本配置，包含以下几个属性：
 
-### 组件标识
-
-组件模块必须带有 `export const type = $.COMP`，用于标识该模块为组件模块。
-
-示例：
-
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-```
-
 ### tag
 
 `tag` 代表注册的组件名。当没有定义 `tag` 属性时，注册的组件名与文件名保持一致。
@@ -24,21 +13,7 @@ export const type = $.COMP;
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const tag = "my-button"; // 将组件名注册为 'my-button'
-```
-
-### temp
-
-`temp` 是字符串类型的属性，用于定义组件模板的地址。当没有定义 `temp` 时，默认载入和当前模块同目录下与组件同名的 HTML 文件。
-
-示例：
-
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const temp = "./my-button-template.html"; // 指定组件模板的地址为 './my-button-template.html'
 ```
 
 ### data
@@ -48,8 +23,6 @@ export const temp = "./my-button-template.html"; // 指定组件模板的地址�
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const data = {
   count: 0,
 };
@@ -62,8 +35,6 @@ export const data = {
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const attrs = {
   buttonText: "Click Me",
 };
@@ -74,8 +45,6 @@ export const attrs = {
 在组件的注册参数中，你可以添加一个 `proto` 对象，用于定义需要添加到组件原型上的方法。这样，在创建组件的实例时，这些属性和方法就会被添加到实例的原型上，从而所有实例都可以访问和共享这些方法。
 
 ```javascript
-// MyComponent.js
-export const type = $.COMP;
 
 export const data = {
   count: 0,
@@ -99,8 +68,6 @@ export const proto = {
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const data = {
   count: 0,
 };
@@ -111,6 +78,40 @@ export const watch = {
       oldValue = watchers[0].oldValue;
     }
     console.log(`count changed from ${oldValue} to ${newValue}`);
+  },
+};
+```
+
+### temp
+
+通常情况下，不需要设置这个变量，它主要在分离模式下使用，用于指定组件模板的地址。当未定义 `temp` 时，默认会加载与当前模块同名的 HTML 文件，该文件应位于相同目录中。
+
+## 合并变量到 default
+
+可以将所有的导出变量写到 default 上，这样写起来更方便；
+
+```javascript
+export default {
+  tag: "my-button",
+  data: {
+    count: 0,
+  },
+  attrs: {
+    buttonText: "Click Me",
+  },
+  watch: {
+    count(newValue, { watchers }) {
+      let oldValue;
+      if (watchers) {
+        oldValue = watchers[0].oldValue;
+      }
+      console.log(`count changed from ${oldValue} to ${newValue}`);
+    },
+  },
+  proto: {
+    sayHello() {
+      alert("Hello Count:" + this.count);
+    },
   },
 };
 ```
@@ -119,85 +120,71 @@ export const watch = {
 
 以下为一个完整的示例代码，包括基础参数的定义和组件模板。
 
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const tag = "my-button";
-export const temp = "./my-button-template.html";
+<comp-viewer comp-name="my-button">
 
-export const attrs = {
-  buttonText: "Click Me",
-};
+```
+<my-button button-text="My Button"></my-button>
+<!-- <script>
+  $("my-button").on("click", () => {
+    $("my-button").count++;
+  });
 
-export const data = {
-  count: 0,
-};
+  setTimeout(() => {
+    $("my-button").sayHello();
+  }, 1000);
+</script> -->
+```
 
-export const watch = {
-  count(newValue, { watchers }) {
-    let oldValue;
-    if (watchers) {
-      oldValue = watchers[0].oldValue;
+```html
+<template component>
+  <style>
+    .shadow-button {
+      background-color: #6b47fb;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
     }
-    console.log(`count changed from ${oldValue} to ${newValue}`);
-  },
-};
+  </style>
 
-export const proto = {
-  sayHello() {
-    alert("Hello Count:" + this.count);
-  },
-};
+  <!-- 使用模板渲染语法，将组件数据渲染成文本 -->
+  <button class="shadow-button" on:click="count++">{{buttonText}} - count:{{count}}</button>
+
+  <script>
+    export default {
+      tag: "my-button",
+      data: {
+        count: 0,
+      },
+      attrs: {
+        buttonText: "Click Me",
+      },
+      watch: {
+        count(newValue, { watchers }) {
+          let oldValue;
+          if (watchers) {
+            oldValue = watchers[0].oldValue;
+          }
+          console.log(`count changed from ${oldValue} to ${newValue}`);
+        },
+      },
+      proto: {
+        sayHello() {
+          // alert("Hello Count:" + this.count);
+        },
+      },
+    };
+  </script>
+</template>
 ```
 
-```html
-<!-- my-button-template.html -->
-<style>
-  .shadow-button {
-    background-color: #6b47fb;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-</style>
-
-<!-- 使用模板渲染语法，将组件数据渲染成文本 -->
-<button class="shadow-button">{{buttonText}} - count:{{count}}</button>
-```
-
-```html
-<!-- demo.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-button</title>
-    <script src="../ofa.js"></script>
-    <l-m src="./button-component.mjs"></l-m>
-  </head>
-  <body>
-    <my-button button-text="My Button"></my-button>
-    <script>
-      $("my-button").on("click", () => {
-        $("my-button").count++;
-      });
-
-      setTimeout(() => {
-        $("my-button").sayHello();
-      }, 1000);
-    </script>
-  </body>
-</html>
-
-```
+</comp-viewer>
 
 ### default
 
@@ -216,7 +203,6 @@ export const proto = {
 
 ```javascript
 // button-component.mjs
-export const type = $.COMP; // 这个必须优先定义，不能作为动态参数
 export const tag = "my-button";
 export const temp = "./my-button-template.html";
 
@@ -253,5 +239,3 @@ export default async function ({ load, url, query }) {
 ```
 
 在这个示例中，我们演示了如何使用 ofa.js 的注册参数来定制化组件的行为。通过合理地配置这些参数，你可以更好地适应不同的组件需求，实现更灵活的组件开发。
-
-写一下 组件的注册参数 的 proto 使用文档

@@ -53,14 +53,16 @@ Web Components 提供了一些特殊的 CSS 选择器，用于选择和样式化
 在组件模板中，可以使用 `<slot>` 元素来定义插槽。外部传入的内容会被插入到插槽内部。
 
 ```html
-<!-- MyComponent.html -->
+<!-- my-component.html -->
+...
 <div>
   <h2><slot></slot></h2>
 </div>
+...
 ```
 
 ```html
-<!-- 使用 MyComponent -->
+<!-- 使用 my-component -->
 <my-component>
   <p>This is a slot content.</p>
 </my-component>
@@ -71,16 +73,18 @@ Web Components 提供了一些特殊的 CSS 选择器，用于选择和样式化
 除了默认插槽外，还可以定义多个命名插槽。命名插槽允许开发者将不同的内容插入到不同的插槽位置。
 
 ```html
-<!-- MyComponent.html -->
+<!-- my-component.html -->
+...
 <div>
     <header><slot name="header"></slot></header>
     <main><slot></slot></main>
     <footer><slot name="footer"></slot></footer>
 </div>
+...
 ```
 
 ```html
-<!-- 使用 MyComponent -->
+<!-- 使用 my-component -->
 <my-component>
   <div slot="header">Header Content</div>
   <p>This is main content.</p>
@@ -93,9 +97,6 @@ Web Components 提供了一些特殊的 CSS 选择器，用于选择和样式化
 `slotchange` 事件在插槽内容变化时触发。可以通过监听这个事件来执行一些与插槽内容相关的操作。
 
 ```javascript
-// custom-component.mjs
-export const type = $.COMP;
-
 export default {
   data: {
     count: 0,
