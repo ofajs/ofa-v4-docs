@@ -51,3 +51,4 @@
   - [refresh](./others/refresh.md)
   - [PATH](./others/path.md)
   - [extend](./others/extend.md)
+  - [实例数据特征](./others/stanz.md)
