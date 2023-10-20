@@ -1,0 +1,10 @@
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+</div>
+`);
+
+$el.unwrap(); // ❌ 錯誤，沒有父元素，無法unwrap
+$el.$('#target').unwrap(); // ✅ 正確，去除包裹的元素
+```

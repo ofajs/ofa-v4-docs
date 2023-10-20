@@ -1,7 +1,0 @@
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const attrs = {
-  buttonText: "Click Me",
-};
-```

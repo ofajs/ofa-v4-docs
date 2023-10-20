@@ -1,0 +1,3 @@
+```javascript
+$('my-component').shadow.$("selector").method(xxx)
+```

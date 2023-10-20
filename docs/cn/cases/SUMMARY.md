@@ -24,5 +24,6 @@
   - [配置app参数](./app-config.md)
   - [为app定制loading](./app-loading.md)
   - [设置404页面](./set404.md)
-  - [使用 hash router](./use-hash-router.md)
+  - [嵌套页面](./nested-page.md)
+  - [使用HashRouter](./use-hash-router.md)
   - [使用scsr方案](./use-scsr.md)

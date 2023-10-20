@@ -1,0 +1,10 @@
+```html
+<div id="desk">Please click the button</div>
+<br />
+<button id="btn">I am Button</button>
+<script>
+  $("#btn").on("click", () => {
+    $("#desk").html = "<b>Hello World</b>";
+  });
+</script>
+```

@@ -1,0 +1,20 @@
+```html
+<template component>
+  <div>tag: {{txt}}</div>
+  <div>bool: {{txt2}}</div>
+  <script>
+    export default {
+      tag: "host-demo",
+      data: {
+        txt: "-",
+        txt2: '-'
+      },
+      ready(){
+        const host = this.shadow.$("div").host;
+        this.txt = host.tag;
+        this.txt2 = host === this;
+      }
+    };
+  </script>
+</template>
+```

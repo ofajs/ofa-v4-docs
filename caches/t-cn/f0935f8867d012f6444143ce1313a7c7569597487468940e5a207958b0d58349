@@ -1,0 +1,1 @@
+在注冊時間後，觸發的函數會被帶上 [event](https://developer.mozilla.org/en-US/docs/Web/API/Event)，和原生保持一致；

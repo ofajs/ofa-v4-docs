@@ -1,0 +1,15 @@
+```html
+<template component>
+    <input type="text" sync:value="txt" />
+    <br>
+    render txt: {{txt}}
+    <script>
+        export default {
+            tag:"sync-render",
+            data:{
+                txt:"I am txt"
+            },
+        };
+    </script>
+</template>
+```

@@ -1,0 +1,38 @@
+```html
+<template component>
+  <ul>
+    <x-fill :value="arr">
+      <li>{{$index}} - {{$data.name}}</li>
+      <x-if :value="$data.childs">
+        <ol>
+            <x-fill :value="$data.childs" name="easyLi"></x-fill>
+        </ol>
+      </x-if>
+    </x-fill>
+  </ul>
+  <template name="easyLi">
+    <li>{{$data}}</li>
+  </template>
+  <script>
+    export default {
+      tag: "fill-three",
+      data: {
+        arr: [
+          {
+            name: "apple",
+          },
+          {
+            name: "pen",
+            childs: [
+              { name: "pencil" },
+              {
+                name: "ballpoint pen",
+              },
+            ],
+          },
+        ],
+      },
+    };
+  </script>
+</template>
+```

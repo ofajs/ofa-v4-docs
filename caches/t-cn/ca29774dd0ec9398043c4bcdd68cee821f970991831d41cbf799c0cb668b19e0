@@ -1,0 +1,19 @@
+```html
+<template component>
+    <ul>
+        <li>item 1</li>
+        <li id="target">item 2</li>
+        <li>item 3</li>
+    </ul>
+    <script>
+        export default {
+            tag:"test-shadow",
+            ready(){
+                setTimeout(()=>{
+                    this.shadow.$("#target").text = 'change target';
+                },500);
+            }
+        };
+    </script>
+</template>
+```

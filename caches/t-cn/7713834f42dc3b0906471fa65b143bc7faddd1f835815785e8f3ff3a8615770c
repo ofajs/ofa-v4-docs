@@ -1,1 +1,0 @@
-在前端開發中，經常會用到一些表示元素尺寸的屬性。這些屬性包括 width、height、clientWidth、clientHeight、offsetWidth、offsetHeight、outerWidth 和 outerHeight。了解它們的含義和用法對於開發響應式和動態布局非常重要。下面讓我們一一解釋它們，並通過一個示例來演示。

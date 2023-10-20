@@ -1,0 +1,27 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger1" style="border: blue solid 1px; margin: 8px"></div>
+<div id="logger2" style="border: red solid 1px; margin: 8px"></div>
+
+<script>
+  const target = $("#target");
+  let count1 = 0;
+  target.watch(() => {
+    count1++;
+    $("#logger1").text = 'watch 運行次數：' + count1;
+  });
+
+  let count2 = 0;
+  target.watchTick(()=>{
+    count2++;
+    $("#logger2").text = 'watchTick 運行次數：' + count2;
+  });
+
+  setTimeout(() => {
+    target.aaa = "I am aaa";
+    target.bbb = "I am bbb";
+    target.ccc = "I am ccc";
+  }, 1000);
+</script>
+```

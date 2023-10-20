@@ -1,0 +1,65 @@
+<template page>
+  <style>
+    :host {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      background-color: #ddd;
+      flex-shrink: 0;
+    }
+    .main {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .btn {
+      margin: 0 8px;
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+    .btn.active {
+      background-color: red;
+      color: #fff;
+      cursor: default;
+      border-radius: 4px;
+    }
+  </style>
+  <div class="container">
+    <div class="top">
+      <a class="btn" class:active="currentPage === 'page1'" href="./page1.html" olink>page1</a>
+      <a class="btn" class:active="currentPage === 'page2'" href="./page2.html" olink>page2</a>
+    </div>
+    <div class="main">
+      <slot></slot>
+    </div>
+  </div>
+  <script>
+    export default {
+      data: {
+        currentPage: "",
+      },
+      proto: {
+        refreshActive() {
+          this.currentPage = this.app.current.src.replace(/.+\/(.+)\.html/, "$1");
+        },
+      },
+      attached() {
+        this.refreshActive();
+      },
+      routerChange() {
+        this.refreshActive();
+      },
+    };
+  </script>
+</template>

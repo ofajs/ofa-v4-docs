@@ -1,0 +1,16 @@
+```html
+<div id="target1">
+  <ul>
+    <li>I am 1</li>
+    <li>I am 2</li>
+    <li>I am 3</li>
+  </ul>
+</div>
+
+<script>
+  const tar = $("#target1");
+  tar.all("li").forEach((item,index)=>{
+    item.text = `change item ${index}`;
+  });
+</script>
+```

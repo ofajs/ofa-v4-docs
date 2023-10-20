@@ -1,0 +1,15 @@
+- [$](./instance/dollar.md)：主要用於獲取實例的方法
+- [all](./instance/all.md)：獲取所有相關實例
+- [prev](./instance/prev.md)：獲取目標元素的前一個實例
+- [prevs](./instance/prevs.md)：獲取目標元素前面的所有實例
+- [next](./instance/next.md)：獲取目標元素的後一個實例
+- [nexts](./instance/nexts.md)：獲取目標元素後面的所有實例
+- [siblings](./instance/siblings.md)：獲取目標元素的所有相鄰元素實例
+- [parent](./instance/parent.md)：獲取父元素實例
+- [parents](./instance/parents.md)：獲取所有父元素的實例集
+- [clone](./instance/clone.md)：克隆實例的方法
+- [ele](./instance/ele.md)：獲取實例的實際原生元素
+- [shadow](./instance/shadow.md)：獲取自定義組件的影子根節點
+- [root](./instance/root.md)：獲取目標實例的根節點
+- [子元素](./instance/children.md)：通過數字直接獲取子元素
+- [host](./instance/host.md)：獲取目標的 app 元素實例

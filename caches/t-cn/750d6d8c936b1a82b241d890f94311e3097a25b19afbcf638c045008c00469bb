@@ -1,0 +1,5 @@
+```javascript
+export const attrs = {
+  buttonText: "Click Me",
+};
+```
