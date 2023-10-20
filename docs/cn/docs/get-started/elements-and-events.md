@@ -14,6 +14,13 @@
 
 #### 示例
 
+<html-viewer>
+
+```
+<!-- 将 ofa.js 引入项目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
 ```html
 <div class="parent">
   <p>Hello World</p>
@@ -31,6 +38,8 @@
 </script>
 ```
 
+</html-viewer>
+
 在上面的示例中，首先通过 `$(".parent")` 选择了具有 `parent` 类的父元素，然后使用 `$(".child")` 在该父元素内查找具有 `child` 类的子元素。然后修改了子元素的文本内容为 "Modified child element"。
 
 ### 使用 `$('xxx xxxx')` 的方式
@@ -38,6 +47,13 @@
 `$('xxx xxxx')` 是通过在全局范围内查找符合第二个选择器条件的元素，然后在这些元素内部查找符合第一个选择器条件的元素。这种方式可以直接一步到位地查找到符合条件的子元素。
 
 #### 示例
+
+<html-viewer>
+
+```
+<!-- 将 ofa.js 引入项目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <div class="parent">
@@ -55,6 +71,8 @@
 </script>
 ```
 
+</html-viewer>
+
 在上面的示例中，直接使用 `$('div .child')` 查找到具有 `child` 类的子元素，并修改了子元素的文本内容为 "Modified child element"。
 
 ### 选择多个元素
@@ -64,6 +82,13 @@
 `$.all('xxx')` 方法用于查找页面中所有符合选择器条件的元素，并将它们作为一个元素集合返回。这样可以选择页面中的多个元素进行批量操作。
 
 #### 示例
+
+<html-viewer>
+
+```
+<!-- 将 ofa.js 引入项目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <p>Paragraph 1</p>
@@ -80,6 +105,8 @@
 </script>
 ```
 
+</html-viewer>
+
 在上面的示例中，使用 `$.all("p")` 查找到页面中的所有 `p` 标签元素，并对它们进行了批量操作，将文本内容修改为 "Modified Paragraph 1"、"Modified Paragraph 2" 和 "Modified Paragraph 3"。
 
 ### 从元素内查找所有符合条件的元素
@@ -87,6 +114,13 @@
 除了可以在全局范围内查找元素，还可以从某个元素内查找所有符合条件的子元素，使用方式为：`$('xxx').all('xxxx')`。
 
 #### 示例
+
+<html-viewer>
+
+```
+<!-- 将 ofa.js 引入项目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <div class="container">
@@ -106,6 +140,8 @@
   });
 </script>
 ```
+
+</html-viewer>
 
 在上面的示例中，首先使用 `$(".container")` 查找到具有 `container` 类的元素，然后通过 `.all(".item")` 在该容器内查找所有带有 `item` 类的子元素，并对它们进行了批量操作，将文本内容修改为 "Modified Item 1"、"Modified Item 2" 和 "Modified Item 3"。
 
@@ -129,6 +165,13 @@ $(selector).off(eventName, eventHandler);
 
 #### 示例
 
+<html-viewer>
+
+```
+<!-- 将 ofa.js 引入项目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
 ```html
 <button id="btn">Click Me</button>
 <script>
@@ -145,6 +188,7 @@ $(selector).off(eventName, eventHandler);
   }, 5000);
 </script>
 ```
+</html-viewer>
 
 在上面的示例中，当点击按钮时，会弹出一个对话框显示 "Button clicked!"。但是在5秒后，通过 `off` 方法移除了点击事件处理函数，所以按钮再次点击时不会触发弹出对话框。
 
@@ -165,6 +209,13 @@ $(selector).one(eventName, eventHandler);
 
 #### 示例
 
+<html-viewer>
+
+```
+<!-- 将 ofa.js 引入项目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
 ```html
 <button id="btn">Click Me Once</button>
 <script>
@@ -174,6 +225,7 @@ $(selector).one(eventName, eventHandler);
   });
 </script>
 ```
+</html-viewer>
 
 在上面的示例中，当点击按钮时，会弹出一个对话框显示 "Button clicked once!"。但是在第一次点击后，事件处理函数就会被移除，所以后续点击按钮不会再触发弹出对话框。
 
