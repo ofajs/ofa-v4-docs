@@ -182,4 +182,34 @@
 
 在这个示例中，我们创建了一个 `$` 实例对象 `target`，然后使用 `watch` 方法监听属性值的变动。在 `setTimeout` 中，我们尝试更改 `_aaa` 属性值，但这个更改不会触发监听。这对于需要在不触发监听的情况下更新属性值的情况非常有用。
 
+## 基本特征
+
+设置在实例上的对象数据将被转换为 Stanz 实例，这种 Stanz 实例允许进行监听。
+
+```javascript
+const obj = {
+  val: "I am obj"
+};
+
+$("#target").obj = obj;
+console.log($("#target").obj.val === obj.val); // => true
+console.log($("#target").obj === obj); // => false
+```
+
+我们还可以使用 `$.stanz` 来创建一个没有与实例绑定的 Stanz 数据。
+
+```javascript
+const data = $.stanz({
+  val: "I am val"
+});
+
+data.watch(() => {
+  console.log(data.val); // => change val
+});
+
+data.val = "change val";
+```
+
+这些示例展示了将对象数据设置为 Stanz 实例以进行监听的基本特征。
+
 更多完整的特性请查阅 [stanz](https://github.com/kirakiray/stanz)；
