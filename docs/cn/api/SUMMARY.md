@@ -1,4 +1,4 @@
-- [API介绍](./introduce.md)
+- [API介绍](./index.md)
 - 实例相关
   - [$ 方法](./instance/dollar.md)
   - [all](./instance/all.md)

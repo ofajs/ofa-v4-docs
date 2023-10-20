@@ -18,10 +18,6 @@
     {
       "name": "API",
       "summary": "./api/SUMMARY.md"
-    },
-    {
-      "name": "其他",
-      "summary": "./others/SUMMARY.md"
     }
   ]
 }
