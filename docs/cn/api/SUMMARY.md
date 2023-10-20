@@ -42,3 +42,12 @@
   - [sync](./temp-syntax/sync.md)
   - [条件渲染](./temp-syntax/condition.md)
   - [列表渲染](./temp-syntax/fill.md)
+- 其他
+  - [盒模型](./others/box.md)
+  - [formData](./others/form-data.md)
+  - [tag](./others/tag.md)
+  - [index](./others/index.md)
+  - [is](./others/is.md)
+  - [refresh](./others/refresh.md)
+  - [PATH](./others/path.md)
+  - [extend](./others/extend.md)
