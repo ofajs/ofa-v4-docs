@@ -29,3 +29,4 @@
   - [使用scsr方案](./use-scsr.md)
 - 其他技巧
   - [状态同步](./sync-state.md)
+  - [别名](./alias.md)
