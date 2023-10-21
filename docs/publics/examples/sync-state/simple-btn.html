@@ -1,0 +1,39 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+    }
+
+    .container {
+      display: inline-block;
+      padding: 0.5em 1em;
+      color: white;
+      border-radius: 6px;
+      background-color: blue;
+      cursor: pointer;
+      user-select: none;
+    }
+    .container.dark {
+      background-color: red;
+    }
+  </style>
+  <div class="container" class:dark="isDark.value">
+    <slot></slot>
+  </div>
+  <script>
+    import isDark from "./is-dark.js";
+    export default {
+      data: {
+        isDark: {},
+      },
+      attached() {
+        // 共享dark对象数据
+        this.isDark = isDark;
+      },
+      detached() {
+        // 清除内存记录
+        this.isDark = {};
+      },
+    };
+  </script>
+</template>

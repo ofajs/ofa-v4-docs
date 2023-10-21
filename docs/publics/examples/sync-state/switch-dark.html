@@ -1,0 +1,21 @@
+<template component>
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+  <label>
+    Dark Mode:
+    <input type="checkbox" on:change="changeInput" />
+  </label>
+  <script>
+    import isDark from "./is-dark.js";
+    export default {
+      proto: {
+        changeInput(e) {
+          isDark.value = e.target.checked;
+        },
+      },
+    };
+  </script>
+</template>

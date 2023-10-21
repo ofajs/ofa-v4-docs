@@ -27,3 +27,5 @@
   - [嵌套页面](./nested-page.md)
   - [使用HashRouter](./use-hash-router.md)
   - [使用scsr方案](./use-scsr.md)
+- 其他技巧
+  - [状态同步](./sync-state.md)
