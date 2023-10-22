@@ -90,6 +90,21 @@
 ```javascript
 $('my-component').shadow.$("selector").method(xxx)
 ```
+## 直接实例化元素
+
+你可以通过以下方式直接将原生元素初始化为 `$` 实例对象：
+
+```javascript
+const ele = document.createElement('div');
+const $ele = $(ele);
+```
+
+```javascript
+const ele = document.querySelector('#target');
+const $ele = $(ele);
+```
+
+这样，你可以方便地将现有的 HTML 元素转换为 `$` 实例，以便使用 `$` 提供的功能进行操作和处理。
 
 ## 生成元素实例
 

@@ -42,6 +42,14 @@
   - [sync](./temp-syntax/sync.md)
   - [条件渲染](./temp-syntax/condition.md)
   - [列表渲染](./temp-syntax/fill.md)
+- 生命周期
+  - [created](./life-cycle/created.md)
+  - [ready](./life-cycle/ready.md)
+  - [watch](./life-cycle/watch.md)
+  - [loaded](./life-cycle/loaded.md)
+  - [attached](./life-cycle/attached.md)
+  - [detached](./life-cycle/detached.md)
+  - [routerChange](./life-cycle/router-change.md)
 - 其他
   - [盒模型](./others/box.md)
   - [formData](./others/form-data.md)
