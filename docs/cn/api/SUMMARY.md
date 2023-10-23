@@ -51,6 +51,8 @@
   - [detached](./life-cycle/detached.md)
   - [routerChange](./life-cycle/router-change.md)
 - 其他
+  - [app](./others/app.md)
+  - [page](./others/page.md)
   - [盒模型](./others/box.md)
   - [formData](./others/form-data.md)
   - [tag](./others/tag.md)
