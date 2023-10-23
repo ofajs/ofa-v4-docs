@@ -26,9 +26,9 @@
 
 <simp-block>
 
-## 基于 Web Components 封装的 ofa.js
+## 基于 Web Components
 
-### 走进新时代，Web Components 已广泛支持，尝试一下 ofa.js，看它是否适合您。
+### ofa.js 基于 Web Components 开发。以下是支持的平台和时间，你可以立即体验
 
 <support-platforms></support-platforms>
 
