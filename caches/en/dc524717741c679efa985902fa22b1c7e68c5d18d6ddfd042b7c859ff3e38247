@@ -1,0 +1,1 @@
+In this example, we only want to listen to form elements with the `class` of "use-it", so we pass `".use-it"` as an argument to the `formData()` method. This way, only form elements with that class name will be listened to and included in the generated data object. This is useful for selectively listening to form elements in order to manage your form data more precisely.

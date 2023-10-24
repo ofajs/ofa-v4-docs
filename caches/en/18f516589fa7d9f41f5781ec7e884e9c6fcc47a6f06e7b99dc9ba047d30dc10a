@@ -1,0 +1,1 @@
+Using the `one` method, you can register a one-time event handler for the target element, which means the event handler will automatically be unbound after the first trigger and will not be triggered again.

@@ -1,0 +1,22 @@
+```html
+<template component>
+    <button on:click="count++">Add Count</button>
+    <x-if :value="count % 3 === 0">
+        <div style="color:red;">if => {{count}}</div>
+    </x-if>
+    <x-else-if :value="(count + 1) % 3 === 0">
+        <div style="color:green;">else-if => {{count}}</div>
+    </x-else-if>
+    <x-else>
+        <div style="color:blue;">else => {{count}}</div>
+    </x-else>
+    <script>
+    export default {
+        tag: "text-render",
+        data: {
+            count: 0
+        },
+    };
+    </script>
+</template>
+```

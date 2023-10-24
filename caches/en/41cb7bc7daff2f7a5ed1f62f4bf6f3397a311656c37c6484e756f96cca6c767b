@@ -1,0 +1,1 @@
+Sometimes it is necessary for multiple component instances or pages to share the same piece of data, and this is where the functionality of state synchronization is needed.

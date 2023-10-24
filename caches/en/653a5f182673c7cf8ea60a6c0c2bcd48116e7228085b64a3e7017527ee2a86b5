@@ -1,8 +1,0 @@
-- width: Represents the width of the content area of an element, excluding padding, borders, and margins.
-- height: Represents the height of the content area of an element, excluding padding, borders, and margins.
-- clientWidth: Represents the visible width of the content area of an element, including padding but excluding borders and margins.
-- clientHeight: Represents the visible height of the content area of an element, including padding but excluding borders and margins.
-- offsetWidth: Represents the total width of an element, including content area, padding, borders, and margins.
-- offsetHeight: Represents the total height of an element, including content area, padding, borders, and margins.
-- outerWidth: Represents the total width of an element, including content area, padding, borders, margins, but excluding the width of the scroll bar.
-- outerHeight: Represents the total height of an element, including content area, padding, borders, margins, but excluding the height of the scroll bar.

@@ -1,0 +1,1 @@
+In this example, we pass custom data to the event handler through the `data` parameter. The event handler can access the passed data through `event.data`.

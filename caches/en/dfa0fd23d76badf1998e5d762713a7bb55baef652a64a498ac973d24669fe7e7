@@ -1,0 +1,1 @@
+In this example, we use the `on:click` binding on a button element to bind a method called `addCount`. When the user clicks the button, this method will be called, the counter value will increase and be displayed on the page. This allows you to associate event handlers with component methods, enabling more complex interactions.

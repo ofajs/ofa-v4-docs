@@ -1,0 +1,17 @@
+```html
+<div id="pos1" style="border:red solid 1px;">
+  <h3>position 1</h3>
+  <p id="target1" style="color:green">I am target1</p>
+</div>
+
+<div id="pos2" style="border:blue solid 1px;margin:8px;">
+  <h3>position 2</h3>
+</div>
+
+<script>
+  setTimeout(()=>{
+    const tar = $("#target1");
+    $("#pos2").append(tar);
+  },500);
+</script>
+```

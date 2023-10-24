@@ -1,0 +1,1 @@
+Like jQuery, you can also extend the properties or methods of the underlying instance through fn.extend; properties or methods extended from fn will be applied to all instances;

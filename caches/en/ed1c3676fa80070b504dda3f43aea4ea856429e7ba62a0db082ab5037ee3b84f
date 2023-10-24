@@ -1,0 +1,1 @@
+In this example, we first use the `class` method to add the `color-red` class to the element, then remove it after one second, and add the `color-blue` class to the element after half a second. This will dynamically change the style of the target element.

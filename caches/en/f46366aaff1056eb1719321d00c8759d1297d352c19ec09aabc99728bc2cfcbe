@@ -1,0 +1,1 @@
+Using the `all` method, you can get all elements on the page that match the [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors), and return an array containing these elements.

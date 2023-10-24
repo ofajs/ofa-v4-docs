@@ -1,0 +1,1 @@
+In this example, we first select an `<li>` element with an `id` of "target". Then, we use the `index` attribute to get the position of this element under its parent `<ul>`, which is the second element, so the value of `index` is 1. Then, we display this value in a `<div>` element with an `id` of "logger".

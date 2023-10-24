@@ -1,5 +1,0 @@
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const temp = "./my-button-template.html"; // 指定组件模板的地址为 './my-button-template.html'
-```

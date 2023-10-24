@@ -1,1 +1,0 @@
-You can use `$ele.css = {xxx}` to set the style of an element, where `xxx` is an object that contains CSS property names and values.

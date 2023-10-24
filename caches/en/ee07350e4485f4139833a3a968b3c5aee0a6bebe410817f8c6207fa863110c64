@@ -1,0 +1,1 @@
+In this example, we use the `on` method to add a click event handler for the button element. When the user clicks the button, the event handler is triggered, the counter will increment, and the result will be displayed on the page.

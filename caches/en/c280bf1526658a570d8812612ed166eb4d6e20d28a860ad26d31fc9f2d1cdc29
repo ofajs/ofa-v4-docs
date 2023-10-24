@@ -1,8 +1,0 @@
-```html
-<div id="example">Hello World</div>
-<script>
-    const $div = $('#example');
-    const actualElement = $div.ele;
-    actualElement.style.color = "red"; // Change text color to red
-</script>
-```

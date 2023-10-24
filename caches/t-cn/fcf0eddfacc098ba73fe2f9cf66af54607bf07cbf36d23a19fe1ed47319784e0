@@ -1,0 +1,4 @@
+```javascript
+const ele = document.createElement('div');
+const $ele = $(ele);
+```

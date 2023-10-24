@@ -1,0 +1,1 @@
+Accessing child element instances is very simple. You just need to treat the instance as an array and access its child element instance by using indexes.

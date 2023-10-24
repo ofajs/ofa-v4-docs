@@ -1,0 +1,1 @@
+In the following example, we demonstrate how to use form data within a custom component. This component includes a text input field that updates the data in the log in real-time when you input content.

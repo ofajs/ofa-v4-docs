@@ -1,0 +1,1 @@
+Using the `on` method, you can register event handlers for target elements. This allows you to easily capture and respond to user interaction.

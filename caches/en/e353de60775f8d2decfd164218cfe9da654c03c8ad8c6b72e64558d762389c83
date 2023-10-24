@@ -1,0 +1,1 @@
+In this example, we have an array `arr` that contains two objects. Each object has a `name` property and a `childs` property that may contain nested sub-items. We use `x-fill` to populate the list and use the template "easyLi" to render the sub-items. If an item has sub-items, we use `x-fill` to recursively render the child list, achieving recursive list rendering.

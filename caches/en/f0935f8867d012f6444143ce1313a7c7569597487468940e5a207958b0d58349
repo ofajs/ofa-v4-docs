@@ -1,0 +1,1 @@
+After registration time, the triggered function will be passed with [event](https://developer.mozilla.org/en-US/docs/Web/API/Event), consistent with the native.

@@ -1,0 +1,23 @@
+```html
+<style>
+    .color-red{
+        color:red;
+    }
+    .color-blue{
+        color:blue;
+    }
+</style>
+<div id="target">I am target</div>
+
+<script>
+    setTimeout(()=>{
+        $('#target').addClass('color-red');
+    },500);
+    setTimeout(()=>{
+        $('#target').removeClass('color-red');
+    },1000);
+    setTimeout(()=>{
+        $('#target').addClass('color-blue');
+    },1500);
+</script>
+```

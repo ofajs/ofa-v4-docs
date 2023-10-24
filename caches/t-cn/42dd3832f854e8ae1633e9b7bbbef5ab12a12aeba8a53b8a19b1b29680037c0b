@@ -1,0 +1,4 @@
+```javascript
+const ele = document.querySelector('#target');
+const $ele = $(ele);
+```

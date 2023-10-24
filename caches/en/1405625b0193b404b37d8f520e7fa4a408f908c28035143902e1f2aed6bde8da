@@ -1,0 +1,1 @@
+By using the alias `@obook`, we introduced the resource `"https://cdn.jsdelivr.net/npm/obook/blocks/simp-block.html"` in the `l-m` tag, which allows components from different domains to access shared resources more conveniently without needing to know the specific resource address. This enhances code maintainability and facilitates cross-domain resource sharing.

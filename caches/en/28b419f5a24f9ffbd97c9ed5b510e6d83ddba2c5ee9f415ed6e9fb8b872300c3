@@ -1,0 +1,27 @@
+```html
+<template component>
+  <style>
+    :host{
+        display:block;
+        border:red solid 1px;
+    }
+  </style>  
+  <div id="logger">{{loggerText}}</div>
+  <div on:custom-event="loggerText = 'custom event is triggered'" id="target"></div>
+  <script>
+    export default {
+      tag: "composed-test",
+      data:{
+        loggerText: ""
+      },
+      ready(){
+        setTimeout(()=>{
+          this.shadow.$("#target").emit("custom-event",{
+            composed: true,
+          });
+        },500);
+      }
+    };
+  </script>
+</template>
+```

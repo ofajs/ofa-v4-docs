@@ -1,0 +1,1 @@
+By default, the `formData()` method will listen to all `input`, `select`, and `textarea` elements inside the target element. However, if you only want to listen to specific form elements, you can achieve it by passing a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors).

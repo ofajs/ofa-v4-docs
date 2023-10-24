@@ -1,0 +1,1 @@
+html is a rather dangerous method. When it is injected with `script`, the internal `javascript` code will automatically execute. When using it, pay attention to preventing [XSS](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting).

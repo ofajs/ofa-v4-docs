@@ -1,1 +1,0 @@
-In the above example, `attr:fontcolor="val"` will bind the `val` property of the host component to the `fontcolor` attribute of the `<div>` element.

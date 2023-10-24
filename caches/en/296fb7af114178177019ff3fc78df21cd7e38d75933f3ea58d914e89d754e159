@@ -1,0 +1,1 @@
+The production method of the parent page is similar to component development. You need to create a page that contains the entire framework layout, and then place the nested child pages in the `slot`.

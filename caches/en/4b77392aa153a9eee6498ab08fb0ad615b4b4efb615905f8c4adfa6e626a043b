@@ -1,0 +1,2 @@
+The following examples use regular elements because custom components typically come with pre-registered data, while regular elements usually only contain tag information, so they are more suitable for demonstration purposes.
+

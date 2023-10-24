@@ -1,0 +1,4 @@
+```javascript
+// 跳轉到指定頁面
+app.goto("/page2.html");
+```

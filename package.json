@@ -27,7 +27,8 @@
     "concurrent": 6,
     "dirs": {
       "cn": "./docs/cn",
-      "t-cn": "./docs/t-cn"
+      "t-cn": "./docs/t-cn",
+      "en": "./docs/en"
     }
   }
 }

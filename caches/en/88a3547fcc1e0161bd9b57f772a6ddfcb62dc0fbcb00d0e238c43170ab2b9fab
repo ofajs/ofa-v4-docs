@@ -1,0 +1,1 @@
+You can also obtain custom element instances from the external and access elements within the shadow tree through the `shadow` property as shown below:

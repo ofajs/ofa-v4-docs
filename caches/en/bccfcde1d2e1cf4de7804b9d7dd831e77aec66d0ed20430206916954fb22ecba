@@ -1,0 +1,4 @@
+```html
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```

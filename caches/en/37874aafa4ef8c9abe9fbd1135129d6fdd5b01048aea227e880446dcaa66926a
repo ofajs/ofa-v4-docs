@@ -1,1 +1,0 @@
-`formData` method is used to generate an object containing the values of all form elements within the target element. This object will reflect the changes made to the form elements in real time.

@@ -1,0 +1,3 @@
+```javascript
+$("#logger1").text = $('ul').length;
+```

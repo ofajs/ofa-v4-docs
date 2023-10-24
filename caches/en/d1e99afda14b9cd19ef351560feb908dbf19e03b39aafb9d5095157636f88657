@@ -1,0 +1,1 @@
+`index` attribute is used to obtain the position of an element relative to its parent element. This position is counted starting from 0, which means the position of the first element is 0, the second is 1, and so on.

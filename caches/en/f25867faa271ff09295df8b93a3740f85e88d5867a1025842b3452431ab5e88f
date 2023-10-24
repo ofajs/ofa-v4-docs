@@ -1,0 +1,1 @@
+In this example, we use the `x-fill` component to render the array `arr` and display the index and data in each list item.

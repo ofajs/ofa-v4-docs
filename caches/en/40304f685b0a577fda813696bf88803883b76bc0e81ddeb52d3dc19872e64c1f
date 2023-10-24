@@ -1,0 +1,5 @@
+- [Text Rendering](./temp-syntax/text-render.md): Quickly render text on template files
+- [Class](./temp-syntax/class.md): Quickly render class names on template files
+- [Sync](./temp-syntax/sync.md): Quickly sync data to template files
+- [Conditional Rendering](./temp-syntax/condition.md): Render content on template files based on conditions
+- [List Rendering](./temp-syntax/fill.md): Quickly render array data on template files

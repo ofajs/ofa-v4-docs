@@ -1,0 +1,1 @@
+The `current` attribute is used to obtain the currently displayed page instance. This can help you access and manipulate the currently displayed page, such as updating its content or performing specific operations.

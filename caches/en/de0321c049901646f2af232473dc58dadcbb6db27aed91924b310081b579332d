@@ -1,0 +1,23 @@
+```html
+<style>
+    .t-red{
+        color: red;
+        font-size: 14px;
+    }
+    .t-blue{
+        color: blue;
+        font-weight:bold;
+        font-size:20px;
+    }
+</style>
+<div id="target" class="t-red">origin text</div>
+
+<script>
+    setTimeout(()=> {
+        $("#target").classList.remove('t-red');
+        setTimeout(()=>{
+            $("#target").classList.add('t-blue');
+        },1000);
+    }, 1000);
+</script>
+```

@@ -1,0 +1,4 @@
+```javascript
+// Get the current page instance
+const currentPage = app.current;
+```

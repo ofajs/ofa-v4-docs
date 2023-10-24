@@ -1,0 +1,1 @@
+Please note that the `style` attribute cannot retrieve the actual value of a style but only the value set on the `style` attribute. Although the `style` method is similar to the [css method](./css.md), it cannot override all styles. Compared to [css](./css.md), the `style` method has a higher internal execution efficiency.

@@ -1,0 +1,1 @@
+It is important to avoid directly modifying elements inside shadow nodes that have template syntax, in order to ensure consistency and maintainability of the operation.

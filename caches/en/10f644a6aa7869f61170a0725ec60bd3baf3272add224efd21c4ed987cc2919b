@@ -1,0 +1,13 @@
+```
+<ul>
+    <li>I am 1</li>
+    <li>I am 2</li>
+    <li>I am 3</li>
+</ul>
+
+<script>
+    setTimeout(()=>{
+        $("ul").push(`<li style="color:red;">new li</li>`);
+    }, 500);
+</script>
+```

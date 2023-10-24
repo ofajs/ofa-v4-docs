@@ -1,0 +1,4 @@
+```javascript
+// Go to specified page
+app.goto("/page2.html");
+```

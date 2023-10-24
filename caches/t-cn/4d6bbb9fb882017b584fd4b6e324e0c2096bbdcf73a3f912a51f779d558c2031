@@ -1,0 +1,10 @@
+```javascript
+// 示例代碼：獲取當前頁面的地址
+// const page = $("o-app").current;
+...
+ready(){
+  // 在頁面模塊的生命周期內，this 就是當前頁面模塊本身；
+  const page = this;
+}
+...
+```

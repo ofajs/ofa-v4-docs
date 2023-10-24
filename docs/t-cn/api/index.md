@@ -1,6 +1,6 @@
 # API 介紹
 
-以下是 ofa.js API 的概覽：
+以下是 ofa.js API 的概覽，你可以先瀏覽一遍，以備將來需要時再來查閱詳細文檔：
 
 ## 實例相關
 
@@ -53,6 +53,15 @@
 - [sync](./temp-syntax/sync.md)：快速同步數據到模板文件
 - [條件渲染](./temp-syntax/condition.md)：按需在模板文件上渲染內容
 - [列表渲染](./temp-syntax/fill.md)：在模板文件上快速渲染數組數據
+
+## 生命周期
+- [created](./life-cycle/created.md)：組件被創建，但未渲染內容時觸發
+- [ready](./life-cycle/ready.md)：組件被創建，內容被渲染後觸發
+- [watch](./life-cycle/watch.md)：組件初始化完成後和值被改變後觸發
+- [loaded](./life-cycle/loaded.md)：組件內嵌資源被加載完成後觸發
+- [attached](./life-cycle/attached.md)：組件被添加到 document 後觸發
+- [detached](./life-cycle/detached.md)： 組件從 document 被移除後觸發
+- [routerChange](./life-cycle/router-change.md)：內嵌的父頁面在應用路由改變時觸發
 
 ## 其他
 

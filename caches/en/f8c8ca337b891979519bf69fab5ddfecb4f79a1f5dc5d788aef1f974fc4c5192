@@ -1,0 +1,1 @@
+`routerChange` event is an event specific to the `o-page` element, and it is only triggered on the nested parent page of `o-page`. This event is triggered when the application's router changes, whether it is navigating to a new page or returning to a previous page.

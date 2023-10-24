@@ -1,0 +1,7 @@
+- [created](./life-cycle/created.md): Triggered when the component is created but before the content is rendered.
+- [ready](./life-cycle/ready.md): Triggered when the component is created and the content has been rendered.
+- [watch](./life-cycle/watch.md): Triggered after the component is initialized and when the value is changed.
+- [loaded](./life-cycle/loaded.md): Triggered after the embedded resources of the component have finished loading.
+- [attached](./life-cycle/attached.md): Triggered after the component is added to the document.
+- [detached](./life-cycle/detached.md): Triggered after the component is removed from the document.
+- [routerChange](./life-cycle/router-change.md): Triggered when the nested parent page experiences a change in the application route.

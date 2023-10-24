@@ -1,6 +1,0 @@
-```html
-<!-- Use MyComponent -->
-<my-component>
-  <p>This is a slot content.</p>
-</my-component>
-```

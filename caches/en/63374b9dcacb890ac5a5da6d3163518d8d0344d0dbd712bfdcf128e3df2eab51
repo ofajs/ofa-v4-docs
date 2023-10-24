@@ -1,0 +1,1 @@
+Instances can be monitored for value changes using the `watch` method. Even if the values of the object's child objects are modified, the changes can still be detected through the object's `watch` method.

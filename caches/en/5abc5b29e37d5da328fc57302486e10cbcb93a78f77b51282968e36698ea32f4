@@ -1,0 +1,1 @@
+Using the `host` property, you can obtain the instance of the host component for an element. This is very useful for accessing the data and methods of the host component from within the component.

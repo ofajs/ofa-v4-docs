@@ -1,0 +1,1 @@
+`x-if` is the main conditional component that requires the `value` to be set. If the conditions for `value` are met, it will display the wrapped content.

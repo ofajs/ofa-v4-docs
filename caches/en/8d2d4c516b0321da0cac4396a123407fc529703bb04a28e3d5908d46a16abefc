@@ -1,0 +1,4 @@
+```javascript
+// Sample code: Go back to the previous page
+page.back();
+```

@@ -1,0 +1,4 @@
+```javascript
+// Access the route configuration information of the application
+const routeConfig = app.routers;
+```

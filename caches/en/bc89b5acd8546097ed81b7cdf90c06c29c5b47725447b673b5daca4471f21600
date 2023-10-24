@@ -1,0 +1,1 @@
+The `classList` property allows you to easily add, remove, and toggle class names to dynamically change an element's style. For more information on how to use it, please refer to [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).

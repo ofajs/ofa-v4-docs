@@ -1,0 +1,10 @@
+```javascript
+// simple-button.mjs
+export const type = $.COMP; // Double file modules must include `export const type = $.COMP`
+
+// The component name to be registered. When the tag attribute is not defined, the registered component name remains the same as the file name
+// export const tag = 'simple-button';
+
+// The URL of the component template. When not defined, it defaults to loading the html file with the same name as the component in the same directory as the current module
+// export const temp = './simple-button.html';
+```

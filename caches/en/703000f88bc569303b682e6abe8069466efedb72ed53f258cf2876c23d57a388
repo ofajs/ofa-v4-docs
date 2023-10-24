@@ -1,0 +1,1 @@
+`replace` method is similar to `goto`, but it is used to replace the current page instead of adding a new page to the stack. This can be used to implement page replacement instead of stack navigation.

@@ -1,0 +1,7 @@
+<template is="exm-article">
+<a href="../../publics/examples/nested-page/demo.html" preview></a>
+<a href="../../publics/examples/nested-page/page1.html"></a>
+<a href="../../publics/examples/nested-page/page2.html"></a>
+<a href="../../publics/examples/nested-page/layout.html" main></a>
+</template>
+

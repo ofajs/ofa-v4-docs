@@ -1,1 +1,0 @@
-You can use `$ele.css.xxx = ''` to set the CSS style of an element, where `xxx` is the CSS property name you want to set. By setting the property value to an empty string, you can remove the specified style property.

@@ -1,0 +1,7 @@
+- [created](./life-cycle/created.md)：組件被創建，但未渲染內容時觸發
+- [ready](./life-cycle/ready.md)：組件被創建，內容被渲染後觸發
+- [watch](./life-cycle/watch.md)：組件初始化完成後和值被改變後觸發
+- [loaded](./life-cycle/loaded.md)：組件內嵌資源被加載完成後觸發
+- [attached](./life-cycle/attached.md)：組件被添加到 document 後觸發
+- [detached](./life-cycle/detached.md)： 組件從 document 被移除後觸發
+- [routerChange](./life-cycle/router-change.md)：內嵌的父頁面在應用路由改變時觸發

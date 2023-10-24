@@ -1,0 +1,17 @@
+```html
+<div id="target1">
+    <span style="color:green;">target 1</span>
+</div>
+<div id="target2">origin text</div>
+<br>
+<div id="logger" style="border:red solid 1px;padding:8px;"></div>
+
+<script>
+setTimeout(()=> {
+    $('#target2').html = `<b style="color:blue;">new text</b>`;
+
+    console.log($("#target1").text) // => <span style="color:green;">target 1</span>;
+    $("#logger").html = $("#target1").html;
+}, 500);
+</script>
+```

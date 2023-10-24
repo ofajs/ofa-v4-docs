@@ -1,0 +1,17 @@
+```html
+<button id="target">add count</button>
+<br>
+<br>
+<div id="logger" style="border:red solid 1px;padding:8px;">-</div>
+
+<script>
+    let count = 0;
+    const f = ()=> {
+        $("#logger").text = count++;
+        if(count === 3){
+            $("#target").off("click", f);
+        }
+    }
+    $("#target").on("click", f);
+</script>
+```

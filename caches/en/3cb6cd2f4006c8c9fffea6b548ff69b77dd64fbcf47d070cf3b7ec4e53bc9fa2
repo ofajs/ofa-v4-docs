@@ -1,0 +1,1 @@
+Using the `siblings` property, you can easily retrieve all the adjacent element instances of the current element, which will be returned as an array.

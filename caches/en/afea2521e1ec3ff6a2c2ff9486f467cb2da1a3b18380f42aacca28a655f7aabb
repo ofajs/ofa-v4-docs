@@ -1,0 +1,1 @@
+`goto` method is used to navigate from the current page to another page. Unlike the `goto` method of `app`, the `goto` method of `page` can navigate to other pages using relative addresses.

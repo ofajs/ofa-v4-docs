@@ -1,4 +1,0 @@
-```html
-<!-- template.html -->
-<input sync:value="inputValue" />
-```

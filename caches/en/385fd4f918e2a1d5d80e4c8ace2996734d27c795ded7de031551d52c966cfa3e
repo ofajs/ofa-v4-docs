@@ -1,0 +1,1 @@
+Please note that the `style` method only gets and sets values on the `style` attribute, not the actual computed style.

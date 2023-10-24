@@ -1,0 +1,1 @@
+In the example above, we used the `ele` attribute to access an element and modified its inner HTML content, as well as the [tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName) of the element for recording purposes. This allows you to perform more complex operations on elements using native JavaScript methods.

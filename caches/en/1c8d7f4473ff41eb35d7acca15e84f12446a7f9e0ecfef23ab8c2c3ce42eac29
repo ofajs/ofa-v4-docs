@@ -1,0 +1,1 @@
+In this example, we demonstrate how to use state synchronization to achieve the switch of dark mode. First, we use the `$.stanz` method to create a data object named `isDark`, which can be shared among multiple components. This allows different component instances to share data and achieve the switch of dark mode.

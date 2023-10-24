@@ -1,11 +1,1 @@
 Below is an example of SCSR, which shows how to render the content of a page module directly on the page:
-
-```html
-<scsr:module name="example-module">
-  <h1>Hello, world!</h1>
-</scsr:module>
-```
-
-Based on the example above, the content within the `<scsr:module>` tag will be rendered directly on the page when the module named "example-module" is loaded.
-
-To use this feature, you need to have the appropriate module defined and registered in your SCSR framework. By using the module name as the value of the `name` attribute, you can easily embed the content within the module on any page.

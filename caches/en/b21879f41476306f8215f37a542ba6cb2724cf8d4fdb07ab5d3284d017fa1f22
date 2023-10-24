@@ -1,0 +1,1 @@
+`x-else` can be used after `x-if` or `x-if-else`, and it should be placed at the end. If none of the previous conditions are met, it will display the content wrapped by itself. No `value` value needs to be set.

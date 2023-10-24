@@ -1,0 +1,1 @@
+In the example, these conditional rendering components are used to select the content to be displayed based on the value of `count`. When `count` is divisible by 3, the `x-if` condition is satisfied and displays red text; when `(count + 1)` is divisible by 3, the `x-if-else` condition is satisfied and displays green text; otherwise, blue text is displayed.

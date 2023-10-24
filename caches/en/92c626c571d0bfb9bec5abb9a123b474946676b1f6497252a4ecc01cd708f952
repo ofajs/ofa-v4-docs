@@ -1,0 +1,1 @@
+This example demonstrates how to create nested pages, where `page1.html` and `page2.html` are subpages and `layout.html` is the parent page. The parent page `layout.html` contains the entire framework layout, while the subpages are linked to the parent page using the `parent` attribute, indicating that they should be nested within the parent page.

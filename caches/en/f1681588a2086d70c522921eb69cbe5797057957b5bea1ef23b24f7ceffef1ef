@@ -1,7 +1,0 @@
-```javascript
-async function doSomethingAfterPageLoad() {
-  await page._rendered;
-  // The page has finished loading
-  // Perform your operations
-}
-```
