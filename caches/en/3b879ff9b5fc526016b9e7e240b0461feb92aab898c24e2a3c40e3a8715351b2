@@ -1,1 +1,1 @@
-When you use a custom form component, you simply add it to your form and set the desired `name` attribute:
+When you use a custom form component, you simply add it to your form and set the desired `name` property:

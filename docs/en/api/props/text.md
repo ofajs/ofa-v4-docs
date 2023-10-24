@@ -33,7 +33,7 @@ You can directly get or set the text content of an element. Here is an example:
 
 ## Template Syntax Usage
 
-You can also use the `:text` attribute in the template to set the corresponding attribute value for the target element. This is particularly useful in component rendering. Here is an example:
+You can also use the `:text` property in the template to set the corresponding property value for the target element. This is particularly useful in component rendering. Here is an example:
 
 <comp-viewer comp-name="text-demo">
 

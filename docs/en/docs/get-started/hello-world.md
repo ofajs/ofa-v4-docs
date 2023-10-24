@@ -64,7 +64,7 @@ You can click to jump and view [example events](./example-event.md) section to l
 
 Refer to [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list of all available events.
 
-## Attributes
+## Properties
 
 In the above two examples, we have demonstrated the use of the `html` and `text` attributes.
 

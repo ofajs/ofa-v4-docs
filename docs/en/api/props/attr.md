@@ -39,7 +39,7 @@ You can directly use the `attr` method to get or set the attributes of an elemen
 
 ## Template Syntax Usage
 
-You can also use the `attr:aaa="bbb"` syntax in the template to set the attribute **aaa** of the target element to the value of component **bbb**. This method is particularly useful for component rendering. Here is an example:
+You can also use the `attr:aaa="bbb"` syntax in the template to set the property **aaa** of the target element to the value of component **bbb**. This method is particularly useful for component rendering. Here is an example:
 
 <comp-viewer comp-name="html-demo">
 

@@ -1,1 +1,1 @@
-Because the elements inside a component are isolated from the external environment, the `root` attribute of the elements inside the shadow node is the shadow root node.
+Because the elements inside a component are isolated from the external environment, the `root` property of the elements inside the shadow node is the shadow root node.

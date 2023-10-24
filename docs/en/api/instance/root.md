@@ -1,6 +1,6 @@
 # root
 
-Using the `root` attribute to access the root node of an element.
+Using the `root` property to access the root node of an element.
 
 On a webpage, the root node of ordinary elements is an instance of [document](https://developer.mozilla.org/en-US/docs/Web/API/Document).
 
@@ -28,7 +28,7 @@ On a webpage, the root node of ordinary elements is an instance of [document](ht
 
 ## Elements Inside Shadow DOM
 
-Because the elements inside a component are isolated from the external environment, the `root` attribute of the elements inside the shadow node is the shadow root node.
+Because the elements inside a component are isolated from the external environment, the `root` property of the elements inside the shadow node is the shadow root node.
 
 <comp-viewer comp-name="test-root">
 

@@ -10,7 +10,7 @@ It is not a wise choice to put all excessive logic in one component; we can sepa
 
 In the case, the nested component named CompTwo is imported using `<l-m src="./comp-two.html"></l-m>`.
 
-By using `<comp-two :txt="val"></comp-two>`, a nested component is used and the val attribute of the current component is passed to the nested component as txt attribute. This way, the nested component can render using the passed data.
+By using `<comp-two :txt="val"></comp-two>`, a nested component is used and the val property of the current component is passed to the nested component as txt property. This way, the nested component can render using the passed data.
 
 In `<comp-two></comp-two>`, we used nested components without passing any properties. The usage here depends on the logic and design of the nested component itself.
 

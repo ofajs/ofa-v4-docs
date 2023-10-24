@@ -16,7 +16,7 @@ If you are using a different editor, you can also create an Nginx or Apache serv
 
 Below, we will create a simple button component named **simple-button**, which will have a more stylish appearance than native buttons.
 
-First, create a file named 'simple-button.html' that uses the 'template' tag and add the 'component' attribute to identify it as a component.
+First, create a file named 'simple-button.html' that uses the 'template' tag and add the 'component' property to identify it as a component.
 
 Then, write the template code for the component in the `template`. Next, below the template content, add a `script` tag and put the component's JavaScript code inside it.
 
@@ -53,7 +53,7 @@ Then, write the template code for the component in the `template`. Next, below t
 
   <script>
     export default {
-      tag: 'simple-button' // Component name to be registered, if the tag attribute is not defined, the registered component name remains the same as the filename
+      tag: 'simple-button' // Component name to be registered, if the tag property is not defined, the registered component name remains the same as the filename
     }
   </script>
 </template>
@@ -131,7 +131,7 @@ Button component consists of two files:
 // simple-button.mjs
 export const type = $.COMP; // Double file modules must include `export const type = $.COMP`
 
-// The component name to be registered. When the tag attribute is not defined, the registered component name remains the same as the file name
+// The component name to be registered. When the tag property is not defined, the registered component name remains the same as the file name
 // export const tag = 'simple-button';
 
 // The URL of the component template. When not defined, it defaults to loading the html file with the same name as the component in the same directory as the current module

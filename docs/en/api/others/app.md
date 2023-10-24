@@ -5,7 +5,7 @@
 
 ## src
 
-The `src` attribute is used to specify the specific address of the application parameter configuration module. For detailed examples, please refer to the [case](../../cases/app-config.md).
+The `src` property is used to specify the specific address of the application parameter configuration module. For detailed examples, please refer to the [case](../../cases/app-config.md).
 
 ```javascript
 const app = $("o-app");
@@ -14,7 +14,7 @@ console.log(app.src);
 
 ## current
 
-The `current` attribute is used to obtain the currently displayed page instance. This can help you access and manipulate the currently displayed page, such as updating its content or performing specific operations.
+The `current` property is used to obtain the currently displayed page instance. This can help you access and manipulate the currently displayed page, such as updating its content or performing specific operations.
 
 ```javascript
 // Get the current page instance
@@ -50,7 +50,7 @@ app.back();
 
 ## routers
 
-The `routers` attribute contains the routing configuration information for the application. This is an important attribute that defines the routing rules and mapping for the various pages in the application. The routing configuration determines the navigation between pages and how URL is handled.
+The `routers` property contains the routing configuration information for the application. This is an important property that defines the routing rules and mapping for the various pages in the application. The routing configuration determines the navigation between pages and how URL is handled.
 
 ```javascript
 // Access the route configuration information of the application

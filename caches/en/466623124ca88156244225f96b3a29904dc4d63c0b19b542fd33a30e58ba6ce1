@@ -1,1 +1,1 @@
-You can use the `template` element and add the `name` attribute to customize temporary templates within a component. When using `x-fill`, use the `name` attribute to specify the template name to be filled.
+You can use the `template` element and add the `name` property to customize temporary templates within a component. When using `x-fill`, use the `name` property to specify the template name to be filled.

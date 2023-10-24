@@ -8,7 +8,7 @@ Basic parameters are the most basic configuration for registering a component, w
 
 ### tag
 
-`tag` represents the registered component name. When the `tag` attribute is not defined, the registered component name remains the same as the file name.
+`tag` represents the registered component name. When the `tag` property is not defined, the registered component name remains the same as the file name.
 
 Example: 
 
@@ -30,7 +30,7 @@ export const data = {
 
 ### attrs
 
-`attrs` is an object-type attribute, which also belongs to `data`, but this data will be reflected in the attributes of the element. Changes in the attributes will also dynamically change the `data` of the component. When there is a capital key, it will be transformed into a kebab-case naming in the component attribute.
+`attrs` 是对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 property 会变成 `-` 驼峰的命名。
 
 Example: 
 

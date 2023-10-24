@@ -1,1 +1,1 @@
-In the above example, the `app` attribute of the `o-app` element contains the elements within the `o-page` element and the `test-comp` custom component. This means that they can both access the data and methods of the `o-app` element through the `app` attribute.
+In the above example, the `app` property of the `o-app` element contains the elements within the `o-page` element and the `test-comp` custom component. This means that they can both access the data and methods of the `o-app` element through the `app` property.

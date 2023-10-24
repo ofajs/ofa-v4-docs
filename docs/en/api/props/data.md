@@ -1,6 +1,6 @@
 # data
 
-Obtain the [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) of an element, use the [`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) attribute to maintain consistency with the native [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
+Obtain the [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) of an element, use the [`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) property to maintain consistency with the native [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset).
 
 <html-viewer>
 

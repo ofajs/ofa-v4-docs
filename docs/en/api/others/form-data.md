@@ -201,7 +201,7 @@ In the example below, we create a custom form component called "custom-input". T
 
 </comp-viewer>
 
-When you use a custom form component, you simply add it to your form and set the desired `name` attribute:
+When you use a custom form component, you simply add it to your form and set the desired `name` property:
 
 ```html
 <div id="myForm">
@@ -218,7 +218,7 @@ When you use a custom form component, you simply add it to your form and set the
 </script>
 ```
 
-In the above example, we use custom form components by adding the `<custom-input>` element and setting the `name` attribute. Then, we use the `formData()` method to listen to the values of input elements and custom components, in order to retrieve and process the form data in real-time. This approach allows you to easily extend your form to include custom form components, meeting your specific needs.
+In the above example, we use custom form components by adding the `<custom-input>` element and setting the `name` property. Then, we use the `formData()` method to listen to the values of input elements and custom components, in order to retrieve and process the form data in real-time. This approach allows you to easily extend your form to include custom form components, meeting your specific needs.
 
 ## Using Form Data in Components or Pages
 

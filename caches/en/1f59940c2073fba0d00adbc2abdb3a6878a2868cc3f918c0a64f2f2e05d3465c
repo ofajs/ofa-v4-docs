@@ -1,1 +1,1 @@
-You can also use the `:html` attribute in the template to set corresponding attribute values for the target element. This is particularly useful in component rendering. Here is an example: 
+You can also use the `:html` property in the template to set corresponding property values for the target element. This is particularly useful in component rendering. Here is an example: 

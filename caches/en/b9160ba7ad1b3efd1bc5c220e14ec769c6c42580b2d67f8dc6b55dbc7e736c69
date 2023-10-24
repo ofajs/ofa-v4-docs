@@ -1,1 +1,1 @@
-The `tag` attribute is used to get the tag of an element, returning a lowercase string.
+The `tag` property is used to get the tag of an element, returning a lowercase string.

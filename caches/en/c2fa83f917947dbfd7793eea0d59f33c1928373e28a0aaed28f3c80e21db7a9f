@@ -1,1 +1,1 @@
-Use the `x-fill` component for list rendering; set the `value` attribute to populate the array data.
+Use the `x-fill` component for list rendering; set the `value` property to populate the array data.

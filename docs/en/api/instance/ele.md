@@ -1,6 +1,6 @@
 # `ele` Property
 
-Through the `ele` attribute, you can access the actual element of the instance and use native properties or methods.
+Through the `ele` property, you can access the actual element of the instance and use native properties or methods.
 
 <html-viewer>
 
@@ -26,4 +26,4 @@ Through the `ele` attribute, you can access the actual element of the instance a
 
 </html-viewer>
 
-In the example above, we used the `ele` attribute to access an element and modified its inner HTML content, as well as the [tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName) of the element for recording purposes. This allows you to perform more complex operations on elements using native JavaScript methods.
+In the example above, we used the `ele` property to access an element and modified its inner HTML content, as well as the [tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName) of the element for recording purposes. This allows you to perform more complex operations on elements using native JavaScript methods.

@@ -1,1 +1,1 @@
-Some application UIs are composed of nested pages with multiple layers, such as a common top or side navigation. You can use the `parent` attribute to represent the parent page that the current page is nested in.
+Some application UIs are composed of nested pages with multiple layers, such as a common top or side navigation. You can use the `parent` property to represent the parent page that the current page is nested in.

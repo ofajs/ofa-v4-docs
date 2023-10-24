@@ -84,7 +84,7 @@ export const pageAnime = {
 };
 ```
 
-3. Use the `o-app` tag in HTML files and reference the configuration data es module through the `src` attribute.
+3. Use the `o-app` tag in HTML files and reference the configuration data es module through the `src` property.
 
 ```html
 <!DOCTYPE html>
@@ -122,7 +122,7 @@ In the `o-app` application, you can easily achieve route navigation, jumping fro
 
 ### Use `<a>` tag for route navigation
 
-You can use the `<a>` tag in the HTML of the page to implement routing. You need to specify the `href` attribute as the path of the target page module and add the `olink` attribute to inform the `o-app` component that this is a routing link.
+You can use the `<a>` tag in the HTML of the page to implement routing. You need to specify the `href` property as the path of the target page module and add the `olink` property to inform the `o-app` component that this is a routing link.
 
 ```html
 <a href="./pages/home.mjs?count=2" olink>Jump to homepage</a>
@@ -130,7 +130,7 @@ You can use the `<a>` tag in the HTML of the page to implement routing. You need
 
 ### goto
 
-You can use the `on:click` attribute in the page template to bind a click event and call the `goto` method on the module for routing.
+You can use the `on:click` property in the page template to bind a click event and call the `goto` method on the module for routing.
 
 ```html
 <template page>
@@ -182,7 +182,7 @@ Through the above methods, you can implement flexible routing in the `o-app` app
 
 ## Accessing Apps and Current Pages
 
-In various elements (including components) within the application, you can use the **app** attribute to access the `o-app` instance they belong to. This is very useful for operations that require interaction with the entire application.
+In various elements (including components) within the application, you can use the **app** property to access the `o-app` instance they belong to. This is very useful for operations that require interaction with the entire application.
 
 You can retrieve the address of the currently active page module through the `app.current` property.
 
@@ -202,7 +202,7 @@ export default () => {
 }
 ```
 
-In the example above, the app tag was retrieved using the selector `.app`, and then the current active page address was obtained by accessing the `app.current` attribute.
+In the example above, the app tag was retrieved using the selector `.app`, and then the current active page address was obtained by accessing the `app.current` property.
 
 ## Tips: Pre-cache the next page
 

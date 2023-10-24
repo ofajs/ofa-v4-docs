@@ -30,7 +30,7 @@ Below is an overview of the ofa.js API. You can have a quick look now and refer 
 - [wrap](./operation/wrap.md): Wrap the target element with another element
 - [unwrap](./operation/unwrap.md): Remove the wrapping element from the target element
 
-## Attribute Operations
+## property Operations
 
 - [text](./props/text.md): Get or set the text content of the target element
 - [html](./props/html.md): Get or set the HTML content of the target element

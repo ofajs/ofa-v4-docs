@@ -4,7 +4,7 @@
 
 ## `src` attribute
 
-`src` attribute is used to specify the specific address of a page module. This is a crucial attribute that specifies the content and behavior of a page, telling the application where to load the content of a specific page from.
+`src` property is used to specify the specific address of a page module. This is a crucial property that specifies the content and behavior of a page, telling the application where to load the content of a specific page from.
 
 ```javascript
 // Sample code: Get the current page address

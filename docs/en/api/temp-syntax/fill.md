@@ -1,6 +1,6 @@
 # x-fill
 
-Use the `x-fill` component for list rendering; set the `value` attribute to populate the array data.
+Use the `x-fill` component for list rendering; set the `value` property to populate the array data.
 
 In `x-fill`, you can use special variables `$index` to represent the index of the current list item, and `$data` to represent the data of the list item itself.
 
@@ -32,7 +32,7 @@ In this example, we use the `x-fill` component to render the array `arr` and dis
 
 ## Template List Rendering
 
-You can use the `template` element and add the `name` attribute to customize temporary templates within a component. When using `x-fill`, use the `name` attribute to specify the template name to be filled.
+You can use the `template` element and add the `name` property to customize temporary templates within a component. When using `x-fill`, use the `name` property to specify the template name to be filled.
 
 Here is an example demonstrating how to use template list rendering:
 

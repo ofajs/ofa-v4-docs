@@ -1,1 +1,1 @@
-In this example, `{{txt}}` will be replaced by the value of the `txt` attribute and finally rendered on the page.
+In this example, `{{txt}}` will be replaced by the value of the `txt` property and finally rendered on the page.

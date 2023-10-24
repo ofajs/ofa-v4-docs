@@ -1,6 +1,6 @@
 # index
 
-`index` attribute is used to obtain the position of an element relative to its parent element. This position is counted starting from 0, which means the position of the first element is 0, the second is 1, and so on.
+`index` property is used to obtain the position of an element relative to its parent element. This position is counted starting from 0, which means the position of the first element is 0, the second is 1, and so on.
 
 In the example below, we demonstrate how to use the `index` property to obtain the position of an element within its parent element:
 
@@ -28,4 +28,4 @@ In the example below, we demonstrate how to use the `index` property to obtain t
 
 </html-viewer>
 
-In this example, we first select an `<li>` element with an `id` of "target". Then, we use the `index` attribute to get the position of this element under its parent `<ul>`, which is the second element, so the value of `index` is 1. Then, we display this value in a `<div>` element with an `id` of "logger".
+In this example, we first select an `<li>` element with an `id` of "target". Then, we use the `index` property to get the position of this element under its parent `<ul>`, which is the second element, so the value of `index` is 1. Then, we display this value in a `<div>` element with an `id` of "logger".

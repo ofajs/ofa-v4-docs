@@ -1,1 +1,1 @@
-In various elements (including components) within the application, you can use the **app** attribute to access the `o-app` instance they belong to. This is very useful for operations that require interaction with the entire application.
+In various elements (including components) within the application, you can use the **app** property to access the `o-app` instance they belong to. This is very useful for operations that require interaction with the entire application.

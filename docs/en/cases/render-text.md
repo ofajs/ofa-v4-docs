@@ -9,6 +9,6 @@ In the component file, you can add a `script` tag to write the logic code of the
 
 `data` parameter is used to define the default data for component elements. Once the instantiation is complete, you can use **template syntax**.
 
-Text rendering is wrapped in double braces, that is `{{xxx}}`, where xxx represents the component's attribute name.
+Text rendering is wrapped in double braces, that is `{{xxx}}`, where xxx represents the component's property name.
 
-This case demonstrates how to render the val attribute of component elements.
+This case demonstrates how to render the val property of component elements.

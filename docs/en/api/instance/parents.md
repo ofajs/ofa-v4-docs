@@ -1,6 +1,6 @@
 # parents
 
-Using the `parents` attribute, you can easily get all parent element instances of the current element, which will be returned as an array.
+Using the `parents` property, you can easily get all parent element instances of the current element, which will be returned as an array.
 
 <html-viewer>
 

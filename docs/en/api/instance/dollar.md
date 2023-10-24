@@ -25,7 +25,7 @@ Through the `$` method, you can get the first element instance on the page that 
 
 </html-viewer>
 
-In the example above, we use the `$` symbol to select the element instance with the `id` of "target1", and modify its text content by setting the `text` attribute.
+In the example above, we use the `$` symbol to select the element instance with the `id` of "target1", and modify its text content by setting the `text` property.
 
 ## Searching for Child Elements Example
 

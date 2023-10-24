@@ -35,7 +35,7 @@ html is a rather dangerous method. When it is injected with `script`, the intern
 
 ## Template Syntax Usage
 
-You can also use the `:html` attribute in the template to set corresponding attribute values for the target element. This is particularly useful in component rendering. Here is an example: 
+You can also use the `:html` property in the template to set corresponding property values for the target element. This is particularly useful in component rendering. Here is an example: 
 
 <comp-viewer comp-name="html-demo">
 

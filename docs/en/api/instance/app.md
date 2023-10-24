@@ -1,8 +1,8 @@
 # app
 
-In the elements within `o-app`, including the elements within the shadow tree of `o-page` inside `o-app`, or the internal child components, their `app` attribute points to the element instance of this `o-app`.
+In the elements within `o-app`, including the elements within the shadow tree of `o-page` inside `o-app`, or the internal child components, their `app` property points to the element instance of this `o-app`.
 
-The following is an example demonstrating how to access the `app` attribute within an element in `o-app`:
+The following is an example demonstrating how to access the `app` property within an element in `o-app`:
 
 <iframe src="../../../publics/test-app/demo.html" style="border:none;width:100%;height:200px;"></iframe>
 
@@ -66,4 +66,4 @@ The code is as follows: .
 </template>
 ```
 
-In the above example, the `app` attribute of the `o-app` element contains the elements within the `o-page` element and the `test-comp` custom component. This means that they can both access the data and methods of the `o-app` element through the `app` attribute.
+In the above example, the `app` property of the `o-app` element contains the elements within the `o-page` element and the `test-comp` custom component. This means that they can both access the data and methods of the `o-app` element through the `app` property.

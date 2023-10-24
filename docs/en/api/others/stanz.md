@@ -143,7 +143,7 @@ In this example, we first create a `$` instance object called `target`, and then
 
 In the `$` instance, using property names starting with the underscore `_` means that these values will not be watched by the `watch` or `watchTick` methods. This is useful for some temporary or private properties, as you can freely change them without triggering the listeners.
 
-Here is an example demonstrating how to use underscore-prefixed attribute values to avoid being monitored:
+Here is an example demonstrating how to use underscore-prefixed property values to avoid being monitored:
 
 <html-viewer>
 

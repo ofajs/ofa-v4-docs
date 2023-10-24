@@ -31,7 +31,7 @@
 
   <script>
     export default {
-      tag: 'simple-button' // Component name to be registered, if the tag attribute is not defined, the registered component name remains the same as the filename
+      tag: 'simple-button' // Component name to be registered, if the tag property is not defined, the registered component name remains the same as the filename
     }
   </script>
 </template>

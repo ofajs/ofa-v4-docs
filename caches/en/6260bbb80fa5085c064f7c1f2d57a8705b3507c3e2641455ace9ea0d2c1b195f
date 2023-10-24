@@ -1,1 +1,1 @@
-First, create a file named 'simple-button.html' that uses the 'template' tag and add the 'component' attribute to identify it as a component.
+First, create a file named 'simple-button.html' that uses the 'template' tag and add the 'component' property to identify it as a component.

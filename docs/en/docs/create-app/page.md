@@ -4,7 +4,7 @@ In ofa.js, we have built a custom component called `o-page` to provide convenien
 
 ## Page Modules
 
-When creating a single file page module, it is similar to creating a component module. Use the `template` tag to wrap the template code of the page and add the `page` attribute. Inside this tag, you can freely use template syntax to interact with other components or page modules.
+When creating a single file page module, it is similar to creating a component module. Use the `template` tag to wrap the template code of the page and add the `page` property. Inside this tag, you can freely use template syntax to interact with other components or page modules.
 
 ```html
 <!-- my-single-file-page.html -->
@@ -22,7 +22,7 @@ When creating a single file page module, it is similar to creating a component m
   </script>
 </template>
 ```
-In HTML files, use the `src` attribute of the `o-page` tag to specify the file path of the page module. The page content will be rendered inside this component.
+In HTML files, use the `src` property of the `o-page` tag to specify the file path of the page module. The page content will be rendered inside this component.
 
 ```html
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ Here are the steps to use the `o-page` component and page modules:
 
 Creating page module: .
 
-Similar to creating a component module, create a page module but set the `type` attribute to `$.PAGE`. The available parameters for a page module include `temp`, `data`, `proto`, and `watch`.
+Similar to creating a component module, create a page module but set the `type` property to `$.PAGE`. The available parameters for a page module include `temp`, `data`, `proto`, and `watch`.
 
 ```javascript
 // my-page.mjs
@@ -78,7 +78,7 @@ In the same directory as the page module, create a page template file named `my-
 <p>Welcome to my page!</p>
 ```
 
-In your HTML file, use the `<o-page>` tag to use the `o-page` component, and reference the file path of the page module through the `src` attribute. The content of the page will be rendered inside this component.
+In your HTML file, use the `<o-page>` tag to use the `o-page` component, and reference the file path of the page module through the `src` property. The content of the page will be rendered inside this component.
 
 ```html
 <!DOCTYPE html>

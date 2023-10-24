@@ -1,6 +1,6 @@
 # prev
 
-Using the `prev` attribute, you can get the previous adjacent element instance of an element.
+Using the `prev` property, you can get the previous adjacent element instance of an element.
 
 <html-viewer>
 

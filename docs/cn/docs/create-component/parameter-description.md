@@ -30,7 +30,7 @@ export const data = {
 
 ### attrs
 
-`attrs` 是对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 attribute 会变成 `-` 驼峰的命名。
+`attrs` 是对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 property 会变成 `-` 驼峰的命名。
 
 示例：
 

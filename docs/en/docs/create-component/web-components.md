@@ -1,4 +1,4 @@
-# Encapsulation and Componentization: Common Knowledge of Componentization
+# Conventional Knowledge of Web Components
 
 ofa.js is a wrapper library based on Web Components technology, aiming to simplify and accelerate the component development process. By hiding complex technical details behind the scenes, it allows developers to focus more on building high-quality components and applications.
 

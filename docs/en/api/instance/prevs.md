@@ -1,6 +1,6 @@
 # prevs
 
-By using the `prevs` attribute, you can easily access all the previous adjacent element instances of the current element, which will be returned in the form of an array.
+By using the `prevs` property, you can easily access all the previous adjacent element instances of the current element, which will be returned in the form of an array.
 
 <html-viewer>
 

@@ -5,7 +5,7 @@
 
 # Event Binding
 
-In the component, you can use the `on` attribute to bind events and enable interactivity for the component. Here is a demonstration of how to bind events in a component to achieve interactive effects.
+In the component, you can use the `on` property to bind events and enable interactivity for the component. Here is a demonstration of how to bind events in a component to achieve interactive effects.
 
 The `proto` parameter is used to define the methods of the component itself. These methods can be used internally within the component or can be executed externally after obtaining the component through a selector.
 

@@ -1,6 +1,6 @@
 # parent
 
-Using the `parent` attribute, you can obtain the parent element instance of an instance.
+Using the `parent` property, you can obtain the parent element instance of an instance.
 
 <html-viewer>
 
