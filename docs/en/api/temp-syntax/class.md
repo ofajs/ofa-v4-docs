@@ -65,13 +65,13 @@ You can use the `class` method to directly manipulate the className of an elemen
 
 <script>
     setTimeout(()=>{
-        $('#target').addClass('color-red');
+        $('#target').class('color-red',true);
     },500);
     setTimeout(()=>{
-        $('#target').removeClass('color-red');
+        $('#target').class('color-red',false);
     },1000);
     setTimeout(()=>{
-        $('#target').addClass('color-blue');
+        $('#target').class('color-blue',true);
     },1500);
 </script>
 ```

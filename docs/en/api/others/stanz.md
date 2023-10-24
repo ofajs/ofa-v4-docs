@@ -107,7 +107,7 @@ Below is an example demonstrating how to use the `unwatch` method of the `$` ins
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
-```
+```html
 <div id="target"></div>
 <br />
 <div id="logger1" style="border: blue solid 1px; margin: 8px"></div>

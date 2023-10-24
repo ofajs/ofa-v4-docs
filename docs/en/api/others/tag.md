@@ -15,7 +15,7 @@ In the example below, we demonstrate how to use the `tag` method to retrieve the
 <div id="logger">logger</div>
 <script>
   setTimeout(() => {
-    $("#logger").textContent = $("#logger").tagName;
+    $("#logger").text = $("#logger").tag;
   }, 500);
 </script>
 ```

@@ -1,4 +1,4 @@
-# `ele` Property
+# ele
 
 Through the `ele` property, you can access the actual element of the instance and use native properties or methods.
 

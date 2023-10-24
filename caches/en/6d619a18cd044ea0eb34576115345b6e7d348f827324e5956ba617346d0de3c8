@@ -2,7 +2,7 @@
 <div id="logger">logger</div>
 <script>
   setTimeout(() => {
-    $("#logger").textContent = $("#logger").tagName;
+    $("#logger").text = $("#logger").tag;
   }, 500);
 </script>
 ```

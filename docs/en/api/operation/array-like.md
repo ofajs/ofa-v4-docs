@@ -17,7 +17,7 @@ Adding child elements from the end.
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
-```
+```html
 <ul>
     <li>I am 1</li>
     <li>I am 2</li>

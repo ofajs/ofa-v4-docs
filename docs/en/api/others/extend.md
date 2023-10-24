@@ -52,6 +52,7 @@ Like jQuery, you can also extend the properties or methods of the underlying ins
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
+```html
 <ul>
     <li>I am 1</li>
     <li id="target">I am target</li>
@@ -78,5 +79,6 @@ Like jQuery, you can also extend the properties or methods of the underlying ins
     `;
   }, 500);
 </script>
+```
 
 </html-viewer>

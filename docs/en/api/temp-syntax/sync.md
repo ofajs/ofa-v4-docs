@@ -1,4 +1,4 @@
-sync
+# sync
 
 Bidirectional data binding of components via sync syntax
 

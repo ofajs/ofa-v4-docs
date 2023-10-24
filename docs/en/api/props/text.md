@@ -21,10 +21,10 @@ You can directly get or set the text content of an element. Here is an example:
 
 <script>
     setTimeout(()=> {
-        $('#target2').html(`<b style="color:blue;">new text</b>`); // can only set text, if you want tags to take effect, please set html attribute
+        $('#target2').text = `<b style="color:blue;">new text</b>`; // can only set text, if you want tags to take effect, please set html attribute
 
-        console.log($("#target1").text()) // => 'target 1';
-        $("#logger").text($("#target1").text());
+        console.log($("#target1").text) // => 'target 1';
+        $("#logger").text = $("#target1").text;
     }, 500);
 </script>
 ```
