@@ -28,7 +28,7 @@ export const loading = () => {
     `,
   });
 
-  setTimeout(() => (loadingEl[0].style.width = "98%"));
+  setTimeout(() => (loadingEl[0].style.width = "98%"), 50);
 
   loadingEl.remove = () => {
     loadingEl[0].style["transition-duration"] = "0.1s";
