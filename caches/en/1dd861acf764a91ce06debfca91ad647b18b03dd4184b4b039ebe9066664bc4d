@@ -1,3 +1,0 @@
-- When the "Add Highlight" button is clicked, use the `classList.add()` method to add the class name "highlight" to the `<div>` element, giving it a yellow background color.
-- When the "Remove Highlight" button is clicked, use the `classList.remove()` method to remove the class name "highlight" from the `<div>` element's class list, restoring the original style.
-- When the "Toggle Highlight" button is clicked, use the `classList.toggle()` method to toggle the "highlight" class name of the `<div>` element. If the class name already exists, remove it; if it doesn't exist, add it, thus achieving the toggling of the style.

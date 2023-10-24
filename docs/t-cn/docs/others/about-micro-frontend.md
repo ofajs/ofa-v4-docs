@@ -6,7 +6,7 @@
 
 **ofa.js** 天生具備微前端的特性，它與其它框架的不同之處在於，基於 **ofa.js** 開發的組件、頁面和應用無需預編譯。相比於一些框架如 React、Vue 和 Angular 等，它們需要在 Node.js 環境下進行一次構建，生成用於客戶端的代碼。然而，**ofa.js** 的開發代碼可以直接放置在靜態服務器上，無需額外的構建步驟，就能實時查看、使用和運行。
 
-**ofa.js** 符合了微前端的五個核心特點：
+**ofa.js** 符合了微前端的特點：
 
 1. **獨立部署**：每個組件和頁面都可以獨立地開發、測試和部署，這使得團隊能夠更迅速地發布新功能和解決問題。
 
@@ -29,4 +29,3 @@
 - [與 React 一起使用 Web Components](https://reactjs.org/docs/web-components.html)
 - [在 React 中使用 Web Components](https://alligator.io/react/using-web-components-in-react/)
 - [將 Web Components 集成到 React 中](https://blog.bitsrc.io/integrating-web-components-in-react-17a52a6a28e4)
-

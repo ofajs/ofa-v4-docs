@@ -1,0 +1,1 @@
+In the elements within `o-app`, including the elements within the shadow tree of `o-page` inside `o-app`, or the internal child components, their `app` property points to the element instance of this `o-app`.

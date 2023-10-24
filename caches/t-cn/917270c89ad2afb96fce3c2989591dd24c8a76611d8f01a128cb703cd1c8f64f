@@ -1,1 +1,0 @@
-在上述示例中，`sync:value="inputValue"` 實現了一個雙向數據綁定，當輸入框的值發生變化時，`inputValue` 會自動更新；反之，當 `inputValue` 發生變化時，輸入框的值也會隨之變化。

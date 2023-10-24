@@ -1,0 +1,4 @@
+```javascript
+// 示例代碼：在當前頁面模塊內將當前頁面替換為另一個頁面
+page.replace("./new-page.html");
+```

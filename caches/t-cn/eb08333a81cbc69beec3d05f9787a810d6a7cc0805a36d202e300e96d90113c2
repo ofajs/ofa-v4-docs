@@ -1,0 +1,4 @@
+```javascript
+const app = $("o-app");
+console.log(app.src);
+```

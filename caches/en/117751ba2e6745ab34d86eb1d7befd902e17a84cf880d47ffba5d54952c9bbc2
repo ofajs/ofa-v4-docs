@@ -1,0 +1,1 @@
+In this example, we use the `one` method to add a click event handler to a button element. When the user clicks the button, the event handler is triggered, but it will not be triggered again afterwards because it has been unbound.

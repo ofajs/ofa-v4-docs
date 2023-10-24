@@ -1,0 +1,1 @@
+`watchTick` is similar to the `watch` method, but it includes throttling internally. It executes only once on a single thread, so it can be more effective in listening for data changes in scenarios with higher performance requirements.

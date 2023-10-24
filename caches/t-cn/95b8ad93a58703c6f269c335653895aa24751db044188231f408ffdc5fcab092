@@ -1,0 +1,1 @@
+在頁面上，普通元素的根節點都是 [document](https://developer.mozilla.org/en-US/docs/Web/API/Document) 實例；

@@ -1,0 +1,1 @@
+Sometimes, you may need to use form data within a component or page, and you need to generate the data during the `ready` lifecycle and bind it to the component.

@@ -2,27 +2,25 @@
 
 以下是一個案例，點擊按鈕後將文本更改為 "Hello World"：
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hello-world</title>
-    <script src="../ofa.js"></script>
-  </head>
-  <body>
-    <div id="desk">Please click the button</div>
-    <br />
-    <button id="btn">I am Button</button>
-    <script>
-      $("#btn").on("click", () => {
-        $("#desk").html = "<b>Hello World</b>";
-      });
-    </script>
-  </body>
-</html>
+<html-viewer>
+
 ```
+<!-- 將 ofa.js 引入項目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
+```html
+<div id="desk">Please click the button</div>
+<br />
+<button id="btn">I am Button</button>
+<script>
+  $("#btn").on("click", () => {
+    $("#desk").html = "<b>Hello World</b>";
+  });
+</script>
+```
+
+</html-viewer>
 
 當點擊按鈕後，將會顯示加粗的 "Hello World" 文本。
 
@@ -33,6 +31,13 @@
 引用了 `ofa.js` 後，`$` 符號將被注冊到全局作用域中。通過 `$('xxx')` 來選擇符合條件的**第一個** 元素，其中 `xxx` 是標準的 [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)  內容。你可以點擊鏈接查看具體的選擇器內容。
 
 以下是一個例子：
+
+<html-viewer>
+
+```
+<!-- 將 ofa.js 引入項目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <p>I am P tag</p>
@@ -46,6 +51,8 @@
     }, 1000);
 </script>
 ```
+
+</html-viewer>
 
 在上面的案例中，打開頁面一秒後，會分別改變 **p標簽** 、**#desk** 和 **.logger**  的文本內容。
 
@@ -63,6 +70,13 @@
 
 你還可以通過 `html` 或 `text` 屬性來獲取元素的內容，如下所示：
 
+<html-viewer>
+
+```
+<!-- 將 ofa.js 引入項目 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
 ```html
 <div id="t1">
     <span style="color: red">I am text</span>
@@ -76,5 +90,7 @@
     $("#t3").html = $("#t1").html;
 </script>
 ```
+
+</html-viewer>
 
 這個例子中，我們將 #t1 元素內的 HTML 內容賦值給了 #t2 和 #t3 元素。

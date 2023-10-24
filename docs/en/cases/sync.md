@@ -8,7 +8,7 @@
 
 By using the `sync` syntax, you can establish real-time bidirectional associations between user interface interactive elements (such as input boxes or custom components) and data models.
 
-The following example demonstrates how to use the `sync` attribute in a component to achieve two-way data binding between an input box and a data model:
+The following example demonstrates how to use the `sync` property in a component to achieve two-way data binding between an input box and a data model:
 
 - In the `data` parameter, we defined a data called `testText` and set its initial value to "I am testText".
 - Using `sync:value="testText"` represents a two-way data binding between the value of the input box and the `testText` data. Therefore, when the user enters content in the input box, the `testText` data will be updated in real time, and vice versa.

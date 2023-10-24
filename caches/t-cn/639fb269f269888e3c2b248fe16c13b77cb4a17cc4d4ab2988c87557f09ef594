@@ -1,0 +1,20 @@
+```html
+<template component>
+  <div>Rendered html: 
+    <span :html="txt" style="color:red;"></span>
+  </div>
+  <script>
+    export default {
+      tag: "html-demo",
+      data: {
+        txt: "I am txt"
+      },
+      ready(){
+        setTimeout(()=>{
+          this.txt = "<b style='color:blue;'>change txt</b>";
+        }, 500);
+      }
+    };
+  </script>
+</template>
+```

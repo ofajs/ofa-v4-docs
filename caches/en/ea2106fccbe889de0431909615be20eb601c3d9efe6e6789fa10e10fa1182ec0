@@ -1,0 +1,1 @@
+You can obtain the instance through the [shadow](./shadow.md) property and then use the `$` method to obtain the desired element.

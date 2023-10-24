@@ -1,0 +1,10 @@
+```javascript
+// Sample code: Get the current page address
+// const page = $("o-app").current;
+...
+ready(){
+  // Within the lifecycle of the page module, 'this' refers to the current page module itself;
+  const page = this;
+}
+...
+```

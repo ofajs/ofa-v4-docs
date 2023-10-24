@@ -19,16 +19,16 @@
 [Case Tutorial](./cases/index.md)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
 </simp-block>
 
 <simp-block>
 
-## ofa.js Packaged Based on Web Components
+## Based on Web Components
 
-### Enter the new generation, Web Components are widely supported. Try ofa.js and see if it suits you.
+#### ofa.js is developed based on Web Components. The following are the supported platforms and times, you can experience them immediately.
 
 <support-platforms></support-platforms>
 
@@ -47,7 +47,7 @@ Unlike other front-end frameworks, using components developed based on ofa.js do
 
 ```
 <!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 <!-- Load the developed punch-logo component -->
 <l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
@@ -299,7 +299,7 @@ var child = $("#target")[0]; // Get the first child element
 
 </simp-block>
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.30/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
 <l-m src="../publics/comps/case-switch.html"></l-m>

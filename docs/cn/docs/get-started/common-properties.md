@@ -1,128 +1,30 @@
-# 常用
+# 常用属性或方法
 
 在 `$` 实例中，除了可以通过选择器选择元素外，还提供了一些常用的来方便元素的操作和查找。
 
-## tag
+可以稍微浏览一下，将来在需要时，可以随时参考 API 文档。
 
-`tag` 用于获取当前元素的标签名（小写形式），类似于 DOM 元素的 `tagName` 。
+## 常用的属性
 
-```html
-<div id="example">Hello World</div>
-<script>
-    const $div = $('#example');
-    console.log($div.tag); // Output: "div"
-</script>
-```
+- [tag](./others/tag.md)：获取目标的标签名
+- [ele](./instance/ele.md)：获取实例的实际原生元素
+- [index](./others/index.md)：获取目标元素在其父元素下的排序
+- [text](../../api/props/text.md)：获取或设置目标元素的文本
+- [html](../../api/props/html.md)：获取或设置目标元素的 HTML 代码
+- [css](../../api/props/css.md)：获取或设置目标元素的样式
+- [style](../../api/props/style.md)：获取目标元素的原生样式
+- [classList](../../api/props/class-list.md)：获取目标元素的原生 class 列表
+- [data](../../api/props/data.md)：获取目标元素的原生数据集
 
+### 节点操作
 
-## ele
+- [before](./operation/before.md)：在目标实例的前面添加元素
+- [after](./operation/after.md)：在目标实例的后面添加元素
+- [remove](./operation/remove.md)：删除目标元素
+- [attr](../../api/props/attr.md)：获取或设置目标元素的 [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
 
-`ele` 用于获取 `$` 实例的实际 DOM 元素，从而可以对该元素进行原生的 JavaScript 操作。
+## 重要特性
 
-```html
-<div id="example">Hello World</div>
-<script>
-    const $div = $('#example');
-    const actualElement = $div.ele;
-    actualElement.style.color = "red"; // Change text color to red
-</script>
-```
+- [表单数据](../../api/others/form-data.md)：方便地绑定和获取表单数据
 
-
-## index 
-
-`index` 用于获取当前元素在同级元素中的排名索引，从 0 开始计数。
-
-```html
-<div>
-    <span>First</span>
-    <span>Second</span>
-    <span id="target">Third</span>
-</div>
-<script>
-    const $targetSpan = $('#target');
-    console.log($targetSpan.index); // Output: 2
-</script>
-```
-
-
-## parent 和 parents  
-
-- `parent` 用于获取当前元素的直接父元素。 
-- `parents` 用于获取当前元素的所有祖先元素（包括父元素的父元素、父元素的父元素的父元素等）构成的数组。
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parent and Parents Attributes</title>
-  <script src="../ofa.js"></script>
-</head>
-<body>
-  <div>
-    <span>
-      <a id="example">Hello World</a>
-    </span>
-  </div>
-  <script>
-    const $a = $('#example');
-
-    const $parentSpan = $a.parent;
-    console.log($parentSpan.tag); // Output: "span"
-
-    const $parentsArray = $a.parents;
-    console.log($parentsArray.map($ele => $ele.tag)); // Output: ["span", "div", "body", "html"]
-  </script>
-</body>
-</html>
-```
-
-
-## next、nexts、prev、prevs、siblings  
-
-- `next` 用于获取当前元素的下一个兄弟元素。 
-- `nexts` 用于获取当前元素后面的所有兄弟元素构成的数组。 
-- `prev` 用于获取当前元素的前一个兄弟元素。 
-- `prevs` 用于获取当前元素前面的所有兄弟元素构成的数组。 
-- `siblings` 用于获取当前元素的所有兄弟元素，不包括自己。
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siblings Attributes</title>
-  <script src="../ofa.js"></script>
-</head>
-<body>
-  <div>
-    <span>Zero</span>
-    <span>First</span>
-    <span id="example">Second</span>
-    <span>Third</span>
-    <span>Four</span>
-  </div>
-  <script>
-    const $span = $('#example');
-
-    const $nextSibling = $span.next;
-    console.log($nextSibling.tag); // Output: "span"
-
-    const $nextSiblingsArray = $span.nexts;
-    console.log($nextSiblingsArray.map($ele => $ele.text)) // Output: ["Third", "Four"]
-
-    const $prevSibling = $span.prev;
-    console.log($prevSibling.tag); // Output: "span"
-
-    const $prevSiblingsArray = $span.prevs;
-    console.log($prevSiblingsArray.map($ele => $ele.text)) // Output: ["Zero", "First"]
-
-    const $siblings = $span.siblings;
-    console.log($siblings.map($ele => $ele.text)) // Output: ["Zero", "First", "Third", "Four"]
-  </script>
-</body>
-</html>
-```
+如果还想更深入了解 ofa.js 的 api，可以参考 [API](../../api/index.md) 文档；

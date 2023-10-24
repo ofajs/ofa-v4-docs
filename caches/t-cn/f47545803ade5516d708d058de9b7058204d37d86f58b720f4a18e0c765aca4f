@@ -1,0 +1,1 @@
+我們建議使用 [classList](../props/class-list.md) 屬性來操作類名，因為這是更常見和標準的方法。

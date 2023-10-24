@@ -1,0 +1,1 @@
+Through the `ready` lifecycle, after the component is ready, we use the `this.shadow.formData()` method to generate the form data object `fdata`. Then, we use `watch` to listen for changes in `fdata`, and when the data changes, we convert it to a JSON string and update `logtext` to achieve real-time display of form data.

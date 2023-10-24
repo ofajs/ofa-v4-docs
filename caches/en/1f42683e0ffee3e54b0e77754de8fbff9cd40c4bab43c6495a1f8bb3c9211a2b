@@ -1,0 +1,18 @@
+```html
+<template component>
+  <div :css.color="txt">I am target</div>
+  <script>
+    export default {
+      tag: "css-demo",
+      data: {
+        txt: "red"
+      },
+      ready(){
+        setTimeout(()=>{
+          this.txt = "blue";
+        }, 500);
+      }
+    };
+  </script>
+</template>
+```

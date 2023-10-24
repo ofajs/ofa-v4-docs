@@ -1,0 +1,1 @@
+sync can also be bound to the instance properties of embedded components. For examples, please refer to the [two-way data binding](../../cases/sync.md) case.

@@ -1,0 +1,1 @@
+In this example, we create a `$` instance object called `target`, and then use the `watch` method to listen for changes in the property values. In the `setTimeout`, we attempt to change the `_aaa` property value, but this change will not trigger the listener. This is very useful for situations where you need to update property values without triggering the listener.

@@ -22,7 +22,7 @@ Using the `o-router` component is achieved by wrapping it outside the `o-app` co
 
 ## fix-body attribute
 
-The `o-router` component also provides a `fix-body` attribute. When you set this attribute, the component will automatically add styles to the `<html>` tag so that the size of the application matches the size of the page, making the content of the application fill the entire window.
+The `o-router` component also provides a `fix-body` property. When you set this property, the component will automatically add styles to the `<html>` tag so that the size of the application matches the size of the page, making the content of the application fill the entire window.
 
 ```html
 <!DOCTYPE html>
@@ -36,7 +36,7 @@ The `o-router` component also provides a `fix-body` attribute. When you set this
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
   </head>
   <body>
-    <!-- Use the o-router component and set the fix-body attribute -->
+    <!-- Use the o-router component and set the fix-body property -->
     <o-router fix-body> 
       <o-app src="app-config.mjs"></o-app>
     </o-router>

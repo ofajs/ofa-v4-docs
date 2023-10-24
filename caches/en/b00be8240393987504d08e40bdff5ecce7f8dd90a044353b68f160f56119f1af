@@ -1,0 +1,1 @@
+When switching pages, the "routerChange" event will be triggered. During page initialization and page switching, you can use the `app.current` property to get the current page address and adjust the activation status of the tabs in the page.

@@ -1,0 +1,4 @@
+```javascript
+// 獲取當前頁面實例
+const currentPage = app.current;
+```

@@ -1,0 +1,9 @@
+```html
+<div id="target1">target 1 text</div>
+
+<script>
+  setTimeout(()=>{
+    $("#target1").text = 'change target 1';
+  },500);
+</script>
+```

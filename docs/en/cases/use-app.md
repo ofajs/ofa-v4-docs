@@ -8,7 +8,7 @@
 
 In `ofa.js`, you can use the `o-app` component to create the layout structure of the entire application and load different page modules within it. By using the `o-app` component, `o-page` component, and page modules, you can build the page structure of the entire application and implement navigation between pages.
 
-When the `o-page` component is inside `o-app`, you can use the `<a>` tag with the `olink` attribute to achieve page navigation. This navigation will not affect the current page, but will only navigate within `o-app`, similar to using an `<iframe>`.
+When the `o-page` component is inside `o-app`, you can use the `<a>` tag with the `olink` property to achieve page navigation. This navigation will not affect the current page, but will only navigate within `o-app`, similar to using an `<iframe>`.
 
 If the `o-page` component is within `o-app`, you can also use the following method:
 - Use the `goto` method to navigate to another page.

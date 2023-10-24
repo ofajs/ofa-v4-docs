@@ -1,0 +1,9 @@
+```
+<div id="logger">-</div>
+<div style="color:red;">shadow html : <span id="shadowHtml"></span></div>
+<script>
+  setTimeout(()=>{
+    const ele = document.createElement('test-ready');
+  },500);
+</script>
+```

@@ -1,0 +1,4 @@
+```javascript
+// Sample code: Navigate to another page within the current page module
+page.goto("./page2.html");
+```

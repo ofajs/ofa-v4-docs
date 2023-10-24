@@ -1,0 +1,1 @@
+In the example below, we create a custom form component called "custom-input". This component is an editable text box that updates its `value` property in real-time when the text changes.

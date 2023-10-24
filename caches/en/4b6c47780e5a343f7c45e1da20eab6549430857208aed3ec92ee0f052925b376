@@ -1,0 +1,1 @@
+In this example, we created a template called "easyLi", and then used `x-fill` to populate the data of the array `arr`, displaying the index and name of the data in each list item.

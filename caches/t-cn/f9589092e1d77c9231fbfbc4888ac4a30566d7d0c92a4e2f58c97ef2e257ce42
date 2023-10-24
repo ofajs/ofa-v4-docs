@@ -1,0 +1,1 @@
+html 是個比較危險的方法，被塞入 `script` 也會自動執行內部的 `javascript` 代碼，使用時注意預防 [XSS](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)；

@@ -1,0 +1,1 @@
+`x-if-else` 可以跟在 `x-if` 或 `x-if-else` 後面，需要設置 `value` 值。如果前面的條件組件不滿足，且自身的 `value` 為 true，它會顯示包裹的內容。

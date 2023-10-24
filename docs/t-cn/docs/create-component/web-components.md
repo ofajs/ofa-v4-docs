@@ -1,4 +1,4 @@
-# 封裝和組件化：組件化常規知識
+# 組件化常規知識
 
 ofa.js 是一個基於 Web Components 技術的封裝庫，旨在簡化和加速組件開發過程。它通過將復雜的技術細節隱藏在背後，讓開發者能夠更專注地構建高質量的組件和應用。
 
@@ -53,14 +53,16 @@ Web Components 提供了一些特殊的 CSS 選擇器，用於選擇和樣式化
 在組件模板中，可以使用 `<slot>` 元素來定義插槽。外部傳入的內容會被插入到插槽內部。
 
 ```html
-<!-- MyComponent.html -->
+<!-- my-component.html -->
+...
 <div>
   <h2><slot></slot></h2>
 </div>
+...
 ```
 
 ```html
-<!-- 使用 MyComponent -->
+<!-- 使用 my-component -->
 <my-component>
   <p>This is a slot content.</p>
 </my-component>
@@ -71,16 +73,18 @@ Web Components 提供了一些特殊的 CSS 選擇器，用於選擇和樣式化
 除了默認插槽外，還可以定義多個命名插槽。命名插槽允許開發者將不同的內容插入到不同的插槽位置。
 
 ```html
-<!-- MyComponent.html -->
+<!-- my-component.html -->
+...
 <div>
     <header><slot name="header"></slot></header>
     <main><slot></slot></main>
     <footer><slot name="footer"></slot></footer>
 </div>
+...
 ```
 
 ```html
-<!-- 使用 MyComponent -->
+<!-- 使用 my-component -->
 <my-component>
   <div slot="header">Header Content</div>
   <p>This is main content.</p>
@@ -93,9 +97,6 @@ Web Components 提供了一些特殊的 CSS 選擇器，用於選擇和樣式化
 `slotchange` 事件在插槽內容變化時觸發。可以通過監聽這個事件來執行一些與插槽內容相關的操作。
 
 ```javascript
-// custom-component.mjs
-export const type = $.COMP;
-
 export default {
   data: {
     count: 0,

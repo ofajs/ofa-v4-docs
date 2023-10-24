@@ -1,0 +1,1 @@
+In this example, we created a custom component `host-demo` and accessed its host component instance inside the component, and then compared if they are equal.

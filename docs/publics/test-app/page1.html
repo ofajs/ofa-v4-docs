@@ -1,0 +1,15 @@
+<template page>
+  <l-m src="./test-comp.html"></l-m>
+  <div>txt : {{txt}}</div>
+  <test-comp></test-comp>
+  <script>
+    export default {
+      data: {
+        txt: "-",
+      },
+      ready() {
+        this.txt = this.app.data.warn;
+      },
+    };
+  </script>
+</template>

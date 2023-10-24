@@ -1,0 +1,1 @@
+Usually, there is no need to set this variable. It is mainly used in separation mode to specify the address of the component template. When `temp` is not defined, the HTML file with the same name as the current module will be loaded by default, and this file should be located in the same directory.

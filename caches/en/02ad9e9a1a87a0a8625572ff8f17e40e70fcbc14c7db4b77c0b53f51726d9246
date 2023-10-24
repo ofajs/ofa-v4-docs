@@ -1,5 +1,0 @@
-- `next` is used to get the next sibling element of the current element.
-- `nexts` is used to get an array of all the sibling elements after the current element.
-- `prev` is used to get the previous sibling element of the current element.
-- `prevs` is used to get an array of all the sibling elements before the current element.
-- `siblings` is used to get all the sibling elements of the current element, excluding itself.

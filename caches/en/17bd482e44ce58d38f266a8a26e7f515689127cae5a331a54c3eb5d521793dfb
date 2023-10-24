@@ -1,0 +1,1 @@
+The generated object data also has the ability to bind in reverse, which means that when you modify the properties of an object, the corresponding form element values will also be automatically updated. This is very useful when handling form data because you can easily achieve two-way data binding.

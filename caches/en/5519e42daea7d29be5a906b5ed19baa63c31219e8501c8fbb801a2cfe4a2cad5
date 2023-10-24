@@ -1,0 +1,1 @@
+In this example, we set up an alias using the `lm.config` method, mapping the alias `@obook` to `https://cdn.jsdelivr.net/npm/obook`. Now, when we use `@obook` as a prefix, it will automatically map to the specified URL.

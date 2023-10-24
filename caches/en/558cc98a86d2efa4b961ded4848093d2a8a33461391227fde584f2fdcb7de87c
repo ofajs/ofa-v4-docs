@@ -1,0 +1,1 @@
+`x-if-else` can be used after `x-if` or `x-if-else`, and it needs a `value` to be set. If the preceding conditional components are not met and its own `value` is true, it will display the wrapped content.

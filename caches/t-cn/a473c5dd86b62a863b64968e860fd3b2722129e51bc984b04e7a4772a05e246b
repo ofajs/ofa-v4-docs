@@ -1,0 +1,1 @@
+默認情況下，`formData()` 方法會監聽目標元素內的所有 `input`、`select` 和 `textarea` 元素。但如果你只想監聽特定的表單元素，可以通過傳遞 [CSS 選擇器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) 來實現。

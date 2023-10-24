@@ -1,0 +1,1 @@
+- Do not set aliases with the same name repeatedly, otherwise errors will occur.

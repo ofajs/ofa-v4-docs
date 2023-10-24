@@ -1,10 +1,10 @@
-# Develop Applications
+# Introduction
 
 Apart from developing components, `ofa.js` can also be used to develop fully functional applications.
 
 `ofa.js` integrates applications as an `o-app` component, allowing you to quickly create applications by directly using this tag. This approach simplifies and streamlines the process of application creation.
 
-In addition, the official `ofa.js` also provides a complete **routing** and **SSG (Static Site Generation)** solution, which helps developers build more robust applications. These features can accelerate the development process, allowing you to focus on the logic and user experience of the application without worrying too much about the underlying details.
+In addition, the official `ofa.js` also provides a complete **routing** and **SSG (Static Site Generation)** solution to help developers build more robust applications. These features can speed up the development process, allowing you to focus on the logic and user experience of your application without worrying too much about the underlying details.
 
 ```html
 <!DOCTYPE html>

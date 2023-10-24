@@ -35,68 +35,35 @@ The `loaded` lifecycle hook is triggered after all dependencies in the component
 The following is an example demonstrating how to use these lifecycle hooks:
 
 ```javascript
-// lifecycle-demo.mjs
-export const type = $.COMP;
-export const tag = "lifecycle-demo";
-export const temp = "./lifecycle-demo-template.html";
+export default {
+  data: {
+    count: 0,
+  },
+  watch: {
+    count(count) {
+      console.log("count: ", count);
+    },
+  },
+  created() {
+    console.log("created: Component created, data not initialized.");
+  },
+  ready() {
+    console.log(
+      "ready: Component is ready with initialized data and template."
+    );
 
-export default async function () {
-  return {
-    data: {
-      count: 0,
-    },
-    watch: {
-      count(count) {
-        console.log("count: ", count);
-      },
-    },
-    created() {
-      console.log("created: Component created, data not initialized.");
-    },
-    ready() {
-      console.log(
-        "ready: Component is ready with initialized data and template."
-      );
-
-      this.on("click", () => {
-        this.count++;
-      });
-    },
-    attached() {
-      console.log("attached: Component attached to DOM.");
-    },
-    detached() {
-      console.log("detached: Component detached from DOM.");
-    },
-  };
-}
+    this.on("click", () => {
+      this.count++;
+    });
+  },
+  attached() {
+    console.log("attached: Component attached to DOM.");
+  },
+  detached() {
+    console.log("detached: Component detached from DOM.");
+  },
+};
 ```
-
-
-```html
-<!-- lifecycle-demo-template.html -->
-<l-m src="../simple-button/simple-button.mjs"></l-m>
-<simple-button>Click Me ({{count}})</simple-button>
-```
-
-```html
-<!-- lifecycle-demo.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lifecycle Demo</title>
-    <script src="../ofa.js"></script>
-    <l-m src="./lifecycle-demo.mjs"></l-m>
-  </head>
-  <body>
-    <lifecycle-demo></lifecycle-demo>
-  </body>
-</html>
-```
-
-In the example above, we defined a component called `lifecycle-demo` and placed a button in its template. Through different lifecycle hooks, we can observe the logs triggered at each stage in the console.
 
 ## Lifecycle Flowchart
 

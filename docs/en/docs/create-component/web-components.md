@@ -1,4 +1,4 @@
-# Encapsulation and Componentization: Common Knowledge of Componentization
+# Conventional Knowledge of Web Components
 
 ofa.js is a wrapper library based on Web Components technology, aiming to simplify and accelerate the component development process. By hiding complex technical details behind the scenes, it allows developers to focus more on building high-quality components and applications.
 
@@ -53,14 +53,16 @@ Slots are the mechanism in Web Components used to embed external content inside 
 In component templates, `<slot>` element can be used to define slots. Contents passed from the outside will be inserted into the slots.
 
 ```html
-<!-- MyComponent.html -->
+<!-- my-component.html -->
+...
 <div>
   <h2><slot></slot></h2>
 </div>
+...
 ```
 
 ```html
-<!-- Use MyComponent -->
+<!-- Use my-component -->
 <my-component>
   <p>This is a slot content.</p>
 </my-component>
@@ -71,16 +73,18 @@ In component templates, `<slot>` element can be used to define slots. Contents p
 Except for the default slot, multiple named slots can also be defined. Named slots allow developers to insert different content into different slot positions.
 
 ```html
-<!-- MyComponent.html -->
+<!-- my-component.html -->
+...
 <div>
     <header><slot name="header"></slot></header>
     <main><slot></slot></main>
     <footer><slot name="footer"></slot></footer>
 </div>
+...
 ```
 
 ```html
-<!-- Use MyComponent -->
+<!-- Use my-component -->
 <my-component>
   <div slot="header">Header Content</div>
   <p>This is main content.</p>
@@ -90,14 +94,9 @@ Except for the default slot, multiple named slots can also be defined. Named slo
 
 ## Usage of the "slotchange" event
 
-The "slotchange" event is used to detect changes in the assigned nodes within a web component.
-
 The `slotchange` event is triggered when the content of a slot changes. You can listen to this event to perform operations related to the content of the slot.
 
 ```javascript
-// custom-component.mjs
-export const type = $.COMP;
-
 export default {
   data: {
     count: 0,

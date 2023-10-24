@@ -1,0 +1,1 @@
+在這個示例中，我們通過 `lm.config` 方法設置了別名，將 `@obook` 別名映射到 `https://cdn.jsdelivr.net/npm/obook`。現在，當我們使用 `@obook` 作為前綴時，它將自動映射到指定的 URL。

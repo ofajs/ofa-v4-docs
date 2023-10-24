@@ -1,0 +1,15 @@
+```html
+<div id="target1">target 1</div>
+<div id="target2">origin text</div>
+<br>
+<div id="logger" style="color:red;"></div>
+
+<script>
+    setTimeout(()=> {
+        $('#target2').text = `<b style="color:blue;">new text</b>`; // can only set text, if you want tags to take effect, please set html attribute
+
+        console.log($("#target1").text) // => 'target 1';
+        $("#logger").text = $("#target1").text;
+    }, 500);
+</script>
+```

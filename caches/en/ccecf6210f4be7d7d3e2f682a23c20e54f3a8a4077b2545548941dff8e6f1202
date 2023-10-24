@@ -1,0 +1,7 @@
+- [text](./props/text.md): Get or set the text content of the target element
+- [html](./props/html.md): Get or set the HTML content of the target element
+- [attr](./props/attr.md): Get or set the attributes of the target element, [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
+- [css](./props/css.md): Get or set the style of the target element
+- [style](./props/style.md): Get the native style of the target element
+- [classList](./props/class-list.md): Get the native class list of the target element
+- [data](./props/data.md): Get the native dataset of the target element

@@ -1,1 +1,0 @@
-`attrs` is an object-type attribute, which also belongs to `data`, but this data will be reflected in the attributes of the element. Changes in the attributes will also dynamically change the `data` of the component. When there is a capital key, it will be transformed into a kebab-case naming in the component attribute.

@@ -1,0 +1,1 @@
+You can quickly switch the class name inside the template using the `class` syntax. In `class:aaa="bbb"`, the `aaa` className will be added to the target element when the `bbb` expression (or the `bbb` property of the component itself) is true.

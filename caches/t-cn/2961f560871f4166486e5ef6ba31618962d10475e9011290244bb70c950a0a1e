@@ -1,0 +1,17 @@
+```html
+<div id="target1">
+  <b>target1:</b>
+</div>
+
+<script>
+  const newEl = $({
+    tag: "div",
+    text: "add target 1 text",
+    css: {
+      color: "red"
+    }
+  });
+
+  $('#target1').push(newEl);
+</script>
+```

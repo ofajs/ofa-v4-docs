@@ -32,8 +32,10 @@ export const data = $.stanz({
   </div>
   <script>
     export const tag = "comp-one";
+
     export default async function ({ load }) {
       const { data } = await load("./data.mjs");
+
       return {
         data: {
           obj: {},
@@ -135,4 +137,3 @@ Due to data sharing, it is necessary to ensure that data is recycled at the appr
   </script>
 </template>
 ```
-

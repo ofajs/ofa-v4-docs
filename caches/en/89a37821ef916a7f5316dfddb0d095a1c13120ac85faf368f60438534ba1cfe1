@@ -1,0 +1,1 @@
+In this example, we use `one:click` to bind a method called `addCount` to the button element. When the user clicks the button, this method will be called, but it will not be triggered again afterwards because it is a one-time event handler.

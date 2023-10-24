@@ -1,0 +1,1 @@
+In this example, we have an array `arr` that contains two objects. Each object has a `name` property and a `childs` property that may contain nested sub-items. We use `x-fill` to populate the list and render the sub-items using the template `"easyLi"`. If an item has sub-items, we use `x-if` to check and create a nested list.

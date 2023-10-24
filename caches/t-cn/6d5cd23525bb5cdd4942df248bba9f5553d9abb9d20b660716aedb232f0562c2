@@ -1,0 +1,12 @@
+```
+<my-button button-text="My Button"></my-button>
+<!-- <script>
+  $("my-button").on("click", () => {
+    $("my-button").count++;
+  });
+
+  setTimeout(() => {
+    $("my-button").sayHello();
+  }, 1000);
+</script> -->
+```

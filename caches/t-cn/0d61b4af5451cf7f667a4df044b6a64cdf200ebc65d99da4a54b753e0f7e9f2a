@@ -1,0 +1,1 @@
+獲取元素的 [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)，使用 [`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) 屬性和原生 [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) 保持一致；

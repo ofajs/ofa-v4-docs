@@ -1,0 +1,1 @@
+If you do not want the event to bubble, you can include the `bubbles: false` parameter when triggering the event:

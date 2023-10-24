@@ -1,0 +1,13 @@
+```html
+<div id="target" style="color:red;">I am target</div>
+
+logger⬇️
+<div id="logger"></div>
+
+<script>
+    setTimeout(()=>{
+       const tar = $('#target').clone();
+       $('#logger').push(tar);
+    },500);
+</script>
+```

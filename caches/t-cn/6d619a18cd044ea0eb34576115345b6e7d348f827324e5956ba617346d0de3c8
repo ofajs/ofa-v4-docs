@@ -1,0 +1,8 @@
+```html
+<div id="logger">logger</div>
+<script>
+  setTimeout(() => {
+    $("#logger").text = $("#logger").tag;
+  }, 500);
+</script>
+```

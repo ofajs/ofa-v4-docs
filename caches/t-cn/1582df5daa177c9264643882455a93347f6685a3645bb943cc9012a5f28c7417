@@ -1,0 +1,4 @@
+```javascript
+// 訪問應用程序的路由配置信息
+const routeConfig = app.routers;
+```

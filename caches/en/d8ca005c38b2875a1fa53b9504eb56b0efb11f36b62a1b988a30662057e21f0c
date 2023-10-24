@@ -1,0 +1,1 @@
+Element instances have array-like properties, adding or deleting nodes can be done using only the array methods; when using the `push`, `unshift`, `pop`, `shift`, and `splice` methods, the [$ method](../instance/dollar.md) initialization will be performed internally, so you can fill in the specific element strings or objects directly.

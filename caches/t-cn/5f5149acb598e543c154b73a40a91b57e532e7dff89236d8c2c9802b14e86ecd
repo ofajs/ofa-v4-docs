@@ -1,0 +1,11 @@
+```html
+<my-comp id="myCustomComponent">
+  <!-- 這裏是你的自定義組件的內容 -->
+</my-comp>
+<script>
+  // 獲取自定義組件的文件路徑
+  const componentPath = $("#myCustomComponent").PATH;
+
+  // 在此處可以使用 componentPath 來構建文件路徑，加載其他資源文件等
+</script>
+```

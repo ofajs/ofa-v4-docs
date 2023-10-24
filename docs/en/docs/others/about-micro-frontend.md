@@ -6,7 +6,7 @@ During the process of continuously expanding traditional monolithic front-end ap
 
 **ofa.js** has inherent micro front-end features. The key difference between it and other frameworks is that components, pages, and applications developed with **ofa.js** do not require pre-compilation. In comparison to frameworks like React, Vue, and Angular, which require a build step in a Node.js environment to generate client-side code, **ofa.js** allows development code to be directly hosted on a static server without additional build steps. This enables real-time viewing, usage, and execution.
 
-**ofa.js** conforms to the five core features of microfronts:
+ofa.js conforms to the characteristics of micro frontends:
 
 1. Independent Deployment: Each component and page can be developed, tested, and deployed independently, enabling teams to release new features and resolve issues more quickly.
 
@@ -29,4 +29,3 @@ Although **ofa.js** cannot directly develop components using frameworks such as 
 - [Using Web Components with React](https://reactjs.org/docs/web-components.html)
 - [Using Web Components in React](https://alligator.io/react/using-web-components-in-react/)
 - [Integrating Web Components into React](https://blog.bitsrc.io/integrating-web-components-in-react-17a52a6a28e4)
-

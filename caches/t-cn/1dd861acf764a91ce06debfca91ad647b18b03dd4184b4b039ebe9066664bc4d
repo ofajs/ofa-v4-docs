@@ -1,3 +1,0 @@
-- 當點擊 "Add Highlight" 按鈕時，通過 `classList.add()` 方法將 `highlight` 類名添加到 `<div>` 元素中，使其具有黃色背景色。 
-- 當點擊 "Remove Highlight" 按鈕時，通過 `classList.remove()` 方法從 `<div>` 元素的類名中移除 `highlight` 類名，恢復原始樣式。 
-- 當點擊 "Toggle Highlight" 按鈕時，通過 `classList.toggle()` 方法切換 `<div>` 元素的 `highlight` 類名。如果原本有該類名，則移除它，如果原本沒有該類名，則添加它，實現樣式的切換。

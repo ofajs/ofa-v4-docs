@@ -1,0 +1,14 @@
+```html
+<!-- demo.html -->
+<style>
+    o-app {
+    display: block;
+    width: 250px;
+    height: 150px;
+    border: #aaa solid 1px;
+    }
+</style>
+<o-app data-warn="main-app">
+    <o-page src="./page1.html?count=100"></o-page>
+</o-app>
+```

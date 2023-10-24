@@ -1,0 +1,4 @@
+```javascript
+// 示例代碼：在當前頁面模塊內跳轉到其他頁面
+page.goto("./page2.html");
+```

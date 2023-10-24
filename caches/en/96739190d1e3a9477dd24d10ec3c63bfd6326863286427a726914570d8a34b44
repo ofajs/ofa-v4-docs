@@ -1,0 +1,1 @@
+Using the `nexts` property, you can easily get all the adjacent element instances that come after the current element, and these elements will be returned as an array.

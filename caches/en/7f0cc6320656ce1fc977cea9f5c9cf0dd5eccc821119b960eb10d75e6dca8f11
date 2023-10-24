@@ -1,0 +1,1 @@
+The `goto` method is used to navigate to a specific page. You can pass the address of the target page, and the application will load and display that page. This is an important method for application navigation.

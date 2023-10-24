@@ -1,0 +1,9 @@
+```html
+<button id="btn">Click Me Once</button>
+<script>
+  // 綁定點擊事件處理函數，但只會執行一次
+  $("#btn").one("click", () => {
+    alert("Button clicked once!");
+  });
+</script>
+```

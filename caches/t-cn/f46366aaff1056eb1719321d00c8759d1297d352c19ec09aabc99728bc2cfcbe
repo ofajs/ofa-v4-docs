@@ -1,0 +1,1 @@
+使用 `all` 方法，你可以獲取頁面上符合 [CSS 選擇器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) 的所有元素，並返回一個數組包含這些元素。

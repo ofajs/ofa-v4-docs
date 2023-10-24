@@ -4,8 +4,8 @@
   "pages": ["./index.md"],
   "footer": "./footer.md",
   "navs": [
-    { "name": "Case tutorial", "summary": "./cases/SUMMARY.md" },
-    { "name": "Document ", "summary": "./docs/SUMMARY.md" },
-    { "name": "Other", "summary": "./others/SUMMARY.md" }
+    { "name": "Case Tutorial", "summary": "./cases/SUMMARY.md" },
+    { "name": "Docs", "summary": "./docs/SUMMARY.md" },
+    { "name": "API", "summary": "./api/SUMMARY.md" }
   ]
 }

@@ -19,16 +19,16 @@
 [案例教程](./cases/index.md)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
 </simp-block>
 
 <simp-block>
 
-## 基於 Web Components 封裝的 ofa.js
+## 基於 Web Components
 
-### 走進新時代，Web Components 已廣泛支持，嘗試一下 ofa.js，看它是否適合您。
+### ofa.js 基於 Web Components 開發。以下是支持的平台和時間，你可以立即體驗
 
 <support-platforms></support-platforms>
 
@@ -47,7 +47,7 @@
 
 ```
 <!-- 將 ofa.js 引入項目 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 <!-- 加載開發好的 punch-logo 組件 -->
 <l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
@@ -299,7 +299,7 @@ var child = $("#target")[0]; // 獲取第一個子元素
 
 </simp-block>
 
-<l-m src="https://cdn.jsdelivr.net/npm/obook@2.1.30/blocks/simp-block.html"></l-m>
+<l-m src="https://cdn.jsdelivr.net/npm/obook/blocks/simp-block.html"></l-m>
 <l-m src="../publics/comps/punch-logo.html"></l-m>
 <l-m src="../publics/comps/support-platforms.html"></l-m>
 <l-m src="../publics/comps/case-switch.html"></l-m>

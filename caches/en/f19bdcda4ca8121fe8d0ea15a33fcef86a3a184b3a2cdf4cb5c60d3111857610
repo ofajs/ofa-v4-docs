@@ -1,0 +1,1 @@
+In the `$` instance, using property names starting with the underscore `_` means that these values will not be watched by the `watch` or `watchTick` methods. This is useful for some temporary or private properties, as you can freely change them without triggering the listeners.

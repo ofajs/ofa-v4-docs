@@ -2,27 +2,25 @@
 
 Here is an example, when the button is clicked, change the text to "Hello World":
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hello-world</title>
-    <script src="../ofa.js"></script>
-  </head>
-  <body>
-    <div id="desk">Please click the button</div>
-    <br />
-    <button id="btn">I am Button</button>
-    <script>
-      $("#btn").on("click", () => {
-        $("#desk").html = "<b>Hello World</b>";
-      });
-    </script>
-  </body>
-</html>
+<html-viewer>
+
 ```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
+```html
+<div id="desk">Please click the button</div>
+<br />
+<button id="btn">I am Button</button>
+<script>
+  $("#btn").on("click", () => {
+    $("#desk").html = "<b>Hello World</b>";
+  });
+</script>
+```
+
+</html-viewer>
 
 When you click the button, the bold "Hello World" text will be displayed.
 
@@ -33,6 +31,13 @@ Now, let's explain the basic concepts in detail.
 After importing `ofa.js`, the `$` symbol will be registered in the global scope. Use `$('xxx')` to select the **first** element that matches the specified condition, where `xxx` is a standard [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors). You can click on the link to view the specific selector syntax.
 
 Following is an example: 
+
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <p>I am P tag</p>
@@ -47,6 +52,8 @@ Following is an example:
 </script>
 ```
 
+</html-viewer>
+
 In the example above, after one second of opening the page, the text content of the **p tag**, **#desk**, and **.logger** will be changed respectively.
 
 ## Event Binding
@@ -57,11 +64,18 @@ You can click to jump and view [example events](./example-event.md) section to l
 
 Refer to [Web Events](https://developer.mozilla.org/en-US/docs/Web/Events) for a complete list of all available events.
 
-## Attributes
+## Properties
 
 In the above two examples, we have demonstrated the use of the `html` and `text` attributes.
 
 You can also get the content of an element through the `html` or `text` attributes, as shown below:
+
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <div id="t1">
@@ -76,5 +90,7 @@ You can also get the content of an element through the `html` or `text` attribut
     $("#t3").html = $("#t1").html;
 </script>
 ```
+
+</html-viewer>
 
 In this example, we assign the HTML content within the #t1 element to the #t2 and #t3 elements.

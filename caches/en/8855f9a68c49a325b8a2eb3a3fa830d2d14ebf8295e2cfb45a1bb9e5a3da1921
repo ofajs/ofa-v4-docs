@@ -1,0 +1,1 @@
+You can also use the `:text` property in the template to set the corresponding property value for the target element. This is particularly useful in component rendering. Here is an example:

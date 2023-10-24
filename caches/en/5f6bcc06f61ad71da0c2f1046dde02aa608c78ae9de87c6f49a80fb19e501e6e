@@ -1,0 +1,1 @@
+In this example, we use the `$` function to define a new element instance using an object format, including the tag type, text content, and style attributes, and add it to an existing element instance with the id "target1".

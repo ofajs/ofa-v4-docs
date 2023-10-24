@@ -1,0 +1,1 @@
+If the element is not inside a component, the value of `host` will be `null`. For example:

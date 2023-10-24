@@ -1,0 +1,1 @@
+你可以通過 `class` 語法快速切換模板內的 class 名。在 `class:aaa="bbb"` 中，當 `bbb` 表達式(或組件自身的 `bbb` 屬性)為 `true` 時，會為目標元素添加 `aaa` 這個 className。

@@ -1,0 +1,1 @@
+In this example, we use the `$` function to create a new element instance with specified styles and text content, and add it to the existing element instance with `id` "target1".

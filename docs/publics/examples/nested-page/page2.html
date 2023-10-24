@@ -1,0 +1,12 @@
+<template page>
+  <h1>{{title}}</h1>
+  <button on:click="app.back()">Back</button>
+  <script>
+    export default {
+      parent: "./layout.html",
+      data: {
+        title: "Page 2",
+      },
+    };
+  </script>
+</template>

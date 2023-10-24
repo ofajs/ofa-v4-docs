@@ -1,1 +1,0 @@
-組件模塊必須帶有 `export const type = $.COMP`，用於標識該模塊為組件模塊。

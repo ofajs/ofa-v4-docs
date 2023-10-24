@@ -14,6 +14,13 @@ In the previous chapters, we have learned how to access a specific element from 
 
 #### Example
 
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
 ```html
 <div class="parent">
   <p>Hello World</p>
@@ -31,6 +38,8 @@ In the previous chapters, we have learned how to access a specific element from 
 </script>
 ```
 
+</html-viewer>
+
 In the example above, first select the parent element with the `parent` class using `$(".parent")`, and then use `$(".child")` to search for the child element with the `child` class within this parent element. Then modify the text content of the child element to "Modified child element".
 
 ### Using `$('xxx xxxx')` method
@@ -38,6 +47,13 @@ In the example above, first select the parent element with the `parent` class us
 `$('xxx xxxx')` is used to find elements that match the second selector condition within the global scope, and then search for elements that match the first selector condition within these elements. This approach allows for directly finding the desired child elements in one step.
 
 #### Example
+
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <div class="parent">
@@ -55,6 +71,8 @@ In the example above, first select the parent element with the `parent` class us
 </script>
 ```
 
+</html-viewer>
+
 In the above example, you directly use `$('div .child')` to find the child elements with the `child` class and modify their text content to "Modified child element".
 
 ### Selecting Multiple Elements
@@ -64,6 +82,13 @@ In the above example, you directly use `$('div .child')` to find the child eleme
 The `$.all('xxx')` method is used to find all elements on the page that meet the selector condition and return them as a collection of elements. This allows for batch operations on multiple elements in the page.
 
 #### Example
+
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <p>Paragraph 1</p>
@@ -80,6 +105,8 @@ The `$.all('xxx')` method is used to find all elements on the page that meet the
 </script>
 ```
 
+</html-viewer>
+
 In the example above, `$.all("p")` is used to find all the `p` tag elements on the page and perform a batch operation on them, modifying their text content to "Modified Paragraph 1", "Modified Paragraph 2", and "Modified Paragraph 3".
 
 ### Finding all elements that meet the conditions within an element
@@ -87,6 +114,13 @@ In the example above, `$.all("p")` is used to find all the `p` tag elements on t
 In addition to searching for elements globally, you can also search for all matching child elements within a specific element using the following syntax: `$('xxx').all('xxxx')`.
 
 #### Example
+
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <div class="container">
@@ -106,6 +140,8 @@ In addition to searching for elements globally, you can also search for all matc
   });
 </script>
 ```
+
+</html-viewer>
 
 In the above example, first use `$(".container")` to find elements with the class `container`, then use `.all(".item")` to find all child elements with the class `item` within that container, and perform batch operations on them, modifying their text content to "Modified Item 1", "Modified Item 2", and "Modified Item 3".
 
@@ -129,6 +165,13 @@ $(selector).off(eventName, eventHandler);
 
 #### Example
 
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
 ```html
 <button id="btn">Click Me</button>
 <script>
@@ -145,6 +188,7 @@ $(selector).off(eventName, eventHandler);
   }, 5000);
 </script>
 ```
+</html-viewer>
 
 In the above example, when the button is clicked, a dialog displaying "Button clicked!" will pop up. However, after 5 seconds, the click event handler is removed using the `off` method, so the dialog will not pop up again when the button is clicked.
 
@@ -165,15 +209,23 @@ $(selector).one(eventName, eventHandler);
 
 #### Example
 
+<html-viewer>
+
+```
+<!-- Import ofa.js into the project -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
+
 ```html
 <button id="btn">Click Me Once</button>
 <script>
-  // Bind the click event handling function, but it will only be executed once
+  // Bind a click event handler, but only execute it once
   $("#btn").one("click", () => {
     alert("Button clicked once!");
   });
 </script>
 ```
+</html-viewer>
 
 In the above example, when the button is clicked, a dialog box will appear displaying "Button clicked once!". However, after the first click, the event handler will be removed, so subsequent button clicks will not trigger the dialog box.
 

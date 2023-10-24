@@ -1,1 +1,1 @@
-When creating a single file page module, it is similar to creating a component module. Use the `template` tag to wrap the template code of the page and add the `page` attribute. Inside this tag, you can freely use template syntax to interact with other components or page modules.
+When creating a single file page module, it is similar to creating a component module. Use the `template` tag to wrap the template code of the page and add the `page` property. Inside this tag, you can freely use template syntax to interact with other components or page modules.

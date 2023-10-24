@@ -1,0 +1,1 @@
+By default, events do not penetrate the shadow DOM of custom components. However, you can enable event penetration through the root node and trigger elements outside the root node by setting `composed: true`.

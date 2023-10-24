@@ -1,0 +1,1 @@
+通過 `$` 獲取或創建的實例對象，擁有完整 [stanz](https://github.com/kirakiray/stanz) 數據特性，因為 `$` 實例是從 [stanz](https://github.com/kirakiray/stanz) 繼承而來的。這意味著你可以利用 `stanz` 提供的數據操作方法和特性來操作和監聽實例對象的數據。

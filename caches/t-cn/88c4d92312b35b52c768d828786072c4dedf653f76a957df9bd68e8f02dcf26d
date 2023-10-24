@@ -1,0 +1,25 @@
+```javascript
+export default {
+  tag: "my-button",
+  data: {
+    count: 0,
+  },
+  attrs: {
+    buttonText: "Click Me",
+  },
+  watch: {
+    count(newValue, { watchers }) {
+      let oldValue;
+      if (watchers) {
+        oldValue = watchers[0].oldValue;
+      }
+      console.log(`count changed from ${oldValue} to ${newValue}`);
+    },
+  },
+  proto: {
+    sayHello() {
+      alert("Hello Count:" + this.count);
+    },
+  },
+};
+```

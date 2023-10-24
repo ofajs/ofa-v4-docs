@@ -1,0 +1,1 @@
+In this example, we use the `bubbles: false` parameter to trigger a custom event. This event does not bubble up to the parent elements, so only the event handler of the `<li>` element is triggered.

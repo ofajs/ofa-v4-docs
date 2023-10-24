@@ -1,0 +1,1 @@
+通過 `$` 方法，你可以獲取頁面上符合[css選擇器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)的第一個元素實例，並對其進行操作。以下是一個示例：

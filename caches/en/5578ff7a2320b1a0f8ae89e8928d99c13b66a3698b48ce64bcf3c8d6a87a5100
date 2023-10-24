@@ -1,0 +1,14 @@
+```html
+<div id="target">origin text</div>
+<br>
+<h4>logger</h4>
+<div id="logger" style="border:#aaa solid 1px;padding:8px;"></div>
+
+<script>
+    $("#logger").text = $("#target").css.color;
+    setTimeout(()=> {
+        $('#target').css.color = 'red';
+        $("#logger").text = $("#target").css.color;
+    }, 1000);
+</script>
+```

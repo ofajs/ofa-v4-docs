@@ -1,0 +1,11 @@
+```html
+<my-comp id="myCustomComponent">
+  <!-- This is the content of your custom component -->
+</my-comp>
+<script>
+  // Get the file path of the custom component
+  const componentPath = $("#myCustomComponent").PATH;
+
+  // You can use componentPath here to build file paths, load other resource files, etc.
+</script>
+```

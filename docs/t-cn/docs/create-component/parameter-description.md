@@ -6,17 +6,6 @@
 
 基礎參數是注冊組件的最基本配置，包含以下幾個屬性：
 
-### 組件標識
-
-組件模塊必須帶有 `export const type = $.COMP`，用於標識該模塊為組件模塊。
-
-示例：
-
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-```
-
 ### tag
 
 `tag` 代表注冊的組件名。當沒有定義 `tag` 屬性時，注冊的組件名與文件名保持一致。
@@ -24,21 +13,7 @@ export const type = $.COMP;
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const tag = "my-button"; // 將組件名注冊為 'my-button'
-```
-
-### temp
-
-`temp` 是字符串類型的屬性，用於定義組件模板的地址。當沒有定義 `temp` 時，默認載入和當前模塊同目錄下與組件同名的 HTML 文件。
-
-示例：
-
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const temp = "./my-button-template.html"; // 指定組件模板的地址為 './my-button-template.html'
 ```
 
 ### data
@@ -48,8 +23,6 @@ export const temp = "./my-button-template.html"; // 指定組件模板的地址�
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const data = {
   count: 0,
 };
@@ -57,13 +30,11 @@ export const data = {
 
 ### attrs
 
-`attrs` 是對象類型屬性，也屬於 `data`，但是這個數據會反映到 element 的 attributes 上，attributes 上的改動也會動態改動到組件的 `data` 上。當出現大寫的 key 時，反應到組件 attribute 會變成 `-` 駝峰的命名。
+`attrs` 是對象類型屬性，也屬於 `data`，但是這個數據會反映到 element 的 attributes 上，attributes 上的改動也會動態改動到組件的 `data` 上。當出現大寫的 key 時，反應到組件 property 會變成 `-` 駝峰的命名。
 
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const attrs = {
   buttonText: "Click Me",
 };
@@ -74,8 +45,6 @@ export const attrs = {
 在組件的注冊參數中，你可以添加一個 `proto` 對象，用於定義需要添加到組件原型上的方法。這樣，在創建組件的實例時，這些屬性和方法就會被添加到實例的原型上，從而所有實例都可以訪問和共享這些方法。
 
 ```javascript
-// MyComponent.js
-export const type = $.COMP;
 
 export const data = {
   count: 0,
@@ -99,8 +68,6 @@ export const proto = {
 示例：
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const data = {
   count: 0,
 };
@@ -111,6 +78,40 @@ export const watch = {
       oldValue = watchers[0].oldValue;
     }
     console.log(`count changed from ${oldValue} to ${newValue}`);
+  },
+};
+```
+
+### temp
+
+通常情況下，不需要設置這個變量，它主要在分離模式下使用，用於指定組件模板的地址。當未定義 `temp` 時，默認會加載與當前模塊同名的 HTML 文件，該文件應位於相同目錄中。
+
+## 合並變量到 default
+
+可以將所有的導出變量寫到 default 上，這樣寫起來更方便；
+
+```javascript
+export default {
+  tag: "my-button",
+  data: {
+    count: 0,
+  },
+  attrs: {
+    buttonText: "Click Me",
+  },
+  watch: {
+    count(newValue, { watchers }) {
+      let oldValue;
+      if (watchers) {
+        oldValue = watchers[0].oldValue;
+      }
+      console.log(`count changed from ${oldValue} to ${newValue}`);
+    },
+  },
+  proto: {
+    sayHello() {
+      alert("Hello Count:" + this.count);
+    },
   },
 };
 ```
@@ -119,85 +120,71 @@ export const watch = {
 
 以下為一個完整的示例代碼，包括基礎參數的定義和組件模板。
 
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const tag = "my-button";
-export const temp = "./my-button-template.html";
+<comp-viewer comp-name="my-button">
 
-export const attrs = {
-  buttonText: "Click Me",
-};
+```
+<my-button button-text="My Button"></my-button>
+<!-- <script>
+  $("my-button").on("click", () => {
+    $("my-button").count++;
+  });
 
-export const data = {
-  count: 0,
-};
+  setTimeout(() => {
+    $("my-button").sayHello();
+  }, 1000);
+</script> -->
+```
 
-export const watch = {
-  count(newValue, { watchers }) {
-    let oldValue;
-    if (watchers) {
-      oldValue = watchers[0].oldValue;
+```html
+<template component>
+  <style>
+    .shadow-button {
+      background-color: #6b47fb;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
     }
-    console.log(`count changed from ${oldValue} to ${newValue}`);
-  },
-};
+  </style>
 
-export const proto = {
-  sayHello() {
-    alert("Hello Count:" + this.count);
-  },
-};
+  <!-- 使用模板渲染語法，將組件數據渲染成文本 -->
+  <button class="shadow-button" on:click="count++">{{buttonText}} - count:{{count}}</button>
+
+  <script>
+    export default {
+      tag: "my-button",
+      data: {
+        count: 0,
+      },
+      attrs: {
+        buttonText: "Click Me",
+      },
+      watch: {
+        count(newValue, { watchers }) {
+          let oldValue;
+          if (watchers) {
+            oldValue = watchers[0].oldValue;
+          }
+          console.log(`count changed from ${oldValue} to ${newValue}`);
+        },
+      },
+      proto: {
+        sayHello() {
+          // alert("Hello Count:" + this.count);
+        },
+      },
+    };
+  </script>
+</template>
 ```
 
-```html
-<!-- my-button-template.html -->
-<style>
-  .shadow-button {
-    background-color: #6b47fb;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-</style>
-
-<!-- 使用模板渲染語法，將組件數據渲染成文本 -->
-<button class="shadow-button">{{buttonText}} - count:{{count}}</button>
-```
-
-```html
-<!-- demo.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-button</title>
-    <script src="../ofa.js"></script>
-    <l-m src="./button-component.mjs"></l-m>
-  </head>
-  <body>
-    <my-button button-text="My Button"></my-button>
-    <script>
-      $("my-button").on("click", () => {
-        $("my-button").count++;
-      });
-
-      setTimeout(() => {
-        $("my-button").sayHello();
-      }, 1000);
-    </script>
-  </body>
-</html>
-
-```
+</comp-viewer>
 
 ### default
 
@@ -216,7 +203,6 @@ export const proto = {
 
 ```javascript
 // button-component.mjs
-export const type = $.COMP; // 這個必須優先定義，不能作為動態參數
 export const tag = "my-button";
 export const temp = "./my-button-template.html";
 
@@ -253,5 +239,3 @@ export default async function ({ load, url, query }) {
 ```
 
 在這個示例中，我們演示了如何使用 ofa.js 的注冊參數來定制化組件的行為。通過合理地配置這些參數，你可以更好地適應不同的組件需求，實現更靈活的組件開發。
-
-寫一下 組件的注冊參數 的 proto 使用文檔

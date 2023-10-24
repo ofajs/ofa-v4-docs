@@ -1,0 +1,1 @@
+Through the `$` method, you can get the first element instance on the page that matches the [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) and manipulate it. Here is an example:

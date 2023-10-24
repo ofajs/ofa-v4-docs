@@ -1,0 +1,1 @@
+Please do not directly insert the acquired element instance into other places, as this operation will affect the original element. If you need to create a copy, you can use the [clone](./clone.md) method.

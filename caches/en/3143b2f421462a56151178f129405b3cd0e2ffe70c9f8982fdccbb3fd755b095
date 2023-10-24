@@ -1,0 +1,27 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger1" style="border: blue solid 1px; margin: 8px"></div>
+<div id="logger2" style="border: red solid 1px; margin: 8px"></div>
+
+<script>
+  const target = $("#target");
+  const tid1 = target.watch(() => {
+    $("#logger1").text = JSON.stringify(target);
+  });
+
+  const tid2 = target.watchTick(()=>{
+    $("#logger2").text = JSON.stringify(target);
+  });
+
+  setTimeout(() => {
+    target.aaa = "I am aaa";
+    // Undo the listening
+    target.unwatch(tid1);
+    target.unwatch(tid2);
+  }, 500);
+  setTimeout(() => {
+    target.bbb = "I am aaa"; // Will not trigger the registered functions above, because the listening has been revoked
+  }, 1000);
+</script>
+```

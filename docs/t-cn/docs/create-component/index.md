@@ -52,15 +52,8 @@ ofa.js 使用基礎的 HTML 和 JavaScript 文件來定義組件，避免引入�
   </button>
 
   <script>
-    // 不要使用 import
-    // import data from './other/module.mjs';
-
-    // 需要注冊的組件名，如果沒有定義 tag 屬性，注冊的組件名與文件名保持一致
-    export const tag = 'simple-button';
-
-    export default async ({load}) => {
-      // 引用其他模塊
-      // const data = await load("./other/module.mjs");
+    export default {
+      tag: 'simple-button' // 需要注冊的組件名，如果沒有定義 tag 屬性，注冊的組件名與文件名保持一致
     }
   </script>
 </template>
@@ -136,7 +129,7 @@ ofa.js 使用基礎的 HTML 和 JavaScript 文件來定義組件，避免引入�
 
 ```javascript
 // simple-button.mjs
-export const type = $.COMP;
+export const type = $.COMP; // 雙文件模塊必須帶有 `export const type = $.COMP`
 
 // 需要注冊的組件名，當沒有定義 tag 屬性時，注冊的組件名與文件名保持一致
 // export const tag = 'simple-button';

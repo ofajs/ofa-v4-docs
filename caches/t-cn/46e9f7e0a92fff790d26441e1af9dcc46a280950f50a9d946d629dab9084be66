@@ -1,0 +1,1 @@
+通過 `ready` 周期生命周期，在組件準備就緒後，我們使用 `this.shadow.formData()` 方法生成了表單數據對象 `fdata`。然後，我們使用 `watch` 監聽 `fdata` 的變化，當數據發生變化時，將其轉化為 JSON 字符串並更新 `logtext`，以實現實時顯示表單數據的功能。

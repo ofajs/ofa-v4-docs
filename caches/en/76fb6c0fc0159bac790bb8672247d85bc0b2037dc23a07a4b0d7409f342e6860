@@ -1,0 +1,1 @@
+It provides a way to listen and respond to changes in the application's routing, typically used in the parent page of nested pages. When the route changes, you can listen for the `routerChange` event to perform corresponding actions, such as updating page content or navigation status.

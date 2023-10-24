@@ -1,0 +1,1 @@
+`formData` method is used to generate object data that is bound to form elements, making it easier and more efficient to handle form elements. This method will generate an object that contains the values of all form elements within the target element, and this object will reflect any changes made to the form elements in real-time.

@@ -35,68 +35,35 @@
 以下是一個示例，展示了如何使用這些生命周期鉤子：
 
 ```javascript
-// lifecycle-demo.mjs
-export const type = $.COMP;
-export const tag = "lifecycle-demo";
-export const temp = "./lifecycle-demo-template.html";
+export default {
+  data: {
+    count: 0,
+  },
+  watch: {
+    count(count) {
+      console.log("count: ", count);
+    },
+  },
+  created() {
+    console.log("created: Component created, data not initialized.");
+  },
+  ready() {
+    console.log(
+      "ready: Component is ready with initialized data and template."
+    );
 
-export default async function () {
-  return {
-    data: {
-      count: 0,
-    },
-    watch: {
-      count(count) {
-        console.log("count: ", count);
-      },
-    },
-    created() {
-      console.log("created: Component created, data not initialized.");
-    },
-    ready() {
-      console.log(
-        "ready: Component is ready with initialized data and template."
-      );
-
-      this.on("click", () => {
-        this.count++;
-      });
-    },
-    attached() {
-      console.log("attached: Component attached to DOM.");
-    },
-    detached() {
-      console.log("detached: Component detached from DOM.");
-    },
-  };
-}
-
+    this.on("click", () => {
+      this.count++;
+    });
+  },
+  attached() {
+    console.log("attached: Component attached to DOM.");
+  },
+  detached() {
+    console.log("detached: Component detached from DOM.");
+  },
+};
 ```
-
-```html
-<!-- lifecycle-demo-template.html -->
-<l-m src="../simple-button/simple-button.mjs"></l-m>
-<simple-button>Click Me ({{count}})</simple-button>
-```
-
-```html
-<!-- lifecycle-demo.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lifecycle Demo</title>
-    <script src="../ofa.js"></script>
-    <l-m src="./lifecycle-demo.mjs"></l-m>
-  </head>
-  <body>
-    <lifecycle-demo></lifecycle-demo>
-  </body>
-</html>
-```
-
-在上面的示例中，我們定義了一個名為 `lifecycle-demo` 的組件，並且在其模板中放置了一個按鈕。通過不同的生命周期鉤子，我們可以在控制台中觀察到各個階段觸發的日誌。
 
 ## 生命周期流程圖
 

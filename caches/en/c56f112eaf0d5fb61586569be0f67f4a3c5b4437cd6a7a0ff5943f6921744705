@@ -1,0 +1,1 @@
+In this example, we registered the same custom event handler "custom-event" for both the `<ul>` element and the `<li>` element. When we use the `emit` method to trigger the event, the event bubbles from the `<li>` element to the `<ul>` element, triggering both event handlers.

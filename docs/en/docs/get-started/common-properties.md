@@ -1,118 +1,30 @@
-# Commonly Used PropertiesIn the `$` instance, in addition to selecting elements with selectors, there are also some commonly used methods provided to facilitate element manipulation and searching.
+# Common properties or methods
 
-## tag`tag` is used to get the tag name (in lowercase form) of the current element, similar to the `tagName` of DOM elements.
+In the `$` instance, in addition to selecting elements with selectors, there are also some commonly used methods provided to facilitate element manipulation and searching.
 
-```html
-<div id="example">Hello World</div>
-<script>
-    const $div = $('#example');
-    console.log($div.tag); // Output: "div"
-</script>
-```
+You can take a brief look at it, and refer to the API documentation whenever needed in the future.
 
+## Common Properties
 
-## ele
+- [tag](./others/tag.md): Get the tag name of the target.
+- [ele](./instance/ele.md): Get the actual native element of the instance.
+- [index](./others/index.md): Get the index of the target element within its parent element.
+- [text](../../api/props/text.md): Get or set the text of the target element.
+- [html](../../api/props/html.md): Get or set the HTML code of the target element.
+- [css](../../api/props/css.md): Get or set the style of the target element.
+- [style](../../api/props/style.md): Get the native style of the target element.
+- [classList](../../api/props/class-list.md): Get the native class list of the target element.
+- [data](../../api/props/data.md): Get the native dataset of the target element.
 
-`ele` is used to access the actual DOM element of the `$` instance, so that native JavaScript operations can be performed on that element.
+### Node Operations
 
-```html
-<div id="example">Hello World</div>
-<script>
-    const $div = $('#example');
-    const actualElement = $div.ele;
-    actualElement.style.color = "red"; // Change text color to red
-</script>
-```
+- [before](./operation/before.md): Add an element before the target instance.
+- [after](./operation/after.md): Add an element after the target instance.
+- [remove](./operation/remove.md): Remove the target element.
+- [attr](../../api/props/attr.md): Get or set the [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) of the target element.
 
+## Key Features
 
-Sorry, I cannot see any simplified Chinese text in the given input.`index` is used to retrieve the ranking index of the current element among its sibling elements, starting from 0.
+- [Form Data](../../api/others/form-data.md): Conveniently bind and retrieve form data
 
-```html
-<div>
-    <span>First</span>
-    <span>Second</span>
-    <span id="target">Third</span>
-</div>
-<script>
-    const $targetSpan = $('#target');
-    console.log($targetSpan.index); // Output: 2
-</script>
-```
-
-
-## parent and parents- `parent` is used to retrieve the immediate parent element of the current element.
-- `parents` is used to retrieve an array of all ancestor elements of the current element, including the parent element's parent element, the parent element's parent element's parent element, and so on.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parent and Parents Attributes</title>
-  <script src="../ofa.js"></script>
-</head>
-<body>
-  <div>
-    <span>
-      <a id="example">Hello World</a>
-    </span>
-  </div>
-  <script>
-    const $a = $('#example');
-
-    const $parentSpan = $a.parent;
-    console.log($parentSpan.tag); // Output: "span"
-
-    const $parentsArray = $a.parents;
-    console.log($parentsArray.map($ele => $ele.tag)); // Output: ["span", "div", "body", "html"]
-  </script>
-</body>
-</html>
-```
-
-
-## next, nexts, prev, prevs, siblings- `next` is used to get the next sibling element of the current element.
-- `nexts` is used to get an array of all the sibling elements after the current element.
-- `prev` is used to get the previous sibling element of the current element.
-- `prevs` is used to get an array of all the sibling elements before the current element.
-- `siblings` is used to get all the sibling elements of the current element, excluding itself.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siblings Attributes</title>
-  <script src="../ofa.js"></script>
-</head>
-<body>
-  <div>
-    <span>Zero</span>
-    <span>First</span>
-    <span id="example">Second</span>
-    <span>Third</span>
-    <span>Four</span>
-  </div>
-  <script>
-    const $span = $('#example');
-
-    const $nextSibling = $span.next;
-    console.log($nextSibling.tag); // Output: "span"
-
-    const $nextSiblingsArray = $span.nexts;
-    console.log($nextSiblingsArray.map($ele => $ele.text)) // Output: ["Third", "Four"]
-
-    const $prevSibling = $span.prev;
-    console.log($prevSibling.tag); // Output: "span"
-
-    const $prevSiblingsArray = $span.prevs;
-    console.log($prevSiblingsArray.map($ele => $ele.text)) // Output: ["Zero", "First"]
-
-    const $siblings = $span.siblings;
-    console.log($siblings.map($ele => $ele.text)) // Output: ["Zero", "First", "Third", "Four"]
-  </script>
-</body>
-</html>
-```
+If you want to learn more about the API of ofa.js, you can refer to the [API](../../api/index.md) documentation.

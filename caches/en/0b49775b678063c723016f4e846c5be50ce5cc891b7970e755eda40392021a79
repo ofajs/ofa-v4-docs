@@ -1,0 +1,16 @@
+```html
+<template component>
+  <div>test ready</div>
+  <script>
+    let count = 0;
+    export default {
+      tag: "test-ready",
+      ready(){
+        count++;
+        $("#logger").text = count;
+        $('#shadowHtml').text = this.shadow ? this.shadow.html : 'null';
+      }
+    };
+  </script>
+</template>
+```

@@ -16,8 +16,8 @@
       "summary": "./docs/SUMMARY.md"
     },
     {
-      "name": "其他",
-      "summary": "./others/SUMMARY.md"
+      "name": "API",
+      "summary": "./api/SUMMARY.md"
     }
   ]
 }

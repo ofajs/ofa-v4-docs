@@ -1,0 +1,1 @@
+In addition to accessing existing element instances, `$` can also be used to create new element instances and add them to the page.

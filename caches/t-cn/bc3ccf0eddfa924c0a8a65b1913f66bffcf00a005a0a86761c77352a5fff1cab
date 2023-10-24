@@ -1,1 +1,0 @@
-注意：`dataset` 對象中的屬性名會將 `"data-"` 後面的部分轉換為駝峰式命名。例如，`data-info` 變成了 `dataset.info`。如果要設置 `data-*` 屬性，也可以通過 `dataset` 對象來實現：

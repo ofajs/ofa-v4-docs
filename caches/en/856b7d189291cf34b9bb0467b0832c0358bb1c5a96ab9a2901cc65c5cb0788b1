@@ -1,0 +1,15 @@
+- [$](./instance/dollar.md): Used primarily to obtain instance methods.
+- [all](./instance/all.md): Get all relevant instances.
+- [prev](./instance/prev.md): Get the previous instance of the target element.
+- [prevs](./instance/prevs.md): Get all instances before the target element.
+- [next](./instance/next.md): Get the next instance of the target element.
+- [nexts](./instance/nexts.md): Get all instances after the target element.
+- [siblings](./instance/siblings.md): Get all adjacent element instances of the target element.
+- [parent](./instance/parent.md): Get the parent element instance.
+- [parents](./instance/parents.md): Get a collection of all parent element instances.
+- [clone](./instance/clone.md): Method to clone an instance.
+- [ele](./instance/ele.md): Get the actual native element of an instance.
+- [shadow](./instance/shadow.md): Get the shadow root node of a custom component.
+- [root](./instance/root.md): Get the root node of the target instance.
+- [Children](./instance/children.md): Get child elements directly by their index.
+- [host](./instance/host.md): Get the app element instance of the target.

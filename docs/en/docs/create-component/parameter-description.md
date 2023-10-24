@@ -6,39 +6,14 @@ In ofa.js, you can define certain specific registration parameters in the compon
 
 Basic parameters are the most basic configuration for registering a component, which includes the following attributes:
 
-##### Component Identification
-
-The component module must have `export const type = $.COMP` to identify it as a component module.
-
-Example: 
-
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-```
-
 ### tag
 
-`tag` represents the registered component name. When the `tag` attribute is not defined, the registered component name remains the same as the file name.
+`tag` represents the registered component name. When the `tag` property is not defined, the registered component name remains the same as the file name.
 
 Example: 
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const tag = "my-button"; // Register the component name as 'my-button'
-```
-
-### temp
-
-`temp` is a string-type property used to define the address of the component template. When `temp` is not defined, the HTML file with the same name as the component in the same directory as the current module will be loaded by default.
-
-Example: 
-
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const temp = "./my-button-template.html"; // 指定组件模板的地址为 './my-button-template.html'
 ```
 
 ### data
@@ -48,8 +23,6 @@ export const temp = "./my-button-template.html"; // 指定组件模板的地址�
 Example: 
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const data = {
   count: 0,
 };
@@ -57,13 +30,11 @@ export const data = {
 
 ### attrs
 
-`attrs` is an object-type attribute, which also belongs to `data`, but this data will be reflected in the attributes of the element. Changes in the attributes will also dynamically change the `data` of the component. When there is a capital key, it will be transformed into a kebab-case naming in the component attribute.
+`attrs` 是对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 property 会变成 `-` 驼峰的命名。
 
 Example: 
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const attrs = {
   buttonText: "Click Me",
 };
@@ -74,8 +45,6 @@ export const attrs = {
 In the registration parameter of the component, you can add a `proto` object to define the methods that need to be added to the component prototype. In this way, when creating an instance of the component, these properties and methods will be added to the prototype of the instance, so that all instances can access and share these methods.
 
 ```javascript
-// MyComponent.js
-export const type = $.COMP;
 
 export const data = {
   count: 0,
@@ -99,8 +68,6 @@ export const proto = {
 Example: 
 
 ```javascript
-// button-component.mjs
-export const type = $.COMP;
 export const data = {
   count: 0,
 };
@@ -111,6 +78,40 @@ export const watch = {
       oldValue = watchers[0].oldValue;
     }
     console.log(`count changed from ${oldValue} to ${newValue}`);
+  },
+};
+```
+
+### temp
+
+Usually, there is no need to set this variable. It is mainly used in separation mode to specify the address of the component template. When `temp` is not defined, the HTML file with the same name as the current module will be loaded by default, and this file should be located in the same directory.
+
+## Merge Variables into Default
+
+You can write all exported variables onto default so that it is easier to write.
+
+```javascript
+export default {
+  tag: "my-button",
+  data: {
+    count: 0,
+  },
+  attrs: {
+    buttonText: "Click Me",
+  },
+  watch: {
+    count(newValue, { watchers }) {
+      let oldValue;
+      if (watchers) {
+        oldValue = watchers[0].oldValue;
+      }
+      console.log(`count changed from ${oldValue} to ${newValue}`);
+    },
+  },
+  proto: {
+    sayHello() {
+      alert("Hello Count:" + this.count);
+    },
   },
 };
 ```
@@ -119,85 +120,71 @@ export const watch = {
 
 The following is a complete example code, including the definition of basic parameters and component templates.
 
-```javascript
-// button-component.mjs
-export const type = $.COMP;
-export const tag = "my-button";
-export const temp = "./my-button-template.html";
+<comp-viewer comp-name="my-button">
 
-export const attrs = {
-  buttonText: "Click Me",
-};
+```
+<my-button button-text="My Button"></my-button>
+<!-- <script>
+  $("my-button").on("click", () => {
+    $("my-button").count++;
+  });
 
-export const data = {
-  count: 0,
-};
+  setTimeout(() => {
+    $("my-button").sayHello();
+  }, 1000);
+</script> -->
+```
 
-export const watch = {
-  count(newValue, { watchers }) {
-    let oldValue;
-    if (watchers) {
-      oldValue = watchers[0].oldValue;
+```html
+<template component>
+  <style>
+    .shadow-button {
+      background-color: #6b47fb;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
     }
-    console.log(`count changed from ${oldValue} to ${newValue}`);
-  },
-};
+  </style>
 
-export const proto = {
-  sayHello() {
-    alert("Hello Count:" + this.count);
-  },
-};
+  <!-- Use template rendering syntax to render component data as text -->
+  <button class="shadow-button" on:click="count++">{{buttonText}} - count:{{count}}</button>
+
+  <script>
+    export default {
+      tag: "my-button",
+      data: {
+        count: 0,
+      },
+      attrs: {
+        buttonText: "Click Me",
+      },
+      watch: {
+        count(newValue, { watchers }) {
+          let oldValue;
+          if (watchers) {
+            oldValue = watchers[0].oldValue;
+          }
+          console.log(`count changed from ${oldValue} to ${newValue}`);
+        },
+      },
+      proto: {
+        sayHello() {
+          // alert("Hello Count:" + this.count);
+        },
+      },
+    };
+  </script>
+</template>
 ```
 
-```html
-<!-- my-button-template.html -->
-<style>
-  .shadow-button {
-    background-color: #6b47fb;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
-</style>
-
-<!-- Use template rendering syntax to render component data as text -->
-<button class="shadow-button">{{buttonText}} - count:{{count}}</button>
-```
-
-```html
-<!-- demo.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-button</title>
-    <script src="../ofa.js"></script>
-    <l-m src="./button-component.mjs"></l-m>
-  </head>
-  <body>
-    <my-button button-text="My Button"></my-button>
-    <script>
-      $("my-button").on("click", () => {
-        $("my-button").count++;
-      });
-
-      setTimeout(() => {
-        $("my-button").sayHello();
-      }, 1000);
-    </script>
-  </body>
-</html>
-
-```
+</comp-viewer>
 
 ### default
 
@@ -216,13 +203,12 @@ Below are examples of using `default`:
 
 ```javascript
 // button-component.mjs
-export const type = $.COMP; // This must be defined first and cannot be a dynamic parameter
 export const tag = "my-button";
 export const temp = "./my-button-template.html";
 
 export default async function ({ load, url, query }) {
-  console.log("url:", url); // Output the file name of the current module
-  console.log("query:", query); // Output the object converted from the URL parameters of the current module
+  console.log("url:", url); // Output the filename of the current module
+  console.log("query:", query); // Output the URL parameters of the current module as an object
 
   const asyncData = await load("./async-data.mjs"); // Use load to asynchronously load modules
   console.log("asyncData:", asyncData); // Output the asynchronously loaded module data
@@ -253,5 +239,3 @@ export default async function ({ load, url, query }) {
 ```
 
 In this example, we demonstrate how to customize the behavior of components using the registration parameters of ofa.js. By configuring these parameters appropriately, you can better adapt to different component requirements and achieve more flexible component development.
-
-Write a documentation on the use of the proto registration parameters for components.

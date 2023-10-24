@@ -1,1 +1,0 @@
-In the above example, when the button is clicked, the `increaseCount` method of the host component is called to increase the value of the `count` property.

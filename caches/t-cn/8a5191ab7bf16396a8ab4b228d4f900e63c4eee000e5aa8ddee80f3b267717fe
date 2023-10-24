@@ -1,0 +1,1 @@
+在上面的示例中，我們使用 `ele` 屬性獲取了一個元素，並修改了其內部的 HTML 內容，以及用於記錄的元素的 [tagName](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName)。這使得你可以結合原生 JavaScript 方法對元素進行更復雜的操作。
