@@ -11,7 +11,7 @@
 <script>
   setTimeout(()=>{
     const tar = $("#target1");
-    $("#pos2").append(tar);
+    $("#pos2").push(tar);
   },500);
 </script>
 ```

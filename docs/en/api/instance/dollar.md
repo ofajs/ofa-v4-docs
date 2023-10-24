@@ -1,4 +1,4 @@
-The text you provided cannot be translated because it does not contain any actual content.
+# $
 
 The `$` method is a core function in `ofa.js` that is used to manipulate instances of DOM elements. Below will introduce the main functions of `$`:
 
@@ -13,7 +13,7 @@ Through the `$` method, you can get the first element instance on the page that 
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
-<html>
+```html
 <div id="target1">target 1 text</div>
 
 <script>
@@ -21,7 +21,7 @@ Through the `$` method, you can get the first element instance on the page that 
     $("#target1").text = 'change target 1';
   },500);
 </script>
-</html>
+```
 
 </html-viewer>
 
@@ -76,7 +76,7 @@ Please do not directly insert the acquired element instance into other places, a
 <script>
   setTimeout(()=>{
     const tar = $("#target1");
-    $("#pos2").append(tar);
+    $("#pos2").push(tar);
   },500);
 </script>
 ```
