@@ -160,3 +160,32 @@ The following is an example of how to perform recursive list rendering:
 </comp-viewer>
 
 In this example, we have an array `arr` that contains two objects. Each object has a `name` property and a `childs` property that may contain nested sub-items. We use `x-fill` to populate the list and use the template "easyLi" to render the sub-items. If an item has sub-items, we use `x-fill` to recursively render the child list, achieving recursive list rendering.
+
+## replace-temp
+
+Sometimes, when we try to render a list into a select or table, the browser may automatically remove the `<x-fill>` element, which prevents the list from being rendered correctly. In this case, you can use the "replace-temp" method for rendering. The way to use "replace-temp" is to set `is="replace-temp"` in a `<template>` tag and place this template inside an element that the browser will automatically fix.
+
+<comp-viewer comp-name="text-render">
+
+```html
+<template component>
+  <select>
+    <template is="replace-temp">
+      <x-fill :value="arr">
+        <option>{{$data}}</option>
+      </x-fill>
+    </template>
+  </select>
+  <script>
+    export default {
+      tag: "text-render",
+      data: {
+        arr: ["pen", "apple", "pineapple"],
+      },
+    };
+  </script>
+</template>
+```
+
+</comp-viewer>
+

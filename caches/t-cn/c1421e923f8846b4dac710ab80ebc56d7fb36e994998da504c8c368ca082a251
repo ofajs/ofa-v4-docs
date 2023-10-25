@@ -1,0 +1,1 @@
+有時候，當我們嘗試列表渲染到 select 或 table 內，瀏覽器可能會自動移除 `<x-fill>` 元素，導致無法正常進行列表渲染。在這種情況下，可以使用 `replace-temp` 的方式進行渲染。使用 `replace-temp` 的方法是，在一個 `<template>` 標簽中設置 `is="replace-temp"`，並將這個模板放在瀏覽器會自動修正的元素內。
