@@ -10,7 +10,7 @@
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
 ```
 
-## 使用 o-router 组件
+## o-router コンポーネントの使用
 
 使用 `o-router` 组件は、`o-app` コンポーネントの外側にラップすることで実現されます。これにより、アプリ内のルーターが現在のブラウザータブにバインドされます。
 

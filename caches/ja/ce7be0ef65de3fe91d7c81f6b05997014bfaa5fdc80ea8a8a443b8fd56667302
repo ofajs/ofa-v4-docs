@@ -5,12 +5,12 @@
 <script>
   const $paragraphs = $('p');
   
-  // 添加新的 div 元素作为子元素
+  // 新しいdiv要素を子として追加する
   const $newDiv = $('<div>New Div</div>');
   $paragraphs.push($newDiv);
 
   setTimeout(()=>{
-    // 删除最后一个子元素
+    // 最後の子要素を削除する
     $paragraphs.pop();
 
     console.log($paragraphs);

@@ -6,11 +6,11 @@
   <div class="item">Item 3</div>
 </div>
 <script>
-  // 从容器内查找所有带有 "item" 类的子元素
+  // コンテナからクラス "item" を持つすべての子要素を検索する。
   const container = $(".container");
   const items = container.all(".item");
 
-  // 修改所有子元素的文本内容
+  // すべての子要素のテキスト内容を変更する
   items.forEach((item, index) => {
     item.text = `Modified Item ${index + 1}`;
   });
