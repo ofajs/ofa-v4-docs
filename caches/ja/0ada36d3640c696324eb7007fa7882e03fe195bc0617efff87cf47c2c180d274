@@ -1,1 +1,1 @@
-使用 [`style`](https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/style) 属性并保持原生一致；
+[`style`](https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/style)属性を使用し、ネイティブの一貫性を保つ；

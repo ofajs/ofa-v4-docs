@@ -53,7 +53,7 @@
 
 `watchTick` と `watch` メソッドは機能が似ていますが、`watchTick` の内部にはスロットル処理があり、単一のスレッドで一度だけ実行されるため、一部のパフォーマンス要件の高いシーンでデータの変更をより効率的に監視することができます。
 
-以下是一个示例，展示如何使用 `$` 实例的 `watchTick` 方法：
+以下は、`$` インスタンスの `watchTick` メソッドの使い方の例である：
 
 <html-viewer>
 
@@ -73,13 +73,13 @@
   let count1 = 0;
   target.watch(() => {
     count1++;
-    $("#logger1").text = 'watch 运行次数：' + count1;
+    $("#logger1").text = 'watch の走行回数：' + count1;
   });
 
   let count2 = 0;
   target.watchTick(()=>{
     count2++;
-    $("#logger2").text = 'watchTick 运行次数：' + count2;
+    $("#logger2").text = 'watchTick の走行回数：' + count2;
   });
 
   setTimeout(() => {

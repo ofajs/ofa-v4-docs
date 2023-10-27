@@ -1,4 +1,4 @@
 ```javascript
-// 跳转到指定页面
+// 指定されたページにジャンプする
 app.goto("/page2.html");
 ```

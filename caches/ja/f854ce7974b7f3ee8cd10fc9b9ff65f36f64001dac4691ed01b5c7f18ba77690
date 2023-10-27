@@ -1,8 +1,8 @@
 ```html
 <template component>
-  <!-- "_"开头的私有数据改动不会触发页面的刷新 -->
+  <!-- "_"で始まるプライベートデータへの変更は、ページ更新をトリガーしない -->
   <div>{{_count}}</div>
-  <button on:click="refresh()">刷新</button>
+  <button on:click="refresh()">リフレッシュ</button>
   <script>
     export default {
       tag: "custom-comp",

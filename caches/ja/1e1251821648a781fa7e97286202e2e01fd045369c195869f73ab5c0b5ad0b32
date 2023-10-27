@@ -9,13 +9,13 @@
   let count1 = 0;
   target.watch(() => {
     count1++;
-    $("#logger1").text = 'watch 运行次数：' + count1;
+    $("#logger1").text = 'watch の走行回数：' + count1;
   });
 
   let count2 = 0;
   target.watchTick(()=>{
     count2++;
-    $("#logger2").text = 'watchTick 运行次数：' + count2;
+    $("#logger2").text = 'watchTick の走行回数：' + count2;
   });
 
   setTimeout(() => {

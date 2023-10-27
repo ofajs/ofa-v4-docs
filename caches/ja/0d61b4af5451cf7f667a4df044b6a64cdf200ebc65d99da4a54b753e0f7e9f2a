@@ -1,1 +1,1 @@
-要获取元素的 [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)，请使用 [`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) 属性并与原生的 [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) 保持一致。
+要素の [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) を取得するには、[`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) プロパティを使用し、ネイティブの [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) と一致させてください。

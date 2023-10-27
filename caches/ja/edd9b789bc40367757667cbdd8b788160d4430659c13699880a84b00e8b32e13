@@ -1,4 +1,4 @@
 ```javascript
-// 替换当前页面为新页面
+// 現在のページを新しいものに置き換える
 app.replace("/new-page.html");
 ```

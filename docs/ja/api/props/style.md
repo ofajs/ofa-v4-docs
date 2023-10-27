@@ -1,8 +1,10 @@
 # style
 
-使用 [`style`](https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/style) 属性并保持原生一致；
+[`style`](https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/style)属性を使用し、ネイティブの一貫性を保つ；
 
-请注意，`style` 属性无法获取样式的实际值，而只能获取在 `style` 属性上设置的值。尽管 `style` 方法与 [css 方法](./css.md) 类似，但它无法进行全量样式覆盖。相较于 [css](./css.md)，`style` 方法的内部执行效率更高。
+注意：`style` 属性は実際のスタイル値を取得できず、単に`style` 属性に設定された値しか取得できません。`style` メソッドは [css メソッド](./css.md) に似ていますが、全体のスタイルのオーバーライドはできません。[css](./css.md) と比較して、`style` メソッドの内部実行効率が高いです。
+
+
 
 下記は `style` の使い方を示す例です：
 
