@@ -1,0 +1,23 @@
+```html
+<!-- test-comp.html -->
+<template component>
+  <style>
+    :host {
+      display: block;
+      padding: 8px;
+      margin: 8px;
+      border: #aaa solid 1px;
+    }
+  </style>
+  in test-comp shadow:
+  <br />
+  apptag: {{app.tag}}
+  <br />
+  appwarn: {{app.data.warn}}
+  <script>
+    export default {
+      data: {},
+    };
+  </script>
+</template>
+```

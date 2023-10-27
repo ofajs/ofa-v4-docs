@@ -1,0 +1,4 @@
+```html
+<!-- ofa.js をプロジェクトに追加する -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```

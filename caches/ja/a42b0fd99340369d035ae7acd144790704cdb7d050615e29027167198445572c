@@ -1,0 +1,1 @@
+上記の例では、`$.all("p")` を使用してページ内のすべての `p` タグ要素を検索し、一括操作を行い、テキスト内容を "Modified Paragraph 1"、"Modified Paragraph 2"、"Modified Paragraph 3" に変更しました。

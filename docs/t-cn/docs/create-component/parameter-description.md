@@ -190,9 +190,7 @@ export default {
 
 你還可以使用異步函數來定義 `default` 數據，以便動態地返回組件的注冊參數。
 
-函數的 `function` 會帶來一個對象，包含
-
- `load`、`url` 和 `query`：
+函數的 `function` 會帶來一個對象，包含 `load`、`url` 和 `query`：
 
 - `load` 方法是異步加載函數，使用方法和異步 `import` 加載一致，可以通過 `const data = await load(xxx)` 加載異步模塊。
 - 通過 `load` 加載的模塊，會有和 `load-module` 加載一樣的效果。`load` 方法相當於 `load-module` 組件的函數版，具體使用方法可以查閱[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)的文檔。

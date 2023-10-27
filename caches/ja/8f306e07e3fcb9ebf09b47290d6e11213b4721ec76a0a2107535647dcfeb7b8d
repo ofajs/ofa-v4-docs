@@ -1,0 +1,6 @@
+```html
+<script>
+  const $ele = $('<div style="color:red">I am text</div>');
+  $('body').push($ele);
+</script>
+```

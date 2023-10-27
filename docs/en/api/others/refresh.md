@@ -6,7 +6,7 @@ To refresh the rendering view of a component, sometimes you can use this method 
 
 ```html
 <template component>
-  <!-- Changes to private data starting with _ will not trigger page refresh -->
+  <!-- Changes to private data starting with "_" won't trigger page refresh -->
   <div>{{_count}}</div>
   <button on:click="refresh()">Refresh</button>
   <script>

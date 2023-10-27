@@ -1,0 +1,11 @@
+```html
+<my-comp id="myCustomComponent">
+  <!-- ここにはあなたのカスタムコンポーネントの内容が入ります -->
+</my-comp>
+<script>
+  // カスタムコンポーネントのファイルパスを取得します
+  const componentPath = $("#myCustomComponent").PATH;
+
+  // ここで componentPath を使用してファイルパ���を構築したり、他のリソースファイルを読み込んだりすることができます
+</script>
+```

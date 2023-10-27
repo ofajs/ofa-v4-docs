@@ -1,0 +1,1 @@
+上記の例では、`ele` 属性を使用して要素を取得し、その内部の HTML コンテンツを変更し、記録用の要素の [tagName](https://developer.mozilla.org/ja/docs/Web/API/Element/tagName) を変更しました。これにより、ネイティブの JavaScript メソッドを使用して要素をより複雑な操作に組み合わせることができます。

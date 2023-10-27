@@ -1,0 +1,1 @@
+函數的 `function` 會帶來一個對象，包含 `load`、`url` 和 `query`：

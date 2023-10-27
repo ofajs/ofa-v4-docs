@@ -1,0 +1,12 @@
+```html
+<!-- composed-testコンポーネントを使用する箇所のコード -->
+<div id="outer-logger"></div>
+<div id="wrapper">
+    <composed-test></composed-test>
+</div>
+<script>
+    $("#wrapper").on('custom-event',() => {
+        $('#outer-logger').text = 'ok';
+    });
+</script>
+```

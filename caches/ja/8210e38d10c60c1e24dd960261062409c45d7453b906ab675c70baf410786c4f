@@ -1,0 +1,16 @@
+```html
+<!-- layout-page.html -->
+<template page>
+  <style>
+    /* 容器要素を relative 位置指定にする */
+    .parent-container {
+      position: relative;
+    }
+  </style>
+  
+  <!-- 子ページを挿入するための容器要素を設定する -->
+  <div class="parent-container">
+    <slot></slot>
+  </div>
+</template>
+```

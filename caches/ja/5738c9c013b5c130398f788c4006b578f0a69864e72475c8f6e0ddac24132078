@@ -1,0 +1,1 @@
+上記の例において、"Submit" ボタンをクリックした後、"Hello, {name}! Form submission prevented." が表示されますが、"Form Submitted!" アラートはトリガーされません。これは、`event.preventDefault()` を呼び出すことで、フォームのデフォルトの送信動作が阻止されているためです。

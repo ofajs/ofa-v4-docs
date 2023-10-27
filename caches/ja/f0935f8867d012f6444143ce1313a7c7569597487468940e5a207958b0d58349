@@ -1,0 +1,1 @@
+注册日時の後、呼び出される関数は、[event](https://developer.mozilla.org/en-US/docs/Web/API/Event)を引数に取り、オリジナルと同じです。

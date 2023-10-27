@@ -1,0 +1,10 @@
+```javascript
+// simple-button.mjs
+export const type = $.COMP; // 双文件モジュールは必ず `export const type = $.COMP` を持つ必要があります。
+
+// 登録するコンポーネント名。tag 属性が定義されていない場合、登録するコンポーネント名はファイル名と同じになります。
+// export const tag = 'simple-button';
+
+// コンポーネントテンプレートのアドレス。定義されていない場合、デフォルトでは、カレントモジュールと同じディレクトリにある、コンポーネントと同じ名前のhtmlファイルを読み込みます。
+// export const temp = './simple-button.html';
+```

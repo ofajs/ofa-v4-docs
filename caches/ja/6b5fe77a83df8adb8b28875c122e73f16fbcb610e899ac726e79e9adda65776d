@@ -1,0 +1,6 @@
+<template is="exm-article">
+<a href="../../publics/examples/custom-form-element/demo.html" preview></a>
+<a href="../../publics/examples/custom-form-element/test-demo.html" main></a>
+<a href="../../publics/examples/custom-form-element/custom-input.html"></a>
+</template>
+

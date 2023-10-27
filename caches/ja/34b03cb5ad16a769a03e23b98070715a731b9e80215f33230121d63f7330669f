@@ -1,0 +1,12 @@
+```html
+<style> div{border: #aaa solid 1px; margin:8px; padding:8px;} </style>
+<div style="color:red;border-color:red;">
+    <div id="target">I am target</div>
+</div>
+
+<script>
+    setTimeout(()=>{
+        $('#target').unwrap();
+    }, 500);
+</script>
+```

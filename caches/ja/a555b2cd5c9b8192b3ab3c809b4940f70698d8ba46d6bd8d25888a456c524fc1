@@ -1,0 +1,27 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger" style="border: #aaa solid 1px; padding: 8px"></div>
+
+<script>
+  const target = $("#target");
+  $("#logger").text = target;
+  target.watch(() => {
+    $("#logger").text = target;
+  });
+
+  setTimeout(() => {
+    target.aaa = "I am aaa";
+  }, 600);
+  setTimeout(() => {
+    target.bbb = {
+      child: {
+        val: "I am bbb child val",
+      },
+    };
+  }, 1200);
+  setTimeout(() => {
+    target.bbb.child.val = "change bbb child val";
+  }, 1800);
+</script>
+```

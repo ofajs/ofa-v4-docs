@@ -1,0 +1,4 @@
+```javascript
+// アプリケーションのルート構成情報にアクセスする
+const routeConfig = app.routers;
+```

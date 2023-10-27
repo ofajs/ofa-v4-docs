@@ -1,0 +1,4 @@
+```javascript
+// コード例：現在のページを、現在のページモジュール内の別のページに置き換える。
+page.replace("./new-page.html");
+```

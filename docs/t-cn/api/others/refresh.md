@@ -6,7 +6,7 @@
 
 ```html
 <template component>
-  <!-- _開頭的私有數據改動不會觸發頁面的刷新 -->
+  <!-- "_"開頭的私有數據改動不會觸發頁面的刷新 -->
   <div>{{_count}}</div>
   <button on:click="refresh()">刷新</button>
   <script>

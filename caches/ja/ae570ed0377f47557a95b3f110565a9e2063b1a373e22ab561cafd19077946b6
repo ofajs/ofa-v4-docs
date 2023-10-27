@@ -1,0 +1,23 @@
+```html
+<template component>
+  comp1 =>
+  <input type="text" sync:value="obj.val" />
+  <script>
+    export const tag = "comp-three";
+
+    export default async function ({ load }) {
+      const { data } = await load("./data.mjs");
+
+      return {
+        data: {
+        //   obj: data // ❌ この操作は間違っています。データを直��設定すると、回収できません
+          obj: {},
+        },
+        ready() {
+          this.obj = data; // ❌ readyライフサイクル内で設定すると、いつクリアされるかわからないため、メモリリークの原因になる可能性があります。最も安全な方法は、attachedライフサイクル内で設定し、detachedライフサイクル後に削除することです
+        },
+      };
+    }
+  </script>
+</template>
+```

@@ -1,0 +1,1 @@
+`load-module` コンポーネントは、カスタムの**宣言的なローダー**ライブラリであり、さまざまな種類のファイルのサポートを拡張したり、JavaScript モジュールを中継処理したりする強力な機能を提供します。このコンポーネントは、独立したプロジェクトに分割されています。具体的な使用方法については、[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js) のドキュメントを参照してください。

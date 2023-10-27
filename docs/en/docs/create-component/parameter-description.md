@@ -190,9 +190,7 @@ The following is a complete example code, including the definition of basic para
 
 You can also use asynchronous functions to define the `default` data, in order to dynamically return the registration parameters of the component.
 
-Functions in JavaScript will introduce an object that includes
-
-`load`, `url`, and `query`:
+The function `function` will bring an object containing `load`, `url`, and `query`:
 
 - The `load` method is an asynchronous loading function, used in the same way as asynchronous `import` loading. You can use `const data = await load(xxx)` to load asynchronous modules.
 - Modules loaded through `load` have the same effect as modules loaded through `load-module`. The `load` method is a function version of the `load-module` component. For specific usage, you can refer to the documentation of [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js).

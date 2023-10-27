@@ -1,0 +1,8 @@
+```javascript
+// jQuery コード
+$("#target").html("いくつかのHTMLコードを設定します"); // HTMLを設定
+$("#target").text("テキストを設定します"); // テキストを設定
+var ele_text = $("#target").text(); // テキストを取得
+var parents = $("#target").parents(); // すべての親要素を配列で取得
+var child = $("#target").children()[0]; // 最初の子要素を取得
+```

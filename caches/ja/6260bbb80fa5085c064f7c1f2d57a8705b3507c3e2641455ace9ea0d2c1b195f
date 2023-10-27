@@ -1,0 +1,1 @@
+最初に、`simple-button.html` という名前のファイルを作成し、`template` タグを使用して、`component` 属性を追加してコンポーネントとして識別します。

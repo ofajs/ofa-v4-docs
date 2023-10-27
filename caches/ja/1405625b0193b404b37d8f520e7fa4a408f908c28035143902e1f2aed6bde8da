@@ -1,0 +1,1 @@
+通過使用別名 `@obook`，我們在 `l-m` 標籤中引入了 `"https://cdn.jsdelivr.net/npm/obook/blocks/simp-block.html"` 這個資源，使得跨域名的組件可以更方便地訪問共享資源，而無需知曉詳細的資源地址。這增強了代碼的可維護性和跨域名資源共享的便捷性。

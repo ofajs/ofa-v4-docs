@@ -1,0 +1,28 @@
+```html
+<ul>
+    <li id="target">
+        I am target
+    </li>
+</ul>
+
+<div id="logger1" style="border:red solid 1px;padding:8px;">-</div>
+<div id="logger2" style="border:blue solid 1px;padding:8px;">-</div>
+
+<script>
+    let count = 0;
+    $('ul').on('custom-event',()=>{
+        count++;
+        $("#logger1").text = 'ul is triggered ' + count;
+    });
+    $('#target').on('custom-event',()=>{
+        count++;
+        $("#logger2").text = 'target is triggered ' + count;
+    });
+
+    setTimeout(()=>{
+        $("#target").emit("custom-event",{
+            data:"I am data"
+        });
+    },500);
+</script>
+```

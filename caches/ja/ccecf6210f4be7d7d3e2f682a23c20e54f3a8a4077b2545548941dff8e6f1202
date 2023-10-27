@@ -1,0 +1,7 @@
+- [text](./props/text.md)：ターゲット要素のテキストを取得または設定します
+- [html](./props/html.md)：ターゲット要素のHTMLコードを取得または設定します
+- [attr](./props/attr.md)：ターゲット要素の[attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)を取得または設定しま��
+- [css](./props/css.md)：ターゲット要素のスタイルを取得または設定します
+- [style](./props/style.md)：ターゲット要素のネイティブスタイルを取得します
+- [classList](./props/class-list.md)：ターゲット要素のネイティブclassリストを取得します
+- [data](./props/data.md)：ターゲット要素のネイティブデータセットを取得します

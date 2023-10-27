@@ -1,0 +1,8 @@
+```html
+<!-- my-component を使用する -->
+<my-component>
+  <div slot="header">ヘッダーの内容</div>
+  <p>これはメインのコンテンツです。</p>
+  <div slot="footer">フッターの内容</div>
+</my-component>
+```

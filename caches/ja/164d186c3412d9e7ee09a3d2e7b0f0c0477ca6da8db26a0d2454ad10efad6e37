@@ -1,0 +1,19 @@
+```html
+<template component>
+  <button on:click="addCount">Add Count</button>
+  <div>{{count}}</div>
+  <script>
+    export default {
+      tag: "on-demo",
+      data: {
+        count: 0
+      },
+      proto:{
+        addCount(){
+          this.count++;
+        }
+      }
+    };
+  </script>
+</template>
+```
