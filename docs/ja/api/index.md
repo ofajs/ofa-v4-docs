@@ -33,7 +33,7 @@
 
 - [text](./props/text.md)：ターゲット要素のテキストを取得または設定します
 - [html](./props/html.md)：ターゲット要素のHTMLコードを取得または設定します
-- [attr](./props/attr.md)：ターゲット要素の[attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)を取得または設定しま��
+- [attr](./props/attr.md)：ターゲット要素の[attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)を取得または設定しま
 - [css](./props/css.md)：ターゲット要素のスタイルを取得または設定します
 - [style](./props/style.md)：ターゲット要素のネイティブスタイルを取得します
 - [classList](./props/class-list.md)：ターゲット要素のネイティブclassリストを取得します
@@ -50,14 +50,14 @@
 
 - [テキストのレンダリング](./temp-syntax/text-render.md)：テンプレートファイルでテキストを素早くレンダリングします。
 - [クラス](./temp-syntax/class.md)：テンプレートファイルでクラス名を素早くレンダリングします。
-- [同期](./temp-syntax/sync.md)：データをテンプレートファイ���に素早く同期します。
+- [同期](./temp-syntax/sync.md)：データをテンプレートファイに素早く同期します。
 - [条件付きレンダリング](./temp-syntax/condition.md)：テンプレートファイルで必要な場合にコンテンツをレンダリングします。
 - [リストのレンダリング](./temp-syntax/fill.md)：テンプレートファイルで配列データを素早くレンダリングします
 
 ## 生命周期
 - [created](./life-cycle/created.md)：コンポーネントが作成され、コンテンツがレンダリングされていない状態でトリガーされます。
 - [ready](./life-cycle/ready.md)：コンポーネントが作成され、コンテンツがレンダリングされた後にトリガーされます。
-- [watch](./life-cycle/watch.md)：コ��ポーネントの初期化が完了し、値が変更された後にトリガーされます。
+- [watch](./life-cycle/watch.md)：コポーネントの初期化が完了し、値が変更された後にトリガーされます。
 - [loaded](./life-cycle/loaded.md)：コンポーネントの埋め込みリソースがロードされた後にトリガーされます。
 - [attached](./life-cycle/attached.md)：コンポーネントがドキュメントに追加された後にトリガーされます。
 - [detached](./life-cycle/detached.md)：コンポーネントがドキュメントから削除された後にトリガーされます。
@@ -68,7 +68,7 @@
 - [ボックスモデル](./others/box.md)：ターゲット要素のすべてのサイズに関連するデータを取得します
 - [formData](./others/form-data.md)：フォームデータを簡単にバインドおよび取得します
 - [タグ](./others/tag.md)：ターゲットのタグ名を取得します
-- [index](./others/index.md)：ターゲッ���要素の親要素内での順序を取得します
+- [index](./others/index.md)：ターゲッ要素の親要素内での順序を取得します
 - [is](./others/is.md)：ターゲット要素がCSSセレクタ式に一致するかどうかを判断します
 - [refresh](./others/refresh.md)：コンポーネントのインターフェースを手動でリフレッシュします
 - [PATH](./others/path.md)：コンポーネントまたはページの登録ファイルのアドレスを取得します

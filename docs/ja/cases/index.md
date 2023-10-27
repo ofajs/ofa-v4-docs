@@ -2,7 +2,7 @@
 <a href="../../publics/examples/set-props.html" preview></a>
 </template>
 
-# 快速开始
+# クイックスタート
 
 開始使用するには、CDNアドレスを使用してプロジェクト`ofajs`をプロジェクトに統合するだけです。
 
@@ -14,7 +14,7 @@
 
 ## 使用方法
 
-引入了 `ofa.js` 后，全局作用域中将注册 `$` 符号。通过 `$('xxx')` 来选择符合条件的第一个元素，其中 `xxx` 是标准的 [CSS 选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) 内容。
+ofa.jsの導入により、`$`シンボルがグローバルスコープに登録された。 最初にマッチした要素は `$('xxx')` によって選択されます。ここで `xxx` は標準の [CSS セレクタ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) の内容です。
 
 上記の例では、異なる `id` を持つ3つの要素を選択するために `$` 記号を使用し、`text` 、 `html` 、および `value` 属性を設定してその内容を変更しました。
 

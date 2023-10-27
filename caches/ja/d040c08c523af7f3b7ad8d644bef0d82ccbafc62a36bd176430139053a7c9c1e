@@ -1,6 +1,6 @@
 - [created](./life-cycle/created.md)：コンポーネントが作成され、コンテンツがレンダリングされていない状態でトリガーされます。
 - [ready](./life-cycle/ready.md)：コンポーネントが作成され、コンテンツがレンダリングされた後にトリガーされます。
-- [watch](./life-cycle/watch.md)：コ��ポーネントの初期化が完了し、値が変更された後にトリガーされます。
+- [watch](./life-cycle/watch.md)：コポーネントの初期化が完了し、値が変更された後にトリガーされます。
 - [loaded](./life-cycle/loaded.md)：コンポーネントの埋め込みリソースがロードされた後にトリガーされます。
 - [attached](./life-cycle/attached.md)：コンポーネントがドキュメントに追加された後にトリガーされます。
 - [detached](./life-cycle/detached.md)：コンポーネントがドキュメントから削除された後にトリガーされます。

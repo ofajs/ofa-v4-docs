@@ -10,4 +10,4 @@
 
 この例では、`$` を使用して `button` 要素を選択し、`on` メソッドを使用して `click` イベントにバインドしました。ボタンがクリックされると、コールバック関数がトリガーされ、`target` 要素のテキストコンテンツが "こんにちは、世界！" に変更されます。
 
-如果您想了解更多可用的事件类型，请参考 [Events](https://developer.mozilla.org/en-US/docs/Web/Events) 文档。
+利用可能なイベントタイプについて詳しく知りたい場合は、[Events](https://developer.mozilla.org/en-US/docs/Web/Events)のドキュメントを参照してください。

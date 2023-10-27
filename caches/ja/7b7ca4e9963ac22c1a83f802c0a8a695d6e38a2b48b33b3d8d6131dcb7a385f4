@@ -1,1 +1,1 @@
-上記の例では、まず `$(".container")` を使用して `container` クラスを持つ要素を検索し、それからそのコンテナ内で `item` クラスを持つすべての子要素を `.all(".item")` で検索し、それらに対してバルク操作を行い、テキストコンテンツを "Modified Item 1"、"Modified Item 2"、およ��� "Modified Item 3" に変更しました。
+上記の例では、まず `$(".container")` を使用して `container` クラスを持つ要素を検索し、それからそのコンテナ内で `item` クラスを持つすべての子要素を `.all(".item")` で検索し、それらに対してバルク操作を行い、テキストコンテンツを "Modified Item 1"、"Modified Item 2"、およ "Modified Item 3" に変更しました。

@@ -1,4 +1,4 @@
 - `load` メソッドは非同期で関数を読み込むためのものであり、非同期の `import` と同じように使用します。`const data = await load(xxx)` のようにして非同期モジュールを読み込むことができます。
-- `load` で読み込まれたモジュールは、`load-module` で読み込まれたものと同じ効果���あります。`load` メソッドは `load-module` コンポーネントの関数版であり、具体的な使用方法については[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)のドキュメントを参照してください。
+- `load` で読み込まれたモジュールは、`load-module` で読み込まれたものと同じ効果あります。`load` メソッドは `load-module` コンポーネントの関数版であり、具体的な使用方法については[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)のドキュメントを参照してください。
 - `url` は現在のモジュールのファイル名です。
 - `query` はこのモジュールを読み込む際の URL パラメータをオブジェクトに変換したものです。

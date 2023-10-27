@@ -6,6 +6,6 @@
   // カスタムコンポーネントのファイルパスを取得します
   const componentPath = $("#myCustomComponent").PATH;
 
-  // ここで componentPath を使用してファイルパ���を構築したり、他のリソースファイルを読み込んだりすることができます
+  // ここで componentPath を使用してファイルパを構築したり、他のリソースファイルを読み込んだりすることができます
 </script>
 ```
