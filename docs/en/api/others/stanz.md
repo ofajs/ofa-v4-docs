@@ -2,7 +2,7 @@
 
 The instance objects obtained or created through `$` have complete [stanz](https://github.com/kirakiray/stanz) data features because the `$` instance inherits from [stanz](https://github.com/kirakiray/stanz). This means that you can use the data manipulation methods and features provided by `stanz` to manipulate and listen to the data of the instance objects.
 
-The following examples use regular elements because custom components typically come with pre-registered data, while regular elements usually only contain tag information, so they are more suitable for demonstration purposes.
+> The following examples use regular elements because custom components typically come with pre-registered data, while regular elements usually only contain tag information, so they are more suitable for demonstration purposes.
 
 ## watch
 

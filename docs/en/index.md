@@ -28,7 +28,7 @@
 
 ## Based on Web Components
 
-#### ofa.js is developed based on Web Components. The following are the supported platforms and times, you can experience them immediately.
+### ofa.js is developed based on Web Components. The following are the supported platforms and times, you can experience them immediately.
 
 <support-platforms></support-platforms>
 

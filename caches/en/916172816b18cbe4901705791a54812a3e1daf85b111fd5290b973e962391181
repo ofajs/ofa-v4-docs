@@ -1,4 +1,4 @@
-``` html
+```html
 <template component>
   <div>tag: {{txt}}</div>
   <div>bool: {{txt2}}</div>

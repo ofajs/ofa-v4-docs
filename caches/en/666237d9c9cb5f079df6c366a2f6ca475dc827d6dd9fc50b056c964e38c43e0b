@@ -1,1 +1,1 @@
-`wrap` method is used to wrap an element with another element. Before executing the `wrap` operation, it automatically performs the initialization operation of the `$` method, so you can directly fill in the specific element string or object.
+`wrap` method is used to wrap an element with another element. Before executing the `wrap` operation, it automatically performs the initialization operation of the [`$` method](../instance/dollar.md), so you can directly fill in the specific element string or object.

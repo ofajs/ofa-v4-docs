@@ -6,7 +6,7 @@ Here is an example demonstrating how to use the `host` property to obtain an ins
 
 <comp-viewer comp-name="host-demo">
 
-``` html
+```html
 <template component>
   <div>tag: {{txt}}</div>
   <div>bool: {{txt2}}</div>

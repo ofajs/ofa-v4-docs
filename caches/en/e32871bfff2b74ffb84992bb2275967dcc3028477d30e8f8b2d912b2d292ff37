@@ -1,4 +1,4 @@
-```
+```html
 <div id="logger">-</div>
 <div style="color:red;">loaded : <span id="loaded"></span></div>
 <script>

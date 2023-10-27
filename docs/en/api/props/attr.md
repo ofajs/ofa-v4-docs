@@ -1,4 +1,4 @@
-`attr`
+# attr
 
 The `attr` method is used to get or set the [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) of an element.
 

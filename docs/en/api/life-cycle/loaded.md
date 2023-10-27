@@ -4,7 +4,7 @@ The `loaded` lifecycle hook is triggered after all dependencies in the component
 
 ## Example code
 
-```
+```html
 <div id="logger">-</div>
 <div style="color:red;">loaded : <span id="loaded"></span></div>
 <script>

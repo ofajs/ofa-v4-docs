@@ -7,7 +7,7 @@
 
 # Using SCSR Solution
 
-In this example, please click the  button to open and try in a new page;
+In this example, please click the <span style='font-family: "iconfont"'>&#xe7cb;</span> button to open and try in a new page;
 
 SCSR, short for Static Client-Side Rendering, is also known as static client-side rendering. It is a variant of CSR (Client-Side Rendering) that preserves the user experience of CSR and allows web pages to be crawled by search engines while being in a static state.
 
