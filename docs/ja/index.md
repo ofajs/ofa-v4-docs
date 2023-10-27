@@ -26,9 +26,9 @@
 
 <simp-block>
 
-## 基于 Web Components
+## Web Components 基づく
 
-### ofa.js 基于 Web Components 开发。以下是支持的平台和时间，你可以立即体验
+### ofa.jsはWeb Componentsをベースに開発されています。 サポートされているプラットフォームと、すぐに体験できるタイミングは以下の通りです。
 
 <support-platforms></support-platforms>
 
@@ -129,7 +129,7 @@ HTML5 の Web コンポーネントは以前は煩雑な学習が必要でした
 
 <simp-block>
 
-## 提供多样便捷的模板语法
+## 多様で便利なテンプレート構文を提供する
 
 <case-switch>
 
@@ -263,7 +263,7 @@ HTML5 の Web コンポーネントは以前は煩雑な学習が必要でした
 
 <simp-block>
 
-## 可替代 jQuery 的选择
+## jQueryに代わるもの
 
 ### jQueryと似たAPIを持っており、同じ便利さを感じることができます。
 
@@ -293,7 +293,7 @@ var child = $("#target")[0]; // 最初の子要素を取得する
 
 <simp-block>
 
-## 使用案例
+## 使用例
 
 <a href="https://obook.ofajs.com/">obook 最もシンプルなドキュメント作成ツール</a>
 
