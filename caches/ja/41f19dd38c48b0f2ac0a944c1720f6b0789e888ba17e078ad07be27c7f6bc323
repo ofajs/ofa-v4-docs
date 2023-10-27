@@ -1,0 +1,4 @@
+```javascript
+// 指定されたページにジャンプする
+app.goto("/page2.html");
+```

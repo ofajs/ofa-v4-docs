@@ -1,0 +1,1 @@
+デフォルトでは、`formData()` メソッドはターゲット要素内のすべての `input`、`select`、`textarea` 要素を監視します。ただし、特定のフォーム要素のみを監視したい場合は、[CSS セレクタ](https://developer.mozilla.org/ja/docs/Web/CSS/CSS_selectors) を渡すことで実現できます。

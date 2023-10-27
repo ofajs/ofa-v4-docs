@@ -1,0 +1,1 @@
+Note: It is necessary to clear the bound data during the detached cycle, otherwise there will be a memory leak.

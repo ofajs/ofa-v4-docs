@@ -1,0 +1,33 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Default Event</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">名前：</label>
+    <input type="text" id="name" />
+    <button id="submitBtn">送信</button>
+  </form>
+
+  <script>
+    const form = $('#myForm');
+    const submitBtn = $('#submitBtn');
+
+    submitBtn.on('click', (event) => {
+      event.preventDefault(); // イベントのデフォルト行動をキャンセル
+      const name = $('#name').value;
+      alert(`こんにちは、${name}さん！フォームの送信がキャンセルされました。`);
+    });
+
+    form.on('submit', () => {
+      alert('フォームが送信されました！');
+    });
+  </script>
+</body>
+</html>
+```

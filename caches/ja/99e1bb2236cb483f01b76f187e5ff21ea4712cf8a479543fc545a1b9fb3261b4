@@ -1,0 +1,10 @@
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+</div>
+`);
+
+$el.wrap("<div>新しいdiv</div>"); // ❌ エラー、親要素がないのでラップできません
+$el.$('#target').wrap("<div>新しいdiv</div>"); // ✅ 正しい、親要素があるのでラップできます
+```

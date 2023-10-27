@@ -157,7 +157,6 @@ By default, events do not penetrate the shadow DOM of custom components. However
 </script>
 ```
 
-
 ```html
 <template component>
   <style>

@@ -1,0 +1,1 @@
+Use the `$.stanz` method to create shareable data; if you need to share this data in a component, you should bind the data to the component in the `attached` method.

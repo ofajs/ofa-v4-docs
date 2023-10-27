@@ -190,9 +190,7 @@ export default {
 
 你还可以使用异步函数来定义 `default` 数据，以便动态地返回组件的注册参数。
 
-函数的 `function` 会带来一个对象，包含
-
- `load`、`url` 和 `query`：
+函数的 `function` 会带来一个对象，包含 `load`、`url` 和 `query`：
 
 - `load` 方法是异步加载函数，使用方法和异步 `import` 加载一致，可以通过 `const data = await load(xxx)` 加载异步模块。
 - 通过 `load` 加载的模块，会有和 `load-module` 加载一样的效果。`load` 方法相当于 `load-module` 组件的函数版，具体使用方法可以查阅[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)的文档。

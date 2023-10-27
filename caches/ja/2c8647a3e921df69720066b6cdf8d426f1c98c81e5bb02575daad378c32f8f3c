@@ -1,0 +1,9 @@
+```html
+<button id="btn">Click Me Once</button>
+<script>
+  // クリックイベントハンドラをバインドしますが、一度だけ実行されます
+  $("#btn").one("click", () => {
+    alert("Button clicked once!");
+  });
+</script>
+```

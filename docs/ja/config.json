@@ -1,0 +1,11 @@
+{
+  "github": "https://github.com/kirakiray/ofa.js",
+  "logo": { "url": "../publics/logo.svg", "text": "ofa.js" },
+  "pages": ["./index.md"],
+  "footer": "./footer.md",
+  "navs": [
+    { "name": "ケース・チュートリアル", "summary": "./cases/SUMMARY.md" },
+    { "name": "(さんぷ", "summary": "./docs/SUMMARY.md" },
+    { "name": "API", "summary": "./api/SUMMARY.md" }
+  ]
+}

@@ -1,0 +1,12 @@
+```javascript
+
+export const data = {
+  count: 0,
+};
+
+export const proto = {
+  sayHello() {
+    alert('Hello Count:'+ this.count);
+  },
+};
+```

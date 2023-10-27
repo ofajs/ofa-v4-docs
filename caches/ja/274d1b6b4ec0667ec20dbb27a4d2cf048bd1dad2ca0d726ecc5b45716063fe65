@@ -1,0 +1,27 @@
+```html
+<form id="myForm">
+  <input type="text" name="username" value="John Doe" />
+  <div>
+    sex:
+    <label>
+      man
+      <input type="radio" name="sex" value="man" />
+    </label>
+    <label>
+      woman
+      <input type="radio" name="sex" value="woman" />
+    </label>
+  </div>
+  <textarea name="message">Hello World!</textarea>
+</form>
+<br />
+<div id="logger"></div>
+<script>
+  const data = $("#myForm").formData();
+
+  $("#logger").text = data;
+  data.watch(() => {
+    $("#logger").text = data;
+  });
+</script>
+```

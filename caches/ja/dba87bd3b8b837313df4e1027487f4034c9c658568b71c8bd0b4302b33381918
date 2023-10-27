@@ -1,0 +1,1 @@
+上記の例では、「Click Me」というボタンをクリックすると、「Button Clicked!」と表示されますが、「Inner Div Clicked!」と「Outer Div Clicked!」はトリガーされません。これは、ボタンのクリックイベントハンドラーで`event.stopPropagation()`を呼び出して、イベントのさらなる伝播を防しているためです。

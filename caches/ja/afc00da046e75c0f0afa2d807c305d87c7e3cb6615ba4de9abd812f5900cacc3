@@ -1,0 +1,1 @@
+上記の例では、 `$('div .child')` を使用して `child` クラスを持つ子要素を検索し、子要素のテキストコンテンツを "Modified child element" に変更しました。

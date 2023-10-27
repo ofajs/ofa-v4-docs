@@ -1,0 +1,19 @@
+```html
+<div>
+  <p>First Paragraph</p>
+</div>
+<script>
+  const $paragraphs = $('p');
+  
+  // 新しいdiv要素を子として追加する
+  const $newDiv = $('<div>New Div</div>');
+  $paragraphs.push($newDiv);
+
+  setTimeout(()=>{
+    // 最後の子要素を削除する
+    $paragraphs.pop();
+
+    console.log($paragraphs);
+  },1000)
+</script>
+```

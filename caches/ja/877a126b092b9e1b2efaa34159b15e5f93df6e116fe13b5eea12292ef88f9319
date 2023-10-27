@@ -1,0 +1,25 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger" style="border: #aaa solid 1px; padding: 8px"></div>
+
+<script>
+  const target = $("#target");
+  $("#logger").text = target;
+
+  // ウォッチ・メソッドを使用して、プロパティ値の変更をリッスンする
+  target.watch(() => {
+    $("#logger").text = target;
+  });
+
+  setTimeout(() => {
+    // この属性値は盗聴のトリガーにはならない。
+    target._aaa = "I am aaa";
+  }, 600);
+
+  setTimeout(() => {
+    // _aaa属性の値が変更されても、リスニングはトリガーされない。
+    target._aaa = "change aaa";
+  }, 1200);
+</script>
+```

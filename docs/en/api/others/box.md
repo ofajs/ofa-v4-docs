@@ -10,7 +10,7 @@ In web development, the size of an element is an important concept, which includ
 
 `height` represents the height of an element's content area, excluding padding, border, and margin.
 
-# clientWidth
+## clientWidth
 
 `clientWidth` represents the width of the visible content area of an element, including padding but excluding borders and margins.
 
@@ -22,7 +22,7 @@ In web development, the size of an element is an important concept, which includ
 
 `offsetWidth` represents the overall width of an element, including the content area, padding, border, and margin.
 
-The `offsetHeight` property returns the height of an element, including padding, border, and scrollbar (if any), in pixels.
+## offsetHeight
 
 `offsetHeight` represents the overall height of an element, including the content area, padding, border, and margin.
 

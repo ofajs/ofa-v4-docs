@@ -1,0 +1,4 @@
+```javascript
+// 前のページに戻る
+app.back();
+```

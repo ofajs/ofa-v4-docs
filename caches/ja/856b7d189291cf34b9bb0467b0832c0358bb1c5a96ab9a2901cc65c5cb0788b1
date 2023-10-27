@@ -1,0 +1,15 @@
+- [$](./instance/dollar.md)：インスタンスを取得するためのメソッド
+- [all](./instance/all.md)：関連するすべてのインスタンスを取得する
+- [prev](./instance/prev.md)：対象要素の前のインスタンスを取得する
+- [prevs](./instance/prevs.md)：対象要素の前のすべてのインスタンスを取得する
+- [next](./instance/next.md)：対象要素の後ろのインスタンスを取得する
+- [nexts](./instance/nexts.md)：対象要素の後ろのすべてのインスタンスを取得する
+- [siblings](./instance/siblings.md)：対象要素のすべての隣接する要素のインスタンスを取得する
+- [parent](./instance/parent.md)：親要素のインスタンスを取得する
+- [parents](./instance/parents.md)：すべての親要素のインスタンスの集合を取得する
+- [clone](./instance/clone.md)：インスタンスをクローンするためのメソッド
+- [ele](./instance/ele.md)：インスタンスの実際のネイティブ要素を取得する
+- [shadow](./instance/shadow.md)：カスタムコンポーネントの影のルートノードを取得する
+- [root](./instance/root.md)：対象インスタンスのルートノードを取得する
+- [子元素](./instance/children.md)：数字で子要素を直接取得する
+- [host](./instance/host.md)：対象の app 要素のインスタンスを取得する

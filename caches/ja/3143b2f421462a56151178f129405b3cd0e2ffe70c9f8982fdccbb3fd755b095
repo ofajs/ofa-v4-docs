@@ -1,0 +1,27 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger1" style="border: blue solid 1px; margin: 8px"></div>
+<div id="logger2" style="border: red solid 1px; margin: 8px"></div>
+
+<script>
+  const target = $("#target");
+  const tid1 = target.watch(() => {
+    $("#logger1").text = JSON.stringify(target);
+  });
+
+  const tid2 = target.watchTick(()=>{
+    $("#logger2").text = JSON.stringify(target);
+  });
+
+  setTimeout(() => {
+    target.aaa = "I am aaa";
+    // 監視を取り消す
+    target.unwatch(tid1);
+    target.unwatch(tid2);
+  }, 500);
+  setTimeout(() => {
+    target.bbb = "I am aaa"; // 上記で登録した関数は実行されない、監視が取り消されているため
+  }, 1000);
+</script>
+```

@@ -1,0 +1,8 @@
+```javascript
+// ofa.js Code
+$("#target").html = "some html code";  // HTML を設定する
+$("#target").text = "set text"; // テキストを設定する
+var ele_text = $("#target").text; // テキストを取得する
+var parents = $("#target").parents; // すべての親要素を取得する配列を取得する
+var child = $("#target")[0]; // 最初の子要素を取得する
+```

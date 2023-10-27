@@ -1,0 +1,5 @@
+<template is="exm-article">
+<a href="../../publics/examples/render-text/demo.html" preview></a>
+<a href="../../publics/examples/render-text/text-demo.html" main></a>
+</template>
+

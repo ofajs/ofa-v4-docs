@@ -30,7 +30,7 @@ export const data = {
 
 ### attrs
 
-`attrs` 是对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 property 会变成 `-` 驼峰的命名。
+`attrs` is an object type attribute, which is also `data`, but this data is reflected in the attributes of the element, and changes in the attributes are dynamically changed in the `data` of the component. When there is an uppercase key, the response to the component property is named with a `-` hump.
 
 Example: 
 
@@ -190,9 +190,7 @@ The following is a complete example code, including the definition of basic para
 
 You can also use asynchronous functions to define the `default` data, in order to dynamically return the registration parameters of the component.
 
-Functions in JavaScript will introduce an object that includes
-
-`load`, `url`, and `query`:
+The function `function` will bring an object containing `load`, `url`, and `query`:
 
 - The `load` method is an asynchronous loading function, used in the same way as asynchronous `import` loading. You can use `const data = await load(xxx)` to load asynchronous modules.
 - Modules loaded through `load` have the same effect as modules loaded through `load-module`. The `load` method is a function version of the `load-module` component. For specific usage, you can refer to the documentation of [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js).

@@ -1,0 +1,13 @@
+```html
+<template component>
+  <div>レンダリングテキスト：{{txt}}</div>
+  <script>
+    export default {
+      tag: "text-demo",
+      data: {
+        txt:"我是txt"
+      },
+    };
+  </script>
+</template>
+```

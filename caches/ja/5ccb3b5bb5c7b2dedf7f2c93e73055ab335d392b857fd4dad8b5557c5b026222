@@ -1,0 +1,17 @@
+```html
+<template component>
+  <ul>
+  <x-fill :value="lists">
+    <li>{{$index}} - {{$data.name}}</li>
+  </x-fill>
+  </ul>
+  <script>
+    export default {
+      tag: "fill-demo",
+      data: {
+        lists:[{name:"One"}, {name:"Two"}, {name:"Three"}]
+      },
+    };
+  </script>
+</template>
+```

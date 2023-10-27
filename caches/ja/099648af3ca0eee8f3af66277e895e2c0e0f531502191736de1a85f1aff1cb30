@@ -1,0 +1,25 @@
+```html
+<ul>
+    <li id="target">
+        I am target
+    </li>
+</ul>
+
+<div id="logger1" style="border:red solid 1px;padding:8px;">-</div>
+<div id="logger2" style="border:blue solid 1px;padding:8px;">-</div>
+
+<script>
+    $('ul').on('custom-event',()=>{
+        $("#logger1").text = 'ul is triggered';
+    });
+    $('#target').on('custom-event',()=>{
+        $("#logger2").text = 'target is triggered';
+    });
+
+    setTimeout(()=>{
+        $("#target").emit("custom-event",{
+            bubbles: false
+        });
+    },500);
+</script>
+```

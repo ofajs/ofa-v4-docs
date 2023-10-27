@@ -2,7 +2,6 @@
 
 `o-app` is one of the core components in `ofa.js`, used for configuring and managing the entire application. Here are some key properties and methods of app:
 
-
 ## src
 
 The `src` property is used to specify the specific address of the application parameter configuration module. For detailed examples, please refer to the [case](../../cases/app-config.md).

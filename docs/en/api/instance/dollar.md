@@ -94,7 +94,7 @@ $('my-component').shadow.$("selector").method(xxx)
 
 You can directly initialize native elements as `$` instance objects using the following methods:
 
-```
+```javascript
 const ele = document.createElement('div');
 const $ele = $(ele);
 ```

@@ -1,0 +1,4 @@
+```javascript
+// 現在のページインスタンスを取得する
+const currentPage = app.current;
+```

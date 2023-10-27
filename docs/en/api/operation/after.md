@@ -1,6 +1,6 @@
 # after
 
-The "after" method is used to add elements after the target element. Before executing the "after" operation, the initialization operation of the `$` method will be automatically performed, so you can directly fill in the specific element string or object.
+The "after" method is used to add elements after the target element. Before executing the "after" operation, the initialization operation of the [`$` method](../instance/dollar.md) will be automatically performed, so you can directly fill in the specific element string or object.
 
 **Please note, do not manipulate elements with template syntax.**
 

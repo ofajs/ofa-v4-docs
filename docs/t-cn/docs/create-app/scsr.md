@@ -19,7 +19,8 @@ SCSR 是通過直接運行單文件模式的頁面模塊，而無需使用 `o-pa
 以下是一個 SCSR 示例，展示了如何在頁面上直接渲染頁面模塊的內容：
 
 ```html
-<!-- home.html --><!DOCTYPE html>
+<!-- home.html -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

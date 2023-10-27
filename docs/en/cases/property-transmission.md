@@ -9,4 +9,4 @@ By using **props binding** in template syntax, you can apply component data to e
 
 The usage is to add the property `:name="key"` to the element, where `name` is the property name to be set for the target element, and `key` is the property key that you want to pass in your custom component.
 
-Previously, it was mentioned to use selector syntax to set properties, and here we introduce the syntax of property passing to set properties;
+Previously, we mentioned [using selectors to set properties](./index.md), but here we introduce property passing syntax to set properties;

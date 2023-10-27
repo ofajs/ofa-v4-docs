@@ -1,0 +1,10 @@
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+</div>
+`);
+
+$el.unwrap(); // ❌ エラー、親要素がないためunwrapできません
+$el.$('#target').unwrap(); // ✅ 正しい、包まれた要素を取り除きます
+```

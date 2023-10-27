@@ -1,1 +1,0 @@
-Use the `$.stanz` method to create shared data; on the components that need to share this data, bind the data to the component in the attached lifecycle phase;

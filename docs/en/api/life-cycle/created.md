@@ -14,7 +14,7 @@
 </script>
 ```
 
-[`test-created`](https://example.com/test-created)
+<comp-viewer comp-name="test-created">
 
 ```
 <div id="logger">-</div>
@@ -25,7 +25,6 @@
   },500);
 </script>
 ```
-
 
 ```html
 <template component>

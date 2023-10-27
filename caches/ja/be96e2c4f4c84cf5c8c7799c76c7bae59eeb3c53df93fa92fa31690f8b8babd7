@@ -1,0 +1,6 @@
+```javascript
+// 父ページのページモジュール
+export const routerChange = (current, type) => {
+  console.log(`ルーターの切り替え：現在のページは ${current.src}、切り替えの方法は ${type}`);
+};
+```

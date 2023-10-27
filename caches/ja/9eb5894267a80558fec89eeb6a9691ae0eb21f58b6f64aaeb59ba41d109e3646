@@ -1,0 +1,1 @@
+メソッドを使うと、[cssセレクタ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)にマッチするページ上の要素の最初のインスタンスを取得し、それを操作することができます。 以下はその例です：

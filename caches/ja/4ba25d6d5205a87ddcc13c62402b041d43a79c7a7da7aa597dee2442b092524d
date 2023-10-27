@@ -1,0 +1,3 @@
+```html
+<button on:click="back()">前のページに戻る</button>
+```

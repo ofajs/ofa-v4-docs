@@ -1,0 +1,1 @@
+SCSRのフルネームは、Static Client-Side Renderingで、静的なクライアントサイドレンダリングと呼ばれます。静的なクライアントサイドレンダリング(SCSR)は、CSR(Client-Side Rendering)の一種であり、CSRのユーザーエクスペリエンスを保ちながら、ページを静的な状態でクローラーが取できるようにすることができます。
