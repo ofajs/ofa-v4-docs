@@ -28,6 +28,7 @@
     "dirs": {
       "cn": "./docs/cn",
       "t-cn": "./docs/t-cn",
+      "en": "./docs/en",
       "ja": "./docs/ja"
     }
   }

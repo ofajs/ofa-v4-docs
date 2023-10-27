@@ -1,1 +1,0 @@
-Note that data binding in the detached lifecycle needs to be cleared to prevent memory leaks.
