@@ -10,8 +10,8 @@
   },
   "scripts": {
     "devm": "node --inspect ../o-book/shell/ trans",
-    "dev": "obook dev",
-    "build": "node ../o-book/shell/ build",
+    "dev": "nodemon --inspect ../o-book/shell/ dev",
+    "build": "nodemon --inspect ../o-book/shell/ build",
     "trans": "node ../o-book/shell/ trans",
     "update": "node ../o-book/shell/ update"
   },
