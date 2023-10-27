@@ -26,7 +26,6 @@
 </script>
 ```
 
-
 ```html
 <template component>
   <div>test created</div>

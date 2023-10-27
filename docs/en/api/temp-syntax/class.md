@@ -44,7 +44,6 @@ The following is an example demonstrating how to use the `class` syntax to switc
 
 You can use the `class` method to directly manipulate the className of an element. In the example below, it demonstrates how to dynamically add and remove class names using the `class` method:
 
-
 <html-viewer>
 
 ```

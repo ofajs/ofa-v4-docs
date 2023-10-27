@@ -196,7 +196,6 @@ console.log($("#target").obj.val === obj.val); // => true
 console.log($("#target").obj === obj); // => false
 ```
 
-
 We can also use `$.stanz` to create a Stanz data without being bound to an instance.
 
 ```javascript

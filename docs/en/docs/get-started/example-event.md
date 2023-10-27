@@ -29,6 +29,7 @@ Mouseenter event
 
 In this case, when the mouse enters the text area, the text color will change to red.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,6 +57,7 @@ In this case, when the mouse enters the text area, the text color will change to
     </script>
   </body>
 </html>
+```
 
 
 ## Keyboard Key Events (keydown)

@@ -4,7 +4,6 @@ Using the `host` property, you can obtain the instance of the host component for
 
 Here is an example demonstrating how to use the `host` property to obtain an instance of the host component:
 
-
 <comp-viewer comp-name="host-demo">
 
 ``` html

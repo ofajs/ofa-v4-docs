@@ -30,7 +30,7 @@ export const data = {
 
 ### attrs
 
-`attrs` 是对象类型属性，也属于 `data`，但是这个数据会反映到 element 的 attributes 上，attributes 上的改动也会动态改动到组件的 `data` 上。当出现大写的 key 时，反应到组件 property 会变成 `-` 驼峰的命名。
+`attrs` is an object type attribute, which is also `data`, but this data is reflected in the attributes of the element, and changes in the attributes are dynamically changed in the `data` of the component. When there is an uppercase key, the response to the component property is named with a `-` hump.
 
 Example: 
 

@@ -292,7 +292,7 @@ Example code:
 
     btn.on('click', (event) => {
       alert('Button Clicked!');
-      event.stopPropagation(); // 阻止事件冒泡
+      event.stopPropagation(); // Blocking event bubbling
     });
 
     innerDiv.on('click', () => {
@@ -306,7 +306,6 @@ Example code:
 </body>
 </html>
 ```
-
 
 In the example above, when you click the button "Click Me", it will display "Button Clicked!" but not trigger "Inner Div Clicked!" and "Outer Div Clicked!". This is because we called `event.stopPropagation()` in the button's click event handler, which prevents the event from further propagation.
 

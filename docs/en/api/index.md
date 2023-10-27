@@ -2,7 +2,6 @@
 
 Below is an overview of the ofa.js API. You can have a quick look now and refer to the detailed documentation when needed:
 
-
 ## Related to examples
 
 - [$](./instance/dollar.md): Used primarily to obtain instance methods.
