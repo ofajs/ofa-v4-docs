@@ -53,7 +53,7 @@ Visual Studio Code エディタを使用している場合、簡単に静的サ�
 
   <script>
     export default {
-      tag: 'simple-button' // 需要注册的组件名，如果没有定义 tag 属性，注册的组件名与文件名保持一致
+      tag: 'simple-button' // tag属性が定義されていない場合、登録されるコンポーネントの名前はファイル名と同じになる。
     }
   </script>
 </template>
@@ -84,7 +84,7 @@ ofa.jsの導入に成功すると、`load-module`コンポーネントが自動�
 
 `load-module` コンポーネントは、カスタムの**宣言的なローダー**ライブラリであり、さまざまな種類のファイルのサポートを拡張したり、JavaScript モジュールを中継処理したりする強力な機能を提供します。このコンポーネントは、独立したプロジェクトに分割されています。具体的な使用方法については、[https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js) のドキュメントを参照してください。
 
-### 双文件模式
+### デュアル・ドキュメント・モード
 
 静的テンプレートとロジックコードを分けて、コンポーネントをより明確にする、デュアルファイルモードです。
 
@@ -125,7 +125,7 @@ ofa.jsの導入に成功すると、`load-module`コンポーネントが自動�
 </button>
 ```
 
-2. **simple-button.mjs**：按钮组件的注册代码。
+2. **simple-button.mjs**：ボタンコンポーネントの登録ロジックコード。
 
 ```javascript
 // simple-button.mjs

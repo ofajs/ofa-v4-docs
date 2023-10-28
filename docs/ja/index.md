@@ -1,4 +1,4 @@
-# ofa.js - 不需要打包的 JavaScript 框架
+# ofa.js - パッケージング不要のJavaScriptフレームワーク
 
 <!-- desc: ofa.jsは、ユーザーインターフェイスを構築するための新しいフレームワークで、使いやすく、ビルドの手間なく直接参照できる。 npm、Node.js、webpackへの依存を捨て、jQuery時代の利便性を取り戻した。 -->
 
@@ -39,7 +39,7 @@
 
 <simp-block>
 
-## 极低使用门槛
+## 使用の敷居が非常に低い
 
 他のフロントエンドフレームワークとは異なり、ofa.jsベースのコンポーネントを使用する場合は、複雑な入門ガイドを読む必要はありません。すぐにHTMLファイルを作成して、「一拳でロゴを飛ばす」コンポーネントを体験してください。
 
@@ -56,10 +56,10 @@
 <!-- punch-logoコンポーネントの使用 -->
 <punch-logo style="margin:50px 0 0 100px;">
     <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
-    <h2>不加班了</h2>
-    <p slot="fly">下班给我</p>
-    <p slot="fly">迟点下班</p>
-    <p slot="fly">周末加班</p>
+    <h2>残業はもういらない</h2>
+    <p slot="fly">私のために仕事を休んでください</p>
+    <p slot="fly">遅くまで残業</p>
+    <p slot="fly">週末の残業</p>
 </punch-logo>
 ```
 
@@ -142,7 +142,7 @@ HTML5 の Web コンポーネントは以前は煩雑な学習が必要でした
     export default {
       tag: "text-demo",
       data: {
-        txt:"我是txt"
+        txt:"I am txt"
       },
     };
   </script>

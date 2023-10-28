@@ -31,7 +31,7 @@
 
   <script>
     export default {
-      tag: 'simple-button' // 需要注册的组件名，如果没有定义 tag 属性，注册的组件名与文件名保持一致
+      tag: 'simple-button' // tag属性が定義されていない場合、登録されるコンポーネントの名前はファイル名と同じになる。
     }
   </script>
 </template>

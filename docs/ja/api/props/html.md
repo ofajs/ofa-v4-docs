@@ -29,7 +29,7 @@
 
 </html-viewer>
 
-## 注意事項
+## 注意
 
 htmlは比較的危険な方法です。`script`に埋め込まれると、内部の`javascript`コードが自動的に実行されてしまいますので、使用する際は[XSS](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)に対する予防策に注意してください。
 
