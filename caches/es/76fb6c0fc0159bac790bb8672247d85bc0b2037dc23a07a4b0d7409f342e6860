@@ -1,1 +1,1 @@
-它提供了一种方式来监听和响应应用程序的路由变化，通常在嵌套页面的父页面中使用。当路由发生变化时，可以监听 `routerChange` 事件以执行相应的操作，例如更新页面内容或导航状态。
+Ofrece una forma de escuchar y responder a cambios en la ruta de la aplicación, normalmente se usa en la página principal de páginas anidadas. Cuando cambia la ruta, puedes escuchar el evento `routerChange` para realizar acciones correspondientes, como actualizar el contenido de la página o el estado de navegación.

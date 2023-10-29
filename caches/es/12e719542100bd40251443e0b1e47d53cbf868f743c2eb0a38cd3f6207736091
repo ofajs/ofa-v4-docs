@@ -1,1 +1,1 @@
-如果需要跨越组件的 Shadow DOM 边界，以触发事件，可以添加 `composed` 属性。
+Si necesitas cruzar los límites del Shadow DOM del componente para activar eventos, puedes agregar el atributo `composed`.

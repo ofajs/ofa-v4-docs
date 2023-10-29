@@ -1,1 +1,1 @@
-使用 `prevs` 属性，您能够轻松获取当前元素之前的所有相邻元素实例，这些元素将以数组的形式返回。
+Mediante el atributo `prevs`, puedes obtener fácilmente todas las instancias de elementos adyacentes que están antes del elemento actual, y se devolverán como un array.

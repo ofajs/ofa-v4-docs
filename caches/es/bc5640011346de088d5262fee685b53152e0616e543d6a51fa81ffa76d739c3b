@@ -1,1 +1,1 @@
-由于数据是共享的，务必要确保在适当的时候回收数据，以避免内存泄漏。
+Dado que los datos se comparten, asegúrate de liberar los datos en el momento adecuado para evitar pérdidas de memoria.

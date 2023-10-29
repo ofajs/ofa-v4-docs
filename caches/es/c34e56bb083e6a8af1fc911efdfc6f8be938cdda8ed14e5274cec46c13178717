@@ -1,1 +1,1 @@
-实例也拥有 `all` 方法，可以通过实例上的 `all` 方法选择并获取子元素。
+Las instancias también tienen el método `all`, que permite seleccionar y obtener elementos secundarios utilizando el método `all` en la instancia.

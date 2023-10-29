@@ -1,1 +1,1 @@
-下面是一个示例，演示如何使用 `on` 方法为按钮元素注册点击事件处理程序：
+A continuación se muestra un ejemplo que demuestra cómo usar el método `on` para registrar un controlador de eventos de clic para un elemento de botón:

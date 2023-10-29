@@ -1,1 +1,1 @@
-实例也拥有 `$` 方法，可以通过实例上的 `$` 方法获取元素实例的第一个符合条件的子元素实例。
+Las instancias también tienen un método `$` que te permite obtener la primera instancia de elemento que cumple con una condición de selección en la instancia.

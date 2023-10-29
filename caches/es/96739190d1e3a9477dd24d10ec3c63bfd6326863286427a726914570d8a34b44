@@ -1,1 +1,1 @@
-使用 `nexts` 属性，您能够轻松获取当前元素后面的所有相邻元素实例，这些元素将以数组的形式返回。
+Usando el atributo `nexts`, puedes obtener fácilmente todas las instancias de elementos adyacentes que están después del elemento actual, y se devolverán como un array.

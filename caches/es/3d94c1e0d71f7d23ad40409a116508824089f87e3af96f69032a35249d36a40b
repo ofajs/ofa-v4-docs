@@ -1,1 +1,1 @@
-逻辑代码放在 js 文件内，这个 js 需要标识 `export const type = $.COMP;`，以通知页面这是一个组件模块。在这种拆分模式下，模块代码可以使用 `import` 等 ES Module 的标准语法。
+El código lógico se coloca en un archivo js, y este archivo js debe tener la declaración `export const type = $.COMP;` para notificar a la página que se trata de un módulo de componente. En este modo dividido, el código del módulo puede utilizar la sintaxis estándar de los Módulos ES, como `import`.
