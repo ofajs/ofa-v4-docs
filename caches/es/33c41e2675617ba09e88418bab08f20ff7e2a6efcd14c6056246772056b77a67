@@ -19,7 +19,7 @@
     const submitBtn = $('#submitBtn');
 
     submitBtn.on('click', (event) => {
-      event.preventDefault(); // 取消事件的默认行为
+      event.preventDefault(); // Anular el comportamiento por defecto de un evento
       const name = $('#name').value;
       alert(`Hello, ${name}! Form submission prevented.`);
     });

@@ -6,11 +6,11 @@
   </div>
 </div>
 <script>
-  // 选择父元素并查找子元素
+  // Selecciona el elemento padre y busca los hijos
   const parentElement = $(".parent");
   const childElement = parentElement.$(".child");
 
-  // 修改子元素的文本内容
+  // Modificar el contenido del texto de un elemento hijo
   childElement.text = "Modified child element";
 </script>
 ```

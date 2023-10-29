@@ -16,7 +16,7 @@ console.log(app.src);
 `current` attributeName is used to obtain the instance of the currently displayed page. This can help you access and work with the currently displayed page, such as updating its content or performing specific operations.
 
 ```javascript
-// 获取当前页面实例
+// Obtener la instancia de página actual
 const currentPage = app.current;
 ```
 

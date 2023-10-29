@@ -1,5 +1,5 @@
 ```html
-<!-- 使用 my-component -->
+<!-- use my-component -->
 <my-component>
   <p>This is a slot content.</p>
 </my-component>

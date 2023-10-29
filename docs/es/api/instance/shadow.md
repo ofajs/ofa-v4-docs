@@ -30,7 +30,7 @@ Es importante tener en cuenta que se debe evitar modificar directamente los elem
 
 ## Obtener instancias de elementos dentro de elementos sombra de componentes desde el exterior
 
-您还可以从外部获取自定义元素实例，然后通过 `shadow` 属性访问影子节点内的元素，如下所示：
+También puede obtener instancias de elementos personalizados externamente y luego acceder a los elementos dentro del nodo sombra a través de la propiedad `shadow`, como se muestra a continuación:
 
 ```javascript
 $("test-shadow").shadow.$('selector').method(xxx);

@@ -85,14 +85,14 @@ No inserte directamente las instancias de elementos recuperados en otros lugares
 
 ## Obtener los elementos secundarios dentro de un nodo sombreado
 
-可以 acceder al elemento deseado utilizando la propiedad [shadow](./shadow.md) después de obtener una instancia y luego usando el método `$`.
+Puede obtener la instancia mediante el [atributo shadow](./shadow.md) y luego obtener el elemento deseado mediante el método `$`;
 
 ```javascript
 $('my-component').shadow.$("selector").method(xxx)
 ```
 ## Instantiation of elements
 
-你可以通过以下方式直接将原生元素初始化为 `$` 实例对象：
+Puede inicializar elementos nativos directamente en objetos de instancia `$` de la siguiente manera:
 
 ```javascript
 const ele = document.createElement('div');

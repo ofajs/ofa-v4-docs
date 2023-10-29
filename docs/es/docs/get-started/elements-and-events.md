@@ -29,11 +29,11 @@ En los capítulos anteriores, hemos aprendido cómo obtener un elemento global u
   </div>
 </div>
 <script>
-  // 选择父元素并查找子元素
+  // Selecciona el elemento padre y busca los hijos
   const parentElement = $(".parent");
   const childElement = parentElement.$(".child");
 
-  // 修改子元素的文本内容
+  // Modificar el contenido del texto de un elemento hijo
   childElement.text = "Modified child element";
 </script>
 ```
@@ -63,10 +63,10 @@ En el ejemplo anterior, primero selecciona el elemento padre con la clase "paren
   </div>
 </div>
 <script>
-  // 直接查找符合条件的子元素
+  // Encontrar directamente los subelementos que cumplen las condiciones
   const childElement = $('div .child');
 
-  // 修改子元素的文本内容
+  // Modificar el contenido del texto de un elemento hijo
   childElement.text = "Modified child element";
 </script>
 ```
@@ -95,10 +95,10 @@ En el ejemplo anterior, se utiliza directamente `$('div .child')` para buscar lo
 <p>Paragraph 2</p>
 <p>Paragraph 3</p>
 <script>
-  // 查找所有 p 标签元素
+  // Buscar todos los elementos de la etiqueta p
   const allParagraphs = $.all("p");
 
-  // 修改所有 p 标签元素的文本内容
+  // Modificar el contenido del texto de todos los elementos de la etiqueta p
   allParagraphs.forEach((paragraph, index) => {
     paragraph.text = `Modified Paragraph ${index + 1}`;
   });
@@ -130,11 +130,11 @@ Además de poder buscar elementos a nivel global, también puedes buscar todos l
   <div class="item">Elemento 3</div>
 </div>
 <script>
-  // 从容器内查找所有带有 "item" 类的子元素
+  // Busca todos los elementos hijos del contenedor con la clase "item".
   const container = $(".container");
   const items = container.all(".item");
 
-  // 修改所有子元素的文本内容
+  // Modificar el contenido del texto de todos los elementos hijos
   items.forEach((item, index) => {
     item.text = `Elemento Modificado ${index + 1}`;
   });
@@ -247,12 +247,12 @@ $(selector).emit(eventName);
 ```html
 <button id="btn">Click Me</button>
 <script>
-  // 绑定点击事件处理函数
+  // Vincular el controlador de eventos de clic
   $("#btn").on("click", () => {
     alert("Button clicked!");
   });
 
-  // 通过 emit 方法触发按钮的点击事件
+  // Activar el evento de clic del botón mediante el método emit
   $("#btn").emit("click");
 </script>
 ```
@@ -292,7 +292,7 @@ La propagación de eventos se refiere a cuando se desencadena un evento en un el
 
     btn.on('click', (event) => {
       alert('Button Clicked!');
-      event.stopPropagation(); // 阻止事件冒泡
+      event.stopPropagation(); // Bloqueo del burbujeo de eventos
     });
 
     innerDiv.on('click', () => {
@@ -336,7 +336,7 @@ Algunos eventos en ciertos elementos tienen un comportamiento predeterminado cua
     const submitBtn = $('#submitBtn');
 
     submitBtn.on('click', (event) => {
-      event.preventDefault(); // 取消事件的默认行为
+      event.preventDefault(); // Anular el comportamiento por defecto de un evento
       const name = $('#name').value;
       alert(`Hello, ${name}! Form submission prevented.`);
     });

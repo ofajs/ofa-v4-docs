@@ -11,10 +11,10 @@ En Web Components, Shadow DOM proporciona un contenedor aislado para encapsular 
 En ofa.js, cada componente tiene un contenedor Shadow DOM que sirve para aislar el contenido interno del componente. El contenido de la plantilla se renderiza dentro de este contenedor. Las instancias de componente obtenidas mediante `$` también pueden acceder al contenedor Shadow DOM interno utilizando la propiedad `shadow`, lo cual permite realizar operaciones y acceder a los elementos internos del componente.
 
 ```javascript
-const myComponent = $("my-component"); // 获取组件实例
-const shadowContainer = myComponent.shadow; // 获取组件的 Shadow DOM 容器
+const myComponent = $("my-component"); // Obtener instancias de componentes
+const shadowContainer = myComponent.shadow; // Obtener el contenedor Shadow DOM del componente
 
-$("my-component").shadow.$("h1").css.color = 'red' // 将 Shadow DOM 的 h1 改为红色
+$("my-component").shadow.$("h1").css.color = 'red' // Cambiar h1 de Shadow DOM a color rojo
 ```
 
 ## Selectores de CSS comunes en Web Components
@@ -62,7 +62,7 @@ En la plantilla del componente, se puede usar el elemento `<slot>` para definir 
 ```
 
 ```html
-<!-- 使用 my-component -->
+<!-- use my-component -->
 <my-component>
   <p>This is a slot content.</p>
 </my-component>
@@ -84,7 +84,7 @@ Además de la ranura predeterminada, también se pueden definir varias ranuras c
 ```
 
 ```html
-<!-- 使用 my-component -->
+<!-- Uso de my-component -->
 <my-component>
   <div slot="header">Header Content</div>
   <p>This is main content.</p>

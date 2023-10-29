@@ -1,5 +1,5 @@
 ```html
-<!-- 使用 my-component -->
+<!-- Uso de my-component -->
 <my-component>
   <div slot="header">Header Content</div>
   <p>This is main content.</p>

@@ -10,17 +10,17 @@ El parámetro base son las configuraciones básicas para registrar un componente
 
 `tag` representa el nombre del componente registrado. Cuando no se define el atributo `tag`, el nombre del componente registrado será igual al nombre del archivo.
 
-示例：
+Ejemplo:
 
 ```javascript
-export const tag = "mi-boton"; // 将组件名注册为 'mi-boton'
+export const tag = "mi-boton"; // Registrar el nombre del componente como "mi-boton".
 ```
 
 ### data
 
 `data` es un atributo de tipo objeto que se utiliza para generar componentes y agregar datos personalizados de forma predeterminada.
 
-示例：
+Ejemplo:
 
 ```javascript
 export const data = {
@@ -32,7 +32,7 @@ export const data = {
 
 `attrs` es un atributo de tipo objeto que también pertenece a `data`, pero estos datos se reflejarán en los atributos del elemento. Los cambios en los atributos también se actualizarán dinámicamente en los datos del componente. Cuando hay claves en mayúsculas, se convierten en nombres de propiedades con guiones en lugar de camelCase.
 
-示例：
+Ejemplo:
 
 ```javascript
 export const attrs = {
@@ -65,7 +65,7 @@ El `watch` es un atributo de tipo objeto que se utiliza para escuchar los cambio
 - El primer parámetro es el valor actual.
 - El segundo parámetro es un objeto que contiene el conjunto de datos `watchers`. Normalmente, en `watchers` solo habrá un objeto, desde el cual se puede obtener el `oldValue`. Cuando se cambia el valor de escucha varias veces en un solo hilo, este conjunto de datos registrará los cambios múltiples.
 
-示例：
+Ejemplo:
 
 ```javascript
 export const data = {
@@ -205,11 +205,11 @@ export const tag = "my-button";
 export const temp = "./my-button-template.html";
 
 export default async function ({ load, url, query }) {
-  console.log("url:", url); // 输出当前模块的文件名
-  console.log("query:", query); // 输出当前模块的 URL 参数转成的对象
+  console.log("url:", url); // Muestra el nombre de archivo del módulo actual
+  console.log("query:", query); // Da salida al objeto convertido a partir del parámetro URL del módulo actual.
 
-  const asyncData = await load("./async-data.mjs"); // 使用 load 异步加载模块
-  console.log("asyncData:", asyncData); // 输出异步加载的模块数据
+  const asyncData = await load("./async-data.mjs"); // Carga asíncrona de módulos mediante load
+  console.log("asyncData:", asyncData); // Salida de datos de módulos cargados asíncronamente
 
   return {
     data: {

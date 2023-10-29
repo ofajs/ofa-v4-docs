@@ -9,7 +9,7 @@ Puedes usar el método `css` para obtener o establecer el estilo de un elemento 
 <html-viewer>
 
 ```
-<!-- 引入 ofa.js 到你的项目 -->
+<!-- Introduce ofa.js en tu proyecto -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
@@ -37,7 +37,7 @@ A través del objeto `css` obtenido, puedes obtener los valores de estilo que se
 <html-viewer>
 
 ```
-<!-- 引入 ofa.js 到你的项目 -->
+<!-- Introduce ofa.js en tu proyecto -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
@@ -51,7 +51,7 @@ A través del objeto `css` obtenido, puedes obtener los valores de estilo que se
     $("#registrador").text = Object.keys($("#target").css);
    
     setTimeout(()=>{
-        // 覆盖已有样式
+        // Anular estilos existentes
         $("#target").css = {
             color: "blue",
             lineHeight: "5em"

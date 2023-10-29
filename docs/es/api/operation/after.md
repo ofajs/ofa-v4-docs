@@ -1,6 +1,6 @@
 # after
 
-El método "after" se utiliza para agregar un elemento después del elemento objetivo. Antes de ejecutar la operación "after", se ejecuta automáticamente la operación de inicialización del método "$" (consulte [$ 方法](../instance/dollar.md)), por lo que puede proporcionar directamente una cadena de elementos o un objeto específico.
+El método `after` se utiliza para añadir un elemento después del elemento de destino. La inicialización del [método AAAA]((../instance/dollar.md)) se realiza automáticamente antes de la operación `after`, de modo que se pueden rellenar directamente cadenas u objetos de elementos específicos.
 
 **Por favor, tenga en cuenta de no manipular los elementos con sintaxis de plantilla.**
 

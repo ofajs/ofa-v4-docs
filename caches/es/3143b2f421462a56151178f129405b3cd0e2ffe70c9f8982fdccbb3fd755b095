@@ -16,12 +16,12 @@
 
   setTimeout(() => {
     target.aaa = "I am aaa";
-    // 撤销监听
+    // Desactivar la escucha
     target.unwatch(tid1);
     target.unwatch(tid2);
   }, 500);
   setTimeout(() => {
-    target.bbb = "I am aaa"; // 不会触发上面注册的函数，因为已经被撤销监听
+    target.bbb = "I am aaa"; // La función registrada anteriormente no se activará, ya que ha sido desactivada.
   }, 1000);
 </script>
 ```

@@ -21,7 +21,7 @@ Puedes acceder o establecer el contenido de texto de un elemento directamente. A
 
 <script>
     setTimeout(()=> {
-        $('#target2').text = `<b style="color:blue;">nuevo texto</b>`; // 只能设置文本，如果想要标签生效，请设置 html 属性
+        $('#target2').text = `<b style="color:blue;">nuevo texto</b>`; // Sólo se puede establecer texto, si desea que la etiqueta tenga efecto, establezca el atributo html.
 
         console.log($("#target1").text) // => 'objetivo 1';
         $("#logger").text = $("#target1").text;

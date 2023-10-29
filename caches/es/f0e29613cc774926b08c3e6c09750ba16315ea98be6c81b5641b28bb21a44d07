@@ -1,6 +1,6 @@
 ```javascript
-const myComponent = $("my-component"); // 获取组件实例
-const shadowContainer = myComponent.shadow; // 获取组件的 Shadow DOM 容器
+const myComponent = $("my-component"); // Obtener instancias de componentes
+const shadowContainer = myComponent.shadow; // Obtener el contenedor Shadow DOM del componente
 
-$("my-component").shadow.$("h1").css.color = 'red' // 将 Shadow DOM 的 h1 改为红色
+$("my-component").shadow.$("h1").css.color = 'red' // Cambiar h1 de Shadow DOM a color rojo
 ```

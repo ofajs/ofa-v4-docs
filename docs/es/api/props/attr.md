@@ -9,7 +9,7 @@ Puedes usar el método `attr` para obtener o establecer los atributos de un elem
 <html-viewer>
 
 ```
-<!-- 引入 ofa.js 到你的项目 -->
+<!-- Introduce ofa.js en tu proyecto -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 

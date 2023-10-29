@@ -16,7 +16,7 @@
 
 ### 无需繁琐学习，无需 npm、nodejs、webpack，即刻上手
 
-[案例教程](./cases/index.md)
+[Tutoriales de casos](./cases/index.md)
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
@@ -46,20 +46,20 @@
 <html-viewer style="width:100%;">
 
 ```
-<!-- 将 ofa.js 引入项目 -->
+<!-- Introducir ofa.js en el proyecto -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
-<!-- 加载开发好的 punch-logo 组件 -->
+<!-- Cargar el componente punch-logo desarrollado -->
 <l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
 ```html
-<!-- 使用 punch-logo 组件 -->
+<!-- Utilización del componente "punch-logo”.  -->
 <punch-logo style="margin:50px 0 0 100px;">
     <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
-    <h2>不加班了</h2>
-    <p slot="fly">下班给我</p>
-    <p slot="fly">迟点下班</p>
-    <p slot="fly">周末加班</p>
+    <h2>No más horas extra</h2>
+    <p slot="fly">Sal del trabajo por mí</p>
+    <p slot="fly">Salir tarde del trabajo</p>
+    <p slot="fly">Horas extra los fines de semana</p>
 </punch-logo>
 ```
 
@@ -161,8 +161,8 @@ Los componentes web antiguos implicaban aprender conocimientos complicados, pero
     export default {
       tag: "prop-demo",
       data: {
-        txt1: "<b>我是txt1</b>",
-        txt2: "<b>我是txt2</b>",
+        txt1: "<b>I am txt1</b>",
+        txt2: "<b>I am txt2</b>",
       },
     };
   </script>

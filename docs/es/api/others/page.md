@@ -7,11 +7,11 @@
 El atributo `src` se utiliza para especificar la dirección específica de un módulo de página. Este es un atributo clave que especifica el contenido y el comportamiento de una página, y le indica a la aplicación de dónde cargar el contenido específico de la página.
 
 ```javascript
-// 示例代码：获取当前页面的地址
+// Código de ejemplo: obtener la dirección de la página actual
 // const page = $("o-app").current;
 ...
 ready(){
-  // 在页面模块的生命周期内，this 就是当前页面模块本身；
+  // Durante la vida de un módulo de página, es el módulo de página actual;
   const page = this;
 }
 ...

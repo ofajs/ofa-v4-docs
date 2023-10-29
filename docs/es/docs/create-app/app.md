@@ -135,7 +135,7 @@ Puedes usar el atributo `on:click` en la plantilla de la página para vincular e
 ```html
 <template page>
   <div class="container">
-    <button on:click="toabout">跳转到关于页面</button>
+    <button on:click="toabout">Ir a la página Acerca de</button>
   </div>
 
   <script>
@@ -196,7 +196,7 @@ export default () => {
       const appTag = this.app;
 
       const currentPage = appTag.current;
-      console.log(`当前激活的页面是：${currentPage}`);
+      console.log(`La página actualmente activa es:${currentPage}`);
     }
   };
 }

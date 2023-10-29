@@ -20,7 +20,7 @@
 
     btn.on('click', (event) => {
       alert('Button Clicked!');
-      event.stopPropagation(); // 阻止事件冒泡
+      event.stopPropagation(); // Bloqueo del burbujeo de eventos
     });
 
     innerDiv.on('click', () => {

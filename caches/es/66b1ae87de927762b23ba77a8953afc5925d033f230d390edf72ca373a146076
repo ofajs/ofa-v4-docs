@@ -6,10 +6,10 @@
   </div>
 </div>
 <script>
-  // 直接查找符合条件的子元素
+  // Encontrar directamente los subelementos que cumplen las condiciones
   const childElement = $('div .child');
 
-  // 修改子元素的文本内容
+  // Modificar el contenido del texto de un elemento hijo
   childElement.text = "Modified child element";
 </script>
 ```

@@ -116,7 +116,7 @@ En el siguiente ejemplo, mostramos cómo escuchar elementos específicos del for
       <input type="radio" name="sex" value="woman" class="use-it" />
     </label>
   </div>
-  <textarea name="message">这个表单元素没有被绑定</textarea>
+  <textarea name="message">Este elemento de formulario no está vinculado</textarea>
 </form>
 <br />
 <div id="logger"></div>

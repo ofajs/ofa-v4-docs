@@ -8,7 +8,7 @@
     $("#registrador").text = Object.keys($("#target").css);
    
     setTimeout(()=>{
-        // 覆盖已有样式
+        // Anular estilos existentes
         $("#target").css = {
             color: "blue",
             lineHeight: "5em"

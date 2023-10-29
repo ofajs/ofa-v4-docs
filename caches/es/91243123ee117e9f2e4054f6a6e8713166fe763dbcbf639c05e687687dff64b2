@@ -1,4 +1,4 @@
 ```javascript
-// 获取当前页面实例
+// Obtener la instancia de página actual
 const currentPage = app.current;
 ```

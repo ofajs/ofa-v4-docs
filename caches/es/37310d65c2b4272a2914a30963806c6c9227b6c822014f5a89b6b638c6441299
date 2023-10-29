@@ -3,10 +3,10 @@
 <p>Paragraph 2</p>
 <p>Paragraph 3</p>
 <script>
-  // 查找所有 p 标签元素
+  // Buscar todos los elementos de la etiqueta p
   const allParagraphs = $.all("p");
 
-  // 修改所有 p 标签元素的文本内容
+  // Modificar el contenido del texto de todos los elementos de la etiqueta p
   allParagraphs.forEach((paragraph, index) => {
     paragraph.text = `Modified Paragraph ${index + 1}`;
   });

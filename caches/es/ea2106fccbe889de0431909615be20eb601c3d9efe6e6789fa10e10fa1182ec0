@@ -1,1 +1,1 @@
-可以 acceder al elemento deseado utilizando la propiedad [shadow](./shadow.md) después de obtener una instancia y luego usando el método `$`.
+Puede obtener la instancia mediante el [atributo shadow](./shadow.md) y luego obtener el elemento deseado mediante el método `$`;

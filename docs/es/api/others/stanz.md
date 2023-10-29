@@ -73,13 +73,13 @@ A continuación se muestra un ejemplo que muestra cómo usar el método `watchTi
   let count1 = 0;
   target.watch(() => {
     count1++;
-    $("#logger1").text = 'watch 运行次数：' + count1;
+    $("#logger1").text = 'El número de carreras del reloj:' + count1;
   });
 
   let count2 = 0;
   target.watchTick(()=>{
     count2++;
-    $("#logger2").text = 'watchTick 运行次数：' + count2;
+    $("#logger2").text = 'El número de veces que se ha ejecutado watchTick:' + count2;
   });
 
   setTimeout(() => {
@@ -125,12 +125,12 @@ A continuación se muestra un ejemplo que muestra cómo utilizar el método `unw
 
   setTimeout(() => {
     target.aaa = "I am aaa";
-    // 撤销监听
+    // Desactivar la escucha
     target.unwatch(tid1);
     target.unwatch(tid2);
   }, 500);
   setTimeout(() => {
-    target.bbb = "I am aaa"; // 不会触发上面注册的函数，因为已经被撤销监听
+    target.bbb = "I am aaa"; // La función registrada anteriormente no se activará, ya que ha sido desactivada.
   }, 1000);
 </script>
 ```

@@ -1,12 +1,12 @@
 ```html
 <button id="btn">Click Me</button>
 <script>
-  // 绑定点击事件处理函数
+  // Vincular el controlador de eventos de clic
   $("#btn").on("click", () => {
     alert("Button clicked!");
   });
 
-  // 通过 emit 方法触发按钮的点击事件
+  // Activar el evento de clic del botón mediante el método emit
   $("#btn").emit("click");
 </script>
 ```
