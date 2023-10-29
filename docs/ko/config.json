@@ -1,1 +1,11 @@
-{"github":"https://github.com/kirakiray/ofa.js","logo":{"url":"../publics/logo.svg","text":"ofa.js"},"pages":["./index.md"],"footer":"./footer.md","navs":[{"name":"사례 가이드","summary":"./cases/SUMMARY.md"},{"name":"文档","summary":"./docs/SUMMARY.md"},{"name":"API","summary":"./api/SUMMARY.md"}]}
+{
+  "github": "https://github.com/kirakiray/ofa.js",
+  "logo": { "url": "../publics/logo.svg", "text": "ofa.js" },
+  "pages": ["./index.md"],
+  "footer": "./footer.md",
+  "navs": [
+    { "name": "사례 가이드", "summary": "./cases/SUMMARY.md" },
+    { "name": "문서 사용", "summary": "./docs/SUMMARY.md" },
+    { "name": "API", "summary": "./api/SUMMARY.md" }
+  ]
+}

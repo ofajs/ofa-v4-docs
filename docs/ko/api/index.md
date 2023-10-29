@@ -8,7 +8,7 @@ ofa.js API 개요입니다. 필요할 때 자세한 문서를 찾아 보기 위�
 - [all](./instance/all.md)：모든 관련 인스턴스를 가져옴
 - [prev](./instance/prev.md)：대상 요소의 이전 인스턴스를 가져옴
 - [prevs](./instance/prevs.md)：대상 요소 앞에 있는 모든 인스턴스를 가져옴
-- [next](./instance/next.md)：대상 요소의 다음 인���턴스를 가져옴
+- [next](./instance/next.md)：대상 요소의 다음 인턴스를 가져옴
 - [nexts](./instance/nexts.md)：대상 요소 뒤에 있는 모든 인스턴스를 가져옴
 - [siblings](./instance/siblings.md)：대상 요소의 모든 인접 요소 인스턴스를 가져옴
 - [parent](./instance/parent.md)：부모 요소 인스턴스를 가져옴
@@ -34,7 +34,7 @@ ofa.js API 개요입니다. 필요할 때 자세한 문서를 찾아 보기 위�
 - [text](./props/text.md)：대상 요소의 텍스트를 가져오거나 설정합니다.
 - [html](./props/html.md)：대상 요소의 HTML 코드를 가져오거나 설정합니다.
 - [attr](./props/attr.md)：대상 요소의 [속성(attributes)](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)을 가져오거나 설정합니다.
-- [css](./props/css.md)��대상 요소의 스타일을 가져오거나 설정합니다.
+- [css](./props/css.md)대상 요소의 스타일을 가져오거나 설정합니다.
 - [style](./props/style.md)：대상 요소의 기본 스타일을 가져옵니다.
 - [classList](./props/class-list.md)：대상 요소의 기본 class 목록을 가져옵니다.
 - [data](./props/data.md)：대상 요소의 기본 데이터 집합을 가져옵니다.
@@ -51,7 +51,7 @@ ofa.js API 개요입니다. 필요할 때 자세한 문서를 찾아 보기 위�
 - [텍스트 렌더링](./temp-syntax/text-render.md)：템플릿 파일에서 텍스트를 빠르게 렌더링합니다.
 - [class](./temp-syntax/class.md)：템플릿 파일에서 클래스 이름을 빠르게 렌더링합니다.
 - [sync](./temp-syntax/sync.md)：템플릿 파일로 데이터를 빠르게 동기화합니다.
-- [조건부 렌더링](./temp-syntax/condition.md)��템플릿 파일에서 필요에 따라 내용을 렌더링합니다.
+- [조건부 렌더링](./temp-syntax/condition.md)템플릿 파일에서 필요에 따라 내용을 렌더링합니다.
 - [리스트 렌더링](./temp-syntax/fill.md)：템플릿 파일에서 배열 데이터를 빠르게 렌더링합니다.
 
 ## 수명 주기

@@ -212,4 +212,4 @@ data.val = "change val";
 
 이 예제는 객체 데이터를 Stanz 인스턴스로 설정하여 듣기 위한 기본적인 특징을 보여줍니다.
 
-자세한 기능은 [stanz] (https://github.com/kirakiray/stanz)을 참조하십시오.
+자세한 기능은 [stanz](https://github.com/kirakiray/stanz)을 참조하십시오.
