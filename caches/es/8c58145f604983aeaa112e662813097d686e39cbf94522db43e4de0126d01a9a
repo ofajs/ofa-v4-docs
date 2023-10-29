@@ -1,4 +1,4 @@
 ```javascript
-// 返回上一页
+// Volver a la página anterior
 app.back();
 ```

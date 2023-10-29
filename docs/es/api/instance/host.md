@@ -1,6 +1,6 @@
 # host
 
-使用 `host` 属性，可以获取元素的宿主组件实例。这对于在组件内部访问其宿主组件的数据和方法非常有用。
+Usando el atributo `host`, puedes obtener una instancia del componente host del elemento. Esto es útil para acceder a los datos y métodos de su componente host desde el interior del componente.
 
 A continuación se muestra un ejemplo que muestra cómo utilizar la propiedad `host` para obtener la instancia del componente hospedado:
 

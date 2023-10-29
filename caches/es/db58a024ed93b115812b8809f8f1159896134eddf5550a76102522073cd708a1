@@ -1,10 +1,10 @@
 ```javascript
 // simple-button.mjs
-export const type = $.COMP; // 双文件模块必须带有 `export const type = $.COMP`
+export const type = $.COMP; // Los módulos de doble archivo deben llevar `export const type = $.COMP`
 
-// 需要注册的组件名，当没有定义 tag 属性时，注册的组件名与文件名保持一致
+// El nombre del componente a registrar, cuando el atributo tag no está definido, el nombre del componente registrado es el mismo que el nombre del archivo.
 // export const tag = 'simple-button';
 
-// 组件模板的地址，当没有定义时，默认载入和当前模块同目录下的和组件同名的 html 文件
+// La dirección de la plantilla del componente, cuando no está definida, por defecto es el archivo html con el mismo nombre del componente en el mismo directorio que el módulo actual.
 // export const temp = './simple-button.html';
 ```

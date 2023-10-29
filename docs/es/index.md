@@ -28,7 +28,7 @@
 
 ## Basado en Web Components
 
-### ofa.js 基于 Web Components 开发。以下是支持的平台和时间，你可以立即体验
+### ofa.js está desarrollado en base a Web Components. Estas son las plataformas soportadas y los tiempos que puede experimentar de inmediato
 
 <support-platforms></support-platforms>
 
@@ -41,7 +41,7 @@
 
 ## Muy baja barrera de uso
 
-与其他前端框架不同，使用基于ofa.js开发的组件无需阅读繁杂入门指南。立刻创建一个 HTML 文件，体验一下“一拳撞飞logo”的组件。
+A diferencia de otros marcos frontales, el desarrollo de componentes basados en ofa.js no requiere la lectura de extensas guías de inicio. Crea inmediatamente un archivo HTML y experimenta con un componente de "golpe de logotipo".
 
 <html-viewer style="width:100%;">
 

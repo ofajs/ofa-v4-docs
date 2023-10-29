@@ -1,6 +1,6 @@
 # off
 
-使用 `off` 方法可以注销已注册的事件处理程序，以取消对事件的监听。
+El método `off` te permite desregistrar los controladores de eventos registrados para dejar de escuchar eventos.
 
 A continuación se muestra un ejemplo que demuestra cómo usar el método `off` para cancelar la escucha de eventos:
 

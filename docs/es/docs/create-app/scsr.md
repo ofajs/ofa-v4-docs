@@ -53,9 +53,9 @@ El siguiente es un ejemplo de SCSR que muestra cómo renderizar contenido de mó
 </html>
 ```
 
-通过 SCSR，`template` 标签内的内容会被直接渲染到页面上，而这部分内容实际上就是单文件模式的页面模块。
+Mediante SCSR, el contenido dentro de la etiqueta `template` se renderizará directamente en la página, y esta parte del contenido es en realidad un módulo de página en modo de archivo único.
 
-继续以上面的 `home.html` 页面为例，我们创建一个 `help` 页面：
+Siguiendo con el ejemplo de la página `home.html` mencionada anteriormente, creamos una página `help`:
 
 ```html
 <!-- pages/help.html -->

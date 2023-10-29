@@ -1,6 +1,6 @@
 # ele
 
-通过 `ele` 属性，你可以获取实例的实际元素，从而使用原生的属性或方法。
+Mediante el atributo `ele`, puedes obtener la instancia real del elemento, lo que te permite usar atributos y métodos nativos.
 
 <html-viewer>
 

@@ -8,7 +8,7 @@ Los objetos de instancia obtenidos o creados a través de `$` tienen todas las c
 
 Los ejemplos se pueden monitorear los cambios en los valores a través del método `watch`; incluso si se cambian los valores de los subobjetos del objeto, también se puede monitorear el cambio a través del método `watch` del objeto.
 
-下面是一个示例，演示如何使用 `$` 实例和 `watch` 方法：
+A continuación se muestra un ejemplo que demuestra el uso de instancias `$` y el método `watch`:
 
 <html-viewer>
 

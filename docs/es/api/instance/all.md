@@ -1,6 +1,6 @@
 # all
 
-使用 `all` 方法，你可以获取页面上符合 [CSS 选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) 的所有元素，并返回一个数组包含这些元素。
+Con el método `all`, puedes obtener todos los elementos que coincidan con los [selectores CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS_selectors) en la página y devolverlos en un array.
 
 <html-viewer>
 
@@ -29,7 +29,7 @@
 
 ## Obtener elementos secundarios
 
-实例也拥有 `all` 方法，可以通过实例上的 `all` 方法选择并获取子元素。
+Las instancias también tienen el método `all`, que permite seleccionar y obtener elementos secundarios utilizando el método `all` en la instancia.
 
 <html-viewer>
 

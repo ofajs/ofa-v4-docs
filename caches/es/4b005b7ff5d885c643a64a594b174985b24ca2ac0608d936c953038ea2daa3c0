@@ -31,7 +31,7 @@
 
   <script>
     export default {
-      tag: 'simple-button' // 需要注册的组件名，如果没有定义 tag 属性，注册的组件名与文件名保持一致
+      tag: 'simple-button' // El nombre del componente que se va a registrar. Si no se define el atributo tag, el nombre del componente registrado es el mismo que el nombre del archivo.
     }
   </script>
 </template>

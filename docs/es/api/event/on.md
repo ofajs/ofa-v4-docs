@@ -1,8 +1,8 @@
 # on
 
-使用 `on` 方法，你可以为目标元素注册事件处理程序。这使你能够轻松地捕获和响应用户的交互操作。
+Con el método `on`, puedes registrar controladores de eventos para elementos de destino. Esto te permite capturar e interactuar fácilmente con las operaciones del usuario.
 
-下面是一个示例，演示如何使用 `on` 方法为按钮元素注册点击事件处理程序：
+A continuación se muestra un ejemplo que demuestra cómo usar el método `on` para registrar un controlador de eventos de clic para un elemento de botón:
 
 <html-viewer>
 

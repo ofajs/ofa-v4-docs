@@ -24,7 +24,7 @@ El objetivo de ofa.js es ser una "bala de plata", es decir, poder abordar divers
 
 Los componentes desarrollados con ofa.js tienen prácticamente ningún costo de aprendizaje. ofa.js proporciona una API simple e intuitiva que permite a los desarrolladores crear e integrar componentes rápidamente, al mismo tiempo que mantiene el código limpio y fácil de mantener.
 
-### 内置模块化、状态更新和应用集成方案
+### Modularidad integrada, actualizaciones de estado y soluciones de integración de aplicaciones
 
 La solución interna de ofa.js integra soluciones modulares, actualización de estado e integración de aplicaciones, lo que permite a los desarrolladores completar tareas de desarrollo fronterizo complejas sin necesidad de buscar bibliotecas o herramientas de terceros adicionales.
 

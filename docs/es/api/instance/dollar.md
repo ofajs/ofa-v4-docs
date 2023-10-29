@@ -4,7 +4,7 @@
 
 ## Obtener instancias de elementos
 
-通过 `$` 方法，你可以获取页面上符合[css选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)的第一个元素实例，并对其进行操作。以下是一个示例：
+A través del método `$`, puedes obtener la primera instancia de elemento que cumple con un [selector CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS_selectors) en la página y realizar operaciones en ella. A continuación se muestra un ejemplo:
 
 <html-viewer>
 
@@ -25,11 +25,11 @@
 
 </html-viewer>
 
-在上面的示例中，我们使用 `$` 符号选择了具有 `id` 为 "target1" 的元素实例，并通过设置 `text` 属性来修改其文本内容。
+En el ejemplo anterior, usamos el símbolo `$` para seleccionar una instancia de elemento con `id` "target1" y modificamos su contenido de texto estableciendo el atributo `text`.
 
 ## Ejemplo de búsqueda de elementos secundarios
 
-实例也拥有 `$` 方法，可以通过实例上的 `$` 方法获取元素实例的第一个符合条件的子元素实例。
+Las instancias también tienen un método `$` que te permite obtener la primera instancia de elemento que cumple con una condición de selección en la instancia.
 
 <html-viewer>
 

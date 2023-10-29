@@ -32,7 +32,7 @@ El gancho de vida `detached` se activa cuando el componente es removido del docu
 
 ## Demostración de ejemplo
 
-以下是一个示例，展示了如何使用这些生命周期钩子：
+A continuación se muestra un ejemplo que muestra cómo utilizar estos ganchos de ciclo de vida:
 
 ```javascript
 export default {

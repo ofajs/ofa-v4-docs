@@ -2,7 +2,7 @@
 
 Utiliza la propiedad [`style`](https://developer.mozilla.org/es/docs/Web/API/HTMLElement/style) para mantener la coherencia con el nativo;
 
-请注意，`style` 属性无法获取样式的实际值，而只能获取在 `style` 属性上设置的值。尽管 `style` 方法与 [css 方法](./css.md) 类似，但它无法进行全量样式覆盖。相较于 [css](./css.md)，`style` 方法的内部执行效率更高。
+Ten en cuenta que el atributo `style` no puede obtener el valor real de los estilos, solo puede obtener el valor establecido en el atributo `style`. Aunque el método `style` es similar al método [css](./css.md), no puede realizar una anulación completa de los estilos. En comparación con [css](./css.md), el método `style` es más eficiente en cuanto a ejecución interna.
 
 A continuación se muestra un ejemplo que demuestra cómo usar `style`:
 

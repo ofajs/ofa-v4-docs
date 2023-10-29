@@ -37,12 +37,12 @@ Cree un archivo HTML y configure la etiqueta `o-app` como la ventana de visualiz
 </html>
 ```
 
-2. 创建一个 es 模块，用于设置应用的配置数据。配置数据包括以下选项：
+2. Crea un módulo "es" para configurar los datos de la aplicación. Los datos de configuración incluyen las siguientes opciones:
 
-   - `home`：字符串类型，应用的首页的页面模块地址。
-   - `loading`：函数类型，应用在加载新页面时，会运行这个函数，得到的内容会插入到应用中，作为加载时的提示，等到页面加载完成后，会自动去除这个 loading 元素。
-   - `fail`：函数类型，应用加载页面失败时，会运行这个函数，返回得到的值会显示在应用中作为加载失败的提示。函数会带有加载失败页面的 `src` 地址和错误报错对象。
-   - `pageAnime`：页面之间切换时的动画配置。
+   - `home`: Tipo de cadena, la dirección del módulo de la página de inicio de la aplicación.
+   - `loading`: Tipo de función, esta función se ejecutará cuando la aplicación cargue una nueva página, y el contenido resultante se insertará en la aplicación como una indicación de carga. Se eliminará automáticamente una vez que la página se haya cargado por completo.
+   - `fail`: Tipo de función, esta función se ejecutará cuando la aplicación falle al cargar una página, y el valor resultante se mostrará en la aplicación como un mensaje de carga fallida. La función contendrá la dirección "src" de la página de carga fallida y el objeto de error.
+   - `pageAnime`: Configuración de animación al cambiar entre páginas.
 
 A continuación se muestra un ejemplo de datos de configuración de la aplicación:
 
@@ -204,7 +204,7 @@ export default () => {
 
 En el ejemplo anterior, se obtuvo la etiqueta de la aplicación mediante el selector `.app`, y luego se obtuvo la dirección de la página actualmente activa accediendo a la propiedad `app.current`.
 
-## 使用技巧：提前缓存下一页
+## Trucos y consejos: almacenar en caché la página siguiente por adelantado
 
 En algunos escenarios, es posible que ya sepas que el usuario va a pasar a la siguiente página. Para mejorar la experiencia del usuario, puedes precargar el módulo de la página siguiente de antemano, de modo que se pueda cargar de inmediato al realizar la navegación real, reduciendo así el tiempo de espera del usuario y brindando una experiencia más fluida.
 

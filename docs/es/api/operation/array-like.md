@@ -35,7 +35,7 @@ Agregar un elemento secundario al final.
 
 ## unshift
 
-在数组的开头添加子元素。下面是一个示例：
+Añadir elementos secundarios al principio del array. A continuación se muestra un ejemplo:
 
 <html-viewer>
 

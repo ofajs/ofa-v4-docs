@@ -31,7 +31,7 @@ page.goto("./page2.html");
 El método `replace` se utiliza para reemplazar la página actual por otra página. Esto es similar al método `replace` de `app`, pero se realiza dentro de la página.
 
 ```javascript
-// 示例代码：在当前页面模块内将当前页面替换为另一个页面
+// Código de ejemplo: en el módulo de la página actual sustituirá la página actual por otra página
 page.replace("./new-page.html");
 ```
 
@@ -40,6 +40,6 @@ page.replace("./new-page.html");
 El método `back` se utiliza para volver a la página anterior. Esto llevará al usuario a la página anterior, similar a la función de retroceso de un navegador.
 
 ```javascript
-// 示例代码：返回到前一个页面
+// Ejemplo de código: volver a la página anterior
 page.back();
 ```

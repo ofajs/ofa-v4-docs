@@ -1,4 +1,4 @@
 ```javascript
-// 示例代码：返回到前一个页面
+// Ejemplo de código: volver a la página anterior
 page.back();
 ```

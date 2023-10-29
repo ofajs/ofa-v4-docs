@@ -53,7 +53,7 @@ Luego, escriba el código de la plantilla del componente dentro de 'template'. L
 
   <script>
     export default {
-      tag: 'simple-button' // 需要注册的组件名，如果没有定义 tag 属性，注册的组件名与文件名保持一致
+      tag: 'simple-button' // El nombre del componente que se va a registrar. Si no se define el atributo tag, el nombre del componente registrado es el mismo que el nombre del archivo.
     }
   </script>
 </template>
@@ -88,7 +88,7 @@ El componente `load-module` es una biblioteca de **cargador declarativo** person
 
 El modo de archivos dobles separa la "plantilla estática" y el "código lógico", lo que hace que los componentes sean más claros.
 
-逻辑代码放在 js 文件内，这个 js 需要标识 `export const type = $.COMP;`，以通知页面这是一个组件模块。在这种拆分模式下，模块代码可以使用 `import` 等 ES Module 的标准语法。
+El código lógico se coloca en un archivo js, y este archivo js debe tener la declaración `export const type = $.COMP;` para notificar a la página que se trata de un módulo de componente. En este modo dividido, el código del módulo puede utilizar la sintaxis estándar de los Módulos ES, como `import`.
 
 El componente de botón consta de dos archivos:
 
@@ -129,12 +129,12 @@ El componente de botón consta de dos archivos:
 
 ```javascript
 // simple-button.mjs
-export const type = $.COMP; // 双文件模块必须带有 `export const type = $.COMP`
+export const type = $.COMP; // Los módulos de doble archivo deben llevar `export const type = $.COMP`
 
-// 需要注册的组件名，当没有定义 tag 属性时，注册的组件名与文件名保持一致
+// El nombre del componente a registrar, cuando el atributo tag no está definido, el nombre del componente registrado es el mismo que el nombre del archivo.
 // export const tag = 'simple-button';
 
-// 组件模板的地址，当没有定义时，默认载入和当前模块同目录下的和组件同名的 html 文件
+// La dirección de la plantilla del componente, cuando no está definida, por defecto es el archivo html con el mismo nombre del componente en el mismo directorio que el módulo actual.
 // export const temp = './simple-button.html';
 ```
 

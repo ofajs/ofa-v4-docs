@@ -1,6 +1,6 @@
 # Compartir datos
 
-ofa.js与其他第三方框架不同，不采用传统的状态管理模式。作者认为状态更新应该是无感知的，即改变数据后应自动触发数据更新。
+ofa.js difiere de otros marcos de terceros al no utilizar un modelo de gestión de estado tradicional. El autor considera que las actualizaciones de estado deben ser imperceptibles, es decir, que los cambios en los datos deben desencadenar automáticamente actualizaciones de datos.
 
 La librería ofa.js tiene una excelente capacidad para compartir datos. Sus instancias se desarrollan utilizando la biblioteca de intercambio de datos [Stanz](https://github.com/kirakiray/stanz). Los objetos en las instancias son sincronizables. Para lograr el intercambio de datos, simplemente crea un objeto Stanz independiente y haz que todos los componentes lo referencien directamente.
 
@@ -112,7 +112,7 @@ En el ejemplo anterior, los dos componentes escriben datos en sí mismos durante
 
 ## Nota:
 
-由于数据是共享的，务必要确保在适当的时候回收数据，以避免内存泄漏。
+Dado que los datos se comparten, asegúrate de liberar los datos en el momento adecuado para evitar pérdidas de memoria.
 
 ```html
 <template component>
@@ -126,11 +126,11 @@ En el ejemplo anterior, los dos componentes escriben datos en sí mismos durante
 
       return {
         data: {
-        //   obj: data // ❌ 这种操作是错误的，直接设置数据，无法回收
+        //   obj: data // ❌ Esta operación es incorrecta, ajuste de datos directamente, fuga de memoria
           obj: {},
         },
         ready() {
-          this.obj = data; // ❌ 在 ready 生命周期中设置，无法确定何时清空，可能会导致内存泄漏。最安全的方法是在 attached 生命周期内设置，在 detached 后删除
+          this.obj = data; // ❌ Establecerlo durante el ciclo de vida listo hace que sea imposible determinar cuándo se borrará, y puede dar lugar a fugas de memoria. La forma más segura de hacer esto es establecerlo durante el ciclo de vida adjunto y eliminarlo después de desacoplado.
         },
       };
     }

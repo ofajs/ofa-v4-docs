@@ -8,6 +8,6 @@
 
 Además de escuchar eventos nativos, `on` también se puede utilizar para escuchar eventos personalizados, lo cual es muy importante para la comunicación de eventos entre componentes. Los eventos personalizados se activan mediante el método `emit`. Al activar un evento personalizado, se puede pasar datos personalizados al receptor.
 
-如果需要跨越组件的 Shadow DOM 边界，以触发事件，可以添加 `composed` 属性。
+Si necesitas cruzar los límites del Shadow DOM del componente para activar eventos, puedes agregar el atributo `composed`.
 
 En el siguiente ejemplo, aprenderemos cómo utilizar el método `emit` para la transferencia de eventos entre componentes anidados.

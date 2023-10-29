@@ -1,6 +1,6 @@
 # shadow
 
-使用 `shadow` 属性，你可以获取元素的影子根节点实例。
+Usando el atributo `shadow`, puedes obtener la instancia del nodo raíz en sombra del elemento.
 
 <comp-viewer comp-name="test-shadow">
 

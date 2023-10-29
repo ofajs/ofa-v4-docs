@@ -43,7 +43,7 @@ app.replace("/new-page.html");
 El método `back` se utiliza para regresar a la página anterior y realizar la operación de navegación. Esto llevará al usuario de vuelta a la página anterior.
 
 ```javascript
-// 返回上一页
+// Volver a la página anterior
 app.back();
 ```
 

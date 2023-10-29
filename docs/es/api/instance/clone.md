@@ -1,6 +1,6 @@
 # clone
 
-使用 `clone` 方法可以克隆并生成一份元素实例；
+El método `clone` te permite clonar y generar una instancia de elemento.
 
 <html-viewer>
 

@@ -1,6 +1,6 @@
 # parents
 
-使用 `parents` 属性，您能够轻松获取当前元素的所有父元素实例，这些元素将以数组的形式返回。
+Usando el atributo `parents`, puedes obtener fácilmente todas las instancias de elementos padres del elemento actual, y se devolverán como un array.
 
 <html-viewer>
 

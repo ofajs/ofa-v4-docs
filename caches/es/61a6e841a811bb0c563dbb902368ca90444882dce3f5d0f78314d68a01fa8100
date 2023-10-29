@@ -1,4 +1,4 @@
 ```javascript
-// 示例代码：在当前页面模块内将当前页面替换为另一个页面
+// Código de ejemplo: en el módulo de la página actual sustituirá la página actual por otra página
 page.replace("./new-page.html");
 ```

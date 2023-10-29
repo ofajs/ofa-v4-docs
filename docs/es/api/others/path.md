@@ -2,7 +2,7 @@
 
 La propiedad `PATH` se utiliza comúnmente en componentes personalizados o en componentes de página para obtener la ubicación del archivo de registro de ese componente. Esto puede ayudarte a conocer la procedencia del componente durante el proceso de desarrollo, especialmente cuando necesitas referenciar o cargar otros archivos de recursos. Puedes utilizar la propiedad `PATH` para construir la ruta del archivo.
 
-下面是一个简单示例，演示如何在自定义组件中使用 `PATH` 属性：
+A continuación se muestra un ejemplo sencillo que muestra cómo usar el atributo `PATH` en un componente personalizado:
 
 ```html
 <my-comp id="myCustomComponent">

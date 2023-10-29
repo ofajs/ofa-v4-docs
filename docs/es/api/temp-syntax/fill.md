@@ -34,7 +34,7 @@ En este ejemplo, usamos el componente `x-fill` para representar el arreglo `arr`
 
 Puedes usar el elemento de plantilla `template` y agregar el atributo `name` para personalizar las plantillas temporales dentro del componente. Al utilizar `x-fill`, usa el atributo `name` para especificar el nombre de la plantilla que se debe llenar.
 
-下面是一个示例，演示了如何使用模板列表渲染：
+A continuación se muestra un ejemplo que demuestra cómo usar la representación de listas de plantillas:
 
 <comp-viewer comp-name="text-render">
 
@@ -65,7 +65,7 @@ En este ejemplo, creamos una plantilla llamada "easyLi" y luego llenamos los dat
 
 Cuando se realiza una representación de listas anidadas, a partir del segundo nivel, se debe usar una plantilla para llenarla. Este diseño se realiza con el fin de evitar que el código de representación de listas anidadas de múltiples niveles se vuelva complejo.
 
-下面是一个示例，演示了如何进行嵌套列表渲染：
+A continuación se muestra un ejemplo que demuestra cómo realizar una representación de listas anidadas:
 
 <comp-viewer comp-name="fill-three">
 
