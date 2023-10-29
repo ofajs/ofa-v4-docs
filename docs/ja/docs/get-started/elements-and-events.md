@@ -63,10 +63,10 @@
   </div>
 </div>
 <script>
-  // 直接查找符合条件的子元素
+  // 条件にマッチする子要素を直接見つける
   const childElement = $('div .child');
 
-  // 修改子元素的文本内容
+  // 子要素のテキストを修正する
   childElement.text = "Modified child element";
 </script>
 ```
@@ -95,10 +95,10 @@
 <p>Paragraph 2</p>
 <p>Paragraph 3</p>
 <script>
-  // 查找所有 p 标签元素
+  // すべてのpタグ要素を見つける
   const allParagraphs = $.all("p");
 
-  // 修改所有 p 标签元素的文本内容
+ // すべてのpタグ要素のテキストを修正する标签元素的文本内容
   allParagraphs.forEach((paragraph, index) => {
     paragraph.text = `Modified Paragraph ${index + 1}`;
   });
@@ -147,7 +147,7 @@
 
 ## 事件
 
-前面已经讲过 `on` メソッドのイベントバインディングの使用方法については既に説明しましたが、ここではイベントに関連するいくつかのメソッドを紹介します。
+以前、`on`を使用してイベントをバインドする方法について説明しました。これから、イベントに関連するいくつかの方法を紹介します。
 
 ### オフメソッドの使用ドキュメント
 

@@ -5,7 +5,7 @@
     export default {
       tag: "text-demo",
       data: {
-        txt:"我是txt"
+        txt:"I am txt"
       },
     };
   </script>

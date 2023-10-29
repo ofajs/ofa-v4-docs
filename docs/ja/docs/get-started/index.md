@@ -1,6 +1,6 @@
 # 初めての使い方
 ## 使い方
-### 直接引用
+### 直接見積もり
 
 CDNのアドレスを使用して直接ofa.jsをページにインポートすることができます。
 
@@ -8,7 +8,7 @@ CDNのアドレスを使用して直接ofa.jsをページにインポートす�
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
 ```
 
-### 通过 npm 安装
+### npm経由でインストールする
 
 まず、プロジェクトに ofa.js をインストールします。
 
