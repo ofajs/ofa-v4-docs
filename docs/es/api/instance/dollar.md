@@ -110,7 +110,7 @@ De esta manera, puedes convertir fácilmente los elementos HTML existentes en in
 
 Además de obtener instancias de elementos existentes, `$` también se puede utilizar para crear nuevas instancias de elementos y agregarlos a la página.
 
-### 通过字符串生成
+### Generado a partir de cadenas
 
 Puedes usar la función `$` para crear nuevas instancias de elementos a partir de cadenas, como se muestra a continuación:
 

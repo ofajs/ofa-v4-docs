@@ -2,7 +2,7 @@
 <a href="../../publics/examples/set-props.html" preview></a>
 </template>
 
-# 快速开始
+# Inicio rápido
 
 Para comenzar a usar, simplemente integra el proyecto `ofajs` en tu proyecto importando la dirección del CDN:
 
@@ -12,7 +12,7 @@ Para comenzar a usar, simplemente integra el proyecto `ofajs` en tu proyecto imp
 
 Este es un ejemplo simple que muestra cómo usar `ofa.js` para modificar el contenido de elementos DOM.
 
-## 使用方法
+## Uso
 
 Después de importar `ofa.js`, se registrará el símbolo `$` en el ámbito global. Use `$('xxx')` para seleccionar el primer elemento que cumpla con la condición, donde `xxx` es el contenido estándar del [selector CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors).
 

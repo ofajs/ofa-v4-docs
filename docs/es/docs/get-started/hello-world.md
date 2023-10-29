@@ -26,7 +26,7 @@ Cuando se presiona el botón, se mostrará el texto en negrita "Hello World".
 
 Ahora, expliquemos en detalle los conceptos básicos.
 
-## 选择器
+## Selector
 
 Después de importar `ofa.js`, el símbolo `$` se registrará en el ámbito global. Puedes seleccionar el **primer** elemento que cumpla con la condición utilizando `$('xxx')`, donde `xxx` es el contenido estándar del [selector CSS](https://developer.mozilla.org/es/docs/Web/CSS/Selectores_CSS). Puedes hacer clic en el enlace para ver el contenido específico del selector.
 

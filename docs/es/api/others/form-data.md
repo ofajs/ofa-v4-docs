@@ -89,7 +89,7 @@ En el siguiente ejemplo, demostramos cómo utilizar los datos de objetos generad
 
 En este ejemplo, primero creamos un formulario que contiene un cuadro de texto, botones de opción y un área de texto. Luego, utilizamos el método `formData` para generar un objeto de datos llamado `data`. A continuación, modificamos las propiedades del objeto `data` para lograr una vinculación de datos bidireccional, lo que significa que el valor de los elementos del formulario se actualizará automáticamente cuando cambien las propiedades del objeto. Esta funcionalidad de vinculación de datos bidireccional hace que la interacción con los datos del formulario sea más fácil y conveniente.
 
-## 监听特定的表单
+## Escucha de formularios específicos
 
 Por defecto, el método `formData()` escucha todos los elementos `input`, `select` y `textarea` dentro del elemento objetivo. Pero si solo deseas escuchar elementos específicos del formulario, puedes lograrlo pasando un [selector CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors).
 
@@ -220,7 +220,7 @@ Al utilizar un componente de formulario personalizado, simplemente tienes que ag
 
 En el ejemplo anterior, utilizamos el elemento `<custom-input>` y establecemos el atributo `name` para utilizar componentes de formulario personalizados. Luego, utilizamos el método `formData()` para escuchar los valores de los elementos de entrada y los componentes personalizados, de modo de obtener y procesar los datos del formulario en tiempo real. Este método te permite ampliar fácilmente tu formulario para incluir componentes personalizados y así satisfacer tus necesidades específicas.
 
-## 在组件或页面内使用表单数据
+## Uso de datos de formulario dentro de un ensamblado o página
 
 A veces, es posible que debas usar datos de formularios dentro de un componente o página, y necesites generar esos datos durante el ciclo de vida `ready` y luego vincularlos al componente.
 

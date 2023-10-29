@@ -1,5 +1,5 @@
 # Comenzando a usar
-## 如何使用
+## Cómo usar los
 ### Cita directa
 
 Puedes utilizar la dirección CDN para referenciar directamente ofa.js en tu página:
@@ -8,7 +8,7 @@ Puedes utilizar la dirección CDN para referenciar directamente ofa.js en tu pá
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
 ```
 
-### 通过 npm 安装
+### Instalación vía npm
 
 Primero, instala ofa.js en tu proyecto.
 
@@ -24,7 +24,7 @@ import "ofa.js"; // esm
 require("ofa.js"); // cmd
 ```
 
-### 使用
+### Use
 
 Después de importar el recurso, ofa.js establecerá una propiedad `$` en el ámbito global, todas las funciones estarán disponibles en `$`, su uso se explicará detalladamente en el tutorial posteriormente.
 

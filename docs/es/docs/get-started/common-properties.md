@@ -1,10 +1,10 @@
-# 常用属性或方法
+# Atributos o métodos comunes
 
 En la instancia `$`, además de seleccionar elementos mediante selectores, también se proporcionan algunas funciones comunes para facilitar la operación y búsqueda de elementos.
 
 Puede echar un vistazo rápido y, en el futuro, consultar la documentación de la API cuando sea necesario.
 
-## 常用的属性
+## Atributos comunes
 
 - [tag](./others/tag.md): obtener el nombre de la etiqueta del objetivo
 - [ele](./instance/ele.md): obtener el elemento nativo real de la instancia
@@ -23,7 +23,7 @@ Puede echar un vistazo rápido y, en el futuro, consultar la documentación de l
 - [remove](./operation/remove.md): Eliminar el elemento objetivo
 - [attr](../../api/props/attr.md): Obtener o establecer los atributos del elemento objetivo [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
 
-## 重要特性
+## Características importantes
 
 - [Datos del formulario](../../api/others/form-data.md): Facilita la vinculación y la obtención de datos del formulario.
 

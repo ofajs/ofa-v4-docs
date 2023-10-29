@@ -3,7 +3,7 @@
 <a href="../../publics/examples/render-text/text-demo.html" main></a>
 </template>
 
-# 文本渲染
+# Renderizado de texto
 
 En el archivo del componente, puedes agregar una etiqueta `script` para escribir el código lógico del componente. Puedes configurar los parámetros del componente a través del objeto `default` expuesto.
 

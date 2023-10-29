@@ -4,7 +4,7 @@ Para crear una ventana de aplicación completa fácilmente, puedes usar la etiqu
 
 El texto parece un poco aburrido, le recomendamos que vaya a [Demostración de casos de uso de aplicaciones](../../cases/use-app.md) para probarlo en la práctica;
 
-## 基础代码
+## Código base
 
 Cree un archivo HTML y configure la etiqueta `o-app` como la ventana de visualización de la aplicación. Asegúrese de establecer el estilo de pantalla completa para `o-app` para que la aplicación ocupe toda la ventana de visualización.
 
@@ -116,7 +116,7 @@ export const pageAnime = {
 
 A través de los pasos anteriores, has creado exitosamente una ventana de aplicación que utiliza el componente "o-app". El componente "o-app" cargará la página según la configuración de los datos, mostrando un mensaje de carga o un mensaje de error en caso de fallo, y también admite animaciones de cambio de página. De esta manera, puedes construir rápidamente una aplicación completamente funcional e interactiva.
 
-## 路由跳转
+## Saltos de ruta
 
 En la aplicación `o-app`, puedes realizar fácilmente la navegación de rutas, saltando de un módulo de página a otro. A continuación se presentan algunas formas diferentes de realizar la navegación de rutas.
 
@@ -158,7 +158,7 @@ Puedes usar el atributo `on:click` en la plantilla de la página para vincular e
 <button on:click="goto('./pages/about.mjs')">Ir a la página de acerca de</button>
 ```
 
-### 替换跳转和返回页面
+### Sustitución de páginas de salto y retorno
 
 Además del método `goto`, `o-app` también admite los métodos `replace` y `back`.
 
@@ -180,7 +180,7 @@ Si desea vincular rutas y páginas, puede utilizar el componente o-router, que s
 
 Por medio de los métodos anteriores, puedes implementar una navegación flexible en la aplicación `o-app`, permitiendo a los usuarios explorar fácilmente diferentes contenidos de las páginas.
 
-## 访问应用和当前页面
+## Acceso a la aplicación y a la página actual
 
 En cada elemento dentro de la aplicación (incluyendo componentes), puedes obtener la instancia de `o-app` a través del atributo **app**. Esto es muy útil para realizar operaciones que interactúen con toda la aplicación.
 

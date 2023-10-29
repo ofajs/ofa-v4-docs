@@ -139,7 +139,7 @@ A continuación se muestra un ejemplo que muestra cómo utilizar el método `unw
 
 En este ejemplo, primero creamos una instancia del objeto `$` llamada `target`. Luego registramos dos escuchas usando los métodos `watch` y `watchTick`. Después, usamos el método `unwatch` para cancelar las dos escuchas previamente guardadas `tid1` y `tid2`. Esto significa que los cambios en la propiedad dentro del primer `setTimeout` no activarán ninguna escucha porque estas han sido canceladas.
 
-## 不被监听的值
+## Valores que no se escuchan
 
 En la aplicación `$`, el nombre de las propiedades que comienzan con guión bajo `_` indica que estos valores no serán monitoreados por los métodos `watch` o `watchTick`. Esto es útil para algunas propiedades temporales o privadas, ya que puedes cambiarlos libremente sin activar el monitoreo.
 
@@ -182,7 +182,7 @@ A continuación se muestra un ejemplo que demuestra cómo usar valores de atribu
 
 En este ejemplo, creamos una instancia de objeto `$` llamada `target` y luego usamos el método `watch` para monitorear cambios en los valores de las propiedades. En `setTimeout`, intentamos cambiar el valor de la propiedad `_aaa`, pero este cambio no activará la escucha. Esto es muy útil cuando se necesita actualizar el valor de una propiedad sin activar la escucha.
 
-## 基本特征
+## Características básicas
 
 El objeto de datos en la instancia se convertirá en una instancia de Stanz, lo que permitirá la escucha.
 

@@ -20,7 +20,7 @@ Durante el proceso de expansión de las aplicaciones front-end monolíticas trad
 
 Aunque **ofa.js** no puede utilizar directamente componentes desarrollados con frameworks como Vue y React, los componentes desarrollados con **ofa.js** pueden ser utilizados por Vue y React, lo que brinda una mayor flexibilidad y escalabilidad para desarrolladores de diferentes tecnologías.
 
-**在 Vue 中使用 Web Components：**
+**Usando Componentes Web en Vue:**
 - [Wrapper de Componentes Web para Vue](https://github.com/vuejs/vue-web-component-wrapper)
 - [Integración de Vue con Componentes Web](https://vuejs.org/v2/cookbook/packaging-sfc-for-npm.html#Using-with-vue-custom-element)
 - [Cómo usar Componentes Web en Vue](https://www.robinwieruch.de/vue-web-components)

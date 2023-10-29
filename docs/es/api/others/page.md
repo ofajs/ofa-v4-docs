@@ -2,7 +2,7 @@
 
 `o-page` es uno de los componentes principales de `ofa.js`, que representa una página o módulo de página independiente. A continuación se muestran algunas propiedades y métodos clave de `o-page`:
 
-## `src` 属性
+## Atributos `src
 
 El atributo `src` se utiliza para especificar la dirección específica de un módulo de página. Este es un atributo clave que especifica el contenido y el comportamiento de una página, y le indica a la aplicación de dónde cargar el contenido específico de la página.
 
@@ -35,7 +35,7 @@ El método `replace` se utiliza para reemplazar la página actual por otra pági
 page.replace("./new-page.html");
 ```
 
-## `back` 方法
+## Método `back
 
 El método `back` se utiliza para volver a la página anterior. Esto llevará al usuario a la página anterior, similar a la función de retroceso de un navegador.
 

@@ -6,13 +6,13 @@ Este capítulo tiene como objetivo reforzar la comprensión del contenido del ca
 
 En los capítulos anteriores, hemos aprendido cómo obtener un elemento global utilizando el símbolo $. A continuación, describiremos otros métodos para obtener elementos.
 
-### 从元素内查找某个元素
+### Encontrar un elemento desde dentro de un elemento
 
-#### 使用 `$("xxx").$('xxxx')` 的方式
+#### Utilice `$("xxx"). $('xxxx')` de la siguiente manera
 
 `$("xxx").$('xxxx')` es una forma de seleccionar un elemento padre y luego buscar elementos hijos que cumplan con ciertas condiciones. En este caso, `$("xxx")` selecciona un elemento padre y luego utiliza `$('xxxx')` para buscar elementos hijos que cumplan con ciertas condiciones.
 
-#### 示例
+#### Ejemplo
 
 <html-viewer>
 
@@ -42,11 +42,11 @@ En los capítulos anteriores, hemos aprendido cómo obtener un elemento global u
 
 En el ejemplo anterior, primero selecciona el elemento padre con la clase "parent" utilizando `$(".parent")`. Luego, busca dentro de ese elemento padre los elementos hijos con la clase "child" utilizando `$(".child")`. Luego modifica el contenido de texto de esos elementos hijos a "Elemento hijo modificado".
 
-### 使用 `$('xxx xxxx')` 的方式
+### Utilizar el enfoque `$('xxx xxxx')`.
 
 `$('xxx xxxx')` es buscar los elementos que cumplan con la segunda condición del selector en el ámbito global, y luego buscar los elementos que cumplan con la primera condición del selector dentro de estos elementos. Esta forma permite encontrar directamente los subelementos que cumplan con la condición de manera más eficiente.
 
-#### 示例
+#### Ejemplo
 
 <html-viewer>
 
@@ -81,7 +81,7 @@ En el ejemplo anterior, se utiliza directamente `$('div .child')` para buscar lo
 
 `$.all('xxx')` método se utiliza para buscar todos los elementos en la página que cumplan con la condición del selector, y los devuelve como una colección de elementos. Esto permite seleccionar varios elementos en la página para realizar operaciones en lote.
 
-#### 示例
+#### Ejemplo
 
 <html-viewer>
 
@@ -113,7 +113,7 @@ En el ejemplo anterior, se utiliza `$.all("p")` para encontrar todos los element
 
 Además de poder buscar elementos a nivel global, también puedes buscar todos los elementos hijos que cumplan con una determinada condición dentro de un elemento específico, utilizando el siguiente formato: `$('xxx').all('xxxx')`.
 
-#### 示例
+#### Ejemplo
 
 <html-viewer>
 
@@ -145,7 +145,7 @@ Además de poder buscar elementos a nivel global, también puedes buscar todos l
 
 En el ejemplo anterior, primero se utiliza `$(".container")` para encontrar los elementos con la clase `container`, luego se utiliza `.all(".item")` para encontrar todos los elementos secundarios con la clase `item` dentro de ese contenedor y se realiza una operación en lote en ellos, modificando su contenido de texto a "Modified Item 1", "Modified Item 2" y "Modified Item 3".
 
-## 事件
+## Eventos
 
 Ya hemos hablado sobre cómo usar `on` para enlazar eventos. A continuación, se presentarán algunos métodos relacionados con eventos.
 
@@ -153,7 +153,7 @@ Ya hemos hablado sobre cómo usar `on` para enlazar eventos. A continuación, se
 
 El método `off` se utiliza para eliminar las funciones de manejo de eventos vinculadas mediante el método `on`. Cuando ya no se necesita una función de manejo de eventos para un determinado evento, se puede utilizar el método `off` para eliminarla del elemento, evitando así ejecuciones duplicadas o pérdidas de memoria.
 
-#### 语法
+#### sintaxis
 
 ```javascript
 $(selector).off(eventName, eventHandler);
@@ -163,7 +163,7 @@ $(selector).off(eventName, eventHandler);
 - `eventName`: Nombre del evento que se desea remover.
 - `eventHandler`: Función de manejo de eventos que se desea remover.
 
-#### 示例
+#### Ejemplo
 
 <html-viewer>
 
@@ -196,7 +196,7 @@ En el ejemplo anterior, cuando se hace clic en el botón, aparecerá un cuadro d
 
 El método `one` se utiliza para vincular una función de manejo de eventos, pero esta función solo se ejecutará una vez cuando se desencadene el evento por primera vez. Después de ejecutarse una vez, la función de manejo de eventos se eliminará automáticamente para evitar desencadenamientos repetidos.
 
-#### 语法
+#### sintaxis
 
 ```javascript
 $(selector).one(eventName, eventHandler);
@@ -207,7 +207,7 @@ $(selector).one(eventName, eventHandler);
 - `eventHandler`: Función de manejo de eventos que se va a ejecutar.
 
 
-#### 示例
+#### Ejemplo
 
 <html-viewer>
 
@@ -229,11 +229,11 @@ $(selector).one(eventName, eventHandler);
 
 En el ejemplo anterior, cuando se hace clic en el botón, se mostrará un cuadro de diálogo que dice "¡Botón clicado una vez!". Pero después del primer clic, se eliminará la función de manejo de eventos, por lo que los clics posteriores en el botón no volverán a mostrar el cuadro de diálogo.
 
-### emit 方法的使用文档
+### Documentación del uso del método emit
 
 El método `emit` se utiliza para activar manualmente eventos específicos vinculados a un elemento. Mediante el método `emit`, se puede activar la ejecución de las funciones de manejo de eventos sin realizar ninguna operación actualmente.
 
-#### 语法
+#### sintaxis
 
 ```javascript
 $(selector).emit(eventName);
@@ -242,7 +242,7 @@ $(selector).emit(eventName);
 - `selector`: Elige el elemento que quieres que desencadene el evento.
 - `eventName`: Nombre del evento que quieres desencadenar.
 
-#### 示例
+#### Ejemplo
 
 ```html
 <button id="btn">Click Me</button>
@@ -264,7 +264,7 @@ Ten en cuenta que el uso del método `emit` no simula un clic de ratón u otros 
 
 Cuando has vinculado un evento, a veces es posible que desees detener la propagación del evento (burbujeo) o cancelar la acción predeterminada del evento. A continuación se explicará cómo evitar la propagación y cancelar la acción predeterminada después de que se haya desencadenado el evento.
 
-### 禁止事件冒泡
+### Deshabilita el burbujeo de eventos
 
 La propagación de eventos se refiere a cuando se desencadena un evento en un elemento, se propaga hacia arriba a lo largo del árbol DOM y activa sucesivamente eventos del mismo tipo en los elementos padre. Si deseas detener la propagación después de manipular el evento en un elemento específico, puedes usar el método `event.stopPropagation()`.
 

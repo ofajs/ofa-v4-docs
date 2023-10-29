@@ -1,4 +1,4 @@
-# ofa.js - 不需要打包的 JavaScript 框架
+# ofa.js - Framework JavaScript sin empaquetar
 
 <!-- desc: ofa.js es un nuevo marco para construir interfaces de usuario que se puede usar fácilmente sin un proceso de construcción complicado. Abandona las dependencias de npm, Node.js y webpack, y vuelve a la conveniencia de la era de jQuery. -->
 
@@ -12,7 +12,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## 不需要打包的 JavaScript 框架
+## Framework JavaScript sin empaquetar
 
 ### 无需繁琐学习，无需 npm、nodejs、webpack，即刻上手
 
@@ -26,7 +26,7 @@
 
 <simp-block>
 
-## 基于 Web Components
+## Basado en Web Components
 
 ### ofa.js 基于 Web Components 开发。以下是支持的平台和时间，你可以立即体验
 
@@ -39,7 +39,7 @@
 
 <simp-block>
 
-## 极低使用门槛
+## Muy baja barrera de uso
 
 与其他前端框架不同，使用基于ofa.js开发的组件无需阅读繁杂入门指南。立刻创建一个 HTML 文件，体验一下“一拳撞飞logo”的组件。
 
@@ -129,7 +129,7 @@ Los componentes web antiguos implicaban aprender conocimientos complicados, pero
 
 <simp-block>
 
-## 提供多样便捷的模板语法
+## Proporciona una variedad de convenientes sintaxis de plantillas
 
 <case-switch>
 
@@ -263,7 +263,7 @@ Los componentes web antiguos implicaban aprender conocimientos complicados, pero
 
 <simp-block>
 
-## 可替代 jQuery 的选择
+## Alternativas a jQuery
 
 ### Tener una API similar a jQuery para que sientas la misma conveniencia.
 
@@ -293,7 +293,7 @@ var child = $("#target")[0]; // Get the first child element
 
 <simp-block>
 
-## 使用案例
+## Casos de uso
 
 <a href="https://obook.ofajs.com/">Sistema de creación de documentos en línea más simple, obook.</a>
 

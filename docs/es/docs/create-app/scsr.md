@@ -1,10 +1,10 @@
-# 静态客户端渲染(SCSR)
+# Renderizado estático del cliente (SCSR)
 
-## 什么是 SCSR？
+## ¿Qué es SCSR?
 
 SCSR, cuyo nombre completo es Representación en el Lado del Cliente Estático, se refiere a la representación del lado del cliente en forma estática. La Representación del Lado del Cliente Estático (SCSR) es una variante del CSR (Representación en el Lado del Cliente) que permite que las páginas sean indexadas por los rastreadores web mientras se mantiene la experiencia del usuario del CSR.
 
-## 如何使用 SCSR
+## Cómo utilizar SCSR
 
 Puedes hacer referencia a la biblioteca SCSR de la siguiente manera:
 
@@ -97,7 +97,7 @@ Después de hacer clic en "IR A AYUDA" en la página `home.html`, se realizará 
 
 Todos los recursos referenciados en las páginas que utilizan el esquema SCSR, con excepción del contenido descriptivo de la página (como el título, meta descripción y palabras clave) y del contenido del plantilla de la página, deben mantenerse consistentes para garantizar una experiencia uniforme después de la navegación y actualización de la página.
 
-## 关于 SSR 方案
+## Acerca de los esquemas SSR
 
 El actual esquema de SCSR es en realidad más similar a un esquema de SSG (Generación de Sitio Estático), ya que renderiza las páginas como contenido estático de antemano y luego se interactúa con ellas mediante el cliente. ofa.js ya proporciona un esquema de envoltura de componentes relativamente independiente, lo que permite a los desarrolladores de frontend envolver los componentes y luego combinarlos con esquemas de renderizado de páginas tradicionales en el backend (como Node.js, Go, Java, PHP, etc.), lo que permite a los desarrolladores de backend utilizar rápidamente estos componentes envueltos para construir páginas web de alta calidad.
 

@@ -2,7 +2,7 @@
 
 La función `css` se utiliza para obtener o establecer los estilos de un elemento objetivo.
 
-## 直接使用
+## Uso directo
 
 Puedes usar el método `css` para obtener o establecer el estilo de un elemento directamente. Aquí tienes un ejemplo:
 
@@ -30,7 +30,7 @@ Puedes usar el método `css` para obtener o establecer el estilo de un elemento 
 
 </html-viewer>
 
-## 全量设置
+## Configuración completa
 
 A través del objeto `css` obtenido, puedes obtener los valores de estilo que se han establecido directamente en el elemento. A continuación se muestra un ejemplo:
 

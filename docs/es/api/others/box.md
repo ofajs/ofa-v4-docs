@@ -1,4 +1,4 @@
-# 盒模型
+# Modelos de cajas
 
 En el desarrollo web, el tamaño de los elementos es un concepto importante que incluye el área de contenido, el padding, el borde y el margen. A continuación se presentan algunas propiedades relacionadas con el tamaño de los elementos:
 

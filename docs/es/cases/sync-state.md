@@ -5,7 +5,7 @@
 <a href="../../publics/examples/sync-state/switch-dark.html"></a>
 </template>
 
-# 状态同步
+# Sincronización de estados
 
 A veces es necesario que varias instancias de componentes o páginas compartan los mismos datos, en este caso es necesario contar con la función de sincronización de estado.
 

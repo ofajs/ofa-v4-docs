@@ -2,7 +2,7 @@
 
 El método `text` se utiliza para obtener o establecer el contenido de texto de un elemento.
 
-## 直接使用
+## Uso directo
 
 Puedes acceder o establecer el contenido de texto de un elemento directamente. Aquí hay un ejemplo:
 

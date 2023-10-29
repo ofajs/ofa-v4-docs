@@ -40,7 +40,7 @@ A continuación se muestra un ejemplo que demuestra cómo utilizar la sintaxis `
 
 </comp-viewer>
 
-## 直接使用 class
+## Usar clase directamente
 
 Puedes usar el método `class` para ajustar directamente el nombre de clase de un elemento. En el siguiente ejemplo se muestra cómo usar el método `class` para agregar y eliminar nombres de clase dinámicamente:
 

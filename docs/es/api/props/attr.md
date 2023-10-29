@@ -2,7 +2,7 @@
 
 El método `attr` se utiliza para obtener o establecer los [atributos](https://developer.mozilla.org/es/docs/Web/API/Element/attributes) de un elemento.
 
-## 直接使用
+## Uso directo
 
 Puedes usar el método `attr` para obtener o establecer los atributos de un elemento. A continuación se muestra un ejemplo:
 

@@ -2,7 +2,7 @@
 
 En el interior de ofa.js, construimos un componente personalizado llamado "o-page" que proporciona conveniencia para el desarrollo de páginas. Este componente desempeña un papel clave en el desarrollo de aplicaciones. Cuando quieres utilizar la sintaxis de plantilla del componente pero no quieres crear un componente completamente nuevo, el componente "o-page" será tu mejor opción.
 
-## 页面模块
+## Módulos de página
 
 Crear un módulo de página de archivo único es similar a crear un módulo de componente. Utiliza la etiqueta `template` para envolver el código de plantilla de la página y agrega el atributo `page`. Dentro de esta etiqueta, puedes utilizar libremente la sintaxis de plantilla para interactuar con otros componentes o módulos de página.
 
@@ -39,7 +39,7 @@ En un archivo HTML, usa el atributo `src` de la etiqueta `o-page` para especific
 </html>
 ```
 
-## 双文件模式
+## Modo de archivo dual
 
 El modo de doble archivo separa las 'Plantillas estáticas' y el 'Código lógico' para que el contenido de la página sea más claro.
 

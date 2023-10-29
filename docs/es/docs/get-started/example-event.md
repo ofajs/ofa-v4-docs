@@ -1,6 +1,6 @@
 # Ejemplo de evento
 
-## 点击事件（click）
+## Evento clic
 
 En este caso, cuando se hace clic en el botón, se mostrará un mensaje en la consola.
 
@@ -25,7 +25,7 @@ En este caso, cuando se hace clic en el botón, se mostrará un mensaje en la co
 ```
 
 
-## 鼠标移入事件（mouseenter）
+## Evento Mouseover (mouseenter)
 
 Cuando se mueve el ratón dentro del área de texto en este caso, el color del texto se cambiará a rojo.
 
@@ -60,7 +60,7 @@ Cuando se mueve el ratón dentro del área de texto en este caso, el color del t
 ```
 
 
-## 键盘按键事件（keydown）
+## Eventos de teclado
 
 En este caso, cuando se presiona cualquier tecla en el cuadro de entrada, se imprimirá información sobre la tecla presionada en la consola.
 

@@ -4,7 +4,7 @@
 <a href="../../publics/examples/event-passing/comp-two.html"></a>
 </template>
 
-# 事件传递
+# Paso de eventos
 
 Además de escuchar eventos nativos, `on` también se puede utilizar para escuchar eventos personalizados, lo cual es muy importante para la comunicación de eventos entre componentes. Los eventos personalizados se activan mediante el método `emit`. Al activar un evento personalizado, se puede pasar datos personalizados al receptor.
 

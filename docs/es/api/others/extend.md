@@ -41,7 +41,7 @@ extend es un método de alto nivel que se utiliza para extender las propiedades 
 
 </html-viewer>
 
-## 扩展 $ 底层
+## Ampliación de la subcapa $
 
 Similar a jQuery, también puedes ampliar las propiedades o métodos de la instancia subyacente a través de fn.extend; las propiedades o métodos extendidos desde fn se aplicarán a todas las instancias;
 

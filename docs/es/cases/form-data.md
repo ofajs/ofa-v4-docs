@@ -3,7 +3,7 @@
 <a href="../../publics/examples/form-data/test-demo.html" main></a>
 </template>
 
-# 表单数据
+# Datos del formulario
 
 En muchas aplicaciones, el procesamiento de datos de formulario es una tarea común. Para simplificar este proceso, ofa.js ha abstraído el manejo de datos de formulario y proporciona el método `formData`. Con este método, puede mapear fácilmente los valores de los elementos del formulario a un objeto y actualizar automáticamente los datos de este objeto cuando cambian los valores de los elementos del formulario, y viceversa.
 

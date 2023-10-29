@@ -2,7 +2,7 @@
 
 El ofa.js utiliza archivos básicos de HTML y JavaScript para definir componentes, evitando la introducción de nuevos tipos de archivos para reducir el costo de aprendizaje. Si tienes un conocimiento básico de HTML, podrás desarrollar y usar los componentes de ofa.js de manera rápida.
 
-## 准备创建组件前的步骤
+## Pasos previos a la creación de un componente
 
 Antes de comenzar a crear los componentes, debes tener en cuenta algunos preparativos. Dado que la creación de componentes implica la operación de solicitar recursos del navegador, si solo abres el archivo HTML haciendo doble clic para verlo, se verá bajo el protocolo "file". Bajo el protocolo "file", la carga de módulos de JavaScript puede generar errores. Por lo tanto, debes preparar un servidor estático para ver correctamente el componente.
 
@@ -84,7 +84,7 @@ Después de la exitosa introducción de ofa.js, se registrará automáticamente 
 
 El componente `load-module` es una biblioteca de **cargador declarativo** personalizado que ofrece potentes funcionalidades para ampliar el soporte de varios tipos de archivos o para realizar una gestión intermedia de los módulos de JavaScript. Se ha separado en un proyecto independiente y la documentación detallada de su uso se encuentra en [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js).
 
-### 双文件模式
+### Modo de doble archivo
 
 El modo de archivos dobles separa la "plantilla estática" y el "código lógico", lo que hace que los componentes sean más claros.
 

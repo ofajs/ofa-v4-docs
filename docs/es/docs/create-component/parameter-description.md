@@ -2,7 +2,7 @@
 
 En ofa.js, puedes definir algunos parámetros de registro específicos en los módulos de componentes para configurar los componentes de manera más flexible. A continuación, se detalla cada parámetro de registro con ejemplos correspondientes.
 
-## 基础参数
+## Parámetros base
 
 El parámetro base son las configuraciones básicas para registrar un componente, que incluyen las siguientes propiedades:
 
@@ -86,7 +86,7 @@ export const watch = {
 
 La mayoría de las veces, no necesitas establecer esta variable. Se utiliza principalmente en el modo separado para especificar la dirección de la plantilla de componente. Cuando `temp` no está definido, por defecto se cargará el archivo HTML con el mismo nombre que el módulo actual, que debería estar en el mismo directorio.
 
-## 合并变量到 default
+## Combinar variables por defecto
 
 Puede escribir todas las variables de exportación en "default", esto hace que sea más conveniente escribir;
 

@@ -61,7 +61,7 @@ Puedes usar el elemento de plantilla `template` y agregar el atributo `name` par
 
 En este ejemplo, creamos una plantilla llamada "easyLi" y luego llenamos los datos del arreglo `arr` usando `x-fill`, mostrando el índice y el nombre de los datos en cada elemento de la lista.
 
-## 嵌套列表渲染
+## Representación de listas anidadas
 
 Cuando se realiza una representación de listas anidadas, a partir del segundo nivel, se debe usar una plantilla para llenarla. Este diseño se realiza con el fin de evitar que el código de representación de listas anidadas de múltiples niveles se vuelva complejo.
 
