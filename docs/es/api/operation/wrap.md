@@ -1,6 +1,6 @@
 # wrap
 
-El método `wrap` se utiliza para envolver un elemento objetivo con otro elemento. Antes de realizar la operación `wrap`, se realiza automáticamente la inicialización del método `$`, por lo que se puede ingresar directamente una cadena u objeto específico del elemento.
+El método `wrap` se utiliza para envolver un elemento objetivo con otro elemento. Antes de realizar la operación `wrap`, se realiza automáticamente la inicialización del [método `$`](../instance/dollar.md), por lo que se puede ingresar directamente una cadena u objeto específico del elemento.
 
 A continuación se muestra un ejemplo:
 

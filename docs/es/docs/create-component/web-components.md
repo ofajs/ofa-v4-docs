@@ -92,7 +92,7 @@ Además de la ranura predeterminada, también se pueden definir varias ranuras c
 </my-component>
 ```
 
-El uso del evento slotchange
+## El uso del evento slotchange
 
 El evento `slotchange` se activa cuando cambia el contenido del slot. Puedes utilizar este evento para llevar a cabo algunas operaciones relacionadas con el contenido del slot.
 

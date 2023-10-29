@@ -33,7 +33,7 @@ A continuación se muestra una descripción general de la API de ofa.js. Puede r
 
 - [text](./props/text.md): Obtener o establecer el texto del elemento objetivo
 - [html](./props/html.md): Obtener o establecer el código HTML del elemento objetivo
-- [attr](./props/attr.md): Obtener o establecer los atributos del elemento objetivo
+- [attr](./props/attr.md): Obtener o establecer los [atributos](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) del elemento objetivo
 - [css](./props/css.md): Obtener o establecer los estilos del elemento objetivo
 - [style](./props/style.md): Obtener los estilos nativos del elemento objetivo
 - [classList](./props/class-list.md): Obtener la lista de clases nativas del elemento objetivo

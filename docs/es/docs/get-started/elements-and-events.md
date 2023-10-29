@@ -1,4 +1,4 @@
-Obtener elementos y eventos relacionados
+# Obtener elementos y eventos relacionados
 
 Este capítulo tiene como objetivo reforzar la comprensión del contenido del capítulo anterior, incluyendo la selección de elementos y la vinculación de eventos.
 
@@ -75,7 +75,7 @@ En el ejemplo anterior, primero selecciona el elemento padre con la clase "paren
 
 En el ejemplo anterior, se utiliza directamente `$('div .child')` para buscar los elementos secundarios con la clase `child` y se modifica el contenido de texto de los elementos secundarios a "Elemento hijo modificado".
 
-No es posible traducir el texto.
+### No es posible traducir el texto.
 
 #### Utiliza `$.all('xxx')` para buscar elementos globales.
 

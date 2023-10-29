@@ -1,4 +1,4 @@
-El primer caso.
+# El primer caso.
 
 A continuación se presenta un ejemplo en el que, al hacer clic en el botón, el texto se cambia a "Hola Mundo":
 

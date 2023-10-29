@@ -3,7 +3,7 @@
 <a href="../../publics/examples/condition/test-demo.html" main></a>
 </template>
 
-El rendimiento condicional
+# El rendimiento condicional
 
 模板内除了有模板语法，也有模板组件；
 

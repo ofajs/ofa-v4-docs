@@ -1,1 +1,10 @@
-El código no se puede traducir.
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+    <div>I am siblings</div>
+</div>
+`);
+
+$el.$('#target').unwrap(); // ❌ Error debido a otros nodos vecinos
+```

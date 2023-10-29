@@ -4,7 +4,7 @@
 <a href="../../publics/examples/inject-host/comp-two.html" main></a>
 </template>
 
-Inyectar componente de anfitrión
+# Inyectar componente de anfitrión
 
 Dado el aislamiento de los Web Components, es difícil modificar directamente los estilos de los elementos dentro de las ranuras de los componentes. Para abordar este problema, ofa.js proporciona un componente llamado "inject-host"; el componente "inject-host" inyecta estilos en la capa principal para configurar de manera más flexible la apariencia del componente.
 

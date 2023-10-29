@@ -12,7 +12,7 @@ Después de instalar el complemento, simplemente haga clic derecho en el archivo
 
 Si estás utilizando otro editor, también puedes crear un servidor Nginx o Apache que sea capaz de mostrar HTML estático. De esta manera, podrás visualizar y desarrollar tus componentes de manera adecuada.
 
-Crear un componente de botón
+## Crear un componente de botón
 
 A continuación, vamos a crear un componente de botón simple llamado **simple-button**, que tendrá un estilo más atractivo que los botones nativos.
 

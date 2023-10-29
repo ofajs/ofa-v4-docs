@@ -19,7 +19,8 @@ SCSR es un módulo de página que se ejecuta en modo de archivo único sin la ne
 El siguiente es un ejemplo de SCSR que muestra cómo renderizar contenido de módulos de página directamente en la página:
 
 ```html
-<!-- home.html --><!DOCTYPE html>
+<!-- home.html -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

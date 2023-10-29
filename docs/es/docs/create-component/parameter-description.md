@@ -12,7 +12,9 @@ El parámetro base son las configuraciones básicas para registrar un componente
 
 示例：
 
+```javascript
 export const tag = "mi-boton"; // 将组件名注册为 'mi-boton'
+```
 
 ### data
 

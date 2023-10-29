@@ -26,4 +26,4 @@
 
 </html-viewer>
 
-En el ejemplo anterior, utilizamos la propiedad `ele` para obtener un elemento y modificar su contenido HTML interno, así como el nombre de etiqueta del elemento utilizado para el registro. Esto te permite realizar operaciones más complejas en el elemento utilizando métodos de JavaScript nativo.
+En el ejemplo anterior, utilizamos la propiedad `ele` para obtener un elemento y modificar su contenido HTML interno, así como el nombre de [etiqueta del elemento utilizado](https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName) para el registro. Esto te permite realizar operaciones más complejas en el elemento utilizando métodos de JavaScript nativo.

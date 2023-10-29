@@ -120,7 +120,7 @@ A través de los pasos anteriores, has creado exitosamente una ventana de aplica
 
 En la aplicación `o-app`, puedes realizar fácilmente la navegación de rutas, saltando de un módulo de página a otro. A continuación se presentan algunas formas diferentes de realizar la navegación de rutas.
 
-Utilice la etiqueta `<a>` para la navegación de ruta.
+### Utilice la etiqueta `<a>` para la navegación de ruta.
 
 Puedes utilizar la etiqueta `<a>` en el HTML de la página para realizar redirecciones de enrutamiento. Debes especificar el atributo `href` con la ruta al módulo de la página de destino, y agregar el atributo `olink` para indicar al componente `o-app` que se trata de un enlace de enrutamiento.
 

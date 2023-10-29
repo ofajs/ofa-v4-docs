@@ -43,6 +43,15 @@ $el.$('#target').unwrap(); // ✅ Correct, unwrap the wrapped element
 
 当拥有其他兄弟元素时，也不可以执行 unwrap；
 
-El código no se puede traducir.
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+    <div>I am siblings</div>
+</div>
+`);
+
+$el.$('#target').unwrap(); // ❌ Error debido a otros nodos vecinos
+```
 
 **Por favor, tenga en cuenta de no manipular los elementos con sintaxis de plantilla.**

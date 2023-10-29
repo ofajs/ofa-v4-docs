@@ -3,7 +3,7 @@
 <a href="../../publics/examples/render-text/text-demo.html"></a>
 </template>
 
-Obtener y modificar el valor de la instancia del componente
+# Obtener y modificar el valor de la instancia del componente
 
 Puede obtener o modificar los datos del componente desde el exterior.
 

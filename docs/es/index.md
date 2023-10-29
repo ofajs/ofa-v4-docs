@@ -1,6 +1,6 @@
 # ofa.js - 不需要打包的 JavaScript 框架
 
-ofa.js es un nuevo marco para construir interfaces de usuario que se puede usar fácilmente sin un proceso de construcción complicado. Abandona las dependencias de npm, Node.js y webpack, y vuelve a la conveniencia de la era de jQuery.
+<!-- desc: ofa.js es un nuevo marco para construir interfaces de usuario que se puede usar fácilmente sin un proceso de construcción complicado. Abandona las dependencias de npm, Node.js y webpack, y vuelve a la conveniencia de la era de jQuery. -->
 
 <simp-block>
 
@@ -135,7 +135,7 @@ Los componentes web antiguos implicaban aprender conocimientos complicados, pero
 
 <comp-viewer switch-name="Render Text" comp-name="text-demo" max-height="500" style="width:100%;">
 
-```
+```html
 <template component>
   <div>Renderizando texto: {{txt}}</div>
   <script>
@@ -278,11 +278,14 @@ var parents = $("#target").parents(); // Obtener todos los padres en un arreglo
 var child = $("#target").children()[0]; // Obtener el primer elemento hijo
 ```
 
+```javascript
+// ofa.js Code
 $("#target").html = "some html code";  // Set html
 $("#target").text = "set text"; // Set text
 var ele_text = $("#target").text; // Get text
 var parents = $("#target").parents; // Get array of all parent layers
 var child = $("#target")[0]; // Get the first child element
+```
 
 </split-code>
 
@@ -292,7 +295,7 @@ var child = $("#target")[0]; // Get the first child element
 
 ## 使用案例
 
-"Sistema de creación de documentos en línea más simple, obook."
+<a href="https://obook.ofajs.com/">Sistema de creación de documentos en línea más simple, obook.</a>
 
 </simp-block>
 
