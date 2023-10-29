@@ -1,0 +1,1 @@
+SCSR i.e. State Controlled Stateless Rendering, permite la renderización en la página mediante la ejecución directa de módulos de página en modo de archivo único sin necesidad de usar la etiqueta `o-page`. Específicamente, se trata de anidar el código de plantilla del módulo de página directamente dentro de `o-app`.

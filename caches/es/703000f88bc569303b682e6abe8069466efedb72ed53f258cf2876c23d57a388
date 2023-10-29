@@ -1,0 +1,1 @@
+El método `replace` es similar a `goto`, pero se utiliza para reemplazar la página actual en lugar de agregar una nueva página a la pila. Esto se puede utilizar para implementar la sustitución de página en lugar de la navegación en pila.

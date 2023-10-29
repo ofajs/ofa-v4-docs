@@ -1,0 +1,1 @@
+En el ejemplo anterior, primero selecciona el elemento padre con la clase "parent" utilizando `$(".parent")`. Luego, busca dentro de ese elemento padre los elementos hijos con la clase "child" utilizando `$(".child")`. Luego modifica el contenido de texto de esos elementos hijos a "Elemento hijo modificado".

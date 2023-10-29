@@ -1,0 +1,1 @@
+Por defecto, los eventos no pueden atravesar el shadow DOM de los componentes personalizados. Pero puedes permitir que los eventos personalizados atraviesen el nodo raíz estableciendo `composed: true`, lo que activará elementos fuera del nodo raíz.

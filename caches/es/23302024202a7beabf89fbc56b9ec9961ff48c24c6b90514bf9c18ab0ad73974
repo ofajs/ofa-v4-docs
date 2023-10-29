@@ -1,0 +1,1 @@
+Cuando el componente `o-page` está dentro de `o-app`, puedes usar la etiqueta `<a>` con el atributo `olink` para realizar la navegación entre páginas. Esta navegación no afectará a la página actual, sino que solo ocurrirá dentro de `o-app`, similar a usar `<iframe>`.

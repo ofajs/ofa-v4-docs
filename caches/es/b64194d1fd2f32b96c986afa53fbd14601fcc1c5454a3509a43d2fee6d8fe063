@@ -1,0 +1,1 @@
+Mediante SCSR, el contenido dentro de la etiqueta `template` se renderizará directamente en la página, y esta parte del contenido es en realidad un módulo de página en modo de archivo único.

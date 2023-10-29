@@ -1,0 +1,6 @@
+```javascript
+// El módulo de página de la página padre
+export const routerChange = (current, type) => {
+  console.log(`Cambiar ruta: la página actual es ${current.src}, el tipo de cambio es ${type}`);
+};
+```

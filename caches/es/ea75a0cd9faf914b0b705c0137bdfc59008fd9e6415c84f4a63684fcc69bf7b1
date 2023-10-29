@@ -1,0 +1,21 @@
+```html
+<style>
+    [test-attr="1"] {
+      color: red;
+    }
+    [test-attr="2"]{
+      color: green;
+    }
+</style>
+<div id="target1" test-attr="1">I am target 1</div>
+<div id="target2">I am target 2</div>
+<div id="logger" style="border:blue solid 1px;padding:8px;margin:8px;">logger</div>
+
+<script>
+    $("#logger").text = $("#target1").attr('test-attr');
+    setTimeout(()=> {
+        $("#target1").attr('test-attr', '2')
+        $("#logger").text = $("#target1").attr('test-attr');
+    }, 500);
+</script>
+```

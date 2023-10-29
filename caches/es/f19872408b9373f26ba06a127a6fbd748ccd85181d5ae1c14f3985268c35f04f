@@ -1,0 +1,1 @@
+Puede usar la forma de dos llaves envueltas `{{xxx}}` en la plantilla para renderizar el texto, donde `xxx` es una propiedad del componente o de la página en sí. Esto le permite renderizar directamente el valor de la propiedad en la página.

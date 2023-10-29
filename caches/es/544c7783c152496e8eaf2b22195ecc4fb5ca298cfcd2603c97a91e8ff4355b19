@@ -1,0 +1,13 @@
+```html
+<ul>
+    <li>I am 1</li>
+    <li>I am 2</li>
+    <li>I am 3</li>
+</ul>
+
+<script>
+    setTimeout(()=>{
+$("ul").splice(1, 2, `<li style="color:green;">new li 1</li>`, `<li style="color:green;">new li 2</li>`);
+    }, 500);
+</script>
+```

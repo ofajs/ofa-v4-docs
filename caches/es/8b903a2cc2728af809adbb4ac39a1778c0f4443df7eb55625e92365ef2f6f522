@@ -1,0 +1,9 @@
+```html
+<div id="myElement" style="color: azul; font-size: 18px;">Hola Mundo</div>
+<script>
+  const myElement = $("#myElement");
+
+  // Modificar el estilo de color del elemento, manteniendo los demás atributos de estilo sin cambios
+  myElement.css = { ...myElement.css, color: 'rojo' };
+</script>
+```

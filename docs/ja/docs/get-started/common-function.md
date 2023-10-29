@@ -1,4 +1,4 @@
-# 常用方法
+# 一般的な方法
 
 ## attr
 
@@ -8,7 +8,7 @@
 <div id="example" name="i am hello word">Hello World</div>
 <script>
     const $div = $('#example');
-    console.log($div.attr('name')); // 输出: "i am hello word"
+    console.log($div.attr('name')); // => "i am hello word"
     $div.attr('title', "change title");
 </script>
 ```

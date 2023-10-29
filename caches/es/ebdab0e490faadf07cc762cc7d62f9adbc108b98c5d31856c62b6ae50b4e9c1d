@@ -1,0 +1,1 @@
+En este ejemplo, creamos un componente llamado `test-demo`. El componente contiene un botón que aumenta la propiedad `count`. Usando las etiquetas `x-if`, `x-else-if` y `x-else`, implementamos la lógica de representación condicional.

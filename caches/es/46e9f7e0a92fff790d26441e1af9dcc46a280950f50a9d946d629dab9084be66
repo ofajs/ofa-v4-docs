@@ -1,0 +1,1 @@
+Después del ciclo de vida "ready" en el componente, utilizamos el método `this.shadow.formData()` para generar el objeto de datos del formulario `fdata`. Luego, utilizamos `watch` para detectar cambios en `fdata` y, cuando eso suceda, lo convertimos a una cadena JSON y actualizamos `logtext` para mostrar en tiempo real los datos del formulario.

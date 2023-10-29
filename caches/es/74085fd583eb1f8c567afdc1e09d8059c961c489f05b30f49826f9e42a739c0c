@@ -1,0 +1,1 @@
+La propiedad `routers` contiene la información de configuración de enrutamiento de la aplicación. Esta es una propiedad importante que define las reglas de enrutamiento y mapeo de las páginas en la aplicación. La configuración de enrutamiento determina la navegación entre las páginas y cómo se manejan las URL.

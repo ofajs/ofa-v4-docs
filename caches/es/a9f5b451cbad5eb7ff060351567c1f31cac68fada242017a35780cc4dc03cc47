@@ -1,0 +1,1 @@
+Cuando se realiza una representación de listas anidadas, a partir del segundo nivel, se debe usar una plantilla para llenarla. Este diseño se realiza con el fin de evitar que el código de representación de listas anidadas de múltiples niveles se vuelva complejo.

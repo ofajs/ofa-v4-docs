@@ -1,0 +1,1 @@
+Solo necesitas usar el componente o-router para vincular las rutas del componente de la aplicación con la página web actual. Una vez que la página y la ruta están vinculadas, incluso si se actualiza la página, se mantendrá el estado de la ruta de la página.

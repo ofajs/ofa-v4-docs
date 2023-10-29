@@ -1,0 +1,1 @@
+En cada elemento dentro de la aplicación (incluyendo componentes), puedes obtener la instancia de `o-app` a través del atributo **app**. Esto es muy útil para realizar operaciones que interactúen con toda la aplicación.

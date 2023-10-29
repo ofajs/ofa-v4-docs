@@ -1,0 +1,1 @@
+Mediante el atributo `prevs`, puedes obtener fácilmente todas las instancias de elementos adyacentes que están antes del elemento actual, y se devolverán como un array.

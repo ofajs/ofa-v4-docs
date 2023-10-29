@@ -1,0 +1,1 @@
+A través de `<comp-two :txt="val"></comp-two>`, se usa un componente anidado y se pasa el atributo val del componente actual como atributo txt al componente anidado. De esta manera, el componente anidado puede usar los datos pasados para realizar la renderización.

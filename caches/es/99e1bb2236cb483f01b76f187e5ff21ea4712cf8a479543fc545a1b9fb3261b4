@@ -1,0 +1,10 @@
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+</div>
+`);
+
+$el.wrap("<div>nuevo div</div>"); // ❌ Error, no tiene padre para envolver
+$el.$('#target').wrap("<div>nuevo div</div>"); // ✅ Correcto, tiene padre
+```

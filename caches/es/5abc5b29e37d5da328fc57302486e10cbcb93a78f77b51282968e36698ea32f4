@@ -1,0 +1,1 @@
+Usando el atributo `host`, puedes obtener una instancia del componente host del elemento. Esto es útil para acceder a los datos y métodos de su componente host desde el interior del componente.

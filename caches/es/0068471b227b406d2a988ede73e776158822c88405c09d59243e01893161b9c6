@@ -1,0 +1,1 @@
+A continuación se muestra un ejemplo que muestra cómo utilizar el método `emit` para desencadenar eventos personalizados y utilizar el mecanismo de propagación para pasar el evento a elementos exteriores:

@@ -1,0 +1,1 @@
+Los ejemplos se pueden monitorear los cambios en los valores a través del método `watch`; incluso si se cambian los valores de los subobjetos del objeto, también se puede monitorear el cambio a través del método `watch` del objeto.

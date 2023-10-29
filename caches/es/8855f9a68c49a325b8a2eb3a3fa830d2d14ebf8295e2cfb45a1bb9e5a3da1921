@@ -1,0 +1,1 @@
+Puedes usar la propiedad `:text` dentro de una plantilla para establecer valores de propiedad en el elemento de destino. Esto es especialmente útil en la representación de componentes. Aquí tienes un ejemplo:

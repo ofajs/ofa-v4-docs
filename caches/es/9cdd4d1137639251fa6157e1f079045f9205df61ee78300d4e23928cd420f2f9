@@ -1,0 +1,1 @@
+`$.all('xxx')` método se utiliza para buscar todos los elementos en la página que cumplan con la condición del selector, y los devuelve como una colección de elementos. Esto permite seleccionar varios elementos en la página para realizar operaciones en lote.

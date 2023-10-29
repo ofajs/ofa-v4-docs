@@ -1,0 +1,1 @@
+Este ejemplo muestra cómo crear un componente llamado `simple-btn`. El template del componente incluye una ranura donde se puede insertar contenido en el componente. Se añade estilo al componente mediante el selector `:host`. En otra página, se hace referencia al componente `simple-btn` utilizando el componente `l-m` e insertando contenido en él.

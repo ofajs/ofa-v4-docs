@@ -1,0 +1,1 @@
+Si necesitas cruzar los límites del Shadow DOM del componente para activar eventos, puedes agregar el atributo `composed`.

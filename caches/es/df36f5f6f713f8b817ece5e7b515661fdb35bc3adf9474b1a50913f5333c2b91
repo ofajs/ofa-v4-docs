@@ -1,0 +1,1 @@
+Si estás usando el editor Visual Studio Code, simplemente puedes instalar un complemento que admita un servidor estático. Recomendamos usar el complemento [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).

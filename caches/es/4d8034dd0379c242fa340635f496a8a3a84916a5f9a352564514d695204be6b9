@@ -1,0 +1,1 @@
+Se necesita borrar los datos vinculados durante el ciclo de "detached" para evitar una fuga de memoria.

@@ -1,0 +1,2 @@
+- `selector`: Elige el elemento que quieres que desencadene el evento.
+- `eventName`: Nombre del evento que quieres desencadenar.

@@ -1,0 +1,1 @@
+A través de la vinculación de datos bidireccional, puede establecer fácilmente una conexión entre la interfaz de usuario y el modelo de datos, de modo que los cambios en los datos se reflejen automáticamente en la interfaz, al mismo tiempo que las entradas del usuario en la interfaz también afecten inmediatamente al modelo de datos.

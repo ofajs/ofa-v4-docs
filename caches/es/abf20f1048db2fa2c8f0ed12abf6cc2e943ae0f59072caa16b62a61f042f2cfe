@@ -1,0 +1,10 @@
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+</div>
+`);
+
+$el.unwrap(); // ❌ Error, no parent element to unwrap
+$el.$('#target').unwrap(); // ✅ Correct, unwrap the wrapped element
+```

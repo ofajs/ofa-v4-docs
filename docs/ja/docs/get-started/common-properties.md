@@ -16,14 +16,14 @@
 - [classList](../../api/props/class-list.md)：対象要素のネイティブクラスリストを取得します
 - [data](../../api/props/data.md)：対象要素のネイティブデータセットを取得します
 
-### 节点操作
+### ノードの操作
 
 - [before](./operation/before.md)：ターゲットインスタンスの前に要素を追加する
 - [after](./operation/after.md)：ターゲットインスタンスの後ろに要素を追加する
 - [remove](./operation/remove.md)：ターゲット要素を削除する
 - [attr](../../api/props/attr.md)：ターゲット要素の[attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)を取得または設定する
 
-## 重要特性
+## 重要な機能
 
 - [フォームデータ](../../api/others/form-data.md)：フォームデータの簡単なバインディングと取得を行います。
 

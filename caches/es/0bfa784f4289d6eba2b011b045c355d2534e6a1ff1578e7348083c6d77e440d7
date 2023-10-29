@@ -1,0 +1,1 @@
+En este ejemplo, seleccionamos un elemento `my-comp` con un `id` de "myCustomComponent" y luego obtenemos la ruta del archivo de este componente personalizado a través de la propiedad `PATH`. Puedes usar la variable `componentPath` en el script según sea necesario, por ejemplo, para construir la ruta de otros archivos de recursos o realizar otras operaciones.

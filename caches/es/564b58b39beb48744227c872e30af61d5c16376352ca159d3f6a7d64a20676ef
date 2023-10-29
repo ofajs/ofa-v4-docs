@@ -1,0 +1,3 @@
+- **$data**: Representa los datos del elemento de llenado. Al operar en $data, puedes obtener o modificar los datos de cada elemento de llenado.
+- **$index**: Representa el índice del elemento actual en la colección de datos.
+- **$host**: Representa el componente actual. Si deseas obtener datos del componente o llamar a los métodos del componente, necesitas utilizar $host para acceder al componente.

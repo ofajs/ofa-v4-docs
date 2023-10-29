@@ -1,0 +1,1 @@
+En este ejemplo, primero seleccionamos un elemento `<li>` con la `id` "target". Luego, utilizamos el atributo `index` para obtener la posición de este elemento dentro de su elemento padre `<ul>`, que es el segundo elemento, por lo que el valor de `index` es 1. Después, mostramos este valor en el elemento `<div>` con la `id` "logger".

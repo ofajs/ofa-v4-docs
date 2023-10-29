@@ -1,0 +1,33 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Default Event</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" />
+    <button id="submitBtn">Submit</button>
+  </form>
+
+  <script>
+    const form = $('#myForm');
+    const submitBtn = $('#submitBtn');
+
+    submitBtn.on('click', (event) => {
+      event.preventDefault(); // Anular el comportamiento por defecto de un evento
+      const name = $('#name').value;
+      alert(`Hello, ${name}! Form submission prevented.`);
+    });
+
+    form.on('submit', () => {
+      alert('Form Submitted!');
+    });
+  </script>
+</body>
+</html>
+```

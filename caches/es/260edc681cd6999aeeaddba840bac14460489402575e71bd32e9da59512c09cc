@@ -1,0 +1,8 @@
+```javascript
+// Código de jQuery
+$("#target").html("algo de código html"); // Establecer html
+$("#target").text("establecer texto"); // Establecer texto
+var ele_text = $("#target").text(); // Obtener texto
+var parents = $("#target").parents(); // Obtener todos los padres en un arreglo
+var child = $("#target").children()[0]; // Obtener el primer elemento hijo
+```

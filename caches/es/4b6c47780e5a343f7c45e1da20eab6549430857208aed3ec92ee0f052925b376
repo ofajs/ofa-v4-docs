@@ -1,0 +1,1 @@
+En este ejemplo, creamos una plantilla llamada "easyLi" y luego llenamos los datos del arreglo `arr` usando `x-fill`, mostrando el índice y el nombre de los datos en cada elemento de la lista.

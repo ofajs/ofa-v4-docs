@@ -1,0 +1,1 @@
+`attrs` es un atributo de tipo objeto que también pertenece a `data`, pero estos datos se reflejarán en los atributos del elemento. Los cambios en los atributos también se actualizarán dinámicamente en los datos del componente. Cuando hay claves en mayúsculas, se convierten en nombres de propiedades con guiones en lugar de camelCase.

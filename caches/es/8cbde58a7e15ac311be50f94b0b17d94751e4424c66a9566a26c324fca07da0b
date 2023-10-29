@@ -1,0 +1,41 @@
+```html
+<template component>
+  <style>
+    :host{
+      display: block;
+    }
+    .editor {
+      display: inline-block;
+      min-width: 200px;
+      line-height: 30px;
+      height: 30px;
+      border: #aaa solid 1px;
+      border-radius: 4px;
+      padding: 4px;
+      font-size: 14px;
+    }
+  </style>
+  <div
+    class="editor"
+    contenteditable="plaintext-only"
+    :text="value"
+    on:input="changeText"
+  ></div>
+  <script>
+    export default {
+      tag:"custom-input",
+      attrs: {
+        name: "",
+      },
+      data: {
+        value: "Default txt",
+      },
+      proto: {
+        changeText(e) {
+          this.value = $(e.target).text;
+        },
+      },
+    };
+  </script>
+</template>
+```

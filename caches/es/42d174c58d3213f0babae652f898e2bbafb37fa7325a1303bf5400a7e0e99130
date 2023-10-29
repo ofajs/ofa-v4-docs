@@ -1,0 +1,1 @@
+`watchTick` es similar a la función `watch`, pero tiene una operación de throttling interna. Se ejecuta una vez en un solo hilo, por lo que puede ser más efectivo para escuchar cambios en los datos en escenarios con requisitos de rendimiento más altos.

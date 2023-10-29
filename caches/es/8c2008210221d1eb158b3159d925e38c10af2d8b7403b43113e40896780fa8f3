@@ -1,0 +1,1 @@
+Además de poder buscar elementos a nivel global, también puedes buscar todos los elementos hijos que cumplan con una determinada condición dentro de un elemento específico, utilizando el siguiente formato: `$('xxx').all('xxxx')`.

@@ -1,0 +1,1 @@
+Usando el atributo `nexts`, puedes obtener fácilmente todas las instancias de elementos adyacentes que están después del elemento actual, y se devolverán como un array.

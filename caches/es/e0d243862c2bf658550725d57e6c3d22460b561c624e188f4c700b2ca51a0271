@@ -1,0 +1,1 @@
+En el ejemplo anterior, cuando se hace clic en el botón, se mostrará un cuadro de diálogo que dice "¡Botón clicado una vez!". Pero después del primer clic, se eliminará la función de manejo de eventos, por lo que los clics posteriores en el botón no volverán a mostrar el cuadro de diálogo.

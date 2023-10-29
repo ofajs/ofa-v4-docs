@@ -1,0 +1,4 @@
+```javascript
+// Reemplaza la página actual por una nueva página
+app.replace("/new-page.html");
+```

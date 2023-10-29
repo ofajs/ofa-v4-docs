@@ -1,0 +1,1 @@
+Ofrece una forma de escuchar y responder a cambios en la ruta de la aplicación, normalmente se usa en la página principal de páginas anidadas. Cuando cambia la ruta, puedes escuchar el evento `routerChange` para realizar acciones correspondientes, como actualizar el contenido de la página o el estado de navegación.

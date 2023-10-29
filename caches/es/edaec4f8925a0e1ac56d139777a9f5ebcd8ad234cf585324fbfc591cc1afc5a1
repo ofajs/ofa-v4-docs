@@ -1,0 +1,3 @@
+- En el parámetro `data`, hemos definido un dato llamado `testText` y le hemos asignado el valor inicial "Soy testText".
+- El uso de `sync:value="testText"` indica que se ha establecido una vinculación bidireccional entre el valor del campo de entrada y el dato `testText`. Por lo tanto, cuando el usuario ingresa contenido en el campo, el dato `testText` se actualizará en tiempo real, y viceversa.
+- De manera similar, el uso de `sync:txt="testText"` indica que se ha establecido una vinculación bidireccional entre el atributo `txt` del componente personalizado y el dato `testText`. Cuando el atributo `txt` del componente cambie, el dato `testText` se actualizará en tiempo real, y viceversa.

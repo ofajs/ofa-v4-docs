@@ -5,10 +5,10 @@
     alert("Button clicked!");
   };
 
-  // 绑定点击事件处理函数
+  // クリック・イベント・ハンドラをバインドする
   $("#btn").on("click", handleClick);
 
-  // 5秒后移除点击事件处理函数
+  // 5秒後にクリック・イベント・ハンドラを削除する
   setTimeout(() => {
     $("#btn").off("click", handleClick);
   }, 5000);

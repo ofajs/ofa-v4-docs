@@ -1,0 +1,13 @@
+```javascript
+// MyComponent.mjs
+export default () => {
+  return {
+    attached(){
+      const appTag = this.app;
+
+      const currentPage = appTag.current;
+      console.log(`La página actualmente activa es:${currentPage}`);
+    }
+  };
+}
+```

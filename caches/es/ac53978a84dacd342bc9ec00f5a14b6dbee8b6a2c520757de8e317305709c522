@@ -1,0 +1,1 @@
+Ten en cuenta que el atributo `style` no puede obtener el valor real de los estilos, solo puede obtener el valor establecido en el atributo `style`. Aunque el método `style` es similar al método [css](./css.md), no puede realizar una anulación completa de los estilos. En comparación con [css](./css.md), el método `style` es más eficiente en cuanto a ejecución interna.

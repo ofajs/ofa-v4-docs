@@ -1,0 +1,9 @@
+# Sintaxis de plantilla
+
+`ofa.js` proporciona una serie de potentes sintaxis de plantilla que te permiten manipular de manera más flexible los elementos de interfaz y los datos de los componentes. Estas sintaxis de plantilla te ayudarán a lograr efectos de interfaz y experiencias de interacción enriquecidas.
+
+- [Renderización de texto](../../api/temp-syntax/text-render.md): Renderiza rápidamente texto en archivos de plantilla
+- [class](../../api/temp-syntax/class.md): Renderiza rápidamente nombres de clases en archivos de plantilla
+- [sync](../../api/temp-syntax/sync.md): Sincroniza rápidamente datos en archivos de plantilla
+- [Renderización condicional](../../api/temp-syntax/condition.md): Renderiza contenido en archivos de plantilla según la necesidad
+- [Renderización de listas](../../api/temp-syntax/fill.md): Renderiza rápidamente datos de arrays en archivos de plantilla

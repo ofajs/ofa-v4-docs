@@ -1,0 +1,1 @@
+ofa.js difiere de otros marcos de terceros al no utilizar un modelo de gestión de estado tradicional. El autor considera que las actualizaciones de estado deben ser imperceptibles, es decir, que los cambios en los datos deben desencadenar automáticamente actualizaciones de datos.

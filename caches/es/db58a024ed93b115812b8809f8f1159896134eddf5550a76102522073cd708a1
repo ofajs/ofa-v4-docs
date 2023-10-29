@@ -1,0 +1,10 @@
+```javascript
+// simple-button.mjs
+export const type = $.COMP; // Los módulos de doble archivo deben llevar `export const type = $.COMP`
+
+// El nombre del componente a registrar, cuando el atributo tag no está definido, el nombre del componente registrado es el mismo que el nombre del archivo.
+// export const tag = 'simple-button';
+
+// La dirección de la plantilla del componente, cuando no está definida, por defecto es el archivo html con el mismo nombre del componente en el mismo directorio que el módulo actual.
+// export const temp = './simple-button.html';
+```

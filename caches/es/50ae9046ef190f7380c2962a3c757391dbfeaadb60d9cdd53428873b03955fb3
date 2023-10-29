@@ -1,0 +1,1 @@
+A través del objeto `css` obtenido, puedes obtener los valores de estilo que se han establecido directamente en el elemento. A continuación se muestra un ejemplo:

@@ -1,0 +1,3 @@
+- `selector`: Selecciona el elemento en el que se va a asociar la función de manejo de eventos.
+- `eventName`: Nombre del evento que se va a asociar.
+- `eventHandler`: Función de manejo de eventos que se va a ejecutar.

@@ -1,0 +1,19 @@
+```html
+<div>
+  <p>Primer Párrafo</p>
+</div>
+<script>
+  const $paragraphs = $('p');
+  
+  // Agregar nuevo elemento div como hijo
+  const $newDiv = $('<div>Nuevo Div</div>');
+  $paragraphs.push($newDiv);
+
+  setTimeout(()=>{
+    // Eliminar el último elemento hijo
+    $paragraphs.pop();
+
+    console.log($paragraphs);
+  },1000)
+</script>
+```

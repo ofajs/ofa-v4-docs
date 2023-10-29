@@ -1,0 +1,18 @@
+```html
+<div class="container">
+  <p>Hola Mundo</p>
+  <div class="item">Elemento 1</div>
+  <div class="item">Elemento 2</div>
+  <div class="item">Elemento 3</div>
+</div>
+<script>
+  // Busca todos los elementos hijos del contenedor con la clase "item".
+  const container = $(".container");
+  const items = container.all(".item");
+
+  // Modificar el contenido del texto de todos los elementos hijos
+  items.forEach((item, index) => {
+    item.text = `Elemento Modificado ${index + 1}`;
+  });
+</script>
+```

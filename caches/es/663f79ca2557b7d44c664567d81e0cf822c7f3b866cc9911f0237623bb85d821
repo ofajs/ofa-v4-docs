@@ -1,0 +1,1 @@
+El método `after` se utiliza para añadir un elemento después del elemento de destino. La inicialización del [método AAAA]((../instance/dollar.md)) se realiza automáticamente antes de la operación `after`, de modo que se pueden rellenar directamente cadenas u objetos de elementos específicos.

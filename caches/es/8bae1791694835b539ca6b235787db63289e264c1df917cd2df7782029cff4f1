@@ -1,0 +1,1 @@
+Utilice el método `$.stanz` para crear datos compartidos; si desea compartir estos datos en un componente, debe vincular los datos al componente en el momento de adjuntarlo.

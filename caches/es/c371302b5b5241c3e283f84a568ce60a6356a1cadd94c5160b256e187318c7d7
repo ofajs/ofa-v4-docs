@@ -1,0 +1,1 @@
+Después de importar el recurso, ofa.js establecerá una propiedad `$` en el ámbito global, todas las funciones estarán disponibles en `$`, su uso se explicará detalladamente en el tutorial posteriormente.

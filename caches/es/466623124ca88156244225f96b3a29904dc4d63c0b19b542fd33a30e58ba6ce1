@@ -1,0 +1,1 @@
+Puedes usar el elemento de plantilla `template` y agregar el atributo `name` para personalizar las plantillas temporales dentro del componente. Al utilizar `x-fill`, usa el atributo `name` para especificar el nombre de la plantilla que se debe llenar.

@@ -8,7 +8,7 @@
     $("#logger").text = Object.keys($("#target").css);
    
     setTimeout(()=>{
-        // 覆盖已有样式
+        // 既存のスタイルを上書きする
         $("#target").css = {
             color: "blue",
             lineHeight: "5em"

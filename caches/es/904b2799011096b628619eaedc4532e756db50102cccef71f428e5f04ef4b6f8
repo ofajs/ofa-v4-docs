@@ -1,0 +1,1 @@
+El método `off` se utiliza para eliminar las funciones de manejo de eventos vinculadas mediante el método `on`. Cuando ya no se necesita una función de manejo de eventos para un determinado evento, se puede utilizar el método `off` para eliminarla del elemento, evitando así ejecuciones duplicadas o pérdidas de memoria.

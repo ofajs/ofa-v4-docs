@@ -1,0 +1,16 @@
+```html
+<!-- layout-page.html -->
+<template page>
+  <style>
+    /* Establece el contenedor como posicionamiento relativo */
+    .parent-container {
+      position: relative;
+    }
+  </style>
+  
+  <!-- Establece el contenedor para insertar las subpáginas -->
+  <div class="parent-container">
+    <slot></slot>
+  </div>
+</template>
+```

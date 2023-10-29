@@ -1,0 +1,1 @@
+A través de `$` instancia, también podemos usar directamente los métodos del arreglo para manipular los elementos secundarios, como `push` y `pop`.

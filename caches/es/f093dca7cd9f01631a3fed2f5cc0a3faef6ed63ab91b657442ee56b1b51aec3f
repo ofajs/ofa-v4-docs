@@ -1,0 +1,1 @@
+En ofa.js, la configuración de subrutas es ligeramente diferente a la práctica de algunos frameworks frontend. ofa.js utiliza un enfoque más intuitivo al establecer la página padres como contenedores en los módulos de la página, para cumplir con los requisitos de las subrutas.

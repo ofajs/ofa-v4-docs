@@ -1,0 +1,1 @@
+Este ejemplo demuestra cómo crear páginas anidadas, donde `page1.html` y `page2.html` son las subpáginas, y `layout.html` es la página principal. La página principal `layout.html` incluye toda la estructura del marco, mientras que las subpáginas se enlazan a través del atributo `parent` para indicar que deben estar incrustadas dentro de la página principal.

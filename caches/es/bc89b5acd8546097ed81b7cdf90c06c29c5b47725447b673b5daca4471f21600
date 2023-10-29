@@ -1,0 +1,1 @@
+La propiedad `classList` te permite agregar, eliminar y cambiar dinámicamente los nombres de clase para cambiar el estilo de un elemento. Para obtener más información sobre los métodos de operación, consulta [classList](https://developer.mozilla.org/es/docs/Web/API/Element/classList).

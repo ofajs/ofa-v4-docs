@@ -3,7 +3,7 @@
 <a href="../../publics/examples/life-cycle/test-demo.html" main></a>
 </template>
 
-# 生命周期
+# ライフサイクル
 
 ライフサイクルフック関数は、コンポーネントの様々な段階でコードを実行する機会を提供する。 ofa.js には5つのライフサイクルフック関数があり、`created`、`ready`、`watch`、`attached`、`detached`である。
 

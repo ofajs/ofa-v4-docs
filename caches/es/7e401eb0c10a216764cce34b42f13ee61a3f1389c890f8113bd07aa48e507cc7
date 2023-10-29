@@ -1,0 +1,1 @@
+Mediante el método `emit`, puedes activar eventos de manera proactiva, y los eventos activados tienen un mecanismo de burbujeo. El mecanismo de burbujeo significa que los eventos se propagan desde los elementos internos hasta los elementos externos, activándose en niveles desde el interior hacia el exterior.

@@ -1,0 +1,15 @@
+```javascript
+lm.config({
+  alias: {
+    "@namex": "https://example.com/resource",
+  },
+});
+
+// ...
+
+lm.config({
+  alias: {
+    "@namex": "https://example.com/other-resource", // Error, duplicate alias
+  },
+});
+```

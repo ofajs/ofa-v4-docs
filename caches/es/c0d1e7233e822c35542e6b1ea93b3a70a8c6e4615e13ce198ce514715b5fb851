@@ -1,0 +1,1 @@
+El método `replace` se utiliza para reemplazar la página actual por otra página. Esto es similar al método `replace` de `app`, pero se realiza dentro de la página.

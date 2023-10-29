@@ -1,0 +1,1 @@
+En el siguiente ejemplo, mostramos cómo utilizar datos de formularios dentro de un componente personalizado. Este componente incluye un campo de texto de entrada, que actualiza los datos en el registro en tiempo real cuando se introduce contenido.

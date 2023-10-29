@@ -1,0 +1,1 @@
+El evento `routerChange` es un evento específico del elemento `o-page` y solo se activará en la página principal anidada de `o-page`. Este evento se activa cuando cambia la ruta de la aplicación, ya sea al navegar a una nueva página o volver a una página anterior.

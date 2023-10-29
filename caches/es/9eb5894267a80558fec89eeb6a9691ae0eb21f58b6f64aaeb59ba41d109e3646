@@ -1,0 +1,1 @@
+A través del método `$`, puedes obtener la primera instancia de elemento que cumple con un [selector CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS_selectors) en la página y realizar operaciones en ella. A continuación se muestra un ejemplo:

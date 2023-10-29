@@ -1,0 +1,1 @@
+`x-else` se puede agregar después de `x-if` o `x-if-else`, al final. Si ninguna de las condiciones anteriores se cumple, mostrará el contenido definido por sí mismo. No es necesario establecer un valor `value`.

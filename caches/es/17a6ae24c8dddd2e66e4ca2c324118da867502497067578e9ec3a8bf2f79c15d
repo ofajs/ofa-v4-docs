@@ -1,0 +1,1 @@
+SCSR es un módulo de página que se ejecuta en modo de archivo único sin la necesidad de utilizar la etiqueta `o-page`, lo que permite la renderización en la página. En pocas palabras, se coloca directamente el código de la plantilla del módulo de la página dentro de `o-app`.

@@ -1,0 +1,1 @@
+`on:click="xxx"` puede ser seguido por el nombre de un método definido dentro del componente o por una expresión de función. Si se utiliza una expresión de función, no es necesario escribir explícitamente la palabra clave `this`, el alcance de las variables se vinculará automáticamente al componente en sí mismo;

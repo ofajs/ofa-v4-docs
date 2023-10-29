@@ -1,0 +1,1 @@
+Las instancias también tienen un método `$` que te permite obtener la primera instancia de elemento que cumple con una condición de selección en la instancia.

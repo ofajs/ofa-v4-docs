@@ -1,0 +1,1 @@
+html es un método peligroso, si se coloca un `script` se ejecutará automáticamente el código `javascript` interno, por lo que se debe tener precaución al utilizarlo para prevenir el [XSS](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting).

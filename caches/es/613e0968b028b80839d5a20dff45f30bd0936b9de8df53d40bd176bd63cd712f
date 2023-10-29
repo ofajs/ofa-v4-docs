@@ -1,0 +1,14 @@
+```html
+<div id="myForm">
+  <input type="text" name="username" value="John Doe" />
+  <custom-input name="message"></custom-input>
+  <div id="logger"></div>
+</div>
+<script>
+  const data = $("#myForm").formData("input,custom-input");
+  $("#logger").text = data;
+  data.watch(() => {
+    $("#logger").text = data;
+  });
+</script>
+```

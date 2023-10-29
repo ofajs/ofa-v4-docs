@@ -1,0 +1,1 @@
+En la plantilla del componente, se puede usar el elemento `<slot>` para definir ranuras. El contenido proporcionado desde el exterior será insertado dentro de las ranuras.

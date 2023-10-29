@@ -1,0 +1,1 @@
+Puede obtener la instancia mediante el [atributo shadow](./shadow.md) y luego obtener el elemento deseado mediante el método `$`;

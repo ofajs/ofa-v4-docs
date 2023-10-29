@@ -1,0 +1,1 @@
+El método `formData` se utiliza para generar datos de objetos vinculados a elementos de formularios, lo que facilita y agiliza el manejo de los elementos del formulario. Este método generará un objeto que contiene los valores de todos los elementos del formulario dentro del elemento objetivo, y este objeto reflejará en tiempo real los cambios en los elementos del formulario.

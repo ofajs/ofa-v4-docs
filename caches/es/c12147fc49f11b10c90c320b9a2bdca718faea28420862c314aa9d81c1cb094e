@@ -1,0 +1,1 @@
+`selector:host` se utiliza para seleccionar el contenedor externo del componente. Puede usar este selector para definir el estilo del componente.

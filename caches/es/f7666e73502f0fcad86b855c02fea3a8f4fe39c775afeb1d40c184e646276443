@@ -1,0 +1,1 @@
+En este ejemplo, creamos una instancia de objeto `$` llamada `target` y luego usamos el método `watch` para monitorear cambios en los valores de las propiedades. En `setTimeout`, intentamos cambiar el valor de la propiedad `_aaa`, pero este cambio no activará la escucha. Esto es muy útil cuando se necesita actualizar el valor de una propiedad sin activar la escucha.

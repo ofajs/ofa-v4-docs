@@ -1,0 +1,1 @@
+Una vez que se complete la etapa "ready", se activará la función de escucha en el objeto "watch" asociado una vez. Luego, cuando ocurra un cambio en algún valor de los datos, se volverá a activar la función de escucha correspondiente a la clave (key) respectiva.

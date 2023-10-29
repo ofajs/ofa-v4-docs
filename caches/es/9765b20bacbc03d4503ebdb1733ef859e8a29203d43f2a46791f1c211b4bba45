@@ -1,0 +1,1 @@
+En algunos escenarios, es posible que ya sepas que el usuario va a pasar a la siguiente página. Para mejorar la experiencia del usuario, puedes precargar el módulo de la página siguiente de antemano, de modo que se pueda cargar de inmediato al realizar la navegación real, reduciendo así el tiempo de espera del usuario y brindando una experiencia más fluida.

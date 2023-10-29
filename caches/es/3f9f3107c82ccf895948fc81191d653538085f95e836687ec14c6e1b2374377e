@@ -1,0 +1,1 @@
+La función `unwatch` se utiliza para cancelar la escucha de datos y desvincular las escuchas anteriores registradas con `watch` o `watchTick`.

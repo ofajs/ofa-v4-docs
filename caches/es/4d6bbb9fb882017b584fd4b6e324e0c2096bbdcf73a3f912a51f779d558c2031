@@ -1,0 +1,10 @@
+```javascript
+// Código de ejemplo: obtener la dirección de la página actual
+// const page = $("o-app").current;
+...
+ready(){
+  // Durante la vida de un módulo de página, es el módulo de página actual;
+  const page = this;
+}
+...
+```

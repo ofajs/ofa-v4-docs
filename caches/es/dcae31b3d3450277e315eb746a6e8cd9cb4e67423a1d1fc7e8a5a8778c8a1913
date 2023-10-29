@@ -1,0 +1,19 @@
+```html
+<template component>
+  <select>
+    <template is="replace-temp">
+      <x-fill :value="arr">
+        <option>{{$data}}</option>
+      </x-fill>
+    </template>
+  </select>
+  <script>
+    export default {
+      tag: "text-render",
+      data: {
+        arr: ["pen", "apple", "pineapple"],
+      },
+    };
+  </script>
+</template>
+```

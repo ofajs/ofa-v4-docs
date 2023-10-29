@@ -1,0 +1,1 @@
+A veces, es posible que debas usar datos de formularios dentro de un componente o página, y necesites generar esos datos durante el ciclo de vida `ready` y luego vincularlos al componente.

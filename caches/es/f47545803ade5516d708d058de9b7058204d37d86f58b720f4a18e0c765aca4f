@@ -1,0 +1,1 @@
+Recomendamos usar la propiedad [classList](../props/class-list.md) para manipular los nombres de clase, ya que es el método más común y estándar.

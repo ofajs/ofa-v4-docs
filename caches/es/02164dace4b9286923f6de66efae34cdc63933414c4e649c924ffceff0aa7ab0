@@ -1,0 +1,1 @@
+Usando el atributo `parents`, puedes obtener fácilmente todas las instancias de elementos padres del elemento actual, y se devolverán como un array.

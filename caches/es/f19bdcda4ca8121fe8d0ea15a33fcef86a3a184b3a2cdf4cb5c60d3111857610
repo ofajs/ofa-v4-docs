@@ -1,0 +1,1 @@
+En la aplicación `$`, el nombre de las propiedades que comienzan con guión bajo `_` indica que estos valores no serán monitoreados por los métodos `watch` o `watchTick`. Esto es útil para algunas propiedades temporales o privadas, ya que puedes cambiarlos libremente sin activar el monitoreo.

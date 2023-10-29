@@ -1,0 +1,1 @@
+El gancho de vida `detached` se activa cuando el componente es removido del documento. En esta etapa, puedes realizar algunas operaciones de limpieza, como cancelar eventos o liberar recursos para evitar fugas de memoria.

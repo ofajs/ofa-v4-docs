@@ -1,0 +1,1 @@
+En el ejemplo anterior, cuando haces clic en el botón "Click Me", se mostrará "Button Clicked!", pero no se activarán "Inner Div Clicked!" y "Outer Div Clicked!". Esto se debe a que llamamos a `event.stopPropagation()` en el controlador del evento de clic del botón, lo que impide que el evento se propague más allá.

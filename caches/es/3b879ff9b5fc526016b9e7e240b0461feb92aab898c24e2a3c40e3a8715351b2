@@ -1,0 +1,1 @@
+Al utilizar un componente de formulario personalizado, simplemente tienes que agregarlo a tu formulario y establecer la propiedad `name` requerida:

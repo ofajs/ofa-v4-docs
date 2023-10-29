@@ -1,0 +1,1 @@
+El método `off` te permite desregistrar los controladores de eventos registrados para dejar de escuchar eventos.

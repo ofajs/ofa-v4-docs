@@ -1,0 +1,1 @@
+En algunos casos, varias páginas comparten la misma página principal como contenedor, cuando estas páginas se cambian, la página principal no se actualiza. En esta situación, la página principal aún puede escuchar los cambios en la ruta para realizar las acciones correspondientes sin refrescar la página.

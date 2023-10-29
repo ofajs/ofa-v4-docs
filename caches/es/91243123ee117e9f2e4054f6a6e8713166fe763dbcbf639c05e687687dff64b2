@@ -1,0 +1,4 @@
+```javascript
+// Obtener la instancia de página actual
+const currentPage = app.current;
+```

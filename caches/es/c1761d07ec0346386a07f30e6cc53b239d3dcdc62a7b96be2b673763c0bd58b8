@@ -1,0 +1,1 @@
+- No configure duplicar los mismos nombres de alias, de lo contrario esto generará un error.

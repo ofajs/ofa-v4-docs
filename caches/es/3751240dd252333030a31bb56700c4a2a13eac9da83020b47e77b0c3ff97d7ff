@@ -1,0 +1,1 @@
+El componente principal `x-if` es un componente de condición que requiere establecer un valor `value`. Si se cumple la condición del valor `value`, mostrará el contenido envuelto.

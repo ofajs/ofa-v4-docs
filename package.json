@@ -30,7 +30,8 @@
       "en": "./docs/en",
       "cn": "./docs/cn",
       "t-cn": "./docs/t-cn",
-      "ja": "./docs/ja"
+      "ja": "./docs/ja",
+      "es": "./docs/es"
     }
   }
 }

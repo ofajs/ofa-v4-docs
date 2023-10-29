@@ -1,0 +1,1 @@
+El proceso de creación de la página principal es similar al desarrollo de componentes. Necesitas crear una página que contenga el diseño completo del marco y luego colocar las subpáginas internas anidadas en la ranura (`slot`).

@@ -1,0 +1,1 @@
+En este ejemplo, hemos configurado un alias a través del método `lm.config`, asignando el alias `@obook` a `https://cdn.jsdelivr.net/npm/obook`. Ahora, cuando utilizamos `@obook` como prefijo, se mapeará automáticamente a la URL especificada.

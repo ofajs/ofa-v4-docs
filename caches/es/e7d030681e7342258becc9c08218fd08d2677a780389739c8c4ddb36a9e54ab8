@@ -1,0 +1,1 @@
+Con el método `on`, puedes registrar controladores de eventos para elementos de destino. Esto te permite capturar e interactuar fácilmente con las operaciones del usuario.

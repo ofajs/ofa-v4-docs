@@ -1,0 +1,1 @@
+No inserte directamente las instancias de elementos recuperados en otros lugares, ya que esto afectará a los elementos originales. Si necesita crear una copia, puede usar el método [clone](./clone.md).

@@ -1,0 +1,23 @@
+- [Introducción](./introduce.md)
+- Uso de ofa.js
+  - [Cómo usar ofa.js](./get-started/index.md)
+  - [Primer caso](./get-started/hello-world.md)
+  - [Selección de elementos y eventos relacionados](./get-started/elements-and-events.md)
+  - [Concepto básico de instancia](./get-started/basic-concept.md)
+  - [Propiedades y métodos comunes](./get-started/common-properties.md)
+- Crear y utilizar componentes
+  - [Creación y uso](./create-component/index.md)
+  - [Descripción de parámetros](./create-component/parameter-description.md)
+  - [Ciclo de vida](./create-component/life-cycle.md)
+  - [Conocimientos generales sobre componentes web](./create-component/web-components.md)
+  - [Sintaxis de plantillas](./create-component/template-syntax.md)
+- Crear aplicaciones
+  - [Introducción](./create-app/index.md)
+  - [Uso del componente Page](./create-app/page.md)
+  - [Uso del componente App](./create-app/app.md)
+  - [Funcionalidad de subrutas](./create-app/subrouting.md)
+  - [Binding de rutas](./create-app/o-router.md)
+  - [Esquema SCSR](./create-app/scsr.md)
+- Otros
+  - [Compartir datos](./others/data-sharing.md)
+  - [ofa.js y micro frontend](./others/about-micro-frontend.md)

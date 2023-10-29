@@ -1,0 +1,1 @@
+En este ejemplo, hemos utilizado `on:click` para vincular un método llamado `addCount` en el elemento del botón. Cuando el usuario hace clic en el botón, se llama a este método, incrementando el valor del contador y mostrándolo en la página. Esto te permite asociar manipuladores de eventos con métodos de componentes para lograr una interacción más compleja.

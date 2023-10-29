@@ -1,0 +1,1 @@
+En el ejemplo anterior, se obtuvo la etiqueta de la aplicación mediante el selector `.app`, y luego se obtuvo la dirección de la página actualmente activa accediendo a la propiedad `app.current`.

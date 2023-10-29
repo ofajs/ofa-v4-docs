@@ -1,0 +1,1 @@
+La mayoría de las veces, no necesitas establecer esta variable. Se utiliza principalmente en el modo separado para especificar la dirección de la plantilla de componente. Cuando `temp` no está definido, por defecto se cargará el archivo HTML con el mismo nombre que el módulo actual, que debería estar en el mismo directorio.

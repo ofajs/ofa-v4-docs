@@ -1,0 +1,1 @@
+Después de seleccionar un elemento de manera exitosa, puedes vincular eventos a ese elemento. Como se mencionó anteriormente en el ejemplo de "Hello World", vinculamos un evento de clic al elemento con el id "btn". Cuando se hace clic en el botón, la función vinculada será ejecutada.

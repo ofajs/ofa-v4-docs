@@ -1,0 +1,15 @@
+```html
+<div id="target1">objetivo 1</div>
+<div id="target2">texto de origen</div>
+<br>
+<div id="logger" style="color:red;"></div>
+
+<script>
+    setTimeout(()=> {
+        $('#target2').text = `<b style="color:blue;">nuevo texto</b>`; // Sólo se puede establecer texto, si desea que la etiqueta tenga efecto, establezca el atributo html.
+
+        console.log($("#target1").text) // => 'objetivo 1';
+        $("#logger").text = $("#target1").text;
+    }, 500);
+</script>
+```

@@ -1,0 +1,1 @@
+Obtener el [dataset](https://developer.mozilla.org/es/docs/Web/API/HTMLElement/dataset) de un elemento utilizando la propiedad [`data`](https://developer.mozilla.org/es/docs/Web/API/HTMLElement/style) y mantenerlo consistente con el [dataset](https://developer.mozilla.org/es/docs/Web/API/HTMLElement/dataset) nativo.

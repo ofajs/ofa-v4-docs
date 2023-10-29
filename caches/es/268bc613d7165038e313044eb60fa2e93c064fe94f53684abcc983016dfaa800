@@ -1,0 +1,4 @@
+- [on](./event/on.md): vincula un evento a un elemento objetivo
+- [one](./event/one.md): vincula un evento a un elemento objetivo de forma temporal
+- [emit](./event/emit.md): activa manualmente un evento
+- [off](./event/off.md): desvincula un evento previamente vinculado

@@ -1,0 +1,1 @@
+Los ejemplos obtenidos a través de `$`, no tienen la propiedad `children` como un elemento DOM. Pero podemos acceder a los elementos hijos directos de la instancia usando índices de matriz.

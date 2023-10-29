@@ -1,0 +1,4 @@
+```javascript
+// Código de ejemplo: en el módulo de la página actual sustituirá la página actual por otra página
+page.replace("./new-page.html");
+```

@@ -1,0 +1,1 @@
+En el ejemplo anterior, se utiliza directamente `$('div .child')` para buscar los elementos secundarios con la clase `child` y se modifica el contenido de texto de los elementos secundarios a "Elemento hijo modificado".

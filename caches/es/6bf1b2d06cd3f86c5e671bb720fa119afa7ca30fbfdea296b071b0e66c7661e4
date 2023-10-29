@@ -1,0 +1,1 @@
+Los métodos del ciclo de vida proporcionan oportunidades para ejecutar código en diferentes etapas del componente. En `ofa.js`, hay cinco métodos principales del ciclo de vida, que son: `created`, `ready`, `watch`, `attached` y `detached`.

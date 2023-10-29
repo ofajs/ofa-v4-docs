@@ -1,0 +1,1 @@
+En este ejemplo, creamos un componente personalizado llamado `host-demo` y accedemos a su instancia del componente anfitrión dentro del componente, luego comparamos si son iguales.

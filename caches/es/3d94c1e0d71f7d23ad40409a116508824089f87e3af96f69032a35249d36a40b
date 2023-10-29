@@ -1,0 +1,1 @@
+El código lógico se coloca en un archivo js, y este archivo js debe tener la declaración `export const type = $.COMP;` para notificar a la página que se trata de un módulo de componente. En este modo dividido, el código del módulo puede utilizar la sintaxis estándar de los Módulos ES, como `import`.

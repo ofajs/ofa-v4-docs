@@ -1,0 +1,1 @@
+Al añadir la etiqueta `<slot></slot>` en la plantilla, se puede colocar el contenido dentro del slot correspondiente del componente al usarlo.

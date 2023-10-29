@@ -1,0 +1,1 @@
+El atributo `index` se utiliza para obtener la posición de un elemento dentro de su elemento padre. Esta posición se cuenta a partir de 0, lo que significa que la posición del primer elemento es 0, la del segundo es 1, y así sucesivamente.

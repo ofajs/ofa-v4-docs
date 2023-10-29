@@ -1,0 +1,1 @@
+En el ejemplo anterior, utilizamos el símbolo "$" para seleccionar tres elementos con diferentes "id" y modificar su contenido mediante la configuración de los atributos "text", "html" y "value".

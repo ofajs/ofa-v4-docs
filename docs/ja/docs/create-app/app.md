@@ -120,12 +120,12 @@ export const pageAnime = {
 
 `o-app` アプリでは、ページモジュールから別のページモジュールに簡単にルートを移動することができます。以下では、ルートの移動方法についていくつかの異なる方法を紹介します。
 
-### `a` タグを使ったジャンプのルーティング
+### `<a>` タグを使ったジャンプのルーティング
 
 ページのHTMLで、`<a>`タグを使用してルーティングのリンクを実現することができます。`href`属性を対象ページのモジュールのパスに設定し、`olink`属性を追加して、`o-app`コンポーネントにこれがルーティングリンクであることを通知する必要があります。
 
 ```html
-<a href="./pages/home.mjs?count=2" olink>跳转到首页</a>
+<a href="./pages/home.mjs?count=2" olink>ホームページへジャンプ</a>
 ```
 
 ### goto
@@ -196,7 +196,7 @@ export default () => {
       const appTag = this.app;
 
       const currentPage = appTag.current;
-      console.log(`当前激活的页面是：${currentPage}`);
+      console.log(`現在アクティブなページは以下の通り：${currentPage}`);
     }
   };
 }

@@ -1,0 +1,1 @@
+El método de uso consiste en agregar atributos `:nombre="clave"` a un elemento de destino, donde `nombre` es el nombre del atributo que se debe establecer en el elemento de destino y `clave` es el nombre de la clave de atributo que deseas pasar en tu componente personalizado.

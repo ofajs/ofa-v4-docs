@@ -1,0 +1,12 @@
+```html
+<button id="btn">Click Me</button>
+<script>
+  // Vincular el controlador de eventos de clic
+  $("#btn").on("click", () => {
+    alert("Button clicked!");
+  });
+
+  // Activar el evento de clic del botón mediante el método emit
+  $("#btn").emit("click");
+</script>
+```

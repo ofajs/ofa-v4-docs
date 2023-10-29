@@ -29,11 +29,11 @@
   </div>
 </div>
 <script>
-  // 选择父元素并查找子元素
+  // 親要素を選択し、子要素を見つける
   const parentElement = $(".parent");
   const childElement = parentElement.$(".child");
 
-  // 修改子元素的文本内容
+  // 子要素のテキスト内容を変更する
   childElement.text = "Modified child element";
 </script>
 ```
@@ -179,10 +179,10 @@ $(selector).off(eventName, eventHandler);
     alert("Button clicked!");
   };
 
-  // 绑定点击事件处理函数
+  // クリック・イベント・ハンドラをバインドする
   $("#btn").on("click", handleClick);
 
-  // 5秒后移除点击事件处理函数
+  // 5秒後にクリック・イベント・ハンドラを削除する
   setTimeout(() => {
     $("#btn").off("click", handleClick);
   }, 5000);
@@ -247,12 +247,12 @@ $(selector).emit(eventName);
 ```html
 <button id="btn">Click Me</button>
 <script>
-  // 绑定点击事件处理函数
+  // クリック・イベント・ハンドラをバインドする
   $("#btn").on("click", () => {
     alert("Button clicked!");
   });
 
-  // 通过 emit 方法触发按钮的点击事件
+  // emitメソッドでボタンをクリックするイベントをトリガーする。
   $("#btn").emit("click");
 </script>
 ```
@@ -264,7 +264,7 @@ $(selector).emit(eventName);
 
 イベントがバインドされた後、イベントのさらなる伝播（バブリング）を防止したり、イベントのデフォルトの動作をキャンセルしたりすることがあるかもしれません。次に、イベントがトリガーされた後にバブリングを禁止し、デフォルトのイベントをキャンセルする法について説明します。
 
-### 禁止事件冒泡
+### イベントのバブリングを無効にする
 
 事件冒泡は、要素上のイベントが発生した場合、DOMツリーを上方向にバブリングし、親要素の同じタイプのイベントを順番にトリガすることを指します。特定の要素でイベントを処理した後、バブリングを続行させないようにするには、`event.stopPropagation()` メソッドを使用します。
 
@@ -292,7 +292,7 @@ $(selector).emit(eventName);
 
     btn.on('click', (event) => {
       alert('Button Clicked!');
-      event.stopPropagation(); // 阻止事件冒泡
+      event.stopPropagation(); // イベントのバブリングをブロック
     });
 
     innerDiv.on('click', () => {

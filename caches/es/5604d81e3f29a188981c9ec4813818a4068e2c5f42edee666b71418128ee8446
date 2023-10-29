@@ -1,0 +1,1 @@
+El `watch` es un atributo de tipo objeto que se utiliza para escuchar los cambios en `data` y colocar la función de escucha aquí. Después de registrarse correctamente, el valor escuchado se ejecutará inmediatamente una vez.

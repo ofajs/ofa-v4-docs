@@ -1,0 +1,1 @@
+También puede obtener instancias de elementos personalizados externamente y luego acceder a los elementos dentro del nodo sombra a través de la propiedad `shadow`, como se muestra a continuación:

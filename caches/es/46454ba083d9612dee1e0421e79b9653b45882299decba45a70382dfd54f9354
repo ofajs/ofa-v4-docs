@@ -1,0 +1,1 @@
+Algunas interfaces de usuario de aplicaciones están compuestas por varias capas de páginas anidadas, como la navegación superior o lateral compartida. Puedes usar la propiedad `parent` para indicar la página padre que contiene la página actual.

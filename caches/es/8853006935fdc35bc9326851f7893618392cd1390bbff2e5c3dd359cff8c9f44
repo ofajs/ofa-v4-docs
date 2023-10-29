@@ -1,0 +1,18 @@
+```html
+<template component>
+  <ul>
+    <x-fill :value="arr" name="easyLi"></x-fill>
+  </ul>
+  <template name="easyLi">
+    <li>{{$index}} - {{$data}}</li>
+  </template>
+  <script>
+    export default {
+      tag: "text-render",
+      data: {
+        arr: [{ name: "apple" }, { name: "pen" }, { name: "pineapple" }],
+      },
+    };
+  </script>
+</template>
+```

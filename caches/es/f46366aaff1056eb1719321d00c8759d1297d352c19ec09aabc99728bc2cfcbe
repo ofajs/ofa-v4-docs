@@ -1,0 +1,1 @@
+Con el método `all`, puedes obtener todos los elementos que coincidan con los [selectores CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS_selectors) en la página y devolverlos en un array.

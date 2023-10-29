@@ -1,0 +1,3 @@
+```javascript
+export const tag = "mi-boton"; // Registrar el nombre del componente como "mi-boton".
+```

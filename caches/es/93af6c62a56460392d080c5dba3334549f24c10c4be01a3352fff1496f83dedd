@@ -1,0 +1,1 @@
+Dentro del componente, puedes utilizar la propiedad `on` para vincular eventos y hacer que el componente sea interactivo. Aquí se muestra cómo puedes vincular eventos en un componente para lograr efectos interactivos.

@@ -1,0 +1,1 @@
+`tag` representa el nombre del componente registrado. Cuando no se define el atributo `tag`, el nombre del componente registrado será igual al nombre del archivo.

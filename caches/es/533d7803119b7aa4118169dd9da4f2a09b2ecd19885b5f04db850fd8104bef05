@@ -1,0 +1,1 @@
+En `x-fill`, se pueden usar las variables especiales `$index` para representar el índice del elemento de la lista actual y `$data` para representar los datos del elemento de la lista en sí.

@@ -1,0 +1,1 @@
+Puedes usar funciones asíncronas para definir datos `default`, de modo que puedas retornar dinámicamente los parámetros de registro del componente.

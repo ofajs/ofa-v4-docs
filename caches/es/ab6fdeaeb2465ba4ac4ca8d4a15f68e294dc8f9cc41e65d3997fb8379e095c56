@@ -1,0 +1,1 @@
+En los parámetros de registro del componente, puedes agregar un objeto `proto` para definir los métodos que se deben agregar al prototipo del componente. De esta manera, cuando se crea una instancia del componente, estos atributos y métodos se agregarán al prototipo de la instancia, lo que permitirá que todas las instancias accedan y compartan estos métodos.
