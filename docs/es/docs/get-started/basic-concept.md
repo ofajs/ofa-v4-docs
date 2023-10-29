@@ -4,7 +4,7 @@ La instancia `$` es una encapsulación de los elementos en la página. Además d
 
 ## Crear nuevo elemento
 
-通过 `$` 实例，我们可以直接创建新的元素并进行操作，例如：
+Con la instancia `$`, podemos crear nuevos elementos y manipularlos directamente, por ejemplo:
 
 <html-viewer>
 

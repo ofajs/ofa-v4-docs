@@ -1,6 +1,6 @@
 # sync
 
-通过 sync 语法对组件进行双向数据绑定
+Vinculación bidireccional de datos de componentes mediante sintaxis de sincronización.
 
 <comp-viewer comp-name="sync-render">
 

@@ -41,7 +41,7 @@ $el.unwrap(); // ❌ Error, no parent element to unwrap
 $el.$('#target').unwrap(); // ✅ Correct, unwrap the wrapped element
 ```
 
-当拥有其他兄弟元素时，也不可以执行 unwrap；
+Tampoco es posible ejecutar unwrap cuando hay otros elementos hermanos;
 
 ```javascript
 const $el = $(`

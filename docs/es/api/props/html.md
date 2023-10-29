@@ -1,6 +1,6 @@
 # html
 
-设置目标内部的 html 代码；
+Establecer el código html dentro del objetivo;
 
 <html-viewer>
 

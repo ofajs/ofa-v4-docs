@@ -14,7 +14,7 @@
 
 ## Framework JavaScript sin empaquetar
 
-### 无需繁琐学习，无需 npm、nodejs、webpack，即刻上手
+### Sin curva de aprendizaje, sin npm, sin nodejs, sin webpack, ¡simplemente empieza!
 
 [Tutoriales de casos](./cases/index.md)
 

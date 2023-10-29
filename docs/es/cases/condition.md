@@ -5,7 +5,7 @@
 
 # El rendimiento condicional
 
-模板内除了有模板语法，也有模板组件；
+No sólo hay sintaxis de plantilla, sino también componentes de plantilla en la plantilla;
 
 > Los componentes de plantilla son componentes diseñados específicamente para su uso en plantillas;
 

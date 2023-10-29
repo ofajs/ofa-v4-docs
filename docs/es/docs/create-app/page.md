@@ -68,7 +68,7 @@ export const watch = {
 };
 ```
 
-2. 创建页面模板：
+2. Crear plantillas de página:
 
 En el mismo directorio que el módulo de la página, crea un archivo de plantilla de página llamado `my-page-template.html`. En este archivo de plantilla, puedes usar la sintaxis de la plantilla para la interacción, similar a la sintaxis de la plantilla de componente mencionada anteriormente.
 

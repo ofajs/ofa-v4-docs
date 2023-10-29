@@ -1,6 +1,6 @@
 # parent
 
-使用 `parent` 属性，您可以获得实例的父元素实例；
+Con el atributo `parent`, podemos obtener una instancia del elemento padre de la instancia;
 
 <html-viewer>
 

@@ -152,7 +152,7 @@ Puedes usar el atributo `on:click` en la plantilla de la página para vincular e
 </template>
 ```
 
-又或者直接卸载目标元素上：
+o directamente descargados en el elemento de destino:
 
 ```html
 <button on:click="goto('./pages/about.mjs')">Ir a la página de acerca de</button>

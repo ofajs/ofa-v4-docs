@@ -268,7 +268,7 @@ Cuando has vinculado un evento, a veces es posible que desees detener la propaga
 
 La propagación de eventos se refiere a cuando se desencadena un evento en un elemento, se propaga hacia arriba a lo largo del árbol DOM y activa sucesivamente eventos del mismo tipo en los elementos padre. Si deseas detener la propagación después de manipular el evento en un elemento específico, puedes usar el método `event.stopPropagation()`.
 
-示例代码：
+Código de ejemplo:
 
 ```html
 <!DOCTYPE html>
@@ -313,7 +313,7 @@ En el ejemplo anterior, cuando haces clic en el botón "Click Me", se mostrará 
 
 Algunos eventos en ciertos elementos tienen un comportamiento predeterminado cuando se activan. Por ejemplo, hacer clic en un botón de envío provocará el envío del formulario, hacer clic en un enlace redireccionará a la dirección del enlace, etc. Si desea evitar el comportamiento predeterminado de un evento, puede utilizar el método `event.preventDefault()`.
 
-示例代码：
+Código de ejemplo:
 
 ```html
 <!DOCTYPE html>

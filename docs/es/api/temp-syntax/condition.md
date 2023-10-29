@@ -1,6 +1,6 @@
 # El rendimiento condicional
 
-条件渲染是通过三个条件组件来实现的：
+El renderizado condicional se consigue a través de tres componentes condicionales:
 
 ## x-if
 

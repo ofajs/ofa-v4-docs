@@ -12,7 +12,7 @@ Es importante tener en cuenta que el uso de este componente puede afectar el est
 
 En el ejemplo, hemos definido el componente `comp-two`, que utiliza el componente `inject-host` para inyectar estilos. Esto nos permite establecer estilos en los elementos internos del componente `comp-two` utilizando los estilos inyectados, sin afectar a otros componentes.
 
-同时，以下内容也需要特别注意：
+Además, los siguientes elementos requieren una atención especial
 
 - Al agregar etiquetas `<style>` dentro de `inject-host`, podemos definir estilos específicos dentro del componente. Estos estilos solo afectarán a los elementos del componente actual y no se extenderán a otros componentes.
 - Al inyectar estilos, debemos evitar el uso de selectores demasiado comunes para evitar afectar los estilos de otros componentes. Es importante mantener la singularidad y especificidad del selector.
