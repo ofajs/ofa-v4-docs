@@ -1,6 +1,6 @@
 # siblings
 
-%
+Usando la propiedad `siblings`, puedes obtener fácilmente todas las instancias de los vecinos del elemento actual, que serán devueltas como un array.
 
 <html-viewer>
 
