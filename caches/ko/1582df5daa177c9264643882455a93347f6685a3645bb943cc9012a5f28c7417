@@ -1,0 +1,4 @@
+```javascript
+// 애플리케이션의 라우트 구성 정보에 액세스합니다.
+const routeConfig = app.routers;
+```

@@ -1,0 +1,18 @@
+```html
+<div class="container">
+  <p>안녕하세요 세계</p>
+  <div class="item">품목 1</div>
+  <div class="item">품목 2</div>
+  <div class="item">품목 3</div>
+</div>
+<script>
+  // 从容器内查找所有带有 "item" 클래스의 자식 요소
+  const container = $(".container");
+  const items = container.all(".item");
+
+  // 모든 자식 요소의 텍스트 내용 변경
+  items.forEach((item, index) => {
+    item.text = `수정된 품목 ${index + 1}`;
+  });
+</script>
+```

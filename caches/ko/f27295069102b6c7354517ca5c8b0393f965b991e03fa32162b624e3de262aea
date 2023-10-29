@@ -1,0 +1,15 @@
+```html
+<div id="target1">target 1</div>
+<div id="target2">origin text</div>
+<br>
+<div id="logger" style="color:red;"></div>
+
+<script>
+    setTimeout(()=> {
+        $('#target2').text = `<b style="color:blue;">new text</b>`; // 只能设置文本，如果想要标签生效，请设置 html 属性
+
+        console.log($("#target1").text) // => 'target 1';
+        $("#logger").text = $("#target1").text;
+    }, 500);
+</script>
+```

@@ -1,0 +1,9 @@
+```html
+<button id="btn">Click Me Once</button>
+<script>
+  // 클릭 이벤트 처리 함수를 한 번만 실행하지만 바인딩한다.
+  $("#btn").one("click", () => {
+    alert("버튼을 한 번 클릭했습니다!");
+  });
+</script>
+```

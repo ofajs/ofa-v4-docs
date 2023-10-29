@@ -1,0 +1,9 @@
+```html
+<template page>
+  <h1>Page 1</h1>
+
+  <script>
+    export const parent = "./layout-page.html";
+  </script>
+</template>
+```

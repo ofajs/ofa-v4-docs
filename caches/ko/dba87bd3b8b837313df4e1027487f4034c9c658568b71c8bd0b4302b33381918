@@ -1,0 +1,1 @@
+上面의 예제에서 "Click Me" 버튼을 클릭하면 "Button Clicked!"가 표시되지만 "Inner Div Clicked!" 및 "Outer Div Clicked!" 이벤트는 트리거되지 않습니다. 이는 버튼의 클릭 이벤트 핸들러에서 `event.stopPropagation()`을 호출하여 이벤트 전파를 차단했기 때문입니다.

@@ -1,0 +1,4 @@
+```javascript
+// 예제 코드: 현재 페이지 모듈에서 다른 페이지로 이동하기
+page.goto("./page2.html");
+```

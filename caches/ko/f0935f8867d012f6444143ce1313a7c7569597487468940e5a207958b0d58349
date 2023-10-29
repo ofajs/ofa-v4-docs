@@ -1,0 +1,1 @@
+在注册时间后，触发的函数会被带上 [event](https://developer.mozilla.org/en-US/docs/Web/API/Event)，和原生保持一致；

@@ -1,0 +1,4 @@
+- `load` 메소드는 비동기적으로 함수를 로드하는 방법이다. 비동기 `import`와 비슷한 방법을 사용하며, `const data = await load(xxx)`를 통해 비동기 모듈을 로드할 수 있다.
+- `load`로 로드한 모듈은 `load-module`과 동일한 효과를 갖는다. `load` 메소드는 함수 버전의 `load-module` 컴포넌트와 같으며, 자세한 사용 방법은 [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js) 문서를 확인하면 된다.
+- `url`은 현재 모듈의 파일명이다.
+- `query`는 이 모듈을 로드할 때의 URL 매개변수를 객체로 변환한 것이다.

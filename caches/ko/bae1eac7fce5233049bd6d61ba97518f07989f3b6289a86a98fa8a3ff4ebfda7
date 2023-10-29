@@ -1,0 +1,16 @@
+```html
+<!-- my-single-file-page.html -->
+<template page>
+  <h1>{{pageTitle}}</h1>
+  <p>Welcome to my single file page!</p>
+  <script>
+    export default async ({ load }) => {
+      return {
+        data: {
+          pageTitle: "My Single File Page",
+        },
+      };
+    }
+  </script>
+</template>
+```

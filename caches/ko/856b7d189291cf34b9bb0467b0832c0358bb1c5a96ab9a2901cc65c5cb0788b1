@@ -1,0 +1,15 @@
+- [$](./instance/dollar.md)：인스턴스를 가져오는 주요 메소드
+- [all](./instance/all.md)：모든 관련 인스턴스를 가져옴
+- [prev](./instance/prev.md)：대상 요소의 이전 인스턴스를 가져옴
+- [prevs](./instance/prevs.md)：대상 요소 앞에 있는 모든 인스턴스를 가져옴
+- [next](./instance/next.md)：대상 요소의 다음 인���턴스를 가져옴
+- [nexts](./instance/nexts.md)：대상 요소 뒤에 있는 모든 인스턴스를 가져옴
+- [siblings](./instance/siblings.md)：대상 요소의 모든 인접 요소 인스턴스를 가져옴
+- [parent](./instance/parent.md)：부모 요소 인스턴스를 가져옴
+- [parents](./instance/parents.md)：모든 부모 요소의 인스턴스 집합을 가져옴
+- [clone](./instance/clone.md)：인스턴스를 복제하는 메소드
+- [ele](./instance/ele.md)：인스턴스의 실제 기본 요소를 가져옴
+- [shadow](./instance/shadow.md)：사용자 정의 컴포넌트의 그림자 루트 노드를 가져옴
+- [root](./instance/root.md)：대상 인스턴스의 루트 노드를 가져옴
+- [자식 요소](./instance/children.md)：숫자를 통해 직접 자식 요소를 가져옴
+- [host](./instance/host.md)：대상의 앱 요소 인스턴스를 가져옴

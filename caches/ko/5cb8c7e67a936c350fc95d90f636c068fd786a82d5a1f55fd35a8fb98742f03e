@@ -1,0 +1,1 @@
+通过 `$` 가져온 또는 생성된 인스턴스 객체는 완전한 [stanz](https://github.com/kirakiray/stanz) 데이터 특성을 가지고 있습니다. 왜냐하면 `$` 인스턴스는 [stanz](https://github.com/kirakiray/stanz)에서 상속되었기 때문입니다. 이는 `stanz`가 제공하는 데이터 조작 메서드와 특성을 사용하여 인스턴스 객체의 데이터를 조작하고 감시할 수 있다는 의미입니다.

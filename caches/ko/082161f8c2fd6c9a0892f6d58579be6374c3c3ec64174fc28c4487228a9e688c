@@ -1,0 +1,1 @@
+`o-app`는 `goto` 메서드 외에도 `replace` 및 `back` 메서드를 지원합니다.

@@ -1,0 +1,9 @@
+```html
+<div id="myElement" style="color: blue; font-size: 18px;">Hello World</div>
+<script>
+  const myElement = $("#myElement");
+
+  // 요소의 색상 스타일을 변경하면서 다른 스타일 속성을 유지합니다.
+  myElement.css = { ...myElement.css, color: 'red' };
+</script>
+```

@@ -1,0 +1,25 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger" style="border: #aaa solid 1px; padding: 8px"></div>
+
+<script>
+  const target = $("#target");
+  $("#logger").text = target;
+
+  // 使用 watch 方法监听属性值变动
+  target.watch(() => {
+    $("#logger").text = target;
+  });
+
+  setTimeout(() => {
+    // 这个属性值不会触发监听
+    target._aaa = "I am aaa";
+  }, 600);
+
+  setTimeout(() => {
+    // 即使改变了 _aaa 属性值，仍然不会触发监听
+    target._aaa = "change aaa";
+  }, 1200);
+</script>
+```

@@ -1,0 +1,6 @@
+```javascript
+// 부모 페이지의 페이지 모듈
+export const routerChange = (current, type) => {
+  console.log(`라우터 전환: 현재 페이지는 ${current.src}이고 전환 방식은 ${type}입니다.`);
+};
+```

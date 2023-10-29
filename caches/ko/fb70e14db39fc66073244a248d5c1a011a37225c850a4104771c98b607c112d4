@@ -1,0 +1,1 @@
+`load-module` 컴포넌트는 맞춤형 **선언적 로더** 라이브러리로, 다양한 파일 유형을 지원하거나 JavaScript 모듈을 중개 처리하는 강력한 기능을 제공합니다. 이는 독립된 프로젝트로 분리되어 [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js)에서 구체적인 사용 문서를 확인할 수 있습니다.

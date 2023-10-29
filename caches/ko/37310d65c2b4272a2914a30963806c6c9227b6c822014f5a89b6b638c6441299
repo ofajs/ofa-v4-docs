@@ -1,0 +1,14 @@
+```html
+<p>단락 1</p>
+<p>단락 2</p>
+<p>단락 3</p>
+<script>
+  // 모든 p 태그 요소 찾기
+  const allParagraphs = $.all("p");
+
+  // 모든 p 태그 요소의 텍스트 내용 수정
+  allParagraphs.forEach((paragraph, index) => {
+    paragraph.text = `수정된 단락 ${index + 1}`;
+  });
+</script>
+```

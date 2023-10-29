@@ -1,0 +1,10 @@
+```javascript
+var $el = $(`
+<div>
+    <div id="target"></div>
+</div>
+`);
+
+$el.wrap("<div>new div</div>"); // ❌ 오류, 부모 요소가 없어 감쌀 수 없음
+$el.$('#target').wrap("<div>new div</div>"); // ✅ 정상, 부모 요소가 있음
+```

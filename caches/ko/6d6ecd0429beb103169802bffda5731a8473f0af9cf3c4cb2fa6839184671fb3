@@ -1,0 +1,3 @@
+```javascript
+$("test-shadow").shadow.$('selector').method(xxx);
+```

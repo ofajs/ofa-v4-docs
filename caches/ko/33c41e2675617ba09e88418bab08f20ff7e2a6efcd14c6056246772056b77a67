@@ -1,0 +1,33 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본 이벤트 방지</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <form id="myForm">
+    <label for="name">이름:</label>
+    <input type="text" id="name" />
+    <button id="submitBtn">전송</button>
+  </form>
+
+  <script>
+    const form = $('#myForm');
+    const submitBtn = $('#submitBtn');
+
+    submitBtn.on('click', (event) => {
+      event.preventDefault(); // 이벤트의 기본 동작을 취소
+      const name = $('#name').value;
+      alert(`안녕하세요, ${name}님! 폼 제출이 방지되었습니다.`);
+    });
+
+    form.on('submit', () => {
+      alert('폼 제출됨!');
+    });
+  </script>
+</body>
+</html>
+```

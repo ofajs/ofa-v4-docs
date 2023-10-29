@@ -1,0 +1,26 @@
+```html
+<template component>
+  <style>
+    [test-attr="1"] {
+      color: red;
+    }
+    [test-attr="2"]{
+      color: green;
+    }
+  </style>
+  <div attr:test-attr="txt">I am target</div>
+  <script>
+    export default {
+      tag: "html-demo",
+      data: {
+        txt: "1"
+      },
+      ready(){
+        setTimeout(()=>{
+          this.txt = "2";
+        }, 500);
+      }
+    };
+  </script>
+</template>
+```

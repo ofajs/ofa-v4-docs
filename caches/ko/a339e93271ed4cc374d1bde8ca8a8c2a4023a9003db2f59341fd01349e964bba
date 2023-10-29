@@ -1,0 +1,11 @@
+```javascript
+const data = $.stanz({
+  val: "I am val"
+});
+
+data.watch(() => {
+  console.log(data.val); // => change val
+});
+
+data.val = "change val";
+```

@@ -1,0 +1,9 @@
+- [盒模型](./others/box.md)：获取目标元素的所有尺寸相关的数据
+- [formData](./others/form-data.md)：方便地绑定和获取表单数据
+- [tag](./others/tag.md)：获取目标的标签名
+- [index](./others/index.md)：获取目标元素在其父元素下的排序
+- [is](./others/is.md)：判断目标元素是否匹配 CSS 选择器表达式
+- [refresh](./others/refresh.md)：主动刷新组件的界面
+- [PATH](./others/path.md)：获取组件或页面的注册文件地址
+- [extend](./others/extend.md)：扩展实例的数据或方法；扩展 ofa.js 底层的数据或方法；
+- [实例数据特征](./others/stanz.md)：介绍实例数据的子对象数据特性，如何监听数据的变动

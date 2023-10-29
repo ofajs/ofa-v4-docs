@@ -1,0 +1,4 @@
+```javascript
+// 예시 코드: 현재 페이지 모듈 내에서 현재 페이지를 다른 페이지로 대체합니다.
+page.replace("./new-page.html");
+```

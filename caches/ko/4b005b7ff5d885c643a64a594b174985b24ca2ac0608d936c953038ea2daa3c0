@@ -1,0 +1,38 @@
+```html
+<!-- simple-button.html -->
+<template component>
+  <style>
+    .shadow-button {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    .shadow-button:hover {
+      opacity: 0.8;
+    }
+
+    .shadow-button:active {
+      transform: translateY(4px);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
+  <button class="shadow-button">
+    <slot></slot>
+  </button>
+
+  <script>
+    export default {
+      tag: 'simple-button' // 등록할 컴포넌트 이름, tag 속성이 정의되어 있지 않으면 파일 이름과 동일한 컴포넌트 이름으로 등록됩니다
+    }
+  </script>
+</template>
+```

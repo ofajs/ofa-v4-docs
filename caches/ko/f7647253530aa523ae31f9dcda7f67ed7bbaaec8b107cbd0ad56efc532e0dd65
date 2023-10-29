@@ -1,0 +1,2 @@
+export const tag = "my-button";
+export const temp = "./my-button-template.html"; 이 initialValues 변수를 삭제한 후 생성자에서 초기화된 데이터를 직접 다루지 않고 초기화 메서드에 위임하기로 결정했다. 뷰 컴포넌트의 초기화는 create 함수에 위임된 상태다. create 함수의 매개변수는 create API에서 작업에 참여하는 도구들을 모아놓은 Context 인스턴스다. API는 찾아보기 편하게 매개변수를 분리해서 사용하기로 했다. 단독 실행코드로 위 블록을 쓰면 위 ensiklocmsfunction에서 작성한 코드로 인해서 실행이 안됩니다.. 실행할 코드가 준비안된게 맞고.. 여기서 뭐 더 이야기 할게 없기 때문에 세미나 끝낼게요 여긴 감사점만 올리게요! 질문

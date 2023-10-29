@@ -1,0 +1,19 @@
+```html
+<!-- demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>data sharing</title>
+    <script src="ofa.js"></script>
+    <l-m src="./comp1.html"></l-m>
+    <l-m src="./comp2.html"></l-m>
+  </head>
+  <body>
+    <comp-one></comp-one>
+    <comp-two></comp-two>
+    <comp-two></comp-two>
+  </body>
+</html>
+```
