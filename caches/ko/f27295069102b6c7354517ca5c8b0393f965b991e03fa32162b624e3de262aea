@@ -6,7 +6,7 @@
 
 <script>
     setTimeout(()=> {
-        $('#target2').text = `<b style="color:blue;">new text</b>`; // 只能设置文本，如果想要标签生效，请设置 html 属性
+        $('#target2').text = `<b style="color:blue;">new text</b>`; // 텍스트만 설정할 수 있으며, 태그를 유효하게 사용하려면 HTML 속성을 설정하세요.
 
         console.log($("#target1").text) // => 'target 1';
         $("#logger").text = $("#target1").text;

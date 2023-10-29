@@ -4,7 +4,7 @@
 
 조금만 살펴봐주세요. 필요할 때 언제든 API 문서를 참고하실 수 있습니다.
 
-열에 대한 자주 사용하는 속성
+## 열에 대한 자주 사용하는 속성
 
 - [tag](./others/tag.md)：대상의 태그 이름 가져오기
 - [ele](./instance/ele.md)：인스턴스의 실제 원시 요소 가져오기
@@ -23,7 +23,7 @@
 - [remove](./operation/remove.md)：대상 요소 삭제
 - [attr](../../api/props/attr.md)：대상 요소의 [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) 가져오기 또는 설정하기
 
-## 重要特性
+## 중요한 기능
 
 - [폼 데이터](../../api/others/form-data.md): 폼 데이터를 손쉽게 바인딩하고 가져오는 기능
 

@@ -10,11 +10,11 @@
 
       return {
         data: {
-        //   obj: data // ❌ This operation is wrong, setting data directly cannot be recycled
+        //   obj: data // ❌ 這種操作是錯誤的，直接設置數據，無法回收內存導致泄漏
           obj: {},
         },
         ready() {
-          this.obj = data; // ❌ Setting in the ready lifecycle cannot determine when to clear, which may cause memory leaks. The safest method is to set it in the attached lifecycle and delete it after detached
+          this.obj = data; // ❌ 在 ready 生命周期中設置，無法確定何時清空，可能會導致內存泄漏。最安全的方法是在 attached 生命周期內設置，在 detached 後刪除
         },
       };
     }

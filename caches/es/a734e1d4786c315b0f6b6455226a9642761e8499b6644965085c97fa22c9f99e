@@ -10,7 +10,7 @@
 
       return {
         data: {
-        //   obj: data // ❌ Esta operación es incorrecta, ajuste de datos directamente, fuga de memoria
+        //   obj: data // ❌ Esta operación es incorrecta, establece los datos directamente y no puede recuperar la memoria provocando fugas
           obj: {},
         },
         ready() {

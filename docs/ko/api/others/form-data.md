@@ -6,7 +6,10 @@
 
 <html-viewer>
 
-기재된 텍스트는 한국어로 번역할 수 없습니다.
+```html
+<!-- 프로젝트에 ofa.js 가져오기 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <form id="myForm">
@@ -48,7 +51,10 @@
 
 <html-viewer>
 
-기재된 텍스트는 한국어로 번역할 수 없습니다.
+```html
+<!-- 프로젝트에 ofa.js 가져오기 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
 ```html
 <form id="myForm">
@@ -83,7 +89,7 @@
 
 이 예제에서는 먼저 텍스트 입력 상자, 라디오 버튼 및 텍스트 영역이 포함된 폼을 만들었고, `formData` 메서드를 사용하여 데이터 객체 `data`를 생성했습니다. 그런 다음 `data` 객체의 속성을 수정함으로써 양방향 데이터 바인딩, 즉 폼 요소의 값이 객체의 속성 변경과 자동으로 업데이트되는 기능을 구현했습니다. 이러한 양방향 데이터 바인딩 기능은 폼 데이터와의 상호 작용을 더 편리하게 만듭니다.
 
-## 监听特定的表单
+## 특정 폼 모니터링
 
 `formData()` 메서드는 기본적으로 대상 요소 내의 모든 `input`、`select` 및 `textarea` 요소를 감지합니다. 그러나 특정한 폼 요소만 감지하려면 [CSS 선택자](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)를 전달하여 구현할 수 있습니다.
 
@@ -91,59 +97,38 @@
 
 <html-viewer>
 
-기재된 텍스트는 한국어로 번역할 수 없습니다.
+```html
+<!-- 프로젝트에 ofa.js 가져오기 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```
 
-길을 걷다가
-걷다가는 나를 만나요
-너무 예뻐서 하늘을 날아요
-나는 수줍어서
-숨겨버렸어요
-설레이는 가슴 고칠 수 없어요
-너 하나 때문에 다 바뀌었어요
-사랑 같은 꿈을 꾸게 해요
-맨날 웃고 있는 나였어
-하루에도 수백 번은 웃겠어
-좋게만 생각해요 난
-서로 마주치쟈
-날이 좋아질 것 같애
-널 사랑한다 말하고 싶은데
-겁이나요
-멍하니 서 있는 그때
-창 밖은 어둡게 져 있어요
-이런 모습 보인다면 어떡하지
-안녕하세요 ?
-안녕하세요 너를 처음 본 듯한
-기뻐서 웃죠
-나도 가끔 웃죠 이런 내 맘을 난 몰라요
-하루에도 수백 번은 웃겠어요
-좋게만 생각해요 난
-웃게 만들었어
-사랑을 느낄 수 있도록
-내 맘을 전할래요
-이세상 오로라는 한곳에 있을까요
-달빛이 모인 밤하늘은 아름다워요
-누가 봐도 슬픔 없는 거짓말
-이 순간이 계속 돼요
-좋아요 빛날 수 있는 내가 좋아요
-뮤지컬 같은 노래를 들려줘요
-내 맘을 느낄 수 있도록
-사랑을 전할래요
-달이 떠오르는 저 멀리까지공중에 마법 깐 상자 열어
-수많은 세상 모두 환하게 불태워
-돌아가지 말고 아무도 막지 말고한 숨결처럼 불어와
-날아 오르는 멋진 날개로
-푸른 어둠에 불붙여 언제나 같은 맘
-세상을 향해 불붙여 날마다 날마다 불타오르게 하나보단 둘이 더 좋아요
-아프진 않지만 예쁘지만 사랑인 걸 알아요
-좋아요 빛날 수 있는내가 좋아요
-뮤지컬 같은 노래를들려줘요
-내 맘을 느낄 수 있도록사랑을 전할래요
-수많은 세상 모두 환하게 불태워
-돌아가지 말고아무도 막지 말고한 숨결처럼 불어와
-날아 오르는 멋진 날개로
-푸른 어둠에 불붙여날마다 날마다 불타오르게 하나보단 둘이 더 좋아요
-아프진 않지만 예쁘지만 사랑인 걸 알아요
-살짝만 스치는 니가 준 따스한 그 마음이내 삶을 바꿨어-사랑해요
+```html
+<form id="myForm">
+  <input type="text" name="username" value="John Doe" class="use-it" />
+  <div>
+    sex:
+    <label>
+      man
+      <input type="radio" name="sex" value="man" class="use-it" />
+    </label>
+    <label>
+      woman
+      <input type="radio" name="sex" value="woman" class="use-it" />
+    </label>
+  </div>
+  <textarea name="message">이 양식 요소는 바인딩되지 않습니다.</textarea>
+</form>
+<br />
+<div id="logger"></div>
+<script>
+  const data = $("#myForm").formData(".use-it");
+
+  $("#logger").text = data;
+  data.watch(() => {
+    $("#logger").text = data;
+  });
+</script>
+```
 
 </html-viewer>
 
@@ -151,8 +136,7 @@
 
 ## 사용자 정의 양식
 
-답변은 다음과 같습니다: 
-커스텀 폼 컴포넌트의 사용법은 매우 간단합니다. 커스텀 컴포넌트에 **value 속성**을 추가하고 **name 특성**을 설정하기만 하면 됩니다.
+사용자 정의 폼 컴포넌트를 사용하려면 사용자 정의 컴포넌트에 **value 속성**을 추가하고 **name 특성**을 설정하기만 하면 됩니다.
 
 아래 예시에서는 "custom-input"이라는 사용자 정의 폼 컴포넌트를 생성합니다. 이 컴포넌트는 편집 가능한 텍스트 상자로, 텍스트가 변경될 때 마다 `value` 속성을 실시간으로 업데이트합니다.
 
@@ -277,4 +261,4 @@
 
 </comp-viewer>
 
-通过 `ready` 周期生命周期，在组件准备就绪后，我们使用 `this.shadow.formData()` 方法生成了表单数据对象 `fdata`。然后，我们使用 `watch` 监听 `fdata` 的变化，当数据发生变化时，将其转化为 JSON 字符串并更新 `logtext`，以实现实时显示表单数据的功能。
+`ready` 라이프사이클 주기를 통해 컴포넌트가 준비되면 `this.shadow.formData()` 메서드를 사용하여 폼 데이터 객체 `fdata`를 생성했습니다. 그런 다음 `fdata`의 변경 사항을 감시하기 위해 `watch`를 사용하여 데이터가 변경될 때 JSON 문자열로 변환하고 `logtext`를 업데이트하여 폼 데이터를 실시간으로 표시하는 기능을 구현했습니다.

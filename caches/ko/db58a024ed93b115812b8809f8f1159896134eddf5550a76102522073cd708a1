@@ -1,10 +1,10 @@
 ```javascript
 // simple-button.mjs
-export const type = $.COMP; // 双文件模块必须带有 `export const type = $.COMP`
+export const type = $.COMP; // 이중 파일 모듈에는 `export const type = $.COMP`가 있어야 합니다.
 
-// 需要注册的组件名，当没有定义 tag 属性时，注册的组件名与文件名保持一致
+// 등록할 컴포넌트의 이름입니다. 태그 속성이 정의되지 않은 경우, 등록된 컴포넌트의 이름은 파일 이름과 동일합니다.
 // export const tag = 'simple-button';
 
-// 组件模板的地址，当没有定义时，默认载入和当前模块同目录下的和组件同名的 html 文件
+// 컴포넌트 템플릿의 주소가 정의되어 있지 않으면 기본적으로 현재 모듈과 동일한 디렉터리에 컴포넌트와 동일한 이름의 html 파일을 로드합니다.
 // export const temp = './simple-button.html';
 ```

@@ -1,6 +1,6 @@
-# ofa.js - 不需要打包的 JavaScript 框架
+# ofa.js - 번들링이 필요 없는 JavaScript 프레임워크
 
-ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프레임워크로, 복잡한 구축 과정이 필요하지 않고 직접 참조하여 쉽게 사용할 수 있습니다. 이는 npm, Node.js 및 webpack에 대한 의존성을 버리고 jQuery 시대의 편리함을 되살립니다.
+<!-- 설명: ofa.js는 번거로운 빌드 프로세스 없이 직접 참조하여 사용할 수 있는 사용자 인터페이스를 구축하는 새로운 프레임워크입니다. npm, Node.js 및 webpack에 대한 의존성을 제거하고 jQuery 시대의 편리함으로 돌아갑니다. -->
 
 <simp-block>
 
@@ -14,7 +14,7 @@ ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프�
 
 ## 자바스크립트 프레임워크를 패키징 할 필요가 없습니다.
 
-### 无需繁琐学习，无需 npm、nodejs、webpack，即刻上手
+### 까다로운 학습 필요 없음, npm, nodejs, webpack 없이 즉시 시작
 
 [사례 안내서](./cases/index.md)
 
@@ -28,12 +28,12 @@ ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프�
 
 ## 웹 컴포넌트 기반
 
-### ofa.js 基于 Web Components 开发。以下是支持的平台和时间，你可以立即体验
+### ofa.js는 Web Components를 기반으로 개발되었습니다. 지원되는 플랫폼과 릴리스 일정은 다음과 같습니다. 지금 바로 경험해 볼 수 있습니다.
 
 <support-platforms></support-platforms>
 
-다운로드 초기 프로젝트
-온라인에서 초기 프로젝트 찾아보기
+<a href="../publics/download/ofajs-start.zip" target="_blank">초기화 프로젝트 다운로드</a>
+<a href="../publics/download/ofajs-start/index.html" target="_blank">온라인에서 초기화 프로젝트 보기</a>
 
 </simp-block>
 
@@ -41,7 +41,7 @@ ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프�
 
 ## 극저 사용 임계값
 
-与其他前端框架不同，使用基于ofa.js开发的组件无需阅读繁杂入门指南。立刻创建一个 HTML 文件，体验一下“一拳撞飞logo”的组件。
+다른 프런트엔드 프레임워크와 달리 ofa.js를 기반으로 개발된 컴포넌트를 개발하는 데 복잡한 시작 가이드를 읽을 필요가 없습니다. HTML 파일을 즉시 만들어 "로고 펀치 아웃" 컴포넌트를 체험해 보세요.
 
 <html-viewer style="width:100%;">
 
@@ -53,13 +53,13 @@ ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프�
 ```
 
 ```html
-<!-- 使用 punch-logo 组件 -->
+<!-- punch-logo 구성 요소 사용 -->
 <punch-logo style="margin:50px 0 0 100px;">
     <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
-    <h2>不加班了</h2>
-    <p slot="fly">下班给我</p>
-    <p slot="fly">迟点下班</p>
-    <p slot="fly">周末加班</p>
+    <h2>야근하지 않을게요</h2>
+    <p slot="fly">퇴근해주세요</p>
+    <p slot="fly">나중에 퇴근</p>
+    <p slot="fly">주말에 야근</p>
 </punch-logo>
 ```
 
@@ -69,7 +69,7 @@ ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프�
 
 <simp-block>
 
-## 一步封装组件，摆脱繁琐流程
+## 한 단계로 컴포넌트 패키징 및 복잡한 프로세스 제거
 
 과거의 Web Components의 캡슐화는 복잡한 지식 학습이 필요했지만, 지금은 단 한 개의 파일만으로도 가능합니다.
 
@@ -129,7 +129,7 @@ ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프�
 
 <simp-block>
 
-다양하고 편리한 템플릿 문법 제공
+## 다양하고 편리한 템플릿 문법 제공
 
 <case-switch>
 
@@ -263,25 +263,29 @@ ofa.js 은(는) 사용자 인터페이스를 구축하기 위한 새로운 프�
 
 <simp-block>
 
-대체로 제이쿼리 선택이 가능합니다.
+## 대체로 제이쿼리 선택이 가능합니다.
 
-jQuery와 유사한 API를 가지고 있어서 동일한 편리함을 느낄 수 있습니다.
+### jQuery와 유사한 API를 가지고 있어서 동일한 편리함을 느낄 수 있습니다.
 
 <split-code>
 
-javascript
+```javascript
 // jQuery Code
-$("#target").html("일부 HTML 코드"); // HTML 설정
-$("#target").text("텍스트 설정"); // 텍스트 설정
-var ele_text = $("#target").text(); // 텍스트 가져오기
-var parents = $("#target").parents(); // 모든 부모 요소 가져오기
-var child = $("#target").children()[0]; // 첫 번째 자식 요소 가져오기
+$("#target").html("some html code"); // html 설정
+$("#target").text("set text"); // 텍스트 설정
+var ele_text = $("#target").text(); // 텍스트 가져 오기
+var parents = $("#target").parents(); // 모든 상위 요소 가져 오기 (배열)
+var child = $("#target").children()[0]; // 첫 번째 자식 요소 가져 오기
+```
 
-jQuery ("#target").html = "일부 html 코드"; // html 설정
-jQuery ("#target").text = "텍스트 설정"; // 텍스트 설정
-var ele_text = jQuery ("#target").text; // 텍스트 가져 오기
-var parents = jQuery ("#target").parents; // 모든 상위 요소 가져 오기 (배열)
-var child = jQuery ("#target")[0]; // 첫 번째 자식 요소 가져 오기
+```javascript
+// ofa.js Code
+$ =("#target").html = "일부 html 코드"; // html 설정
+$("#target").text = "텍스트 설정"; // 텍스트 설정
+var ele_text = $("#target").text; // 텍스트 가져 오기
+var parents = $("#target").parents; // 모든 상위 요소 가져 오기 (배열)
+var child = $("#target")[0]; // 첫 번째 자식 요소 가져 오기
+```
 
 </split-code>
 
@@ -289,9 +293,9 @@ var child = jQuery ("#target")[0]; // 첫 번째 자식 요소 가져 오기
 
 <simp-block>
 
-업무 사례
+## 업무 사례
 
-%[https://obook.ofajs.com/](https://obook.ofajs.com/) obook 최간단한 문서 작성 도구%
+<a href="https://obook.ofajs.com/">obook 가장 간단한 문서 작성기</a>
 
 </simp-block>
 

@@ -10,7 +10,7 @@
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
 ```
 
-## 使用 o-router 组件
+## o-router 컴포넌트 사용
 
 o-router 구성 요소는 o-app 구성 요소의 외부에 래핑하여 사용됩니다. 이렇게 하면 응용 프로그램 내의 경로가 현재 브라우저 탭에 바인딩될 수 있습니다.
 
@@ -20,7 +20,7 @@ o-router 구성 요소는 o-app 구성 요소의 외부에 래핑하여 사용�
 </o-router>
 ```
 
-텍스트를 번역할 수 없습니다.
+## 텍스트를 번역할 수 없습니다.
 
 `o-router` 컴포넌트는 `fix-body` 속성을 제공합니다. 이 속성을 설정하면 컴포넌트가 `<html>` 태그에 자동으로 스타일을 추가하여 애플리케이션의 크기가 페이지 크기와 동일하게 만들어 애플리케이션 콘텐츠가 전체 창에 가득 차도록 합니다.
 

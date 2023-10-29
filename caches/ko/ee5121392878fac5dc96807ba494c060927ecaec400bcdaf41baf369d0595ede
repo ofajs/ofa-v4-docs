@@ -16,7 +16,7 @@
     }
   </style>
 
-  <!-- 使用模板渲染语法，将组件数据渲染成文本 -->
+  <!-- 템플릿 렌더링 구문을 사용하여 컴포넌트 데이터를 텍스트로 렌더링하기 -->
   <button class="shadow-button" on:click="count++">{{buttonText}} - count:{{count}}</button>
 
   <script>

@@ -1,1 +1,4 @@
-기재된 텍스트는 한국어로 번역할 수 없습니다.
+```html
+<!-- 프로젝트에 ofa.js 가져오기 -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+```

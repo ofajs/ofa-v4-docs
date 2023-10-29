@@ -2,7 +2,7 @@
 
 [`style`](https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/style) 속성을 사용하여 원래의 모양을 유지하세요.
 
-style속성은 실제 스타일 값을 가져올 수 없으며, 오직 style 속성에 설정된 값을 가져올 수 있습니다. style 메서드는 css 메서드와 유사하지만 전체 스타일을 덮어쓸 수는 없습니다. css와 비교했을 때, style 메서드의 내부 실행 효율이 더 높습니다.
+`style` 속성은 스타일의 실제 값을 가져올 수 없으며 `style` 속성에 설정된 값만 가져올 수 있습니다. `style` 메서드는 [css 메서드](./css.md)와 유사하지만 전체 스타일을 덮어쓸 수 없습니다. [css](./css.md)와 비교하면 `style` 메서드의 내부 실행 효율이 더 높습니다.
 
 전체 예시는 다음과 같습니다. `style`을 사용하는 방법을 설명합니다.
 

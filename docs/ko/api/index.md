@@ -1,9 +1,8 @@
-#
-API 소개
+# API 소개
 
 ofa.js API 개요입니다. 필요할 때 자세한 문서를 찾아 보기 위해 먼저 살펴보세요.
 
-## 实例相关
+## 인스턴스 관련
 
 - [$](./instance/dollar.md)：인스턴스를 가져오는 주요 메소드
 - [all](./instance/all.md)：모든 관련 인스턴스를 가져옴
@@ -40,7 +39,7 @@ ofa.js API 개요입니다. 필요할 때 자세한 문서를 찾아 보기 위�
 - [classList](./props/class-list.md)：대상 요소의 기본 class 목록을 가져옵니다.
 - [data](./props/data.md)：대상 요소의 기본 데이터 집합을 가져옵니다.
 
-이벤트 관련
+## 이벤트 관련
 
 - [on](./event/on.md): 이벤트를 대상 요소에 바인딩합니다.
 - [one](./event/one.md): 대상 요소에 일회성 이벤트를 바인딩합니다.
@@ -64,14 +63,14 @@ ofa.js API 개요입니다. 필요할 때 자세한 문서를 찾아 보기 위�
 - [detached](./life-cycle/detached.md)：컴포넌트가 문서에서 제거된 후에 발생합니다.
 - [routerChange](./life-cycle/router-change.md)：중첩된 부모 페이지가 애플리케이션 라우팅이 변경될 때 발생합니다.
 
-## 其他
+## 기타
 
-- [盒模型](./others/box.md)：获取目标元素的所有尺寸相关的数据
-- [formData](./others/form-data.md)：方便地绑定和获取表单数据
-- [tag](./others/tag.md)：获取目标的标签名
-- [index](./others/index.md)：获取目标元素在其父元素下的排序
-- [is](./others/is.md)：判断目标元素是否匹配 CSS 选择器表达式
-- [refresh](./others/refresh.md)：主动刷新组件的界面
-- [PATH](./others/path.md)：获取组件或页面的注册文件地址
-- [extend](./others/extend.md)：扩展实例的数据或方法；扩展 ofa.js 底层的数据或方法；
-- [实例数据特征](./others/stanz.md)：介绍实例数据的子对象数据特性，如何监听数据的变动
+- [박스 모델](./others/box.md) : 대상 요소의 모든 크기 관련 데이터를 가져옴
+- [formData](./others/form-data.md) : 폼 데이터를 편리하게 바인딩하고 가져옴
+- [tag](./others/tag.md) : 대상의 태그 이름을 가져옴
+- [index](./others/index.md) : 대상 요소가 부모 요소 내에서의 순서를 가져옴
+- [is](./others/is.md) : 대상 요소가 CSS 선택자 표현식과 일치하는지 판단
+- [refresh](./others/refresh.md) : 구성 요소의 인터페이스를 수동으로 새로 고침
+- [PATH](./others/path.md) : 구성 요소 또는 페이지의 등록 파일 주소를 가져옴
+- [extend](./others/extend.md) : 인스턴스 데이터 또는 메서드를 확장; ofa.js의 하위 데이터 또는 메서드를 확장
+- [인스턴스 데이터 특성](./others/stanz.md) : 인스턴스 데이터의 하위 객체 데이터 특성을 소개하고 데이터의 변경을 어떻게 감시할지 설명함

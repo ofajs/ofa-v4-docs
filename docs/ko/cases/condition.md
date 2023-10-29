@@ -3,7 +3,7 @@
 <a href="../../publics/examples/condition/test-demo.html" main></a>
 </template>
 
-# 条件渲染
+# 조건부 렌더링
 
 이 문장은 한국어로 번역할 수 없습니다.
 

@@ -18,4 +18,4 @@
   - **next**: 페이지가 입장하기 전에 나타나는 스타일을 나타냅니다.
   - **previous**: 페이지를 나가려고 할 때의 스타일을 나타냅니다.
 
-% This passage contains simplified Chinese characters, so it would be more appropriate to translate it into Traditional Chinese first.  通過這種方式，您可以根據應用的需要，自定義首頁、載入中樣式和頁面跳轉動畫等參數，從而為應用帶來更加個性化的體驗。
+이렇게 하면 응용 프로그램의 요구 사항에 따라 홈페이지, 로딩 스타일 및 페이지 전환 애니메이션과 같은 매개 변수를 사용자 정의하여 응용 프로그램을 보다 개인화된 경험으로 만들 수 있습니다.

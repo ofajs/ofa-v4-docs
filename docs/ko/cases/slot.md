@@ -3,7 +3,7 @@
 <a href="../../publics/examples/simple-btn/simple-btn.html" main></a>
 </template>
 
-컴포넌트 슬롯
+# 컴포넌트 슬롯
 
 자리 표시자 `<slot></slot>` 태그를 템플릿에 추가함으로써 컴포넌트를 사용할 때 내용을 해당 컴포넌트 태그의 ���롯에 배치할 수 있습니다.
 

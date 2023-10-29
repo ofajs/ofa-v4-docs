@@ -2,7 +2,7 @@
 
 ofa.js에서는 컴포넌트 모듈에서 특정한 등록 매개변수를 정의하여 컴포넌트의 설정을 더 유연하게 구성할 수 있습니다. 각 등록 매개변수에 대해 자세히 설명하고 해당하는 예제를 제시합니다.
 
-주요 매개 변수
+## 주요 매개 변수
 
 기본 매개 변수는 구성 요소의 기본 구성으로, 다음과 같은 속성을 포함합니다.
 
@@ -86,7 +86,7 @@ export const watch = {
 
 일반적으로 이 변수를 설정할 필요는 없으며, 주로 분리 모드에서 사용되며 컴포넌트 템플릿의 주소를 지정하는 데 사용됩니다. `temp` 가 정의되지 않은 경우, 기본적으로 현재 모듈과 동일한 이름을 가진 HTML 파일을 로드합니다. 해당 파일은 동일한 디렉토리에 있어야 합니다.
 
-## 合并变量到 default
+## default로 변수 병합
 
 default에 모든 내보낼 변수를 작성하면 더 편리합니다.
 
@@ -116,7 +116,7 @@ export default {
 };
 ```
 
-## 示例代码
+## 예제 코드
 
 아래는 기본 매개변수와 구성 요소 템플릿이 포함 된 완전한 예제 코드입니다.
 
@@ -153,7 +153,7 @@ export default {
     }
   </style>
 
-  <!-- 使用模板渲染语法，将组件数据渲染成文本 -->
+  <!-- 템플릿 렌더링 구문을 사용하여 컴포넌트 데이터를 텍스트로 렌더링하기 -->
   <button class="shadow-button" on:click="count++">{{buttonText}} - count:{{count}}</button>
 
   <script>
@@ -188,7 +188,7 @@ export default {
 
 ### default
 
-你还可以使用异步函数来定义 `default` 数据，以便动态地返回组件的注册参数。
+또한 동적으로 컴포넌트의 등록 매개변수를 반환하기 위해 `default` 데이터를 정의하는 비동기 함수를 사용할 수 있습니다.
 
 함수의 `function`은 `load`, `url` 및 `query`를 포함하는 개체를 가져옵니다.
 
@@ -199,7 +199,41 @@ export default {
 
 다음은 `default`를 사용한 예시입니다.
 
+```javascript
+// button-component.mjs
 export const tag = "my-button";
-export const temp = "./my-button-template.html"; 이 initialValues 변수를 삭제한 후 생성자에서 초기화된 데이터를 직접 다루지 않고 초기화 메서드에 위임하기로 결정했다. 뷰 컴포넌트의 초기화는 create 함수에 위임된 상태다. create 함수의 매개변수는 create API에서 작업에 참여하는 도구들을 모아놓은 Context 인스턴스다. API는 찾아보기 편하게 매개변수를 분리해서 사용하기로 했다. 단독 실행코드로 위 블록을 쓰면 위 ensiklocmsfunction에서 작성한 코드로 인해서 실행이 안됩니다.. 실행할 코드가 준비안된게 맞고.. 여기서 뭐 더 이야기 할게 없기 때문에 세미나 끝낼게요 여긴 감사점만 올리게요! 질문
+export const temp = "./my-button-template.html";
+
+export default async function ({ load, url, query }) {
+  console.log("url:", url); // 현재 모듈의 파일명을 출력합니다.
+  console.log("query:", query); // 현재 모듈의 URL 매개변수에서 변환된 객체를 출력합니다.
+
+  const asyncData = await load("./async-data.mjs"); // 로드를 사용하여 비동기적으로 모듈 로드
+  console.log("asyncData:", asyncData); // 비동기식으로 로드된 모듈 데이터 출력
+
+  return {
+    data: {
+      count: 0,
+    },
+    attrs: {
+      buttonText: "Click Me",
+    },
+    watch: {
+      count(newValue, { watchers }) {
+        let oldValue;
+        if (watchers) {
+          oldValue = watchers[0].oldValue;
+        }
+        console.log(`count changed from ${oldValue} to ${newValue}`);
+      },
+    },
+    proto: {
+      sayHello() {
+        alert("Hello Count:" + this.count);
+      },
+    },
+  };
+}
+```
 
 %

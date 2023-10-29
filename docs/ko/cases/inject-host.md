@@ -4,7 +4,7 @@
 <a href="../../publics/examples/inject-host/comp-two.html" main></a>
 </template>
 
-# inject-host 组件
+# inject-host 구성 요소
 
 Web Components의 격리성 때문에 컴포넌트 슬롯 내 요소의 스타일을 직접 수정하기 어렵습니다. 이 문제에 대처하기 위해 ofa.js는 'inject-host'라는 컴포넌트를 제공합니다. 'inject-host' 컴포넌트는 호스트 레이어에 스타일을 주입하여 컴포넌트의 외관을 더 유연하게 구성할 수 있습니다.
 

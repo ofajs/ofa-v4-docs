@@ -30,7 +30,7 @@
 
 </html-viewer>
 
-노봉번부밪흈노봉푸볤나능퓸처
+## 노봉번부밪흈노봉푸볤나능퓸처
 
 css 객체를 얻으면 요소에 직접 설정된 스타일 값을 얻을 수 있습니다. 아래는 예시입니다.
 
@@ -41,7 +41,25 @@ css 객체를 얻으면 요소에 직접 설정된 스타일 값을 얻을 수 �
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 ```
 
-텍스트를 번역할 수 없습니다.
+```html
+<div id="target" style="color:red">origin text</div>
+<br>
+<h4>logger</h4>
+<div id="logger" style="border:#aaa solid 1px;padding:8px;"></div>
+
+<script>
+    $("#logger").text = Object.keys($("#target").css);
+   
+    setTimeout(()=>{
+        // 기존 스타일 커버
+        $("#target").css = {
+            color: "blue",
+            lineHeight: "5em"
+        };
+        $("#logger").text = Object.keys($("#target").css);
+    }, 500);
+</script>
+```
 
 </html-viewer>
 

@@ -3,7 +3,7 @@
 <a href="../../publics/examples/render-text/text-demo.html"></a>
 </template>
 
-컴포넌트 인스턴스의 값을 가져오고 수정하기
+# 컴포넌트 인스턴스의 값을 가져오고 수정하기
 
 외부에서도 컴포넌트의 데이터를 가져오거나 수정할 수 있습니다.
 

@@ -1,7 +1,8 @@
-javascript
+```javascript
 // jQuery Code
-$("#target").html("일부 HTML 코드"); // HTML 설정
-$("#target").text("텍스트 설정"); // 텍스트 설정
-var ele_text = $("#target").text(); // 텍스트 가져오기
-var parents = $("#target").parents(); // 모든 부모 요소 가져오기
-var child = $("#target").children()[0]; // 첫 번째 자식 요소 가져오기
+$("#target").html("some html code"); // html 설정
+$("#target").text("set text"); // 텍스트 설정
+var ele_text = $("#target").text(); // 텍스트 가져 오기
+var parents = $("#target").parents(); // 모든 상위 요소 가져 오기 (배열)
+var child = $("#target").children()[0]; // 첫 번째 자식 요소 가져 오기
+```

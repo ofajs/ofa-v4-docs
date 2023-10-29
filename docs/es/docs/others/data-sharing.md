@@ -126,7 +126,7 @@ Dado que los datos se comparten, asegúrate de liberar los datos en el momento a
 
       return {
         data: {
-        //   obj: data // ❌ Esta operación es incorrecta, ajuste de datos directamente, fuga de memoria
+        //   obj: data // ❌ Esta operación es incorrecta, establece los datos directamente y no puede recuperar la memoria provocando fugas
           obj: {},
         },
         ready() {

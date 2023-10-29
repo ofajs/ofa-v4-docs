@@ -31,7 +31,7 @@
 
 같은 도메인의 컴포넌트가 자세한 리소스 주소를 알 필요 없이 공유 리소스에 더 쉽게 액세스 할 수 있도록 @obook 별명을 사용하여 "https://cdn.jsdelivr.net/npm/obook/blocks/simp-block.html" 리소스를 l-m 태그에 도입했습니다. 이는 코드의 유지 관리성과 도메인 간 리소스 공유의 편리함을 향상시킵니다.
 
-주의 사항
+## 주의 사항
 
 이름을 설정할 때, 다음 사항에 유의해주세요.
 
@@ -48,6 +48,7 @@ lm.config({
 
 - 같은 이름의 별명을 중복으로 설정하지 마십시오. 그렇지 않으면 오류가 발생합니다.
 
+```javascript
 lm.config({
   alias: {
     "@namex": "https://example.com/resource",
@@ -61,3 +62,4 @@ lm.config({
     "@namex": "https://example.com/other-resource", // 오류, 중복된 별칭
   },
 });
+```

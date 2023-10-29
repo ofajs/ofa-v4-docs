@@ -3,7 +3,7 @@
 <a href="../../publics/examples/life-cycle/test-demo.html" main></a>
 </template>
 
-生命周期
+# 라이프사이클
 
 생명주기 훅 함수는 컴포넌트의 다른 단계에서 코드를 실행하는 기회를 제공합니다. `ofa.js` 에서는 다섯 가지 주요 생명주기 훅 함수가 있습니다. `created`, `ready`, `watch`, `attached` 및 `detached` 가 그것입니다.
 

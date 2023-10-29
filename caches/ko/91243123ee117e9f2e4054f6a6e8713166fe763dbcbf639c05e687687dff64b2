@@ -1,1 +1,4 @@
-현재 페이지 인스턴스를 가져옵니다.
+```javascript
+// 현재 페이지 예제 가져오기
+const currentPage = app.current;
+```

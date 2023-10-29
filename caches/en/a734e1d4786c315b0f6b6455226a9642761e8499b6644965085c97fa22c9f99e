@@ -10,11 +10,11 @@
 
       return {
         data: {
-        //   obj: data // ❌ 这种操作是错误的，直接设置数据，无法回收
+        //   obj: data // ❌ This operation is incorrect, directly setting data will cause memory leakage
           obj: {},
         },
         ready() {
-          this.obj = data; // ❌ 在 ready 生命周期中设置，无法确定何时清空，可能会导致内存泄漏。最安全的方法是在 attached 生命周期内设置，在 detached 后删除
+          this.obj = data; // ❌ Setting in ready lifecycle, cannot determine when to clear, may cause memory leaks. The safest way is to set in attached lifecycle and delete after detached
         },
       };
     }

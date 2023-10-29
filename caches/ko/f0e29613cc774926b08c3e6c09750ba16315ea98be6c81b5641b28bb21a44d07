@@ -1,6 +1,6 @@
 ```javascript
-const myComponent = $("my-component"); // 获取组件实例
-const shadowContainer = myComponent.shadow; // 获取组件的 Shadow DOM 容器
+const myComponent = $("my-component"); // 컴포넌트 인스턴스 가져오기
+const shadowContainer = myComponent.shadow; // 컴포넌트의 섀도 DOM 컨테이너 가져오기
 
-$("my-component").shadow.$("h1").css.color = 'red' // 将 Shadow DOM 的 h1 改为红色
+$("my-component").shadow.$("h1").css.color = 'red' // 섀도 DOM의 h1을 빨간색으로 변경합니다.
 ```
