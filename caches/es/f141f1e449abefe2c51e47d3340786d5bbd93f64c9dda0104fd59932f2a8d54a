@@ -1,0 +1,1 @@
+Si la plantilla de componente depende de otros componentes, esta etapa no esperará a que se carguen las dependencias. Por lo tanto, esta etapa es adecuada para agregar estilos de carga a los componentes, pero ten en cuenta que debes esperar a que las dependencias se carguen antes de ejecutar las operaciones relacionadas.

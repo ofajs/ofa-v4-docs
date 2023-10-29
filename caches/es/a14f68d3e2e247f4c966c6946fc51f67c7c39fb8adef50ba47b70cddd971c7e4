@@ -1,0 +1,18 @@
+```html
+<div class="container">
+  <p>Hola Mundo</p>
+  <div class="item">Elemento 1</div>
+  <div class="item">Elemento 2</div>
+  <div class="item">Elemento 3</div>
+</div>
+<script>
+  // 从容器内查找所有带有 "item" 类的子元素
+  const container = $(".container");
+  const items = container.all(".item");
+
+  // 修改所有子元素的文本内容
+  items.forEach((item, index) => {
+    item.text = `Elemento Modificado ${index + 1}`;
+  });
+</script>
+```

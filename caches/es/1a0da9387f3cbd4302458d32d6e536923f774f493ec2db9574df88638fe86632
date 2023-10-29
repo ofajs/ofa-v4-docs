@@ -1,0 +1,1 @@
+Debido a que los elementos dentro de un componente están aislados del entorno externo, la propiedad `root` de los elementos dentro del nodo sombra es el nodo raíz de la sombra;

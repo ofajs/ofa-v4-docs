@@ -1,0 +1,5 @@
+- [Renderizado de texto](./temp-syntax/text-render.md): Renderiza rápidamente texto en archivos de plantilla
+- [class](./temp-syntax/class.md): Renderiza rápidamente nombres de clases en archivos de plantilla
+- [sync](./temp-syntax/sync.md): Sincroniza rápidamente datos en archivos de plantilla
+- [Renderizado condicional](./temp-syntax/condition.md): Renderiza contenido en archivos de plantilla según condiciones
+- [Renderizado de listas](./temp-syntax/fill.md): Renderiza rápidamente datos de arrays en archivos de plantilla

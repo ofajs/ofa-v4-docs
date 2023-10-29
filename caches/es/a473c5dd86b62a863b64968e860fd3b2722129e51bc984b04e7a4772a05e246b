@@ -1,0 +1,1 @@
+Por defecto, el método `formData()` escucha todos los elementos `input`, `select` y `textarea` dentro del elemento objetivo. Pero si solo deseas escuchar elementos específicos del formulario, puedes lograrlo pasando un [selector CSS](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors).

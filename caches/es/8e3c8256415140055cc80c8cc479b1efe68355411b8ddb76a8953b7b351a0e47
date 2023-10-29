@@ -1,0 +1,8 @@
+```html
+<!-- my-component.html -->
+...
+<div>
+  <h2><slot></slot></h2>
+</div>
+...
+```

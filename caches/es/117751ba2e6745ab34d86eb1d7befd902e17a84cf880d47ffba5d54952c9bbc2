@@ -1,0 +1,1 @@
+En este ejemplo, hemos utilizado el método `one` para agregar un controlador de eventos de clic al elemento de botón. Cuando el usuario hace clic en el botón, se activará el controlador de eventos, pero luego no se volverá a activar porque se ha desvinculado.

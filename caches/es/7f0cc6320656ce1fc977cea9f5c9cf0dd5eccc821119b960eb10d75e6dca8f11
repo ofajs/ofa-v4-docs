@@ -1,0 +1,1 @@
+El método `goto` se utiliza para acceder a una página específica. Puede pasar la dirección de la página de destino y la aplicación la cargará y mostrará. Este es un método importante para la navegación de la aplicación.

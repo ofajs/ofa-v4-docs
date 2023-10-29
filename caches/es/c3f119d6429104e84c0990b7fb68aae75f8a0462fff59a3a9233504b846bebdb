@@ -1,0 +1,12 @@
+```html
+<div>
+  <p>First Paragraph</p>
+  <p>Second Paragraph</p>
+</div>
+<script>
+  const $div = $('div');
+  console.log($div[0]); // Output: <p>First Paragraph</p>
+  console.log($div[1]); // Output: <p>Second Paragraph</p>
+  console.log($div.length); // Output: 2
+</script>
+```

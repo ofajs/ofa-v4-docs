@@ -1,0 +1,1 @@
+En el ejemplo anterior, cuando haces clic en el botón de envío "Submit", se mostrará "Hello, {name}! Form submission prevented.", pero no se activará la alerta "Form Submitted!". Esto se debe a que en el controlador del evento de clic del botón de envío se llama a `event.preventDefault()`, lo cual evita el comportamiento de envío predeterminado del formulario.

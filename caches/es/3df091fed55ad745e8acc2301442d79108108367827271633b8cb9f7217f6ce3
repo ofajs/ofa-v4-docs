@@ -1,0 +1,1 @@
+En este ejemplo, hemos pasado datos personalizados al controlador de eventos a través del parámetro `data`. El controlador de eventos puede acceder a los datos pasados a través de `event.data`.

@@ -1,0 +1,30 @@
+```html
+<template component>
+  <style>
+    :host{
+      display: block;
+    }
+  </style>
+  <input type="text" name="username" value="John Doe" />
+  <div>{{logtext}}</div>
+  <script>
+    export default {
+      tag:"custom-input",
+      data: {
+        fdata:{},
+        logtext: ""
+      },
+      watch:{
+        fdata(data){
+          if(data){
+            this.logtext = JSON.stringify(data);
+          }
+        }
+      },
+      ready(){
+        this.fdata = this.shadow.formData();
+      }
+    };
+  </script>
+</template>
+```

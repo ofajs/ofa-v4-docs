@@ -1,0 +1,1 @@
+Se pueden eliminar o reemplazar elementos existentes, así como agregar nuevos elementos. Su uso es similar al método `splice` de una matriz. Aquí hay un ejemplo:

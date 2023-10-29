@@ -1,0 +1,1 @@
+Si no deseas que el evento se propague, puedes añadir el parámetro `bubbles: false` al disparar el evento.

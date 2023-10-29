@@ -1,0 +1,1 @@
+En el ejemplo anterior, cuando se hace clic en el botón, aparecerá un cuadro de diálogo que muestra "¡Botón pulsado!". Sin embargo, después de 5 segundos, se eliminó la función de manejo de eventos de clic mediante el método `off`, por lo que al hacer clic en el botón nuevamente, no se activará el cuadro de diálogo.

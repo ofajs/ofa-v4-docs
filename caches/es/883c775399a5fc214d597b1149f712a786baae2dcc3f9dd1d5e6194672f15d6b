@@ -1,0 +1,1 @@
+En este ejemplo, estamos utilizando el parámetro `bubbles: false` para disparar un evento personalizado. Este evento no se propagará hacia los elementos superiores, por lo que solo se activará el manejador de eventos del elemento `<li>`.

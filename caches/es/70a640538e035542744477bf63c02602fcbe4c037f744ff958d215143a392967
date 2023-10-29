@@ -1,0 +1,1 @@
+El siguiente ejemplo muestra cómo usar la propiedad "sync" en un componente para lograr una vinculación bidireccional entre un cuadro de texto y un modelo de datos:

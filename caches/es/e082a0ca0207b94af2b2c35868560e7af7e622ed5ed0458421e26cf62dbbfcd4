@@ -1,0 +1,1 @@
+Una vez que se carga `ofa.js`, se agrega automáticamente un componente de página llamado `o-page` al ámbito global. Este componente se utiliza para cargar módulos de página, que son un tipo especial de módulo de componente y no se registran como etiquetas personalizadas, sino que se cargan a través del componente `o-page`.

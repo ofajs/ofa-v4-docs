@@ -1,0 +1,1 @@
+En este ejemplo, mostramos cómo usar la función de sincronización de estado para implementar el cambio de modo oscuro. Primero, usamos el método `$.stanz` para crear un objeto de datos llamado `isDark`, que puede ser compartido entre varios componentes. Esto permite que las diferentes instancias de los componentes compartan datos y logren el cambio de modo oscuro.

@@ -1,0 +1,15 @@
+- [$](./instance/dollar.md): Principalmente utilizado para obtener métodos de instancia
+- [all](./instance/all.md): Obtener todas las instancias relacionadas
+- [prev](./instance/prev.md): Obtener la instancia anterior al elemento objetivo
+- [prevs](./instance/prevs.md): Obtener todas las instancias anteriores al elemento objetivo
+- [next](./instance/next.md): Obtener la instancia siguiente al elemento objetivo
+- [nexts](./instance/nexts.md): Obtener todas las instancias siguientes al elemento objetivo
+- [siblings](./instance/siblings.md): Obtener todas las instancias de elementos adyacentes al elemento objetivo
+- [parent](./instance/parent.md): Obtener la instancia del elemento padre
+- [parents](./instance/parents.md): Obtener todas las instancias de los elementos padres
+- [clone](./instance/clone.md): Método para clonar una instancia
+- [ele](./instance/ele.md): Obtener el elemento nativo real de la instancia
+- [shadow](./instance/shadow.md): Obtener el nodo raíz de sombra del componente personalizado
+- [root](./instance/root.md): Obtener el nodo raíz de la instancia objetivo
+- [子元素](./instance/children.md): Obtener directamente un hijo por su índice
+- [host](./instance/host.md): Obtener la instancia del elemento "app" objetivo

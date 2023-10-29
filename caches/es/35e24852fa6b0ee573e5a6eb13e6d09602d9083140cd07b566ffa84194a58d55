@@ -1,0 +1,1 @@
+Después de hacer clic en "IR A AYUDA" en la página `home.html`, se realizará una transición suave a la página `help.html`, lo que logra un efecto de transición suave en el renderizado del lado del cliente.

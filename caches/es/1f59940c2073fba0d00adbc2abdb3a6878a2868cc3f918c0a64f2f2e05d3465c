@@ -1,0 +1,1 @@
+Todavía puedes usar el atributo `:html` en la plantilla para establecer el valor de atributo correspondiente en el elemento objetivo. Esto es especialmente útil en la renderización de componentes. A continuación se muestra un ejemplo:

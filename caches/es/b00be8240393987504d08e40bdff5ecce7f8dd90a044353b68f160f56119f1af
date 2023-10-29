@@ -1,0 +1,1 @@
+Cuando se cambia de página, se activará el evento `routerChange`. En la inicialización de la página y al cambiar de página, puedes utilizar la propiedad `app.current` para obtener la dirección de la página actual y corregir el estado de activación de las pestañas en la página.

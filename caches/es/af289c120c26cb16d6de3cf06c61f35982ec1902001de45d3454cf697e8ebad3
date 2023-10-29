@@ -1,0 +1,1 @@
+relleno de representación le permite usar plantillas independientes para representar datos y nombrarlas mediante el atributo `nombre` en el elemento `<plantilla>`. Esta forma le permite lograr una representación de datos con estructuras anidadas, creando así componentes más complejos.

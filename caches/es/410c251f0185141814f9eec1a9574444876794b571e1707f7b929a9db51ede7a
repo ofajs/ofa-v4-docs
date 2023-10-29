@@ -1,0 +1,4 @@
+```javascript
+// Ejemplo de código: Navegar a otra página dentro del módulo de la página actual
+page.goto("./page2.html");
+```

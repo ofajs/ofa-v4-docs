@@ -1,0 +1,1 @@
+En muchos proyectos pequeños, es posible que no sea necesario utilizar frameworks grandes como React y Vue, y preferimos utilizar jQuery para tareas front-end sencillas. ofa.js mejora la API de jQuery y reemplaza muchos métodos de jQuery por propiedades, lo que lo hace más adecuado en muchas situaciones.

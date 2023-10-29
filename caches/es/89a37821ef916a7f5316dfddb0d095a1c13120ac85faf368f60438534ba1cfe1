@@ -1,0 +1,1 @@
+En este ejemplo, estamos utilizando la definición "one:click" en el elemento de botón para ligar un método llamado "addCount". Cuando el usuario hace clic en el botón, se invocará este método, pero luego no se volverá a desencadenar porque es un manejador de eventos desechable.

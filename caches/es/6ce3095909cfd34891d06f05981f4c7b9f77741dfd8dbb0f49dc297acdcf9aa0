@@ -1,0 +1,3 @@
+- Al agregar etiquetas `<style>` dentro de `inject-host`, podemos definir estilos específicos dentro del componente. Estos estilos solo afectarán a los elementos del componente actual y no se extenderán a otros componentes.
+- Al inyectar estilos, debemos evitar el uso de selectores demasiado comunes para evitar afectar los estilos de otros componentes. Es importante mantener la singularidad y especificidad del selector.
+- `inject-host` también puede inyectar archivos de hojas de estilo externas usando la forma `<link rel="stylesheet" href="target/style.css">`.

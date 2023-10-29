@@ -1,0 +1,1 @@
+En el ejemplo anterior, obtenemos el elemento `div` y accedemos al primer y segundo elemento `p` mediante índices. Al mismo tiempo, también utilizamos `$div.length` para obtener la cantidad de elementos hijos.

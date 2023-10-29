@@ -1,0 +1,1 @@
+Obtener instancias de elementos secundarios es muy sencillo, simplemente tienes que tratar la instancia como un arreglo y obtener su instancia de elemento secundario mediante un número.

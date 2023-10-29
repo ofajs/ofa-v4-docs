@@ -1,0 +1,1 @@
+Por favor, ten en cuenta que el método `style` solo obtiene y establece los valores en el atributo `style`, no los estilos calculados.

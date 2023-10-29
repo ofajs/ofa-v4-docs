@@ -1,0 +1,27 @@
+```html
+<form id="myForm">
+  <input type="text" name="username" value="John Doe" class="use-it" />
+  <div>
+    sex:
+    <label>
+      man
+      <input type="radio" name="sex" value="man" class="use-it" />
+    </label>
+    <label>
+      woman
+      <input type="radio" name="sex" value="woman" class="use-it" />
+    </label>
+  </div>
+  <textarea name="message">这个表单元素没有被绑定</textarea>
+</form>
+<br />
+<div id="logger"></div>
+<script>
+  const data = $("#myForm").formData(".use-it");
+
+  $("#logger").text = data;
+  data.watch(() => {
+    $("#logger").text = data;
+  });
+</script>
+```

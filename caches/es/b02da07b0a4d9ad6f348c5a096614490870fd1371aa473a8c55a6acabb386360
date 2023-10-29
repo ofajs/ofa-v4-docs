@@ -1,0 +1,1 @@
+Cuando has vinculado un evento, a veces es posible que desees detener la propagación del evento (burbujeo) o cancelar la acción predeterminada del evento. A continuación se explicará cómo evitar la propagación y cancelar la acción predeterminada después de que se haya desencadenado el evento.

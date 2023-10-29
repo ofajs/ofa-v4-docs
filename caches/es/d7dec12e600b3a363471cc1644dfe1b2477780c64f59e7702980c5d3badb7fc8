@@ -1,0 +1,1 @@
+En este ejemplo, hemos registrado un controlador de eventos de clic llamado `f`. Cuando se hace clic en el botón, el controlador de eventos muestra el número de clics en `#logger`. Usando el método `off`, cancelamos la escucha del evento cuando el número de clics alcanza 3.

@@ -1,0 +1,1 @@
+En el ejemplo anterior, al usar `{ ...myElement.css, color: 'red' }`, solo modificamos el estilo de color del elemento, manteniendo las demás propiedades de estilo sin cambios. Es un truco muy útil que permite modificar flexiblemente el estilo de un elemento.

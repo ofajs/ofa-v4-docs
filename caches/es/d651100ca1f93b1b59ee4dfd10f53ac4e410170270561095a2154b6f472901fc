@@ -1,0 +1,1 @@
+`loaded` es un gancho de ciclo de vida que se activa después de que se hayan cargado todas las dependencias en la plantilla del componente. Esta etapa garantiza que todas las dependencias se hayan cargado antes de renderizar el componente. En este momento, es apropiado eliminar los estilos de carga añadidos en la etapa `ready`.

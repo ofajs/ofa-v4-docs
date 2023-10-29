@@ -1,0 +1,1 @@
+`x-if-else` puede seguir a `x-if` o `x-if-else` y necesita establecer el valor `value`. Si el componente de condición anterior no se cumple y su propio valor `value` es verdadero, se mostrará el contenido envuelto.

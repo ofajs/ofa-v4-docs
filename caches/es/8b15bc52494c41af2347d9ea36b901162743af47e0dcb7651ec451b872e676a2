@@ -1,0 +1,3 @@
+- `selector`: Selector del elemento al que se quiere remover el manejador de eventos.
+- `eventName`: Nombre del evento que se desea remover.
+- `eventHandler`: Función de manejo de eventos que se desea remover.

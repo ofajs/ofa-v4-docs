@@ -1,0 +1,1 @@
+Una vez que se complete la carga de ofa.js, se registrará globalmente un componente llamado 'load-module' que puedes referenciar usando la abreviatura 'l-m'. Su uso es similar a la etiqueta 'script', donde puedes usar el atributo 'src' para referenciar la ubicación del componente que has desarrollado.

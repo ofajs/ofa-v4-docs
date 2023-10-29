@@ -1,0 +1,4 @@
+```javascript
+// 获取当前页面实例
+const currentPage = app.current;
+```

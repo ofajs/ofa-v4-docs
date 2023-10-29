@@ -1,0 +1,1 @@
+El gancho de ciclo de vida `attached` se activa cuando el componente se agrega al documento. En esta etapa, es adecuado obtener información relacionada con el tamaño de los elementos internos del componente, realizar la vinculación de datos y las operaciones de eventos globales.

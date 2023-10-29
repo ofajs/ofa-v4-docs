@@ -1,0 +1,1 @@
+En general, los componentes personalizados no tienen la propiedad `display` definida de forma predeterminada, por lo que debes definirla manualmente para el componente. Puedes utilizar el selector `:host` en el estilo del componente para agregar estilos propios del mismo.

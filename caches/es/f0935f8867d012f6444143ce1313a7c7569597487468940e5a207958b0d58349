@@ -1,0 +1,1 @@
+Después del tiempo de registro, la función activada llevará el [evento](https://developer.mozilla.org/en-US/docs/Web/API/Event), manteniendo la consistencia con el evento nativo;

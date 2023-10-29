@@ -1,0 +1,10 @@
+```javascript
+// 示例代码：获取当前页面的地址
+// const page = $("o-app").current;
+...
+ready(){
+  // 在页面模块的生命周期内，this 就是当前页面模块本身；
+  const page = this;
+}
+...
+```

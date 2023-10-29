@@ -1,0 +1,7 @@
+- [created](./life-cycle/created.md)：El componente se crea pero no se activa cuando se renderiza el contenido.
+- [ready](./life-cycle/ready.md)：El componente se crea y se activa después de renderizar el contenido.
+- [watch](./life-cycle/watch.md)：El componente se inicializa y se activa cuando el valor cambia.
+- [loaded](./life-cycle/loaded.md)：El componente se activa después de que los recursos internos se cargan.
+- [attached](./life-cycle/attached.md)：El componente se activa después de ser agregado al documento.
+- [detached](./life-cycle/detached.md)：El componente se activa después de ser eliminado del documento.
+- [routerChange](./life-cycle/router-change.md)：La página principal incrustada se activa cuando cambia la ruta de la aplicación.

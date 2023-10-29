@@ -1,0 +1,1 @@
+El componente mantendrá su estado de enrutamiento dentro de la aplicación, pero los datos de enrutamiento no estarán vinculados a la pestaña del navegador actual. De esta manera, puedes implementar fácilmente la navegación entre páginas en la aplicación.

@@ -1,0 +1,1 @@
+El atributo `tag` se utiliza para obtener la etiqueta de un elemento, y devuelve una cadena en minúsculas.

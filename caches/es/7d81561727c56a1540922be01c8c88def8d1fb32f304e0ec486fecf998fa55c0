@@ -1,0 +1,1 @@
+Al igual que con la creación de un módulo de componente, se puede crear un módulo de página, pero se debe configurar la propiedad `type` como `$.PAGE`. Los parámetros disponibles para el módulo de página incluyen `temp`, `data`, `proto` y `watch`.

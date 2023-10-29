@@ -1,0 +1,1 @@
+En el ejemplo anterior, al establecer un elemento contenedor con una ranura, las subpáginas se insertarán en ese contenedor. Asegúrese de que el elemento contenedor tenga una posición relativa para que las subpáginas se puedan posicionar en función del contenedor.

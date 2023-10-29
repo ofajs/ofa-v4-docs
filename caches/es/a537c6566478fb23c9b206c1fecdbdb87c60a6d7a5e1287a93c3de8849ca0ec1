@@ -1,0 +1,1 @@
+Crear un módulo de página de archivo único es similar a crear un módulo de componente. Utiliza la etiqueta `template` para envolver el código de plantilla de la página y agrega el atributo `page`. Dentro de esta etiqueta, puedes utilizar libremente la sintaxis de plantilla para interactuar con otros componentes o módulos de página.

@@ -1,0 +1,4 @@
+<template is="exm-article">
+<a href="../../publics/examples/event-demo.html" preview></a>
+</template>
+

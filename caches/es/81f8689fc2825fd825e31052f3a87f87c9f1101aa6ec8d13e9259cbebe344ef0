@@ -1,0 +1,4 @@
+- El método `load` es una función de carga asíncrona, se utiliza de la misma manera que la carga asincrónica de `import`, y se puede cargar un módulo asincrónico utilizando `const data = await load(xxx)`.
+- Los módulos cargados a través de `load` tienen el mismo efecto que los cargados a través de `load-module`. El método `load` es una versión funcional del componente `load-module`, y se puede consultar la documentación en [https://github.com/kirakiray/drill.js](https://github.com/kirakiray/drill.js) para obtener información específica sobre cómo usarlo.
+- `url` es el nombre de archivo del módulo actual.
+- `query` es un objeto resultante de convertir los parámetros de URL al cargar este módulo.

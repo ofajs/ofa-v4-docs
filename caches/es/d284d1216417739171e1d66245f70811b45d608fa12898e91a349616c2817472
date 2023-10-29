@@ -1,0 +1,1 @@
+Además, puedes usar `attr:aaa="bbb"` dentro del modelo para establecer el atributo **aaa** del elemento objetivo con el valor del componente **bbb**. Este método es especialmente útil para renderizar componentes. A continuación se muestra un ejemplo:

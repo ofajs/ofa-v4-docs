@@ -1,0 +1,1 @@
+Puedes cambiar rápidamente el nombre de la clase dentro de la plantilla utilizando la sintaxis de `class`. En `class:aaa="bbb"`, cuando la expresión `bbb` (o la propiedad `bbb` del componente en sí) sea `true`, se agregará la clase `aaa` al elemento objetivo.

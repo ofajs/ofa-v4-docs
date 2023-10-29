@@ -1,0 +1,38 @@
+```html
+<!-- comp1.html -->
+<template component>
+  <style>
+    :host {
+      display: block;
+      padding: 10px;
+      margin: 10px;
+      border: red solid 1px;
+    }
+  </style>
+  <div>
+    {{obj}}
+    <br />
+    comp1 =>
+    <input type="text" sync:value="obj.val" />
+  </div>
+  <script>
+    export const tag = "comp-one";
+
+    export default async function ({ load }) {
+      const { data } = await load("./data.mjs");
+
+      return {
+        data: {
+          obj: {},
+        },
+        attached() {
+          this.obj = data;
+        },
+        detached() {
+          this.obj = null;
+        },
+      };
+    }
+  </script>
+</template>
+```

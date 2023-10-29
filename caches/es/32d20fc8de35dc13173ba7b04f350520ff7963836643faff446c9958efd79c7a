@@ -1,0 +1,1 @@
+Los parámetros `attrs` y `data` son similares en funcionalidad. Los datos establecidos en `attrs` se fusionarán en `data`, pero los datos en `attrs` se reflejarán en las características propias del componente.

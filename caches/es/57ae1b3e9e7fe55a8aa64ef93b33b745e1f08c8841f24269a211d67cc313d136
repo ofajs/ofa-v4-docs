@@ -1,0 +1,6 @@
+- [Agregar o eliminar nodos hijos](./operation/array-like.md)
+- [before](./operation/before.md)：Agregar elementos antes de la instancia objetivo
+- [after](./operation/after.md)：Agregar elementos después de la instancia objetivo
+- [remove](./operation/remove.md)：Eliminar el elemento objetivo
+- [wrap](./operation/wrap.md)：Envolver el elemento objetivo con otro elemento
+- [unwrap](./operation/unwrap.md)：Quitar el elemento de envoltura de la instancia objetivo

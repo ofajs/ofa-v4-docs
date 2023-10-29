@@ -1,0 +1,1 @@
+En este ejemplo, hemos registrado el mismo manejador de eventos personalizado llamado `custom-event` tanto para el elemento `<ul>` como para el elemento `<li>`. Cuando activamos el evento utilizando el método `emit`, el evento se propaga desde el elemento `<li>` hasta el elemento `<ul>`, activando así dos manejadores de eventos.

@@ -1,0 +1,1 @@
+Puedes usar el método `class` para ajustar directamente el nombre de clase de un elemento. En el siguiente ejemplo se muestra cómo usar el método `class` para agregar y eliminar nombres de clase dinámicamente:

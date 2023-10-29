@@ -1,0 +1,1 @@
+El método `before` se utiliza para agregar elementos antes del elemento objetivo. Antes de realizar la operación `before`, se ejecuta automáticamente la operación de inicialización del método `$`, por lo tanto, se puede completar directamente con una cadena de elementos específicos u objetos.

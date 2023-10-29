@@ -1,0 +1,1 @@
+Es importante tener en cuenta que se debe evitar modificar directamente los elementos dentro de los nodos sombra en elementos con sintaxis de plantilla, para asegurar la consistencia y mantenibilidad de las operaciones.

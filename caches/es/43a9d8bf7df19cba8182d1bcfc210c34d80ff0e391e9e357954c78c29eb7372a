@@ -1,0 +1,1 @@
+3. Utilice la etiqueta `o-app` en el archivo HTML y referencie el módulo de configuración de datos a través del atributo `src`.

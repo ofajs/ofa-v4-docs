@@ -1,0 +1,48 @@
+```html
+<template componente>
+  <style>
+    .shadow-button {
+      background-color: #6b47fb;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Utilizando la sintaxis de renderizado de plantillas, renderice los datos del componente en texto -->
+  <button class="shadow-button" on:click="count++">{{buttonText}} - cuenta:{{count}}</button>
+
+  <script>
+    export default {
+      etiqueta: "mi-botón",
+      datos: {
+        count: 0,
+      },
+      attrs: {
+        buttonText: "Haz clic",
+      },
+      watch: {
+        count(nuevoValor, { watchers }) {
+          let viejoValor;
+          if (watchers) {
+            viejoValor = watchers[0].oldValue;
+          }
+          console.log(`la cuenta cambió de ${viejoValor} a ${nuevoValor}`);
+        },
+      },
+      proto: {
+        sayHello() {
+          // alert("Hola cuenta:" + this.count);
+        },
+      },
+    };
+  </script>
+</template>
+```

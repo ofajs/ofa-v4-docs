@@ -1,0 +1,1 @@
+A través de la propiedad `shadow`, puedes acceder al contenido del nodo raíz del Shadow DOM del componente. Esto te permite acceder y manipular los elementos y estilos del Shadow DOM dentro del componente.

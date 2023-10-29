@@ -1,0 +1,1 @@
+Cuando se inicialice `formData`, es necesario agregar las características del selector del componente personalizado a los parámetros (aunque los parámetros predeterminados del método `formData` sean `"input,select,textarea"`). De esta manera, `formData` puede interactuar con el componente personalizado.

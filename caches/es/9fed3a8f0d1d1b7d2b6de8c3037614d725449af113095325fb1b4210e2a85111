@@ -1,0 +1,8 @@
+```html
+<div id="example" name="i am hello word">Hello World</div>
+<script>
+    const $div = $('#example');
+    console.log($div.attr('name')); // Salida: "i am hello word"
+    $div.attr('title', "cambiar título");
+</script>
+```

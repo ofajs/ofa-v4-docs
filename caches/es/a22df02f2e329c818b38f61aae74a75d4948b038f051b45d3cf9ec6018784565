@@ -1,0 +1,12 @@
+```html
+<ul>
+    <li id="target">I am target</li>
+</ul>
+<div id="logger" style="padding:16px;color:green;"></div>
+
+<script>
+    setTimeout(()=>{
+        $('#logger').text = $("#target").root.ele === document;
+    }, 500);
+</script>
+```

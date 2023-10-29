@@ -1,0 +1,9 @@
+```javascript
+const obj = {
+  val: "I am obj"
+};
+
+$("#target").obj = obj;
+console.log($("#target").obj.val === obj.val); // => true
+console.log($("#target").obj === obj); // => false
+```

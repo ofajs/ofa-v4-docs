@@ -1,0 +1,1 @@
+En el ejemplo anterior, se utiliza `$.all("p")` para encontrar todos los elementos de etiqueta `p` en la página y realizar operaciones en lote en ellos. Se modifica el contenido del texto como "Párrafo Modificado 1", "Párrafo Modificado 2" y "Párrafo Modificado 3".

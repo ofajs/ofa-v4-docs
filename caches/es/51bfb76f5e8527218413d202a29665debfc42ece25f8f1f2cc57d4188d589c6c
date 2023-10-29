@@ -1,0 +1,1 @@
+En el ejemplo anterior, creamos un nuevo elemento `div` con el código `$('<div style="color:red">I am text</div>')` y lo agregamos al `body`.

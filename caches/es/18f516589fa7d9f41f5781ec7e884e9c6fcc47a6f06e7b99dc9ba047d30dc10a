@@ -1,0 +1,1 @@
+Usando el método `one`, puedes registrar un controlador de eventos de un solo uso para un elemento objetivo, lo que significa que el controlador de eventos se desvinculará automáticamente después de la primera activación y no se activará nuevamente.

@@ -1,0 +1,1 @@
+En este ejemplo, el elemento `#target` está fuera de cualquier componente o página dentro del body, por lo que el valor de `$("#target").host` será `null`.

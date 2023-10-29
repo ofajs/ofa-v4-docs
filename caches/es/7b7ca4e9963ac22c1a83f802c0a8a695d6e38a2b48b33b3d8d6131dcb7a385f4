@@ -1,0 +1,1 @@
+En el ejemplo anterior, primero se utiliza `$(".container")` para encontrar los elementos con la clase `container`, luego se utiliza `.all(".item")` para encontrar todos los elementos secundarios con la clase `item` dentro de ese contenedor y se realiza una operación en lote en ellos, modificando su contenido de texto a "Modified Item 1", "Modified Item 2" y "Modified Item 3".

@@ -1,0 +1,11 @@
+```html
+<my-comp id="myCustomComponent">
+  <!-- Aquí está el contenido de tu componente personalizado -->
+</my-comp>
+<script>
+  // Obtener la ruta del archivo del componente personalizado
+  const componentPath = $("#myCustomComponent").PATH;
+
+  // Aquí se puede utilizar componentPath para construir rutas de archivo, cargar otros archivos de recursos, etc.
+</script>
+```

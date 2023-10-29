@@ -1,0 +1,1 @@
+En ofa.js, el ciclo de vida de los componentes se activa mediante funciones de enganche en momentos específicos. Estas funciones de enganche te permiten controlar e interactuar de forma más precisa. ofa.js tiene cinco funciones de enganche clave en su ciclo de vida: `created`, `ready`, `watch`, `loaded`, `attached` y `detached`, que se activan en diferentes momentos.

@@ -1,0 +1,1 @@
+La data del objeto generado también tiene la capacidad de vinculación inversa, lo que significa que cuando modificas las propiedades del objeto, los valores de los elementos del formulario relacionados también se actualizarán automáticamente. Esto es muy útil cuando se manejan datos de formularios, ya que puedes lograr fácilmente una vinculación bidireccional de los datos.

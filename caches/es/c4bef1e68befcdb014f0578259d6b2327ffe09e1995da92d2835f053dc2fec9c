@@ -1,0 +1,1 @@
+Si los elementos dentro de `o-app`, incluyendo los elementos dentro del nodo sombra de `o-page` dentro de `o-app`, o los componentes secundarios internos, todos tienen un atributo `app` que apunta a la instancia del elemento `o-app`.

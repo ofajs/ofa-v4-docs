@@ -1,0 +1,1 @@
+En este ejemplo, tenemos un arreglo `arr` que contiene dos objetos. Cada objeto tiene una propiedad `name` y una propiedad `childs` que puede contener elementos anidados. Utilizamos `x-fill` para llenar la lista y `easyLi` como plantilla para renderizar los elementos. Si un elemento tiene elementos hijos, utilizamos `x-if` para verificar y crear una lista anidada.

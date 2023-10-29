@@ -1,0 +1,8 @@
+```javascript
+lm.config({
+  alias: {
+    // "example": "https://example.com/resource", ❌ No comienza con @
+    "@example": "https://example.com/resource",
+  },
+});
+```

@@ -1,0 +1,1 @@
+El método "goto" se utiliza para saltar de la página actual a otra página. En comparación con el método "goto" de "app", el método "goto" de "page" permite utilizar direcciones relativas para navegar a otras páginas.

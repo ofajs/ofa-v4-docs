@@ -1,0 +1,1 @@
+El método `one` se utiliza para vincular una función de manejo de eventos, pero esta función solo se ejecutará una vez cuando se desencadene el evento por primera vez. Después de ejecutarse una vez, la función de manejo de eventos se eliminará automáticamente para evitar desencadenamientos repetidos.

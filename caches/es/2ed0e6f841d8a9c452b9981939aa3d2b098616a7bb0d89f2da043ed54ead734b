@@ -1,0 +1,1 @@
+En el siguiente ejemplo, hemos creado un componente de formulario personalizado llamado "custom-input". Este componente es un cuadro de texto editable que actualiza su atributo `value` en tiempo real cuando el texto cambia.

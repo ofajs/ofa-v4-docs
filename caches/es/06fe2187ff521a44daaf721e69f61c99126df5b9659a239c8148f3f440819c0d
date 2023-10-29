@@ -1,0 +1,1 @@
+En el ejemplo anterior, el atributo 'app' del elemento 'o-app' contiene elementos dentro del elemento 'o-page' y el componente personalizado 'test-comp'. Esto significa que ambos pueden acceder a los datos y métodos del elemento 'o-app' a través del atributo 'app'.

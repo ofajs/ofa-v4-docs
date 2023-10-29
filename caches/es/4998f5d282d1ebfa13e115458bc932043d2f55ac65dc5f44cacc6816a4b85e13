@@ -1,0 +1,1 @@
+`created` El gancho de ciclo de vida se activa cuando se crea el componente. En esta etapa, los datos del componente aún no se han inicializado y el contenido de la plantilla no se ha renderizado. Puedes realizar algunas operaciones de inicialización en esta etapa, o preparar datos que se utilizarán en etapas posteriores.

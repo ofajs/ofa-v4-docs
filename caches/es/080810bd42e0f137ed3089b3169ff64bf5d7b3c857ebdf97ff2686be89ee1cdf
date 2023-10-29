@@ -1,0 +1,1 @@
+La función `routerChange` puede ser configurada en el módulo de la página padre para escuchar los cambios de la ruta. Cuando ocurre un cambio de ruta en la página sin refrescarla, se activa el evento `routerChange`. Este evento pasa la información de la página actual y el método de dirección (`type`).

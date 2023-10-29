@@ -1,0 +1,1 @@
+En el ejemplo anterior, obtuvimos todas las instancias de elementos `p` y usamos el método `push` para agregar un nuevo elemento `div` como hijo, luego usamos el método `pop` para eliminar el último hijo.

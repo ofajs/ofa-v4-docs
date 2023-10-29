@@ -1,0 +1,4 @@
+<template is="exm-article">
+<a href="../../publics/examples/set-props.html" preview></a>
+</template>
+

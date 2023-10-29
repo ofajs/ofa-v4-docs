@@ -1,0 +1,1 @@
+En este ejemplo, estamos utilizando la función `$` para definir una nueva instancia de elemento utilizando un objeto, que incluye el tipo de etiqueta, el contenido de texto y los atributos de estilo, y luego lo agregamos a una instancia de elemento existente con el id "target1".

@@ -1,0 +1,1 @@
+La microfrontend es un patrón de arquitectura frontend que tiene como objetivo ayudar a los equipos a construir y mantener aplicaciones frontend grandes y complejas. Se basa en la idea de la arquitectura de microservicios, descomponiendo la aplicación frontend en partes más pequeñas e independientes que pueden ser desarrolladas, probadas y desplegadas por diferentes equipos.

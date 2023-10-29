@@ -1,0 +1,1 @@
+逻辑代码放在 js 文件内，这个 js 需要标识 `export const type = $.COMP;`，以通知页面这是一个组件模块。在这种拆分模式下，模块代码可以使用 `import` 等 ES Module 的标准语法。
