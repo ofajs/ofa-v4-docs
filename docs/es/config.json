@@ -1,1 +1,11 @@
-{"github":"https://github.com/kirakiray/ofa.js","logo":{"url":"../publics/logo.svg","text":"ofa.js"},"pages":["./index.md"],"footer":"./footer.md","navs":[{"name":"案例教程","summary":"./cases/SUMMARY.md"},{"name":"文档","summary":"./docs/SUMMARY.md"},{"name":"API","summary":"./api/SUMMARY.md"}]}
+{
+  "github": "https://github.com/kirakiray/ofa.js",
+  "logo": { "url": "../publics/logo.svg", "text": "ofa.js" },
+  "pages": ["./index.md"],
+  "footer": "./footer.md",
+  "navs": [
+    { "name": "Tutoriales de casos", "summary": "./cases/SUMMARY.md" },
+    { "name": "documentos", "summary": "./docs/SUMMARY.md" },
+    { "name": "API", "summary": "./api/SUMMARY.md" }
+  ]
+}
