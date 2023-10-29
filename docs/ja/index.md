@@ -161,8 +161,8 @@ HTML5 の Web コンポーネントは以前は煩雑な学習が必要でした
     export default {
       tag: "prop-demo",
       data: {
-        txt1:"<b>我是txt1</b>",
-        txt2:"<b>我是txt2</b>",
+        txt1:"<b>I am txt1</b>",
+        txt2:"<b>I am txt2</b>",
       },
     };
   </script>

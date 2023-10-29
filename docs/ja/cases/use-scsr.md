@@ -5,7 +5,7 @@
 <a href="../../publics/examples/use-scsr/app-config.mjs"></a>
 </template>
 
-# 使用 SCSR 方案
+# SCSRプログラムの利用
 
 この例では、<span style='font-family: "iconfont"'>&#xe7cb;</span> ボタンをクリックして、新しいページで開いて試してください。
 

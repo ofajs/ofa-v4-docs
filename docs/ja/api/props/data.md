@@ -2,7 +2,6 @@
 
 要素の [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) を取得するには、[`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) プロパティを使用し、ネイティブの [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) と一致させてください。
 
-
 <html-viewer>
 
 ```
