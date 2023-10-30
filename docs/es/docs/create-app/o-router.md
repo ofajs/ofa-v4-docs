@@ -2,7 +2,7 @@
 
 El componente `o-router` es un componente usado para vincular las rutas dentro de `o-app` a la pestaña del navegador actual. Este componente te ayuda a gestionar las rutas de página y la visualización de una manera más conveniente.
 
-## Referencia al componente o-router
+## 加载 o-router 组件
 
 En primer lugar, debes agregar el componente `o-router` en tu página. Puedes hacerlo importando el archivo `router.mjs` de la siguiente manera:
 
@@ -26,17 +26,17 @@ Para utilizar el componente `o-router`, debe envolverlo fuera del componente `o-
 
 ```html
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>prueba de enrutador</title>
+    <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- Importar el componente de o-router -->
+    <!-- Carga el componente o-router. -->
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
-    <!-- Usar el componente de o-router y establecer el atributo fix-body -->
+    <!-- Utiliza el componente o-router y establece la propiedad fix-body -->
     <o-router fix-body> 
       <o-app src="app-config.mjs"></o-app>
     </o-router>

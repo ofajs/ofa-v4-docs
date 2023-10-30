@@ -2,7 +2,7 @@
 
 The `o-router` component is a component used to bind the routes within `o-app` to the current browser tab. It can help you manage page routes and display more conveniently.
 
-## Quoting the o-router component
+Loading the o-router component
 
 First, you need to import the `o-router` component in your page. You can import the `router.mjs` file using the following method: 
 
@@ -24,7 +24,7 @@ Using the `o-router` component is achieved by wrapping it outside the `o-app` co
 
 The `o-router` component also provides a `fix-body` property. When you set this property, the component will automatically add styles to the `<html>` tag so that the size of the application matches the size of the page, making the content of the application fill the entire window.
 
-```html
+```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,11 +32,11 @@ The `o-router` component also provides a `fix-body` property. When you set this 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- Import the o-router component -->
+    <!-- Load o-router component -->
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
-    <!-- Use the o-router component and set the fix-body property -->
+    <!-- Use o-router component and set fix-body attribute -->
     <o-router fix-body> 
       <o-app src="app-config.mjs"></o-app>
     </o-router>

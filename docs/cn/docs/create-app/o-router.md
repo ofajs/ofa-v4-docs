@@ -2,7 +2,7 @@
 
 `o-router` 组件是一个用于将 `o-app` 内的路由绑定到当前浏览器标签页的组件，它能够帮助你更方便地管理页面路由和展示。
 
-## 引用 o-router 组件
+## 加载 o-router 组件
 
 首先，你需要在页面中引用 `o-router` 组件。你可以通过以下方式引用 `router.mjs` 文件：
 
@@ -32,7 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- 引用 o-router 组件 -->
+    <!-- 加载 o-router 组件 -->
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
