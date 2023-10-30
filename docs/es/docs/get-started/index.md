@@ -5,7 +5,7 @@
 Puedes utilizar la dirección CDN para referenciar directamente ofa.js en tu página:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/dist/ofa.js"></script>
 ```
 
 ### Instalación vía npm

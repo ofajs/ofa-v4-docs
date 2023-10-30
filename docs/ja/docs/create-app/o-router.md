@@ -7,7 +7,7 @@
 まず、ページで `o-router` コンポーネントを参照する必要があります。以下の方法で `router.mjs` ファイルを参照することができます：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
 ```
 
 ## o-router コンポーネントの使用
@@ -33,7 +33,7 @@
     <title>routerテスト</title>
     <script src="ofa.js"></script>
     <!-- o-routerコンポーネントを参照する -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- o-routerコンポーネントを使用し、fix-body属性を設定する -->

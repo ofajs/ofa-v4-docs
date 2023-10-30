@@ -5,7 +5,7 @@
 CDN 주소를 사용하여 ofa.js를 당신의 페이지에 직접 참조할 수 있습니다.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/dist/ofa.js"></script>
 ```
 
 ### npm을 통한 설치

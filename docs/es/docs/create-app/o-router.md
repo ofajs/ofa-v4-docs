@@ -7,7 +7,7 @@ El componente `o-router` es un componente usado para vincular las rutas dentro d
 En primer lugar, debes agregar el componente `o-router` en tu página. Puedes hacerlo importando el archivo `router.mjs` de la siguiente manera:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
 ```
 
 ## Uso del componente o-router
@@ -33,7 +33,7 @@ Para utilizar el componente `o-router`, debe envolverlo fuera del componente `o-
     <title>prueba de enrutador</title>
     <script src="ofa.js"></script>
     <!-- Importar el componente de o-router -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- Usar el componente de o-router y establecer el atributo fix-body -->

@@ -7,7 +7,7 @@
     <title>prueba de enrutador</title>
     <script src="ofa.js"></script>
     <!-- Importar el componente de o-router -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- Usar el componente de o-router y establecer el atributo fix-body -->

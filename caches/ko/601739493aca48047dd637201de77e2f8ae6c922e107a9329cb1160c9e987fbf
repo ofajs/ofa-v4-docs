@@ -7,7 +7,7 @@
     <title>라우터 테스트</title>
     <script src="ofa.js"></script>
     <!-- o-router 컴포넌트 참조 -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- o-router 컴포넌트 사용 및 fix-body 속성 설정 -->

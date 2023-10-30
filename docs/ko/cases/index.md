@@ -7,7 +7,7 @@
 시작하려면 CDN 주소를 통해 `ofajs` 프로젝트를 당신의 프로젝트에 통합하면 됩니다.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/dist/ofa.js"></script>
 ```
 
 이것은 `ofa.js`를 사용하여 DOM 요소의 내용을 수정하는 방법을 보여주는 간단한 예제입니다.
