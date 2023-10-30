@@ -2,7 +2,7 @@
 
 El componente `o-router` es un componente usado para vincular las rutas dentro de `o-app` a la pestaña del navegador actual. Este componente te ayuda a gestionar las rutas de página y la visualización de una manera más conveniente.
 
-## 加载 o-router 组件
+## Carga del componente o-router
 
 En primer lugar, debes agregar el componente `o-router` en tu página. Puedes hacerlo importando el archivo `router.mjs` de la siguiente manera:
 
