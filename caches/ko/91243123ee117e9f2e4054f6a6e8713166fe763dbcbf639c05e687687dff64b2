@@ -1,0 +1,4 @@
+```javascript
+// 현재 페이지 예제 가져오기
+const currentPage = app.current;
+```

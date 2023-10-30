@@ -1,0 +1,23 @@
+```html
+<template component>
+  comp1 =>
+  <input type="text" sync:value="obj.val" />
+  <script>
+    export const tag = "comp-three";
+
+    export default async function ({ load }) {
+      const { data } = await load("./data.mjs");
+
+      return {
+        data: {
+        //   obj: data // ❌ This operation is incorrect, directly setting data will cause memory leakage
+          obj: {},
+        },
+        ready() {
+          this.obj = data; // ❌ Setting in ready lifecycle, cannot determine when to clear, may cause memory leaks. The safest way is to set in attached lifecycle and delete after detached
+        },
+      };
+    }
+  </script>
+</template>
+```

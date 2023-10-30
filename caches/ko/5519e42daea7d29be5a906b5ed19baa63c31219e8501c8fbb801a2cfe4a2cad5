@@ -1,0 +1,1 @@
+이 예시에서는 `lm.config` 메서드를 사용하여 `@obook` 별칭을 `https://cdn.jsdelivr.net/npm/obook`로 매핑했습니다. 이제 `@obook`을 접두사로 사용하면 지정한 URL로 자동으로 매핑됩니다.

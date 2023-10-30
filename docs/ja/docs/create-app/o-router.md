@@ -2,12 +2,12 @@
 
 `o-router` コンポーネントは、`o-app` 内のルートを現在のブラウザのタブにバインドするためのコンポーネントです。これを使用すると、ページのルートと表示をより簡単に管理することができます。
 
-## 引用 o-router コンポーネントをする
+## 加载 o-router 组件
 
 まず、ページで `o-router` コンポーネントを参照する必要があります。以下の方法で `router.mjs` ファイルを参照することができます：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
 ```
 
 ## o-router コンポーネントの使用
@@ -26,17 +26,17 @@
 
 ```html
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="jp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>routerテスト</title>
+    <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- o-routerコンポーネントを参照する -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+    <!-- ローカル o-router コンポーネントを読み込む -->
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
-    <!-- o-routerコンポーネントを使用し、fix-body属性を設定する -->
+    <!-- o-router コンポーネントを使用し、fix-body 属性を設定 -->
     <o-router fix-body> 
       <o-app src="app-config.mjs"></o-app>
     </o-router>

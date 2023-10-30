@@ -1,0 +1,16 @@
+```html
+<div class="parent">
+  <p>Hello World</p>
+  <div class="child">
+    <span>This is a child element</span>
+  </div>
+</div>
+<script>
+  // 부모 요소를 선택하고 자식을 찾습니다.
+  const parentElement = $(".parent");
+  const childElement = parentElement.$(".child");
+
+  // 하위 요소의 텍스트 콘텐츠 수정
+  childElement.text = "Modified child element";
+</script>
+```

@@ -1,0 +1,15 @@
+```html
+<div class="parent">
+  <p>Hello World</p>
+  <div class="child">
+    <span>This is a child element</span>
+  </div>
+</div>
+<script>
+  // 조건에 맞는 자식 요소 직접 찾기
+  const childElement = $('div .child');
+
+  // 자식 요소의 텍스트 내용 수정하기
+  childElement.text = "수정된 자식 요소";
+</script>
+```

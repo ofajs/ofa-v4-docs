@@ -9,7 +9,7 @@ SCSR, short for Static Client-Side Rendering, is also known as static client-sid
 You can reference the SCSR library using the following methods: 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/scsr/dist/scsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/scsr/dist/scsr.min.js"></script>
 ```
 
 ## The Working Principle of SCSR

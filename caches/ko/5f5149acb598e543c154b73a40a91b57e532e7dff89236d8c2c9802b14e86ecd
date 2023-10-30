@@ -1,0 +1,11 @@
+```html
+<my-comp id="myCustomComponent">
+  <!-- 여기는 당신의 커스텀 컴포넌트의 내용입니다 -->
+</my-comp>
+<script>
+  // 커스텀 컴포넌트의 파일 경로를 가져옵니다
+  const componentPath = $("#myCustomComponent").PATH;
+
+  // 여기에서 componentPath를 사용하여 파일 경로를 구성하고 다른 리소스 파일을 로드할 수 있습니다
+</script>
+```

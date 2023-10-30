@@ -126,11 +126,11 @@ Due to data sharing, it is necessary to ensure that data is recycled at the appr
 
       return {
         data: {
-        //   obj: data // ❌ This operation is wrong, setting data directly cannot be recycled
+        //   obj: data // ❌ This operation is incorrect, directly setting data will cause memory leakage
           obj: {},
         },
         ready() {
-          this.obj = data; // ❌ Setting in the ready lifecycle cannot determine when to clear, which may cause memory leaks. The safest method is to set it in the attached lifecycle and delete it after detached
+          this.obj = data; // ❌ Setting in ready lifecycle, cannot determine when to clear, may cause memory leaks. The safest way is to set in attached lifecycle and delete after detached
         },
       };
     }

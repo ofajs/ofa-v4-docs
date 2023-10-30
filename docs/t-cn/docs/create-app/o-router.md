@@ -2,12 +2,12 @@
 
 `o-router` 組件是一個用於將 `o-app` 內的路由綁定到當前瀏覽器標簽頁的組件，它能夠幫助你更方便地管理頁面路由和展示。
 
-## 引用 o-router 組件
+## 加載 o-router 組件
 
 首先，你需要在頁面中引用 `o-router` 組件。你可以通過以下方式引用 `router.mjs` 文件：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
 ```
 
 ## 使用 o-router 組件
@@ -32,8 +32,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- 引用 o-router 組件 -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/router/dist/router.min.js"></script>
+    <!-- 加載 o-router 組件 -->
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- 使用 o-router 組件，並設置 fix-body 屬性 -->

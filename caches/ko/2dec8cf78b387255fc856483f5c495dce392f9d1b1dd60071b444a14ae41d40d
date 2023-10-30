@@ -1,0 +1,1 @@
+CompTwo라는 중첩 컴포넌트를 `<l-m src="./comp-two.html"></l-m>`을 통해 도입하는 예시입니다.

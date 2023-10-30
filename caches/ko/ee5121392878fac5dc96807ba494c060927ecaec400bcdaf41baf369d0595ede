@@ -1,0 +1,48 @@
+```html
+<template component>
+  <style>
+    .shadow-button {
+      background-color: #6b47fb;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- 템플릿 렌더링 구문을 사용하여 컴포넌트 데이터를 텍스트로 렌더링하기 -->
+  <button class="shadow-button" on:click="count++">{{buttonText}} - count:{{count}}</button>
+
+  <script>
+    export default {
+      tag: "my-button",
+      data: {
+        count: 0,
+      },
+      attrs: {
+        buttonText: "Click Me",
+      },
+      watch: {
+        count(newValue, { watchers }) {
+          let oldValue;
+          if (watchers) {
+            oldValue = watchers[0].oldValue;
+          }
+          console.log(`count changed from ${oldValue} to ${newValue}`);
+        },
+      },
+      proto: {
+        sayHello() {
+          // alert("Hello Count:" + this.count);
+        },
+      },
+    };
+  </script>
+</template>
+```

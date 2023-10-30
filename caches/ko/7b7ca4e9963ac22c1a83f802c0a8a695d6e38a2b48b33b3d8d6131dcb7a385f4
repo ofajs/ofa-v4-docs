@@ -1,0 +1,1 @@
+위의 예제에서는 먼저 `$(".container")`를 사용하여 `container` 클래스를 가진 요소를 찾은 다음, 해당 컨테이너 내에서 `item` 클래스를 가진 모든 자식 요소를 `.all(".item")`을 통해 찾고, 이들에 대해 일괄 작업을 수행하여 텍스트 내용을 "Modified Item 1", "Modified Item 2" 및 "Modified Item 3"으로 수정하였습니다.

@@ -1,0 +1,13 @@
+아래 번역 결과를 확인하세요.```html
+<template component>
+  <div>렌더링 텍스트: {{txt}}</div>
+  <script>
+    export default {
+      tag: "text-demo",
+      data: {
+        txt:"나는 txt입니다."
+      },
+    };
+  </script>
+</template>
+```

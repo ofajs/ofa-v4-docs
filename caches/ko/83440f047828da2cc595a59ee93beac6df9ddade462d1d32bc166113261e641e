@@ -1,0 +1,7 @@
+<template is="exm-article">
+<a href="../../publics/examples/sync-state/demo.html" preview></a>
+<a href="../../publics/examples/sync-state/is-dark.js"></a>
+<a href="../../publics/examples/sync-state/simple-btn.html" main></a>
+<a href="../../publics/examples/sync-state/switch-dark.html"></a>
+</template>
+

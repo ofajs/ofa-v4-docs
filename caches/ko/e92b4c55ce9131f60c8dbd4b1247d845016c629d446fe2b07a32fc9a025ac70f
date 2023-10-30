@@ -1,0 +1,16 @@
+```html
+<button id="btn">나를 클릭하세요</button>
+<script>
+  const handleClick = () => {
+    alert("버튼이 클릭되었습니다!");
+  };
+
+  // 클릭 이벤트 핸들러를 바인딩합니다.
+  $("#btn").on("click", handleClick);
+
+  // 5초 후에 클릭 이벤트 핸들러를 제거합니다.
+  setTimeout(() => {
+    $("#btn").off("click", handleClick);
+  }, 5000);
+</script>
+```

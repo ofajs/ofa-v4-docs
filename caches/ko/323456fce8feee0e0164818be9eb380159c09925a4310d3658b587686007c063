@@ -1,0 +1,15 @@
+```javascript
+lm.config({
+  alias: {
+    "@namex": "https://example.com/resource",
+  },
+});
+
+// ...
+
+lm.config({
+  alias: {
+    "@namex": "https://example.com/other-resource", // 오류, 중복된 별칭
+  },
+});
+```

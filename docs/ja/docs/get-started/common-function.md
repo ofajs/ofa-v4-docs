@@ -8,7 +8,7 @@
 <div id="example" name="i am hello word">Hello World</div>
 <script>
     const $div = $('#example');
-    console.log($div.attr('name')); // => "i am hello word"
+    console.log($div.attr('name')); // log: "i am hello word"
     $div.attr('title', "change title");
 </script>
 ```

@@ -1,0 +1,1 @@
+위의 예에서 `$('<div style="color:red">I am text</div>')`를 사용하여 새 `div` 요소를 생성하고 `body`에 추가했습니다.

@@ -1,0 +1,27 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger1" style="border: blue solid 1px; margin: 8px"></div>
+<div id="logger2" style="border: red solid 1px; margin: 8px"></div>
+
+<script>
+  const target = $("#target");
+  const tid1 = target.watch(() => {
+    $("#logger1").text = JSON.stringify(target);
+  });
+
+  const tid2 = target.watchTick(()=>{
+    $("#logger2").text = JSON.stringify(target);
+  });
+
+  setTimeout(() => {
+    target.aaa = "I am aaa";
+    // 듣기 비활성화
+    target.unwatch(tid1);
+    target.unwatch(tid2);
+  }, 500);
+  setTimeout(() => {
+    target.bbb = "I am aaa"; // 위에 등록된 기능은 비활성화되었으므로 트리거되지 않습니다.
+  }, 1000);
+</script>
+```

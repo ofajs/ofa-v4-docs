@@ -1,0 +1,36 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Event Bubbling</title>
+  <script src="../ofa.js"></script>
+</head>
+<body>
+  <div id="outer">
+    <div id="inner">
+      <button id="btn">Click Me</button>
+    </div>
+  </div>
+
+  <script>
+    const btn = $('#btn');
+    const innerDiv = $('#inner');
+
+    btn.on('click', (event) => {
+      alert('Button Clicked!');
+      event.stopPropagation(); // 이벤트 버블링 중단
+    });
+
+    innerDiv.on('click', () => {
+      alert('Inner Div Clicked!');
+    });
+
+    $('#outer').on('click', () => {
+      alert('Outer Div Clicked!');
+    });
+  </script>
+</body>
+</html>
+```

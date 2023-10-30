@@ -1,0 +1,14 @@
+```html
+<style> div{border: #aaa solid 1px; margin:8px; padding:8px;} </style>
+<div>
+    <div>I am 1</div>
+    <div id="target">I am 2</div>
+    <div>I am 3</div>
+</div>
+
+<script>
+    setTimeout(()=>{
+        $('#target').wrap(`<div style="border-color:red;">wrap</div>`);
+    }, 500);
+</script>
+```

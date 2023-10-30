@@ -1,0 +1,19 @@
+```html
+<div id="target" style="color:red">origin text</div>
+<br>
+<h4>logger</h4>
+<div id="logger" style="border:#aaa solid 1px;padding:8px;"></div>
+
+<script>
+    $("#logger").text = Object.keys($("#target").css);
+   
+    setTimeout(()=>{
+        // 기존 스타일 커버
+        $("#target").css = {
+            color: "blue",
+            lineHeight: "5em"
+        };
+        $("#logger").text = Object.keys($("#target").css);
+    }, 500);
+</script>
+```

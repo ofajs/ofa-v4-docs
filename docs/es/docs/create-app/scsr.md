@@ -9,7 +9,7 @@ SCSR, cuyo nombre completo es Representación en el Lado del Cliente Estático, 
 Puedes hacer referencia a la biblioteca SCSR de la siguiente manera:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/libs/scsr/dist/scsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/scsr/dist/scsr.min.js"></script>
 ```
 
 ## Principio de funcionamiento de SCSR

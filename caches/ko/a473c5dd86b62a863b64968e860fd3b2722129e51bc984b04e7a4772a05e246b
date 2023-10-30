@@ -1,0 +1,1 @@
+`formData()` 메서드는 기본적으로 대상 요소 내의 모든 `input`、`select` 및 `textarea` 요소를 감지합니다. 그러나 특정한 폼 요소만 감지하려면 [CSS 선택자](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)를 전달하여 구현할 수 있습니다.

@@ -1,0 +1,7 @@
+```javascript
+// MyComponent.mjs
+export default async ({ load }) => {
+  //   await load('./pages/next-page.mjs');
+  load('./pages/next-page.mjs'); // 이것은 캐시 용도로만 사용되는 모듈입니다. 현재 페이지가 아닌 다른 페이지에서도 필요하지 않으므로 await을 추가할 필요가 없습니다.
+};
+```

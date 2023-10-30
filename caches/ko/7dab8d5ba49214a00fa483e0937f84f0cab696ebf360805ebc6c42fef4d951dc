@@ -1,0 +1,1 @@
+`attr` 메서드는 요소의 [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)를 가져오거나 설정하는 데 사용됩니다.

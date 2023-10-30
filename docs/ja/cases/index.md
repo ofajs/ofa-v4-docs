@@ -7,7 +7,7 @@
 開始使用するには、CDNアドレスを使用してプロジェクト`ofajs`をプロジェクトに統合するだけです。
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/dist/ofa.js"></script>
 ```
 
 これは、DOM要素の内容を変更する方法を示すシンプルな例です：

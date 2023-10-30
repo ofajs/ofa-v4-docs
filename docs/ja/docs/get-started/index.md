@@ -5,7 +5,7 @@
 CDNのアドレスを使用して直接ofa.jsをページにインポートすることができます。
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.25/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/dist/ofa.js"></script>
 ```
 
 ### npm経由でインストールする

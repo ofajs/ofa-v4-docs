@@ -1,0 +1,29 @@
+```html
+<template component>
+    <style>
+        .color-red{
+            color:red;
+        }
+        .color-blue{
+            color:blue;
+        }
+    </style>
+    <div 
+      class:color-red="txt == 1" 
+      class:color-blue="txt == 2" 
+      on:click="switch1">Click Me</div>
+    <script>
+        export default {
+          tag:"test-class",
+          data:{
+            txt:"1"
+          },
+          proto:{
+            switch1(){
+              this.txt = (this.txt == 1) ? 2 : 1;
+            }
+          }
+        };
+    </script>
+</template>
+```

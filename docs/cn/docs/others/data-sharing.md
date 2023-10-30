@@ -126,7 +126,7 @@ export const data = $.stanz({
 
       return {
         data: {
-        //   obj: data // ❌ 这种操作是错误的，直接设置数据，无法回收
+        //   obj: data // ❌ 这种操作是错误的，直接设置数据，无法回收内存导致泄漏
           obj: {},
         },
         ready() {

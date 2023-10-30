@@ -28,6 +28,7 @@
     "concurrent": 6,
     "dirs": {
       "en": "./docs/en",
+      "ko": "./docs/ko",
       "cn": "./docs/cn",
       "t-cn": "./docs/t-cn",
       "ja": "./docs/ja",

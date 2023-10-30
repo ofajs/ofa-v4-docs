@@ -1,0 +1,23 @@
+```html
+<template component>
+  comp1 =>
+  <input type="text" sync:value="obj.val" />
+  <script>
+    export const tag = "comp-three";
+
+    export default async function ({ load }) {
+      const { data } = await load("./data.mjs");
+
+      return {
+        data: {
+        //   obj: data // ❌ Esta operación es incorrecta, establece los datos directamente y no puede recuperar la memoria provocando fugas
+          obj: {},
+        },
+        ready() {
+          this.obj = data; // ❌ Establecerlo durante el ciclo de vida listo hace que sea imposible determinar cuándo se borrará, y puede dar lugar a fugas de memoria. La forma más segura de hacer esto es establecerlo durante el ciclo de vida adjunto y eliminarlo después de desacoplado.
+        },
+      };
+    }
+  </script>
+</template>
+```

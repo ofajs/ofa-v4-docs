@@ -1,0 +1,8 @@
+```javascript
+// ofa.js Code
+$ =("#target").html = "일부 html 코드"; // html 설정
+$("#target").text = "텍스트 설정"; // 텍스트 설정
+var ele_text = $("#target").text; // 텍스트 가져 오기
+var parents = $("#target").parents; // 모든 상위 요소 가져 오기 (배열)
+var child = $("#target")[0]; // 첫 번째 자식 요소 가져 오기
+```

@@ -1,0 +1,16 @@
+```html
+<!-- layout-page.html -->
+<template page>
+  <style>
+    /* 컨테이너 요소를 상대 위치로 설정합니다. */
+    .parent-container {
+      position: relative;
+    }
+  </style>
+  
+  <!-- 서브 페이지를 삽입할 컨테이너 요소를 설정합니다. -->
+  <div class="parent-container">
+    <slot></slot>
+  </div>
+</template>
+```

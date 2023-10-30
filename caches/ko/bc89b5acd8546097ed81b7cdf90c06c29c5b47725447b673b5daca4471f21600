@@ -1,0 +1,1 @@
+`classList` 속성은 요소의 스타일을 동적으로 변경하기 위해 클래스 이름을 쉽게 추가, 제거 및 전환할 수 있게 해줍니다. 자세한 조작 방법은 [classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)를 참조하세요.

@@ -1,0 +1,18 @@
+```html
+<!-- demo.html -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple-button</title>
+    <script src="../../ofa.js"></script>
+    <!-- <load-module src="./simple-button.html"></load-module> -->
+    <!-- l-m 구성 요소는 load-module 구성 요소와 동일하며 코드를 줄일 수 있습니다 -->
+    <l-m src="./simple-button.html"></l-m>
+  </head>
+  <body>
+    <simple-button>나는 버튼입니다</simple-button>
+  </body>
+</html>
+```

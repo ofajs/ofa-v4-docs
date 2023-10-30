@@ -1,0 +1,1 @@
+요소의 [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)을 가져와서 원시 [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)과 [`data`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style) 속성을 일치시킵니다.

@@ -1,0 +1,14 @@
+```html
+<template component>
+  <div>count: {{count}}</div>
+  <button on:click="count++">count++</button>
+  <script>
+    export default {
+      tag: "event-demo",
+      data: {
+        count: 0
+      },
+    };
+  </script>
+</template>
+```

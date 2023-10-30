@@ -1,0 +1,13 @@
+```javascript
+// MyComponent.mjs
+export default () => {
+  return {
+    attached(){
+      const appTag = this.app;
+
+      const currentPage = appTag.current;
+      console.log(`현재 활성화된 페이지는 : ${currentPage}`);
+    }
+  };
+}
+```

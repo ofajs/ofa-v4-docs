@@ -1,0 +1,19 @@
+```html
+<div>
+  <p>First Paragraph</p>
+</div>
+<script>
+  const $paragraphs = $('p');
+  
+  // 새 div 요소를 자식으로 추가합니다.
+  const $newDiv = $('<div>New Div</div>');
+  $paragraphs.push($newDiv);
+
+  setTimeout(()=>{
+    // 마지막 하위 요소 삭제
+    $paragraphs.pop();
+
+    console.log($paragraphs);
+  },1000)
+</script>
+```

@@ -1,0 +1,25 @@
+```html
+<div id="target"></div>
+<br />
+<div id="logger" style="border: #aaa solid 1px; padding: 8px"></div>
+
+<script>
+  const target = $("#target");
+  $("#logger").text = target;
+
+  // watch 메서드를 사용하여 속성 값 변경을 수신합니다.
+  target.watch(() => {
+    $("#logger").text = target;
+  });
+
+  setTimeout(() => {
+    // 이 속성의 값은 리스너를 트리거하지 않습니다.
+    target._aaa = "I am aaa";
+  }, 600);
+
+  setTimeout(() => {
+    // _aaa 속성 값을 변경해도 리스너는 여전히 트리거되지 않습니다.
+    target._aaa = "change aaa";
+  }, 1200);
+</script>
+```

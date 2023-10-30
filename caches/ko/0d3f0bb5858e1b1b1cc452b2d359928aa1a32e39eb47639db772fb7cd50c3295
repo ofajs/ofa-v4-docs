@@ -1,0 +1,1 @@
+SCSR의 전칭은 Static Client-Side Rendering이고, 정적 클라이언트 측 렌더링이라고도 합니다. 이는 CSR(Client-Side Rendering)의 한 종류로, CSR 사용자 경험을 유지하는 동시에 페이지가 정적 상태로 검색 엔진에 의해 크롤링될 수 있도록 합니다.

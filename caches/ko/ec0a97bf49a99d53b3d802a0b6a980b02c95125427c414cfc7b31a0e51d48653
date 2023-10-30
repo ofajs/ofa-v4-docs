@@ -1,0 +1,26 @@
+```html
+<template component>
+  <div>test watch</div>
+  <script>
+    let count = 0;
+    export default {
+      tag: "test-ready",
+      data:{
+        val: "I am val"
+      },
+      watch:{
+        val(val){
+          count++;
+          $("#logger").text = count;
+          $("#shadowHtml").push(`<div>${val}</div>`);
+        }
+      },
+      ready(){
+        setTimeout(()=>{
+          this.val = 'change val';
+        },500);
+      }
+    };
+  </script>
+</template>
+```

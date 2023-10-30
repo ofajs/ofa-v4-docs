@@ -1,0 +1,10 @@
+```javascript
+const $el = $(`
+<div>
+    <div id="target"></div>
+</div>
+`);
+
+$el.unwrap(); // ❌ 에러, 부모 요소가 없어서 unwrap할 수 없음
+$el.$('#target').unwrap(); // ✅ 정상, 둘러싸인 요소를 제거
+```

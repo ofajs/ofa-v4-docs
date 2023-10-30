@@ -1,0 +1,12 @@
+```html
+<button id="btn">Click Me</button>
+<script>
+  // 클릭 이벤트 핸들러 바인딩
+  $("#btn").on("click", () => {
+    alert("Button clicked!");
+  });
+
+  // emit 메서드를 통해 버튼 클릭 이벤트 트리거하기
+  $("#btn").emit("click");
+</script>
+```

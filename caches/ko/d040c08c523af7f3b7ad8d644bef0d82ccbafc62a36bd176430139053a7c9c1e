@@ -1,0 +1,7 @@
+- [created](./life-cycle/created.md)：컴포넌트가 생성되지만 내용이 렌더링되기 전에 발생합니다.
+- [ready](./life-cycle/ready.md)：컴포넌트가 생성되고 내용이 렌더링된 후에 발생합니다.
+- [watch](./life-cycle/watch.md)：컴포넌트가 초기화되고 값이 변경된 후에 발생합니다.
+- [loaded](./life-cycle/loaded.md)：컴포넌트에 포함된 리소스가 로드된 후에 발생합니다.
+- [attached](./life-cycle/attached.md)：컴포넌트가 문서에 추가된 후에 발생합니다.
+- [detached](./life-cycle/detached.md)：컴포넌트가 문서에서 제거된 후에 발생합니다.
+- [routerChange](./life-cycle/router-change.md)：중첩된 부모 페이지가 애플리케이션 라우팅이 변경될 때 발생합니다.
