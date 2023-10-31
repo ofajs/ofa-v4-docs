@@ -1,4 +1,4 @@
-# ofa.js - The No Build JavaScript frameworks
+# ofa.js - No-build MVVM JavaScript framework
 
 <!-- desc: ofa.js is a new framework for building user interfaces. It can be easily used by directly referencing it, without the need for a complicated building process. It eliminates the dependencies on npm, Node.js, and webpack, and brings back the convenience of the jQuery era. -->
 
@@ -12,7 +12,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## The No Build JavaScript frameworks
+## No-build MVVM JavaScript framework
 
 ### No need for tedious learning, no need for npm, nodejs, webpack, get started immediately
 

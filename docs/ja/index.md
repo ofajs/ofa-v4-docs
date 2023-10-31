@@ -1,4 +1,4 @@
-# ofa.js - パッケージング不要のJavaScriptフレームワーク
+# ofa.js - ビルド不要のMVVM JavaScriptフレームワーク
 
 <!-- desc: ofa.jsは、ユーザーインターフェイスを構築するための新しいフレームワークで、使いやすく、ビルドの手間なく直接参照できる。 npm、Node.js、webpackへの依存を捨て、jQuery時代の利便性を取り戻した。 -->
 
@@ -12,7 +12,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## パッケージ化されたJavaScriptフレームワークは必要ない
+## ビルド不要のMVVM JavaScriptフレームワーク
 
 ### 煩雑な学習は不要で、npm、Node.js、Webpackも必要ありません。すぐに始めることができます。
 

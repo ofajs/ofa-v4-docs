@@ -1,4 +1,4 @@
-# ofa.js - 不需要打包的 JavaScript 框架
+# ofa.js - 不需要打包的 MVVM JavaScript 框架
 
 <!-- desc: ofa.js 是一种全新的构建用户界面的框架，无需繁琐的构建过程，直接引用即可轻松使用。它摒弃了对 npm、Node.js 和 webpack 的依赖，重新回归了 jQuery 时代的便捷性。 -->
 
@@ -12,7 +12,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## 不需要打包的 JavaScript 框架
+## 不需要打包的 MVVM JavaScript 框架
 
 ### 无需繁琐学习，无需 npm、nodejs、webpack，即刻上手
 

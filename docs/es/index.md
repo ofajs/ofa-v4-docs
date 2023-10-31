@@ -1,4 +1,4 @@
-# ofa.js - Framework JavaScript sin empaquetar
+# ofa.js - Framework JavaScript MVVM sin construcción
 
 <!-- desc: ofa.js es un nuevo marco para construir interfaces de usuario que se puede usar fácilmente sin un proceso de construcción complicado. Abandona las dependencias de npm, Node.js y webpack, y vuelve a la conveniencia de la era de jQuery. -->
 
@@ -12,7 +12,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## Framework JavaScript sin empaquetar
+## Framework JavaScript MVVM sin construcción
 
 ### Sin curva de aprendizaje, sin npm, sin nodejs, sin webpack, ¡simplemente empieza!
 

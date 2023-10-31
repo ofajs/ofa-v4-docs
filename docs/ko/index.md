@@ -1,4 +1,4 @@
-# ofa.js - 번들링이 필요 없는 JavaScript 프레임워크
+# ofa.js - 노 빌드 MVVM JavaScript 프레임워크
 
 <!-- 설명: ofa.js는 번거로운 빌드 프로세스 없이 직접 참조하여 사용할 수 있는 사용자 인터페이스를 구축하는 새로운 프레임워크입니다. npm, Node.js 및 webpack에 대한 의존성을 제거하고 jQuery 시대의 편리함으로 돌아갑니다. -->
 
@@ -12,7 +12,7 @@
     <img src="../publics/webpack-logo.png" slot="fly" height="40" alt="webpack" />
 </punch-logo>
 
-## 자바스크립트 프레임워크를 패키징 할 필요가 없습니다.
+## 노 빌드 MVVM JavaScript 프레임워크
 
 ### 까다로운 학습 필요 없음, npm, nodejs, webpack 없이 즉시 시작
 
