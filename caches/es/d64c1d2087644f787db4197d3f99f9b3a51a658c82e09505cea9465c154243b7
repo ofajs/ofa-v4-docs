@@ -1,0 +1,1 @@
+Puedes extender el método 'extend' para hacerlo disponible en la sintaxis de la plantilla. El nombre del método es la parte antes de los dos puntos. Aquí estamos extendiendo la sintaxis de la plantilla 'color', y los argumentos seguidos después se pasarán al método de extensión definido.

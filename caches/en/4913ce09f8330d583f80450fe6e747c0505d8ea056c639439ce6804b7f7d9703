@@ -1,0 +1,1 @@
+This sets the `always` attribute to `true`, which means that every time the component needs to refresh the interface, this defined method will be called. If `always` is not set, the template syntax function will only run once.

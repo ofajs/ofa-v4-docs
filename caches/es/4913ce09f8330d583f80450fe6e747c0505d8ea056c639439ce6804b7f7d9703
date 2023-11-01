@@ -1,0 +1,1 @@
+Este lugar tiene el atributo 'always' establecido en 'true', lo que significa que cada vez que el componente necesita refrescar la interfaz, se llamará a este método definido. Si no se establece 'always', entonces esta función de sintaxis de plantilla solo se ejecutará una vez.

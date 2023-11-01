@@ -1,0 +1,11 @@
+```javascript
+$.fn.extend({
+  set red(bool){
+    if(bool){
+      this.css.color = "red";
+    }else{
+      this.css.color = '';
+    }
+  }
+});
+```

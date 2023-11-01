@@ -1,0 +1,1 @@
+Puedes configurar una extensión en la plantilla usando `:`. A continuación, vamos a crear una extensión llamada `red`, que cambiará el color de la fuente a rojo cuando `red` sea igual a `true`.

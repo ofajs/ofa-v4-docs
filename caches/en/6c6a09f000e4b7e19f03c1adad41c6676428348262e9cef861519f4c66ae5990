@@ -1,0 +1,1 @@
+You can use `:` in templates to set extended attributes. Here we will extend a `red` attribute, and when `red` is `true`, the font color becomes red.

@@ -1,0 +1,2 @@
+- Los métodos `class` y `attr` se ejecutan cada vez que se actualiza la vista.
+- Las funciones de enlace `on` y `one` solo se ejecutan una vez.

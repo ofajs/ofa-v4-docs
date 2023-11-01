@@ -1,0 +1,1 @@
+You can also use the `extend` extension method to make it available in template syntax. The method name is the part before the colon. Here, we extended a `color` template syntax, and the arguments following it will be passed to the defined extension method.
