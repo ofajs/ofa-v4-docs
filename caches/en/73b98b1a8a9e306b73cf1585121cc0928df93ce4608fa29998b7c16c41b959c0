@@ -1,0 +1,1 @@
+In this example, we added a `red` attribute to the template syntax, and when `count % 3` is not equal to 0, the font color will turn red.

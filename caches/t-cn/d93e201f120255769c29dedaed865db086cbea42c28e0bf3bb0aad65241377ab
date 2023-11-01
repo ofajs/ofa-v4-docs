@@ -1,0 +1,22 @@
+```html
+<template component>
+  <div>class always => {{classalways}}</div>
+  <div>attr always => {{attralways}}</div>
+  <div>on always => {{onalways}}</div>
+  <script>
+    export default {
+      tag: "temp-three",
+      data: {
+        classalways:"",
+        attralways:"",
+        onalways:""
+      },
+      ready(){
+        this.classalways = $.fn.class.always;
+        this.attralways = $.fn.attr.always;
+        this.onalways = !!$.fn.on.always;
+      }
+    };
+  </script>
+</template>
+```

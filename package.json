@@ -25,7 +25,7 @@
   "obook-translate": {
     "caches": "./caches",
     "main": "cn",
-    "concurrent": 6,
+    "concurrent": 16,
     "dirs": {
       "en": "./docs/en",
       "ko": "./docs/ko",

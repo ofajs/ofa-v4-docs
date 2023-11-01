@@ -1,0 +1,1 @@
+En este ejemplo, hemos agregado un atributo `red` a la sintaxis de la plantilla, y cuando `count % 3` no es igual a 0, el color de fuente se pondrá rojo.

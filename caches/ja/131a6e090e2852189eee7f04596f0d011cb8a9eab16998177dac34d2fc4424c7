@@ -1,0 +1,15 @@
+```javascript
+$.fn.extend({
+  color(color, func, options){
+    const bool = func();
+    // console.log(bool,options);
+    if(bool){
+      this.css.color = color;
+    }else{
+      this.css.color = '';
+    }
+  }
+});
+
+$.fn.color.always = true;
+```

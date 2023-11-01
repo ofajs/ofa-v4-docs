@@ -1,0 +1,2 @@
+- The `class` and `attr` methods will be executed every time the view is refreshed.
+- Functions like `on` and `one` bindings will only be executed once.
