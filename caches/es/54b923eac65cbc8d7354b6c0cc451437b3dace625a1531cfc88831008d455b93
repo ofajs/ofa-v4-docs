@@ -1,0 +1,4 @@
+- [before](../../api/operación/before.md): agregar un elemento antes de la instancia objetivo
+- [after](../../api/operación/after.md): agregar un elemento después de la instancia objetivo
+- [remove](../../api/operación/remove.md): eliminar el elemento objetivo
+- [attr](../../api/props/attr.md): obtener o establecer los [atributos](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) del elemento objetivo

@@ -6,22 +6,22 @@ Puede echar un vistazo rápido y, en el futuro, consultar la documentación de l
 
 ## Atributos comunes
 
-- [tag](./others/tag.md): obtener el nombre de la etiqueta del objetivo
-- [ele](./instance/ele.md): obtener el elemento nativo real de la instancia
-- [index](./others/index.md): obtener el orden del elemento objetivo dentro de su elemento padre
-- [text](../../api/props/text.md): obtener o establecer el texto del elemento objetivo
-- [html](../../api/props/html.md): obtener o establecer el código HTML del elemento objetivo
-- [css](../../api/props/css.md): obtener o establecer los estilos del elemento objetivo
-- [style](../../api/props/style.md): obtener los estilos nativos del elemento objetivo
-- [classList](../../api/props/class-list.md): obtener la lista de clases nativas del elemento objetivo
-- [data](../../api/props/data.md): obtener el conjunto de datos nativos del elemento objetivo
+- [tag](../../api/others/tag.md): Obtén el nombre de la etiqueta del objetivo
+- [ele](../../api/instance/ele.md): Obtén el elemento nativo real de la instancia
+- [index](../../api/others/index.md): Obtén el orden del elemento objetivo en su elemento padre
+- [text](../../api/props/text.md): Obtén o establece el texto del elemento objetivo
+- [html](../../api/props/html.md): Obtén o establece el código HTML del elemento objetivo
+- [css](../../api/props/css.md): Obtén o establece el estilo del elemento objetivo
+- [style](../../api/props/style.md): Obtén el estilo nativo del elemento objetivo
+- [classList](../../api/props/class-list.md): Obtén la lista de clases nativas del elemento objetivo
+- [data](../../api/props/data.md): Obtén el conjunto de datos nativos del elemento objetivo
 
 ### Operaciones de nodos
 
-- [before](./operation/before.md): Agregar un elemento antes de la instancia objetivo
-- [after](./operation/after.md): Agregar un elemento después de la instancia objetivo
-- [remove](./operation/remove.md): Eliminar el elemento objetivo
-- [attr](../../api/props/attr.md): Obtener o establecer los atributos del elemento objetivo [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
+- [before](../../api/operación/before.md): agregar un elemento antes de la instancia objetivo
+- [after](../../api/operación/after.md): agregar un elemento después de la instancia objetivo
+- [remove](../../api/operación/remove.md): eliminar el elemento objetivo
+- [attr](../../api/props/attr.md): obtener o establecer los [atributos](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) del elemento objetivo
 
 ## Características importantes
 
