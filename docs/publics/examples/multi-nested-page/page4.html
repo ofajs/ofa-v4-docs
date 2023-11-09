@@ -1,0 +1,19 @@
+<template page>
+  <style>
+    .title {
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 0;
+    }
+  </style>
+  <div class="title">{{title}}</div>
+  <button on:click="app.back()">Back</button>
+  <script>
+    export default {
+      parent: "./layout2.html",
+      data: {
+        title: "Page 4",
+      },
+    };
+  </script>
+</template>

@@ -26,8 +26,8 @@
     .btn {
       margin: 0 8px;
       padding: 4px 8px;
-      transition: all ease 0.3s;
       cursor: pointer;
+      transition: all ease 0.3s;
     }
     .btn.active {
       background-color: red;
@@ -38,8 +38,34 @@
   </style>
   <div class="container">
     <div class="top">
-      <a class="btn" class:active="currentPage === 'page1'" href="./page1.html" olink>page1</a>
-      <a class="btn" class:active="currentPage === 'page2'" href="./page2.html" olink>page2</a>
+      <a
+        class="btn"
+        class:active="currentPage === 'page1'"
+        href="./page1.html"
+        olink
+        >page1</a
+      >
+      <a
+        class="btn"
+        class:active="currentPage === 'page2'"
+        href="./page2.html"
+        olink
+        >page2</a
+      >
+      <a
+        class="btn"
+        class:active="currentPage === 'page3'"
+        href="./page3.html"
+        olink
+        >page3</a
+      >
+      <a
+        class="btn"
+        class:active="currentPage === 'page4'"
+        href="./page4.html"
+        olink
+        >page4</a
+      >
     </div>
     <div class="main">
       <slot></slot>
@@ -52,7 +78,10 @@
       },
       proto: {
         refreshActive() {
-          this.currentPage = this.app.current.src.replace(/.+\/(.+)\.html/, "$1");
+          this.currentPage = this.app.current.src.replace(
+            /.+\/(.+)\.html/,
+            "$1"
+          );
         },
       },
       attached() {
