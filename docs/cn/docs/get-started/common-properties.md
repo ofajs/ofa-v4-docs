@@ -6,9 +6,9 @@
 
 ## 常用的属性
 
-- [tag](./others/tag.md)：获取目标的标签名
-- [ele](./instance/ele.md)：获取实例的实际原生元素
-- [index](./others/index.md)：获取目标元素在其父元素下的排序
+- [tag](../../api/others/tag.md)：获取目标的标签名
+- [ele](../../api/instance/ele.md)：获取实例的实际原生元素
+- [index](../../api/others/index.md)：获取目标元素在其父元素下的排序
 - [text](../../api/props/text.md)：获取或设置目标元素的文本
 - [html](../../api/props/html.md)：获取或设置目标元素的 HTML 代码
 - [css](../../api/props/css.md)：获取或设置目标元素的样式
@@ -18,9 +18,9 @@
 
 ### 节点操作
 
-- [before](./operation/before.md)：在目标实例的前面添加元素
-- [after](./operation/after.md)：在目标实例的后面添加元素
-- [remove](./operation/remove.md)：删除目标元素
+- [before](../../api/operation/before.md)：在目标实例的前面添加元素
+- [after](../../api/operation/after.md)：在目标实例的后面添加元素
+- [remove](../../api/operation/remove.md)：删除目标元素
 - [attr](../../api/props/attr.md)：获取或设置目标元素的 [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
 
 ## 重要特性
