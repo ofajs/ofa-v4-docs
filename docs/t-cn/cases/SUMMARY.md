@@ -25,6 +25,7 @@
   - [為app定制loading](./app-loading.md)
   - [設置404頁面](./set404.md)
   - [嵌套頁面](./nested-page.md)
+  - [多級嵌套頁面](./multi-nested.md)
   - [使用HashRouter](./use-hash-router.md)
   - [使用scsr方案](./use-scsr.md)
 - 其他技巧
