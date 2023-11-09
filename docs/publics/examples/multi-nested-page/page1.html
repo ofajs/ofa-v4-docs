@@ -1,0 +1,19 @@
+<template page>
+  <style>
+    .title {
+      font-weight: bold;
+      font-size: 22px;
+      padding: 8px 0;
+    }
+  </style>
+  <div class="title">{{title}}</div>
+  <a href="./page2.html" olink>go to page2</a>
+  <script>
+    export default {
+      parent: "./layout.html",
+      data: {
+        title: "I am Page 1",
+      },
+    };
+  </script>
+</template>

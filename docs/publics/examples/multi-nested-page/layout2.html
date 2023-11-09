@@ -1,0 +1,66 @@
+<template page>
+  <style>
+    .container {
+      display: flex;
+    }
+    .left {
+      background-color: rgba(255, 0, 0, 0.352);
+    }
+    .main {
+      flex: 1;
+    }
+    .block {
+      display: block;
+      padding: 8px;
+      font-size: 13px;
+      transition: all ease 0.3s;
+    }
+    .block.active {
+      background-color: blue;
+      color: #fff;
+    }
+  </style>
+  <div class="container">
+    <div class="left">
+      <a
+        class="block"
+        class:active="currentPage === 'page3'"
+        href="./page3.html"
+        olink
+        >page3</a
+      >
+      <a
+        class="block"
+        class:active="currentPage === 'page4'"
+        href="./page4.html"
+        olink
+        >page4</a
+      >
+    </div>
+    <div class="main">
+      <slot></slot>
+    </div>
+  </div>
+  <script>
+    export default {
+      parent: "./layout.html",
+      data: {
+        currentPage: "",
+      },
+      proto: {
+        refreshActive() {
+          this.currentPage = this.app.current.src.replace(
+            /.+\/(.+)\.html/,
+            "$1"
+          );
+        },
+      },
+      attached() {
+        this.refreshActive();
+      },
+      routerChange() {
+        this.refreshActive();
+      },
+    };
+  </script>
+</template>
