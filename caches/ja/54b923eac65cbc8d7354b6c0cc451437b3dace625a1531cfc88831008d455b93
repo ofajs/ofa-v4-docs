@@ -1,0 +1,4 @@
+- [before](../../api/operation/before.md)：ターゲットインスタンスの前に要素を追加します
+- [after](../../api/operation/after.md)：ターゲットインスタンスの後に要素を追加します
+- [remove](../../api/operation/remove.md)：ターゲット要素を削除します
+- [attr](../../api/props/attr.md)：ターゲット要素の[attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)を取得または設定します

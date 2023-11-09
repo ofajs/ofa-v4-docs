@@ -1,0 +1,9 @@
+- [tag](../../api/others/tag.md): Obtén el nombre de la etiqueta del objetivo
+- [ele](../../api/instance/ele.md): Obtén el elemento nativo real de la instancia
+- [index](../../api/others/index.md): Obtén el orden del elemento objetivo en su elemento padre
+- [text](../../api/props/text.md): Obtén o establece el texto del elemento objetivo
+- [html](../../api/props/html.md): Obtén o establece el código HTML del elemento objetivo
+- [css](../../api/props/css.md): Obtén o establece el estilo del elemento objetivo
+- [style](../../api/props/style.md): Obtén el estilo nativo del elemento objetivo
+- [classList](../../api/props/class-list.md): Obtén la lista de clases nativas del elemento objetivo
+- [data](../../api/props/data.md): Obtén el conjunto de datos nativos del elemento objetivo
