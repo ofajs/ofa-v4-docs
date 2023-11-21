@@ -28,7 +28,7 @@
 
 ```html
 <template component>
-  <l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
+  <l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
   <punch-logo></punch-logo>
   <script>
     let count = 0;

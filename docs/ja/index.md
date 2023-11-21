@@ -48,14 +48,14 @@
 ```
 <!-- ofa.jsをプロジェクトにインポート -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
-<!-- 開発済みのpunch-logoコンポーネントをロードする -->
-<l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
+<!-- 開発されたpunch-logoのコンポーネントをロード -->
+<l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
 ```html
 <!-- punch-logoコンポーネントの使用 -->
 <punch-logo style="margin:50px 0 0 100px;">
-    <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
+    <img src="https://ofajs.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
     <h2>残業はもういらない</h2>
     <p slot="fly">私のために仕事を休んでください</p>
     <p slot="fly">遅くまで残業</p>

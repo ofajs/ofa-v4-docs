@@ -1,0 +1,6 @@
+```
+<!-- Incluye ofa.js en tu proyecto -->
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<!-- Carga el componente punch-logo previamente desarrollado -->
+<l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
+```

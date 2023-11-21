@@ -45,19 +45,19 @@
 
 <html-viewer style="width:100%;">
 
-```
-<!-- ofa.js 프로젝트로 로드 -->
+```Korean
+<!-- ofa.js 프로젝트로 임포트 -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
-<!-- 개발된 punch-logo 컴포넌트로 로드 -->
-<l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
+<!-- 개발한 punch-logo 컴포넌트 로드 -->
+<l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
 ```html
-<!-- punch-logo 구성 요소 사용 -->
+<!-- punch-logo 컴포넌트 사용 -->
 <punch-logo style="margin:50px 0 0 100px;">
-    <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
-    <h2>야근하지 않을게요</h2>
-    <p slot="fly">퇴근해주세요</p>
+    <img src="https://ofajs.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
+    <h2>야근 끝</h2>
+    <p slot="fly">퇴근 시간</p>
     <p slot="fly">나중에 퇴근</p>
     <p slot="fly">주말에 야근</p>
 </punch-logo>

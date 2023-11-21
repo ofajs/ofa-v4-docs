@@ -1,7 +1,7 @@
 ```html
 <!-- 使用 punch-logo 組件 -->
 <punch-logo style="margin:50px 0 0 100px;">
-    <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
+    <img src="https://ofajs.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
     <h2>不加班了</h2>
     <p slot="fly">下班給我</p>
     <p slot="fly">遲點下班</p>

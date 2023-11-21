@@ -49,17 +49,17 @@ Unlike other front-end frameworks, using components developed based on ofa.js do
 <!-- Import ofa.js into the project -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 <!-- Load the developed punch-logo component -->
-<l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
+<l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
 ```html
-<!-- Use the punch-logo component -->
+<!-- Using the punch-logo component -->
 <punch-logo style="margin:50px 0 0 100px;">
-    <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
-    <h2>No Overtime</h2>
-    <p slot="fly">Give me off-duty</p>
-    <p slot="fly">Leave work later</p>
-    <p slot="fly">Overtime on weekends</p>
+    <img src="https://ofajs.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
+    <h2>No more overtime</h2>
+    <p slot="fly">Give me a break</p>
+    <p slot="fly">Leave work a bit later</p>
+    <p slot="fly">Work overtime on weekends</p>
 </punch-logo>
 ```
 

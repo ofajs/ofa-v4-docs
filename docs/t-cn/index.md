@@ -49,13 +49,13 @@
 <!-- 將 ofa.js 引入項目 -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 <!-- 加載開發好的 punch-logo 組件 -->
-<l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
+<l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
 ```html
 <!-- 使用 punch-logo 組件 -->
 <punch-logo style="margin:50px 0 0 100px;">
-    <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
+    <img src="https://ofajs.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
     <h2>不加班了</h2>
     <p slot="fly">下班給我</p>
     <p slot="fly">遲點下班</p>
