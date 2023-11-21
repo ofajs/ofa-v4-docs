@@ -53,13 +53,13 @@ Unlike other front-end frameworks, using components developed based on ofa.js do
 ```
 
 ```html
-<!-- Use the punch-logo component -->
+<!-- Using the punch-logo component -->
 <punch-logo style="margin:50px 0 0 100px;">
     <img src="https://ofajs.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
-    <h2>No Overtime</h2>
-    <p slot="fly">Give me off-duty</p>
-    <p slot="fly">Leave work later</p>
-    <p slot="fly">Overtime on weekends</p>
+    <h2>No more overtime</h2>
+    <p slot="fly">Give me a break</p>
+    <p slot="fly">Leave work a bit later</p>
+    <p slot="fly">Work overtime on weekends</p>
 </punch-logo>
 ```
 
