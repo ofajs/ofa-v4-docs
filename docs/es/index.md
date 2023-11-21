@@ -49,7 +49,7 @@ A diferencia de otros marcos frontales, el desarrollo de componentes basados en 
 <!-- Introducir ofa.js en el proyecto -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 <!-- Cargar el componente punch-logo desarrollado -->
-<l-m src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
+<l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
 ```html
