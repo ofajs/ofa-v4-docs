@@ -55,7 +55,7 @@ A diferencia de otros marcos frontales, el desarrollo de componentes basados en 
 ```html
 <!-- Utilización del componente "punch-logo”.  -->
 <punch-logo style="margin:50px 0 0 100px;">
-    <img src="https://kirakiray.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
+    <img src="https://ofajs.github.io/ofa-v4-docs/docs/publics/logo.svg" logo height="90" />
     <h2>No más horas extra</h2>
     <p slot="fly">Sal del trabajo por mí</p>
     <p slot="fly">Salir tarde del trabajo</p>
