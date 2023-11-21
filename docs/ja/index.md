@@ -45,10 +45,9 @@
 
 <html-viewer style="width:100%;">
 
-```
 <!-- ofa.jsをプロジェクトにインポート -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
-<!-- 開発済みのpunch-logoコンポーネントをロードする -->
+<!-- 開発されたpunch-logoのコンポーネントをロード -->
 <l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 

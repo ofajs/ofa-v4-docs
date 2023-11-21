@@ -46,9 +46,9 @@ A diferencia de otros marcos frontales, el desarrollo de componentes basados en 
 <html-viewer style="width:100%;">
 
 ```
-<!-- Introducir ofa.js en el proyecto -->
+<!-- Incluye ofa.js en tu proyecto -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
-<!-- Cargar el componente punch-logo desarrollado -->
+<!-- Carga el componente punch-logo previamente desarrollado -->
 <l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 

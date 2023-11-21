@@ -1,6 +1,5 @@
-```
-<!-- ofa.js 프로젝트로 로드 -->
+<!-- ofa.jsをプロジェクトにインポート -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
-<!-- 개발된 punch-logo 컴포넌트로 로드 -->
+<!-- 開発されたpunch-logoのコンポーネントをロード -->
 <l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```

@@ -45,10 +45,10 @@
 
 <html-viewer style="width:100%;">
 
-```
-<!-- ofa.js 프로젝트로 로드 -->
+```Korean
+<!-- ofa.js 프로젝트로 임포트 -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
-<!-- 개발된 punch-logo 컴포넌트로 로드 -->
+<!-- 개발한 punch-logo 컴포넌트 로드 -->
 <l-m src="https://ofajs.github.io/ofa-v4-docs/docs/publics/comps/punch-logo.html"></l-m>
 ```
 
