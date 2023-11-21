@@ -45,6 +45,7 @@
 
 <html-viewer style="width:100%;">
 
+```
 <!-- ofa.jsをプロジェクトにインポート -->
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
 <!-- 開発されたpunch-logoのコンポーネントをロード -->
