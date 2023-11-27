@@ -7,7 +7,7 @@
 먼저, 페이지에서 `o-router` 컴포넌트를 참조해야 합니다. `router.mjs` 파일을 다음과 같은 방법으로 참조할 수 있습니다:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.js"></script>
 ```
 
 ## o-router 컴포넌트 사용
@@ -33,7 +33,7 @@ o-router 구성 요소는 o-app 구성 요소의 외부에 래핑하여 사용�
     <title>router test</title>
     <script src="ofa.js"></script>
     <!-- o-router 컴포넌트 로드 -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- O-라우터 컴포넌트 사용 및 수정 본문 속성 설정하기 -->

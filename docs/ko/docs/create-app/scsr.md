@@ -9,7 +9,7 @@ SCSR 전체 이름인 정적 클라이언트 측 렌더링은 정적 클라이�
 SCSR 라이브러리를 인용하는 방법은 다음과 같습니다:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/scsr/dist/scsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/scsr/dist/scsr.min.js"></script>
 ```
 
 ## SCSR 작동 원리

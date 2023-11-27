@@ -5,7 +5,7 @@
 You can directly reference ofa.js to your page by using the CDN address: 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.js"></script>
 ```
 
 ### Install via npm

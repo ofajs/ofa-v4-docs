@@ -5,7 +5,7 @@
 你可以通過 CDN 的地址直接將 ofa.js 引用到你的頁面上：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/dist/ofa.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.js"></script>
 ```
 
 ### 通過 npm 安裝
