@@ -21,3 +21,4 @@
 - 其他
   - [数据共享](./others/data-sharing.md)
   - [ofa.js和微前端](./others/about-micro-frontend.md)
+  - [和jQuery共存](./others/coexist-with-jquery.md)
