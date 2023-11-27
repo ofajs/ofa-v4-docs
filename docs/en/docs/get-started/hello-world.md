@@ -5,8 +5,7 @@ Here is an example, when the button is clicked, change the text to "Hello World"
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -35,8 +34,7 @@ Following is an example:
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -73,8 +71,7 @@ You can also get the content of an element through the `html` or `text` attribut
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

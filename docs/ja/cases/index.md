@@ -12,7 +12,7 @@
 
 これは、DOM要素の内容を変更する方法を示すシンプルな例です：
 
-## 使用方法
+## 説明書
 
 ofa.jsの導入により、`$`シンボルがグローバルスコープに登録された。 最初にマッチした要素は `$('xxx')` によって選択されます。ここで `xxx` は標準の [CSS セレクタ](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors) の内容です。
 

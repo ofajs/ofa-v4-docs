@@ -33,8 +33,7 @@ clientHeight는 엘리먼트의 보이는 콘텐츠 영역의 높이를 나타�
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

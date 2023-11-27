@@ -1,0 +1,1 @@
+jQueryの導入後に[noConflict](https://api.jquery.com/jQuery.noConflict/)メソッドを呼び出すことで、`$`変数を解放し、衝突を避けることができます。

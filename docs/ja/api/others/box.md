@@ -33,8 +33,7 @@ offsetWidthは、要素の全体の幅を表し、内容領域、パディング
 <html-viewer>
 
 ```
-<!-- ofa.js プロジェクトにインポートする -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

@@ -73,4 +73,5 @@
 - [refresh](./others/refresh.md)：主動刷新組件的界面
 - [PATH](./others/path.md)：獲取組件或頁面的注冊文件地址
 - [extend](./others/extend.md)：擴展實例的數據或方法；擴展 ofa.js 底層的數據或方法；
+- [version](./others/version.md)：獲取當前引入的 ofa.js 的版本號
 - [實例數據特征](./others/stanz.md)：介紹實例數據的子對象數據特性，如何監聽數據的變動

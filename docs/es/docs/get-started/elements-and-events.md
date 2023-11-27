@@ -17,8 +17,7 @@ En los capítulos anteriores, hemos aprendido cómo obtener un elemento global u
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -51,8 +50,7 @@ En el ejemplo anterior, primero selecciona el elemento padre con la clase "paren
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -86,8 +84,7 @@ En el ejemplo anterior, se utiliza directamente `$('div .child')` para buscar lo
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -118,8 +115,7 @@ Además de poder buscar elementos a nivel global, también puedes buscar todos l
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -168,8 +164,7 @@ $(selector).off(eventName, eventHandler);
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -212,8 +207,7 @@ $(selector).one(eventName, eventHandler);
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

@@ -9,8 +9,7 @@ $로 인스턴스를 통해 새로운 요소를 직접 생성하고 조작할 �
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -31,8 +30,7 @@ $로 얻은 인스턴스는 DOM 요소처럼 `children` 속성을 가지지 않�
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -60,8 +58,7 @@ $를 통해 우리는 배열의 메서드를 직접 사용하여 하위 요소�
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

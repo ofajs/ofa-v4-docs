@@ -5,8 +5,7 @@ parent属性を使用すると、インスタンスの親要素のインスタ�
 <html-viewer>
 
 ```
-<!-- ofa.js プロジェクトにインポートする -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

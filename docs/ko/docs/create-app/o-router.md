@@ -32,11 +32,11 @@ o-router 구성 요소는 o-app 구성 요소의 외부에 래핑하여 사용�
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- o-router 컴포넌트 로드 -->
+    <!-- O-Router 구성요소 로드 -->
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.js"></script>
   </head>
   <body>
-    <!-- O-라우터 컴포넌트 사용 및 수정 본문 속성 설정하기 -->
+    <!-- o-router 구성요소를 사용하고 fix-body 속성을 설정하세요. -->
     <o-router fix-body> 
       <o-app src="app-config.mjs"></o-app>
     </o-router>

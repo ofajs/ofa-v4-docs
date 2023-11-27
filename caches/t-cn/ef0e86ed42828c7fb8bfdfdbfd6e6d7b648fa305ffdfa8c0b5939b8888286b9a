@@ -1,0 +1,1 @@
+你可以在引入 jQuery 後調用 [noConflict](https://api.jquery.com/jQuery.noConflict/) 方法，這樣就會釋放 `$` 變量，避免沖突。

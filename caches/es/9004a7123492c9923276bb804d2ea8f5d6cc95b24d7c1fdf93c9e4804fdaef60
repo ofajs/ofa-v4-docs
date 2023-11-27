@@ -1,0 +1,1 @@
+Otra forma es importar las bibliotecas en secuencia, donde la biblioteca importada posteriormente ocupará la variable `$`. En este caso, puedes utilizar la variable global `ofa` en lugar de la variable original `$`.

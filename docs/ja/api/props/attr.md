@@ -2,7 +2,7 @@
 
 `attr` メソッドは、要素の [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) を取得または設定するために使用されます。
 
-## 直接使用
+## 直接使用する
 
 `attr`メソッドを使用して、要素の属性を直接取得または設定することができます。以下は例です：%
 

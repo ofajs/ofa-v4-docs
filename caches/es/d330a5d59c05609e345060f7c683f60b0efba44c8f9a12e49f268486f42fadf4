@@ -1,0 +1,1 @@
+Puedes habilitar el modo de depuración agregando el atributo `debug` a la etiqueta de script que hace referencia a ofa.js. En el modo de depuración, los módulos de componentes o páginas cargados utilizarán la función de sourceMap, lo que te permitirá depurar directamente desde el archivo fuente.

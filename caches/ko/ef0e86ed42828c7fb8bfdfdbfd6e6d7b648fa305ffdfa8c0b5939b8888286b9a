@@ -1,0 +1,1 @@
+jQuery를 가져온 후에 [noConflict](https://api.jquery.com/jQuery.noConflict/) 메소드를 호출하여 `$` 변수를 해제하여 충돌을 피할 수 있습니다.

@@ -65,12 +65,13 @@ Below is an overview of the ofa.js API. You can have a quick look now and refer 
 
 ## Others
 
-- [Box Model](./others/box.md): Retrieves all size-related data of the target element.
-- [formData](./others/form-data.md): Conveniently binds and retrieves form data.
-- [tag](./others/tag.md): Retrieves the tag name of the target.
-- [index](./others/index.md): Retrieves the position of the target element within its parent element.
-- [is](./others/is.md): Checks whether the target element matches a CSS selector expression.
-- [refresh](./others/refresh.md): Actively refreshes the component's interface.
-- [PATH](./others/path.md): Retrieves the registration file address of a component or page.
-- [extend](./others/extend.md): Extends the data or methods of an instance; extends the data or methods of the underlying ofa.js.
-- [Instance Data Features](./others/stanz.md): Introduces the characteristics of sub-object data in instance data and how to listen for changes in data.
+- [Box Model](./others/box.md): Get all dimension-related data of the target element
+- [formData](./others/form-data.md): Conveniently bind and retrieve form data
+- [tag](./others/tag.md): Get the tag name of the target
+- [index](./others/index.md): Get the index of the target element under its parent element
+- [is](./others/is.md): Determine if the target element matches a CSS selector expression
+- [refresh](./others/refresh.md): Actively refresh the component's interface
+- [PATH](./others/path.md): Get the registration file address of a component or page
+- [extend](./others/extend.md): Extend the data or methods of an instance; extend the data or methods of ofa.js at the underlying level
+- [version](./others/version.md): Get the version number of the imported ofa.js
+- [Instance Data Characteristics](./others/stanz.md): Introduction to the characteristics of sub-object data of instance data and how to listen for data changes

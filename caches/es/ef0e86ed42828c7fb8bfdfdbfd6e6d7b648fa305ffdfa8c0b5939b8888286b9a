@@ -1,0 +1,1 @@
+Puedes llamar al método [noConflict](https://api.jquery.com/jQuery.noConflict/) después de cargar jQuery para liberar la variable `$` y evitar conflictos.

@@ -1,0 +1,8 @@
+```html
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+  $.noConflict();
+  // Ahora puedes llamar a jQuery utilizando su nombre completo, por ejemplo jQuery.ajax().
+</script>
+```

@@ -32,11 +32,11 @@ Para utilizar el componente `o-router`, debe envolverlo fuera del componente `o-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>router test</title>
     <script src="ofa.js"></script>
-    <!-- Carga el componente o-router. -->
+    <!-- Cargar componente del enrutador -->
     <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.js"></script>
   </head>
   <body>
-    <!-- Utiliza el componente o-router y establece la propiedad fix-body -->
+    <!-- Utilice el componente o-router y establezca el atributo fix-body -->
     <o-router fix-body> 
       <o-app src="app-config.mjs"></o-app>
     </o-router>

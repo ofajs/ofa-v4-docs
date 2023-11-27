@@ -1,0 +1,10 @@
+- [Box Model](./others/box.md): Get all dimension-related data of the target element
+- [formData](./others/form-data.md): Conveniently bind and retrieve form data
+- [tag](./others/tag.md): Get the tag name of the target
+- [index](./others/index.md): Get the index of the target element under its parent element
+- [is](./others/is.md): Determine if the target element matches a CSS selector expression
+- [refresh](./others/refresh.md): Actively refresh the component's interface
+- [PATH](./others/path.md): Get the registration file address of a component or page
+- [extend](./others/extend.md): Extend the data or methods of an instance; extend the data or methods of ofa.js at the underlying level
+- [version](./others/version.md): Get the version number of the imported ofa.js
+- [Instance Data Characteristics](./others/stanz.md): Introduction to the characteristics of sub-object data of instance data and how to listen for data changes
