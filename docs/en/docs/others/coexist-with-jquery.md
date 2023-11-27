@@ -17,7 +17,7 @@ You can call the [noConflict](https://api.jquery.com/jQuery.noConflict/) method 
 
 ## 2. Import libraries in order
 
-Another method is to import the libraries in order, and the library imported later will occupy the "$" variable. In this case, you can use the global variable "ofa" instead of the original "$".
+Another method is to import the libraries in order, and the library imported later will occupy the "$" variable. In this case, you can use the global variable "ofa" instead of the original $.
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
