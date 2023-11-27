@@ -7,8 +7,7 @@ A continuación se muestra un ejemplo que muestra cómo utilizar el método `emi
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -51,8 +50,7 @@ Al pasar el parámetro `data`, puedes enviar datos personalizados al controlador
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -92,8 +90,7 @@ Si no deseas que el evento se propague, puedes añadir el parámetro `bubbles: f
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

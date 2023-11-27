@@ -1,0 +1,5 @@
+```html
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<!-- 現在 $ は jQuery の別名です。ofa.js 関連の機能を呼び出すために $ の代わりに ofa を使用することができます -->
+```

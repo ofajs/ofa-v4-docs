@@ -73,4 +73,5 @@
 - [refresh](./others/refresh.md)：主动刷新组件的界面
 - [PATH](./others/path.md)：获取组件或页面的注册文件地址
 - [extend](./others/extend.md)：扩展实例的数据或方法；扩展 ofa.js 底层的数据或方法；
+- [version](./others/version.md)：获取当前引入的 ofa.js 的版本号
 - [实例数据特征](./others/stanz.md)：介绍实例数据的子对象数据特性，如何监听数据的变动

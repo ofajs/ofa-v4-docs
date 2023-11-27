@@ -13,8 +13,7 @@ A continuación se muestra un ejemplo que demuestra el uso de instancias `$` y e
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -58,8 +57,7 @@ A continuación se muestra un ejemplo que muestra cómo usar el método `watchTi
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -103,8 +101,7 @@ A continuación se muestra un ejemplo que muestra cómo utilizar el método `unw
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -148,8 +145,7 @@ A continuación se muestra un ejemplo que demuestra cómo usar valores de atribu
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

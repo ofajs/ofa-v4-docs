@@ -7,8 +7,7 @@ En la página, el nodo raíz de los elementos comunes es una instancia de [docum
 <html-viewer>
 
 ```
-<!-- Importe ofa.js en su proyecto -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

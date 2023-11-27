@@ -1,0 +1,1 @@
+You can enable debugging mode by adding the `debug` attribute to the script tag that references ofa.js. In debugging mode, the loaded component modules or page modules will enable sourceMap functionality, allowing you to debug directly from the source file.

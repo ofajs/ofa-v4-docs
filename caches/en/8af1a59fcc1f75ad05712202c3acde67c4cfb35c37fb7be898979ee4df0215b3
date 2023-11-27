@@ -1,0 +1,1 @@
+By accessing the `ofa.version` property, you can obtain the version number of the imported ofa.js.

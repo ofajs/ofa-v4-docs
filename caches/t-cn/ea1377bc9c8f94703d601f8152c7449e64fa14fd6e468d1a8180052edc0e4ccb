@@ -1,0 +1,6 @@
+```html
+<div id="logger"></div>
+<script>
+    $("#logger").html = ofa.version;
+</script>
+```

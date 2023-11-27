@@ -7,8 +7,7 @@ In this example, we set up an alias using the `lm.config` method, mapping the al
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

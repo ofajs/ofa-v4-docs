@@ -1,0 +1,19 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>router test</title>
+    <script src="ofa.js"></script>
+    <!-- 加載 o-router 組件 -->
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.js"></script>
+  </head>
+  <body>
+    <!-- 使用 o-router 組件，並設置 fix-body 屬性 -->
+    <o-router fix-body> 
+      <o-app src="app-config.mjs"></o-app>
+    </o-router>
+  </body>
+</html>
+```

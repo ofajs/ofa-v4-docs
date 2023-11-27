@@ -12,7 +12,7 @@ o-router 구성 요소를 사용하면 앱 구성 요소 내의 라우트를 현
 이 예시에서는 <span style='font-family: "iconfont"'>&#xe7cb;</span> 버튼을 클릭하여 새로운 페이지에서 열어보고 시도하십시오.
 
 ```html
-<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.mjs"></l-m>
+<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.mjs"></l-m>
 <o-router fix-body>
   <o-app src="./app-config.mjs"></o-app>
 </o-router>

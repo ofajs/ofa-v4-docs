@@ -5,8 +5,7 @@ Accessing child element instances is very simple. You just need to treat the ins
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

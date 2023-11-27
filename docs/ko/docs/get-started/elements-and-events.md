@@ -17,8 +17,7 @@
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -51,8 +50,7 @@
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -86,8 +84,7 @@
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -118,8 +115,7 @@
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -168,8 +164,7 @@ eventHandler: 제거할 이벤트 처리 함수를 지정합니다.
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -212,8 +207,7 @@ $(selector).one(eventName, eventHandler);
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

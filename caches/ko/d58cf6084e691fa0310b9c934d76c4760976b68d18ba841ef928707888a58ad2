@@ -1,0 +1,8 @@
+```html
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+  $.noConflict();
+  // 이제 jQuery.ajax()와 같은 전체 이름을 사용하여 jQuery를 호출할 수 있습니다.
+</script>
+```

@@ -65,12 +65,13 @@ ofa.js API 개요입니다. 필요할 때 자세한 문서를 찾아 보기 위�
 
 ## 기타
 
-- [박스 모델](./others/box.md) : 대상 요소의 모든 크기 관련 데이터를 가져옴
-- [formData](./others/form-data.md) : 폼 데이터를 편리하게 바인딩하고 가져옴
-- [tag](./others/tag.md) : 대상의 태그 이름을 가져옴
-- [index](./others/index.md) : 대상 요소가 부모 요소 내에서의 순서를 가져옴
-- [is](./others/is.md) : 대상 요소가 CSS 선택자 표현식과 일치하는지 판단
-- [refresh](./others/refresh.md) : 구성 요소의 인터페이스를 수동으로 새로 고침
-- [PATH](./others/path.md) : 구성 요소 또는 페이지의 등록 파일 주소를 가져옴
-- [extend](./others/extend.md) : 인스턴스 데이터 또는 메서드를 확장; ofa.js의 하위 데이터 또는 메서드를 확장
-- [인스턴스 데이터 특성](./others/stanz.md) : 인스턴스 데이터의 하위 객체 데이터 특성을 소개하고 데이터의 변경을 어떻게 감시할지 설명함
+- [박스 모델](./others/box.md): 대상 요소의 모든 크기 관련 데이터를 가져옵니다.
+- [formData](./others/form-data.md): 폼 데이터를 편리하게 바인딩하고 가져옵니다.
+- [태그](./others/tag.md): 대상의 태그 이름을 가져옵니다.
+- [인덱스](./others/index.md): 대상 요소의 부모 요소 내에서의 순서를 가져옵니다.
+- [is](./others/is.md): 대상 요소가 CSS 선택자 표현식과 일치하는지 확인합니다.
+- [새로고침](./others/refresh.md): 컴포넌트의 인터페이스를 수동으로 새로고침합니다.
+- [경로](./others/path.md): 컴포넌트 또는 페이지의 등록 파일 주소를 가져옵니다.
+- [확장](./others/extend.md): 인스턴스의 데이터 또는 메소드를 확장하거나 ofa.js의 내부 데이터 또는 메소드를 확장합니다.
+- [버전](./others/version.md): 현재로서의 ofa.js의 버전 번호를 가져옵니다.
+- [인스턴스 데이터 특성](./others/stanz.md): 인스턴스 데이터의 하위 객체 데이터 특성에 대해 설명하고 데이터 변경을 어떻게 감시할지 소개합니다

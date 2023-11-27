@@ -17,8 +17,7 @@ In the previous chapters, we have learned how to access a specific element from 
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -51,8 +50,7 @@ In the example above, first select the parent element with the `parent` class us
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -86,8 +84,7 @@ The `$.all('xxx')` method is used to find all elements on the page that meet the
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -118,8 +115,7 @@ In addition to searching for elements globally, you can also search for all matc
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -168,8 +164,7 @@ $(selector).off(eventName, eventHandler);
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -212,8 +207,7 @@ $(selector).one(eventName, eventHandler);
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

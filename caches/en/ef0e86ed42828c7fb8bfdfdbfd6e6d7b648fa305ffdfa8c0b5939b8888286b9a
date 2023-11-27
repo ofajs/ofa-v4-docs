@@ -1,0 +1,1 @@
+You can call the [noConflict](https://api.jquery.com/jQuery.noConflict/) method after importing jQuery, which will release the `$` variable to avoid conflicts.

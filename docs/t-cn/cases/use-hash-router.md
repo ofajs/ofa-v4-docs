@@ -12,7 +12,7 @@
 在這個示例中，請點擊  <span style='font-family: "iconfont"'>&#xe7cb;</span>  按鈕，以新頁面的方式打開並嘗試。
 
 ```html
-<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.mjs"></l-m>
+<l-m src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.mjs"></l-m>
 <o-router fix-body>
   <o-app src="./app-config.mjs"></o-app>
 </o-router>

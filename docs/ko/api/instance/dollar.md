@@ -9,8 +9,7 @@
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -34,8 +33,7 @@
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -59,8 +57,7 @@
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -117,8 +114,7 @@ $$$ 함수를 사용하여 문자열을 사용하여 새로운 요소 인스턴�
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -143,8 +139,7 @@ $$$ 함수를 사용하여 객체 방식으로 새 요소 인스턴스를 생성
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

@@ -5,8 +5,7 @@ siblings 속성을 사용하면 현재 요소의 모든 인접한 요소 인스�
 <html-viewer>
 
 ```
-<!-- ofa.js 프로젝트에 가져오기 -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

@@ -9,8 +9,7 @@ Through `$` examples, we can directly create new elements and manipulate them, f
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -31,8 +30,7 @@ For instances obtained through `$`, they do not have the `children` property lik
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html
@@ -60,8 +58,7 @@ Through the `$` instance, we can also directly use array methods to manipulate c
 <html-viewer>
 
 ```
-<!-- Import ofa.js into the project -->
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js/dist/ofa.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/dist/ofa.min.js"></script>
 ```
 
 ```html

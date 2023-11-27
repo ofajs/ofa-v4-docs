@@ -9,7 +9,7 @@ SCSRのフルネームは、Static Client-Side Renderingで、静的なクライ
 以下の方法で SCSR ライブラリを引用することができます。
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/scsr/dist/scsr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/scsr/dist/scsr.min.js"></script>
 ```
 
 ## SCSRの仕組み

@@ -65,12 +65,13 @@ A continuación se muestra una descripción general de la API de ofa.js. Puede r
 
 ## Otros
 
-- [Modelo de caja](./otros/box.md): Obtener todos los datos relacionados con el tamaño del elemento objetivo
-- [formData](./otros/form-data.md): Vincular y obtener datos del formulario de manera conveniente
-- [tag](./otros/tag.md): Obtener el nombre de la etiqueta del objetivo
-- [index](./otros/index.md): Obtener el orden del elemento objetivo dentro de su elemento padre
-- [is](./otros/is.md): Verificar si el elemento objetivo coincide con la expresión de selector CSS
-- [refresh](./otros/refresh.md): Actualizar activamente la interfaz del componente
-- [PATH](./otros/path.md): Obtener la dirección del archivo de registro del componente o página
-- [extend](./otros/extend.md): Ampliar los datos o métodos de la instancia; ampliar los datos o métodos subyacentes de ofa.js;
-- [Características de datos de instancia](./otros/stanz.md): Introducir las características de los datos subobjetos de los datos de la instancia y cómo escuchar los cambios en los datos
+- [Modelo de caja](./others/box.md): Obtener todos los datos relacionados con el tamaño del elemento objetivo.
+- [formData](./others/form-data.md): Facilita la vinculación y obtención de datos de formularios.
+- [etiqueta](./others/tag.md): Obtener el nombre de la etiqueta del objetivo.
+- [índice](./others/index.md): Obtener la posición del elemento objetivo en su elemento padre.
+- [es](./others/is.md): Determinar si el elemento objetivo coincide con una expresión del selector CSS.
+- [actualizar](./others/refresh.md): Actualizar manualmente la interfaz del componente.
+- [RUTA](./others/path.md): Obtener la dirección del archivo de registro del componente o la página.
+- [extender](./others/extend.md): Extender los datos o métodos de la instancia; extender los datos o métodos subyacentes de ofa.js;
+- [versión](./others/version.md): Obtener el número de versión de ofa.js actualmente importado.
+- [Características de los datos de la instancia](./others/stanz.md): Introducir las características de los datos de la sub-objeto de los datos de la instancia, cómo escuchar los cambios en los datos.

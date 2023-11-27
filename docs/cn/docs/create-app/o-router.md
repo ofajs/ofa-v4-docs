@@ -7,7 +7,7 @@
 首先，你需要在页面中引用 `o-router` 组件。你可以通过以下方式引用 `router.mjs` 文件：
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.js"></script>
 ```
 
 ## 使用 o-router 组件
@@ -33,7 +33,7 @@
     <title>router test</title>
     <script src="ofa.js"></script>
     <!-- 加载 o-router 组件 -->
-    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.29/libs/router/dist/router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kirakiray/ofa.js@4.3.40/libs/router/dist/router.min.js"></script>
   </head>
   <body>
     <!-- 使用 o-router 组件，并设置 fix-body 属性 -->
